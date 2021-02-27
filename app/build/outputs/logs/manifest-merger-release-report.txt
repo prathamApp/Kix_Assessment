@@ -1,0 +1,991 @@
+-- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:183:9-191:20
+	android:grantUriPermissions
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:187:13-47
+	android:authorities
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:185:13-60
+	android:exported
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:186:13-37
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:184:13-62
+manifest
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\39fbbc24a3c91ca51d31e1feadc11855\AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bc34e53a26896a052112ff9118eae7f\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.barteksc:android-pdf-viewer:3.0.0-beta.5] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9decd4676a257e4265a78f1bb94527a8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.barteksc:pdfium-android:1.8.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\75334d332c5a9b209743560c3b6acbee\AndroidManifest.xml:2:1-11:12
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:2:1-30:12
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d1cd94c65a1a681e7472ab8fbef86feb\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8e7b483c2f1cf1f46d51253510ce4c34\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:16:1-23:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\08e4afd81dc00a9151d9f85cf2d9495e\AndroidManifest.xml:17:1-22:12
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:2:1-19:12
+MERGED from [com.github.lawloretienne:discreteslider:0.0.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cb573cee1478a6e902320e58f992b6fc\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\aafb90eb141c9b0c18f8fd22239ebb40\AndroidManifest.xml:17:1-24:12
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c8129d80441d7b7557599a1fc7221be6\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.igalata:Bubble-Picker:v0.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c3503b57c57bfaf1cb7cf4036d206120\AndroidManifest.xml:2:1-14:12
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d4acab44482867b08bd0686b85416972\AndroidManifest.xml:18:1-27:12
+MERGED from [com.airbnb.android:lottie:2.7.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c66fb5dc59dba21899ce17c92be27c5\AndroidManifest.xml:2:1-13:12
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d62162e952039b3d69511f326965f62b\AndroidManifest.xml:25:1-37:12
+MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c96c3dfa8494248e57c271c7f4e7582c\AndroidManifest.xml:2:1-17:12
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\82f00ade948a67c2577806cc740b1b6d\AndroidManifest.xml:2:1-16:12
+MERGED from [com.elconfidencial.bubbleshowcase:bubbleshowcase:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\28c8cb8917b1ee7181b7abc55c8b565a\AndroidManifest.xml:2:1-11:12
+MERGED from [com.hanks:htextview-typer:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\946086ce96a482b6fe1d4d8ee4e785e4\AndroidManifest.xml:2:1-16:12
+MERGED from [com.hanks:htextview-base:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4755be704d1de322ae8209ade457ea3d\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.peter1492:LongScreenshot:1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2a43d717e8d4ca227656db7cf7b339dc\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\317c19d01274fbeae9143df41fdfc758\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:17:1-22:12
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\05ec6e66ca1f617bf29f42ee73e348ce\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ac3fa3de43466554b1f5b57e7f0c3c85\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\86e81a20cb30243d8a145759ba0462d2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bf2a98c59ea28c3cc07625a4492ba261\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3e76de0c2c32783b04e08ad3d6643d8b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\65878e830524eff5842dce026659ffcf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5d39f3a729040a06f6aadd08d35e83dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\90288810ab3d0f730e084c509adca318\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\973e46614c2d1619be429ddba942f513\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\853ba5a3ff178a2d52cc27c133f38b9a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4b042d0672ccae040c4969bf6c202068\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c805e4ba919d8d034909831e52932259\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\22b4bbacce090874582651c737ed6a6e\AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5174dba2cc825d2480ab64cb677d784d\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\462872806682b85119227e2c0d17d199\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\07226345006142b0b09c6ff826c17823\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\31848429086507ac51a70a8072fd17b1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9a62c41a2fcdd021c400a1b7da3e88bc\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd92ed37f5529c6cf7e93474a0e38f79\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\608ccdc5a04049d281f547332fc8dbe8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ce53de1659e8ad3e7d16eeb5fae48a59\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49d8e24c91c5df4a489cf9207c4604c6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\db0d22ebefe4e329abeebc8866f21443\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cbf9e5550385ca96aef0fca7ee085105\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f3dcd2f491f22d82bb0704970d1159ec\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49c7c94f4a7ead7d2fb501eb97083605\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a0a931f4ef3c2751652c3822d0537f40\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d87ff05e2a0cbf56807a24a72de63ce1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\35f94762546655d8cb5d54665fe1f954\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\431e9194434e52b3f448be8e01a23243\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6732da256ff650242b0e29ef5e5762d2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5cbe04759f93790ef9135eb97bb8c1b1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c79439f880be12dbafe015a67d79ec26\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\63e6b236f39758fa44bf64765ae89b64\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8c385ab708eb0806e2e5a21666d5ce9d\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6993e5574dbfe788fad4bee54db0b7aa\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6e43e43096a1012ba008e725bdd39bbe\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8f01700c2bcd22a7de2e3b42e252acc1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c0e492a3bf662d9744e857c3d521cbac\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e1cf57bdc66d1d08127376a81cba98f1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android:flexbox:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a190cde6a1308def5dc24ae032ab69ad\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:2:1-19:12
+MERGED from [com.github.lzyzsd:circleprogress:1.2.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8ab198df6e68c611ea75e75db9882601\AndroidManifest.xml:2:1-12:12
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\79f1a5cc0fe79652ab1e9fc1499d81d6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:17:1-55:12
+MERGED from [com.github.anastr:flattimelib:1.0.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1586f24f457bfd41145e60d37a93fcab\AndroidManifest.xml:2:1-14:12
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5a26a6bddd9103d0ca6f3d165e73402a\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c4eabbcc6e4e64811dc1269157e5073\AndroidManifest.xml:2:1-9:12
+MERGED from [com.archit.calendar:awesome-calendar:1.1.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3cbf11132ad013c6fef45b0c3ef596de\AndroidManifest.xml:2:1-17:12
+MERGED from [io.reactivex:rxandroid:1.2.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e28ef76a37a99973890290c8fd0cc82b\AndroidManifest.xml:15:1-21:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fec6b6eaf08b73c46f23f5e577994c30\AndroidManifest.xml:15:1-21:12
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\58855a4ca2f6a76d0356f51ae2b428fd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c81e17106aeabedec9c24ec949d8db49\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fc9859620fe1b61bede9e8448ba49d06\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\55677ee2f06b95053e46a844d5ec83f8\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9038aa3528ca97bc8d85003e4f61c890\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f7a172718893b4a428ac2b4e51f73591\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b8e4bf52ba6924c88f55abb4a0619a65\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\066d25ff7a9a5687abb0c2e93cb7a369\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\924b0ab685f1adfe75150265191db625\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c89dae89f6690e56e1815b0639b79d5b\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd89883747e7f88eb2194d0b63f4a40a\AndroidManifest.xml:2:1-6:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+	package
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:4:5-37
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:1-226:12
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:6:5-194:19
+MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:11:5-20
+MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\39fbbc24a3c91ca51d31e1feadc11855\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\39fbbc24a3c91ca51d31e1feadc11855\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bc34e53a26896a052112ff9118eae7f\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bc34e53a26896a052112ff9118eae7f\AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:18:5-28:19
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d1cd94c65a1a681e7472ab8fbef86feb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d1cd94c65a1a681e7472ab8fbef86feb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8e7b483c2f1cf1f46d51253510ce4c34\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8e7b483c2f1cf1f46d51253510ce4c34\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:19:5-21:19
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:13:5-17:19
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:13:5-17:19
+MERGED from [com.github.lawloretienne:discreteslider:0.0.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cb573cee1478a6e902320e58f992b6fc\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.lawloretienne:discreteslider:0.0.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cb573cee1478a6e902320e58f992b6fc\AndroidManifest.xml:11:5-15:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\aafb90eb141c9b0c18f8fd22239ebb40\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\aafb90eb141c9b0c18f8fd22239ebb40\AndroidManifest.xml:22:5-20
+MERGED from [com.github.igalata:Bubble-Picker:v0.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c3503b57c57bfaf1cb7cf4036d206120\AndroidManifest.xml:12:5-20
+MERGED from [com.github.igalata:Bubble-Picker:v0.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c3503b57c57bfaf1cb7cf4036d206120\AndroidManifest.xml:12:5-20
+MERGED from [com.airbnb.android:lottie:2.7.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c66fb5dc59dba21899ce17c92be27c5\AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:2.7.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c66fb5dc59dba21899ce17c92be27c5\AndroidManifest.xml:11:5-20
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d62162e952039b3d69511f326965f62b\AndroidManifest.xml:35:5-20
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d62162e952039b3d69511f326965f62b\AndroidManifest.xml:35:5-20
+MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c96c3dfa8494248e57c271c7f4e7582c\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c96c3dfa8494248e57c271c7f4e7582c\AndroidManifest.xml:11:5-15:19
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\82f00ade948a67c2577806cc740b1b6d\AndroidManifest.xml:11:5-14:19
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\82f00ade948a67c2577806cc740b1b6d\AndroidManifest.xml:11:5-14:19
+MERGED from [com.hanks:htextview-typer:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\946086ce96a482b6fe1d4d8ee4e785e4\AndroidManifest.xml:11:5-14:19
+MERGED from [com.hanks:htextview-typer:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\946086ce96a482b6fe1d4d8ee4e785e4\AndroidManifest.xml:11:5-14:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:9:5-20
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:18:5-20
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:18:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\db0d22ebefe4e329abeebc8866f21443\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\db0d22ebefe4e329abeebc8866f21443\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:22:5-28:19
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:10:3-17:17
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:10:3-17:17
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:45:5-53:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:45:5-53:19
+MERGED from [com.github.anastr:flattimelib:1.0.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1586f24f457bfd41145e60d37a93fcab\AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.anastr:flattimelib:1.0.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1586f24f457bfd41145e60d37a93fcab\AndroidManifest.xml:11:5-12:19
+MERGED from [com.archit.calendar:awesome-calendar:1.1.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3cbf11132ad013c6fef45b0c3ef596de\AndroidManifest.xml:11:5-15:19
+MERGED from [com.archit.calendar:awesome-calendar:1.1.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3cbf11132ad013c6fef45b0c3ef596de\AndroidManifest.xml:11:5-15:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\066d25ff7a9a5687abb0c2e93cb7a369\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\066d25ff7a9a5687abb0c2e93cb7a369\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\924b0ab685f1adfe75150265191db625\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\924b0ab685f1adfe75150265191db625\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c89dae89f6690e56e1815b0639b79d5b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c89dae89f6690e56e1815b0639b79d5b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd89883747e7f88eb2194d0b63f4a40a\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd89883747e7f88eb2194d0b63f4a40a\AndroidManifest.xml:5:5-20
+	android:requestLegacyExternalStorage
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:16:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:11:9-41
+	android:hardwareAccelerated
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:9:9-43
+	tools:ignore
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:18:9-48
+	android:roundIcon
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:13:9-52
+	android:largeHeap
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:15:9-33
+	android:icon
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:10:9-41
+	android:allowBackup
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:17:9-52
+	android:networkSecurityConfig
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:12:9-69
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:7:9-41
+activity#com.pratham.foundation.ui.splash_activity.SplashActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:19:9-29:20
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:21:13-49
+	android:windowSoftInputMode
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:23:13-56
+	android:theme
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:22:13-57
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:20:13-63
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:27:27-74
+service#com.pratham.foundation.services.background_service.BackgroundPushService
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:31:9-34:19
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:33:13-35
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:32:13-78
+receiver#com.pratham.foundation.services.background_service.BackgroundServiceRestarter
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:35:9-42:20
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:38:13-36
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:36:13-83
+intent-filter#action:name:BackgroundServiceRestarter
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:39:13-41:29
+action#BackgroundServiceRestarter
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:40:25-66
+activity#com.pratham.foundation.ui.contentPlayer.webviewpdf.PDFViewActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:44:9-46:50
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:46:13-47
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:45:13-73
+activity#com.pratham.foundation.ui.contentPlayer.pictionary.PictionaryResult
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:47:9-49:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:49:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:48:13-73
+activity#com.pratham.foundation.ui.selectSubject.SelectSubject_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:50:9-52:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:52:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:51:13-60
+activity#com.pratham.foundation.ui.admin_panel.andmin_login_new.enrollmentid.AddEnrollmentId_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:53:9-55:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:55:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:54:13-90
+activity#com.pratham.foundation.ui.app_home.profile_new.course_enrollment.CourseEnrollmentActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:56:9-58:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:58:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:57:13-96
+activity#com.pratham.foundation.ui.admin_panel.fragment_admin_panel.tab_usage.TabUsageActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:59:9-61:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:61:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:60:13-92
+activity#com.pratham.foundation.BaseActivity
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:62:9-64:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:64:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:63:13-41
+activity#com.pratham.foundation.ui.admin_panel.AdminControlsActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:65:9-67:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:67:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:66:13-66
+activity#com.pratham.foundation.ui.contentPlayer.pdf_display.Fragment_PdfViewer_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:68:9-70:54
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:70:13-51
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:69:13-77
+activity#com.pratham.foundation.ui.admin_panel.andmin_login_new.AdminConsoleActivityNew_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:71:9-73:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:73:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:72:13-85
+activity#com.pratham.foundation.ui.admin_panel.MenuActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:74:9-76:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:76:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:75:13-57
+activity#com.pratham.foundation.ui.admin_panel.assign_groups.Activity_AssignGroups_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:77:9-79:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:79:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:78:13-80
+activity#com.pratham.foundation.ui.app_home.profile_new.certificate_display.CertificateDisplayActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:80:9-82:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:82:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:81:13-100
+activity#com.pratham.foundation.ui.group_selection.SelectGroupActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:83:9-85:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:85:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:84:13-68
+activity#com.pratham.foundation.ui.app_home.HomeActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:86:9-88:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:88:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:87:13-54
+activity#com.pratham.foundation.ui.app_home.profile_new.display_image_ques_list.DisplayImageQuesActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:89:9-91:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:91:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:90:13-102
+activity#com.pratham.foundation.ui.app_home.display_content.ContentDisplay_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:92:9-94:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:94:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:93:13-72
+activity#com.pratham.foundation.ui.app_home.profile_new.chat_display_list.DisplayChatActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:95:9-97:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:97:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:96:13-91
+activity#com.pratham.foundation.ui.app_home.profile_new.show_image_question.ShowImgQuestionActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:98:9-100:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:100:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:99:13-97
+activity#com.pratham.foundation.ui.admin_panel.fragment_admin_panel.PushOrAssign.PushDataActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:101:9-103:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:103:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:102:13-95
+activity#com.pratham.foundation.ui.contentPlayer.ContentPlayerActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:104:9-106:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:106:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:105:13-68
+activity#com.pratham.foundation.ui.contentPlayer.old_cos.reading_cards.ReadingCardsActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:107:9-109:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:109:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:108:13-89
+activity#com.pratham.foundation.customView.display_image_dialog.Activity_DisplayImage_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:110:9-113:54
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:112:13-49
+	android:theme
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:113:13-51
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:111:13-83
+activity#com.pratham.foundation.ui.contentPlayer.web_view.WebViewActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:114:9-116:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:116:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:115:13-71
+activity#com.pratham.foundation.ui.contentPlayer.old_cos.conversation.ConversationActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:117:9-119:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:119:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:118:13-88
+activity#com.pratham.foundation.ui.contentPlayer.reading_story_activity.ReadingStoryActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:120:9-122:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:122:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:121:13-90
+activity#com.pratham.foundation.ui.contentPlayer.reading_paragraphs.ReadingParagraphsActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:123:9-125:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:125:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:124:13-91
+activity#com.pratham.foundation.ui.contentPlayer.vocabulary_qa.ReadingVocabularyActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:126:9-128:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:128:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:127:13-86
+activity#com.pratham.foundation.ui.contentPlayer.reading_rhyming.ReadingRhymesActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:129:9-131:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:131:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:130:13-84
+activity#com.pratham.foundation.ui.contentPlayer.opposites.OppositesActivity_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:132:9-134:52
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:134:13-49
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:133:13-74
+activity#com.pratham.foundation.ui.contentPlayer.matchingPairGame.MatchThePairGameActivity
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:135:9-137:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:137:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:136:13-87
+activity#com.pratham.foundation.ui.contentPlayer.video_view.ActivityVideoView_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:138:9-140:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:140:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:139:13-75
+activity#com.pratham.foundation.ui.contentPlayer.video_player.ActivityVideoPlayer_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:141:9-143:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:143:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:142:13-79
+activity#com.pratham.foundation.ui.contentPlayer.doing.FullScreenVideo_
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:144:9-146:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:146:13-56
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:145:13-68
+activity#com.pratham.foundation.utility.CatchoTransparentActivity
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:148:9-152:63
+	android:screenOrientation
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:151:13-49
+	android:parentActivityName
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:150:13-55
+	android:windowSoftInputMode
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:152:13-60
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:149:13-62
+activity#com.pratham.foundation.customView.ProcessPhoenix
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:153:9-156:75
+	android:process
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:155:13-39
+	android:theme
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:156:13-72
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:154:13-54
+activity#com.pratham.foundation.utility.SplashSupportActivity
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:157:9-67
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:157:19-64
+activity#com.pratham.foundation.ui.splash_activity.SplashActivity
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:158:9-71
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:158:19-68
+service#com.pratham.foundation.services.AppExitService
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:160:9-163:44
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:162:13-35
+	android:stopWithTask
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:163:13-41
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:161:13-52
+service#com.pratham.foundation.services.LocationService
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:165:9-167:38
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:167:13-35
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:166:13-53
+service#com.pratham.foundation.services.stt.ContinuousSpeechService_New
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:169:9-171:38
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:171:13-35
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:170:13-69
+receiver#com.pratham.foundation.services.OTGListener
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:173:9-180:20
+	android:enabled
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:175:13-35
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:174:13-49
+intent-filter#action:name:android.hardware.usb.action.USB_DEVICE_ATTACHED+action:name:android.hardware.usb.action.USB_DEVICE_DETACHED
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:176:13-179:29
+action#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:177:17-90
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:177:25-87
+action#android.hardware.usb.action.USB_DEVICE_DETACHED
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:178:17-90
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:178:25-87
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:196:5-197:40
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:8:3-74
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:8:3-74
+	tools:ignore
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:197:9-37
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:196:22-74
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:198:5-68
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:198:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:199:5-79
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:13:5-79
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:12:5-79
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6993e5574dbfe788fad4bee54db0b7aa\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6993e5574dbfe788fad4bee54db0b7aa\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:199:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:200:5-76
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:15:5-76
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:200:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:201:5-76
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:16:5-76
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:201:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:202:5-79
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:202:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:203:5-80
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:203:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:204:5-81
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:204:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:205:5-71
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:205:22-68
+uses-permission#android.permission.INTERNET
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:206:5-67
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:11:5-67
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:206:22-64
+uses-permission#android.permission.CAMERA
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:207:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:21:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:207:22-62
+uses-permission#android.permission.BLUETOOTH
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:208:5-68
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:208:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:209:5-74
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:209:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:210:5-81
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:12:5-81
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:11:5-81
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:210:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:211:5-79
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:211:22-76
+uses-permission#android.permission.EXPAND_STATUS_BAR
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:212:5-76
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:212:22-73
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:214:5-216:47
+	tools:ignore
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:216:9-44
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:215:9-63
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:217:5-86
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:217:22-83
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:218:5-220:47
+	tools:ignore
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:220:9-44
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:219:9-57
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:222:5-224:47
+	tools:ignore
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:224:9-44
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:223:9-64
+uses-sdk
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:7:5-9:41
+MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\39fbbc24a3c91ca51d31e1feadc11855\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\39fbbc24a3c91ca51d31e1feadc11855\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bc34e53a26896a052112ff9118eae7f\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bc34e53a26896a052112ff9118eae7f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.0.0-beta.5] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9decd4676a257e4265a78f1bb94527a8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:android-pdf-viewer:3.0.0-beta.5] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9decd4676a257e4265a78f1bb94527a8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.8.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\75334d332c5a9b209743560c3b6acbee\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.8.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\75334d332c5a9b209743560c3b6acbee\AndroidManifest.xml:7:5-9:41
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d1cd94c65a1a681e7472ab8fbef86feb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d1cd94c65a1a681e7472ab8fbef86feb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8e7b483c2f1cf1f46d51253510ce4c34\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8e7b483c2f1cf1f46d51253510ce4c34\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:17:5-43
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\08e4afd81dc00a9151d9f85cf2d9495e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\08e4afd81dc00a9151d9f85cf2d9495e\AndroidManifest.xml:20:5-44
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:7:5-9:41
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lawloretienne:discreteslider:0.0.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cb573cee1478a6e902320e58f992b6fc\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lawloretienne:discreteslider:0.0.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cb573cee1478a6e902320e58f992b6fc\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\aafb90eb141c9b0c18f8fd22239ebb40\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\aafb90eb141c9b0c18f8fd22239ebb40\AndroidManifest.xml:20:5-44
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c8129d80441d7b7557599a1fc7221be6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c8129d80441d7b7557599a1fc7221be6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.igalata:Bubble-Picker:v0.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c3503b57c57bfaf1cb7cf4036d206120\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.igalata:Bubble-Picker:v0.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c3503b57c57bfaf1cb7cf4036d206120\AndroidManifest.xml:8:5-10:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d4acab44482867b08bd0686b85416972\AndroidManifest.xml:23:5-25:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d4acab44482867b08bd0686b85416972\AndroidManifest.xml:23:5-25:41
+MERGED from [com.airbnb.android:lottie:2.7.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c66fb5dc59dba21899ce17c92be27c5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:2.7.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c66fb5dc59dba21899ce17c92be27c5\AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d62162e952039b3d69511f326965f62b\AndroidManifest.xml:31:5-33:41
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d62162e952039b3d69511f326965f62b\AndroidManifest.xml:31:5-33:41
+MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c96c3dfa8494248e57c271c7f4e7582c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c96c3dfa8494248e57c271c7f4e7582c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\82f00ade948a67c2577806cc740b1b6d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.an.customfontview:customfont:0.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\82f00ade948a67c2577806cc740b1b6d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.elconfidencial.bubbleshowcase:bubbleshowcase:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\28c8cb8917b1ee7181b7abc55c8b565a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.elconfidencial.bubbleshowcase:bubbleshowcase:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\28c8cb8917b1ee7181b7abc55c8b565a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hanks:htextview-typer:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\946086ce96a482b6fe1d4d8ee4e785e4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hanks:htextview-typer:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\946086ce96a482b6fe1d4d8ee4e785e4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hanks:htextview-base:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4755be704d1de322ae8209ade457ea3d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hanks:htextview-base:0.1.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4755be704d1de322ae8209ade457ea3d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.peter1492:LongScreenshot:1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2a43d717e8d4ca227656db7cf7b339dc\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.peter1492:LongScreenshot:1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2a43d717e8d4ca227656db7cf7b339dc\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\317c19d01274fbeae9143df41fdfc758\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\317c19d01274fbeae9143df41fdfc758\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:20:5-44
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.isupatches:wisefy:3.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\7bd4e9a1ca807feb39d614e3fae5071a\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\05ec6e66ca1f617bf29f42ee73e348ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\05ec6e66ca1f617bf29f42ee73e348ce\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ac3fa3de43466554b1f5b57e7f0c3c85\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ac3fa3de43466554b1f5b57e7f0c3c85\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\86e81a20cb30243d8a145759ba0462d2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\86e81a20cb30243d8a145759ba0462d2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bf2a98c59ea28c3cc07625a4492ba261\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bf2a98c59ea28c3cc07625a4492ba261\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3e76de0c2c32783b04e08ad3d6643d8b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3e76de0c2c32783b04e08ad3d6643d8b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\65878e830524eff5842dce026659ffcf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\65878e830524eff5842dce026659ffcf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5d39f3a729040a06f6aadd08d35e83dd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5d39f3a729040a06f6aadd08d35e83dd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\90288810ab3d0f730e084c509adca318\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\90288810ab3d0f730e084c509adca318\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\973e46614c2d1619be429ddba942f513\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\973e46614c2d1619be429ddba942f513\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\853ba5a3ff178a2d52cc27c133f38b9a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\853ba5a3ff178a2d52cc27c133f38b9a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4b042d0672ccae040c4969bf6c202068\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4b042d0672ccae040c4969bf6c202068\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c805e4ba919d8d034909831e52932259\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c805e4ba919d8d034909831e52932259\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\22b4bbacce090874582651c737ed6a6e\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\22b4bbacce090874582651c737ed6a6e\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5174dba2cc825d2480ab64cb677d784d\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5174dba2cc825d2480ab64cb677d784d\AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\462872806682b85119227e2c0d17d199\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\462872806682b85119227e2c0d17d199\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\07226345006142b0b09c6ff826c17823\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\07226345006142b0b09c6ff826c17823\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\31848429086507ac51a70a8072fd17b1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\31848429086507ac51a70a8072fd17b1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9a62c41a2fcdd021c400a1b7da3e88bc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9a62c41a2fcdd021c400a1b7da3e88bc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd92ed37f5529c6cf7e93474a0e38f79\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd92ed37f5529c6cf7e93474a0e38f79\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\608ccdc5a04049d281f547332fc8dbe8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\608ccdc5a04049d281f547332fc8dbe8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ce53de1659e8ad3e7d16eeb5fae48a59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ce53de1659e8ad3e7d16eeb5fae48a59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49d8e24c91c5df4a489cf9207c4604c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49d8e24c91c5df4a489cf9207c4604c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2ad911d054ed32059bc9062265892d5f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\db0d22ebefe4e329abeebc8866f21443\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\db0d22ebefe4e329abeebc8866f21443\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cbf9e5550385ca96aef0fca7ee085105\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\cbf9e5550385ca96aef0fca7ee085105\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f3dcd2f491f22d82bb0704970d1159ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f3dcd2f491f22d82bb0704970d1159ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49c7c94f4a7ead7d2fb501eb97083605\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\49c7c94f4a7ead7d2fb501eb97083605\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a0a931f4ef3c2751652c3822d0537f40\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a0a931f4ef3c2751652c3822d0537f40\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d87ff05e2a0cbf56807a24a72de63ce1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\d87ff05e2a0cbf56807a24a72de63ce1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\35f94762546655d8cb5d54665fe1f954\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\35f94762546655d8cb5d54665fe1f954\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\431e9194434e52b3f448be8e01a23243\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\431e9194434e52b3f448be8e01a23243\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6732da256ff650242b0e29ef5e5762d2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6732da256ff650242b0e29ef5e5762d2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5cbe04759f93790ef9135eb97bb8c1b1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5cbe04759f93790ef9135eb97bb8c1b1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c79439f880be12dbafe015a67d79ec26\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c79439f880be12dbafe015a67d79ec26\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\63e6b236f39758fa44bf64765ae89b64\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\63e6b236f39758fa44bf64765ae89b64\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8c385ab708eb0806e2e5a21666d5ce9d\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8c385ab708eb0806e2e5a21666d5ce9d\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6993e5574dbfe788fad4bee54db0b7aa\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.11.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6993e5574dbfe788fad4bee54db0b7aa\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6e43e43096a1012ba008e725bdd39bbe\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\6e43e43096a1012ba008e725bdd39bbe\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8f01700c2bcd22a7de2e3b42e252acc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8f01700c2bcd22a7de2e3b42e252acc1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c0e492a3bf662d9744e857c3d521cbac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c0e492a3bf662d9744e857c3d521cbac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e1cf57bdc66d1d08127376a81cba98f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e1cf57bdc66d1d08127376a81cba98f1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android:flexbox:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a190cde6a1308def5dc24ae032ab69ad\AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android:flexbox:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\a190cde6a1308def5dc24ae032ab69ad\AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:4:3-70
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:4:3-70
+MERGED from [com.github.lzyzsd:circleprogress:1.2.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8ab198df6e68c611ea75e75db9882601\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.lzyzsd:circleprogress:1.2.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8ab198df6e68c611ea75e75db9882601\AndroidManifest.xml:8:5-10:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\79f1a5cc0fe79652ab1e9fc1499d81d6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\79f1a5cc0fe79652ab1e9fc1499d81d6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:19:5-43
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:19:5-43
+MERGED from [com.github.anastr:flattimelib:1.0.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1586f24f457bfd41145e60d37a93fcab\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.anastr:flattimelib:1.0.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1586f24f457bfd41145e60d37a93fcab\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5a26a6bddd9103d0ca6f3d165e73402a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\5a26a6bddd9103d0ca6f3d165e73402a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c4eabbcc6e4e64811dc1269157e5073\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\4c4eabbcc6e4e64811dc1269157e5073\AndroidManifest.xml:5:5-7:41
+MERGED from [com.archit.calendar:awesome-calendar:1.1.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3cbf11132ad013c6fef45b0c3ef596de\AndroidManifest.xml:7:5-9:41
+MERGED from [com.archit.calendar:awesome-calendar:1.1.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\3cbf11132ad013c6fef45b0c3ef596de\AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex:rxandroid:1.2.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e28ef76a37a99973890290c8fd0cc82b\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex:rxandroid:1.2.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e28ef76a37a99973890290c8fd0cc82b\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fec6b6eaf08b73c46f23f5e577994c30\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fec6b6eaf08b73c46f23f5e577994c30\AndroidManifest.xml:19:5-43
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\58855a4ca2f6a76d0356f51ae2b428fd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\58855a4ca2f6a76d0356f51ae2b428fd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c81e17106aeabedec9c24ec949d8db49\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c81e17106aeabedec9c24ec949d8db49\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fc9859620fe1b61bede9e8448ba49d06\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\fc9859620fe1b61bede9e8448ba49d06\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\55677ee2f06b95053e46a844d5ec83f8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\55677ee2f06b95053e46a844d5ec83f8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9038aa3528ca97bc8d85003e4f61c890\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\9038aa3528ca97bc8d85003e4f61c890\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f7a172718893b4a428ac2b4e51f73591\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f7a172718893b4a428ac2b4e51f73591\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b8e4bf52ba6924c88f55abb4a0619a65\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b8e4bf52ba6924c88f55abb4a0619a65\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\066d25ff7a9a5687abb0c2e93cb7a369\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\066d25ff7a9a5687abb0c2e93cb7a369\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\924b0ab685f1adfe75150265191db625\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\924b0ab685f1adfe75150265191db625\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c89dae89f6690e56e1815b0639b79d5b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c89dae89f6690e56e1815b0639b79d5b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd89883747e7f88eb2194d0b63f4a40a\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\bd89883747e7f88eb2194d0b63f4a40a\AndroidManifest.xml:4:5-43
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:188:13-190:54
+	android:resource
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:190:17-51
+	android:name
+		ADDED from E:\Android_Projects\FoundationApp_Git\app\src\main\AndroidManifest.xml:189:17-67
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.3.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\c9b8f6b81bde876d03fac22d6c498534\AndroidManifest.xml:26:13-120
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\73aa3ef2b9cceeca3424afc351523421\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\0f9ec935064741df1deb52571cf6ca5b\AndroidManifest.xml:20:20-65
+activity#net.alhazmy13.catcho.library.CatchoReportActivity
+ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:14:9-16:53
+	android:theme
+		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:16:13-50
+	android:name
+		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:15:13-77
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\2d97818baf4df4f39ff8cfb46fb979a2\AndroidManifest.xml:24:13-79
+activity#com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity
+ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:5-271
+	android:process
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:152-203
+	android:enabled
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:103-126
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:240-269
+	android:launchMode
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:204-239
+	android:exported
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:127-151
+	android:name
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:12:15-102
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:5-226
+	android:enabled
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:96-119
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:145-174
+	android:exported
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:120-144
+	android:theme
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:175-224
+	android:name
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:13:15-95
+service#com.google.android.play.core.assetpacks.AssetPackExtractionService
+ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:16:5-145
+	android:enabled
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:16:96-119
+	android:exported
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:16:120-143
+	android:name
+		ADDED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:16:14-95
+uses-feature#android.hardware.camera
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:25:9-47
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:29:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:28:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:33:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:36:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:38:5-40:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:40:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:39:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:41:5-43:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:43:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:42:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:46:9-52:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:49:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:48:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:50:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:52:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:51:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\1ae21f4347dad5ce705880f728c5c727\AndroidManifest.xml:47:13-74

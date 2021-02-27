@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SeekBarPreference">
+        <attr name="b_max" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MasaccioImageView">
+        <attr name="activate_face_detection">
+            <flag name="portraitImage" value="0x1"/>
+            <flag name="landscapeImage" value="0x2"/>
+            <flag name="squareImage" value="0x4"/>
+        </attr>
+        <attr name="activate_matrix">
+            <flag name="portraitImage" value="0x1"/>
+            <flag name="landscapeImage" value="0x2"/>
+            <flag name="squareImage" value="0x4"/>
+            <flag name="ifNoFace" value="0x8"/>
+            <flag name="ifFace" value="0x10"/>
+        </attr>
+        <attr name="center_face" format="reference|boolean"/>
+        <attr name="pre_scale" format="reference|float"/>
+        <attr name="pre_translate_x" format="reference|float"/>
+        <attr name="pre_translate_y" format="reference|float"/>
+        <attr name="scale" format="reference|float"/>
+        <attr name="translate_x" format="reference|float"/>
+        <attr name="translate_y" format="reference|float"/>
+        <attr name="animation_duration" format="reference|integer"/>
+        <attr name="animation_interpolator" format="reference"/>
+        <attr name="cyclic_animation" format="reference|boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingDots">
+        <attr name="LoadingDots_auto_play" format="boolean" />
+        <attr name="LoadingDots_dots_color" format="color" />
+        <attr name="LoadingDots_dots_count" format="integer" />
+        <attr name="LoadingDots_dots_size" format="dimension" />
+        <attr name="LoadingDots_dots_space" format="dimension" />
+        <attr name="LoadingDots_loop_duration" format="integer" />
+        <attr name="LoadingDots_loop_start_delay" format="integer" />
+        <attr name="LoadingDots_jump_duration" format="integer" />
+        <attr name="LoadingDots_jump_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeOfView">
+        <attr name="clip_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="sl_shadowed" format="boolean"/>
+        <attr name="sl_shadow_distance" format="dimension"/>
+        <attr name="sl_shadow_angle" format="integer"/>
+        <attr name="sl_shadow_radius" format="dimension"/>
+        <attr name="sl_shadow_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PlayerControlView">
+    <attr name="pcv_show_timeout_ms" format="integer" />
+    <attr name="pcv_fast_rewind_ms" format="integer" />
+    <attr name="pcv_fast_forward_ms" format="integer" />
+    <attr name="pcv_always_show" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RipplePulseLayout">
+        <attr name="rippleColor" format="color"></attr>
+        <attr name="rippleType" format="enum">
+            <enum name="fill" value="0"></enum>
+            <enum name="stroke" value="1"></enum>
+        </attr>
+        <attr name="startRadius" format="dimension"></attr>
+        <attr name="endRadius" format="dimension"></attr>
+        <attr name="duration" format="integer"></attr>
+        <attr name="strokeWidth" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="FancyLoader">
+        <attr name="loader_color" format="color" />
+        <attr name="loader_type">
+            <enum name="Sharingan" value="11" />
+            <enum name="TwinFishesSpinner" value="7" />
+            <enum name="ClassicSpinner" value="0" />
+
+            <enum name="LineSpinner" value="2" />
+            <enum name="FishSpinner" value="1" />
+            <enum name="PhoneWave" value="10" />
+
+            <enum name="ThreePulse" value="3" />
+            <enum name="FourPulse" value="4" />
+            <enum name="FivePulse" value="5" />
+
+            <enum name="Worm" value="8" />
+            <enum name="Whirlpool" value="9" />
+            <enum name="Radar" value="6" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DiscreteScrollView">
+        <attr name="dsv_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PhasedSeekBar">
+        <attr name="phased_mode">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+        <attr name="phased_base_margin_left" format="dimension|reference" />
+        <attr name="phased_base_margin_right" format="dimension|reference" />
+        <attr name="phased_base_margin_top" format="dimension|reference" />
+        <attr name="phased_base_margin_bottom" format="dimension|reference" />
+        <attr name="phased_base_background" format="color|reference" />
+        <attr name="phased_item_width" format="dimension|reference" />
+        <attr name="phased_item_height" format="dimension|reference" />
+        <attr name="phased_anchor_width" format="dimension|reference" />
+        <attr name="phased_anchor_height" format="dimension|reference" />
+        <attr name="phased_draw_on_off" format="boolean" />
+        <attr name="phased_fix_point" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LineProgressBar">
+        <attr name="lineprogressColor" format="color" />
+        <attr name="progressDescColor" format="color" />
+        <attr name="progressRadius" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="lineborderWidth" format="dimension" />
+        <attr name="progressDesc" format="string" />
+        <attr name="isShowDesc" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ProgressLayout">
+        <attr name="c_progressColor" format="color" />
+        <attr name="c_progressDescColor" format="color" />
+        <attr name="c_progressRadius" format="dimension" />
+        <attr name="c_max" format="integer" />
+        <attr name="c_progress" format="integer" />
+        <attr name="c_borderWidth" format="dimension" />
+        <attr name="c_progressDesc" format="string" />
+        <attr name="c_isShowDesc" format="boolean" />
+    </declare-styleable>
+
+    <!-- CircularImageView for custom shape -->
+    <declare-styleable name="CircularImageView">
+        <!-- Specifies whether or not to draw a circular border around the image. -->
+        <attr name="border" format="boolean" />
+        <!-- Specifies the color of the border draw around the image. (if enabled) -->
+        <attr name="border_color" format="color" />
+        <!-- Makes the border this pixels wide. (if enabled) -->
+        <attr name="border_width" format="dimension" />
+        <!-- Specifies whether or not to draw a selector on this view upon touch events. -->
+        <attr name="selector" format="boolean" />
+        <!-- Specifies the color of the selector draw on top of the image upon touch events. (if enabled) -->
+        <attr name="selector_color" format="color" />
+        <!-- Specifies the color of the selector stroke drawn around the image upon touch events. Be sure to provide some opacity. (if enabled) -->
+        <attr name="selector_stroke_color" format="color" />
+        <!-- Makes the selector stroke drawn around the image upon touch events this pixels wide. (if enabled) -->
+        <attr name="selector_stroke_width" format="dimension" />
+        <!-- Specifies whether or not to draw a shadow around your circular image. -->
+        <attr name="shadow" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomCircularImageViewTheme">
+        <attr name="circularImageViewStyle" format="reference" />
+    </declare-styleable>
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ElasticView">
+        <attr name="flexibility" format="float" />
+    </declare-styleable>
+
+    <attr name="superBottomSheet_dim" format="float" />
+    <attr name="superBottomSheet_backgroundColor" format="color" />
+    <attr name="superBottomSheet_cornerRadius" format="dimension" />
+    <attr name="superBottomSheet_animateCornerRadius" format="boolean" />
+    <attr name="superBottomSheet_animateStatusBar" format="boolean" />
+    <attr name="superBottomSheet_alwaysExpanded" format="boolean" />
+    <attr name="superBottomSheet_cancelableOnTouchOutside" format="boolean" />
+    <attr name="superBottomSheet_cancelable" format="boolean" />
+    <attr name="superBottomSheet_statusBarColor" format="color" />
+    <attr name="superBottomSheet_peekHeight" format="dimension" />
+
+    <declare-styleable name="ShadowContainer">
+        <attr name="sc_shadowColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="SubmarineView">
+        <attr name="submarine_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="submarine_circleAnchor" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="submarine_animation" format="enum">
+            <enum name="none" value="0" />
+            <enum name="fade" value="1" />
+            <enum name="scale" value="2" />
+        </attr>
+        <attr name="submarine_autoNavigate" format="boolean" />
+        <attr name="submarine_autoDip" format="boolean" />
+        <attr name="submarine_duration" format="integer" />
+        <attr name="submarine_circleSize" format="dimension" />
+        <attr name="submarine_circleDrawable" format="reference" />
+        <attr name="submarine_circlePadding" format="dimension" />
+        <attr name="submarine_circleBorderSize" format="dimension" />
+        <attr name="submarine_circleBorderColor" format="color" />
+        <attr name="submarine_radius" format="dimension" />
+        <attr name="submarine_color" format="color" />
+        <attr name="submarine_borderSize" format="dimension" />
+        <attr name="submarine_borderColor" format="color" />
+        <attr name="submarine_expandSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ZoomageView">
+        <attr name="zoomage_zoomable" format="boolean" />
+        <attr name="zoomage_translatable" format="boolean" />
+        <attr name="zoomage_restrictBounds" format="boolean" />
+        <attr name="zoomage_animateOnReset" format="boolean" />
+        <attr name="zoomage_doubleTapToZoom" format="boolean" />
+        <attr name="zoomage_doubleTapToZoomScaleFactor" format="float" />
+        <attr name="zoomage_autoCenter" format="boolean" />
+        <attr name="zoomage_minScale" format="float" />
+        <attr name="zoomage_maxScale" format="float" />
+        <attr name="zoomage_autoResetMode" format="enum">
+            <enum name="UNDER" value="0" />
+            <enum name="OVER" value="1" />
+            <enum name="ALWAYS" value="2" />
+            <enum name="NEVER" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomExoPlayerView">
+        <attr name="andexo_resize_mode" />
+        <attr name="andexo_aspect_ratio" />
+        <attr name="andexo_full_screen" format="boolean" />
+        <attr name="andexo_play_when_ready" format="boolean" />
+        <attr name="andexo_show_controller" format="boolean" />
+    </declare-styleable>
+
+    <attr name="andexo_resize_mode" format="enum">
+        <enum name="Fit" value="1" />
+        <enum name="Fill" value="2" />
+        <enum name="Zoom" value="3" />
+    </attr>
+
+    <attr name="andexo_aspect_ratio" format="enum">
+        <enum name="aspect_1_1" value="1" />
+        <enum name="aspect_16_9" value="2" />
+        <enum name="aspect_4_3" value="3" />
+        <enum name="aspect_match" value="4" />
+        <enum name="aspect_mp3" value="5" />
+    </attr>
+
+</resources>

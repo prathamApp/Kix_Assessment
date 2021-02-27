@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="Nexus 7" />
+        <device id="Nexus 7 2013" />
+        <device id="pixel_3_xl" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d07b1ce-f4e9-4f4b-9c04-bda593fcb5cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/database/AppDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/database/AppDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/modalclasses/Model_CourseEnrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/modalclasses/Model_CourseEnrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/services/stt/ContinuousSpeechService_New.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/services/stt/ContinuousSpeechService_New.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/display_content/ContentDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/display_content/ContentDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningInnerDataAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningInnerDataAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/learning_fragment/LearningPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/ProfileInnerDataAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/ProfileInnerDataAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/course_enrollment/CourseEnrollmentPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/course_enrollment/CourseEnrollmentPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/course_enrollment/EnrolledCoursesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/app_home/profile_new/course_enrollment/EnrolledCoursesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/bottom_fragment/BottomStudentsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/bottom_fragment/BottomStudentsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/GameConstatnts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/GameConstatnts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/new_reading_fragment/ContentReadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/new_reading_fragment/ContentReadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/new_vocab_reading/VocabReadingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/new_vocab_reading/VocabReadingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/splash_activity/SplashPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/ui/splash_activity/SplashPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/utility/FC_Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/utility/FC_Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentFileViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentFileViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentFolderViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentFolderViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentTestViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pratham/foundation/view_holders/ContentTestViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/card_test_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/lottie_delete_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/lottie_delete_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/student_list_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/student_list_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hi-rIN/strings.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ZY223Z8P7R" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../FoundationApp_Git\exportToHTML" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FoundationApp_Git" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="FoundationApp_Git" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="resourceFile" />
+        <option value="Class" />
+        <option value="valueResourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="E:\FC_Key_Store\fc_keystore.jks" />
+    <option name="KEY_ALIAS" value="Pratham" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Updates" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1Z4Ld3WXBdYCsrRHaFswrreH1OU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="DEBUGGABLE_DEVICE" value="motorola-moto_g__5__plus-ZY223Z8P7R" />
+    <property name="DEBUGGABLE_PROCESS" value="com.pratham.foundation" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="2314082720057ece" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-11-27T10:46:09.399Z" />
+    <property name="ExportApk.ApkPath" value="E:\FC_Key_Store" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="ScreenshotViewer.SavePath" value="E:/FC_Key_Store/FC_ScreenShots" />
+    <property name="SelectDeploymentTargetsDialog.selectedDevices" value="2314082720057ece&#10;ZY223Z8P7R" />
+    <property name="com.developerphil.adbidea.selecteddevices" value="2314082720057ece" />
+    <property name="idea.background.editor" value="C:\Users\Pratham PC3\Desktop\Desktop\CurrentWalls\kurama_bg.jpg,18,scale,center" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.pratham.foundation.ui.test.certificate" />
+      <recent name="com.pratham.foundation.ui" />
+      <recent name="com.pratham.foundation.ui.app_home.test_fragment" />
+      <recent name="com.pratham.foundation.ui.home_screen" />
+      <recent name="com.pratham.foundation.ui.home_screen.Content_Fragment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Android_Projects\KIX_Android\Kix_Aser\app\src\main\res\drawable" />
+      <recent name="E:\Android_Projects\KIX_Android\Kix_Aser\app\src\main\res\layout" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\res\layout" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\res\drawable" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kix.aser" />
+      <recent name="com.kix.aser.temp" />
+      <recent name="com.pratham.foundation.ui.contentPlayer.webviewpdf" />
+      <recent name="com.pratham.foundation.modalclasses" />
+      <recent name="com.pratham.foundation.ui.app_home.learning_fragment.attendance_bottom_fragment" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Android_Projects\KIX_Android\Kix_Aser\app\src\main\res\drawable" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\res\raw" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\res\layout" />
+      <recent name="E:\Android_Projects\FoundationApp_Git\app\src\main\java\com\pratham\foundation\customView\MorphingView" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d07b1ce-f4e9-4f4b-9c04-bda593fcb5cd" name="Default Changelist" comment="" />
+      <created>1573192154198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573192154198</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Ketan">
+      <created>1584619407236</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1584619407237</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Ketan">
+      <created>1585229164706</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1585229164707</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Ketan">
+      <created>1585405297838</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1585405297839</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Ketan">
+      <created>1585579226003</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1585579226005</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Ketan">
+      <created>1585663344628</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1585663344628</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Ketan">
+      <created>1585746991091</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1585746991091</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Ketan">
+      <created>1586351972354</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1586351972354</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Ketan">
+      <created>1586353034827</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353034827</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Ketan">
+      <created>1586353140984</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1586353140984</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Ketan">
+      <created>1586422320128</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1586422320129</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Ketan">
+      <created>1586431897722</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1586431897722</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Ketan">
+      <created>1586526736917</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1586526736917</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Ketan">
+      <created>1586590546911</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1586590546911</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Ketan">
+      <created>1586592584025</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1586592584025</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Ketan">
+      <created>1590234263714</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1590234263715</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Ketan">
+      <created>1591616720986</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1591616720987</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Ketan">
+      <created>1591870329295</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1591870329296</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Ketan">
+      <created>1596174688169</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1596174688169</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Ketan">
+      <created>1598336393269</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1598336393273</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Ketan">
+      <created>1598336501122</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1598336501122</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Ketan">
+      <created>1598361644340</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1598361644341</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Ketan">
+      <created>1598608407547</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1598608407548</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Ketan">
+      <created>1598645562133</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1598645562134</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Ketan">
+      <created>1598990129920</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1598990129921</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Ketan">
+      <created>1599075765696</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1599075765696</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Ketan">
+      <created>1599288365872</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1599288365872</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Ketan">
+      <created>1599485700016</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1599485700017</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Ketan">
+      <created>1599580616501</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1599580616502</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Ketan">
+      <created>1599667370592</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1599667370593</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Ketan">
+      <created>1599667498618</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1599667498618</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Ketan">
+      <created>1600269599009</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1600269599009</updated>
+    </task>
+    <task id="LOCAL-00183" summary="Ketan">
+      <created>1608013369727</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1608013369728</updated>
+    </task>
+    <task id="LOCAL-00184" summary="Ketan">
+      <created>1610624772652</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1610624772652</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Ketan">
+      <created>1610780561201</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1610780561201</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Ketan">
+      <created>1610786973804</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1610786973804</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Ketan">
+      <created>1611129256716</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1611129256717</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Ketan">
+      <created>1612520485182</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1612520485184</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Ketan">
+      <created>1612942879195</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1612942879196</updated>
+    </task>
+    <task id="LOCAL-00190" summary="Ketan">
+      <created>1612942977982</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1612942977982</updated>
+    </task>
+    <task id="LOCAL-00191" summary="Ketan">
+      <created>1612943326774</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1612943326774</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Ketan">
+      <created>1612943455545</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1612943455545</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Ketan">
+      <created>1612947901551</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1612947901551</updated>
+    </task>
+    <task id="LOCAL-00194" summary="Ketan">
+      <created>1612947993956</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1612947993956</updated>
+    </task>
+    <task id="LOCAL-00195" summary="Ketan">
+      <created>1612953606785</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1612953606786</updated>
+    </task>
+    <task id="LOCAL-00196" summary="Ketan">
+      <created>1612957374965</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957374965</updated>
+    </task>
+    <task id="LOCAL-00197" summary="Ketan">
+      <created>1612957479892</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957479892</updated>
+    </task>
+    <task id="LOCAL-00198" summary="Ketan">
+      <created>1612957732949</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957732949</updated>
+    </task>
+    <task id="LOCAL-00199" summary="Ketan">
+      <created>1612958474577</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1612958474577</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Ketan">
+      <created>1612958649963</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1612958649963</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Ketan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ketan" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningOuterDataAdapter.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3970" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningOuterDataAdapter.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="3971" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningOuterDataAdapter.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="3972" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>302</line>
+          <option name="timeStamp" value="3979" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="4001" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="4002" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="4003" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="4004" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>242</line>
+          <option name="timeStamp" value="4006" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>244</line>
+          <option name="timeStamp" value="4007" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>359</line>
+          <option name="timeStamp" value="4008" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>800</line>
+          <option name="timeStamp" value="4010" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>801</line>
+          <option name="timeStamp" value="4011" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>811</line>
+          <option name="timeStamp" value="4012" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>813</line>
+          <option name="timeStamp" value="4013" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>505</line>
+          <option name="timeStamp" value="4014" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>506</line>
+          <option name="timeStamp" value="4015" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>526</line>
+          <option name="timeStamp" value="4016" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>528</line>
+          <option name="timeStamp" value="4017" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>349</line>
+          <option name="timeStamp" value="4018" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>350</line>
+          <option name="timeStamp" value="4019" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>370</line>
+          <option name="timeStamp" value="4020" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="4021" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="4022" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="4023" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="4024" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="4026" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/audio_player/AudioPlayerFragment.java</url>
+          <line>194</line>
+          <option name="timeStamp" value="4027" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>529</line>
+          <option name="timeStamp" value="4028" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>531</line>
+          <option name="timeStamp" value="4029" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrival_selection/Fact_Retrieval_Fragment.java</url>
+          <line>295</line>
+          <option name="timeStamp" value="4030" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrival_selection/Fact_Retrieval_Fragment.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="4031" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrival_selection/Fact_Retrieval_Fragment.java</url>
+          <line>291</line>
+          <option name="timeStamp" value="4032" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrival_selection/Fact_Retrieval_Fragment.java</url>
+          <line>292</line>
+          <option name="timeStamp" value="4033" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrival_selection/Fact_Retrieval_Fragment.java</url>
+          <line>293</line>
+          <option name="timeStamp" value="4034" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>384</line>
+          <option name="timeStamp" value="4035" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>385</line>
+          <option name="timeStamp" value="4036" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>387</line>
+          <option name="timeStamp" value="4037" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>388</line>
+          <option name="timeStamp" value="4038" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>408</line>
+          <option name="timeStamp" value="4040" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="4041" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>255</line>
+          <option name="timeStamp" value="4042" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>254</line>
+          <option name="timeStamp" value="4043" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>267</line>
+          <option name="timeStamp" value="4044" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>268</line>
+          <option name="timeStamp" value="4045" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/fact_retrieval_fragment/FactRetrieval.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="4046" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java</url>
+          <line>745</line>
+          <option name="timeStamp" value="4048" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java</url>
+          <line>743</line>
+          <option name="timeStamp" value="4049" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java</url>
+          <line>829</line>
+          <option name="timeStamp" value="4050" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/reading_story_activity/ReadingStoryActivity.java</url>
+          <line>830</line>
+          <option name="timeStamp" value="4051" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>223</line>
+          <option name="timeStamp" value="4052" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="4053" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="4054" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="4055" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="4056" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="4057" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="4058" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="4059" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="4060" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="4062" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="4063" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="4064" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="4065" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>771</line>
+          <option name="timeStamp" value="4066" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>774</line>
+          <option name="timeStamp" value="4067" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>773</line>
+          <option name="timeStamp" value="4068" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>779</line>
+          <option name="timeStamp" value="4069" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>780</line>
+          <option name="timeStamp" value="4070" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>782</line>
+          <option name="timeStamp" value="4071" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>534</line>
+          <option name="timeStamp" value="4072" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>536</line>
+          <option name="timeStamp" value="4073" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>699</line>
+          <option name="timeStamp" value="4074" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>788</line>
+          <option name="timeStamp" value="4075" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>765</line>
+          <option name="timeStamp" value="4077" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>697</line>
+          <option name="timeStamp" value="4078" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>940</line>
+          <option name="timeStamp" value="4079" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>941</line>
+          <option name="timeStamp" value="4080" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>942</line>
+          <option name="timeStamp" value="4081" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>946</line>
+          <option name="timeStamp" value="4082" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>618</line>
+          <option name="timeStamp" value="4084" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>626</line>
+          <option name="timeStamp" value="4085" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>756</line>
+          <option name="timeStamp" value="4086" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>758</line>
+          <option name="timeStamp" value="4087" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>761</line>
+          <option name="timeStamp" value="4088" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>765</line>
+          <option name="timeStamp" value="4089" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>766</line>
+          <option name="timeStamp" value="4090" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/pdf_display/Fragment_PdfViewer.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="4091" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/pdf_display/Fragment_PdfViewer.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4092" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/pdf_display/Fragment_PdfViewer.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="4093" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/pdf_display/Fragment_PdfViewer.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="4094" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>661</line>
+          <option name="timeStamp" value="4095" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>665</line>
+          <option name="timeStamp" value="4097" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/display_content/ContentDisplay.java</url>
+          <line>666</line>
+          <option name="timeStamp" value="4098" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>786</line>
+          <option name="timeStamp" value="4099" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>790</line>
+          <option name="timeStamp" value="4100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningFragment.java</url>
+          <line>792</line>
+          <option name="timeStamp" value="4101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyActivity.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="4102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyActivity.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="4103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyActivity.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="4104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="4105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="4106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="4107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="4108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="4110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="4111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="4112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="4113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="4114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="4115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="4116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="4118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="4119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/vocabulary_qa/ReadingVocabularyPresenter.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="4120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/webviewpdf/PDFViewActivity.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="4121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/webviewpdf/PDFViewActivity.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="4122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/webviewpdf/PDFViewActivity.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="4123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/webviewpdf/PDFViewActivity.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="4124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/contentPlayer/webviewpdf/PDFViewActivity.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="4128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/admin_panel/andmin_login_new/enrollmentid/AddEnrollmentId.java</url>
+          <line>280</line>
+          <option name="timeStamp" value="4129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/admin_panel/andmin_login_new/enrollmentid/AddEnrollmentId.java</url>
+          <line>281</line>
+          <option name="timeStamp" value="4130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>554</line>
+          <option name="timeStamp" value="4133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>553</line>
+          <option name="timeStamp" value="4134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>567</line>
+          <option name="timeStamp" value="4135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>568</line>
+          <option name="timeStamp" value="4136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>569</line>
+          <option name="timeStamp" value="4137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>563</line>
+          <option name="timeStamp" value="4138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>537</line>
+          <option name="timeStamp" value="4139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>533</line>
+          <option name="timeStamp" value="4140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>594</line>
+          <option name="timeStamp" value="4141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>596</line>
+          <option name="timeStamp" value="4142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>595</line>
+          <option name="timeStamp" value="4143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/kix/assessment/ui/app_home/learning_fragment/LearningPresenter.java</url>
+          <line>598</line>
+          <option name="timeStamp" value="4144" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

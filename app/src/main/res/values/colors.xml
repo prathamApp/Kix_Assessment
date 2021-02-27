@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <color name="colorPrimary">#344955</color>
+    <color name="colorPrimaryDark">#232F34</color>
+    <color name="colorAccent">#FFBE00</color>
+-->
+    <color name="colorPrimaryDark">#98CEA7</color>
+    <color name="colorPrimary">#B8DFC4</color>
+    <color name="test_item">#FFFDF7EC</color>
+    <color name="colorAccent">#FFA001</color>
+    <color name="colorParent">#F2F1E7</color>
+    <color name="colorText">#262B4B</color>
+
+    <color name="strokeColor">#344955</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="yellow_text_bg">#FFEB3B</color>
+    <color name="hahaColor">#ff26b4e9</color>
+    <color name="colorAccentDark">#FFB300</color>
+    <color name="colorGreen">#AED581</color
+        >
+<!--    <color name="colorBtnGreenDark">#81c784</color>-->
+<!--    <color name="colorBtnGreenLight">#c8e6c9</color>-->
+    <color name="colorBtnGreenDark">#00c853</color>
+    <color name="colorBtnGreenLight">#69f0ae</color>
+<!--    <color name="colorBtnOrangeDark">#ffd54f</color>-->
+<!--    <color name="colorBtnOrangeLight">#ffecb3</color>-->
+    <color name="colorBtnOrangeDark">#ffd600</color>
+    <color name="colorBtnOrangeLight">#ffff00</color>
+<!--    <color name="colorBtnRedDark">#e57373</color>-->
+<!--    <color name="colorBtnRedLight">#ffcdd2</color>-->
+    <color name="orange">#F4511E</color>
+    <color name="colorBtnRedDark">#d50000</color>
+    <color name="colorBtnRedLight">#ff5252</color>
+    <color name="colorBtnPurpleDark">#ba68c8</color>
+    <color name="colorBtnPurpleLight">#e1bee7</color>
+    <color name="colorBtnTealDark">#b2dfdb</color>
+    <color name="colorBtnTealLight">#e0f2f1</color>
+
+    <color name="contentCardColor">#ba68c8</color>
+    <color name="gradianceEndColor">#ba68c8</color>
+    <color name="goodColor">#FF334499</color>
+    <color name="goodColornew">#5D76F6</color>
+    <color name="goodColorlight">#99A6ED</color>
+
+    <color name="gradianceStartColor">#8e24aa</color>
+    <color name="gradianceCardStartColor">#FFC700C7</color>
+    <color name="gradianceCardEndColor">#FFFFC2FC</color>
+    <color name="CardTransparentBg">#2DFFFFFF</color>
+    <color name="CardTransparentBgNew">#C8FFFFFF</color>
+    <color name="colorProgress">#689C2D</color>
+    <color name="colorGreenCorrect">#caf29b</color>
+    <color name="sky_blue">#47D9CC</color>
+    <color name="sky_blue_light">#CAEEEA</color>
+    <color name="trans_card_text">#BAFFFFFF</color>
+    <color name="colorGamelight">#f2a158</color>
+    <color name="colorGame">#cf6607</color>
+    <color name="cardBGcolor">#cc590103</color>
+    <color name="cardBGlightcolor">#ebc76466</color>
+    <color name="contentCardBGcolor">#b5590103</color>
+    <color name="contentCardBGlightcolor">#ebc76466</color>
+    <color name="colorGreenDark">#7CB342</color>
+    <color name="colorSignBoard">#00a175</color>
+    <color name="colorSignBoardLight">#00d1a5</color>
+<!--
+    <color name="level_0_color">#0E2058</color>
+    <color name="level_1_color">#3F5740</color>
+    <color name="level_2_color">#C11012</color>
+    <color name="level_3_color">#EE6787</color>
+    <color name="level_4_color">#452b50</color>
+-->
+    <color name="level_0_color">#00d1a5</color>
+<!--    <color name="level_1_color">#00a175</color>-->
+    <color name="level_1_color">#00c853</color>
+    <color name="level_2_color">#FFA001</color>
+    <color name="level_3_color">#EF4C00</color>
+    <color name="level_4_color">#d50000</color>
+    <color name="readingGreen">#45a716</color>
+    <color name="colorRed">#EF5350</color>
+    <color name="colorNew">#03DAC6</color>
+    <color name="convoRed">#ff908e</color>
+    <color name="colorRedDark">#D32F2F</color>
+    <color name="colorBlueRc">#c77acdc8</color>
+    <color name="colorBlueRcLight">#c58ff2ec</color>
+    <color name="colorBlue">#0bdcff</color>
+    <color name="colorBlueLight">#aaf3ff</color>
+    <color name="colorWhiteLight">#fafafa</color>
+    <color name="colorWhiteDark">#d4d4d4</color>
+    <color name="colorWhiteDark2">#F1EEEE</color>
+    <color name="colorButtonPressedBg">#dedede</color>
+    <color name="bg_grey">#F7F7F7</color>
+    <color name="whiteButtonPressedBg">#b5999999</color>
+    <color name="colorLightBlack">#757575</color>
+    <color name="full_transparent">#00ffffff</color>
+    <color name="splash_bg">#FEFEFE</color>
+    <color name="transparent_white_btn">#c8ffffff</color>
+    <color name="transparent_white_dark">#60ffffff</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorOrange">#ff8d4b</color>
+    <color name="colorBlackTransparentDark">#e8000000</color>
+    <color name="colorBlackTransparentLight">#b2000000</color>
+    <color name="ratingFilled">#FFC107</color>
+    <color name="ratingFilledlight">#FDE68F</color>
+    <color name="deep_teal">#ff009688</color>
+    <color name="deep_teal_lite">#25D3C2</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="scroll_bg">#34000000</color>
+    <color name="splash_background">#F6F6F6</color>
+    <color name="toolbar_background">#37474f</color>
+    <color name="lightGrey">#d7d7db</color>
+    <color name="blue_light">#AFCFFF</color>
+    <color name="blue">#488feb</color>
+    <color name="light_black">#424242</color>
+    <color name="light_blue">#bfd7e7e4</color>
+    <color name="light_pink">#E7DEDE</color>
+    <color name="ghost_white">#FAFAFC</color>
+    <color name="trans_white">#B2FFFFFF</color>
+    <color name="trans_ghost_white">#7ffafafc</color>
+    <color name="act_bg">#7FECECEC</color>
+    <color name="yellow_sand">#fff1b9</color>
+    <color name="yellow_sand_new">#befff1b9</color>
+    <color name="yellow_sand_dark">#FFFFEBA2</color>
+    <color name="light_green">#39b54a</color>
+<!--    <color name="oslo_grey">#EB5D6161</color>-->
+    <color name="oslo_grey">#EB5D6161</color>
+    <color name="golden">#D8C372</color>
+    <color name="ttl_item_grey">#c1c4c6</color>
+    <color name="vanilla">#A8A1F7</color>
+    <color name="light_orange">#fba27f</color>
+    <color name="purple">#8458c1</color>
+
+    <color name="stpi_default_circle_color">#b3bdc2</color>
+    <color name="stpi_default_primary_color">#00b47c</color>
+    <color name="stpi_default_line_color">#313b49</color>
+
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="demo_dark_transparent">#24000000</color>
+    <color name="lavender">#D8D2E1</color>
+    <color name="charcoal">#34435E</color>
+    <color name="trans_charcoal">#e134435e</color>
+
+    <color name="chip">#333</color>
+    <color name="dark_grey">#333333</color>
+    <color name="light_grey">#bbbbbb</color>
+    <color name="pink">#DD4A7B</color>
+    <color name="whiteTintNavigation">#4AFFFFFF</color>
+    <color name="selected_color">#ffffaa</color>
+    <color name="selected_font_color">#999933</color>
+    <color name="deselected_color">#aaffaa</color>
+    <color name="deselected_font_color">#339933</color>
+    <color name="mustord_yellow">#FFE066</color>
+
+    <color name="dialog_background_color">#fafafa</color>
+    <color name="dialog_background_scrim">#99323232</color>
+
+    <color name="float_transparent">#00000000</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+<!--    <color name="colorText">#575757</color>-->
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+    <color name="dark_yellow">#FDBE44</color>
+
+    <color name="button">#2E96BB</color>
+    <color name="simple_white">#FFFFFF</color>
+    <color name="startColor">#59FFFFFF</color>
+    <color name="endColor">#23FFFFFF</color>
+
+    <color name="dark_blue">#262B4B</color>
+    <color name="black_20">#90000000</color>
+    <color name="red">#FF3A41</color>
+    <color name="transperentbg">#CC000000</color>
+
+
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="right_chat_bg">#8BC34A</color>
+    <color name="left_chat_bg">#3E8F42</color>
+    <color name="colorChipBackground">#fbc02d</color>
+    <!--<color name="whiteButtonPressedBg">#b5999999</color>-->
+    <color name="mainscreenbackground">#E4E2E2</color>
+    <!--<color name="transparent_white_btn">#c8ffffff</color>-->
+    <color name="card_color">#ff908e</color>
+    <color name="selected_word">#1F2A69</color>
+
+    <!--<color name="gradianceEndColor">#FF5D5D</color>-->
+    <!--<color name="gradianceStartColor">#FFB159</color>-->
+    <!--<color name="colorAccentDark">#FFB300</color>-->
+
+    <color name="header_bg">#febb65</color>
+    <color name="grayIconTint">#727272</color>
+    <color name="submarine_white">#f4f4f4</color>
+
+    <color name="grey_100">#f5f5f5</color>
+    <color name="grey_200">#eeeeee</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="grey_400">#bdbdbd</color>
+
+    <color name="bluetheme">#488feb</color>
+</resources>

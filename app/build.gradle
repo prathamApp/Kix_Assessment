@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.kix.assessment"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.nex3z:flow-layout:1.2.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
+//    In-App Update Feature
+    implementation 'com.google.android.play:core:1.7.3'
+    //androidAnnotations
+    annotationProcessor "org.androidannotations:androidannotations:4.7.0"
+    implementation "org.androidannotations:androidannotations-api:4.7.0"
+    // Room (use 1.1.0-alpha2 for latest alpha)
+    implementation 'androidx.room:room-runtime:2.0.0'
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    // flow layout
+//    implementation 'com.nex3z:flow-layout:1.2.4'
+    //cardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //catcho
+    implementation 'net.alhazmy13.catcho:library:1.1.0'
+    //networking
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'io.github.storix:rxdiffutil:0.3.2'
+    implementation 'com.github.joielechong:zip4jandroid:1.0.1'
+    // S D P
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //JSOUP
+    implementation 'org.jsoup:jsoup:1.10.3'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41'
+    implementation 'com.facebook.fresco:fresco:1.13.0'
+    implementation 'com.facebook.fresco:animated-gif:0.14.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1"
+}

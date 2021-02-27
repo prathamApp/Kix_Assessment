@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\Android_Projects\\KIX_Android\\Kix_Aser\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-v13\\values-w360dp-v13.xml",
+            "map": [
+                {
+                    "source": "E:\\Android_Projects\\KIX_Android\\Kix_Aser\\app\\src\\main\\res\\values-w360dp\\dimen.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,57",
+                        "endColumns": "38,43",
+                        "endOffsets": "136,96"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,94",
+                        "endColumns": "38,43",
+                        "endOffsets": "89,133"
+                    }
+                }
+            ]
+        }
+    ]
+}
