@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android_Projects\\KIX_Android\\Kix_Aser\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw690dp-v13\\values-sw690dp-v13.xml",
+            "outputFile": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw690dp-v13\\values-sw690dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\79f1a5cc0fe79652ab1e9fc1499d81d6\\res\\values-sw690dp-v13\\values-sw690dp-v13.xml",

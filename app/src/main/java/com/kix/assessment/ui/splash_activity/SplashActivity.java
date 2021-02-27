@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.kix.assessment.R;
 
 import org.androidannotations.annotations.AfterViews;
@@ -23,7 +24,7 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
     }
 
     private void gotoNext() {
-        Toast.makeText(this, "GOTO Next act", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "GOTO Next", Toast.LENGTH_SHORT).show();
     }
 
 }
