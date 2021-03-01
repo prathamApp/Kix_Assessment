@@ -11,10 +11,10 @@ INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:32:13-62
 manifest
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\08e4afd81dc00a9151d9f85cf2d9495e\AndroidManifest.xml:17:1-22:12
 MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:2:1-19:12
@@ -73,27 +73,27 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\Pratham 
 MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\f7a172718893b4a428ac2b4e51f73591\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b8e4bf52ba6924c88f55abb4a0619a65\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ee507240838b85cab028ae0f7448c4c0\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
 	package
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:4:5-33
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-78:12
 		INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:6:5-42:19
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:6:5-46:19
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:11:5-20
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\857aecfe76dac897748566209e2d53ac\AndroidManifest.xml:11:5-20
 MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:13:5-17:19
@@ -164,98 +164,104 @@ category#android.intent.category.LAUNCHER
 ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:27-74
+activity#com.kix.assessment.ui.main_test.MainTestActivity_
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:41:9-43:59
+	android:screenOrientation
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:43:13-56
+	android:name
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:42:13-59
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:44:5-45:40
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:5-49:40
 MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:8:3-74
 MERGED from [com.google.android.play:core:1.7.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\97422d15eedf99950fd30455e5f8c124\AndroidManifest.xml:8:3-74
 	tools:ignore
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:45:9-37
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:49:9-37
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:44:22-74
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:22-74
 uses-permission#android.permission.WAKE_LOCK
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:46:5-68
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:5-68
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:46:22-65
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:47:5-79
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:51:5-79
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:47:22-76
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:51:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:5-76
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:52:5-76
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:22-73
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:52:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:49:5-76
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:53:5-76
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:49:22-73
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:53:22-73
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:5-79
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:54:5-79
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:22-76
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:54:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:51:5-80
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:5-80
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:51:22-77
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:52:5-81
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:5-81
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:52:22-78
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:22-78
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:53:5-71
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:5-71
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:53:22-68
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:22-68
 uses-permission#android.permission.INTERNET
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:54:5-67
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:5-67
 MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:11:5-67
 MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\b39c9a005949cf30ef2bac5cafbe3344\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:54:22-64
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:22-64
 uses-permission#android.permission.CAMERA
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:5-65
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:5-65
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:22-62
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:22-62
 uses-permission#android.permission.BLUETOOTH
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:5-68
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:5-68
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:22-65
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:5-74
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:61:5-74
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:22-71
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:61:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:5-81
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:5-81
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:22-78
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:5-79
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:5-79
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:22-76
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:22-76
 uses-permission#android.permission.EXPAND_STATUS_BAR
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:5-76
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:5-76
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:22-73
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:22-73
 uses-permission#android.permission.CHANGE_CONFIGURATION
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:5-64:47
-	tools:ignore
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:9-44
-	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:9-63
-uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
-ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:65:5-86
-	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:65:22-83
-uses-permission#android.permission.WRITE_SETTINGS
 ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:66:5-68:47
 	tools:ignore
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:68:9-44
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:67:9-57
-uses-permission#android.permission.WRITE_SECURE_SETTINGS
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:67:9-63
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:69:5-86
+	android:name
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:69:22-83
+uses-permission#android.permission.WRITE_SETTINGS
 ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:70:5-72:47
 	tools:ignore
 		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:72:9-44
 	android:name
-		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:71:9-64
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:71:9-57
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:74:5-76:47
+	tools:ignore
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:76:9-44
+	android:name
+		ADDED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml:75:9-64
 uses-sdk
 INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android_Projects\Kix_Assessment\app\src\main\AndroidManifest.xml

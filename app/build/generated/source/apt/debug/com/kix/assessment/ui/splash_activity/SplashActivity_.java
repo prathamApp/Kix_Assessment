@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import androidx.core.app.ActivityCompat;
 import com.kix.assessment.R;
+import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.ActivityIntentBuilder;
 import org.androidannotations.api.builder.PostActivityStarter;
@@ -92,6 +93,18 @@ public final class SplashActivity_
     @Override
     public void onViewChanged(HasViews hasViews) {
         init();
+    }
+
+    @Override
+    public void gotoNext() {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                SplashActivity_.super.gotoNext();
+            }
+        }
+        , 0L);
     }
 
     public static class IntentBuilder_

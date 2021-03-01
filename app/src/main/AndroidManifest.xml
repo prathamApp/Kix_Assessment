@@ -38,6 +38,10 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <activity
+            android:name=".ui.main_test.MainTestActivity_"
+            android:screenOrientation="sensorLandscape" />
+
 
     </application>
 

@@ -88,3 +88,6 @@
 11:27:46.544 [Execution worker for ':' Thread 3] WARN  o.a.i.h.AndroidManifestFinder:514 - A class activity declared in the AndroidManifest.xml cannot be found in the compile path: [io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService]
 11:27:46.579 [Execution worker for ':' Thread 3] WARN  o.a.i.h.AndroidManifestFinder:514 - A class activity declared in the AndroidManifest.xml cannot be found in the compile path: [io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService]
 11:27:46.581 [Execution worker for ':' Thread 3] WARN  o.a.i.h.AndroidManifestFinder:514 - A class activity declared in the AndroidManifest.xml cannot be found in the compile path: [io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService]
+10:40:41.385 [Execution worker for ':' Thread 3] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.
+10:51:51.111 [Daemon worker Thread 2] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.
+10:53:34.8 [Execution worker for ':' Thread 5] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.

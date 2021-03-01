@@ -5,10 +5,11 @@
     <color name="colorPrimaryDark">#232F34</color>
     <color name="colorAccent">#FFBE00</color>
 -->
-    <color name="colorPrimaryDark">#98CEA7</color>
-    <color name="colorPrimary">#B8DFC4</color>
+    <color name="colorPrimaryDark">#BD2D00</color>
+    <color name="colorPrimary">#F4511E</color>
+    <color name="colorAccent">#8BC34A</color>
+
     <color name="test_item">#FFFDF7EC</color>
-    <color name="colorAccent">#FFA001</color>
     <color name="colorParent">#F2F1E7</color>
     <color name="colorText">#262B4B</color>
 
