@@ -26,6 +26,7 @@ MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\Pratham PC3\.gr
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\317c19d01274fbeae9143df41fdfc758\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8142b96df33a210942ad337449c40bde\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ec687781e086b1ea553e982b4209e6d9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\05ec6e66ca1f617bf29f42ee73e348ce\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\be49a84ae9a3d3182315c5e7d08a25e3\AndroidManifest.xml:17:1-25:12
@@ -288,6 +289,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham 
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\477969bc2ac3c99e3c33f4c9c5acd7a8\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\e4e16ea3b2f65d7e6bb7268aabf0fead\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8142b96df33a210942ad337449c40bde\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\8142b96df33a210942ad337449c40bde\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ec687781e086b1ea553e982b4209e6d9\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\ec687781e086b1ea553e982b4209e6d9\AndroidManifest.xml:20:5-44
 MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Pratham PC3\.gradle\caches\transforms-2\files-2.1\05ec6e66ca1f617bf29f42ee73e348ce\AndroidManifest.xml:20:5-44
