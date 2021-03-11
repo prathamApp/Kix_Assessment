@@ -61,24 +61,6 @@ public class WebViewFragment extends Fragment implements WebViewInterface {
             gameListList = (GameList) getArguments().getSerializable("gameList");
         }
         String strPath = Environment.getExternalStorageDirectory().toString()+"/.KIX/"+gameListList.getFolder_Name();
-/*        switch (pos) {
-            case 0:
-                main_rl.setBackgroundResource(R.color.level_0_color);
-                strPath = Environment.getExternalStorageDirectory().toString()+"/.KIX/M14A_M21A/index.html";
-                break;
-            case 1:
-                main_rl.setBackgroundResource(R.color.level_1_color);
-                strPath = Environment.getExternalStorageDirectory().toString()+"/.KIX/M23A/index.html";
-                break;
-            case 2:
-                main_rl.setBackgroundResource(R.color.level_2_color);
-                strPath = Environment.getExternalStorageDirectory().toString()+"/.KIX/M25A/index.html";
-                break;
-            case 3:
-                main_rl.setBackgroundResource(R.color.level_3_color);
-                strPath = Environment.getExternalStorageDirectory().toString()+"/.KIX/N16A/index.html";
-                break;
-        }*/
         if (new File(strPath).exists())
             createWebView(strPath);
         else

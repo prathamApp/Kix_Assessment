@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kix.assessment.BaseActivity;
@@ -31,8 +33,6 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
 
 
 @EActivity(R.layout.activity_main_test)
@@ -90,7 +90,6 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
             e.printStackTrace();
         }
         setAdapter();
-        Toast.makeText(this, "GOTO Next", Toast.LENGTH_SHORT).show();
     }
 
     @Click(R.id.btn_next)

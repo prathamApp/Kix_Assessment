@@ -7,7 +7,7 @@
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_130sdp"
         android:layout_centerInParent="true"
-        android:background="@color/CardTransparentBgNew">
+        android:background="@color/golden">
 
         <TextView
             android:id="@+id/dia_title"
@@ -18,7 +18,7 @@
             android:lines="2"
             android:paddingHorizontal="@dimen/_7sdp"
             android:text="Goto Next"
-            android:textColor="@color/gradianceCardStartColor"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/_15sdp" />
 
         <LinearLayout
