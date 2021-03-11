@@ -2,4 +2,59 @@
 <resources>
     <string name="app_name" translatable="false">KIX Assessment</string>
 
+    <string name="Okay">Okay</string>
+
+    <!--Permission Dialog Strings-->
+    <string name="permissions_head"><b>KIX uses the following permissions to enhance learning experience:</b></string>
+    <string name="permissions">
+        <b><i>LOCATION:</i></b> Customize content for region\n<b><i>
+<!--        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>-->
+        STORAGE:</i></b> To save the content and enable offline access\n<b><i>
+<!--        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>-->
+        RECORD_AUDIO:</i></b> Using speech recognition for advanced \n reading exercises</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="exit_statement">Are you sure you want to quit?</string>
+
+    <string-array name="age">
+        <item>Age 3</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
+        <item>Age 11</item>
+        <item>Age 12</item>
+        <item>Age 13</item>
+        <item>Age 14</item>
+        <item>Age 15</item>
+        <item>Age 16</item>
+        <item>Age 17</item>
+        <item>Age 18</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>PreSchool</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+        <item>Class 8</item>
+        <item>Class 9</item>
+        <item>Class 10</item>
+        <item>Class 12</item>
+    </string-array>
+
 </resources>

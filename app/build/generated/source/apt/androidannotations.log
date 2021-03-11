@@ -91,3 +91,11 @@
 10:40:41.385 [Execution worker for ':' Thread 3] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.
 10:51:51.111 [Daemon worker Thread 2] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.
 10:53:34.8 [Execution worker for ':' Thread 5] WARN  o.a.i.p.ModelValidator:78 - The component MainTestActivity_ is not registered in the AndroidManifest.xml file.
+13:30:27.872 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component Activity_Attendance_ is not registered in the AndroidManifest.xml file.
+13:30:27.895 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component SplashActivity_ is not registered in the AndroidManifest.xml file.
+13:38:52.958 [Execution worker for ':' Thread 3] WARN  o.a.i.p.ModelValidator:78 - The component Activity_Attendance_ is not registered in the AndroidManifest.xml file.
+13:38:52.959 [Execution worker for ':' Thread 3] WARN  o.a.i.p.ModelValidator:78 - The component SplashActivity_ is not registered in the AndroidManifest.xml file.
+13:46:15.841 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component Activity_Attendance_ is not registered in the AndroidManifest.xml file.
+13:46:15.842 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component SplashActivity_ is not registered in the AndroidManifest.xml file.
+14:27:25.403 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component SplashActivity_ is not registered in the AndroidManifest.xml file.
+14:31:18.249 [Execution worker for ':'] WARN  o.a.i.p.ModelValidator:78 - The component SplashActivity_ is not registered in the AndroidManifest.xml file.

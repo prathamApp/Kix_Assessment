@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.kix.assessment.ui.splash_activity.SplashActivity_"
+            android:name="com.kix.assessment.ui.splash_activityy.SplashActivity_"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustNothing">
@@ -26,6 +26,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.attendance_activity.Activity_Attendance_"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/MyLaunchActivityTheme"
+            android:windowSoftInputMode="adjustNothing">
         </activity>
 
         <provider

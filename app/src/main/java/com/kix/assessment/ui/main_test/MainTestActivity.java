@@ -6,14 +6,13 @@ import android.os.Handler;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.NonSwipeableViewPager;
 import com.kix.assessment.custom.dots_indicator.WormDotsIndicator;
+import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.GameList;
 
@@ -33,9 +32,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.fragment.app.Fragment;
+
 
 @EActivity(R.layout.activity_main_test)
-public class MainTestActivity extends AppCompatActivity implements MainTestContract.MainTestView {
+public class MainTestActivity extends BaseActivity implements MainTestContract.MainTestView {
 
     @Bean(MainTestPresenter.class)
     MainTestPresenter mainTestPresenter;
@@ -55,6 +56,7 @@ public class MainTestActivity extends AppCompatActivity implements MainTestContr
     @AfterViews
     public void init() {
         new Handler().postDelayed(this::gotoNext, 500);
+        Toast.makeText(this, "Welcome "+getIntent().getStringExtra(Kix_Constant.STUDENT_NAME), Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -4,6 +4,9 @@ import android.app.Application;
 import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.dbclasses.StudentDao;
+import com.kix.assessment.dbclasses.SurveyorDao;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,6 +22,9 @@ public class KIXApplication extends Application {
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
     private static final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
 
+    public static StudentDao studentDao;
+    public static SurveyorDao surveyorDao;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -26,6 +32,7 @@ public class KIXApplication extends Application {
         if (kixApplication == null) {
             kixApplication = this;
         }
+        initializeDatabaseDaos();
     }
 
     @Override
@@ -39,6 +46,14 @@ public class KIXApplication extends Application {
 
     public static KIXApplication getInstance() {
         return kixApplication;
+    }
+
+    private void initializeDatabaseDaos() {
+        KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
+        studentDao = kixDatabase.getStudentDao();
+        surveyorDao = kixDatabase.getSurveyorDao();
+        /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
+            new ReadBackupDb().execute();*/
     }
 
 }

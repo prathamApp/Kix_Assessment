@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.Fragment_AddStudent_"
+    android:padding="@dimen/_15sdp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Student Details"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_fillDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_label"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_40sdp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_label1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_studentName"
+                android:imeOptions="actionNext"
+                android:layout_marginBottom="8dp"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner_age"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/til_label1"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawSelectorOnTop="true"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:popupBackground="@color/white"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/spinner_age"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawSelectorOnTop="true"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:popupBackground="@color/white"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spinner_class"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/spinner_gender"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawSelectorOnTop="true"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:popupBackground="@color/white"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_saveStudent"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="Save"
+        android:layout_below="@id/rl_fillDetails"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="@dimen/_20sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textAppearance="@dimen/_5sdp"/>
+
+</RelativeLayout>

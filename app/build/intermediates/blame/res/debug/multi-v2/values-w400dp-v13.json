@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w400dp-v13\\values-w400dp-v13.xml",
+            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w400dp-v13\\values-w400dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\values-w400dp\\dimen.xml",
+                    "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\values-w400dp\\dimen.xml",
                     "from": {
                         "startLines": "3,2",
                         "startColumns": "4,4",

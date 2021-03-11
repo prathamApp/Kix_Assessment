@@ -26,6 +26,9 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array age
+array gender
+array student_class
 attr LoadingDots_auto_play
 attr LoadingDots_dots_color
 attr LoadingDots_dots_count
@@ -78,6 +81,8 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
+attr alignContent
+attr alignItems
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -243,6 +248,9 @@ attr dialogPreferredPadding
 attr dialogTheme
 attr displayOptions
 attr divider
+attr dividerDrawable
+attr dividerDrawableHorizontal
+attr dividerDrawableVertical
 attr dividerHorizontal
 attr dividerPadding
 attr dividerVertical
@@ -313,6 +321,8 @@ attr flMinChildSpacing
 attr flRowSpacing
 attr flRowVerticalGravity
 attr flRtl
+attr flexDirection
+attr flexWrap
 attr flexibility
 attr floatingActionButtonStyle
 attr font
@@ -373,11 +383,13 @@ attr itemTextAppearance
 attr itemTextAppearanceActive
 attr itemTextAppearanceInactive
 attr itemTextColor
+attr justifyContent
 attr keylines
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
 attr layout
 attr layoutManager
+attr layout_alignSelf
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -427,6 +439,9 @@ attr layout_constraintWidth_percent
 attr layout_dodgeInsetEdges
 attr layout_editor_absoluteX
 attr layout_editor_absoluteY
+attr layout_flexBasisPercent
+attr layout_flexGrow
+attr layout_flexShrink
 attr layout_goneMarginBottom
 attr layout_goneMarginEnd
 attr layout_goneMarginLeft
@@ -435,9 +450,15 @@ attr layout_goneMarginStart
 attr layout_goneMarginTop
 attr layout_insetEdge
 attr layout_keyline
+attr layout_maxHeight
+attr layout_maxWidth
+attr layout_minHeight
+attr layout_minWidth
 attr layout_optimizationLevel
+attr layout_order
 attr layout_scrollFlags
 attr layout_scrollInterpolator
+attr layout_wrapBefore
 attr liftOnScroll
 attr lineHeight
 attr lineSpacing
@@ -464,6 +485,7 @@ attr max
 attr maxActionInlineWidth
 attr maxButtonHeight
 attr maxImageSize
+attr maxLine
 attr measureWithLargestChild
 attr menu
 attr metaButtonBarButtonStyle
@@ -580,6 +602,9 @@ attr selector_stroke_color
 attr selector_stroke_width
 attr shadow
 attr showAsAction
+attr showDivider
+attr showDividerHorizontal
+attr showDividerVertical
 attr showDividers
 attr showMotionSpec
 attr showText
@@ -2046,6 +2071,9 @@ drawable dot_background
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_permission
+drawable ic_visibility_black_18dp
+drawable ic_visibility_off_black_18dp
 drawable kix_logo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -2062,6 +2090,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable show_password_selector
 drawable spring_dot_background
 drawable spring_dot_stroke_background
 drawable tooltip_frame_dark
@@ -2124,12 +2153,20 @@ id aspect_4_3
 id aspect_match
 id aspect_mp3
 id async
+id attendance_frame
 id auto
 id barrier
+id baseline
 id beginning
 id blocking
 id bottom
+id btn_cancel
 id btn_next
+id btn_perm_okay
+id btn_saveStudent
+id btn_signIn
+id btn_signUp
+id btn_svrSignUp
 id buttonPanel
 id cancel_action
 id catcho_bug_description
@@ -2148,6 +2185,8 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id column
+id column_reverse
 id container
 id content
 id contentPanel
@@ -2164,6 +2203,8 @@ id design_navigation_view
 id dia_no
 id dia_title
 id dia_yes
+id dialog_btn_exit
+id dialog_txt_exit
 id dimensions
 id direct
 id disableHome
@@ -2174,6 +2215,13 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id et_email
+id et_password
+id et_studentName
+id et_svrEmail
+id et_svrMobile
+id et_svrName
+id et_svrPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2188,6 +2236,8 @@ id fitEnd
 id fitStart
 id fitXY
 id fixed
+id flex_end
+id flex_start
 id focusCrop
 id forever
 id fragment_view_pager
@@ -2202,6 +2252,7 @@ id groups
 id home
 id homeAsUp
 id horizontal
+id i1
 id icon
 id icon_group
 id ifFace
@@ -2215,6 +2266,7 @@ id item_touch_helper_previous_elevation
 id labeled
 id landscapeImage
 id largeLabel
+id layoutTextInput
 id left
 id line1
 id line3
@@ -2241,6 +2293,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nowrap
 id outline
 id packed
 id parallax
@@ -2257,6 +2310,10 @@ id radio
 id right
 id right_icon
 id right_side
+id rl_fillDetails
+id row
+id row_reverse
+id rv_student
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -2288,7 +2345,14 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id space_around
+id space_between
+id space_evenly
 id spacer
+id spinner_age
+id spinner_class
+id spinner_gender
+id splash_frame
 id splash_root
 id split_action_bar
 id spread
@@ -2303,6 +2367,7 @@ id start
 id status_bar_latest_event_content
 id stretch
 id stroke
+id student_view
 id submenuarrow
 id submit_area
 id tabMode
@@ -2318,6 +2383,8 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id til_label
+id til_label1
 id time
 id title
 id titleDividerNoCustom
@@ -2330,6 +2397,11 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_label
+id tv_splashLabel
+id tv_studName
+id tv_surveyouSignIn
+id txt_perm_heading
 id uniform
 id unlabeled
 id up
@@ -2341,6 +2413,7 @@ id withText
 id worm_dot
 id wrap
 id wrap_content
+id wrap_reverse
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -2388,9 +2461,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_attendance
 layout activity_catcho_report
 layout activity_main_test
 layout activity_splash
+layout app_exit_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -2407,7 +2482,12 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dot_layout
 layout dp_example
+layout fragment_add_student
+layout fragment_select_student
+layout fragment_svr_sign_in
+layout fragment_svr_sign_up
 layout fragment_web_view
+layout item_select_student
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout next_game_dialog
@@ -2426,6 +2506,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout permission_detail_dialog
 layout sdp_example
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2435,6 +2516,7 @@ layout support_simple_spinner_dropdown_item
 layout worm_dot_layout
 menu navigation
 raw bubble_pop
+string Okay
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2489,8 +2571,10 @@ string character_counter_content_description
 string character_counter_pattern
 string dsv_ex_msg_adapter_wrong_recycler
 string dsv_ex_msg_dont_set_lm
+string exit_statement
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
@@ -2498,6 +2582,8 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permissions
+string permissions_head
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -3067,6 +3153,8 @@ styleable DotsIndicator dotsColor dotsCornerRadius dotsSize dotsSpacing dotsWidt
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable ElasticView flexibility
 styleable FancyLoader loader_color loader_type
+styleable FlexboxLayout alignContent alignItems dividerDrawable dividerDrawableHorizontal dividerDrawableVertical flexDirection flexWrap justifyContent maxLine showDivider showDividerHorizontal showDividerVertical
+styleable FlexboxLayout_Layout layout_alignSelf layout_flexBasisPercent layout_flexGrow layout_flexShrink layout_maxHeight layout_maxWidth layout_minHeight layout_minWidth layout_order layout_wrapBefore
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout android_gravity flChildSpacing flChildSpacingForLastRow flFlow flMaxRows flMinChildSpacing flRowSpacing flRowVerticalGravity flRtl itemSpacing lineSpacing
