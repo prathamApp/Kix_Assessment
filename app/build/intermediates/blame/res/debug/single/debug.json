@@ -64,6 +64,10 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_spring_dot_stroke_background.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\spring_dot_stroke_background.xml"
+    },
+    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -236,12 +240,12 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-xhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -472,6 +476,14 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_worm_dot_layout.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\layout\\worm_dot_layout.xml"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_web_view.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\layout\\fragment_web_view.xml"
+    },
+    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_out.xml.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\aafb90eb141c9b0c18f8fd22239ebb40\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
@@ -492,12 +504,12 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_abc_btn_colored_borderless_text_material.xml.flat",
@@ -716,6 +728,10 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\aafb90eb141c9b0c18f8fd22239ebb40\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_dot_layout.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\layout\\dot_layout.xml"
+    },
+    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -902,6 +918,10 @@
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_worm_dot_stroke_background.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\worm_dot_stroke_background.xml"
     },
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1476,6 +1496,10 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dot_background.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\dot_background.xml"
+    },
+    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\color\\abc_tint_seek_thumb.xml"
     },
@@ -1548,6 +1572,10 @@
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_worm_dot_background.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\worm_dot_background.xml"
+    },
+    {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -1558,6 +1586,10 @@
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_spring_dot_background.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\spring_dot_background.xml"
     },
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1734,6 +1766,14 @@
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
         "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_next_game_dialog.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\layout\\next_game_dialog.xml"
+    },
+    {
+        "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_spring_dot_layout.xml.flat",
+        "source": "E:\\Android_Projects\\Kix_Assessment\\app\\src\\main\\res\\layout\\spring_dot_layout.xml"
     },
     {
         "merged": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
