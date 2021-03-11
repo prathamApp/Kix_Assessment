@@ -2161,6 +2161,9 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dia_no
+id dia_title
+id dia_yes
 id dimensions
 id direct
 id disableHome
@@ -2407,6 +2410,7 @@ layout dp_example
 layout fragment_web_view
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout next_game_dialog
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
