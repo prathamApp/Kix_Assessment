@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
@@ -31,8 +30,8 @@ import androidx.core.content.ContextCompat;
 @EActivity(R.layout.activity_splash)
 public class SplashActivity extends BaseActivity implements SplashContract.SplashView {
 
-    @ViewById(R.id.tv_surveyouSignIn)
-    TextView tv_surveyorSignIn;
+    @ViewById(R.id.btn_surveyouSignIn)
+    Button tv_surveyorSignIn;
 
     @ViewById(R.id.btn_signUp)
     Button btn_signUp;
@@ -63,7 +62,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
                 null,Fragment_Svr_SignUp.class.getSimpleName());
     }
 
-    @Click(R.id.tv_surveyouSignIn)
+    @Click(R.id.btn_surveyouSignIn)
     public void surveyorSignIn(){
         KIX_Utility.showFragment(this, new Fragment_Svr_SignIn_(), R.id.splash_frame,
                 null, Fragment_Svr_SignIn.class.getSimpleName());

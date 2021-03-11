@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.profile.Fragment_AddStudent_"
+    tools:context=".ui.attendance_activity.Fragment_AddStudent_"
     android:padding="@dimen/_15sdp"
     android:background="@color/white"
     android:clickable="true"
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_studentName"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionDone"
                 android:layout_marginBottom="8dp"
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
