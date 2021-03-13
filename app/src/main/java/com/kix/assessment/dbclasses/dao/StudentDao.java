@@ -1,13 +1,13 @@
-package com.kix.assessment.dbclasses;
-
-import com.kix.assessment.modal_classes.Modal_Student;
-
-import java.util.List;
+package com.kix.assessment.dbclasses.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.kix.assessment.modal_classes.Modal_Student;
+
+import java.util.List;
 
 @Dao
 public interface StudentDao {

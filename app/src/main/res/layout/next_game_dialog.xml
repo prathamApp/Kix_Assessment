@@ -1,13 +1,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
     <RelativeLayout
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
         android:layout_centerInParent="true"
-        android:background="@color/golden">
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/dialog_bg">
 
         <TextView
             android:id="@+id/dia_title"
@@ -15,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_10sdp"
             android:gravity="center"
-            android:lines="2"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
             android:paddingHorizontal="@dimen/_7sdp"
             android:text="Goto Next"
             android:textColor="@color/colorText"
@@ -26,23 +31,47 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/dia_title"
             android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:orientation="horizontal">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/dia_yes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:padding="@dimen/_5sdp"
+                android:text="YES"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorBtnGreenDark"
+                app:rippleColor="@color/colorBtnGreenDark"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/colorBtnGreenDark"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/dia_no"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:layout_weight="1"
-                android:text="NO" />
+                android:padding="@dimen/_5sdp"
+                android:text="NO"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorBtnRedDark"
+                app:rippleColor="@color/colorBtnRedDark"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/colorBtnRedDark"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp" />
 
         </LinearLayout>
 

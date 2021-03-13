@@ -1,11 +1,11 @@
-package com.kix.assessment.dbclasses;
-
-import com.kix.assessment.modal_classes.Modal_Surveyor;
+package com.kix.assessment.dbclasses.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.kix.assessment.modal_classes.Modal_Surveyor;
 
 @Dao
 public interface SurveyorDao {

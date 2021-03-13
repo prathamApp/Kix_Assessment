@@ -40,6 +40,7 @@
         android:padding="@dimen/_5sdp"
         android:layout_marginStart="@dimen/_100sdp"
         android:layout_marginEnd="@dimen/_100sdp"
+        app:strokeColor="@color/colorBtnGreenDark"
         android:layout_alignParentBottom="true"
         android:layout_marginVertical="@dimen/_35sdp"
         android:visibility="gone"/>
@@ -51,7 +52,7 @@
         android:text="Already Have Account? Sign In."
         android:textAlignment="center"
         android:textSize="@dimen/_10sdp"
-        android:textColor="@color/readingGreen"
+        android:textColor="@color/colorBtnGreenDark"
         app:cornerRadius="@dimen/_20sdp"
         android:textAppearance="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
@@ -61,7 +62,7 @@
         android:layout_alignParentBottom="true"
         android:visibility="invisible"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:strokeColor="@color/readingGreen"
+        app:strokeColor="@color/colorBtnGreenDark"
         app:strokeWidth="1dp"/>
 
 </RelativeLayout>

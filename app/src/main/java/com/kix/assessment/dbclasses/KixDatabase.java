@@ -2,9 +2,6 @@ package com.kix.assessment.dbclasses;
 
 import android.content.Context;
 
-import com.kix.assessment.modal_classes.Modal_Student;
-import com.kix.assessment.modal_classes.Modal_Surveyor;
-
 import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.DatabaseConfiguration;
@@ -13,7 +10,14 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-@Database(entities = {Modal_Student.class, Modal_Surveyor.class}, version = 1, exportSchema = false)
+import com.kix.assessment.dbclasses.dao.ScoreDao;
+import com.kix.assessment.dbclasses.dao.StudentDao;
+import com.kix.assessment.dbclasses.dao.SurveyorDao;
+import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.modal_classes.Modal_Surveyor;
+import com.kix.assessment.modal_classes.Score;
+
+@Database(entities = {Modal_Student.class, Modal_Surveyor.class, Score.class}, version = 1, exportSchema = false)
 
 public abstract class KixDatabase extends RoomDatabase {
 
@@ -23,6 +27,8 @@ public abstract class KixDatabase extends RoomDatabase {
     public abstract StudentDao getStudentDao();
 
     public abstract SurveyorDao getSurveyorDao();
+
+    public abstract ScoreDao getScoreDao();
 
     public static KixDatabase getDatabaseInstance(final Context context) {
         if (INSTANCE == null) {

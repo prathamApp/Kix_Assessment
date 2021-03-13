@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/_230sdp"
-    android:layout_height="@dimen/_230sdp"
-    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@android:color/transparent"
-    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="@dimen/_230sdp"
-        android:layout_height="@dimen/_230sdp"
+        android:layout_height="@dimen/_200sdp"
         android:layout_gravity="center"
-        android:layout_marginTop="42dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical"
-        app:cardBackgroundColor="#FF9DC56F"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_5sdp"
-        app:cardElevation="0dp">
+        app:cardElevation="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dialog_txt_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:text="@string/exit_statement"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_18sdp" />
 
             <TextView
                 android:id="@+id/btn_cancel"
@@ -30,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:gravity="center"
                 android:minWidth="@dimen/_120sdp"
                 android:minHeight="@dimen/_25sdp"
@@ -42,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/btn_cancel"
+                android:layout_marginBottom="@dimen/_3sdp"
                 android:layout_centerHorizontal="true"
                 android:background="@color/colorRed"
                 android:elevation="@dimen/_8sdp"
@@ -51,18 +62,6 @@
                 android:text="Exit"
                 android:textColor="@android:color/white" />
 
-            <TextView
-                android:id="@+id/dialog_txt_exit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/dialog_btn_exit"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:gravity="center"
-                android:text="@string/exit_statement"
-                android:textColor="@color/charcoal"
-                android:textSize="@dimen/_18sdp" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 

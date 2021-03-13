@@ -5,8 +5,8 @@ import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kix.assessment.dbclasses.KixDatabase;
-import com.kix.assessment.dbclasses.StudentDao;
-import com.kix.assessment.dbclasses.SurveyorDao;
+import com.kix.assessment.dbclasses.dao.StudentDao;
+import com.kix.assessment.dbclasses.dao.SurveyorDao;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
