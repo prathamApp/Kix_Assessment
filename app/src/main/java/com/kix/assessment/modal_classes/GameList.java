@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class GameList implements Serializable {
 
 
-    String Game_Code;
-    String Folder_Name;
+    String code;
+    String folder_name;
 
-    public String getGame_Code() {
-        return Game_Code;
+    public String getCode() {
+        return code;
     }
 
-    public void setGame_Code(String game_Code) {
-        Game_Code = game_Code;
+    public void setCode(String game_Code) {
+        code = game_Code;
     }
 
     public String getFolder_Name() {
-        return Folder_Name;
+        return folder_name;
     }
 
     public void setFolder_Name(String folder_Name) {
-        Folder_Name = folder_Name;
+        folder_name = folder_Name;
     }
 }

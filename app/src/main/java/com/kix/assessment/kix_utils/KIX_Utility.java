@@ -3,21 +3,25 @@ package com.kix.assessment.kix_utils;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 
 import androidx.fragment.app.Fragment;
 
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance;
 import com.kix.assessment.ui.splash_activityy.SplashActivity;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.UUID;
 
 public class KIX_Utility {
 
-    public KIX_Utility(Context context){}
+    public KIX_Utility(Context context) {
+    }
 
     /**
      * Function to show Fragment
@@ -39,7 +43,7 @@ public class KIX_Utility {
                     .replace(frame, mFragment, TAG)
                     .addToBackStack(TAG)
                     .commit();
-        }  else if (mActivity instanceof Activity_Attendance) {
+        } else if (mActivity instanceof Activity_Attendance) {
             ((Activity_Attendance) mActivity).getSupportFragmentManager()
                     .beginTransaction()
                     .replace(frame, mFragment, TAG)
@@ -89,5 +93,19 @@ public class KIX_Utility {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH);
         return dateFormat.format(cal.getTime());
     }
+
+    public static void getSdCardPath(Context context) {
+        String fpath;
+        ArrayList<String> base_path = SDCardUtil.getExtSdCardPaths(context);
+        if (base_path.size() > 0) {
+            String path = base_path.get(0).replace("[", "");
+            path = path.replace("]", "");
+            fpath = path;
+        } else
+            fpath = Environment.getExternalStorageDirectory().getAbsolutePath();
+
+        KIXApplication.contentSDPath = fpath;
+    }
+
 
 }

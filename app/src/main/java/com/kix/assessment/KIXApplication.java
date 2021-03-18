@@ -7,6 +7,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -17,6 +18,7 @@ import okhttp3.OkHttpClient;
 
 public class KIXApplication extends Application {
 
+    public static String contentSDPath="";
     OkHttpClient okHttpClient;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
@@ -28,6 +30,7 @@ public class KIXApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        FastSave.init(getApplicationContext());
         Fresco.initialize(this);
         if (kixApplication == null) {
             kixApplication = this;

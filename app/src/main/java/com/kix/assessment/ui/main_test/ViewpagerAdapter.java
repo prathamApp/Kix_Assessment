@@ -17,11 +17,13 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     //    Context context;
     private static int NUM_ITEMS = 0;
     private List<Fragment> fragmentList;
+    List<GameList> gameListList;
     Fragment currentFragment;
 
     public ViewpagerAdapter(FragmentManager fm, Context context, List<GameList> gameListList) {
         super(fm);
 //        this.context = context;
+        this.gameListList = gameListList;
         NUM_ITEMS = gameListList.size();
         fragmentList = new ArrayList<>();
         for (int i = 0; i < gameListList.size(); i++) {
@@ -41,7 +43,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     @Override
     public void setPrimaryItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         super.setPrimaryItem(container, position, object);
-        currentFragment = fragmentList.get(position);
+        currentFragment = WebViewFragment.newInstance(position, gameListList);
     }
 
     @Override

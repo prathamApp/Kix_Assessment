@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.UiThread;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -12,6 +16,7 @@ import com.kix.assessment.custom.flexbox.JustifyContent;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent_;
 import com.kix.assessment.ui.main_test.MainTestActivity_;
@@ -22,9 +27,7 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
-import androidx.annotation.UiThread;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_select_student)
 public class Fragment_SelectStudent extends Fragment implements ContractStudentList{
@@ -83,6 +86,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         }
         else {
             Modal_Student modalStudnet = studentListAdapter.getitem(position);
+            FastSave.getInstance().saveString(STUDENT_ID, ""+modalStudnet.getStud_Id());
             Intent intent = new Intent(getActivity(), MainTestActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
             startActivity(intent);

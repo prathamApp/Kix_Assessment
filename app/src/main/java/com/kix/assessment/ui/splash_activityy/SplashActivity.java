@@ -7,10 +7,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.kix_utils.KIX_Utility;
+import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn_;
 import com.kix.assessment.ui.surveyor_SignUP.Fragment_Svr_SignUp;
@@ -23,8 +27,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 
 @EActivity(R.layout.activity_splash)
@@ -44,6 +47,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @AfterViews
     public void init() {
+        FastSave.getInstance().saveString(STUDENT_ID, "NA");
         kix_utility = new KIX_Utility(this);
         new Handler().postDelayed(this::gotoNext, 2000);
     }
@@ -52,6 +56,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
     public void gotoNext() {
         tv_surveyorSignIn.setVisibility(View.VISIBLE);
         btn_signUp.setVisibility(View.VISIBLE);
+        KIX_Utility.getSdCardPath(this);
         checkPermissionss();
 //        startActivity(new Intent(this, MainTestActivity_.class));
     }

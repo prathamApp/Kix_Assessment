@@ -4,13 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Environment;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -26,6 +24,7 @@ import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.GameList;
 import com.kix.assessment.modal_classes.Score;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
@@ -44,6 +43,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import static com.kix.assessment.KIXApplication.contentSDPath;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
+
 
 @EActivity(R.layout.activity_main_test)
 public class MainTestActivity extends BaseActivity implements MainTestContract.MainTestView {
@@ -61,16 +63,19 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
     RelativeLayout rl_gameover;
     @ViewById(R.id.btn_next_student)
     Button btn_next_student;
+    @ViewById(R.id.tv_thankyou)
+    TextView tv_thankyou;
 
     ViewpagerAdapter viewpagerAdapter;
     public static List<GameList> gameListList;
     public static List<Score> scoresList;
     Fragment currentFragment;
+    public String studentName;
     public static int queCnt = 0;
 
     @AfterViews
     public void init() {
-        Toast.makeText(this, "Welcome "+getIntent().getStringExtra(Kix_Constant.STUDENT_NAME), Toast.LENGTH_SHORT).show();
+        studentName = getIntent().getStringExtra(Kix_Constant.STUDENT_NAME);
         rl_gameover.setVisibility(View.GONE);
         gotoNext();
     }
@@ -92,7 +97,7 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
         scoresList = new ArrayList<>();
         queCnt = 0;
         try {
-            InputStream is = new FileInputStream(Environment.getExternalStorageDirectory().toString()+"/.KIX/Data.json");
+            InputStream is = new FileInputStream(contentSDPath + "/.KIX/Data.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -103,19 +108,22 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
             Type type = new TypeToken<List<GameList>>() {
             }.getType();
             gameListList = gson.fromJson(jsonStr, type);
+            setAdapter();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        setAdapter();
     }
 
+    @SuppressLint("SetTextI18n")
     @Click(R.id.btn_next)
     public void nextClicked() {
         queCnt++;
         if (queCnt < gameListList.size()) {
+//            Log.d("GAME CODE", "POS : "+queCnt+"     GAME CODE : "+gameListList.get(queCnt).getCode());
             fragment_view_pager.setCurrentItem(queCnt);
-        }else{
+        } else {
             fragment_view_pager.setVisibility(View.GONE);
+            tv_thankyou.setText("Thank you " + studentName + "!!!\nYour test is submitted.");
             rl_gameover.setVisibility(View.VISIBLE);
         }
     }
@@ -123,21 +131,26 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
     @Click(R.id.btn_next_student)
     public void nextStudentClicked() {
         KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+        FastSave.getInstance().saveString(STUDENT_ID, "NA");
         BackupDatabase.backup(this);
         finish();
     }
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "BACK", Toast.LENGTH_SHORT).show();
+        testOverDialog();
+/*      KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+        EventMessage updateAvailable = new EventMessage();
+        updateAvailable.setMessage("backPressed");
+        EventBus.getDefault().post(updateAvailable);*/
+//        Toast.makeText(this, "BACK", Toast.LENGTH_SHORT).show();
     }
 
     public Dialog nextDialog;
-    Button dia_yes,dia_no;
+    Button dia_yes, dia_no;
     TextView dia_title;
 
-    public void testOverDialog(boolean testOver) {
-
+    public void testOverDialog() {
         nextDialog = null;
         nextDialog = new Dialog(this);
         nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -149,12 +162,14 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
         dia_title = nextDialog.findViewById(R.id.dia_title);
         dia_yes = nextDialog.findViewById(R.id.dia_yes);
         dia_no = nextDialog.findViewById(R.id.dia_no);
-           dia_title.setText("Submit Test");
+        dia_title.setText("Submit Test");
         dia_no.setOnClickListener(v -> nextDialog.dismiss());
         dia_yes.setOnClickListener(v -> {
-            if(testOver) {
-            }else
-                nextDialog.dismiss();
+            KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+            FastSave.getInstance().saveString(STUDENT_ID, "NA");
+            BackupDatabase.backup(this);
+            finish();
+            nextDialog.dismiss();
         });
         nextDialog.show();
     }
@@ -163,11 +178,11 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
     public void setAdapter() {
         try {
             viewpagerAdapter = new ViewpagerAdapter(getSupportFragmentManager(), this, gameListList);
-//        fragment_view_pager.setOffscreenPageLimit(scienceQuestionList.size());
+            fragment_view_pager.setOffscreenPageLimit(0);
             fragment_view_pager.setSaveFromParentEnabled(true);
             fragment_view_pager.setAdapter(viewpagerAdapter);
-            dots_indicator.setViewPager(fragment_view_pager);
-            currentFragment = viewpagerAdapter.getItem(0);
+//            dots_indicator.setViewPager(fragment_view_pager);
+//            currentFragment = viewpagerAdapter.getItem(0);
         } catch (Exception e) {
             e.printStackTrace();
         }

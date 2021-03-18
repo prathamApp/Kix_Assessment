@@ -19,22 +19,29 @@
     <string name="exit_statement">Are you sure you want to exit?</string>
 
     <string-array name="age">
-        <item>Age 3</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
-        <item>Age 11</item>
-        <item>Age 12</item>
-        <item>Age 13</item>
-        <item>Age 14</item>
-        <item>Age 15</item>
-        <item>Age 16</item>
-        <item>Age 17</item>
-        <item>Age 18</item>
+        <item>Age 3  </item>
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+        <item>Age 11 </item>
+        <item>Age 12 </item>
+        <item>Age 13 </item>
+        <item>Age 14 </item>
+        <item>Age 15 </item>
+        <item>Age 16 </item>
+        <item>Age 17 </item>
+        <item>Age 18 </item>
+        <item>Age 19 </item>
+        <item>Age 20 </item>
+        <item>Age 21 </item>
+        <item>Age 22 </item>
+        <item>Age 23 </item>
+        <item>Age 24 </item>
+        <item>Age 25 </item>
     </string-array>
 
     <string-array name="gender">

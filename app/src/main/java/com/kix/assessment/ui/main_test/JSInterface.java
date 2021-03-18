@@ -5,11 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.speech.SpeechRecognizer;
+import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
 import static com.kix.assessment.ui.main_test.MainTestActivity.gameListList;
 import static com.kix.assessment.ui.main_test.MainTestActivity.queCnt;
+import static com.kix.assessment.ui.main_test.WebViewFragment.gamePos;
 
 
 public class JSInterface{
@@ -36,19 +38,20 @@ public class JSInterface{
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public String getGameID(){
-        return gameListList.get(queCnt).getGame_Code();
+        Log.d("GAME CODE", "POS : "+queCnt+"     GAME CODE : "+gameListList.get(gamePos).getCode());
+        return gameListList.get(gamePos).getCode();
     }
 
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public void gotoNextGame(String scoredMarks, String startTime, String label){
-        webViewInterface.onNextGame(webView, scoredMarks, label, startTime);
+        webViewInterface.onNextGame(scoredMarks, label, startTime);
     }
 
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public void addScore(String resId, String questionId, String scoredMarks, String startTime, String label){
-        webViewInterface.onNextGame(webView, scoredMarks, label, startTime);
+        webViewInterface.onNextGame(scoredMarks, label, startTime);
     }
 
 }

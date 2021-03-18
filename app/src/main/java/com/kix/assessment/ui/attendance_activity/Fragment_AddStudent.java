@@ -6,8 +6,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Student;
 
@@ -17,8 +20,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.studentDao;
 
@@ -62,6 +63,7 @@ public class Fragment_AddStudent extends Fragment {
     private void insertStudent() {
         getSelectedAge();
         Modal_Student modal_student = new Modal_Student();
+        modal_student.setStud_Id(""+ KIX_Utility.getUUID());
         modal_student.setStud_Name(et_studentName.getText().toString());
         modal_student.setStud_Age(age);
         modal_student.setStud_Gender(spinner_gender.getSelectedItem().toString());

@@ -17,6 +17,7 @@
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
+        android:textColor="@color/colorText"
         android:layout_marginTop="@dimen/_5sdp"/>
 
     <com.google.android.material.textfield.TextInputLayout

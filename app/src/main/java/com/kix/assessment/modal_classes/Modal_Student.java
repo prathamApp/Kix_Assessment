@@ -10,7 +10,8 @@ import androidx.room.PrimaryKey;
 public class Modal_Student implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
-    public int Stud_Id;
+    public int S_Id;
+    public String Stud_Id;
     public String Stud_Name;
     public String Stud_Age;
     public String Stud_Gender;
@@ -18,7 +19,8 @@ public class Modal_Student implements Comparable, Parcelable {
     public String Svr_Code;
 
     protected Modal_Student(Parcel in) {
-        Stud_Id = in.readInt();
+        S_Id = in.readInt();
+        Stud_Id = in.readString();
         Stud_Name = in.readString();
         Stud_Age = in.readString();
         Stud_Gender = in.readString();
@@ -41,12 +43,24 @@ public class Modal_Student implements Comparable, Parcelable {
     public Modal_Student() {
     }
 
-    public int getStud_Id() {
+    public int getS_Id() {
+        return S_Id;
+    }
+
+    public void setS_Id(int S_Id) {
+        S_Id = S_Id;
+    }
+
+    public String getStud_Id() {
         return Stud_Id;
     }
 
-    public void setStud_Id(int stud_Id) {
+    public void setStud_Id(String stud_Id) {
         Stud_Id = stud_Id;
+    }
+
+    public static Creator<Modal_Student> getCREATOR() {
+        return CREATOR;
     }
 
     public String getStud_Name() {
@@ -88,7 +102,7 @@ public class Modal_Student implements Comparable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(Stud_Id);
+        dest.writeInt(S_Id);
         dest.writeString(Stud_Name);
         dest.writeString(Stud_Age);
         dest.writeString(Stud_Gender);
