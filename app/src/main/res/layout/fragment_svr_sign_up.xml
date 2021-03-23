@@ -86,11 +86,23 @@
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Spinner
+        android:id="@+id/spinner_booklet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:popupBackground="@color/white"
+        android:textAlignment="center" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_svrSignUp"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textSize="@dimen/_10sdp"

@@ -64,4 +64,18 @@
         <item>Class 12</item>
     </string-array>
 
+    <string-array name="spinner_booklet">
+        <item>Booklet 1</item>
+        <item>Booklet 2</item>
+        <item>Booklet 3</item>
+        <item>Booklet 4</item>
+    </string-array>
+
+    <string-array name="spinner_booklet_code">
+        <item>Booklet_1</item>
+        <item>Booklet_2</item>
+        <item>Booklet_3</item>
+        <item>Booklet_4</item>
+    </string-array>
+
 </resources>

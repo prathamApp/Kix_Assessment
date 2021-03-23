@@ -54,9 +54,10 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @UiThread
     public void gotoNext() {
+        KIX_Utility.getSdCardPath(this);
+        splashPresenter.addDataToDB();
         tv_surveyorSignIn.setVisibility(View.VISIBLE);
         btn_signUp.setVisibility(View.VISIBLE);
-        KIX_Utility.getSdCardPath(this);
         checkPermissionss();
 //        startActivity(new Intent(this, MainTestActivity_.class));
     }

@@ -22,7 +22,7 @@ import androidx.fragment.app.Fragment;
 import com.kix.assessment.R;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.modal_classes.EventMessage;
-import com.kix.assessment.modal_classes.GameList;
+import com.kix.assessment.modal_classes.Modal_Content;
 import com.kix.assessment.modal_classes.Score;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -50,10 +50,10 @@ public class WebViewFragment extends Fragment implements WebViewInterface {
     public WebView webView;
     @ViewById(R.id.main_rl)
     public RelativeLayout main_rl;
-    GameList gameList;
+    Modal_Content gameList;
     public static int gamePos;
 
-    public static Fragment newInstance(int pos, List<GameList> gameList) {
+    public static Fragment newInstance(int pos, List<Modal_Content> gameList) {
         WebViewFragment_ fragmentFirst = new WebViewFragment_();
         Bundle args = new Bundle();
         args.putInt("pos", pos);
@@ -66,10 +66,10 @@ public class WebViewFragment extends Fragment implements WebViewInterface {
     public void init() {
         if (getArguments() != null) {
             gamePos = Objects.requireNonNull(getArguments()).getInt("pos", 0);
-            gameList = (GameList) getArguments().getSerializable("gameList");
+            gameList = (Modal_Content) getArguments().getSerializable("gameList");
         }
 //        String strPath = Environment.getExternalStorageDirectory().toString() + "/.KIX/" + gameList.getFolder_Name();
-        String strPath = contentSDPath + "/.KIX/" + gameList.getFolder_Name();
+        String strPath = contentSDPath + "/.KIX/" + gameList.getContentFolderName();
         if (new File(strPath).exists())
             createWebView(strPath);
         else
@@ -140,7 +140,7 @@ public class WebViewFragment extends Fragment implements WebViewInterface {
         Score score = new Score();
         score.setSessionID("");
         score.setDeviceID("");
-        score.setResourceID("" + gameListList.get(queCnt).getCode());
+        score.setResourceID("" + gameListList.get(queCnt).getContentCode());
         score.setStartDateTime("" + startTime);
         score.setEndDateTime(KIX_Utility.getCurrentDateTime());
         score.setScoredMarks("" + scoredMarks);

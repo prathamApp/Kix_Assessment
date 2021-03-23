@@ -13,6 +13,7 @@ public class Modal_Surveyor {
     public String Svr_Mobile;
     public String Svr_Password;
     public String Svr_Code;
+    public String Svr_Booklet;
 
     public int getSvr_Id() {
         return Svr_Id;
@@ -57,4 +58,12 @@ public class Modal_Surveyor {
     public String getSvr_Code() { return Svr_Code; }
 
     public void setSvr_Code(String svr_Code) { Svr_Code = svr_Code; }
+
+    public String getSvr_Booklet() {
+        return Svr_Booklet;
+    }
+
+    public void setSvr_Booklet(String svr_Booklet) {
+        Svr_Booklet = svr_Booklet;
+    }
 }

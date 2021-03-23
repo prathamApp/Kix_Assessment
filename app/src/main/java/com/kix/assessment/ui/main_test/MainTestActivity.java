@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.NonSwipeableViewPager;
@@ -22,7 +20,7 @@ import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
-import com.kix.assessment.modal_classes.GameList;
+import com.kix.assessment.modal_classes.Modal_Content;
 import com.kix.assessment.modal_classes.Score;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -36,14 +34,10 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static com.kix.assessment.KIXApplication.contentSDPath;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 
@@ -67,7 +61,8 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
     TextView tv_thankyou;
 
     ViewpagerAdapter viewpagerAdapter;
-    public static List<GameList> gameListList;
+//    public static List<GameList> gameListList;
+    public static List<Modal_Content> gameListList;
     public static List<Score> scoresList;
     Fragment currentFragment;
     public String studentName;
@@ -97,17 +92,7 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
         scoresList = new ArrayList<>();
         queCnt = 0;
         try {
-            InputStream is = new FileInputStream(contentSDPath + "/.KIX/Data.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String jsonStr = new String(buffer);
-//            JSONObject jsonObj = new JSONObject(jsonStr);
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<GameList>>() {
-            }.getType();
-            gameListList = gson.fromJson(jsonStr, type);
+            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%Booklet 1%");
             setAdapter();
         } catch (Exception e) {
             e.printStackTrace();
@@ -179,6 +164,7 @@ public class MainTestActivity extends BaseActivity implements MainTestContract.M
         try {
             viewpagerAdapter = new ViewpagerAdapter(getSupportFragmentManager(), this, gameListList);
             fragment_view_pager.setOffscreenPageLimit(0);
+            fragment_view_pager.setCurrentItem(0);
             fragment_view_pager.setSaveFromParentEnabled(true);
             fragment_view_pager.setAdapter(viewpagerAdapter);
 //            dots_indicator.setViewPager(fragment_view_pager);

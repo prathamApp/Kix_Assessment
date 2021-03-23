@@ -38,8 +38,8 @@ public class JSInterface{
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public String getGameID(){
-        Log.d("GAME CODE", "POS : "+queCnt+"     GAME CODE : "+gameListList.get(gamePos).getCode());
-        return gameListList.get(gamePos).getCode();
+        Log.d("GAME CODE", "POS : "+queCnt+"     GAME CODE : "+gameListList.get(gamePos).getContentCode());
+        return gameListList.get(gamePos).getContentCode();
     }
 
     @SuppressLint("StaticFieldLeak")

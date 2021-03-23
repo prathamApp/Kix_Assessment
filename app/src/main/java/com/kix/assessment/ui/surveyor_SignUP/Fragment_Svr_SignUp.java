@@ -1,7 +1,11 @@
 package com.kix.assessment.ui.surveyor_SignUP;
 
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.kix.assessment.R;
@@ -17,8 +21,6 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
-import androidx.fragment.app.Fragment;
-
 import static com.kix.assessment.KIXApplication.surveyorDao;
 
 @EFragment(R.layout.fragment_svr_sign_up)
@@ -30,6 +32,8 @@ public class Fragment_Svr_SignUp extends Fragment {
     EditText tv_svrEmail;
     @ViewById(R.id.et_svrMobile)
     EditText tv_svrMobile;
+    @ViewById(R.id.spinner_booklet)
+    Spinner spinner_booklet;
     @ViewById(R.id.et_svrPassword)
     TextInputEditText tv_svrPassword;
 
@@ -39,7 +43,7 @@ public class Fragment_Svr_SignUp extends Fragment {
 
     @AfterViews
     public void initialize() {
-
+        spinner_booklet.setAdapter(ArrayAdapter.createFromResource(getActivity(), R.array.spinner_booklet, R.layout.support_simple_spinner_dropdown_item));
     }
 
     @Click(R.id.btn_svrSignUp)
@@ -57,6 +61,7 @@ public class Fragment_Svr_SignUp extends Fragment {
                 modal_surveyor.setSvr_Mobile(tv_svrMobile.getText().toString());
                 modal_surveyor.setSvr_Password(tv_svrPassword.getText().toString());
                 modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
+                modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
                 surveyorDao.insertSurveyor(modal_surveyor);
                 BackupDatabase.backup(getActivity());
                 Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
