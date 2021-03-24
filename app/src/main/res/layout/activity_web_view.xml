@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_gameover"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_thankyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_20sdp"
+            android:text="Thank you!!!\nYour test is submitted."/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_thankyou"
+            android:text="Next Student"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:textAlignment="center"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/colorBtnGreenDark"
+            app:rippleColor="@color/colorBtnGreenDark"
+            android:textAppearance="@dimen/_5sdp"
+            android:textColor="@color/colorBtnGreenDark"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_20sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

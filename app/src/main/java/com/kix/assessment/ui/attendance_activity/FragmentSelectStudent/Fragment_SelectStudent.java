@@ -19,7 +19,7 @@ import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent_;
-import com.kix.assessment.ui.main_test.MainTestActivity_;
+import com.kix.assessment.ui.main_test.WebViewActivity_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -87,7 +87,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         else {
             Modal_Student modalStudnet = studentListAdapter.getitem(position);
             FastSave.getInstance().saveString(STUDENT_ID, ""+modalStudnet.getStud_Id());
-            Intent intent = new Intent(getActivity(), MainTestActivity_.class);
+            Intent intent = new Intent(getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
             startActivity(intent);
         }

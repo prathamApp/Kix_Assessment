@@ -8,13 +8,17 @@ import android.speech.SpeechRecognizer;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
+import android.webkit.WebViewFragment;
 
-import static com.kix.assessment.ui.main_test.MainTestActivity.gameListList;
-import static com.kix.assessment.ui.main_test.MainTestActivity.queCnt;
-import static com.kix.assessment.ui.main_test.WebViewFragment.gamePos;
+import static com.kix.assessment.ui.main_test.WebViewActivity.gameListList;
+import static com.kix.assessment.ui.main_test.WebViewActivity.queCnt;
+
+//import static com.kix.assessment.ui.main_test.MainTestActivity.gameListList;
+//import static com.kix.assessment.ui.main_test.MainTestActivity.queCnt;
+//import static com.kix.assessment.ui.main_test.WebViewFragment.gamePos;
 
 
-public class JSInterface{
+public class JSInterface {
 
     public Context mContext;
     public static MediaPlayer mp;
@@ -27,7 +31,7 @@ public class JSInterface{
     private SpeechRecognizer speech = null;
 
 
-    public JSInterface(Context mContext, WebViewInterface webViewInterface, WebViewFragment webViewFragment, WebView webView, String resID) {
+    public JSInterface(Context mContext, WebViewInterface webViewInterface, WebView webView, String resID) {
         this.mContext = mContext;
         this.webViewFragment = webViewFragment;
         this.webViewInterface = webViewInterface;
@@ -38,8 +42,8 @@ public class JSInterface{
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public String getGameID(){
-        Log.d("GAME CODE", "POS : "+queCnt+"     GAME CODE : "+gameListList.get(gamePos).getContentCode());
-        return gameListList.get(gamePos).getContentCode();
+        Log.d("GAME CODE", "POS : "+ queCnt+"     GAME CODE : "+gameListList.get(queCnt).getContentCode());
+        return gameListList.get(queCnt).getContentCode();
     }
 
     @SuppressLint("StaticFieldLeak")
