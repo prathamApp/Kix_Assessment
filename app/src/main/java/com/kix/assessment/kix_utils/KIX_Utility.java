@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
-
-import androidx.fragment.app.Fragment;
+import android.view.inputmethod.InputMethodManager;
 
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance;
+import com.kix.assessment.ui.household_activity.Activity_Household;
 import com.kix.assessment.ui.splash_activityy.SplashActivity;
 
 import java.text.DateFormat;
@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.UUID;
+
+import androidx.fragment.app.Fragment;
 
 public class KIX_Utility {
 
@@ -49,6 +51,12 @@ public class KIX_Utility {
                     .replace(frame, mFragment, TAG)
                     .addToBackStack(TAG)
                     .commit();
+        } else if (mActivity instanceof Activity_Household) {
+            ((Activity_Household) mActivity).getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(frame, mFragment, TAG)
+                    .addToBackStack(TAG)
+                    .commit();
         }
     }
 
@@ -64,6 +72,12 @@ public class KIX_Utility {
                     .commit();
         } else if (mActivity instanceof Activity_Attendance) {
             ((Activity_Attendance) mActivity).getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(frame, mFragment, TAG)
+                    .addToBackStack(TAG)
+                    .commit();
+        } else if (mActivity instanceof Activity_Household) {
+            ((Activity_Household) mActivity).getSupportFragmentManager()
                     .beginTransaction()
                     .add(frame, mFragment, TAG)
                     .addToBackStack(TAG)
@@ -108,4 +122,18 @@ public class KIX_Utility {
     }
 
 
+    /**
+     * Method to Hide Soft Input Keyboard
+     * @param act
+     */
+    public static void HideInputKeypad(Activity act) {
+
+        InputMethodManager inputManager = (InputMethodManager) act
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (act.getCurrentFocus() != null)
+            inputManager.hideSoftInputFromWindow(act.getCurrentFocus()
+                    .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
+    }
 }

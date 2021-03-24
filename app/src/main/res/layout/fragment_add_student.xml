@@ -8,7 +8,8 @@
     android:padding="@dimen/_15sdp"
     android:background="@color/white"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:id="@+id/rl_parentLayout">
 
     <TextView
         android:id="@+id/tv_label"
@@ -51,8 +52,8 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:drawSelectorOnTop="true"
             android:gravity="center"
-            android:popupBackground="@color/white"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:popupBackground="@drawable/choose_level_bg"/>
 
         <Spinner
             android:id="@+id/spinner_gender"
@@ -62,7 +63,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:drawSelectorOnTop="true"
             android:gravity="center"
-            android:popupBackground="@color/white"
+            android:popupBackground="@drawable/choose_level_bg"
             android:textAlignment="center" />
 
         <Spinner
@@ -73,7 +74,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:drawSelectorOnTop="true"
             android:gravity="center"
-            android:popupBackground="@color/white"
+            android:popupBackground="@drawable/choose_level_bg"
             android:textAlignment="center" />
 
     </RelativeLayout>

@@ -8,7 +8,19 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:id="@+id/ll_parentLayer">
+
+<!--    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll_parentLayer"
+            android:focusableInTouchMode="true">-->
 
     <TextView
         android:layout_width="match_parent"
@@ -25,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_100sdp"
         android:layout_marginEnd="@dimen/_100sdp"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:hint="Name">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -95,14 +107,14 @@
         android:layout_marginEnd="@dimen/_100sdp"
         android:drawSelectorOnTop="true"
         android:gravity="center"
-        android:popupBackground="@color/white"
-        android:textAlignment="center" />
+        android:popupBackground="@drawable/choose_level_bg"
+        android:textAlignment="center"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_svrSignUp"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textSize="@dimen/_10sdp"
@@ -112,5 +124,7 @@
         android:paddingBottom="@dimen/_5sdp"
         android:textAppearance="@dimen/_5sdp"
         android:layout_gravity="center_horizontal"/>
+<!--        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>-->
 
 </LinearLayout>

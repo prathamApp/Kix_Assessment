@@ -2,10 +2,9 @@ package com.kix.assessment.ui.surveyor_SignUP;
 
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.kix.assessment.R;
@@ -20,6 +19,10 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
+
+import java.util.Objects;
+
+import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.surveyorDao;
 
@@ -37,6 +40,9 @@ public class Fragment_Svr_SignUp extends Fragment {
     @ViewById(R.id.et_svrPassword)
     TextInputEditText tv_svrPassword;
 
+    @ViewById(R.id.ll_parentLayer)
+    LinearLayout ll_parentLayout;
+
     public Fragment_Svr_SignUp() {
         // Required empty public constructor
     }
@@ -44,6 +50,11 @@ public class Fragment_Svr_SignUp extends Fragment {
     @AfterViews
     public void initialize() {
         spinner_booklet.setAdapter(ArrayAdapter.createFromResource(getActivity(), R.array.spinner_booklet, R.layout.support_simple_spinner_dropdown_item));
+    }
+
+    @Click(R.id.ll_parentLayer)
+    public void hideKeyboard(){
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
     }
 
     @Click(R.id.btn_svrSignUp)

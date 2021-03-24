@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.Surveyor_SignIn.Fragment_Svr_SignIn"
+    tools:context=".ui.household_activity.Fragment_AddHousehold"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
@@ -14,7 +14,7 @@
         android:id="@+id/tv_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Add HouseHold"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         android:textColor="@color/colorText"
@@ -29,11 +29,11 @@
         android:layout_marginStart="@dimen/_100sdp"
         android:layout_marginEnd="@dimen/_100sdp"
         android:layout_below="@+id/tv_label"
-        android:hint="Email">
+        android:hint="Name">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_email"
+            android:id="@+id/et_houseHoldName"
             android:imeOptions="actionNext"
             android:layout_marginBottom="8dp"
             android:inputType="text"/>
@@ -43,29 +43,27 @@
         android:id="@+id/til_label1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleDrawable="@drawable/show_password_selector"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginStart="@dimen/_100sdp"
         android:layout_marginEnd="@dimen/_100sdp"
         android:layout_below="@+id/til_label"
-        android:hint="Password">
+        android:hint="Address">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_password"
+            android:id="@+id/et_houseHoldAddress"
             android:imeOptions="actionDone"
             android:layout_marginBottom="8dp"
-            android:inputType="textPassword"/>
+            android:inputType="textMultiLine"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signIn"
+        android:id="@+id/btn_saveHousehold"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
         android:layout_below="@id/til_label1"
         android:layout_marginTop="@dimen/_30sdp"
-        android:text="Sign In"
+        android:text="Save"
         android:textAlignment="center"
         android:textSize="@dimen/_10sdp"
         android:textColor="@color/white"

@@ -6,8 +6,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -20,6 +18,8 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.Objects;
+
+import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.studentDao;
 
@@ -38,7 +38,7 @@ public class Fragment_AddStudent extends Fragment {
     @ViewById(R.id.spinner_class)
     Spinner spinner_class;
 
-    String age, surveyorCode;
+    String age, surveyorCode, householdID;
 
     public Fragment_AddStudent() {
         // Required empty public constructor
@@ -47,12 +47,18 @@ public class Fragment_AddStudent extends Fragment {
     @AfterViews
     public void initialize(){
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.age, R.layout.support_simple_spinner_dropdown_item);
         spinner_age.setAdapter(adapter);
         ArrayAdapter adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.gender, R.layout.support_simple_spinner_dropdown_item);
         spinner_gender.setAdapter(adapter2);
         ArrayAdapter adapter3 = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
         spinner_class.setAdapter(adapter3);
+    }
+
+    @Click(R.id.rl_parentLayout)
+    public void hideKeyboard(){
+        KIX_Utility.HideInputKeypad(getActivity());
     }
 
     @Click(R.id.btn_saveStudent)
@@ -69,11 +75,13 @@ public class Fragment_AddStudent extends Fragment {
         modal_student.setStud_Gender(spinner_gender.getSelectedItem().toString());
         modal_student.setStud_Class(spinner_class.getSelectedItem().toString());
         modal_student.setSvr_Code(surveyorCode);
+        modal_student.setHousehold_ID(householdID);
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
         startActivity(intent);
     }
 

@@ -1,4 +1,4 @@
-package com.kix.assessment.ui.attendance_activity;
+package com.kix.assessment.ui.household_activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,51 +11,44 @@ import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
-import com.kix.assessment.modal_classes.Modal_Student;
-import com.kix.assessment.ui.attendance_activity.FragmentSelectStudent.Fragment_SelectStudent;
-import com.kix.assessment.ui.attendance_activity.FragmentSelectStudent.Fragment_SelectStudent_;
+import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.ui.household_activity.FragmentSelectHousehold.Fragment_SelectHousehold;
+import com.kix.assessment.ui.household_activity.FragmentSelectHousehold.Fragment_SelectHousehold_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
 import java.util.ArrayList;
 
-import androidx.fragment.app.Fragment;
+import static com.kix.assessment.KIXApplication.householdDao;
 
-import static com.kix.assessment.KIXApplication.studentDao;
+@EActivity(R.layout.activity_household)
+public class Activity_Household extends BaseActivity {
 
-@EActivity(R.layout.activity_attendance)
-public class Activity_Attendance extends BaseActivity {
-
-    String surveyorCode, householdID;
-    private ArrayList<Modal_Student> students = new ArrayList<>();
+    String surveyorCode;
 
     private BlurPopupWindow exitDialog;
 
     @AfterViews
     public void initialize() {
         surveyorCode = getIntent().getStringExtra(Kix_Constant.SURVEYOR_CODE);
-        householdID = getIntent().getStringExtra(Kix_Constant.HOUSEHOLD_ID);
-        Modal_Student student = KixDatabase.getDatabaseInstance(this).getStudentDao().getStudentBySurveyorCode(surveyorCode,householdID);
+        Modal_Household household = KixDatabase.getDatabaseInstance(this).getHouseholdDao().getHouseholdBySurveyorCode(surveyorCode);
         Bundle bundle = new Bundle();
-        if (student == null) {
+        if (household == null) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-            bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
-            KIX_Utility.addFragment(this, new Fragment_AddStudent_(), R.id.attendance_frame,
-                    bundle, Fragment_AddStudent.class.getSimpleName());
+            KIX_Utility.addFragment(this, new Fragment_AddHousehold_(), R.id.household_frame,
+                    bundle, Fragment_AddHousehold.class.getSimpleName());
         } else {
-            ArrayList<Modal_Student> students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
+            ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-            bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
-            bundle.putParcelableArrayList(Kix_Constant.STUDENT_LIST, students);
-            KIX_Utility.addFragment(this, new Fragment_SelectStudent_(), R.id.attendance_frame,
-                    bundle, Fragment_SelectStudent.class.getSimpleName());
+            bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
+            KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
+                    bundle, Fragment_SelectHousehold.class.getSimpleName());
         }
     }
 
     @Override
     public void onBackPressed() {
-        Fragment f = getSupportFragmentManager().findFragmentById(R.id.attendance_frame);
         Log.e("KIX : ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
         if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
             exitDialog = new BlurPopupWindow.Builder(this)

@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.attendance_activity.Activity_Attendance">
+    tools:context=".ui.household_activity.Activity_Household"
+    android:background="@color/purple">
 
     <FrameLayout
-        android:id="@+id/attendance_frame"
+        android:id="@+id/household_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#0d000000"

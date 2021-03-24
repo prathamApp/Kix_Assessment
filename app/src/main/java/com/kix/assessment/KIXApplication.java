@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.dbclasses.dao.HouseholdDao;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
 import com.kix.assessment.services.shared_preferences.FastSave;
@@ -26,6 +27,7 @@ public class KIXApplication extends Application {
 
     public static StudentDao studentDao;
     public static SurveyorDao surveyorDao;
+    public static HouseholdDao householdDao;
 
     @Override
     public void onCreate() {
@@ -55,6 +57,7 @@ public class KIXApplication extends Application {
         KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
         studentDao = kixDatabase.getStudentDao();
         surveyorDao = kixDatabase.getSurveyorDao();
+        householdDao = kixDatabase.getHouseholdDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
     }

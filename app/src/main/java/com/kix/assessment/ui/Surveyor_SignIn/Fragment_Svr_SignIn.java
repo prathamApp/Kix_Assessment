@@ -2,13 +2,15 @@ package com.kix.assessment.ui.Surveyor_SignIn;
 
 import android.content.Intent;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
-import com.kix.assessment.ui.attendance_activity.Activity_Attendance_;
+import com.kix.assessment.ui.household_activity.Activity_Household_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -22,9 +24,10 @@ public class Fragment_Svr_SignIn extends Fragment {
 
     @ViewById(R.id.et_email)
     EditText et_email;
-
     @ViewById(R.id.et_password)
     EditText et_password;
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
 
     public Fragment_Svr_SignIn() {
         // Required empty public constructor
@@ -35,6 +38,11 @@ public class Fragment_Svr_SignIn extends Fragment {
 
     }
 
+    @Click(R.id.rl_parentLayout)
+    public void hideKeyboard(){
+        KIX_Utility.HideInputKeypad(getActivity());
+    }
+
     @Click(R.id.btn_signIn)
     public void signIn(){
         if(!et_email.getText().toString().isEmpty() && !et_password.getText().toString().isEmpty()){
@@ -42,7 +50,7 @@ public class Fragment_Svr_SignIn extends Fragment {
             if (surveyorLogin == null) {
                 Toast.makeText(getActivity(), "Invalid Email or Password.", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
+                Intent intent = new Intent(getActivity(), Activity_Household_.class);
                 intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorLogin.getSvr_Code());
                 startActivity(intent);
                 Toast.makeText(getActivity(), "Login Success..", Toast.LENGTH_SHORT).show();
