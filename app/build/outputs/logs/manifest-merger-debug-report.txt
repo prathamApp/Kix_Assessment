@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:38:9-46:20
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:67:9-75:20
 	android:grantUriPermissions
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:42:13-47
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:71:13-47
 	android:authorities
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:40:13-60
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:69:13-60
 	android:exported
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:70:13-37
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:39:13-62
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:68:13-62
 manifest
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fcd5672707f0648990741b111edbbaf2\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6c58eba264aa4d6041b58cef635a131c\AndroidManifest.xml:17:1-22:12
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:2:1-19:12
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:2:1-19:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4cbb64fca7817f7bcb449c671c957833\AndroidManifest.xml:17:1-24:12
-MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4baca9b02758121fa64aca9216631bad\AndroidManifest.xml:2:1-12:12
-MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\e29afa7c8aee42d149bd3ac7ce6cd56e\AndroidManifest.xml:18:1-27:12
-MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\583c9fc2eb5837911bd14d4a7cf26ff2\AndroidManifest.xml:25:1-37:12
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0c08b5f9e5950167657f218f2418cbb0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\b0c6a32b58d8ad6de40923b02db8d0dd\AndroidManifest.xml:18:1-27:12
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5cb3b42b749a4067e63cd077ee9384fa\AndroidManifest.xml:25:1-37:12
 MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6e818e3edb79471f4964a3d6be00e60d\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\942bf554bfe5c27e09dd4734f3c0d7a9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\e3c6cf3df06ec5115495931865177791\AndroidManifest.xml:2:1-11:12
@@ -63,46 +63,138 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\pefpr\.gradle\caches\transform
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6f15918d1c4224565a1f273009b66678\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:2:1-19:12
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\faca66fa63a524c3a5c45075af807ed6\AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\f961814b0cc627ae1d6fe4b8bbb53093\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\610b537148a077bab784f7f22b2c411f\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ee071275482a2aa4649c3fc5cbe6a3ed\AndroidManifest.xml:2:1-9:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ddf024329b639b84709f6e4bceb87461\AndroidManifest.xml:15:1-21:12
-MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ad50fe11a4fe9a4ed5ed7dd843cd3409\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\255c70094eae57c07bcf4b824b713270\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\43998fd5e65fc9ee7590275b267c58e3\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0fdc886071a84ef8e36da652fc2318ed\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\1b5ad692ac1a525860670dff02f5cf58\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\9c5bc3e8dae7edaaeca8ae5bac79f4ce\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\95d376cbf18cf4b45399782adfaaeba8\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\34193636e5632a20770b34047ab7dab1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\172c5519cd09585570b746c8d43c4b1a\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fa2de94849c373454ca8f440a7f8c6da\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6780e760a421aa1299fea1ce46c775df\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\06cbcd1d48b899db5d407caac3fa1a7b\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\a7770cad8c725efb98d9b4ca4e2b8895\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
+INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
 	package
 		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:4:5-33
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-85:12
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:1-82:12
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:6:5-8:40
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:8:3-74
+MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:8:3-74
+	tools:ignore
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:8:9-37
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:7:9-61
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:9:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:11:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:12:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:14:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:15:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:16:22-68
+uses-permission#android.permission.INTERNET
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:17:5-67
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:11:5-67
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:17:22-64
+uses-permission#android.permission.CAMERA
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:18:5-65
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:18:22-62
+uses-permission#android.permission.BLUETOOTH
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:19:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:20:5-74
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:20:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:21:5-81
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:21:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:22:22-76
+uses-permission#android.permission.EXPAND_STATUS_BAR
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:23:5-76
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:23:22-73
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:24:5-26:47
+	tools:ignore
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:25:9-63
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:5-86
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:22-83
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:28:5-30:47
+	tools:ignore
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:29:9-57
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:31:5-33:47
+	tools:ignore
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:33:9-44
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:32:9-64
 application
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:6:5-53:19
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:35:5-80:19
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fcd5672707f0648990741b111edbbaf2\AndroidManifest.xml:11:5-20
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fcd5672707f0648990741b111edbbaf2\AndroidManifest.xml:11:5-20
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:13:5-17:19
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:13:5-17:19
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:13:5-17:19
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:13:5-17:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4cbb64fca7817f7bcb449c671c957833\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4cbb64fca7817f7bcb449c671c957833\AndroidManifest.xml:22:5-20
-MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\583c9fc2eb5837911bd14d4a7cf26ff2\AndroidManifest.xml:35:5-20
-MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\583c9fc2eb5837911bd14d4a7cf26ff2\AndroidManifest.xml:35:5-20
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5cb3b42b749a4067e63cd077ee9384fa\AndroidManifest.xml:35:5-20
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5cb3b42b749a4067e63cd077ee9384fa\AndroidManifest.xml:35:5-20
 MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6e818e3edb79471f4964a3d6be00e60d\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6e818e3edb79471f4964a3d6be00e60d\AndroidManifest.xml:11:5-15:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\e3c6cf3df06ec5115495931865177791\AndroidManifest.xml:9:5-20
@@ -120,159 +212,73 @@ MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\t
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\a7770cad8c725efb98d9b4ca4e2b8895\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\a7770cad8c725efb98d9b4ca4e2b8895\AndroidManifest.xml:11:5-20
 	android:requestLegacyExternalStorage
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:16:9-52
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:43:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\bd9e0d239aab79cee4cd4710fa388eef\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:45:9-35
 	android:label
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:40:9-41
 	android:hardwareAccelerated
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:38:9-43
 	tools:ignore
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:18:9-48
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:47:9-48
 	android:roundIcon
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:13:9-47
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:44:9-47
 	android:largeHeap
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:15:9-33
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:41:9-33
 	android:icon
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:10:9-42
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:39:9-42
 	android:allowBackup
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:37:9-35
 	android:theme
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:17:9-52
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:46:9-52
 	android:networkSecurityConfig
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:12:9-69
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:42:9-69
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:7:9-57
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:36:9-39
+activity#com.kix.assessment.ui.household_activity.Activity_Household_
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:9-49:58
+	android:screenOrientation
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:49:13-56
+	android:name
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:19-76
 activity#com.kix.assessment.ui.splash_activityy.SplashActivity_
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:19:9-29:20
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:9-60:20
 	android:screenOrientation
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:21:13-56
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:52:13-56
 	android:windowSoftInputMode
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:23:13-56
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:54:13-55
 	android:theme
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:22:13-57
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:53:13-57
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:20:13-82
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:51:13-64
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:13-59:29
 action#android.intent.action.MAIN
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:17-69
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:17-77
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:27-74
 activity#com.kix.assessment.ui.attendance_activity.Activity_Attendance_
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:31:9-36:20
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:61:9-65:67
 	android:screenOrientation
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:33:13-56
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:13-56
 	android:windowSoftInputMode
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:35:13-56
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:65:13-55
 	android:theme
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:34:13-57
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:13-57
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:32:13-72
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:13-72
 activity#com.kix.assessment.ui.main_test.MainTestActivity_
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:48:9-50:59
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:77:9-79:59
 	android:screenOrientation
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:50:13-56
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:79:13-56
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:49:13-59
-uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:5-56:40
-MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:8:3-74
-MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:8:3-74
-	tools:ignore
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:56:9-37
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:55:22-74
-uses-permission#android.permission.WAKE_LOCK
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:5-68
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:57:22-65
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:5-79
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:58:22-76
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:5-76
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:59:22-73
-uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:5-76
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:60:22-73
-uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:61:5-79
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:61:22-76
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:5-80
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:62:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:5-81
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:63:22-78
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:5-71
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:64:22-68
-uses-permission#android.permission.INTERNET
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:65:5-67
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:11:5-67
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:11:5-67
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:65:22-64
-uses-permission#android.permission.CAMERA
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:66:5-65
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:66:22-62
-uses-permission#android.permission.BLUETOOTH
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:67:5-68
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:67:22-65
-uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:68:5-74
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:68:22-71
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:69:5-81
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:69:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:70:5-79
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:70:22-76
-uses-permission#android.permission.EXPAND_STATUS_BAR
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:71:5-76
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:71:22-73
-uses-permission#android.permission.CHANGE_CONFIGURATION
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:73:5-75:47
-	tools:ignore
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:75:9-44
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:74:9-63
-uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:76:5-86
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:76:22-83
-uses-permission#android.permission.WRITE_SETTINGS
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:77:5-79:47
-	tools:ignore
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:79:9-44
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:78:9-57
-uses-permission#android.permission.WRITE_SECURE_SETTINGS
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:81:5-83:47
-	tools:ignore
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:83:9-44
-	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:82:9-64
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:78:13-59
 uses-sdk
 INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
@@ -281,16 +287,16 @@ MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\pefpr\.gradle\caches\transfor
 MERGED from [com.nex3z:flow-layout:1.2.4] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fcd5672707f0648990741b111edbbaf2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6c58eba264aa4d6041b58cef635a131c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6c58eba264aa4d6041b58cef635a131c\AndroidManifest.xml:20:5-44
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:7:5-9:41
-MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:7:5-9:41
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:7:5-9:41
+MERGED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4cbb64fca7817f7bcb449c671c957833\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4cbb64fca7817f7bcb449c671c957833\AndroidManifest.xml:20:5-44
-MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4baca9b02758121fa64aca9216631bad\AndroidManifest.xml:8:5-10:41
-MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\4baca9b02758121fa64aca9216631bad\AndroidManifest.xml:8:5-10:41
-MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\e29afa7c8aee42d149bd3ac7ce6cd56e\AndroidManifest.xml:23:5-25:41
-MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\e29afa7c8aee42d149bd3ac7ce6cd56e\AndroidManifest.xml:23:5-25:41
-MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\583c9fc2eb5837911bd14d4a7cf26ff2\AndroidManifest.xml:31:5-33:41
-MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\583c9fc2eb5837911bd14d4a7cf26ff2\AndroidManifest.xml:31:5-33:41
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0c08b5f9e5950167657f218f2418cbb0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.yarolegovich:discrete-scrollview:1.4.9] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0c08b5f9e5950167657f218f2418cbb0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\b0c6a32b58d8ad6de40923b02db8d0dd\AndroidManifest.xml:23:5-25:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\b0c6a32b58d8ad6de40923b02db8d0dd\AndroidManifest.xml:23:5-25:41
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5cb3b42b749a4067e63cd077ee9384fa\AndroidManifest.xml:31:5-33:41
+MERGED from [io.github.storix:rxdiffutil:0.3.2] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5cb3b42b749a4067e63cd077ee9384fa\AndroidManifest.xml:31:5-33:41
 MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6e818e3edb79471f4964a3d6be00e60d\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.joielechong:zip4jandroid:1.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6e818e3edb79471f4964a3d6be00e60d\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\942bf554bfe5c27e09dd4734f3c0d7a9\AndroidManifest.xml:20:5-44
@@ -373,26 +379,26 @@ MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\t
 MERGED from [com.google.android.play:core:1.7.3] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0143feff40f60f87088130f0562da878\AndroidManifest.xml:4:3-70
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\faca66fa63a524c3a5c45075af807ed6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\faca66fa63a524c3a5c45075af807ed6\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\f961814b0cc627ae1d6fe4b8bbb53093\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\f961814b0cc627ae1d6fe4b8bbb53093\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\610b537148a077bab784f7f22b2c411f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\610b537148a077bab784f7f22b2c411f\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ee071275482a2aa4649c3fc5cbe6a3ed\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-gif:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ee071275482a2aa4649c3fc5cbe6a3ed\AndroidManifest.xml:5:5-7:41
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ddf024329b639b84709f6e4bceb87461\AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ddf024329b639b84709f6e4bceb87461\AndroidManifest.xml:19:5-43
-MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ad50fe11a4fe9a4ed5ed7dd843cd3409\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\ad50fe11a4fe9a4ed5ed7dd843cd3409\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\255c70094eae57c07bcf4b824b713270\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\255c70094eae57c07bcf4b824b713270\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\43998fd5e65fc9ee7590275b267c58e3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:nativeimagefilters:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\43998fd5e65fc9ee7590275b267c58e3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0fdc886071a84ef8e36da652fc2318ed\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\0fdc886071a84ef8e36da652fc2318ed\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\1b5ad692ac1a525860670dff02f5cf58\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\1b5ad692ac1a525860670dff02f5cf58\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\9c5bc3e8dae7edaaeca8ae5bac79f4ce\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:0.14.1] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\9c5bc3e8dae7edaaeca8ae5bac79f4ce\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\95d376cbf18cf4b45399782adfaaeba8\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\95d376cbf18cf4b45399782adfaaeba8\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\34193636e5632a20770b34047ab7dab1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:nativeimagetranscoder:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\34193636e5632a20770b34047ab7dab1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\172c5519cd09585570b746c8d43c4b1a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\172c5519cd09585570b746c8d43c4b1a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fa2de94849c373454ca8f440a7f8c6da\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\fa2de94849c373454ca8f440a7f8c6da\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6780e760a421aa1299fea1ce46c775df\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\6780e760a421aa1299fea1ce46c775df\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\06cbcd1d48b899db5d407caac3fa1a7b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.13.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\06cbcd1d48b899db5d407caac3fa1a7b\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\a7770cad8c725efb98d9b4ca4e2b8895\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\a7770cad8c725efb98d9b4ca4e2b8895\AndroidManifest.xml:7:5-9:41
 INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
@@ -406,17 +412,17 @@ INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 		INJECTED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:43:13-45:54
+ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:72:13-74:54
 	android:resource
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:45:17-51
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:74:17-51
 	android:name
-		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:44:17-67
+		ADDED from E:\AndroidProjects\Kix_Assessment\app\src\main\AndroidManifest.xml:73:17-67
 activity#net.alhazmy13.catcho.library.CatchoReportActivity
-ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:14:9-16:53
+ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:14:9-16:53
 	android:theme
-		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:16:13-50
+		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:16:13-50
 	android:name
-		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\d8db87524c38f848a673eb503f742ab9\AndroidManifest.xml:15:13-77
+		ADDED from [net.alhazmy13.catcho:library:1.1.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\5e6900ab593c0bc712b6467fa4127bd7\AndroidManifest.xml:15:13-77
 provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\pefpr\.gradle\caches\transforms-2\files-2.1\8d45be147aa03a873436b75f68580bc6\AndroidManifest.xml:23:9-27:43
 	android:authorities

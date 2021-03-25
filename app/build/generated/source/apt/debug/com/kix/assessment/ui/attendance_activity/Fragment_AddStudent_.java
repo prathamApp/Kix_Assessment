@@ -91,8 +91,19 @@ public final class Fragment_AddStudent_
         this.spinner_age = hasViews.internalFindViewById(R.id.spinner_age);
         this.spinner_gender = hasViews.internalFindViewById(R.id.spinner_gender);
         this.spinner_class = hasViews.internalFindViewById(R.id.spinner_class);
+        View view_rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
         View view_btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
 
+        if (view_rl_parentLayout!= null) {
+            view_rl_parentLayout.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_AddStudent_.this.hideKeyboard();
+                }
+            }
+            );
+        }
         if (view_btn_saveStudent!= null) {
             view_btn_saveStudent.setOnClickListener(new OnClickListener() {
 

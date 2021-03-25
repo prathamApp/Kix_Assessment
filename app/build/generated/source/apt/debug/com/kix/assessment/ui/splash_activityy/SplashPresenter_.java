@@ -8,6 +8,7 @@
 package com.kix.assessment.ui.splash_activityy;
 
 import android.content.Context;
+import org.androidannotations.api.BackgroundExecutor;
 
 public final class SplashPresenter_
     extends SplashPresenter
@@ -16,11 +17,13 @@ public final class SplashPresenter_
     private Object rootFragment_;
 
     private SplashPresenter_(Context context) {
+        super(context);
         context_ = context;
         init_();
     }
 
     private SplashPresenter_(Context context, Object rootFragment) {
+        super(context);
         context_ = context;
         rootFragment_ = rootFragment;
         init_();
@@ -40,5 +43,21 @@ public final class SplashPresenter_
     public void rebind(Context context) {
         context_ = context;
         init_();
+    }
+
+    @Override
+    public void addDataToDB() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0L, "") {
+
+            @Override
+            public void execute() {
+                try {
+                    SplashPresenter_.super.addDataToDB();
+                } catch (final Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+        }
+        );
     }
 }

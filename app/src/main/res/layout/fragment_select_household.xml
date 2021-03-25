@@ -21,4 +21,12 @@
         android:layout_centerVertical="true"
         android:padding="@dimen/_5sdp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/fab_profile"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>

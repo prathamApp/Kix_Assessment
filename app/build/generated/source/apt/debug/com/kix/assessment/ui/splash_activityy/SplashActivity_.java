@@ -93,7 +93,7 @@ public final class SplashActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.tv_surveyorSignIn = hasViews.internalFindViewById(R.id.tv_surveyouSignIn);
+        this.tv_surveyorSignIn = hasViews.internalFindViewById(R.id.btn_surveyouSignIn);
         this.btn_signUp = hasViews.internalFindViewById(R.id.btn_signUp);
         if (this.btn_signUp!= null) {
             this.btn_signUp.setOnClickListener(new OnClickListener() {

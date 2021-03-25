@@ -96,12 +96,25 @@ public final class MainTestActivity_
         this.fragment_view_pager = hasViews.internalFindViewById(R.id.fragment_view_pager);
         this.dots_indicator = hasViews.internalFindViewById(R.id.dots_indicator);
         this.btn_next = hasViews.internalFindViewById(R.id.btn_next);
+        this.rl_gameover = hasViews.internalFindViewById(R.id.rl_gameover);
+        this.btn_next_student = hasViews.internalFindViewById(R.id.btn_next_student);
+        this.tv_thankyou = hasViews.internalFindViewById(R.id.tv_thankyou);
         if (this.btn_next!= null) {
             this.btn_next.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
                     MainTestActivity_.this.nextClicked();
+                }
+            }
+            );
+        }
+        if (this.btn_next_student!= null) {
+            this.btn_next_student.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    MainTestActivity_.this.nextStudentClicked();
                 }
             }
             );

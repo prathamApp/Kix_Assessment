@@ -57,6 +57,7 @@ public final class Fragment_Svr_SignIn_
         contentView_ = null;
         et_email = null;
         et_password = null;
+        rl_parentLayout = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -87,8 +88,19 @@ public final class Fragment_Svr_SignIn_
     public void onViewChanged(HasViews hasViews) {
         this.et_email = hasViews.internalFindViewById(R.id.et_email);
         this.et_password = hasViews.internalFindViewById(R.id.et_password);
+        this.rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
         View view_btn_signIn = hasViews.internalFindViewById(R.id.btn_signIn);
 
+        if (this.rl_parentLayout!= null) {
+            this.rl_parentLayout.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_Svr_SignIn_.this.hideKeyboard();
+                }
+            }
+            );
+        }
         if (view_btn_signIn!= null) {
             view_btn_signIn.setOnClickListener(new OnClickListener() {
 
