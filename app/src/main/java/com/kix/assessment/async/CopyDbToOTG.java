@@ -1,14 +1,13 @@
-package com.pratham.prathamdigital.async;
+package com.kix.assessment.async;
 
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import androidx.documentfile.provider.DocumentFile;
-
-import com.pratham.prathamdigital.PrathamApplication;
-import com.pratham.prathamdigital.models.EventMessage;
-import com.pratham.prathamdigital.util.PD_Constant;
+import com.kix.assessment.KIXApplication;
+import com.kix.assessment.kix_utils.KIX_Utility;
+import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.EventMessage;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -17,7 +16,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import static com.pratham.prathamdigital.dbclasses.PrathamDatabase.DB_NAME;
+import androidx.documentfile.provider.DocumentFile;
+
+import static com.kix.assessment.dbclasses.KixDatabase.DB_NAME;
 
 public class CopyDbToOTG extends AsyncTask {
 
@@ -25,16 +26,16 @@ public class CopyDbToOTG extends AsyncTask {
     protected Object doInBackground(Object[] objects) {
         try {
             Uri treeUri = (Uri) objects[0];
-            DocumentFile rootFile = DocumentFile.fromTreeUri(PrathamApplication.getInstance(), treeUri);
-            DocumentFile pradigi_backup_file = rootFile.findFile("PraDigi_DBs");
-            if (pradigi_backup_file == null)
-                pradigi_backup_file = rootFile.createDirectory("PraDigi_DBs");
-            String thisdeviceFolderName = "DeviceId" + PrathamApplication.statusDao.getValue("DeviceId");
-            DocumentFile thisTabletFolder = pradigi_backup_file.findFile(thisdeviceFolderName);
+            DocumentFile rootFile = DocumentFile.fromTreeUri(KIXApplication.getInstance(), treeUri);
+            DocumentFile kix_backup_file = rootFile.findFile("KIX_DBs");
+            if (kix_backup_file == null)
+                kix_backup_file = rootFile.createDirectory("KIX_DBs");
+            String thisdeviceFolderName = "DeviceId" + KIX_Utility.getDeviceID();
+            DocumentFile thisTabletFolder = kix_backup_file.findFile(thisdeviceFolderName);
             if (thisTabletFolder == null)
-                thisTabletFolder = pradigi_backup_file.createDirectory(thisdeviceFolderName);
+                thisTabletFolder = kix_backup_file.createDirectory(thisdeviceFolderName);
             //copy db files
-            File currentDB = PrathamApplication.getInstance().getDatabasePath(DB_NAME);
+            File currentDB = KIXApplication.getInstance().getDatabasePath(DB_NAME);
             File parentPath = currentDB.getParentFile();
             for (File f : parentPath.listFiles()) {
                 DocumentFile file = thisTabletFolder.findFile(f.getName());
@@ -44,7 +45,7 @@ public class CopyDbToOTG extends AsyncTask {
             }
 
             //copy helper folder
-            File internal_helper = new File(PrathamApplication.pradigiPath, PD_Constant.HELPER_FOLDER);
+            File internal_helper = new File(KIXApplication.kixPath, Kix_Constant.HELPER_FOLDER);
             copyActivityData(internal_helper, thisTabletFolder);
             return true;
         } catch (Exception e) {
@@ -74,7 +75,7 @@ public class CopyDbToOTG extends AsyncTask {
 
     private void copyyFile(DocumentFile outputFile, File inputFile) {
         try {
-            OutputStream out = PrathamApplication.getInstance().getContentResolver().openOutputStream(outputFile.getUri());
+            OutputStream out = KIXApplication.getInstance().getContentResolver().openOutputStream(outputFile.getUri());
             FileInputStream in = new FileInputStream(inputFile.getAbsolutePath());
             byte[] buffer = new byte[1024];
             int read;
@@ -94,8 +95,8 @@ public class CopyDbToOTG extends AsyncTask {
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
         EventMessage message = new EventMessage();
-        if ((boolean) o) message.setMessage(PD_Constant.BACKUP_DB_COPIED);
-        else message.setMessage(PD_Constant.BACKUP_DB_NOT_COPIED);
+        if ((boolean) o) message.setMessage(Kix_Constant.BACKUP_DB_COPIED);
+        else message.setMessage(Kix_Constant.BACKUP_DB_NOT_COPIED);
         EventBus.getDefault().post(message);
     }
 }

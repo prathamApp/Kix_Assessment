@@ -1,9 +1,7 @@
 package com.kix.assessment.ui.attendance_activity;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.Gravity;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
@@ -34,6 +32,7 @@ public class Activity_Attendance extends BaseActivity {
 
     @AfterViews
     public void initialize() {
+        Log.e("KIX b1: ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
         surveyorCode = getIntent().getStringExtra(Kix_Constant.SURVEYOR_CODE);
         householdID = getIntent().getStringExtra(Kix_Constant.HOUSEHOLD_ID);
         Modal_Student student = KixDatabase.getDatabaseInstance(this).getStudentDao().getStudentBySurveyorCode(surveyorCode,householdID);
@@ -41,14 +40,14 @@ public class Activity_Attendance extends BaseActivity {
         if (student == null) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
             bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
-            KIX_Utility.addFragment(this, new Fragment_AddStudent_(), R.id.attendance_frame,
+            KIX_Utility.showFragment(this, new Fragment_AddStudent_(), R.id.attendance_frame,
                     bundle, Fragment_AddStudent.class.getSimpleName());
         } else {
             ArrayList<Modal_Student> students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
             bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
             bundle.putParcelableArrayList(Kix_Constant.STUDENT_LIST, students);
-            KIX_Utility.addFragment(this, new Fragment_SelectStudent_(), R.id.attendance_frame,
+            KIX_Utility.showFragment(this, new Fragment_SelectStudent_(), R.id.attendance_frame,
                     bundle, Fragment_SelectStudent.class.getSimpleName());
         }
     }
@@ -56,8 +55,10 @@ public class Activity_Attendance extends BaseActivity {
     @Override
     public void onBackPressed() {
         Fragment f = getSupportFragmentManager().findFragmentById(R.id.attendance_frame);
-        Log.e("KIX : ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
+        Log.e("KIX b2: ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
         if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
+            finish();
+/*
             exitDialog = new BlurPopupWindow.Builder(this)
                     .setContentView(R.layout.app_exit_dialog)
                     .bindClickListener(v -> {
@@ -73,6 +74,7 @@ public class Activity_Attendance extends BaseActivity {
                     .setTintColor(0x30000000)
                     .build();
             exitDialog.show();
+*/
         } else {
             getSupportFragmentManager().popBackStackImmediate();
         }

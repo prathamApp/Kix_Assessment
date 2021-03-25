@@ -1,13 +1,13 @@
-package com.pratham.prathamdigital.dbclasses;
+package com.kix.assessment.dbclasses.dao;
+
+import com.kix.assessment.modal_classes.Modal_Log;
+
+import java.util.List;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-
-import com.pratham.prathamdigital.models.Modal_Log;
-
-import java.util.List;
 
 @Dao
 public interface LogDao {

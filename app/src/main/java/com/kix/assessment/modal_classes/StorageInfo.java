@@ -1,4 +1,4 @@
-package com.pratham.prathamdigital.models;
+package com.kix.assessment.modal_classes;
 
 public class StorageInfo {
 

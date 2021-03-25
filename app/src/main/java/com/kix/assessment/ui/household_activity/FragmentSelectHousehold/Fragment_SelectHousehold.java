@@ -13,10 +13,13 @@ import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance_;
+import com.kix.assessment.ui.fragment_profile.Fragment_Profile;
+import com.kix.assessment.ui.fragment_profile.Fragment_Profile_;
 import com.kix.assessment.ui.household_activity.Fragment_AddHousehold;
 import com.kix.assessment.ui.household_activity.Fragment_AddHousehold_;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -88,6 +91,15 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
             intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.houseHold_ID);
             startActivity(intent);
         }
+    }
+
+    @Click(R.id.fab_profile)
+    public void profile(){
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
+        KIX_Utility.showFragment(getActivity(), new Fragment_Profile_(), R.id.household_frame,
+                bundle, Fragment_Profile.class.getSimpleName());
     }
 
     @Override

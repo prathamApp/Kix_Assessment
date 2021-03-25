@@ -1,14 +1,16 @@
 package com.kix.assessment.modal_classes;
 
+import java.io.Serializable;
+
+import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import java.io.Serializable;
 
 @Entity(tableName = "Content")
 public class Modal_Content implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
+    @Nullable
     public int contentId;
     public String contentCode;
     public String contentFolderName;

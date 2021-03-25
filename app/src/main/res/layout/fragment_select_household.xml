@@ -22,11 +22,14 @@
         android:padding="@dimen/_5sdp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
         android:id="@+id/fab_profile"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_person_white_24dp"
         />
 
 </RelativeLayout>

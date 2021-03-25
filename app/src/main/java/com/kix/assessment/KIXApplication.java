@@ -5,11 +5,16 @@ import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
+import com.kix.assessment.dbclasses.dao.LogDao;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -20,6 +25,7 @@ import okhttp3.OkHttpClient;
 public class KIXApplication extends Application {
 
     public static String contentSDPath="";
+    public static String kixPath="";
     OkHttpClient okHttpClient;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
@@ -28,6 +34,8 @@ public class KIXApplication extends Application {
     public static StudentDao studentDao;
     public static SurveyorDao surveyorDao;
     public static HouseholdDao householdDao;
+    public static ContentDao contentDao;
+    public static LogDao logDao;
 
     @Override
     public void onCreate() {
@@ -38,6 +46,7 @@ public class KIXApplication extends Application {
             kixApplication = this;
         }
         initializeDatabaseDaos();
+        setKixPath();
     }
 
     @Override
@@ -58,8 +67,22 @@ public class KIXApplication extends Application {
         studentDao = kixDatabase.getStudentDao();
         surveyorDao = kixDatabase.getSurveyorDao();
         householdDao = kixDatabase.getHouseholdDao();
+        contentDao = kixDatabase.getContentDao();
+        logDao = kixDatabase.getLogDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
+    }
+
+    public void setKixPath() {
+        try {
+            kixPath = KIX_Utility.getInternalPath(this);
+            File f = new File(kixPath);
+            if (!f.exists()) f.mkdirs();
+            File nmFile = new File(kixPath, ".nomedia");
+            if (!nmFile.exists()) nmFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

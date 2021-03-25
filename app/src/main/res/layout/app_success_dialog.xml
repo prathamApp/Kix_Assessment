@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.pratham.prathamdigital.custom.BlurPopupDialog.ShadowContainer xmlns:android="http://schemas.android.com/apk/res/android"
+<com.kix.assessment.custom.BlurPopupDialog.ShadowContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="@dimen/_200sdp"
     android:layout_height="@dimen/_230sdp"
@@ -8,16 +9,16 @@
     android:orientation="vertical"
     app:sc_shadowColor="#40444444">
 
-    <com.airbnb.lottie.LottieAnimationView
+ <!--   <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/push_lottie"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_80sdp"
         android:layout_margin="@dimen/_12sdp"
         app:lottie_autoPlay="true"
         app:lottie_fileName="loading.json"
-        app:lottie_loop="true" />
+        app:lottie_loop="true" />-->
 
-    <com.pratham.prathamdigital.custom.textviews.IndieFlowerTextView
+    <TextView
         android:id="@+id/txt_push_dialog_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +28,7 @@
         android:textColor="@android:color/holo_green_dark"
         android:textSize="@dimen/_12sdp" />
 
-    <com.pratham.prathamdigital.custom.textviews.IndieFlowerTextView
+    <TextView
         android:id="@+id/txt_push_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +38,7 @@
         android:textSize="@dimen/_12sdp"
         android:visibility="gone" />
 
-    <com.pratham.prathamdigital.custom.textviews.IndieFlowerTextView
+<!--    <TextView
         android:id="@+id/tv_courseCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +48,7 @@
         android:textSize="@dimen/_12sdp"
         android:visibility="gone" />
 
-    <com.pratham.prathamdigital.custom.textviews.IndieFlowerTextView
+    <TextView
         android:id="@+id/tv_scoreCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,14 +58,14 @@
         android:textSize="@dimen/_12sdp"
         android:visibility="gone" />
 
-    <com.pratham.prathamdigital.custom.buttons.IndieFlowerButton
+    <Button
         android:id="@+id/btn_ok"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_30sdp"
         android:text="Done"
         android:textColor="@color/white"
-        android:background="@drawable/button_orange_selector"
+        android:background="@color/red"
         android:layout_marginTop="@dimen/_10sdp"
-        android:visibility="gone"/>
+        android:visibility="gone"/>-->
 
-</com.pratham.prathamdigital.custom.BlurPopupDialog.ShadowContainer>
+</com.kix.assessment.custom.BlurPopupDialog.ShadowContainer>

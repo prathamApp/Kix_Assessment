@@ -1,5 +1,6 @@
 package com.kix.assessment.ui.surveyor_SignUP;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -20,10 +21,13 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import androidx.fragment.app.Fragment;
 
+import static com.kix.assessment.KIXApplication.contentDao;
 import static com.kix.assessment.KIXApplication.surveyorDao;
 
 @EFragment(R.layout.fragment_svr_sign_up)
@@ -43,13 +47,22 @@ public class Fragment_Svr_SignUp extends Fragment {
     @ViewById(R.id.ll_parentLayer)
     LinearLayout ll_parentLayout;
 
+    ArrayList<String> booklet = new ArrayList<>();
+
     public Fragment_Svr_SignUp() {
         // Required empty public constructor
     }
 
     @AfterViews
     public void initialize() {
-        spinner_booklet.setAdapter(ArrayAdapter.createFromResource(getActivity(), R.array.spinner_booklet, R.layout.support_simple_spinner_dropdown_item));
+        List<String> bklt = contentDao.getBooklets();
+        for (int i=0;i<bklt.size();i++){
+            booklet.add(bklt.get(i));
+            Log.e("KIX bklt: ",booklet.get(i));
+        }
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>
+                (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, booklet);
+        spinner_booklet.setAdapter(spinnerArrayAdapter);
     }
 
     @Click(R.id.ll_parentLayer)

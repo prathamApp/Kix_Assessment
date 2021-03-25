@@ -1,10 +1,10 @@
-package com.pratham.prathamdigital.models;
+package com.kix.assessment.modal_classes;
 
+
+import com.google.gson.annotations.SerializedName;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "Logs")
 public class Modal_Log {

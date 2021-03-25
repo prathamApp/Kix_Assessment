@@ -4,10 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.annotation.UiThread;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -27,6 +23,10 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
+import androidx.annotation.UiThread;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_select_student)
@@ -37,7 +37,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
 
     private ArrayList<Modal_Student> students = new ArrayList<>();
     private boolean itemSelected;
-    String surveyorCode;
+    String surveyorCode, householdID;
     Modal_Student add_student = new Modal_Student();
 
     private StudentListAdapter studentListAdapter;
@@ -50,6 +50,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
     public void initialize(){
         Log.e("KIX : ","selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         add_student.setStud_Name("Add Student");
         if (!students.contains(add_student)){
@@ -81,6 +82,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         Bundle bundle = new Bundle();
         if(position == students.size()-1) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
+            bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
             KIX_Utility.showFragment(getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
                     bundle, Fragment_AddStudent.class.getSimpleName());
         }

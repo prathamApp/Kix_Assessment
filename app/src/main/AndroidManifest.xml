@@ -80,6 +80,15 @@
         <activity
             android:name=".ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
+
+        <receiver
+            android:name=".services.OTGListener"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

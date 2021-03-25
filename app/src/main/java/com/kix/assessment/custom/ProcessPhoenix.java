@@ -1,4 +1,4 @@
-package com.pratham.prathamdigital.custom;
+package com.kix.assessment.custom;
 
 import android.app.Activity;
 import android.app.ActivityManager;
