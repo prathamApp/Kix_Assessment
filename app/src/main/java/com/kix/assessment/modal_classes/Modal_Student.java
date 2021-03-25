@@ -18,6 +18,7 @@ public class Modal_Student implements Comparable, Parcelable {
     public String Stud_Class;
     public String Svr_Code;
     public String Household_ID;
+    public int sentFlag;
 
     protected Modal_Student(Parcel in) {
         S_Id = in.readInt();
@@ -28,6 +29,7 @@ public class Modal_Student implements Comparable, Parcelable {
         Stud_Class = in.readString();
         Svr_Code = in.readString();
         Household_ID = in.readString();
+        sentFlag = in.readInt();
     }
 
     public static final Creator<Modal_Student> CREATOR = new Creator<Modal_Student>() {
@@ -101,6 +103,10 @@ public class Modal_Student implements Comparable, Parcelable {
 
     public void setHousehold_ID(String household_ID) { Household_ID = household_ID; }
 
+    public int getSentFlag() { return sentFlag; }
+
+    public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
+
     @Override
     public int describeContents() {
         return 0;
@@ -115,6 +121,7 @@ public class Modal_Student implements Comparable, Parcelable {
         dest.writeString(Stud_Class);
         dest.writeString(Svr_Code);
         dest.writeString(Household_ID);
+        dest.writeInt(sentFlag);
     }
 
     @Override

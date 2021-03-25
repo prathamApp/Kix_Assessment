@@ -11,6 +11,8 @@ import com.kix.assessment.custom.flexbox.FlexboxLayoutManager;
 import com.kix.assessment.custom.flexbox.JustifyContent;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Attendance;
+import com.kix.assessment.modal_classes.Modal_Session;
 import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent;
@@ -27,6 +29,8 @@ import androidx.annotation.UiThread;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static com.kix.assessment.KIXApplication.attendanceDao;
+import static com.kix.assessment.KIXApplication.sessionDao;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_select_student)
@@ -89,10 +93,35 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         else {
             Modal_Student modalStudnet = studentListAdapter.getitem(position);
             FastSave.getInstance().saveString(STUDENT_ID, ""+modalStudnet.getStud_Id());
+
+            FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
+            markAttendance(modalStudnet);
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
             startActivity(intent);
         }
+    }
+
+    private void markAttendance(Modal_Student stud) {
+        //<editor-fold desc="below code is for saving the student attendance so as to pass it to "meri dukan" game, nothing else">
+ /*       ArrayList<Modal_Student> stuList = new ArrayList<>();
+        stuList.add(stud);
+        String stu_json = new Gson().toJson(stuList);
+        FastSave.getInstance().saveString(PD_Constant.PRESENT_STUDENTS, stu_json);*/
+        //</editor-fold>
+        ArrayList<Attendance> attendances = new ArrayList<>();
+        Attendance attendance = new Attendance();
+        attendance.SessionID = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
+        attendance.StudentID = stud.getStud_Id();
+        attendance.Date = KIX_Utility.getCurrentDateTime();
+        attendance.sentFlag = 0;
+        attendances.add(attendance);
+        attendanceDao.insertAttendance(attendances);
+        Modal_Session s = new Modal_Session();
+        s.setSessionID(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
+        s.setFromDate(KIX_Utility.getCurrentDateTime());
+        s.setToDate("NA");
+        sessionDao.insert(s);
     }
 
     @Override

@@ -15,6 +15,7 @@ public class Modal_Household implements Comparable, Parcelable {
     public String houseHold_Name;
     public String houseHold_Address;
     public String Svr_Code;
+    public int sentFlag;
 
     protected Modal_Household(Parcel in) {
         hh_ID = in.readInt();
@@ -22,6 +23,7 @@ public class Modal_Household implements Comparable, Parcelable {
         houseHold_Name = in.readString();
         houseHold_Address = in.readString();
         Svr_Code = in.readString();
+        sentFlag = in.readInt();
     }
 
     public static final Creator<Modal_Household> CREATOR = new Creator<Modal_Household>() {
@@ -67,9 +69,7 @@ public class Modal_Household implements Comparable, Parcelable {
         return houseHold_Address;
     }
 
-    public void setHouseHold_Address(String houseHold_Address) {
-        this.houseHold_Address = houseHold_Address;
-    }
+    public void setHouseHold_Address(String houseHold_Address) { this.houseHold_Address = houseHold_Address; }
 
     public String getSvr_Code() {
         return Svr_Code;
@@ -78,6 +78,14 @@ public class Modal_Household implements Comparable, Parcelable {
     public void setSvr_Code(String svr_Code) {
         Svr_Code = svr_Code;
     }
+
+    public int getSentFlag() { return sentFlag; }
+
+    public static Creator<Modal_Household> getCREATOR() {
+        return CREATOR;
+    }
+
+    public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
 
     @Override
     public int describeContents() {
@@ -91,6 +99,7 @@ public class Modal_Household implements Comparable, Parcelable {
         dest.writeString(houseHold_Name);
         dest.writeString(houseHold_Address);
         dest.writeString(Svr_Code);
+        dest.writeInt(sentFlag);
     }
 
     @Override

@@ -76,6 +76,7 @@ public class Fragment_AddStudent extends Fragment {
         modal_student.setStud_Class(spinner_class.getSelectedItem().toString());
         modal_student.setSvr_Code(surveyorCode);
         modal_student.setHousehold_ID(householdID);
+        modal_student.setSentFlag(0);
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();

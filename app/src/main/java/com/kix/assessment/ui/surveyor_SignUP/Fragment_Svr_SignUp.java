@@ -86,6 +86,7 @@ public class Fragment_Svr_SignUp extends Fragment {
                 modal_surveyor.setSvr_Password(tv_svrPassword.getText().toString());
                 modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
                 modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
+                modal_surveyor.setSentFlag(0);
                 surveyorDao.insertSurveyor(modal_surveyor);
                 BackupDatabase.backup(getActivity());
                 Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();

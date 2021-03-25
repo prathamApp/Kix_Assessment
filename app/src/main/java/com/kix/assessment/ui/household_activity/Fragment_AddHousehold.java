@@ -50,6 +50,7 @@ public class Fragment_AddHousehold extends Fragment {
         modal_household.setHouseHold_Name(et_houseHoldName.getText().toString());
         modal_household.setHouseHold_Address(et_houseHoldAddress.getText().toString());
         modal_household.setSvr_Code(surveyorCode);
+        modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();

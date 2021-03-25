@@ -14,6 +14,7 @@ public class Modal_Surveyor {
     public String Svr_Password;
     public String Svr_Code;
     public String Svr_Booklet;
+    public int sentFlag;
 
     public int getSvr_Id() {
         return Svr_Id;
@@ -66,4 +67,8 @@ public class Modal_Surveyor {
     public void setSvr_Booklet(String svr_Booklet) {
         Svr_Booklet = svr_Booklet;
     }
+
+    public int getSentFlag() { return sentFlag; }
+
+    public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
 }
