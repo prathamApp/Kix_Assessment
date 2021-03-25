@@ -23,8 +23,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -46,10 +45,13 @@
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
+            android:name="com.kix.assessment.ui.household_activity.Activity_Household_"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name="com.kix.assessment.ui.splash_activityy.SplashActivity_"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
-            android:windowSoftInputMode="adjustNothing" >
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,8 +62,7 @@
             android:name="com.kix.assessment.ui.attendance_activity.Activity_Attendance_"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
-            android:windowSoftInputMode="adjustNothing" >
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -73,8 +74,11 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- <activity -->
+        <!-- android:name=".ui.main_test.MainTestActivity_" -->
+        <!-- android:screenOrientation="sensorLandscape" /> -->
         <activity
-            android:name="com.kix.assessment.ui.main_test.MainTestActivity_"
+            android:name="com.kix.assessment.ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name="net.alhazmy13.catcho.library.CatchoReportActivity"

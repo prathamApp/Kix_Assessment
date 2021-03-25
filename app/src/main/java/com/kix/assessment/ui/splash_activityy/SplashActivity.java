@@ -14,6 +14,7 @@ import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.kix_utils.KIX_Utility;
+import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn_;
@@ -55,7 +56,8 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
     @UiThread
     public void gotoNext() {
         KIX_Utility.getSdCardPath(this);
-        splashPresenter.addDataToDB();
+        if(!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED,false))
+            splashPresenter.addDataToDB();
         tv_surveyorSignIn.setVisibility(View.VISIBLE);
         btn_signUp.setVisibility(View.VISIBLE);
         checkPermissionss();
