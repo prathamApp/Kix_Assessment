@@ -6,6 +6,7 @@ import android.content.pm.ApplicationInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebChromeClient;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
+import com.kix.assessment.custom.CustomLodingDialog;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -97,11 +99,42 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
                 webView.getSettings().setLoadsImagesAutomatically(true);
                 webView.getSettings().setDomStorageEnabled(true);
                 webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+                dismissLoadingDialog();
             } else Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
 
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private boolean loaderVisible = false;
+    private CustomLodingDialog myLoadingDialog;
+    @UiThread
+    public void showLoader() {
+        if (!loaderVisible) {
+            loaderVisible = true;
+            myLoadingDialog = new CustomLodingDialog(this);
+            myLoadingDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            Objects.requireNonNull(myLoadingDialog.getWindow()).
+                    setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            myLoadingDialog.setContentView(R.layout.loading_dialog);
+            myLoadingDialog.setCanceledOnTouchOutside(false);
+//        myLoadingDialog.setCancelable(false);
+            myLoadingDialog.show();
+        }
+    }
+
+    @UiThread
+    public void dismissLoadingDialog() {
+        try {
+                loaderVisible = false;
+                new Handler().postDelayed(() -> {
+                    if (myLoadingDialog != null && myLoadingDialog.isShowing())
+                        myLoadingDialog.dismiss();
+                }, 300);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -122,6 +155,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         if (queCnt < gameListList.size()) {
             createWebView(queCnt);
         } else {
+            dismissLoadingDialog();
             webView.setVisibility(View.GONE);
             tv_thankyou.setText("Thank you " + studentName + "!!!\nYour test is submitted.");
             rl_gameover.setVisibility(View.VISIBLE);
@@ -204,6 +238,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 //            updateAvailable.setMessage("nextGame");
 //            EventBus.getDefault().post(updateAvailable);
             nextDialog.dismiss();
+            showLoader();
         });
         nextDialog.show();
     }

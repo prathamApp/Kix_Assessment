@@ -2211,6 +2211,7 @@ id dia_no
 id dia_title
 id dia_yes
 id dialog_btn_exit
+id dialog_roundProgress
 id dialog_txt_exit
 id dimensions
 id direct
@@ -2426,6 +2427,7 @@ id useLogo
 id vertical
 id view_offset_helper
 id visible
+id web_view
 id withText
 id worm_dot
 id wrap
@@ -2483,6 +2485,7 @@ layout activity_catcho_report
 layout activity_household
 layout activity_main_test
 layout activity_splash
+layout activity_web_view
 layout app_exit_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2509,6 +2512,7 @@ layout fragment_svr_sign_up
 layout fragment_web_view
 layout item_select_household
 layout item_select_student
+layout loading_dialog
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout next_game_dialog

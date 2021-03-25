@@ -9,4 +9,5 @@ public class Kix_Constant {
     public static final String STUDENT_ID = "student_id";
     public static final String HOUSEHOLD_LIST = "Household_List";
     public static final String HOUSEHOLD_ID = "Household_Id";
+    public static final String DATA_COPIED = "data_copied";
 }

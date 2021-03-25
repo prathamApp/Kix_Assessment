@@ -55,9 +55,9 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             List<Modal_Content> modal_contentList = new ArrayList<>();
             for(int i=0; i<gameListList.size(); i++){
                 Modal_Content modal_content = new Modal_Content();
-                modal_content.setContentBooklet("Booklet 1,Booklet 2,Booklet 3,Booklet 4");
+                modal_content.setContentBooklet(""+gameListList.get(i).getBooklet());
                 modal_content.setContentCode(""+gameListList.get(i).getCode());
-                modal_content.setContentFolderName(""+gameListList.get(i).getFolder_Name());
+                modal_content.setContentFolderName(""+gameListList.get(i).getFolder_name());
                 modal_contentList.add(modal_content);
             }
             KixDatabase.getDatabaseInstance(mContext).getContentDao().insertAll(modal_contentList);

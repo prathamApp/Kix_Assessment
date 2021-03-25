@@ -74,8 +74,11 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- <activity -->
+        <!-- android:name=".ui.main_test.MainTestActivity_" -->
+        <!-- android:screenOrientation="sensorLandscape" /> -->
         <activity
-            android:name="com.kix.assessment.ui.main_test.MainTestActivity_"
+            android:name="com.kix.assessment.ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name="net.alhazmy13.catcho.library.CatchoReportActivity"
