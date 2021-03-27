@@ -9,6 +9,7 @@ public interface SplashContract {
     interface SplashPresenter {
 
         void setView(SplashContract.SplashView splashView);
+        void populateDefaultDB();
 
     }
 

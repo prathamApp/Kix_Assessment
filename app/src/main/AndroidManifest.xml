@@ -62,7 +62,14 @@
             android:name=".ui.attendance_activity.Activity_Attendance_"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".CatchoTransparentActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

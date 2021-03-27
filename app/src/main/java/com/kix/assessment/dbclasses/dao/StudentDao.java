@@ -24,4 +24,7 @@ public interface StudentDao {
     @Query("SELECT * FROM Student WHERE Svr_Code=:svrCode")
     List<Modal_Student> getAllStudentsBySurveyor(String svrCode);
 
+    @Query("select * from Student where sentFlag = 0")
+    List<Modal_Student> getAllNewStudents();
+
 }

@@ -55,9 +55,6 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         if (!households.contains(add_household)){
             households.add(add_household);
         }
-        else{
-
-        }
         initializeAdapter();
     }
 

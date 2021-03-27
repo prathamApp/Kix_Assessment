@@ -8,6 +8,7 @@ import com.kix.assessment.dbclasses.dao.HouseholdDao;
 import com.kix.assessment.dbclasses.dao.LogDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.SessionDao;
+import com.kix.assessment.dbclasses.dao.StatusDao;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
 import com.kix.assessment.modal_classes.Attendance;
@@ -15,6 +16,7 @@ import com.kix.assessment.modal_classes.Modal_Content;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_Session;
+import com.kix.assessment.modal_classes.Modal_Status;
 import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
 import com.kix.assessment.modal_classes.Score;
@@ -27,7 +29,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-@Database(entities = {Modal_Student.class, Modal_Surveyor.class, Score.class, Modal_Content.class, Modal_Household.class, Modal_Log.class, Attendance.class, Modal_Session.class}, version = 1, exportSchema = false)
+@Database(entities = {Modal_Student.class, Modal_Surveyor.class, Score.class,
+        Modal_Content.class, Modal_Household.class, Modal_Log.class, Attendance.class,
+        Modal_Session.class, Modal_Status.class}, version = 1, exportSchema = false)
 
 public abstract class KixDatabase extends RoomDatabase {
 
@@ -49,6 +53,8 @@ public abstract class KixDatabase extends RoomDatabase {
     public abstract AttendanceDao getAttendanceDao();
 
     public abstract SessionDao getSessionDao();
+
+    public abstract StatusDao getStatusDao();
 
     public static KixDatabase getDatabaseInstance(final Context context) {
         if (INSTANCE == null) {

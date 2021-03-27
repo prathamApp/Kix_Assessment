@@ -7,9 +7,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
@@ -27,6 +24,9 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
@@ -50,6 +50,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
     public void init() {
         FastSave.getInstance().saveString(STUDENT_ID, "NA");
         kix_utility = new KIX_Utility(this);
+        splashPresenter.populateDefaultDB();
         new Handler().postDelayed(this::gotoNext, 2000);
     }
 

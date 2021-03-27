@@ -1,15 +1,15 @@
 package com.kix.assessment.dbclasses.dao;
 
+import com.kix.assessment.modal_classes.Score;
+
+import java.util.List;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
-
-import com.kix.assessment.modal_classes.Score;
-
-import java.util.List;
 
 
 @Dao
@@ -44,5 +44,8 @@ public interface ScoreDao {
 
     @Query("select * from Score where sentFlag = 0 ")
     List<Score> getAllNotSentScores();
+
+    @Query("select * from Score where sentFlag = 0 AND SessionID=:s_id")
+    List<Score> getAllNewScores(String s_id);
 
 }

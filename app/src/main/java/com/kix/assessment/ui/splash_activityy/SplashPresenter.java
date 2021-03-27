@@ -2,13 +2,20 @@ package com.kix.assessment.ui.splash_activityy;
 
 
 import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
+import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.GameList;
 import com.kix.assessment.modal_classes.Modal_Content;
+import com.kix.assessment.modal_classes.Modal_Log;
+import com.kix.assessment.modal_classes.Modal_Status;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EBean;
@@ -20,6 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.kix.assessment.KIXApplication.contentSDPath;
+import static com.kix.assessment.KIXApplication.logDao;
+import static com.kix.assessment.KIXApplication.statusDao;
 
 @EBean
 public class SplashPresenter implements SplashContract.SplashPresenter {
@@ -65,6 +74,88 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Background
+    @Override
+    public void populateDefaultDB() {
+        Modal_Status statusObj = new Modal_Status();
+        if (statusDao.getKey("DeviceId") == null) {
+            statusObj.statusKey = "DeviceId";
+            statusObj.value = KIX_Utility.getDeviceID();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("DeviceName") == null) {
+            statusObj.statusKey = "DeviceName";
+            statusObj.value = KIX_Utility.getDeviceName();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("SerialID") == null) {
+            statusObj.statusKey = "SerialID";
+            statusObj.value = KIX_Utility.getDeviceSerialID();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("wifiMAC") == null) {
+            statusObj.statusKey = "wifiMAC";
+            WifiManager wifiManager = (WifiManager) mContext.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+            WifiInfo wInfo = wifiManager.getConnectionInfo();
+            statusObj.value = wInfo.getMacAddress();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("apkType") == null) {
+            statusObj.statusKey = "apkType";
+            statusObj.value = "KIX App";
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("appName") == null) {
+            statusObj.statusKey = "appName";
+            statusObj.value = KIX_Utility.getApplicationName(mContext);
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("apkVersion") == null) {
+            statusObj.statusKey = "apkVersion";
+            statusObj.value = KIX_Utility.getCurrentVersion(mContext);
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("androidOSVersion") == null) {
+            statusObj.statusKey = "androidOSVersion";
+            statusObj.value = KIX_Utility.getAndroidOSVersion();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("internalStorage") == null) {
+            statusObj.statusKey = "internalStorage";
+            statusObj.value = KIX_Utility.getInternalStorageStatus();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("deviceModel") == null) {
+            statusObj.statusKey = "deviceModel";
+            statusObj.value = KIX_Utility.getDeviceModel();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("deviceManufacturer") == null) {
+            statusObj.statusKey = "deviceManufacturer";
+            statusObj.value = KIX_Utility.getDeviceManufacturer();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("screenResolution") == null) {
+            statusObj.statusKey = "screenResolution";
+            statusObj.value = KIX_Utility.getScreenResolution();
+            statusDao.insert(statusObj);
+        }
+        Modal_Log modal_log = new Modal_Log();
+        modal_log.setLogId(1);
+        modal_log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
+        modal_log.setExceptionMessage("ExceptionMessage");
+        modal_log.setExceptionStackTrace("Exception Trace");
+        modal_log.setMethodName("MethodName");
+        modal_log.setErrorType("ErrorType");
+        modal_log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID,"no_session"));
+        modal_log.setDeviceId("DeviceId");
+        modal_log.setLogDetail("LogDetail");
+        modal_log.setSentFlag(0);
+
+        logDao.insertLog(modal_log);
+
     }
 }
 

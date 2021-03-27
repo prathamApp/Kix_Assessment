@@ -14,6 +14,18 @@ public class Kix_Constant {
     public static final String OTG_INSERTED ="otg_inserted";
     public static final String BACKUP_DB_COPIED = "backup_db_copied";
     public static final String BACKUP_DB_NOT_COPIED = "backup_db_not_copied";
+    public static final String FROMDATE = "fromDate";
+    public static final String TODATE = "toDate";
+    public static final String SCORE = "scores";
+    public static final String ATTENDANCE = "attendances";
+    public static final String SESSION = "session";
+    public static final String LOGS = "logs";
+    public static final String STUDENTS = "students";
+    public static final String METADATA = "metadata";
+    public static final String SCORE_COUNT = "score_count";
+    public static final String SURVEYOR = "surveyor";
+    public static final String HOUSEHOLD = "household";
+    public static final String BOOKLET = "booklet";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
 }

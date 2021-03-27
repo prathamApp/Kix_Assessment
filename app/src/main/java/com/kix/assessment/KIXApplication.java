@@ -9,7 +9,9 @@ import com.kix.assessment.dbclasses.dao.AttendanceDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
 import com.kix.assessment.dbclasses.dao.LogDao;
+import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.SessionDao;
+import com.kix.assessment.dbclasses.dao.StatusDao;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -40,6 +42,8 @@ public class KIXApplication extends Application {
     public static LogDao logDao;
     public static AttendanceDao attendanceDao;
     public static SessionDao sessionDao;
+    public static ScoreDao scoreDao;
+    public static StatusDao statusDao;
 
     @Override
     public void onCreate() {
@@ -75,6 +79,8 @@ public class KIXApplication extends Application {
         logDao = kixDatabase.getLogDao();
         attendanceDao = kixDatabase.getAttendanceDao();
         sessionDao = kixDatabase.getSessionDao();
+        scoreDao = kixDatabase.getScoreDao();
+        statusDao = kixDatabase.getStatusDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
     }

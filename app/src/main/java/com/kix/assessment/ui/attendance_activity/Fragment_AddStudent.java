@@ -1,6 +1,5 @@
 package com.kix.assessment.ui.attendance_activity;
 
-import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -80,10 +79,11 @@ public class Fragment_AddStudent extends Fragment {
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
+        getFragmentManager().popBackStack();
+/*        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     private void getSelectedAge() {

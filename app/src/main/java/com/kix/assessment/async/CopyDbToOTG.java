@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.kix.assessment.KIXApplication;
-import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 
@@ -18,6 +17,7 @@ import java.io.OutputStream;
 
 import androidx.documentfile.provider.DocumentFile;
 
+import static com.kix.assessment.KIXApplication.statusDao;
 import static com.kix.assessment.dbclasses.KixDatabase.DB_NAME;
 
 public class CopyDbToOTG extends AsyncTask {
@@ -30,7 +30,7 @@ public class CopyDbToOTG extends AsyncTask {
             DocumentFile kix_backup_file = rootFile.findFile("KIX_DBs");
             if (kix_backup_file == null)
                 kix_backup_file = rootFile.createDirectory("KIX_DBs");
-            String thisdeviceFolderName = "DeviceId" + KIX_Utility.getDeviceID();
+            String thisdeviceFolderName = "DeviceId" + statusDao.getValue("DeviceId");
             DocumentFile thisTabletFolder = kix_backup_file.findFile(thisdeviceFolderName);
             if (thisTabletFolder == null)
                 thisTabletFolder = kix_backup_file.createDirectory(thisdeviceFolderName);

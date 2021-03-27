@@ -21,4 +21,7 @@ public interface HouseholdDao {
     @Query("SELECT * FROM Household WHERE Svr_Code=:svrCode")
     List<Modal_Household> getAllHouseholdBySurveyorCode(String svrCode);
 
+    @Query("select * from Household where sentFlag = 0")
+    List<Modal_Household> getAllNewHouseholds();
+
 }

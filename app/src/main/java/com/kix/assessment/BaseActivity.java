@@ -17,8 +17,6 @@ import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 
-import net.alhazmy13.catcho.library.Catcho;
-
 import org.greenrobot.eventbus.Subscribe;
 
 import androidx.annotation.Nullable;
@@ -114,10 +112,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         hideSystemUI();
         super.onCreate(savedInstanceState);
-        Catcho.Builder(this)
+/*        Catcho.Builder(this)
                 .activity(CatchoTransparentActivity.class)
 //                .recipients("abc@gm.com")
-                .build();
+                .build();*/
     }
 
     private void hideSystemUI() {

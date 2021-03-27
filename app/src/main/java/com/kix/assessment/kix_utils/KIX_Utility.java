@@ -1,12 +1,19 @@
 package com.kix.assessment.kix_utils;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StatFs;
 import android.provider.Settings;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import com.kix.assessment.KIXApplication;
@@ -26,17 +33,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.StringTokenizer;
 import java.util.UUID;
 
 import androidx.fragment.app.Fragment;
 
+import static android.content.Context.ACTIVITY_SERVICE;
+
 public class KIX_Utility {
 
     private static String TAG = "Utility";
+    public static Context context;
     public KIX_Utility(Context context) {
+        KIX_Utility.context =context;
     }
 
     /**
@@ -180,6 +193,99 @@ public class KIX_Utility {
     //get device id
     public static String getDeviceID() {
         return Settings.Secure.getString(KIXApplication.getInstance().getContentResolver(), Settings.Secure.ANDROID_ID);
+    }
+
+    //get device name
+    public static String getDeviceName() {
+        String manufacturer = Build.MANUFACTURER;
+        String model = Build.MODEL;
+        if (model.startsWith(manufacturer)) {
+            return capitalize(model);
+        } else {
+            return capitalize(manufacturer) + " " + model;
+        }
+    }
+
+    private static String capitalize(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        char first = s.charAt(0);
+        if (Character.isUpperCase(first)) {
+            return s;
+        } else {
+            return Character.toUpperCase(first) + s.substring(1);
+        }
+    }
+
+    //get application name
+    public static String getApplicationName(Context context) {
+        String appname = "";
+        CharSequence c = "";
+        ActivityManager am = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
+        List l = am.getRunningAppProcesses();
+        Iterator i = l.iterator();
+        PackageManager pm = context.getPackageManager();
+        ActivityManager.RunningAppProcessInfo info = (ActivityManager.RunningAppProcessInfo) (i.next());
+        try {
+            c = pm.getApplicationLabel(pm.getApplicationInfo(info.processName, PackageManager.GET_META_DATA));
+            appname = c.toString();
+            Log.w("LABEL", c.toString());
+            return appname;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "KIX";
+        }
+    }
+
+    //get current version
+    public static String getCurrentVersion(Context context) {
+        PackageManager pm = context.getPackageManager();
+        PackageInfo pInfo = null;
+        try {
+            pInfo = pm.getPackageInfo(context.getPackageName(), 0);
+
+        } catch (PackageManager.NameNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        String currentVersion = pInfo.versionName;
+        return currentVersion;
+    }
+
+    public static String getAndroidOSVersion() {
+        return Build.VERSION.RELEASE;
+    }
+
+    public static String getInternalStorageStatus() {
+        StatFs stat = new StatFs(Environment.getDataDirectory().getPath());
+        long bytesAvailable, internalStorageSize;
+        bytesAvailable = stat.getBlockSizeLong() * stat.getAvailableBlocksLong();
+        internalStorageSize = bytesAvailable / (1024 * 1024);
+        String storage = String.valueOf(internalStorageSize);
+        return "" + storage + " MB";
+    }
+
+    public static String getDeviceManufacturer() {
+        return "" + Build.MANUFACTURER;
+    }
+
+    public static String getDeviceModel() {
+        return "" + Build.MODEL;
+    }
+
+    public static String getScreenResolution() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) Objects.requireNonNull(context.getSystemService(Context.WINDOW_SERVICE)))
+                .getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+        Configuration config = context.getResources().getConfiguration();
+        String strwidth = String.valueOf(width);
+        String strheight = String.valueOf(height);
+        Log.d("COSLS", "initialize: COSLS - " + strwidth);
+
+        String resolution = strwidth + "px x " + strheight + "px (" + config.densityDpi + " dpi)";
+        return resolution;
     }
 
     public static List<StorageInfo> getStorageList() {

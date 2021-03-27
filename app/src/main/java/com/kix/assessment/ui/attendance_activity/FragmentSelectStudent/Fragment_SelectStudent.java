@@ -31,6 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import static com.kix.assessment.KIXApplication.attendanceDao;
 import static com.kix.assessment.KIXApplication.sessionDao;
+import static com.kix.assessment.KIXApplication.studentDao;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_select_student)
@@ -55,13 +56,11 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         Log.e("KIX : ","selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
-        students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
+        //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
+        students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
         add_student.setStud_Name("Add Student");
         if (!students.contains(add_student)){
             students.add(add_student);
-        }
-        else{
-
         }
         initializeAdapter();
     }
