@@ -136,6 +136,10 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\4cbb64fca7817f7bcb449c671c957833\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_alert_sd_card.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\dialog_alert_sd_card.xml"
+    },
+    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\4cbb64fca7817f7bcb449c671c957833\\res\\layout\\design_layout_snackbar_include.xml"
     },
@@ -166,6 +170,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_crash_report.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\activity_crash_report.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_sdp_example.xml.flat",
@@ -358,6 +366,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync_green_24dp.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\ic_sync_green_24dp.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_select_student.xml.flat",
@@ -944,6 +956,10 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_success_dialog.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\app_success_dialog.xml"
+    },
+    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
     },
@@ -1076,12 +1092,12 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\5e6900ab593c0bc712b6467fa4127bd7\\res\\drawable-xxxhdpi-v4\\catcho_ic_done.png"
     },
     {
-        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_student.xml.flat",
         "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\fragment_add_student.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_linear_in.xml.flat",
@@ -1184,6 +1200,10 @@
         "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\ic_visibility_black_18dp.xml"
     },
     {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_white_24dp.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\ic_person_white_24dp.xml"
+    },
+    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1202,6 +1222,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1286,6 +1310,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_web_view.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\activity_web_view.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1396,6 +1424,10 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sd_operate_step.png.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\sd_operate_step.png"
+    },
+    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\color\\abc_tint_switch_track.xml"
     },
@@ -1406,6 +1438,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_multichoice_material.xml.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_crash.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\ic_crash.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1422,6 +1458,10 @@
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_dialog.xml.flat",
+        "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\loading_dialog.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -1456,12 +1496,12 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\bd9e0d239aab79cee4cd4710fa388eef\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\4cbb64fca7817f7bcb449c671c957833\\res\\color\\mtrl_btn_ripple_color.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\bd9e0d239aab79cee4cd4710fa388eef\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1652,20 +1692,20 @@
         "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\4cbb64fca7817f7bcb449c671c957833\\res\\color\\mtrl_chip_text_color.xml"
     },
     {
-        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_dp_example.xml.flat",
-        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\faca66fa63a524c3a5c45075af807ed6\\res\\layout\\dp_example.xml"
-    },
-    {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_household.xml.flat",
         "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\layout\\fragment_add_household.xml"
     },
     {
-        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
-        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_dp_example.xml.flat",
+        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\faca66fa63a524c3a5c45075af807ed6\\res\\layout\\dp_example.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_permission.xml.flat",
         "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\drawable\\ic_permission.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
+        "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_show_motion_spec.xml.flat",

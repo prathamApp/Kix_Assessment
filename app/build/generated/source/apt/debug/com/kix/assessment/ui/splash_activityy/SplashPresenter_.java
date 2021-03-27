@@ -60,4 +60,20 @@ public final class SplashPresenter_
         }
         );
     }
+
+    @Override
+    public void populateDefaultDB() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0L, "") {
+
+            @Override
+            public void execute() {
+                try {
+                    SplashPresenter_.super.populateDefaultDB();
+                } catch (final Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+        }
+        );
+    }
 }

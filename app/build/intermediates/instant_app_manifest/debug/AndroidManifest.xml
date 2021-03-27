@@ -64,6 +64,12 @@
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.kix.assessment.CatchoTransparentActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.kix.assessment.BaseActivity"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -75,9 +81,22 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- <activity -->
+        <!-- android:name=".ui.main_test.MainTestActivity_" -->
+        <!-- android:screenOrientation="sensorLandscape" /> -->
         <activity
-            android:name="com.kix.assessment.ui.main_test.MainTestActivity_"
+            android:name="com.kix.assessment.ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
+
+        <receiver
+            android:name="com.kix.assessment.services.OTGListener"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="net.alhazmy13.catcho.library.CatchoReportActivity"
             android:theme="@style/CatchoAppTheme" />

@@ -12,12 +12,20 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
+import com.kix.assessment.dbclasses.dao.AttendanceDao;
+import com.kix.assessment.dbclasses.dao.AttendanceDao_Impl;
 import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.ContentDao_Impl;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao_Impl;
+import com.kix.assessment.dbclasses.dao.LogDao;
+import com.kix.assessment.dbclasses.dao.LogDao_Impl;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao_Impl;
+import com.kix.assessment.dbclasses.dao.SessionDao;
+import com.kix.assessment.dbclasses.dao.SessionDao_Impl;
+import com.kix.assessment.dbclasses.dao.StatusDao;
+import com.kix.assessment.dbclasses.dao.StatusDao_Impl;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.StudentDao_Impl;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
@@ -41,18 +49,30 @@ public final class KixDatabase_Impl extends KixDatabase {
 
   private volatile HouseholdDao _householdDao;
 
+  private volatile LogDao _logDao;
+
+  private volatile AttendanceDao _attendanceDao;
+
+  private volatile SessionDao _sessionDao;
+
+  private volatile StatusDao _statusDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`S_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Stud_Id` TEXT, `Stud_Name` TEXT, `Stud_Age` TEXT, `Stud_Gender` TEXT, `Stud_Class` TEXT, `Svr_Code` TEXT, `Household_ID` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Surveyor` (`Svr_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Svr_Name` TEXT, `Svr_Email` TEXT, `Svr_Mobile` TEXT, `Svr_Password` TEXT, `Svr_Code` TEXT, `Svr_Booklet` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`S_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Stud_Id` TEXT, `Stud_Name` TEXT, `Stud_Age` TEXT, `Stud_Gender` TEXT, `Stud_Class` TEXT, `Svr_Code` TEXT, `Household_ID` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Surveyor` (`Svr_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Svr_Name` TEXT, `Svr_Email` TEXT, `Svr_Mobile` TEXT, `Svr_Password` TEXT, `Svr_Code` TEXT, `Svr_Booklet` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Score` (`ScoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `SessionID` TEXT, `StudentID` TEXT, `DeviceID` TEXT, `ResourceID` TEXT, `ScoredMarks` TEXT, `StartDateTime` TEXT, `EndDateTime` TEXT, `Label` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Content` (`contentId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contentCode` TEXT, `contentFolderName` TEXT, `contentBooklet` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Household` (`hh_ID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `houseHold_ID` TEXT, `houseHold_Name` TEXT, `houseHold_Address` TEXT, `Svr_Code` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Household` (`hh_ID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `houseHold_ID` TEXT, `houseHold_Name` TEXT, `houseHold_Address` TEXT, `Svr_Code` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Logs` (`logId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `currentDateTime` TEXT, `exceptionMessage` TEXT, `exceptionStackTrace` TEXT, `methodName` TEXT, `errorType` TEXT, `sessionId` TEXT, `deviceId` TEXT, `LogDetail` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Attendance` (`AttendanceID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `SessionID` TEXT, `StudentID` TEXT, `Date` TEXT, `Present` INTEGER NOT NULL, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Session` (`SessionID` TEXT NOT NULL, `fromDate` TEXT, `toDate` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`SessionID`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Status` (`statusKey` TEXT NOT NULL, `value` TEXT NOT NULL, `description` TEXT, PRIMARY KEY(`statusKey`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"a7e9a81613f73df8f2b18a17e9176443\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2d2ec587ab5c7f3ba4ec551723142739\")");
       }
 
       @Override
@@ -62,6 +82,10 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("DROP TABLE IF EXISTS `Score`");
         _db.execSQL("DROP TABLE IF EXISTS `Content`");
         _db.execSQL("DROP TABLE IF EXISTS `Household`");
+        _db.execSQL("DROP TABLE IF EXISTS `Logs`");
+        _db.execSQL("DROP TABLE IF EXISTS `Attendance`");
+        _db.execSQL("DROP TABLE IF EXISTS `Session`");
+        _db.execSQL("DROP TABLE IF EXISTS `Status`");
       }
 
       @Override
@@ -86,7 +110,7 @@ public final class KixDatabase_Impl extends KixDatabase {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsStudent = new HashMap<String, TableInfo.Column>(8);
+        final HashMap<String, TableInfo.Column> _columnsStudent = new HashMap<String, TableInfo.Column>(9);
         _columnsStudent.put("S_Id", new TableInfo.Column("S_Id", "INTEGER", true, 1));
         _columnsStudent.put("Stud_Id", new TableInfo.Column("Stud_Id", "TEXT", false, 0));
         _columnsStudent.put("Stud_Name", new TableInfo.Column("Stud_Name", "TEXT", false, 0));
@@ -95,6 +119,7 @@ public final class KixDatabase_Impl extends KixDatabase {
         _columnsStudent.put("Stud_Class", new TableInfo.Column("Stud_Class", "TEXT", false, 0));
         _columnsStudent.put("Svr_Code", new TableInfo.Column("Svr_Code", "TEXT", false, 0));
         _columnsStudent.put("Household_ID", new TableInfo.Column("Household_ID", "TEXT", false, 0));
+        _columnsStudent.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysStudent = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesStudent = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoStudent = new TableInfo("Student", _columnsStudent, _foreignKeysStudent, _indicesStudent);
@@ -104,7 +129,7 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoStudent + "\n"
                   + " Found:\n" + _existingStudent);
         }
-        final HashMap<String, TableInfo.Column> _columnsSurveyor = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsSurveyor = new HashMap<String, TableInfo.Column>(8);
         _columnsSurveyor.put("Svr_Id", new TableInfo.Column("Svr_Id", "INTEGER", true, 1));
         _columnsSurveyor.put("Svr_Name", new TableInfo.Column("Svr_Name", "TEXT", false, 0));
         _columnsSurveyor.put("Svr_Email", new TableInfo.Column("Svr_Email", "TEXT", false, 0));
@@ -112,6 +137,7 @@ public final class KixDatabase_Impl extends KixDatabase {
         _columnsSurveyor.put("Svr_Password", new TableInfo.Column("Svr_Password", "TEXT", false, 0));
         _columnsSurveyor.put("Svr_Code", new TableInfo.Column("Svr_Code", "TEXT", false, 0));
         _columnsSurveyor.put("Svr_Booklet", new TableInfo.Column("Svr_Booklet", "TEXT", false, 0));
+        _columnsSurveyor.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysSurveyor = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesSurveyor = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoSurveyor = new TableInfo("Surveyor", _columnsSurveyor, _foreignKeysSurveyor, _indicesSurveyor);
@@ -155,12 +181,13 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoContent + "\n"
                   + " Found:\n" + _existingContent);
         }
-        final HashMap<String, TableInfo.Column> _columnsHousehold = new HashMap<String, TableInfo.Column>(5);
+        final HashMap<String, TableInfo.Column> _columnsHousehold = new HashMap<String, TableInfo.Column>(6);
         _columnsHousehold.put("hh_ID", new TableInfo.Column("hh_ID", "INTEGER", true, 1));
         _columnsHousehold.put("houseHold_ID", new TableInfo.Column("houseHold_ID", "TEXT", false, 0));
         _columnsHousehold.put("houseHold_Name", new TableInfo.Column("houseHold_Name", "TEXT", false, 0));
         _columnsHousehold.put("houseHold_Address", new TableInfo.Column("houseHold_Address", "TEXT", false, 0));
         _columnsHousehold.put("Svr_Code", new TableInfo.Column("Svr_Code", "TEXT", false, 0));
+        _columnsHousehold.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysHousehold = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesHousehold = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoHousehold = new TableInfo("Household", _columnsHousehold, _foreignKeysHousehold, _indicesHousehold);
@@ -170,8 +197,71 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoHousehold + "\n"
                   + " Found:\n" + _existingHousehold);
         }
+        final HashMap<String, TableInfo.Column> _columnsLogs = new HashMap<String, TableInfo.Column>(10);
+        _columnsLogs.put("logId", new TableInfo.Column("logId", "INTEGER", true, 1));
+        _columnsLogs.put("currentDateTime", new TableInfo.Column("currentDateTime", "TEXT", false, 0));
+        _columnsLogs.put("exceptionMessage", new TableInfo.Column("exceptionMessage", "TEXT", false, 0));
+        _columnsLogs.put("exceptionStackTrace", new TableInfo.Column("exceptionStackTrace", "TEXT", false, 0));
+        _columnsLogs.put("methodName", new TableInfo.Column("methodName", "TEXT", false, 0));
+        _columnsLogs.put("errorType", new TableInfo.Column("errorType", "TEXT", false, 0));
+        _columnsLogs.put("sessionId", new TableInfo.Column("sessionId", "TEXT", false, 0));
+        _columnsLogs.put("deviceId", new TableInfo.Column("deviceId", "TEXT", false, 0));
+        _columnsLogs.put("LogDetail", new TableInfo.Column("LogDetail", "TEXT", false, 0));
+        _columnsLogs.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysLogs = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesLogs = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoLogs = new TableInfo("Logs", _columnsLogs, _foreignKeysLogs, _indicesLogs);
+        final TableInfo _existingLogs = TableInfo.read(_db, "Logs");
+        if (! _infoLogs.equals(_existingLogs)) {
+          throw new IllegalStateException("Migration didn't properly handle Logs(com.kix.assessment.modal_classes.Modal_Log).\n"
+                  + " Expected:\n" + _infoLogs + "\n"
+                  + " Found:\n" + _existingLogs);
+        }
+        final HashMap<String, TableInfo.Column> _columnsAttendance = new HashMap<String, TableInfo.Column>(6);
+        _columnsAttendance.put("AttendanceID", new TableInfo.Column("AttendanceID", "INTEGER", true, 1));
+        _columnsAttendance.put("SessionID", new TableInfo.Column("SessionID", "TEXT", false, 0));
+        _columnsAttendance.put("StudentID", new TableInfo.Column("StudentID", "TEXT", false, 0));
+        _columnsAttendance.put("Date", new TableInfo.Column("Date", "TEXT", false, 0));
+        _columnsAttendance.put("Present", new TableInfo.Column("Present", "INTEGER", true, 0));
+        _columnsAttendance.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysAttendance = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesAttendance = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoAttendance = new TableInfo("Attendance", _columnsAttendance, _foreignKeysAttendance, _indicesAttendance);
+        final TableInfo _existingAttendance = TableInfo.read(_db, "Attendance");
+        if (! _infoAttendance.equals(_existingAttendance)) {
+          throw new IllegalStateException("Migration didn't properly handle Attendance(com.kix.assessment.modal_classes.Attendance).\n"
+                  + " Expected:\n" + _infoAttendance + "\n"
+                  + " Found:\n" + _existingAttendance);
+        }
+        final HashMap<String, TableInfo.Column> _columnsSession = new HashMap<String, TableInfo.Column>(4);
+        _columnsSession.put("SessionID", new TableInfo.Column("SessionID", "TEXT", true, 1));
+        _columnsSession.put("fromDate", new TableInfo.Column("fromDate", "TEXT", false, 0));
+        _columnsSession.put("toDate", new TableInfo.Column("toDate", "TEXT", false, 0));
+        _columnsSession.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysSession = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesSession = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoSession = new TableInfo("Session", _columnsSession, _foreignKeysSession, _indicesSession);
+        final TableInfo _existingSession = TableInfo.read(_db, "Session");
+        if (! _infoSession.equals(_existingSession)) {
+          throw new IllegalStateException("Migration didn't properly handle Session(com.kix.assessment.modal_classes.Modal_Session).\n"
+                  + " Expected:\n" + _infoSession + "\n"
+                  + " Found:\n" + _existingSession);
+        }
+        final HashMap<String, TableInfo.Column> _columnsStatus = new HashMap<String, TableInfo.Column>(3);
+        _columnsStatus.put("statusKey", new TableInfo.Column("statusKey", "TEXT", true, 1));
+        _columnsStatus.put("value", new TableInfo.Column("value", "TEXT", true, 0));
+        _columnsStatus.put("description", new TableInfo.Column("description", "TEXT", false, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysStatus = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesStatus = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoStatus = new TableInfo("Status", _columnsStatus, _foreignKeysStatus, _indicesStatus);
+        final TableInfo _existingStatus = TableInfo.read(_db, "Status");
+        if (! _infoStatus.equals(_existingStatus)) {
+          throw new IllegalStateException("Migration didn't properly handle Status(com.kix.assessment.modal_classes.Modal_Status).\n"
+                  + " Expected:\n" + _infoStatus + "\n"
+                  + " Found:\n" + _existingStatus);
+        }
       }
-    }, "a7e9a81613f73df8f2b18a17e9176443", "21c3fae87226f3fe5dce6e22110bfdb6");
+    }, "2d2ec587ab5c7f3ba4ec551723142739", "0c68d731a5c5e0c192744adf39ecbc4d");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -182,7 +272,7 @@ public final class KixDatabase_Impl extends KixDatabase {
 
   @Override
   protected InvalidationTracker createInvalidationTracker() {
-    return new InvalidationTracker(this, "Student","Surveyor","Score","Content","Household");
+    return new InvalidationTracker(this, "Student","Surveyor","Score","Content","Household","Logs","Attendance","Session","Status");
   }
 
   @Override
@@ -196,6 +286,10 @@ public final class KixDatabase_Impl extends KixDatabase {
       _db.execSQL("DELETE FROM `Score`");
       _db.execSQL("DELETE FROM `Content`");
       _db.execSQL("DELETE FROM `Household`");
+      _db.execSQL("DELETE FROM `Logs`");
+      _db.execSQL("DELETE FROM `Attendance`");
+      _db.execSQL("DELETE FROM `Session`");
+      _db.execSQL("DELETE FROM `Status`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -272,6 +366,62 @@ public final class KixDatabase_Impl extends KixDatabase {
           _householdDao = new HouseholdDao_Impl(this);
         }
         return _householdDao;
+      }
+    }
+  }
+
+  @Override
+  public LogDao getLogDao() {
+    if (_logDao != null) {
+      return _logDao;
+    } else {
+      synchronized(this) {
+        if(_logDao == null) {
+          _logDao = new LogDao_Impl(this);
+        }
+        return _logDao;
+      }
+    }
+  }
+
+  @Override
+  public AttendanceDao getAttendanceDao() {
+    if (_attendanceDao != null) {
+      return _attendanceDao;
+    } else {
+      synchronized(this) {
+        if(_attendanceDao == null) {
+          _attendanceDao = new AttendanceDao_Impl(this);
+        }
+        return _attendanceDao;
+      }
+    }
+  }
+
+  @Override
+  public SessionDao getSessionDao() {
+    if (_sessionDao != null) {
+      return _sessionDao;
+    } else {
+      synchronized(this) {
+        if(_sessionDao == null) {
+          _sessionDao = new SessionDao_Impl(this);
+        }
+        return _sessionDao;
+      }
+    }
+  }
+
+  @Override
+  public StatusDao getStatusDao() {
+    if (_statusDao != null) {
+      return _statusDao;
+    } else {
+      synchronized(this) {
+        if(_statusDao == null) {
+          _statusDao = new StatusDao_Impl(this);
+        }
+        return _statusDao;
       }
     }
   }

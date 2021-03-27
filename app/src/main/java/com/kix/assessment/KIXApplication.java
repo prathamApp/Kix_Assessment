@@ -3,6 +3,7 @@ package com.kix.assessment;
 import android.app.Application;
 import android.content.Context;
 
+import com.androidnetworking.AndroidNetworking;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
@@ -23,6 +24,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 
@@ -55,6 +57,12 @@ public class KIXApplication extends Application {
         }
         initializeDatabaseDaos();
         setKixPath();
+        OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .build();
+        AndroidNetworking.initialize(getApplicationContext(), okHttpClient);
     }
 
     @Override
