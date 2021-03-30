@@ -2,6 +2,9 @@ package com.kix.assessment.kix_utils;
 
 public class Kix_Constant {
 
+
+    public static final String PUSH_API = "http://13.76.6.250:80/upload";
+
     public static final String KIX_BACKUP = "KixBackup";
     public static final String SURVEYOR_CODE = "SurveyorCode";
     public static final String STUDENT_LIST = "Student_List";
@@ -26,6 +29,8 @@ public class Kix_Constant {
     public static final String SURVEYOR = "surveyor";
     public static final String HOUSEHOLD = "household";
     public static final String BOOKLET = "booklet";
+    public static final String SUCCESSFULLYPUSHED = "successfully_pushed";
+    public static final String PUSHFAILED = "push_failed";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
 }

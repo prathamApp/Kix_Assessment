@@ -11,16 +11,31 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.kix.assessment.async.CopyDbToOTG;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Attendance;
 import com.kix.assessment.modal_classes.EventMessage;
+import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.modal_classes.Modal_PushData;
+import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.modal_classes.Modal_Surveyor;
+import com.kix.assessment.modal_classes.Score;
 
+import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import static com.kix.assessment.KIXApplication.attendanceDao;
+import static com.kix.assessment.KIXApplication.householdDao;
+import static com.kix.assessment.KIXApplication.scoreDao;
+import static com.kix.assessment.KIXApplication.sessionDao;
+import static com.kix.assessment.KIXApplication.studentDao;
+import static com.kix.assessment.KIXApplication.surveyorDao;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -137,13 +152,13 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-//        EventBus.getDefault().register(this);
+        EventBus.getDefault().register(this);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-//        EventBus.getDefault().unregister(this);
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
@@ -168,28 +183,28 @@ public class BaseActivity extends AppCompatActivity {
     @Subscribe
     public void updateFlagsWhenPushed(EventMessage message) {
         if (message != null) {
- /*           if (message.getMessage().equalsIgnoreCase(PD_Constant.SUCCESSFULLYPUSHED)) {
+            if (message.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
                 Gson gson = new Gson();
                 Modal_PushData pushedData = gson.fromJson(message.getPushData(), Modal_PushData.class);
                 for (Modal_PushData.Modal_PushSessionData pushed : pushedData.getPushSession()) {
                     sessionDao.updateFlag(pushed.getSessionId());
-                    for (Modal_Score score : pushed.getScores())
+                    for (Score score : pushed.getScores())
                         scoreDao.updateFlag(pushed.getSessionId());
                     for (Attendance att : pushed.getAttendances())
                         attendanceDao.updateSentFlag(pushed.getSessionId());
                 }
-                for (Model_CourseEnrollment enroll : pushedData.getCourse_enrolled()) {
-                    courseDao.updateFlag(enroll.getCourseId(), enroll.getGroupId(), enroll.getLanguage());
-                }
-                for (Model_ContentProgress prog : pushedData.getCourse_progress()) {
-                    contentProgressDao.updateFlag(prog.getStudentId(), prog.getResourceId());
-                }
                 if (pushedData.getStudents() != null)
                     for (Modal_Student student : pushedData.getStudents())
-                        studentDao.updateSentStudentFlags(student.getStudentId());
+                        studentDao.updateSentStudentFlags(student.getStud_Id());
+                if (pushedData.getSurveyors() != null)
+                    for (Modal_Surveyor surveyor : pushedData.getSurveyors())
+                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvr_Code());
+                if (pushedData.getHouseholds() != null)
+                    for (Modal_Household household : pushedData.getHouseholds())
+                        householdDao.updateSentHouseholdFlags(household.getHouseHold_ID());
 
-                BackupDatabase.backup(PrathamApplication.getInstance());
-            } else */
+                BackupDatabase.backup(KIXApplication.getInstance());
+            } else
             if (message.getMessage().equalsIgnoreCase(Kix_Constant.OTG_INSERTED)) {
                 mHandler.sendEmptyMessage(SHOW_OTG_TRANSFER_DIALOG);
             } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_COPIED)) {

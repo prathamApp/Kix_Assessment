@@ -80,6 +80,8 @@ dependencies {
     implementation 'net.alhazmy13.catcho:library:1.1.0'
     //networking
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    //a library to play with device wifi function
+    implementation 'com.isupatches:wisefy:3.0.1'
     //eventbus
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'io.github.storix:rxdiffutil:0.3.2'

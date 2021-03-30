@@ -22,4 +22,7 @@ public interface SurveyorDao {
 
     @Query("select * from Surveyor where sentFlag = 0")
     List<Modal_Surveyor> getAllNewSurveyor();
+
+    @Query("update Surveyor set sentFlag=1 where Svr_Code=:svrCode")
+    void updateSentSurveyorFlags(String svrCode);
 }

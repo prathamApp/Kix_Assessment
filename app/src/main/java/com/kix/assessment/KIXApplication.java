@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.androidnetworking.AndroidNetworking;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.isupatches.wisefy.WiseFy;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
@@ -33,6 +34,7 @@ public class KIXApplication extends Application {
     public static String contentSDPath="";
     public static String kixPath="";
     OkHttpClient okHttpClient;
+    public static WiseFy wiseF;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
     private static final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
@@ -57,7 +59,8 @@ public class KIXApplication extends Application {
         }
         initializeDatabaseDaos();
         setKixPath();
-        OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
+        wiseF = new WiseFy.Brains(getApplicationContext()).logging(true).getSmarts();
+        okHttpClient = new OkHttpClient().newBuilder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(10, TimeUnit.SECONDS)

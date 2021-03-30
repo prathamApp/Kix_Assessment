@@ -2,11 +2,16 @@ package com.kix.assessment.services;
 
 import android.util.Log;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.gson.Gson;
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Attendance;
+import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_Session;
@@ -15,6 +20,7 @@ import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
 import com.kix.assessment.modal_classes.Score;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -153,18 +159,45 @@ public class KixSmartSync { //extends AutoSync {
             // first parameter is d files second parameter is zip file name
             zip(s, filepathstr + ".zip", filepath);
 
-/*            if (PrathamApplication.wiseF.isDeviceConnectedToSSID(PD_Constant.PRATHAM_KOLIBRI_HOTSPOT))
-                new PD_ApiRequest(PrathamApplication.getInstance())
-                        .pushDataToRaspberyPI(PD_Constant.URL.DATASTORE_RASPBERY_URL.toString(), uuID, filepathstr, data, courseCount);
-            else if (PrathamApplication.wiseF.isDeviceConnectedToMobileNetwork() || PrathamApplication.wiseF.isDeviceConnectedToWifiNetwork()) {
-                new PD_ApiRequest(PrathamApplication.getInstance())
-                        .pushDataToInternet(PD_Constant.URL.POST_SMART_INTERNET_URL.toString(), uuID, filepathstr, data, courseCount);
-            }*/
+            if (KIXApplication.wiseF.isDeviceConnectedToMobileNetwork() || KIXApplication.wiseF.isDeviceConnectedToWifiNetwork()) {
+                pushDataToInternet(Kix_Constant.PUSH_API, uuID, filepathstr, data);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    public static void pushDataToInternet(String url, String uuID, String filepathstr, JSONObject data) {
+        AndroidNetworking.upload(url)
+                .addHeaders("Content-Type", "file/zip")
+                .addMultipartFile("file", new File(filepathstr + ".zip"))
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsString(new StringRequestListener() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.e("PushData", "DATA PUSH "+response);
+//                        new File(filepathstr + ".zip").delete();
+                        EventMessage msg = new EventMessage();
+                        msg.setMessage(Kix_Constant.SUCCESSFULLYPUSHED);
+                        msg.setPushData(data.toString());
+                        EventBus.getDefault().post(msg);
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        //Fail - Show dialog with failure message.
+                        EventMessage msg = new EventMessage();
+                        msg.setMessage(Kix_Constant.PUSHFAILED);
+                        EventBus.getDefault().post(msg);
+                        Log.e("Error::", anError.getErrorDetail());
+                        Log.e("Error::", anError.getMessage());
+                        Log.e("Error::", anError.getResponse().toString());
+                    }
+                });
+    }
+
 
     public static void zip(String[] _files, String zipFileName, File filepath) {
         try {

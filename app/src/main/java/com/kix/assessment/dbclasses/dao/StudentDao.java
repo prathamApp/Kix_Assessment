@@ -27,4 +27,7 @@ public interface StudentDao {
     @Query("select * from Student where sentFlag = 0")
     List<Modal_Student> getAllNewStudents();
 
+    @Query("update Student set sentFlag=1 where Stud_Id=:s_id")
+    void updateSentStudentFlags(String s_id);
+
 }

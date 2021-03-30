@@ -4,6 +4,7 @@ public class EventMessage {
 	
     private String message;
     private String other;
+    private String pushData;
 
     public String getMessage() {
         return message;
@@ -20,4 +21,9 @@ public class EventMessage {
     public void setOther(String other) {
         this.other = other;
     }
+
+    public String getPushData() { return pushData; }
+
+    public void setPushData(String pushData) { this.pushData = pushData; }
+
 }
