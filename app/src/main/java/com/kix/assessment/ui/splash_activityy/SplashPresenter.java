@@ -61,6 +61,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             Type type = new TypeToken<List<GameList>>() {
             }.getType();
             gameListList = gson.fromJson(jsonStr, type);
+
             List<Modal_Content> modal_contentList = new ArrayList<>();
             for(int i=0; i<gameListList.size(); i++){
                 Modal_Content modal_content = new Modal_Content();
@@ -155,7 +156,6 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         modal_log.setSentFlag(0);
 
         logDao.insertLog(modal_log);
-
     }
 }
 

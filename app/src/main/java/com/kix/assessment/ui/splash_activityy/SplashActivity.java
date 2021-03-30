@@ -62,7 +62,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
         tv_surveyorSignIn.setVisibility(View.VISIBLE);
         btn_signUp.setVisibility(View.VISIBLE);
         checkPermissionss();
-//        startActivity(new Intent(this, MainTestActivity_.class));
     }
 
     @Click(R.id.btn_signUp)
