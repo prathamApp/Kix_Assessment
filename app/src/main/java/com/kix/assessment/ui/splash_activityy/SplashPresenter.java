@@ -71,6 +71,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
                 modal_contentList.add(modal_content);
             }
             KixDatabase.getDatabaseInstance(mContext).getContentDao().insertAll(modal_contentList);
+            FastSave.getInstance().saveBoolean(Kix_Constant.DATA_COPIED,true);
             BackupDatabase.backup(mContext);
         } catch (Exception e) {
             e.printStackTrace();

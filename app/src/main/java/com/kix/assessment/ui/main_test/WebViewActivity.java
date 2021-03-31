@@ -110,6 +110,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 
     private boolean loaderVisible = false;
     private CustomLodingDialog myLoadingDialog;
+
     @UiThread
     public void showLoader() {
         if (!loaderVisible) {
@@ -128,11 +129,11 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     @UiThread
     public void dismissLoadingDialog() {
         try {
-                loaderVisible = false;
-                new Handler().postDelayed(() -> {
-                    if (myLoadingDialog != null && myLoadingDialog.isShowing())
-                        myLoadingDialog.dismiss();
-                }, 300);
+            loaderVisible = false;
+            new Handler().postDelayed(() -> {
+                if (myLoadingDialog != null && myLoadingDialog.isShowing())
+                    myLoadingDialog.dismiss();
+            }, 300);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -150,6 +151,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         EventBus.getDefault().unregister(this);
     }*/
 
+    @UiThread
     public void nextClicked() {
         queCnt++;
         if (queCnt < gameListList.size()) {
@@ -162,6 +164,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         }
     }
 
+    @UiThread
     @Click(R.id.btn_next_student)
     public void nextStudentClicked() {
         KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
@@ -175,32 +178,39 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         testOverDialog();
     }
 
-    public Dialog nextDialog;
-    Button dia_yes, dia_no;
+    public Dialog nextDialog, testover;
+    Button dia_yes, dia_no, btn_cancel;
     TextView dia_title;
 
+    @UiThread
     public void testOverDialog() {
-        nextDialog = null;
-        nextDialog = new Dialog(this);
-        nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Objects.requireNonNull(nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        nextDialog.setContentView(R.layout.next_game_dialog);
-        nextDialog.setCanceledOnTouchOutside(false);
-        nextDialog.show();
+        testover = null;
+        testover = new Dialog(this);
+        testover.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(testover.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        testover.setContentView(R.layout.exit_game_dialog);
+        testover.setCanceledOnTouchOutside(false);
 
-        dia_title = nextDialog.findViewById(R.id.dia_title);
-        dia_yes = nextDialog.findViewById(R.id.dia_yes);
-        dia_no = nextDialog.findViewById(R.id.dia_no);
-        dia_title.setText("Submit Test");
-        dia_no.setOnClickListener(v -> nextDialog.dismiss());
+        dia_title = testover.findViewById(R.id.dia_title);
+        dia_yes = testover.findViewById(R.id.dia_yes);
+        dia_no = testover.findViewById(R.id.dia_no);
+        btn_cancel = testover.findViewById(R.id.btn_cancel);
+        dia_title.setText("Save and Submit Test");
+        dia_no.setOnClickListener(v -> {
+            testover.dismiss();
+            finish();
+        });
+        btn_cancel.setOnClickListener(v -> {
+            testover.dismiss();
+        });
         dia_yes.setOnClickListener(v -> {
             KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
             FastSave.getInstance().saveString(STUDENT_ID, "NA");
             BackupDatabase.backup(this);
             finish();
-            nextDialog.dismiss();
+            testover.dismiss();
         });
-        nextDialog.show();
+        testover.show();
     }
 
 /*
@@ -215,6 +225,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 */
 
     @Override
+    @UiThread
     public void onNextGame(String scoredMarks, String label, String startTime) {
         nextDialog = null;
         nextDialog = new Dialog(this);
@@ -222,7 +233,6 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         Objects.requireNonNull(nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         nextDialog.setContentView(R.layout.next_game_dialog);
         nextDialog.setCanceledOnTouchOutside(false);
-        nextDialog.show();
 
         dia_title = nextDialog.findViewById(R.id.dia_title);
         dia_yes = nextDialog.findViewById(R.id.dia_yes);
@@ -231,12 +241,8 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
             dia_title.setText("Submit Test");
         dia_no.setOnClickListener(v -> nextDialog.dismiss());
         dia_yes.setOnClickListener(v -> {
-            //TODO add score in DB
             addScoreToList(scoredMarks, label, startTime);
             nextClicked();
-//            EventMessage updateAvailable = new EventMessage();
-//            updateAvailable.setMessage("nextGame");
-//            EventBus.getDefault().post(updateAvailable);
             nextDialog.dismiss();
             showLoader();
         });
@@ -245,7 +251,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 
     private void addScoreToList(String scoredMarks, String label, String startTime) {
         Score score = new Score();
-        score.setSessionID("");
+        score.setSessionID(""+FastSave.getInstance().getString(Kix_Constant.SESSIONID,""));
         score.setDeviceID("");
         score.setResourceID("" + gameListList.get(queCnt).getContentCode());
         score.setStartDateTime("" + startTime);
