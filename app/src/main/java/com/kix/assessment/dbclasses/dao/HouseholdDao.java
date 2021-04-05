@@ -24,6 +24,6 @@ public interface HouseholdDao {
     @Query("select * from Household where sentFlag = 0")
     List<Modal_Household> getAllNewHouseholds();
 
-    @Query("update Household set sentFlag=1 where houseHold_ID=:householdId")
+    @Query("update Household set sentFlag=1 where HouseHold_ID=:householdId")
     void updateSentHouseholdFlags(String householdId);
 }

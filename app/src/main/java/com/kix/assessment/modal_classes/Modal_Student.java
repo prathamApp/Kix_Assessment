@@ -11,24 +11,30 @@ public class Modal_Student implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     public int S_Id;
-    public String Stud_Id;
+    public String StudentID;
     public String Stud_Name;
     public String Stud_Age;
     public String Stud_Gender;
     public String Stud_Class;
+    public String Stud_EnrollmentStatus;
+    public String Stud_SchoolType;
+    public String Stud_DropoutYear;
     public String Svr_Code;
-    public String Household_ID;
+    public String HouseHold_ID;
     public int sentFlag;
 
     protected Modal_Student(Parcel in) {
         S_Id = in.readInt();
-        Stud_Id = in.readString();
+        StudentID = in.readString();
         Stud_Name = in.readString();
         Stud_Age = in.readString();
         Stud_Gender = in.readString();
         Stud_Class = in.readString();
+        Stud_EnrollmentStatus = in.readString();
+        Stud_SchoolType = in.readString();
+        Stud_DropoutYear = in.readString();
         Svr_Code = in.readString();
-        Household_ID = in.readString();
+        HouseHold_ID = in.readString();
         sentFlag = in.readInt();
     }
 
@@ -56,11 +62,11 @@ public class Modal_Student implements Comparable, Parcelable {
     }
 
     public String getStud_Id() {
-        return Stud_Id;
+        return StudentID;
     }
 
     public void setStud_Id(String stud_Id) {
-        Stud_Id = stud_Id;
+        StudentID = stud_Id;
     }
 
     public static Creator<Modal_Student> getCREATOR() {
@@ -99,9 +105,21 @@ public class Modal_Student implements Comparable, Parcelable {
 
     public void setSvr_Code(String svr_Code) { Svr_Code = svr_Code; }
 
-    public String getHousehold_ID() { return Household_ID; }
+    public String getHousehold_ID() { return HouseHold_ID; }
 
-    public void setHousehold_ID(String household_ID) { Household_ID = household_ID; }
+    public void setHousehold_ID(String household_ID) { HouseHold_ID = household_ID; }
+
+    public String getStud_EnrollmentStatus() { return Stud_EnrollmentStatus; }
+
+    public void setStud_EnrollmentStatus(String stud_EnrollmentStatus) { Stud_EnrollmentStatus = stud_EnrollmentStatus; }
+
+    public String getStud_SchoolType() { return Stud_SchoolType; }
+
+    public void setStud_SchoolType(String stud_SchoolType) { Stud_SchoolType = stud_SchoolType; }
+
+    public String getStud_DropoutYear() { return Stud_DropoutYear; }
+
+    public void setStud_DropoutYear(String stud_DropoutYear) { Stud_DropoutYear = stud_DropoutYear; }
 
     public int getSentFlag() { return sentFlag; }
 
@@ -115,12 +133,16 @@ public class Modal_Student implements Comparable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(S_Id);
+        dest.writeString(StudentID);
         dest.writeString(Stud_Name);
         dest.writeString(Stud_Age);
         dest.writeString(Stud_Gender);
         dest.writeString(Stud_Class);
+        dest.writeString(Stud_EnrollmentStatus);
+        dest.writeString(Stud_SchoolType);
+        dest.writeString(Stud_DropoutYear);
         dest.writeString(Svr_Code);
-        dest.writeString(Household_ID);
+        dest.writeString(HouseHold_ID);
         dest.writeInt(sentFlag);
     }
 

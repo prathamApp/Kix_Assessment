@@ -56,6 +56,8 @@ public class Fragment_Svr_SignIn extends Fragment {
                 Intent intent = new Intent(getActivity(), Activity_Household_.class);
                 intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorLogin.getSvr_Code());
                 FastSave.getInstance().saveString(Kix_Constant.BOOKLET,surveyorLogin.getSvr_Booklet());
+                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_NAME,surveyorLogin.getSvr_Name());
+                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_CODE,surveyorLogin.getSvr_Code());
                 startActivity(intent);
                 Toast.makeText(getActivity(), "Login Success..", Toast.LENGTH_SHORT).show();
             }

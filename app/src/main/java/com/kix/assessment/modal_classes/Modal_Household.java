@@ -11,17 +11,21 @@ public class Modal_Household implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     public int hh_ID;
-    public String houseHold_ID;
-    public String houseHold_Name;
-    public String houseHold_Address;
+    public String HouseHold_ID;
+    public String HouseHold_Name;
+    public String HouseHold_District;
+    public String HouseHold_State;
+    public String HouseHold_Address;
     public String Svr_Code;
     public int sentFlag;
 
     protected Modal_Household(Parcel in) {
         hh_ID = in.readInt();
-        houseHold_ID = in.readString();
-        houseHold_Name = in.readString();
-        houseHold_Address = in.readString();
+        HouseHold_ID = in.readString();
+        HouseHold_Name = in.readString();
+        HouseHold_District = in.readString();
+        HouseHold_State = in.readString();
+        HouseHold_Address = in.readString();
         Svr_Code = in.readString();
         sentFlag = in.readInt();
     }
@@ -50,26 +54,34 @@ public class Modal_Household implements Comparable, Parcelable {
     }
 
     public String getHouseHold_ID() {
-        return houseHold_ID;
+        return HouseHold_ID;
     }
 
-    public void setHouseHold_ID(String houseHold_ID) {
-        this.houseHold_ID = houseHold_ID;
+    public void setHouseHold_ID(String HouseHold_ID) {
+        this.HouseHold_ID = HouseHold_ID;
     }
 
     public String getHouseHold_Name() {
-        return houseHold_Name;
+        return HouseHold_Name;
     }
 
     public void setHouseHold_Name(String houseHold_Name) {
-        this.houseHold_Name = houseHold_Name;
+        this.HouseHold_Name = houseHold_Name;
     }
+
+    public String getHouseHold_District() { return HouseHold_District; }
+
+    public void setHouseHold_District(String houseHold_District) { HouseHold_District = houseHold_District; }
+
+    public String getHouseHold_State() { return HouseHold_State; }
+
+    public void setHouseHold_State(String houseHold_State) { HouseHold_State = houseHold_State; }
 
     public String getHouseHold_Address() {
-        return houseHold_Address;
+        return HouseHold_Address;
     }
 
-    public void setHouseHold_Address(String houseHold_Address) { this.houseHold_Address = houseHold_Address; }
+    public void setHouseHold_Address(String HouseHold_Address) { this.HouseHold_Address = HouseHold_Address; }
 
     public String getSvr_Code() {
         return Svr_Code;
@@ -95,9 +107,9 @@ public class Modal_Household implements Comparable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(hh_ID);
-        dest.writeString(houseHold_ID);
-        dest.writeString(houseHold_Name);
-        dest.writeString(houseHold_Address);
+        dest.writeString(HouseHold_ID);
+        dest.writeString(HouseHold_Name);
+        dest.writeString(HouseHold_Address);
         dest.writeString(Svr_Code);
         dest.writeInt(sentFlag);
     }

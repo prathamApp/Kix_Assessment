@@ -24,9 +24,10 @@ public class Fragment_AddHousehold extends Fragment {
 
     @ViewById(R.id.et_houseHoldName)
     EditText et_houseHoldName;
-
-    @ViewById(R.id.et_houseHoldAddress)
-    EditText et_houseHoldAddress;
+    @ViewById(R.id.et_houseHoldDistrict)
+    EditText et_houseHoldDistrict;
+    @ViewById(R.id.et_houseHoldState)
+    EditText et_houseHoldState;
 
     String surveyorCode;
     public Fragment_AddHousehold() {
@@ -48,7 +49,9 @@ public class Fragment_AddHousehold extends Fragment {
         Modal_Household modal_household = new Modal_Household();
         modal_household.setHouseHold_ID(""+ houseID);
         modal_household.setHouseHold_Name(et_houseHoldName.getText().toString());
-        modal_household.setHouseHold_Address(et_houseHoldAddress.getText().toString());
+        modal_household.setHouseHold_District(et_houseHoldDistrict.getText().toString());
+        modal_household.setHouseHold_State(et_houseHoldState.getText().toString());
+        modal_household.setHouseHold_Address("NA");
         modal_household.setSvr_Code(surveyorCode);
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);

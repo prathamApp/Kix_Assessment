@@ -51,7 +51,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         Log.e("KIX : ","selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
-        add_household.setHouseHold_Name("Add Household");
+        add_household.setHouseHold_Name("Add Village");
         if (!households.contains(add_household)){
             households.add(add_household);
         }
@@ -85,7 +85,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
             Modal_Household modalHousehold = householdListAdapter.getitem(position);
             Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
             intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.houseHold_ID);
+            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.HouseHold_ID);
             startActivity(intent);
         }
     }

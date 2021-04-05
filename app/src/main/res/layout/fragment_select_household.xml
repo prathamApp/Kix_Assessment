@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Household"
+        android:text="Select Village"
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"/>

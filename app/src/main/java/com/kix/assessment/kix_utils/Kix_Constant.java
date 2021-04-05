@@ -31,6 +31,7 @@ public class Kix_Constant {
     public static final String BOOKLET = "booklet";
     public static final String SUCCESSFULLYPUSHED = "successfully_pushed";
     public static final String PUSHFAILED = "push_failed";
+    public static final String SURVEYOR_NAME = "surveyor_name";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
 }
