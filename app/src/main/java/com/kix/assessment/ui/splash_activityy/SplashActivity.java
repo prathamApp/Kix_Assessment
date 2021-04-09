@@ -56,9 +56,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @UiThread
     public void gotoNext() {
-        KIX_Utility.getSdCardPath(this);
-        if(!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED,false))
-            splashPresenter.addDataToDB();
         tv_surveyorSignIn.setVisibility(View.VISIBLE);
         btn_signUp.setVisibility(View.VISIBLE);
         checkPermissionss();
@@ -66,6 +63,9 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @Click(R.id.btn_signUp)
     public void surveyorSignUp(){
+        KIX_Utility.getSdCardPath(this);
+        if(!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED,false))
+            splashPresenter.addDataToDB();
         KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
                 null,Fragment_Svr_SignUp.class.getSimpleName());
     }
