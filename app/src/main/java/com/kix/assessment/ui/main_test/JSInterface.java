@@ -12,9 +12,7 @@ import android.webkit.WebViewFragment;
 
 import static com.kix.assessment.ui.main_test.WebViewActivity.gameListList;
 import static com.kix.assessment.ui.main_test.WebViewActivity.queCnt;
-//import static com.kix.assessment.ui.main_test.MainTestActivity.gameListList;
-//import static com.kix.assessment.ui.main_test.MainTestActivity.queCnt;
-//import static com.kix.assessment.ui.main_test.WebViewFragment.gamePos;
+
 
 public class JSInterface {
 
