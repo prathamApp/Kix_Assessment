@@ -48,6 +48,13 @@ public class JSInterface {
 
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
+    public String getLanguage(){
+        //TODO Return Language
+        return "lang";
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    @JavascriptInterface
     public void gotoNextGame(String scoredMarks, String startTime, String label){
         webViewInterface.onNextGame(scoredMarks, label, startTime);
     }
