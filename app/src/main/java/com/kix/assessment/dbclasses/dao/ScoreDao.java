@@ -1,6 +1,6 @@
 package com.kix.assessment.dbclasses.dao;
 
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 import com.kix.assessment.modal_classes.Score;
 
 import java.util.List;
@@ -57,5 +57,5 @@ public interface ScoreDao {
             "INNER JOIN Household on Household.houseHold_ID = Student.houseHold_ID\n" +
             "INNER JOIN Surveyor on Surveyor.Svr_Code= Household.Svr_Code\n" +
             "WHERE Surveyor.Svr_Code=:svrCode GROUP by Student.Stud_Name, Surveyor.Svr_Name")
-    List<Modal_ProfileDetails> getProfileData(String svrCode);
+    List<Modal_StudentDetails> getProfileData(String svrCode);
 }

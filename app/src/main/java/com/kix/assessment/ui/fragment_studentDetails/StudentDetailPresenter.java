@@ -1,10 +1,10 @@
-package com.kix.assessment.ui.fragment_profile;
+package com.kix.assessment.ui.fragment_studentDetails;
 
 import android.content.Context;
 
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.kix_utils.Kix_Constant;
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
 import org.androidannotations.annotations.Background;
@@ -13,17 +13,17 @@ import org.androidannotations.annotations.EBean;
 import java.util.List;
 
 @EBean
-public class ProfilePresenter implements ProfileContract.ProfilePresenter {
+public class StudentDetailPresenter implements StudentDetailContract.ProfilePresenter {
 
     Context context;
-    ProfileContract.ProfileView profileView;
+    StudentDetailContract.ProfileView profileView;
 
-    public ProfilePresenter(Context context){
+    public StudentDetailPresenter(Context context){
         this.context=context;
     }
 
     @Override
-    public void setView(ProfileContract.ProfileView profileView) {
+    public void setView(StudentDetailContract.ProfileView profileView) {
         this.profileView=profileView;
     }
 
@@ -31,7 +31,7 @@ public class ProfilePresenter implements ProfileContract.ProfilePresenter {
     @Override
     public void loadProfileData() {
         String svrCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE,"");
-        List<Modal_ProfileDetails> profileDetails;
+        List<Modal_StudentDetails> profileDetails;
         profileDetails = KIXApplication.scoreDao.getProfileData(svrCode);
         profileView.showProfileData(profileDetails);
     }

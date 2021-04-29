@@ -1,4 +1,4 @@
-package com.kix.assessment.ui.fragment_profile;
+package com.kix.assessment.ui.fragment_studentDetails;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kix.assessment.R;
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 import com.kix.assessment.view_holders.EmptyHolder;
 import com.kix.assessment.view_holders.ProfileViewHolder;
 
@@ -16,15 +16,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class ProfileAdapter extends RecyclerView.Adapter{
-    private List<Modal_ProfileDetails> detailsList;
+public class StudentDetailAdapter extends RecyclerView.Adapter{
+    private List<Modal_StudentDetails> detailsList;
     private Context context;
 
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_FOOTER = 1;
     private static final int TYPE_ITEM = 2;
 
-    public ProfileAdapter(Context context, List<Modal_ProfileDetails> detailsList) {
+    public StudentDetailAdapter(Context context, List<Modal_StudentDetails> detailsList) {
         this.context=context;
         this.detailsList = detailsList;
     }
@@ -71,7 +71,7 @@ public class ProfileAdapter extends RecyclerView.Adapter{
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Modal_ProfileDetails details = detailsList.get(position);
+        Modal_StudentDetails details = detailsList.get(position);
         int detailListSize = detailsList.size();
         switch (holder.getItemViewType()) {
             case TYPE_HEADER:

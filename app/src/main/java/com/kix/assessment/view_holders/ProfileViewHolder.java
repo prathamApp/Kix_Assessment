@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.kix.assessment.R;
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,7 +22,7 @@ public class ProfileViewHolder extends RecyclerView.ViewHolder {
         examsSynced = itemView.findViewById(R.id.tv_ExamSynced);
     }
 
-    public void setProfileView(Context context, Modal_ProfileDetails details, int position, int listSize)
+    public void setProfileView(Context context, Modal_StudentDetails details, int position, int listSize)
     {
         studentName.setText(details.getStudentName());
         householdName.setText(details.getHouseholdName());

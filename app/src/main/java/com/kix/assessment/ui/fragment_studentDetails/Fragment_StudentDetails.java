@@ -1,4 +1,4 @@
-package com.kix.assessment.ui.fragment_profile;
+package com.kix.assessment.ui.fragment_studentDetails;
 
 import android.annotation.SuppressLint;
 import android.widget.TextView;
@@ -9,8 +9,8 @@ import com.kix.assessment.R;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Household;
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 import com.kix.assessment.services.KixSmartSync;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -32,10 +32,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-@EFragment(R.layout.fragment_profile)
-public class Fragment_Profile extends Fragment implements ProfileContract.ProfileView{
+@EFragment(R.layout.fragment_student_detail)
+public class Fragment_StudentDetails extends Fragment implements StudentDetailContract.ProfileView{
 
-    private List<Modal_ProfileDetails> detailsList = new ArrayList<>();
+    private List<Modal_StudentDetails> detailsList = new ArrayList<>();
 
     @ViewById(R.id.tv_profileName)
     TextView tv_profileName;
@@ -47,18 +47,18 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @ViewById(R.id.rv_examDetail)
     RecyclerView rv_examDetail;
 
-    @Bean(ProfilePresenter.class)
-    ProfilePresenter profilePresenter;
-    private ProfileAdapter profileAdapter;
+    @Bean(StudentDetailPresenter.class)
+    StudentDetailPresenter studentDetailPresenter;
+    private StudentDetailAdapter studentDetailAdapter;
 
     String surveyorCode, householdId;
-    public Fragment_Profile() {
+    public Fragment_StudentDetails() {
         // Required empty public constructor
     }
 
     @AfterViews
     public void initialize(){
-        profilePresenter.setView(this);
+        studentDetailPresenter.setView(this);
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
         List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
@@ -68,21 +68,21 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         if(stud.size()==0)
             Toast.makeText(getActivity(), "No Student Found!", Toast.LENGTH_SHORT).show();
         else
-            profilePresenter.loadProfileData();
+            studentDetailPresenter.loadProfileData();
         //temp();
         initializeAdapter();
     }
 
     @Override
-    public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
-        Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name", "Household", "Exams Given", "Exam Synced");
+    public void showProfileData(List<Modal_StudentDetails> profileDetails) {
+        Modal_StudentDetails details = new Modal_StudentDetails("Student Name", "Household", "Exams Given", "Exam Synced");
         detailsList.add(details);
         if(profileDetails.size()==0){
             Toast.makeText(getActivity(), "Exam Not Given By Student", Toast.LENGTH_SHORT).show();
         }
         for (int i = 0; i < profileDetails.size(); i++)
         {
-            details = new Modal_ProfileDetails(profileDetails.get(i).getStudentName(),
+            details = new Modal_StudentDetails(profileDetails.get(i).getStudentName(),
                     profileDetails.get(i).getHouseholdName(), profileDetails.get(i).getExamsGiven(), "0");
             detailsList.add(details);
         }
@@ -90,16 +90,16 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
 
     @UiThread
     public void initializeAdapter() {
-        if (profileAdapter == null) {
-            profileAdapter = new ProfileAdapter(getActivity(), detailsList);
+        if (studentDetailAdapter == null) {
+            studentDetailAdapter = new StudentDetailAdapter(getActivity(), detailsList);
             rv_examDetail.setLayoutManager(new LinearLayoutManager(getActivity()));
             rv_examDetail.setHasFixedSize(true);
             rv_examDetail.setItemViewCacheSize(10);
             rv_examDetail.setItemAnimator(new DefaultItemAnimator());
-            rv_examDetail.setAdapter(profileAdapter);
+            rv_examDetail.setAdapter(studentDetailAdapter);
         }
         else {
-            profileAdapter.notifyDataSetChanged();
+            studentDetailAdapter.notifyDataSetChanged();
         }
     }
 

@@ -3,15 +3,15 @@ package com.kix.assessment.modal_classes;
 import androidx.room.Ignore;
 
 //Modal Class to show RecyclerView Contents
-public class Modal_ProfileDetails {
+public class Modal_StudentDetails {
     String StudentName, HouseholdName, ExamsGiven;
     @Ignore
     String ExamsSynced;
 
-    public Modal_ProfileDetails() {
+    public Modal_StudentDetails() {
     }
 
-    public Modal_ProfileDetails(String studentName, String householdName, String examsGiven, String examsSynced) {
+    public Modal_StudentDetails(String studentName, String householdName, String examsGiven, String examsSynced) {
         StudentName = studentName;
         HouseholdName = householdName;
         ExamsGiven = examsGiven;
