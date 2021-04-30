@@ -20,6 +20,7 @@ import com.kix.assessment.KIXApplication;
 import com.kix.assessment.modal_classes.StorageInfo;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance;
 import com.kix.assessment.ui.household_activity.Activity_Household;
+import com.kix.assessment.ui.profile.ProfileActivity;
 import com.kix.assessment.ui.splash_activityy.SplashActivity;
 
 import java.io.BufferedReader;
@@ -84,6 +85,12 @@ public class KIX_Utility {
                     .replace(frame, mFragment, TAG)
                     .addToBackStack(TAG)
                     .commit();
+        } else if (mActivity instanceof ProfileActivity) {
+            ((ProfileActivity) mActivity).getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(frame, mFragment, TAG)
+                    .addToBackStack(TAG)
+                    .commit();
         }
     }
 
@@ -105,6 +112,12 @@ public class KIX_Utility {
                     .commit();
         } else if (mActivity instanceof Activity_Household) {
             ((Activity_Household) mActivity).getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(frame, mFragment, TAG)
+                    .addToBackStack(TAG)
+                    .commit();
+        } else if (mActivity instanceof ProfileActivity) {
+            ((ProfileActivity) mActivity).getSupportFragmentManager()
                     .beginTransaction()
                     .add(frame, mFragment, TAG)
                     .addToBackStack(TAG)

@@ -1,4 +1,4 @@
-package com.kix.assessment.ui.fragment_studentDetails;
+package com.kix.assessment.ui.profile.fragment_studentDetails;
 
 import android.content.Context;
 import android.view.LayoutInflater;

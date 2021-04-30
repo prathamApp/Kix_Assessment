@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment_studentDetails.Fragment_StudentDetails"
+    tools:context=".ui.profile.fragment_studentDetails.Fragment_StudentDetails"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true">
@@ -47,15 +47,5 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv_studCount"/>
-
-    <ImageView
-        android:id="@+id/iv_sync"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/ic_sync"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"/>
 
 </RelativeLayout>

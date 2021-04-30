@@ -52,8 +52,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.household_activity.Activity_Household_"
+        <activity
+            android:name=".ui.profile.ProfileActivity_"
             android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name=".ui.household_activity.Activity_Household_"
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".ui.splash_activityy.SplashActivity_"
             android:screenOrientation="sensorLandscape"
@@ -69,8 +73,7 @@
             android:name=".ui.attendance_activity.Activity_Attendance_"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
-            android:windowSoftInputMode="adjustResize"/>
-
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".CatchoTransparentActivity"
             android:configChanges="orientation|screenSize"
@@ -86,11 +89,9 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>
-
-<!--        <activity-->
-<!--            android:name=".ui.main_test.MainTestActivity_"-->
-<!--            android:screenOrientation="sensorLandscape" />-->
+        </provider> <!-- <activity -->
+        <!-- android:name=".ui.main_test.MainTestActivity_" -->
+        <!-- android:screenOrientation="sensorLandscape" /> -->
         <activity
             android:name=".ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />

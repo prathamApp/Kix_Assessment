@@ -13,10 +13,9 @@ import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance_;
-import com.kix.assessment.ui.fragment_studentDetails.Fragment_StudentDetails;
-import com.kix.assessment.ui.fragment_studentDetails.Fragment_StudentDetails_;
 import com.kix.assessment.ui.household_activity.Fragment_AddHousehold;
 import com.kix.assessment.ui.household_activity.Fragment_AddHousehold_;
+import com.kix.assessment.ui.profile.ProfileActivity_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -92,11 +91,9 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
 
     @Click(R.id.fab_profile)
     public void profile(){
-        Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-        bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
-        KIX_Utility.showFragment(getActivity(), new Fragment_StudentDetails_(), R.id.household_frame,
-                bundle, Fragment_StudentDetails.class.getSimpleName());
+        Intent intent = new Intent(getActivity(), ProfileActivity_.class);
+        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        startActivity(intent);
     }
 
     @Override

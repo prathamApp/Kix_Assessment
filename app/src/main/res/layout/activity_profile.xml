@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_studDetail"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="Student Details"
+            android:textSize="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/tv_syncData"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/tv_studDetail"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="Sync Data"
+            android:textSize="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/tv_chooseBooklet"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/tv_studDetail"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="Choose Booklet"
+            android:textSize="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/tv_setBooklet"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/tv_studDetail"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/tv_chooseBooklet"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="Set Booklet"
+            android:textSize="@dimen/_10sdp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/profile_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0d000000"
+        android:elevation="5dp" />
+
+</RelativeLayout>

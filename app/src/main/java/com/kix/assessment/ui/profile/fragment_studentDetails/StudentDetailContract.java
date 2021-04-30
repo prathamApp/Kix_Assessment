@@ -1,4 +1,4 @@
-package com.kix.assessment.ui.fragment_studentDetails;
+package com.kix.assessment.ui.profile.fragment_studentDetails;
 
 import com.kix.assessment.modal_classes.Modal_StudentDetails;
 
