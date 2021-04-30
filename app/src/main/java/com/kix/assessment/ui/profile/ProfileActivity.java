@@ -13,6 +13,8 @@ import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.services.KixSmartSync;
 import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet;
 import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet_;
+import com.kix.assessment.ui.profile.fragment_setBooklet.Fragment_SetBooklet;
+import com.kix.assessment.ui.profile.fragment_setBooklet.Fragment_SetBooklet_;
 import com.kix.assessment.ui.profile.fragment_studentDetails.Fragment_StudentDetails;
 import com.kix.assessment.ui.profile.fragment_studentDetails.Fragment_StudentDetails_;
 
@@ -52,6 +54,12 @@ public class ProfileActivity extends BaseActivity {
     public void chooseBooklet(){
         KIX_Utility.showFragment(this, new Fragment_ChooseBooklet_(), R.id.profile_frame,
                 null, Fragment_ChooseBooklet.class.getSimpleName());
+    }
+
+    @Click(R.id.tv_setBooklet)
+    public void setBooklet(){
+        KIX_Utility.showFragment(this, new Fragment_SetBooklet_(), R.id.profile_frame,
+                null, Fragment_SetBooklet.class.getSimpleName());
     }
 
     @SuppressLint("SetTextI18n")

@@ -7,14 +7,14 @@
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
-    tools:context=".ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet">
+    tools:context=".ui.profile.fragment_setBooklet.Fragment_SetBooklet">
 
     <TextView
         android:id="@+id/tv_profileLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Choose Booklet"
+        android:text="Set Booklet"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/_10sdp"/>
@@ -33,14 +33,14 @@
             android:layout_marginEnd="@dimen/_100sdp"
             android:paddingStart="@dimen/_15sdp"
             android:paddingEnd="@dimen/_15sdp">
-        <Spinner
-            android:id="@+id/spinner_country"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:drawSelectorOnTop="true"
-            android:popupBackground="@drawable/choose_level_bg"
-            android:backgroundTint="@color/light_green"
-            android:gravity="center_vertical" />
+            <Spinner
+                android:id="@+id/set_spinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawSelectorOnTop="true"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:backgroundTint="@color/light_green"
+                android:gravity="center_vertical" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,7 +55,7 @@
             android:layout_below="@+id/ll_country"
             android:layout_marginTop="@dimen/_15sdp">
             <Spinner
-                android:id="@+id/spinner_language"
+                android:id="@+id/set_spinner_language"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawSelectorOnTop="true"
@@ -76,7 +76,7 @@
             android:layout_below="@+id/ll_language"
             android:layout_marginTop="@dimen/_15sdp">
             <Spinner
-                android:id="@+id/spinner_booklet"
+                android:id="@+id/set_spinner_booklet"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawSelectorOnTop="true"
@@ -87,11 +87,11 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_download"
+            android:id="@+id/btn_setBooklet"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30sdp"
-            android:text="Download"
+            android:text="Set Booklet"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/white"

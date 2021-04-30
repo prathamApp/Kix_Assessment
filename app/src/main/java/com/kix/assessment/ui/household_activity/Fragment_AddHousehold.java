@@ -56,7 +56,7 @@ public class Fragment_AddHousehold extends Fragment {
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Household_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, houseID);
