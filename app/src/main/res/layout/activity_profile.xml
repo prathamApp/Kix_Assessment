@@ -54,7 +54,7 @@
             android:background="@drawable/rounded_border"
             android:textColor="@color/colorText"
             android:gravity="center"
-            android:text="Choose Booklet"
+            android:text="Download Booklet"
             android:textSize="@dimen/_10sdp"/>
 
         <TextView

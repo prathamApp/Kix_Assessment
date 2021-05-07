@@ -34,4 +34,17 @@ public class Kix_Constant {
     public static final String SURVEYOR_NAME = "surveyor_name";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
+
+    public static final String DEVICE_ID_STR = "&deviceid=";
+    public static final String STUDENT_ID_STR = "&student_id=";
+    public static final String INTERNET_DOWNLOAD_RESOURCE = "internet_download_resource";
+    public static final String INTERNET_DOWNLOAD_RESOURCE_API = "http://devposapi.prathamopenschool.org/api/content/downloadv2?id=";
+    public static final String FILE_DOWNLOAD_STARTED = "file_download_started";
+    public static final String RESPONSE_CODE_ERROR = "response_code_error";
+    public static final String FILE_DOWNLOAD_ERROR = "file_download_error";
+    public static final String UNZIPPING_ERROR = "unzipping_error";
+    public static final String UNZIPPING_DATA_FILE = "unzipping_data_file";
+    public static final String FILE_DOWNLOAD_UPDATE = "file_download_update";
+    public static final String FILE_DOWNLOAD_COMPLETE = "file_download_complete";
+
 }

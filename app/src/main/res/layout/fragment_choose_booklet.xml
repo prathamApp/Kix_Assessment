@@ -7,16 +7,18 @@
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
-    tools:context=".ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet">
+    tools:context=".ui.profile.fragment_chooseBooklet.Fragment_DownloadBooklet">
 
     <TextView
         android:id="@+id/tv_profileLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Choose Booklet"
+        android:text="Download Booklet"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
+        android:textColor="@color/colorText"
+
         android:layout_marginTop="@dimen/_10sdp"/>
 
     <RelativeLayout
@@ -38,8 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawSelectorOnTop="true"
+            android:textColor="@color/colorText"
             android:popupBackground="@drawable/choose_level_bg"
-            android:backgroundTint="@color/light_green"
+            android:backgroundTint="@color/orange"
             android:gravity="center_vertical" />
         </LinearLayout>
 
@@ -60,7 +63,7 @@
                 android:layout_height="match_parent"
                 android:drawSelectorOnTop="true"
                 android:popupBackground="@drawable/choose_level_bg"
-                android:backgroundTint="@color/light_green"
+                android:backgroundTint="@color/orange"
                 android:gravity="center_vertical" />
         </LinearLayout>
 
@@ -81,7 +84,7 @@
                 android:layout_height="match_parent"
                 android:drawSelectorOnTop="true"
                 android:popupBackground="@drawable/choose_level_bg"
-                android:backgroundTint="@color/light_green"
+                android:backgroundTint="@color/orange"
                 android:gravity="center_vertical" />
         </LinearLayout>
 
