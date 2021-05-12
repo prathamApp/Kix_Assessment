@@ -3,6 +3,8 @@ package com.kix.assessment.ui.attendance_activity.FragmentSelectStudent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
@@ -40,9 +42,12 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
     @ViewById(R.id.rv_student)
     RecyclerView rv_student;
 
+    @ViewById(R.id.tv_bookletName)
+    TextView tv_bookletName;
+
     private ArrayList<Modal_Student> students = new ArrayList<>();
     private boolean itemSelected;
-    String surveyorCode, householdID;
+    String surveyorCode, householdID, bookletName;
     Modal_Student add_student = new Modal_Student();
 
     private StudentListAdapter studentListAdapter;
@@ -56,6 +61,12 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         Log.e("KIX : ","selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
+        bookletName = FastSave.getInstance().getString(Kix_Constant.BOOKLET,"no_booklet");
+        if(!bookletName.equalsIgnoreCase("no_booklet"))
+            tv_bookletName.setText(bookletName);
+        else
+            tv_bookletName.setText("No Booklet Selected...");
+
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
         add_student.setStud_Name("Add Student");
@@ -90,14 +101,18 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
                     bundle, Fragment_AddStudent.class.getSimpleName());
         }
         else {
-            Modal_Student modalStudnet = studentListAdapter.getitem(position);
-            FastSave.getInstance().saveString(STUDENT_ID, ""+modalStudnet.getStud_Id());
+            if(!bookletName.equalsIgnoreCase("no_booklet")) {
+                Modal_Student modalStudnet = studentListAdapter.getitem(position);
+                FastSave.getInstance().saveString(STUDENT_ID, "" + modalStudnet.getStud_Id());
 
-            FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
-            markAttendance(modalStudnet);
-            Intent intent = new Intent(getActivity(), WebViewActivity_.class);
-            intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
-            startActivity(intent);
+                FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
+                markAttendance(modalStudnet);
+                Intent intent = new Intent(getActivity(), WebViewActivity_.class);
+                intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
+                startActivity(intent);
+            } else {
+                Toast.makeText(getActivity(), "Please Select Booklet First!", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

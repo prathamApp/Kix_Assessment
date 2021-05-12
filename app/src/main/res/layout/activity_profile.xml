@@ -13,11 +13,13 @@
         android:textAlignment="center"
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold"
+        android:textColor="@color/colorText"
         android:layout_marginTop="@dimen/_10sdp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_35sdp"
         android:gravity="center">
 
         <TextView
@@ -27,6 +29,7 @@
             android:layout_margin="@dimen/_10sdp"
             android:background="@drawable/rounded_border"
             android:gravity="center"
+            android:textColor="@color/colorText"
             android:text="Student Details"
             android:textSize="@dimen/_10sdp"/>
 
@@ -38,6 +41,7 @@
             android:layout_toRightOf="@+id/tv_studDetail"
             android:background="@drawable/rounded_border"
             android:gravity="center"
+            android:textColor="@color/colorText"
             android:text="Sync Data"
             android:textSize="@dimen/_10sdp"/>
 
@@ -48,8 +52,9 @@
             android:layout_below="@+id/tv_studDetail"
             android:layout_margin="@dimen/_10sdp"
             android:background="@drawable/rounded_border"
+            android:textColor="@color/colorText"
             android:gravity="center"
-            android:text="Choose Booklet"
+            android:text="Download Booklet"
             android:textSize="@dimen/_10sdp"/>
 
         <TextView
@@ -58,6 +63,7 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_below="@+id/tv_studDetail"
             android:layout_margin="@dimen/_10sdp"
+            android:textColor="@color/colorText"
             android:layout_toRightOf="@+id/tv_chooseBooklet"
             android:background="@drawable/rounded_border"
             android:gravity="center"

@@ -66,6 +66,7 @@ public class Fragment_StudentDetails extends Fragment implements StudentDetailCo
         initializeAdapter();
     }
 
+    @UiThread
     @Override
     public void showProfileData(List<Modal_StudentDetails> profileDetails) {
         Modal_StudentDetails details = new Modal_StudentDetails("Student Name", "Household", "Exams Given", "Exam Synced");

@@ -8,8 +8,11 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.isupatches.wisefy.WiseFy;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
+import com.kix.assessment.dbclasses.dao.BookletDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
+import com.kix.assessment.dbclasses.dao.CountryDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
+import com.kix.assessment.dbclasses.dao.LanguageDao;
 import com.kix.assessment.dbclasses.dao.LogDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.SessionDao;
@@ -48,6 +51,9 @@ public class KIXApplication extends Application {
     public static SessionDao sessionDao;
     public static ScoreDao scoreDao;
     public static StatusDao statusDao;
+    public static CountryDao countryDao;
+    public static LanguageDao languageDao;
+    public static BookletDao bookletDao;
 
     @Override
     public void onCreate() {
@@ -92,6 +98,9 @@ public class KIXApplication extends Application {
         sessionDao = kixDatabase.getSessionDao();
         scoreDao = kixDatabase.getScoreDao();
         statusDao = kixDatabase.getStatusDao();
+        countryDao = kixDatabase.getCountryDao();
+        languageDao = kixDatabase.getLanguageDao();
+        bookletDao = kixDatabase.getBookletDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
     }

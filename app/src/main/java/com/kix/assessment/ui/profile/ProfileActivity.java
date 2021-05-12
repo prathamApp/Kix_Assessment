@@ -7,18 +7,20 @@ import android.widget.Toast;
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
+import com.kix.assessment.async.ContentDownloadingTask;
+import com.kix.assessment.async.KixSmartSync;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
-import com.kix.assessment.services.KixSmartSync;
-import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet;
-import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_ChooseBooklet_;
+import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_DownloadBooklet;
+import com.kix.assessment.ui.profile.fragment_chooseBooklet.Fragment_DownloadBooklet_;
 import com.kix.assessment.ui.profile.fragment_setBooklet.Fragment_SetBooklet;
 import com.kix.assessment.ui.profile.fragment_setBooklet.Fragment_SetBooklet_;
 import com.kix.assessment.ui.profile.fragment_studentDetails.Fragment_StudentDetails;
 import com.kix.assessment.ui.profile.fragment_studentDetails.Fragment_StudentDetails_;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.greenrobot.eventbus.Subscribe;
@@ -26,6 +28,9 @@ import org.greenrobot.eventbus.ThreadMode;
 
 @EActivity(R.layout.activity_profile)
 public class ProfileActivity extends BaseActivity {
+
+    @Bean(ContentDownloadingTask.class)
+    public static ContentDownloadingTask contentDownloadingTask;
 
     String surveyorCode, householdID;
     @AfterViews
@@ -52,8 +57,8 @@ public class ProfileActivity extends BaseActivity {
 
     @Click(R.id.tv_chooseBooklet)
     public void chooseBooklet(){
-        KIX_Utility.showFragment(this, new Fragment_ChooseBooklet_(), R.id.profile_frame,
-                null, Fragment_ChooseBooklet.class.getSimpleName());
+        KIX_Utility.showFragment(this, new Fragment_DownloadBooklet_(), R.id.profile_frame,
+                null, Fragment_DownloadBooklet.class.getSimpleName());
     }
 
     @Click(R.id.tv_setBooklet)

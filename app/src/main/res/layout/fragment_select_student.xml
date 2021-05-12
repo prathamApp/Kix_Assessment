@@ -7,12 +7,22 @@
     android:focusable="true">
 
     <TextView
+        android:id="@+id/rl_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Student"
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tv_bookletName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/rl_label"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_student"

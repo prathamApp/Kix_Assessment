@@ -146,7 +146,7 @@
     <style name="MyLaunchActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/splash_bg</item>
         <item name="colorPrimaryDark">@color/splash_bg</item>
-        <item name="colorAccent">@color/colorBtnGreenDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/splash_bg</item>
@@ -194,4 +194,9 @@
         <attr name="donut_suffix_text" format="string" />
         <attr name="donut_background_color" format="color" />
     </declare-styleable>
+
+    <style name="AppTheme.RoundProgress">
+        <item name="colorAccent">@color/colorBtnGreenDark</item> <!-- Whatever color you want-->
+    </style>
+
 </resources>
