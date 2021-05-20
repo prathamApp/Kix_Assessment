@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/splash_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FEFEFE"
-    tools:context="com.kix.assessment.ui.splash_activityy.SplashActivity"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    tools:context="com.kix.assessment.ui.splash_activityy.SplashActivity">
 
     <FrameLayout
         android:id="@+id/splash_frame"
@@ -15,56 +15,59 @@
         android:layout_height="match_parent"
         android:background="#0d000000"
         android:elevation="5dp"
-        android:focusableInTouchMode="true"/>
+        android:focusableInTouchMode="true" />
 
     <TextView
         android:id="@+id/tv_splashLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:text="KIX Assessment"
         android:textAlignment="center"
-        android:textSize="@dimen/_20sdp"
-        android:textStyle="bold"
         android:textColor="@color/colorText"
-        android:text="KIX Assessment"/>
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signUp"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:text="Sign Up"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textColor="@color/white"
-        app:cornerRadius="@dimen/_20sdp"
-        android:textAppearance="@dimen/_5sdp"
-        android:padding="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        app:strokeColor="@color/colorBtnGreenDark"
-        android:layout_alignParentBottom="true"
-        android:layout_marginVertical="@dimen/_35sdp"
-        android:visibility="gone"/>
+        android:layout_alignParentBottom="true">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_surveyouSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Already Have Account? Sign In."
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textColor="@color/colorBtnGreenDark"
-        app:cornerRadius="@dimen/_20sdp"
-        android:textAppearance="@dimen/_5sdp"
-        android:padding="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_alignParentBottom="true"
-        android:visibility="invisible"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:strokeColor="@color/colorBtnGreenDark"
-        app:strokeWidth="1dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textAppearance="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"
+            app:cornerRadius="@dimen/_20sdp"
+            app:strokeColor="@color/colorBtnGreenDark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_surveyouSignIn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signUp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Already Have Account? Sign In."
+            android:textAlignment="center"
+            android:textAppearance="@dimen/_5sdp"
+            android:textColor="@color/colorBtnGreenDark"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"
+            app:cornerRadius="@dimen/_20sdp"
+            app:strokeColor="@color/colorBtnGreenDark"
+            app:strokeWidth="1dp" />
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -1,124 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parentLayer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.surveyor_SignUP.Fragment_Svr_SignUp"
-    android:orientation="vertical"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
-    android:id="@+id/ll_parentLayer">
+    android:orientation="vertical"
+    tools:context=".ui.surveyor_SignUP.Fragment_Svr_SignUp">
 
-<!--    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+    <!--    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:focusableInTouchMode="true">-->
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:focusableInTouchMode="true">-->
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:text="Create Surveyor Account"
         android:textAlignment="center"
-        android:textSize="@dimen/_15sdp"
-        android:textStyle="bold"
         android:textColor="@color/colorText"
-        android:layout_marginTop="@dimen/_5sdp"/>
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:hint="Name">
-        <com.google.android.material.textfield.TextInputEditText
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_svrName"
-            android:imeOptions="actionNext"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:hint="Name">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:hint="Email">
-        <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_svrName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_svrEmail"
-            android:imeOptions="actionNext"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Email">
 
-            android:inputType="textEmailAddress"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_svrEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:hint="Mobile No.">
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_svrMobile"
-            android:imeOptions="actionNext"
-            android:inputType="phone"
-            android:maxLength="10"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Mobile No.">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutTextInput"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleDrawable="@drawable/show_password_selector"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:hint="Password">
-        <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_svrMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:inputType="phone"
+                android:maxLength="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTextInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_svrPassword"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Password"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleEnabled="true">
 
-    <Spinner
-        android:id="@+id/spinner_booklet"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_100sdp"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:drawSelectorOnTop="true"
-        android:gravity="center"
-        android:popupBackground="@drawable/choose_level_bg"
-        android:textAlignment="center"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_svrPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_svrSignUp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="Sign Up"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textColor="@color/white"
-        app:cornerRadius="@dimen/_20sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        android:textAppearance="@dimen/_5sdp"
-        android:layout_gravity="center_horizontal"/>
-<!--        </LinearLayout>
-    </androidx.core.widget.NestedScrollView-->>
+        <Spinner
+            android:id="@+id/spinner_booklet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:drawSelectorOnTop="true"
+            android:gravity="center"
+            android:popupBackground="@drawable/choose_level_bg"
+            android:textAlignment="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_svrSignUp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textAppearance="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_20sdp"/>
+
+    </LinearLayout>
+    <!--        </LinearLayout>
+        </androidx.core.widget.NestedScrollView-->>
 
 </LinearLayout>

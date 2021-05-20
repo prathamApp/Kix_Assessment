@@ -159,7 +159,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         } else {
             dismissLoadingDialog();
             webView.setVisibility(View.GONE);
-            tv_thankyou.setText("Thank you " + studentName + "!!!\nYour test is submitted.");
+            tv_thankyou.setText("Thank you, " + studentName + "!\nYour test is submitted.");
             rl_gameover.setVisibility(View.VISIBLE);
         }
     }

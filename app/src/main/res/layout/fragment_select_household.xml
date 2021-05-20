@@ -7,29 +7,42 @@
     android:focusable="true">
 
     <TextView
+        android:id="@+id/label_selectVillage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Village"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/fab_profile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/icon_person"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_houseHold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/_5sdp" />
+        android:layout_below="@+id/label_selectVillage"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp"
-        android:id="@+id/fab_profile"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/fab_addVillage"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/ic_person_white_24dp"
-        />
+        android:src="@drawable/ic_add_white_64dp"
+        android:backgroundTint="@color/orange"/>
 
 </RelativeLayout>

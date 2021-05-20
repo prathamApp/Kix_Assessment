@@ -34,13 +34,13 @@
     </string-array>
 
     <string-array name="student_class">
-        <item>Class</item>
-        <item>PrePrimary</item>
-        <item>Class 1</item>
-        <item>Class 2</item>
-        <item>Class 3</item>
-        <item>Class 4</item>
-        <item>Class 5</item>
+        <item>Std</item>
+        <item>Pre-primary</item>
+        <item>Std 1</item>
+        <item>Std 2</item>
+        <item>Std 3</item>
+        <item>Std 4</item>
+        <item>Std 5</item>
     </string-array>
 
     <string-array name="enrollment_status">

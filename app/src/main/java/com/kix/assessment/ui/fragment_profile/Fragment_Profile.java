@@ -73,6 +73,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         initializeAdapter();
     }
 
+    @UiThread
     @Override
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
         Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name", "Household", "Exams Given", "Exam Synced");

@@ -47,14 +47,14 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     }
 
     @AfterViews
-    public void initialize(){
-        Log.e("KIX : ","selectstud");
+    public void initialize() {
+        Log.e("KIX : ", "selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
-        add_household.setHouseHold_Name("Add Village");
+/*        add_household.setHouseHold_Name("Add Village");
         if (!households.contains(add_household)){
             households.add(add_household);
-        }
+        }*/
         initializeAdapter();
     }
 
@@ -73,28 +73,35 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         }
     }
 
+    @Click(R.id.fab_addVillage)
+    public void addVillage() {
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
+                bundle, Fragment_AddHousehold.class.getSimpleName());
+    }
+
     @Override
     public void itemSelected(int position) {
-        Bundle bundle = new Bundle();
-        if(position == households.size()-1) {
-            bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
+        /*Bundle bundle = new Bundle();
+        if (position == households.size() - 1) {
+            bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
             KIX_Utility.showFragment(getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
                     bundle, Fragment_AddHousehold.class.getSimpleName());
-        }
-        else {
+        } else {*/
             Modal_Household modalHousehold = householdListAdapter.getitem(position);
             Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
             intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
             intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.HouseHold_ID);
             startActivity(intent);
-        }
+        //}
     }
 
     @Click(R.id.fab_profile)
-    public void profile(){
+    public void profile() {
         Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-        bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
+        bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID, householdID);
         KIX_Utility.showFragment(getActivity(), new Fragment_Profile_(), R.id.household_frame,
                 bundle, Fragment_Profile.class.getSimpleName());
     }
@@ -104,6 +111,6 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         super.onDestroyView();
         rv_houseHold.setAdapter(null);
         householdListAdapter = null;
-        rv_houseHold=null;
+        rv_houseHold = null;
     }
 }

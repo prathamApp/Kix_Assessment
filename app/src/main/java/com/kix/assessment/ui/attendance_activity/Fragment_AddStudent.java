@@ -1,8 +1,14 @@
 package com.kix.assessment.ui.attendance_activity;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -12,18 +18,27 @@ import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Attendance;
+import com.kix.assessment.modal_classes.Modal_Session;
 import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.services.shared_preferences.FastSave;
+import com.kix.assessment.ui.main_test.WebViewActivity_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import androidx.fragment.app.Fragment;
 
+import static com.kix.assessment.KIXApplication.attendanceDao;
+import static com.kix.assessment.KIXApplication.sessionDao;
 import static com.kix.assessment.KIXApplication.studentDao;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_add_student)
 public class Fragment_AddStudent extends Fragment {
@@ -48,6 +63,9 @@ public class Fragment_AddStudent extends Fragment {
 
     String age, surveyorCode, householdID;
     String schoolType, dropoutYear, standard;
+
+    public Dialog startExamDialog;
+    Button dlg_yes, dlg_no;
 
     public Fragment_AddStudent() {
         // Required empty public constructor
@@ -131,7 +149,7 @@ public class Fragment_AddStudent extends Fragment {
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
-        getFragmentManager().popBackStack();
+        startDialog(modal_student);
 /*        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
@@ -159,4 +177,51 @@ public class Fragment_AddStudent extends Fragment {
         if(spinner_class.getSelectedItemPosition()==0) standard = "NA";
         else standard = spinner_class.getSelectedItem().toString();
     }
+
+    @UiThread
+    public void startDialog(Modal_Student modal_student) {
+        startExamDialog = null;
+        startExamDialog = new Dialog(Objects.requireNonNull(getActivity()));
+        startExamDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(startExamDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        startExamDialog.setContentView(R.layout.start_game_dialog);
+        startExamDialog.setCanceledOnTouchOutside(false);
+
+//        dia_title = startExamDialog.findViewById(R.id.dia_title);
+        dlg_yes = startExamDialog.findViewById(R.id.dlg_yes);
+        dlg_no = startExamDialog.findViewById(R.id.dlg_no);
+//        dia_title.setText("Save and Submit Test");
+        dlg_no.setOnClickListener(v -> {
+            getFragmentManager().popBackStack();
+            startExamDialog.dismiss();
+        });
+        dlg_yes.setOnClickListener(v -> {
+            getFragmentManager().popBackStack();
+            markAttendance(modal_student);
+            FastSave.getInstance().saveString(STUDENT_ID, ""+modal_student.getStud_Id());
+            FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
+            Intent intent = new Intent(getActivity(), WebViewActivity_.class);
+            intent.putExtra(Kix_Constant.STUDENT_NAME, modal_student.Stud_Name);
+            startActivity(intent);
+            startExamDialog.dismiss();
+        });
+        startExamDialog.show();
+    }
+
+    private void markAttendance(Modal_Student stud) {
+        ArrayList<Attendance> attendances = new ArrayList<>();
+        Attendance attendance = new Attendance();
+        attendance.SessionID = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
+        attendance.StudentID = stud.getStud_Id();
+        attendance.Date = KIX_Utility.getCurrentDateTime();
+        attendance.sentFlag = 0;
+        attendances.add(attendance);
+        attendanceDao.insertAttendance(attendances);
+        Modal_Session s = new Modal_Session();
+        s.setSessionID(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
+        s.setFromDate(KIX_Utility.getCurrentDateTime());
+        s.setToDate("NA");
+        sessionDao.insert(s);
+    }
+
 }

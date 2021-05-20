@@ -14,7 +14,7 @@
         android:background="@drawable/dialog_bg">
 
         <TextView
-            android:id="@+id/dia_title"
+            android:id="@+id/dlg_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_10sdp"
@@ -22,27 +22,28 @@
             android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="Do you want to go to the next task?"
+            android:text="Do you want to Start Exam?"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_15sdp" />
 
         <LinearLayout
+            android:id="@+id/ll_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dia_title"
+            android:layout_below="@+id/dlg_title"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/dia_yes"
+                android:id="@+id/dlg_yes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_8sdp"
-                android:layout_marginVertical="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
                 android:padding="@dimen/_5sdp"
                 android:text="YES"
                 android:textAlignment="center"
@@ -55,12 +56,12 @@
                 app:cornerRadius="@dimen/_20sdp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/dia_no"
+                android:id="@+id/dlg_no"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_8sdp"
-                android:layout_marginVertical="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
                 android:text="NO"
@@ -74,7 +75,6 @@
                 app:cornerRadius="@dimen/_20sdp" />
 
         </LinearLayout>
-
     </RelativeLayout>
 
 </RelativeLayout>

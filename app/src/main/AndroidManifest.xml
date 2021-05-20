@@ -53,10 +53,10 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.household_activity.Activity_Household_"
-            android:screenOrientation="sensorLandscape"/>
+            android:screenOrientation="sensorPortrait"/>
         <activity
             android:name=".ui.splash_activityy.SplashActivity_"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -67,7 +67,7 @@
         </activity>
         <activity
             android:name=".ui.attendance_activity.Activity_Attendance_"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustResize"/>
 
@@ -75,7 +75,7 @@
             android:name=".CatchoTransparentActivity"
             android:configChanges="orientation|screenSize"
             android:parentActivityName=".BaseActivity"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <provider

@@ -3,7 +3,10 @@ package com.kix.assessment.ui.attendance_activity.FragmentSelectStudent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
+import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -20,6 +23,7 @@ import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent_;
 import com.kix.assessment.ui.main_test.WebViewActivity_;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -40,6 +44,9 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
     @ViewById(R.id.rv_student)
     RecyclerView rv_student;
 
+    @ViewById(R.id.fab_addChild)
+    FloatingActionButton fab_addChild;
+
     private ArrayList<Modal_Student> students = new ArrayList<>();
     private boolean itemSelected;
     String surveyorCode, householdID;
@@ -58,10 +65,18 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
-        add_student.setStud_Name("Add Student");
+        if(students.size()==0){
+            Toast.makeText(getActivity(), "No Student Found.", Toast.LENGTH_SHORT).show();
+            Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addChild.getContext(),  R.anim.shake);
+            anim.setDuration(200L);
+            fab_addChild.startAnimation(anim);
+        }
+/*
+        add_student.setStud_Name("Add Child");
         if (!students.contains(add_student)){
             students.add(add_student);
         }
+*/
         initializeAdapter();
     }
 
@@ -70,9 +85,9 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         if (studentListAdapter == null) {
             studentListAdapter = new StudentListAdapter(students, getActivity(), Fragment_SelectStudent.this);
             rv_student.setHasFixedSize(true);
-            FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(getActivity(), FlexDirection.ROW);
+            FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(getActivity(), FlexDirection.COLUMN);
             flexboxLayoutManager.setJustifyContent(JustifyContent.FLEX_START);
-            flexboxLayoutManager.setAlignItems(AlignItems.CENTER);
+            flexboxLayoutManager.setAlignItems(AlignItems.FLEX_START);
             rv_student.setLayoutManager(flexboxLayoutManager);
             rv_student.setAdapter(studentListAdapter);
         } else {
@@ -80,16 +95,25 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         }
     }
 
+    @Click(R.id.fab_addChild)
+    public void addChild(){
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
+                    bundle, Fragment_AddStudent.class.getSimpleName());
+    }
+
     @Override
     public void itemSelected(int position) {
-        Bundle bundle = new Bundle();
+  /*      Bundle bundle = new Bundle();
         if(position == students.size()-1) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
             bundle.putString(Kix_Constant.HOUSEHOLD_ID,householdID);
             KIX_Utility.showFragment(getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
                     bundle, Fragment_AddStudent.class.getSimpleName());
         }
-        else {
+        else {*/
             Modal_Student modalStudnet = studentListAdapter.getitem(position);
             FastSave.getInstance().saveString(STUDENT_ID, ""+modalStudnet.getStud_Id());
 
@@ -98,7 +122,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
             startActivity(intent);
-        }
+        //}
     }
 
     private void markAttendance(Modal_Student stud) {

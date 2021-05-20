@@ -2,14 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey_200"
     android:clickable="true"
     android:focusable="true">
 
     <TextView
+        android:id="@+id/label_selectChild"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Student"
+        android:text="Select Child"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
@@ -18,7 +20,19 @@
         android:id="@+id/rv_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/_5sdp" />
+        android:layout_below="@+id/label_selectChild"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_1sdp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/fab_addChild"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_add_white_64dp"/>
 
 </RelativeLayout>
