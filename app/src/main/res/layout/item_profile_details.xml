@@ -18,25 +18,28 @@
             android:layout_weight="1"
             android:text="StudName"
             android:textAlignment="center"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorText"/>
 
         <TextView
             android:id="@+id/tv_HouseholdName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="StudName"
+            android:text="Village"
             android:textAlignment="center"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorText"/>
 
         <TextView
             android:id="@+id/tv_ExamGiven"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="StudName"
+            android:text="ExamGiven"
             android:textAlignment="center"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorText"/>
 
         <TextView
             android:id="@+id/tv_ExamSynced"

@@ -14,7 +14,7 @@
         android:id="@+id/tv_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="Sign In"
         android:textAlignment="center"
         android:textColor="@color/colorText"
@@ -24,25 +24,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_label"
+        android:layout_marginTop="@dimen/_20sdp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_label"
+            android:id="@+id/til_svrMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_label"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="Email">
+            android:hint="@string/hint_svrMobile">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_email"
+                android:id="@+id/tie_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:imeOptions="actionNext"
-                android:inputType="text" />
+                android:inputType="phone"
+                android:textColor="@color/colorText"
+                android:digits="0123456789"
+                android:maxLength="10"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -53,24 +57,25 @@
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="Password"
+            android:hint="@string/hint_svrPassword"
             app:passwordToggleDrawable="@drawable/show_password_selector"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_password"
+                android:id="@+id/tie_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:imeOptions="actionDone"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorText"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_signIn"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_50sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_5sdp"
             android:text="Sign In"
@@ -78,6 +83,7 @@
             android:textAppearance="@dimen/_5sdp"
             android:textColor="@color/white"
             android:textSize="@dimen/_10sdp"
-            app:cornerRadius="@dimen/_20sdp" />
+            app:cornerRadius="@dimen/_20sdp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </RelativeLayout>

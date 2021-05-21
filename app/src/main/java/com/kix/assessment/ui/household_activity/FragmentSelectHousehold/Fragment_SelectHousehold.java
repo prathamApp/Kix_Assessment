@@ -29,6 +29,8 @@ import androidx.annotation.UiThread;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static com.kix.assessment.KIXApplication.householdDao;
+
 @EFragment(R.layout.fragment_select_household)
 public class Fragment_SelectHousehold extends Fragment implements ContractHouseholdList {
 
@@ -50,7 +52,8 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     public void initialize() {
         Log.e("KIX : ", "selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
-        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
+//        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
+        households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(surveyorCode);
 /*        add_household.setHouseHold_Name("Add Village");
         if (!households.contains(add_household)){
             households.add(add_household);

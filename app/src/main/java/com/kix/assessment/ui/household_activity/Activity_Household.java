@@ -56,8 +56,8 @@ public class Activity_Household extends BaseActivity {
                     .bindClickListener(v -> {
                         exitDialog.dismiss();
                         new Handler().postDelayed(this::finishAffinity, 200);
-                    }, R.id.dialog_btn_exit)
-                    .bindClickListener(v -> exitDialog.dismiss(), R.id.btn_cancel)
+                    }, R.id.dia_exit)
+                    .bindClickListener(v -> exitDialog.dismiss(), R.id.dia_cancel)
                     .setGravity(Gravity.CENTER)
                     .setDismissOnTouchBackground(true)
                     .setDismissOnClickBack(true)

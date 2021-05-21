@@ -64,7 +64,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
-        students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
+        students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCodeDescending(surveyorCode,householdID);
         if(students.size()==0){
             Toast.makeText(getActivity(), "No Student Found.", Toast.LENGTH_SHORT).show();
             Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addChild.getContext(),  R.anim.shake);

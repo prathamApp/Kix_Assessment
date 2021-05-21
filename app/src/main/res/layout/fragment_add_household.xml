@@ -19,13 +19,14 @@
         android:textStyle="bold"
         android:textColor="@color/colorText"
         android:textAlignment="center"
-        android:layout_marginTop="@dimen/_30sdp"/>
+        android:layout_marginTop="@dimen/_20sdp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:layout_below="@+id/tv_label"
+        android:layout_marginTop="@dimen/_20sdp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_label"
@@ -34,14 +35,16 @@
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_below="@+id/tv_label"
-        android:hint="Village">
+        android:hint="@string/hint_village">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_houseHoldName"
             android:imeOptions="actionNext"
             android:layout_marginBottom="8dp"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="@color/colorText"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,14 +55,16 @@
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_below="@+id/til_label"
-        android:hint="District">
+        android:hint="@string/hint_district">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_houseHoldDistrict"
             android:imeOptions="actionNext"
             android:layout_marginBottom="8dp"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="@color/colorText"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -70,14 +75,16 @@
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_below="@+id/til_label1"
-        android:hint="State">
+        android:hint="@string/hint_state">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_houseHoldState"
             android:imeOptions="actionDone"
             android:layout_marginBottom="8dp"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="@color/colorText"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -85,7 +92,7 @@
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
         android:layout_below="@id/til_label2"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         android:text="Save"
         android:textAlignment="center"
         android:textSize="@dimen/_10sdp"
@@ -94,7 +101,8 @@
         app:cornerRadius="@dimen/_20sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
-        android:textAppearance="@dimen/_5sdp"/>
+        android:textAppearance="@dimen/_5sdp"
+        android:layout_gravity="center"/>
 
     </LinearLayout>
 

@@ -19,7 +19,7 @@
         android:textColor="@color/colorText"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/_15sdp"/>
+        android:layout_marginTop="@dimen/_20sdp"/>
 
     <RelativeLayout
         android:id="@+id/rl_fillDetails"
@@ -29,7 +29,7 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
-        android:gravity="center">
+        android:layout_marginTop="@dimen/_20sdp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_label1"
@@ -43,7 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:imeOptions="actionDone"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/colorText"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

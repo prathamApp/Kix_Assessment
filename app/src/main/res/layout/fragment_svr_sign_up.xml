@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="Create Surveyor Account"
         android:textAlignment="center"
         android:textColor="@color/colorText"
@@ -35,46 +35,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:layout_marginTop="@dimen/_20sdp">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_svrName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="Name">
+            android:hint="@string/hint_svrName">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_svrName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/colorText"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_svrEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:hint="Email">
+            android:hint="@string/hint_svrEmail">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_svrEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorText"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_svrMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:hint="Mobile No.">
+            android:hint="@string/hint_svrMobile">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_svrMobile"
@@ -82,17 +88,19 @@
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext|flagNoExtractUi"
                 android:inputType="phone"
-                android:maxLength="10" />
+                android:maxLength="10"
+                android:digits="0123456789"
+                android:textColor="@color/colorText"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layoutTextInput"
+            android:id="@+id/til_svrPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:hint="Password"
+            android:hint="@string/hint_svrPassword"
             app:passwordToggleDrawable="@drawable/show_password_selector"
             app:passwordToggleEnabled="true">
 
@@ -101,7 +109,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionDone|flagNoExtractUi"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorText"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Spinner
@@ -121,7 +130,7 @@
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_50sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_5sdp"
             android:text="Sign Up"

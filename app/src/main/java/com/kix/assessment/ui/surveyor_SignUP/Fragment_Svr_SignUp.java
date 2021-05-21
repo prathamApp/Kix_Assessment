@@ -1,13 +1,16 @@
 package com.kix.assessment.ui.surveyor_SignUP;
 
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
@@ -34,15 +37,24 @@ import static com.kix.assessment.KIXApplication.surveyorDao;
 public class Fragment_Svr_SignUp extends Fragment {
 
     @ViewById(R.id.et_svrName)
-    EditText tv_svrName;
+    TextInputEditText tie_svrName;
     @ViewById(R.id.et_svrEmail)
-    EditText tv_svrEmail;
+    TextInputEditText tie_svrEmail;
     @ViewById(R.id.et_svrMobile)
-    EditText tv_svrMobile;
+    TextInputEditText tie_svrMobile;
     @ViewById(R.id.spinner_booklet)
     Spinner spinner_booklet;
     @ViewById(R.id.et_svrPassword)
-    TextInputEditText tv_svrPassword;
+    TextInputEditText tie_svrPassword;
+
+    @ViewById(R.id.til_svrName)
+    TextInputLayout til_svrName;
+    @ViewById(R.id.til_svrEmail)
+    TextInputLayout til_svrEmail;
+    @ViewById(R.id.til_svrMobile)
+    TextInputLayout til_svrMobile;
+    @ViewById(R.id.til_svrPassword)
+    TextInputLayout til_svrPassword;
 
     @ViewById(R.id.ll_parentLayer)
     LinearLayout ll_parentLayout;
@@ -63,6 +75,61 @@ public class Fragment_Svr_SignUp extends Fragment {
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>
                 (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, booklet);
         spinner_booklet.setAdapter(spinnerArrayAdapter);
+
+        tie_svrMobile.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length()<10)
+                    til_svrMobile.setError("Mobile No. should be 10 digit.");
+                else til_svrMobile.setError(null);
+            }
+        });
+
+        tie_svrEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!isValidEmail(s.toString())) til_svrEmail.setError("Invalid Email! (Ex. abc@gmail.com)");
+                else til_svrEmail.setError(null);
+            }
+        });
+
+        tie_svrPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length()<3) til_svrPassword.setError("Minimum 3 characters required!");
+                else til_svrPassword.setError(null);
+            }
+        });
     }
 
     @Click(R.id.ll_parentLayer)
@@ -72,29 +139,46 @@ public class Fragment_Svr_SignUp extends Fragment {
 
     @Click(R.id.btn_svrSignUp)
     public void signUp() {
-        if (!tv_svrName.getText().toString().isEmpty() && !tv_svrEmail.getText().toString().isEmpty()
-                && !tv_svrMobile.getText().toString().isEmpty() && !tv_svrPassword.getText().toString().isEmpty()) {
-
-            Modal_Surveyor surveyor = KixDatabase.getDatabaseInstance(getActivity()).getSurveyorDao().getSurveyorByEmail(tv_svrEmail.getText().toString());
-            if (surveyor != null) {
-                Toast.makeText(getActivity(), "Profile is already saved..", Toast.LENGTH_SHORT).show();
+        if (!tie_svrName.getText().toString().isEmpty() && !tie_svrMobile.getText().toString().isEmpty()
+                && !tie_svrPassword.getText().toString().isEmpty()) {
+            if(isValidEmail(tie_svrEmail.getText().toString())) {
+                if(tie_svrMobile.getText().toString().length()==10) {
+                    if(tie_svrPassword.getText().toString().length()>=3) {
+                        Modal_Surveyor surveyor = KixDatabase.getDatabaseInstance(getActivity()).getSurveyorDao().getSurveyorByMobile(tie_svrMobile.getText().toString());
+                        if (surveyor != null) {
+                            Toast.makeText(getActivity(), "Profile is already saved..", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Modal_Surveyor modal_surveyor = new Modal_Surveyor();
+                            modal_surveyor.setSvr_Name(tie_svrName.getText().toString());
+                            modal_surveyor.setSvr_Email(tie_svrEmail.getText().toString());
+                            modal_surveyor.setSvr_Mobile(tie_svrMobile.getText().toString());
+                            modal_surveyor.setSvr_Password(tie_svrPassword.getText().toString());
+                            modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
+                            modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
+                            modal_surveyor.setSentFlag(0);
+                            surveyorDao.insertSurveyor(modal_surveyor);
+                            BackupDatabase.backup(getActivity());
+                            Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
+                            KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
+                                    null, Fragment_Svr_SignIn.class.getSimpleName());
+                        }
+                    } else {
+                        Toast.makeText(getActivity(), "Minimum 3 characters required for Password!", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getActivity(), "Invalid Mobile No.", Toast.LENGTH_SHORT).show();
+                }
             } else {
-                Modal_Surveyor modal_surveyor = new Modal_Surveyor();
-                modal_surveyor.setSvr_Name(tv_svrName.getText().toString());
-                modal_surveyor.setSvr_Email(tv_svrEmail.getText().toString());
-                modal_surveyor.setSvr_Mobile(tv_svrMobile.getText().toString());
-                modal_surveyor.setSvr_Password(tv_svrPassword.getText().toString());
-                modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
-                modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
-                modal_surveyor.setSentFlag(0);
-                surveyorDao.insertSurveyor(modal_surveyor);
-                BackupDatabase.backup(getActivity());
-                Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
-                KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
-                        null, Fragment_Svr_SignIn.class.getSimpleName());
+                Toast.makeText(getActivity(), "Invalid Email Id!", Toast.LENGTH_SHORT).show();
+                til_svrEmail.setError("Invalid Email! (Ex. abc@gmail.com)");
             }
         } else {
             Toast.makeText(getActivity(), "All Fields Are Mandatory!!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public final static boolean isValidEmail(CharSequence email) {
+        if(email.toString().isEmpty()) return true;
+        else return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

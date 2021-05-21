@@ -62,7 +62,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
         List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
-        tv_profileName.setText("Hi "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME,""));
+        tv_profileName.setText("Hi, "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME,""));
         tv_studCount.setText("No. of Students : "+stud.size());
         tv_householdCount.setText("No. of Villages : "+households.size());
         if(stud.size()==0)
@@ -76,7 +76,8 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @UiThread
     @Override
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
-        Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name", "Household", "Exams Given", "Exam Synced");
+        Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name",
+                "Village", "Exams Given", "Exam Synced");
         detailsList.add(details);
         if(profileDetails.size()==0){
             Toast.makeText(getActivity(), "Exam Not Given By Student", Toast.LENGTH_SHORT).show();
@@ -104,7 +105,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         }
     }
 
-    @Click(R.id.iv_sync)
+    @Click(R.id.fab_sync)
     public void sync(){
         if (KIXApplication.wiseF.isDeviceConnectedToWifiNetwork() || KIXApplication.wiseF.isDeviceConnectedToMobileNetwork()) {
             KixSmartSync.pushUsageToServer(true);

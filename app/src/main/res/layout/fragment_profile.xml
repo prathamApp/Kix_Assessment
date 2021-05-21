@@ -16,7 +16,8 @@
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold"
         android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/colorText"/>
 
     <TextView
         android:id="@+id/tv_studCount"
@@ -27,19 +28,21 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_below="@+id/tv_profileName"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorText"/>
 
    <TextView
         android:id="@+id/tv_householdCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No. of Households :"
+        android:text="No. of Villages :"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"
        android:layout_marginEnd="@dimen/_10sdp"
        android:layout_below="@+id/tv_profileName"
         android:gravity="center_horizontal"
-       android:layout_alignParentEnd="true" />
+       android:layout_alignParentEnd="true"
+       android:textColor="@color/colorText"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_examDetail"
@@ -48,14 +51,15 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv_studCount"/>
 
-    <ImageView
-        android:id="@+id/iv_sync"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/ic_sync"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:id="@+id/fab_sync"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"/>
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_sync_white_48dp"
+        android:backgroundTint="@color/orange"/>
 
 </RelativeLayout>

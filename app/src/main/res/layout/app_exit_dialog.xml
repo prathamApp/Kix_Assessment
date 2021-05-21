@@ -1,85 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@android:color/transparent"
-    android:orientation="vertical">
+    android:layout_gravity="center">
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="@dimen/_230sdp"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/_5sdp"
-        app:cardElevation="5dp"
-        tools:ignore="RedundantNamespace">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/dialog_txt_exit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_25sdp"
-                android:gravity="center"
-                android:text="@string/exit_statement"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/_18sdp" />
-
-            <TextView
-                android:id="@+id/btn_cancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:gravity="center"
-                android:minWidth="@dimen/_120sdp"
-                android:minHeight="@dimen/_25sdp"
-                android:text="Cancel"
-                android:textColor="@android:color/black" />
-
-            <Button
-                android:id="@+id/dialog_btn_exit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/btn_cancel"
-                android:layout_marginBottom="@dimen/_3sdp"
-                android:layout_centerHorizontal="true"
-                android:background="@color/colorRed"
-                android:elevation="@dimen/_8sdp"
-                android:gravity="center"
-                android:minWidth="@dimen/_120sdp"
-                android:minHeight="@dimen/_35sdp"
-                android:text="Exit"
-                android:textColor="@android:color/white" />
-
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-<!--    <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="@dimen/_240sdp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardElevation="0dp">
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_bg"
+        android:elevation="@dimen/_5sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
 
-        <ImageView
+        <TextView
+            android:id="@+id/dia_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/ic_exit_dialog" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/exit_statement"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
 
-    </com.google.android.material.card.MaterialCardView>-->
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dia_title"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dia_exit"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:text="YES"
+                android:textAlignment="center"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/colorBtnGreenDark"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                app:rippleColor="@color/colorBtnGreenDark"
+                app:strokeColor="@color/colorBtnGreenDark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dia_cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:text="NO"
+                android:textAlignment="center"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/colorBtnRedDark"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                app:rippleColor="@color/colorBtnRedDark"
+                app:strokeColor="@color/colorBtnRedDark" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

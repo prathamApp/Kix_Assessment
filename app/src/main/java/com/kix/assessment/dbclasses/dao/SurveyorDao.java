@@ -17,8 +17,11 @@ public interface SurveyorDao {
     @Query("SELECT * FROM Surveyor WHERE Svr_Email=:email")
     Modal_Surveyor getSurveyorByEmail(String email);
 
-    @Query("SELECT * FROM Surveyor WHERE Svr_Email=:email and Svr_Password=:password")
-    Modal_Surveyor getSurveyorLogin(String email, String password);
+    @Query("SELECT * FROM Surveyor WHERE Svr_Mobile=:mobile")
+    Modal_Surveyor getSurveyorByMobile(String mobile);
+
+    @Query("SELECT * FROM Surveyor WHERE Svr_Mobile=:mobile and Svr_Password=:password")
+    Modal_Surveyor getSurveyorLogin(String mobile, String password);
 
     @Query("select * from Surveyor where sentFlag = 0")
     List<Modal_Surveyor> getAllNewSurveyor();

@@ -18,6 +18,15 @@
 
     <string name="exit_statement">Are you sure you want to exit?</string>
 
+    <string name="hint_svrName">Name <font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">Email(optional) </string>
+    <string name="hint_svrMobile">Mobile No. <font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">Password <font color='#FF0000'>*</font></string>
+
+    <string name="hint_village">Village <font color='#FF0000'>*</font></string>
+    <string name="hint_district">District <font color='#FF0000'>*</font></string>
+    <string name="hint_state">State <font color='#FF0000'>*</font></string>
+
     <string-array name="age">
         <item>Age 4  </item>
         <item>Age 5  </item>

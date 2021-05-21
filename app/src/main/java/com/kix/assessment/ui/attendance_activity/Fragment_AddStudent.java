@@ -125,10 +125,14 @@ public class Fragment_AddStudent extends Fragment {
 
     @Click(R.id.btn_saveStudent)
     public void saveStudent() {
-        if(spinner_enrollStatue.getSelectedItemPosition()==0)
-            Toast.makeText(getActivity(), "Select Enrollment Status.", Toast.LENGTH_SHORT).show();
-        else
-            insertStudent();
+        if(!et_studentName.getText().toString().isEmpty()) {
+            if (spinner_enrollStatue.getSelectedItemPosition() == 0)
+                Toast.makeText(getActivity(), "Select Enrollment Status.", Toast.LENGTH_SHORT).show();
+            else
+                insertStudent();
+        } else {
+            Toast.makeText(getActivity(), "Enter Name First.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void insertStudent() {

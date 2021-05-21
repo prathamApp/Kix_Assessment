@@ -1,9 +1,9 @@
 package com.kix.assessment.ui.household_activity;
 
 import android.content.Intent;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -23,11 +23,11 @@ import static com.kix.assessment.KIXApplication.householdDao;
 public class Fragment_AddHousehold extends Fragment {
 
     @ViewById(R.id.et_houseHoldName)
-    EditText et_houseHoldName;
+    TextInputEditText et_houseHoldName;
     @ViewById(R.id.et_houseHoldDistrict)
-    EditText et_houseHoldDistrict;
+    TextInputEditText et_houseHoldDistrict;
     @ViewById(R.id.et_houseHoldState)
-    EditText et_houseHoldState;
+    TextInputEditText et_houseHoldState;
 
     String surveyorCode;
     public Fragment_AddHousehold() {
@@ -40,8 +40,11 @@ public class Fragment_AddHousehold extends Fragment {
     }
 
     @Click(R.id.btn_saveHousehold)
-    public void saveStudent(){
+    public void saveHousehold(){
+        if(!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
+                && !et_houseHoldState.getText().toString().isEmpty())
         insertHousehold();
+        else Toast.makeText(getActivity(), "All fields are mandatory!", Toast.LENGTH_SHORT).show();
     }
 
     private void insertHousehold() {
@@ -56,7 +59,7 @@ public class Fragment_AddHousehold extends Fragment {
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Household_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, houseID);

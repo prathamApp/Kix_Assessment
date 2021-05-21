@@ -21,6 +21,9 @@ public interface StudentDao {
     @Query("SELECT * FROM Student WHERE Svr_Code=:svrCode and HouseHold_ID=:householdId")
     List<Modal_Student> getAllStudentsBySurveyorCode(String svrCode, String householdId);
 
+    @Query("SELECT * FROM Student WHERE Svr_Code=:svrCode and HouseHold_ID=:householdId ORDER BY S_Id DESC")
+    List<Modal_Student> getAllStudentsBySurveyorCodeDescending(String svrCode, String householdId);
+
     @Query("SELECT * FROM Student WHERE Svr_Code=:svrCode")
     List<Modal_Student> getAllStudentsBySurveyor(String svrCode);
 

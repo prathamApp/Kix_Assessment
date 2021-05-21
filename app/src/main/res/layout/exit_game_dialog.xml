@@ -87,7 +87,7 @@
             android:layout_below="@+id/ll_btn"
             android:layout_centerHorizontal="true"
             android:padding="@dimen/_5sdp"
-            android:text="Cancle"
+            android:text="CANCEL"
             android:textAlignment="center"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             app:strokeColor="@color/colorAccentDark"
