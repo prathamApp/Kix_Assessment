@@ -71,6 +71,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
                     null, Fragment_Svr_SignUp.class.getSimpleName());
         } else {
             Toast.makeText(this, "Please Allow, Mandatory Permission.", Toast.LENGTH_LONG).show();
+
             ActivityCompat.requestPermissions(this, new String[]{
                     Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
         }
