@@ -95,6 +95,14 @@
             android:name=".ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
 
+        <!--This activity is used to restart the app, when crashed.-->
+        <activity
+            android:name=".custom.ProcessPhoenix"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:process=":phoenix"
+            android:screenOrientation="sensorPortrait"
+            />
+
         <receiver
             android:name=".services.OTGListener"
             android:enabled="true">

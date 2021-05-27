@@ -35,7 +35,8 @@
             android:id="@+id/til_label1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name">
+            android:hint="@string/hint_svrName"
+            android:textColorHint="#757575">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_studentName"
@@ -44,8 +45,10 @@
                 android:layout_marginBottom="10dp"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:drawablePadding="@dimen/_5sdp"
                 android:textColor="@color/colorText"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:drawableStart="@drawable/ic_person_grey_24dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

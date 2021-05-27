@@ -24,6 +24,8 @@ import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
 import com.kix.assessment.modal_classes.Score;
 
+import net.alhazmy13.catcho.library.Catcho;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -127,10 +129,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         hideSystemUI();
         super.onCreate(savedInstanceState);
-/*        Catcho.Builder(this)
+        Catcho.Builder(this)
                 .activity(CatchoTransparentActivity.class)
 //                .recipients("abc@gm.com")
-                .build();*/
+                .build();
     }
 
     private void hideSystemUI() {

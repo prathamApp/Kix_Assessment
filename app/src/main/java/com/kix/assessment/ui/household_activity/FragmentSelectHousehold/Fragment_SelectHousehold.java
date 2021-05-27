@@ -3,7 +3,10 @@ package com.kix.assessment.ui.household_activity.FragmentSelectHousehold;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
+import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -37,6 +40,9 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     @ViewById(R.id.rv_houseHold)
     RecyclerView rv_houseHold;
 
+    @ViewById(R.id.fab_addVillage)
+    FloatingActionButton fab_addVillage;
+
     private ArrayList<Modal_Household> households = new ArrayList<>();
     private boolean itemSelected;
     String surveyorCode, householdID;
@@ -54,6 +60,12 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
 //        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
         households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(surveyorCode);
+        if(households.size()==0){
+            Toast.makeText(getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
+            Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addVillage.getContext(),  R.anim.shake);
+            anim.setDuration(200L);
+            fab_addVillage.startAnimation(anim);
+        }
 /*        add_household.setHouseHold_Name("Add Village");
         if (!households.contains(add_household)){
             households.add(add_household);

@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Process;
 
+import com.kix.assessment.BaseActivity;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +23,7 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
  * <p>
  * Trigger process recreation by calling {@link #triggerRebirth} with a {@link Context} instance.
  */
-public final class ProcessPhoenix extends Activity {
+public final class ProcessPhoenix extends BaseActivity {
     private static final String KEY_RESTART_INTENTS = "phoenix_restart_intents";
 
     /**

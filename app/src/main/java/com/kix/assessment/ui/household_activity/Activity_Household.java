@@ -8,7 +8,6 @@ import android.view.Gravity;
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
-import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Household;
@@ -32,7 +31,14 @@ public class Activity_Household extends BaseActivity {
     @AfterViews
     public void initialize() {
         surveyorCode = getIntent().getStringExtra(Kix_Constant.SURVEYOR_CODE);
-        Modal_Household household = KixDatabase.getDatabaseInstance(this).getHouseholdDao().getHouseholdBySurveyorCode(surveyorCode);
+        Bundle bundle = new Bundle();
+        ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
+        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
+        bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
+        KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
+                bundle, Fragment_SelectHousehold.class.getSimpleName());
+
+        /*        Modal_Household household = KixDatabase.getDatabaseInstance(this).getHouseholdDao().getHouseholdBySurveyorCode(surveyorCode);
         Bundle bundle = new Bundle();
         if (household == null) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
@@ -44,7 +50,7 @@ public class Activity_Household extends BaseActivity {
             bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
             KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
                     bundle, Fragment_SelectHousehold.class.getSimpleName());
-        }
+        }*/
     }
 
     @Override

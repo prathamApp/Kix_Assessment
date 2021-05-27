@@ -35,7 +35,9 @@
             android:layout_below="@+id/tv_label"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="@string/hint_svrMobile">
+            android:hint="@string/hint_svrMobile"
+            android:textColorHint="#757575"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_mobile"
@@ -46,7 +48,9 @@
                 android:inputType="phone"
                 android:textColor="@color/colorText"
                 android:digits="0123456789"
-                android:maxLength="10"/>
+                android:maxLength="10"
+                android:drawableStart="@drawable/ic_phone_android_grey_24dp"
+                android:drawablePadding="@dimen/_5sdp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +63,9 @@
             android:layout_marginEnd="@dimen/_30sdp"
             android:hint="@string/hint_svrPassword"
             app:passwordToggleDrawable="@drawable/show_password_selector"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            android:textColorHint="#757575"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_password"
@@ -68,7 +74,9 @@
                 android:layout_marginBottom="8dp"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
-                android:textColor="@color/colorText"/>
+                android:textColor="@color/colorText"
+                android:drawableStart="@drawable/ic_lock_grey_24dp"
+                android:drawablePadding="@dimen/_5sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton

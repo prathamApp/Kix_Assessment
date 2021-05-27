@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.kix.assessment.custom.ProcessPhoenix;
+import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Log;
@@ -34,6 +35,7 @@ public class CatchoTransparentActivity extends AppCompatActivity {
         log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, "no_session"));
         log.setDeviceId(KIX_Utility.getDeviceSerialID());
         logDao.insertLog(log);
-        findViewById(R.id.btn_report).setOnClickListener(v -> ProcessPhoenix.triggerRebirth(CatchoTransparentActivity.this));
+        BackupDatabase.backup(this);
+        findViewById(R.id.btn_restart).setOnClickListener(v -> ProcessPhoenix.triggerRebirth(CatchoTransparentActivity.this));
     }
 }

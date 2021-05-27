@@ -2,9 +2,9 @@ package com.kix.assessment.ui.splash_activityy;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
@@ -47,10 +47,10 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @AfterViews
     public void init() {
+        gotoNext();
         FastSave.getInstance().saveString(STUDENT_ID, "NA");
         kix_utility = new KIX_Utility(this);
         splashPresenter.populateDefaultDB();
-        new Handler().postDelayed(this::gotoNext, 2000);
     }
 
     @UiThread
@@ -62,11 +62,18 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @Click(R.id.btn_signUp)
     public void surveyorSignUp() {
-        KIX_Utility.getSdCardPath(this);
-        if (!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED, false))
-            splashPresenter.addDataToDB();
-        KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
-                null, Fragment_Svr_SignUp.class.getSimpleName());
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED) {
+            KIX_Utility.getSdCardPath(this);
+            if (!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED, false))
+                splashPresenter.addDataToDB();
+            KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
+                    null, Fragment_Svr_SignUp.class.getSimpleName());
+        } else {
+            Toast.makeText(this, "Please Allow, Mandatory Permission.", Toast.LENGTH_LONG).show();
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+        }
     }
 
     @Click(R.id.btn_surveyouSignIn)
