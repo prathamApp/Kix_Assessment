@@ -148,19 +148,23 @@ public class Fragment_Svr_SignUp extends Fragment {
                         if (surveyor != null) {
                             Toast.makeText(getActivity(), "Profile is already saved..", Toast.LENGTH_SHORT).show();
                         } else {
-                            Modal_Surveyor modal_surveyor = new Modal_Surveyor();
-                            modal_surveyor.setSvr_Name(tie_svrName.getText().toString());
-                            modal_surveyor.setSvr_Email(tie_svrEmail.getText().toString());
-                            modal_surveyor.setSvr_Mobile(tie_svrMobile.getText().toString());
-                            modal_surveyor.setSvr_Password(tie_svrPassword.getText().toString());
-                            modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
-                            modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
-                            modal_surveyor.setSentFlag(0);
-                            surveyorDao.insertSurveyor(modal_surveyor);
-                            BackupDatabase.backup(getActivity());
-                            Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
-                            KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
-                                    null, Fragment_Svr_SignIn.class.getSimpleName());
+                            try {
+                                Modal_Surveyor modal_surveyor = new Modal_Surveyor();
+                                modal_surveyor.setSvr_Name(tie_svrName.getText().toString());
+                                modal_surveyor.setSvr_Email(tie_svrEmail.getText().toString());
+                                modal_surveyor.setSvr_Mobile(tie_svrMobile.getText().toString());
+                                modal_surveyor.setSvr_Password(tie_svrPassword.getText().toString());
+                                modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
+                                modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
+                                modal_surveyor.setSentFlag(0);
+                                surveyorDao.insertSurveyor(modal_surveyor);
+                                BackupDatabase.backup(getActivity());
+                                Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
+                                KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
+                                        null, Fragment_Svr_SignIn.class.getSimpleName());
+                            } catch (Exception e){
+                                Toast.makeText(getActivity(), "Booklet Not Found!", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     } else {
                         Toast.makeText(getActivity(), "Minimum 3 characters required for Password!", Toast.LENGTH_SHORT).show();

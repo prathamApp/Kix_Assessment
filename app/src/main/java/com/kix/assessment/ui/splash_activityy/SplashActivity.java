@@ -79,6 +79,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @Click(R.id.btn_surveyouSignIn)
     public void surveyorSignIn() {
+        KIX_Utility.getSdCardPath(this);
         KIX_Utility.showFragment(this, new Fragment_Svr_SignIn_(), R.id.splash_frame,
                 null, Fragment_Svr_SignIn.class.getSimpleName());
     }
