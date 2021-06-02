@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
     <string-array name="age">
-        <item>Age 3  </item>
         <item>Age 4  </item>
         <item>Age 5  </item>
         <item>Age 6  </item>
@@ -9,25 +8,32 @@
         <item>Age 8  </item>
         <item>Age 9  </item>
         <item>Age 10 </item>
-        <item>Age 11 </item>
-        <item>Age 12 </item>
-        <item>Age 13 </item>
-        <item>Age 14 </item>
-        <item>Age 15 </item>
-        <item>Age 16 </item>
-        <item>Age 17 </item>
-        <item>Age 18 </item>
-        <item>Age 19 </item>
-        <item>Age 20 </item>
-        <item>Age 21 </item>
-        <item>Age 22 </item>
-        <item>Age 23 </item>
-        <item>Age 24 </item>
-        <item>Age 25 </item>
+    </string-array>
+    <string-array name="dropout_year">
+        <item>DropOut Year</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+    <string-array name="enrollment_status">
+        <item>Enrollment Status</item>
+        <item>Enrolled</item>
+        <item>Never Enrolled</item>
+        <item>Drop Out</item>
     </string-array>
     <string-array name="gender">
         <item>Male</item>
         <item>Female</item>
+    </string-array>
+    <string-array name="school_type">
+        <item>School Type</item>
+        <item>Government</item>
+        <item>Private</item>
+        <item>Other</item>
     </string-array>
     <string-array name="spinner_booklet">
         <item>Booklet 1</item>
@@ -41,19 +47,26 @@
         <item>Booklet_3</item>
         <item>Booklet_4</item>
     </string-array>
+    <string-array name="spinner_country">
+        <item>Country</item>
+        <item>India</item>
+        <item>America</item>
+        <item>Bhutan</item>
+    </string-array>
+    <string-array name="spinner_language">
+        <item>Language</item>
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Marathi</item>
+    </string-array>
     <string-array name="student_class">
-        <item>PreSchool</item>
+        <item>Class</item>
+        <item>PrePrimary</item>
         <item>Class 1</item>
         <item>Class 2</item>
         <item>Class 3</item>
         <item>Class 4</item>
         <item>Class 5</item>
-        <item>Class 6</item>
-        <item>Class 7</item>
-        <item>Class 8</item>
-        <item>Class 9</item>
-        <item>Class 10</item>
-        <item>Class 12</item>
     </string-array>
     <attr format="enum" name="andexo_aspect_ratio">
         <enum name="aspect_1_1" value="1"/>
@@ -290,7 +303,7 @@
     <color name="catcho_text_light">#FFFFFF</color>
     <color name="charcoal">#34435E</color>
     <color name="chip">#333</color>
-    <color name="colorAccent">#00c853</color>
+    <color name="colorAccent">#FFB300</color>
     <color name="colorAccentDark">#FFB300</color>
     <color name="colorBlack">#000</color>
     <color name="colorBlackTransparentDark">#e8000000</color>
@@ -1570,6 +1583,9 @@
 <!--        <item name="android:windowAnimationStyle">CustomActivityAnimation</item>-->
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.RoundProgress">
+        <item name="colorAccent">@color/colorBtnGreenDark</item> <!-- Whatever color you want-->
+    </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -3046,7 +3062,7 @@
     <style name="MyLaunchActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/splash_bg</item>
         <item name="colorPrimaryDark">@color/splash_bg</item>
-        <item name="colorAccent">@color/colorBtnGreenDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/splash_bg</item>

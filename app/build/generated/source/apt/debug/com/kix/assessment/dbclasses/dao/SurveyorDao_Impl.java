@@ -21,6 +21,8 @@ public final class SurveyorDao_Impl implements SurveyorDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateSentSurveyorFlags;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateSurveyorBooklet;
+
   public SurveyorDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfModal_Surveyor = new EntityInsertionAdapter<Modal_Surveyor>(__db) {
@@ -72,6 +74,13 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateSurveyorBooklet = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "update Surveyor set Svr_Booklet=? where Svr_Code=?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -101,6 +110,31 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfUpdateSentSurveyorFlags.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateSurveyorBooklet(String svrBooklet, String svrCode) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateSurveyorBooklet.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (svrBooklet == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, svrBooklet);
+      }
+      _argIndex = 2;
+      if (svrCode == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, svrCode);
+      }
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateSurveyorBooklet.release(_stmt);
     }
   }
 

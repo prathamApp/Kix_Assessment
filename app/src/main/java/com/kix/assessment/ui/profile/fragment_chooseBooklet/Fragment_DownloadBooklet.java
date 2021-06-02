@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.kix.assessment.R;
 import com.kix.assessment.async.API_Content;
@@ -38,8 +41,6 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.bookletDao;
 import static com.kix.assessment.KIXApplication.countryDao;
@@ -93,6 +94,14 @@ public class Fragment_DownloadBooklet extends Fragment implements DownloadBookle
             presenter.fetchBooklets(Kix_Constant.BOOKLET_API, spinner_language.getSelectedItem().toString());
     }
 
+//    @ItemSelect(R.id.spinner_booklet)
+//    public void setBooklet(boolean sel){
+//        if(!(spinner_booklet.getSelectedItemPosition()==0)) {
+//            showLoader();
+////            Toast.makeText(context, ""+spinner_booklet.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
     @Override
     public void fillCountrySpinner(List<Modal_Country> countryList) {
         country_List= (ArrayList<Modal_Country>) countryList;
@@ -138,7 +147,8 @@ public class Fragment_DownloadBooklet extends Fragment implements DownloadBookle
     @Click(R.id.btn_download)
     public void downloadBookletZip() {
         addSpinnerValToDB();
-//        showLoader();
+        showLoader();
+        presenter.downloadBooklet(spinner_booklet.getSelectedItem().toString());
 //        presenter.downloadBooklet("SCAPP_55008");
 //        presenter.downloadBooklet("SCAPP_55413");
 //        presenter.downloadBooklet("SCAPP_55089");
@@ -177,6 +187,11 @@ public class Fragment_DownloadBooklet extends Fragment implements DownloadBookle
                 break;
             }
         }
+    }
+
+    @Override
+    public void showTost(String text) {
+        Toast.makeText(context, ""+text, Toast.LENGTH_SHORT).show();
     }
 
     @UiThread

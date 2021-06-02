@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.isupatches:wisefy:3.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fdc09f22950ef35609f2269cb5b339e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fdc09f22950ef35609f2269cb5b339e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bd4e9a1ca807feb39d614e3fae5071a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bd4e9a1ca807feb39d614e3fae5071a/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.isupatches/wisefy/3.0.1/d18dcaa0eecdf92ed35b1019d2c22cf2404950b/wisefy-3.0.1-javadoc.jar!/" />

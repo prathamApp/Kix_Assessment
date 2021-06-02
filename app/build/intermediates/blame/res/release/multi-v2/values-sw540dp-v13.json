@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android_Projects\\FoundationApp_Git\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw540dp-v13\\values-sw540dp-v13.xml",
+            "outputFile": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw540dp-v13\\values-sw540dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\79f1a5cc0fe79652ab1e9fc1499d81d6\\res\\values-sw540dp-v13\\values-sw540dp-v13.xml",

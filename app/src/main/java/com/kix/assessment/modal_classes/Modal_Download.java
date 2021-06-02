@@ -1,8 +1,6 @@
 package com.kix.assessment.modal_classes;
 
 
-import com.kix.assessment.newtemp.ContentTable;
-
 import java.util.ArrayList;
 
 public class Modal_Download {
@@ -11,8 +9,8 @@ public class Modal_Download {
     String dir_path;
     String f_name;
     String folder_name;
-    ContentTable content;
-    ArrayList<ContentTable> levelContents;
+    Modal_Content content;
+    ArrayList<Modal_Content> levelContents;
 
     public String getUrl() {
         return url;
@@ -46,19 +44,19 @@ public class Modal_Download {
         this.folder_name = folder_name;
     }
 
-    public ContentTable getContent() {
+    public Modal_Content getContent() {
         return content;
     }
 
-    public void setContent(ContentTable content) {
+    public void setContent(Modal_Content content) {
         this.content = content;
     }
 
-    public ArrayList<ContentTable> getLevelContents() {
+    public ArrayList<Modal_Content> getLevelContents() {
         return levelContents;
     }
 
-    public void setLevelContents(ArrayList<ContentTable> levelContents) {
+    public void setLevelContents(ArrayList<Modal_Content> levelContents) {
         this.levelContents = levelContents;
     }
 }

@@ -21,6 +21,8 @@ public interface DownloadBooklet_Contract {
         void dismissLoadingDialog();
 
         void dismissDownloadDialog();
+
+        void showTost(String complete);
     }
 
     interface DownloadBookletPresenter {

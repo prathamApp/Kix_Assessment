@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android_Projects\\FoundationApp_Git\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "E:\\Android_Projects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\2ad911d054ed32059bc9062265892d5f\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\ec687781e086b1ea553e982b4209e6d9\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "265,268,272,276",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19504,19672,19961,20257",
+                        "endLines": "267,270,274,278",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "19667,19830,20124,20419"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\25990ab1cb90671aa2f9df242f22b04e\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -58,25 +77,6 @@
                         "endLines": "286,294,302,310",
                         "endColumns": "10,10,10,10",
                         "endOffsets": "20848,21274,21697,22132"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\853ba5a3ff178a2d52cc27c133f38b9a\\res\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,5,8,11",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,223,386,554",
-                        "endLines": "4,7,10,13",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "218,381,549,716"
-                    },
-                    "to": {
-                        "startLines": "265,268,272,276",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "19504,19672,19961,20257",
-                        "endLines": "267,270,274,278",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "19667,19830,20124,20419"
                     }
                 }
             ]

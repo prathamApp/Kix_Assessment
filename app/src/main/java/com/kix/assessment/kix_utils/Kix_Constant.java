@@ -38,6 +38,7 @@ public class Kix_Constant {
     public static final String FETCH_COUNTRY = "fetch_country";
     public static final String FETCH_LANGUAGE = "fetch_language";
     public static final String FETCH_BOOKLET = "fetch_booklet";
+    public static final String DOWNLOAD_BOOKLET = "download_booklet";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
 
@@ -45,6 +46,7 @@ public class Kix_Constant {
     public static final String STUDENT_ID_STR = "&student_id=";
     public static final String INTERNET_DOWNLOAD_RESOURCE = "internet_download_resource";
     public static final String INTERNET_DOWNLOAD_RESOURCE_API = "http://devposapi.prathamopenschool.org/api/content/downloadv2?id=";
+    public static final String DOWNLOAD_BOOKLET_API = "http://13.76.6.250:81/contentByBooklet/";
     public static final String FILE_DOWNLOAD_STARTED = "file_download_started";
     public static final String RESPONSE_CODE_ERROR = "response_code_error";
     public static final String FILE_DOWNLOAD_ERROR = "file_download_error";

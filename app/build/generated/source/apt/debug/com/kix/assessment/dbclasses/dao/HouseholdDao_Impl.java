@@ -26,39 +26,49 @@ public final class HouseholdDao_Impl implements HouseholdDao {
     this.__insertionAdapterOfModal_Household = new EntityInsertionAdapter<Modal_Household>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Household`(`hh_ID`,`houseHold_ID`,`houseHold_Name`,`houseHold_Address`,`Svr_Code`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Household`(`hh_ID`,`HouseHold_ID`,`HouseHold_Name`,`HouseHold_District`,`HouseHold_State`,`HouseHold_Address`,`Svr_Code`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Household value) {
         stmt.bindLong(1, value.hh_ID);
-        if (value.houseHold_ID == null) {
+        if (value.HouseHold_ID == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.houseHold_ID);
+          stmt.bindString(2, value.HouseHold_ID);
         }
-        if (value.houseHold_Name == null) {
+        if (value.HouseHold_Name == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.houseHold_Name);
+          stmt.bindString(3, value.HouseHold_Name);
         }
-        if (value.houseHold_Address == null) {
+        if (value.HouseHold_District == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.houseHold_Address);
+          stmt.bindString(4, value.HouseHold_District);
         }
-        if (value.Svr_Code == null) {
+        if (value.HouseHold_State == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.Svr_Code);
+          stmt.bindString(5, value.HouseHold_State);
         }
-        stmt.bindLong(6, value.sentFlag);
+        if (value.HouseHold_Address == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.HouseHold_Address);
+        }
+        if (value.Svr_Code == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.Svr_Code);
+        }
+        stmt.bindLong(8, value.sentFlag);
       }
     };
     this.__preparedStmtOfUpdateSentHouseholdFlags = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "update Household set sentFlag=1 where houseHold_ID=?";
+        final String _query = "update Household set sentFlag=1 where HouseHold_ID=?";
         return _query;
       }
     };
@@ -107,18 +117,22 @@ public final class HouseholdDao_Impl implements HouseholdDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfHhID = _cursor.getColumnIndexOrThrow("hh_ID");
-      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("houseHold_ID");
-      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("houseHold_Name");
-      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("houseHold_Address");
+      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("HouseHold_ID");
+      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("HouseHold_Name");
+      final int _cursorIndexOfHouseHoldDistrict = _cursor.getColumnIndexOrThrow("HouseHold_District");
+      final int _cursorIndexOfHouseHoldState = _cursor.getColumnIndexOrThrow("HouseHold_State");
+      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("HouseHold_Address");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final Modal_Household _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Household();
         _result.hh_ID = _cursor.getInt(_cursorIndexOfHhID);
-        _result.houseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
-        _result.houseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
-        _result.houseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
+        _result.HouseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
+        _result.HouseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
+        _result.HouseHold_District = _cursor.getString(_cursorIndexOfHouseHoldDistrict);
+        _result.HouseHold_State = _cursor.getString(_cursorIndexOfHouseHoldState);
+        _result.HouseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
         _result.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
       } else {
@@ -144,9 +158,11 @@ public final class HouseholdDao_Impl implements HouseholdDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfHhID = _cursor.getColumnIndexOrThrow("hh_ID");
-      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("houseHold_ID");
-      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("houseHold_Name");
-      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("houseHold_Address");
+      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("HouseHold_ID");
+      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("HouseHold_Name");
+      final int _cursorIndexOfHouseHoldDistrict = _cursor.getColumnIndexOrThrow("HouseHold_District");
+      final int _cursorIndexOfHouseHoldState = _cursor.getColumnIndexOrThrow("HouseHold_State");
+      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("HouseHold_Address");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Modal_Household> _result = new ArrayList<Modal_Household>(_cursor.getCount());
@@ -154,9 +170,11 @@ public final class HouseholdDao_Impl implements HouseholdDao {
         final Modal_Household _item;
         _item = new Modal_Household();
         _item.hh_ID = _cursor.getInt(_cursorIndexOfHhID);
-        _item.houseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
-        _item.houseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
-        _item.houseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
+        _item.HouseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
+        _item.HouseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
+        _item.HouseHold_District = _cursor.getString(_cursorIndexOfHouseHoldDistrict);
+        _item.HouseHold_State = _cursor.getString(_cursorIndexOfHouseHoldState);
+        _item.HouseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
         _item.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
@@ -175,9 +193,11 @@ public final class HouseholdDao_Impl implements HouseholdDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfHhID = _cursor.getColumnIndexOrThrow("hh_ID");
-      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("houseHold_ID");
-      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("houseHold_Name");
-      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("houseHold_Address");
+      final int _cursorIndexOfHouseHoldID = _cursor.getColumnIndexOrThrow("HouseHold_ID");
+      final int _cursorIndexOfHouseHoldName = _cursor.getColumnIndexOrThrow("HouseHold_Name");
+      final int _cursorIndexOfHouseHoldDistrict = _cursor.getColumnIndexOrThrow("HouseHold_District");
+      final int _cursorIndexOfHouseHoldState = _cursor.getColumnIndexOrThrow("HouseHold_State");
+      final int _cursorIndexOfHouseHoldAddress = _cursor.getColumnIndexOrThrow("HouseHold_Address");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Modal_Household> _result = new ArrayList<Modal_Household>(_cursor.getCount());
@@ -185,9 +205,11 @@ public final class HouseholdDao_Impl implements HouseholdDao {
         final Modal_Household _item;
         _item = new Modal_Household();
         _item.hh_ID = _cursor.getInt(_cursorIndexOfHhID);
-        _item.houseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
-        _item.houseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
-        _item.houseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
+        _item.HouseHold_ID = _cursor.getString(_cursorIndexOfHouseHoldID);
+        _item.HouseHold_Name = _cursor.getString(_cursorIndexOfHouseHoldName);
+        _item.HouseHold_District = _cursor.getString(_cursorIndexOfHouseHoldDistrict);
+        _item.HouseHold_State = _cursor.getString(_cursorIndexOfHouseHoldState);
+        _item.HouseHold_Address = _cursor.getString(_cursorIndexOfHouseHoldAddress);
         _item.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);

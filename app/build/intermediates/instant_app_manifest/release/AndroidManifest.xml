@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pratham.foundation"
+    package="com.kix.assessment"
     android:targetSandboxVersion="2"
-    android:versionCode="28"
-    android:versionName="1.0.28" >
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -24,211 +31,55 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.front"
-        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.flash"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.screen.landscape"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.wifi"
-        android:required="false" />
 
     <application
-        android:name="com.pratham.foundation.ApplicationClass"
+        android:name="com.kix.assessment.KIXApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/fc_logo"
+        android:icon="@drawable/kix_logo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/fc_logo_round"
+        android:roundIcon="@drawable/kix_logo"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
-            android:name="com.pratham.foundation.ui.splash_activity.SplashActivity_"
-            android:screenOrientation="portrait"
+            android:name="com.kix.assessment.ui.household_activity.Activity_Household_"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.kix.assessment.ui.splash_activityy.SplashActivity_"
+            android:screenOrientation="sensorLandscape"
             android:theme="@style/MyLaunchActivityTheme"
-            android:windowSoftInputMode="adjustNothing" >
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name="com.pratham.foundation.services.background_service.BackgroundPushService"
-            android:enabled="true" >
-        </service>
-
-        <receiver
-            android:name="com.pratham.foundation.services.background_service.BackgroundServiceRestarter"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="BackgroundServiceRestarter" />
-            </intent-filter>
-        </receiver>
-
         <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.webviewpdf.PDFViewActivity_"
-            android:screenOrientation="sensor" />
+            android:name="com.kix.assessment.ui.attendance_activity.Activity_Attendance_"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/MyLaunchActivityTheme"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.pictionary.PictionaryResult"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.selectSubject.SelectSubject_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.andmin_login_new.enrollmentid.AddEnrollmentId_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.profile_new.course_enrollment.CourseEnrollmentActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.fragment_admin_panel.tab_usage.TabUsageActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.BaseActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.AdminControlsActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.pdf_display.Fragment_PdfViewer_"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.andmin_login_new.AdminConsoleActivityNew_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.MenuActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.assign_groups.Activity_AssignGroups_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.profile_new.certificate_display.CertificateDisplayActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.group_selection.SelectGroupActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.HomeActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.profile_new.display_image_ques_list.DisplayImageQuesActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.display_content.ContentDisplay_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.profile_new.chat_display_list.DisplayChatActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.app_home.profile_new.show_image_question.ShowImgQuestionActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.admin_panel.fragment_admin_panel.PushOrAssign.PushDataActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.ContentPlayerActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.old_cos.reading_cards.ReadingCardsActivity_"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.customView.display_image_dialog.Activity_DisplayImage_"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Dialog" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.web_view.WebViewActivity_"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.old_cos.conversation.ConversationActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.reading_story_activity.ReadingStoryActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.reading_paragraphs.ReadingParagraphsActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.vocabulary_qa.ReadingVocabularyActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.reading_rhyming.ReadingRhymesActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.opposites.OppositesActivity_"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.matchingPairGame.MatchThePairGameActivity"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.video_view.ActivityVideoView_"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.video_player.ActivityVideoPlayer_"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.ui.contentPlayer.doing.FullScreenVideo_"
-            android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name="com.pratham.foundation.utility.CatchoTransparentActivity"
-            android:parentActivityName="com.pratham.foundation.BaseActivity"
-            android:screenOrientation="portrait"
+            android:name="com.kix.assessment.CatchoTransparentActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.kix.assessment.BaseActivity"
+            android:screenOrientation="sensorLandscape"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="com.pratham.foundation.customView.ProcessPhoenix"
-            android:process=":phoenix"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name="com.pratham.foundation.utility.SplashSupportActivity" />
-        <activity android:name="com.pratham.foundation.ui.splash_activity.SplashActivity" />
-
-        <service
-            android:name="com.pratham.foundation.services.AppExitService"
-            android:enabled="true"
-            android:stopWithTask="false" />
-        <service
-            android:name="com.pratham.foundation.services.LocationService"
-            android:enabled="true" />
-        <service
-            android:name="com.pratham.foundation.services.stt.ContinuousSpeechService_New"
-            android:enabled="true" />
-
-        <receiver
-            android:name="com.pratham.foundation.services.OTGListener"
-            android:enabled="true" >
-            <intent-filter>
-                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
-            </intent-filter>
-        </receiver>
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.pratham.foundation.provider"
+            android:authorities="com.kix.assessment.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -236,24 +87,21 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <service
-            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-            android:exported="false" />
-        <service
-            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-            android:exported="false" />
-        <service
-            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-            android:exported="false" />
-
+        <!-- <activity -->
+        <!-- android:name=".ui.main_test.MainTestActivity_" -->
+        <!-- android:screenOrientation="sensorLandscape" /> -->
         <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:name="com.kix.assessment.ui.main_test.WebViewActivity_"
+            android:screenOrientation="sensorLandscape" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <receiver
+            android:name="com.kix.assessment.services.OTGListener"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="net.alhazmy13.catcho.library.CatchoReportActivity"
@@ -261,7 +109,7 @@
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.pratham.foundation.lifecycle-process"
+            android:authorities="com.kix.assessment.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" /> <!-- The activities will be merged into the manifest of the hosting app. -->
         <activity
@@ -281,14 +129,6 @@
             android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
             android:enabled="false"
             android:exported="true" />
-
-        <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:clearTaskOnLaunch="true"
-            android:screenOrientation="sensorLandscape"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden" />
     </application>
 
 </manifest>

@@ -1,8 +1,8 @@
 package com.kix.assessment.temp;
 
-import com.kix.assessment.newtemp.ContentTable;
-
 import androidx.annotation.NonNull;
+
+import com.kix.assessment.modal_classes.Modal_Content;
 
 
 public class Modal_FileDownloading implements Comparable {
@@ -10,7 +10,7 @@ public class Modal_FileDownloading implements Comparable {
     String downloadId;
     String filename;
     int progress;
-    ContentTable contentDetail;
+    Modal_Content contentDetail;
 
     @Override
     public String toString() {
@@ -22,11 +22,11 @@ public class Modal_FileDownloading implements Comparable {
                 '}';
     }
 
-    public ContentTable getContentDetail() {
+    public Modal_Content getContentDetail() {
         return contentDetail;
     }
 
-    public void setContentDetail(ContentTable contentDetail) {
+    public void setContentDetail(Modal_Content contentDetail) {
         this.contentDetail = contentDetail;
     }
 
@@ -57,7 +57,7 @@ public class Modal_FileDownloading implements Comparable {
     @Override
     public int compareTo(@NonNull Object o) {
         Modal_FileDownloading compare = (Modal_FileDownloading) o;
-        if (compare.getContentDetail().getNodeId() != null) {
+        if (compare.getContentDetail().getContentCode() != null) {
             if (compare.getDownloadId() == (this.downloadId) && compare.getProgress() == this.progress)
                 return 0;
             else return 1;

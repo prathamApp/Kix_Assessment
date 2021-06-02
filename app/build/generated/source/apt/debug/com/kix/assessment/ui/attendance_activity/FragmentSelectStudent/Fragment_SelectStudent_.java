@@ -55,6 +55,7 @@ public final class Fragment_SelectStudent_
         super.onDestroyView();
         contentView_ = null;
         rv_student = null;
+        tv_bookletName = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -84,6 +85,7 @@ public final class Fragment_SelectStudent_
     @Override
     public void onViewChanged(HasViews hasViews) {
         this.rv_student = hasViews.internalFindViewById(R.id.rv_student);
+        this.tv_bookletName = hasViews.internalFindViewById(R.id.tv_bookletName);
         initialize();
     }
 

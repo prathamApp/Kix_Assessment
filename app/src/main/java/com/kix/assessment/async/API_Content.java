@@ -7,7 +7,6 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.kix.assessment.interfaces.API_Content_Result;
-import com.kix.assessment.kix_utils.Kix_Constant;
 
 
 public class API_Content {
@@ -35,7 +34,7 @@ public class API_Content {
             String url_id, studId;
 //            SCAPP_55008
 //            studId = FastSave.getInstance().getString(CURRENT_STUDENT_ID, "");
-            url_id = url + nodeId + Kix_Constant.DEVICE_ID_STR + "divId" + Kix_Constant.STUDENT_ID_STR + "studId";
+            url_id = url + nodeId/* + Kix_Constant.DEVICE_ID_STR + "divId" + Kix_Constant.STUDENT_ID_STR + "studId"*/;
             Log.d("API_Content_LOG", "getAPIContent: " + nodeId);
             Log.d("API_Content_LOG", "url_id: " + url_id);
             AndroidNetworking.get(url_id)

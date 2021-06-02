@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.SharedSQLiteStatement;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import com.kix.assessment.modal_classes.Modal_StudentDetails;
 import com.kix.assessment.modal_classes.Score;
 import java.lang.Override;
 import java.lang.String;
@@ -570,6 +571,47 @@ public final class ScoreDao_Impl implements ScoreDao {
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<Modal_StudentDetails> getProfileData(String svrCode) {
+    final String _sql = "select Student.Stud_Name as StudentName, Household.houseHold_Name as HouseholdName, count(DISTINCT(Score.SessionID)) as ExamsGiven from Score\n"
+            + "INNER JOIN Student on Score.StudentID = Student.StudentID\n"
+            + "INNER JOIN Household on Household.houseHold_ID = Student.houseHold_ID\n"
+            + "INNER JOIN Surveyor on Surveyor.Svr_Code= Household.Svr_Code\n"
+            + "WHERE Surveyor.Svr_Code=? GROUP by Student.Stud_Name, Surveyor.Svr_Name";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (svrCode == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, svrCode);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfStudentName = _cursor.getColumnIndexOrThrow("StudentName");
+      final int _cursorIndexOfHouseholdName = _cursor.getColumnIndexOrThrow("HouseholdName");
+      final int _cursorIndexOfExamsGiven = _cursor.getColumnIndexOrThrow("ExamsGiven");
+      final List<Modal_StudentDetails> _result = new ArrayList<Modal_StudentDetails>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Modal_StudentDetails _item;
+        _item = new Modal_StudentDetails();
+        final String _tmpStudentName;
+        _tmpStudentName = _cursor.getString(_cursorIndexOfStudentName);
+        _item.setStudentName(_tmpStudentName);
+        final String _tmpHouseholdName;
+        _tmpHouseholdName = _cursor.getString(_cursorIndexOfHouseholdName);
+        _item.setHouseholdName(_tmpHouseholdName);
+        final String _tmpExamsGiven;
+        _tmpExamsGiven = _cursor.getString(_cursorIndexOfExamsGiven);
+        _item.setExamsGiven(_tmpExamsGiven);
         _result.add(_item);
       }
       return _result;

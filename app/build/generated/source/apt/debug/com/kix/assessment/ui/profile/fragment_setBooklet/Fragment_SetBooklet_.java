@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import com.kix.assessment.R;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.FragmentBuilder;
@@ -97,6 +99,36 @@ public final class Fragment_SetBooklet_
                 @Override
                 public void onClick(View view) {
                     Fragment_SetBooklet_.this.setBooklet();
+                }
+            }
+            );
+        }
+        if (this.spinner_country!= null) {
+            ((AdapterView<?> ) this.spinner_country).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_SetBooklet_.this.countrySpinner(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_SetBooklet_.this.countrySpinner(true);
+                }
+            }
+            );
+        }
+        if (this.spinner_language!= null) {
+            ((AdapterView<?> ) this.spinner_language).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_SetBooklet_.this.languageSpinner(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_SetBooklet_.this.languageSpinner(true);
                 }
             }
             );

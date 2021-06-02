@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import androidx.core.app.ActivityCompat;
 import com.kix.assessment.R;
+import com.kix.assessment.async.ContentDownloadingTask_;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.ActivityIntentBuilder;
 import org.androidannotations.api.builder.PostActivityStarter;
@@ -47,6 +48,7 @@ public final class ProfileActivity_
 
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
+        this.contentDownloadingTask = ContentDownloadingTask_.getInstance_(this, null);
     }
 
     @Override

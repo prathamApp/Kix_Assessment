@@ -58,7 +58,6 @@ public final class Fragment_Svr_SignUp_
         tv_svrName = null;
         tv_svrEmail = null;
         tv_svrMobile = null;
-        spinner_booklet = null;
         tv_svrPassword = null;
         ll_parentLayout = null;
     }
@@ -92,7 +91,6 @@ public final class Fragment_Svr_SignUp_
         this.tv_svrName = hasViews.internalFindViewById(R.id.et_svrName);
         this.tv_svrEmail = hasViews.internalFindViewById(R.id.et_svrEmail);
         this.tv_svrMobile = hasViews.internalFindViewById(R.id.et_svrMobile);
-        this.spinner_booklet = hasViews.internalFindViewById(R.id.spinner_booklet);
         this.tv_svrPassword = hasViews.internalFindViewById(R.id.et_svrPassword);
         this.ll_parentLayout = hasViews.internalFindViewById(R.id.ll_parentLayer);
         View view_btn_svrSignUp = hasViews.internalFindViewById(R.id.btn_svrSignUp);

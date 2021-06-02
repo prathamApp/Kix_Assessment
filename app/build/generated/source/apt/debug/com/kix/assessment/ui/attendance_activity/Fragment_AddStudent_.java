@@ -59,6 +59,10 @@ public final class Fragment_AddStudent_
         spinner_age = null;
         spinner_gender = null;
         spinner_class = null;
+        spinner_enrollStatue = null;
+        spinner_schoolType = null;
+        spinner_dropoutYear = null;
+        ll_spinnerByStatus = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -91,6 +95,10 @@ public final class Fragment_AddStudent_
         this.spinner_age = hasViews.internalFindViewById(R.id.spinner_age);
         this.spinner_gender = hasViews.internalFindViewById(R.id.spinner_gender);
         this.spinner_class = hasViews.internalFindViewById(R.id.spinner_class);
+        this.spinner_enrollStatue = hasViews.internalFindViewById(R.id.spinner_enrollStatus);
+        this.spinner_schoolType = hasViews.internalFindViewById(R.id.spinner_schoolType);
+        this.spinner_dropoutYear = hasViews.internalFindViewById(R.id.spinner_dropoutYear);
+        this.ll_spinnerByStatus = hasViews.internalFindViewById(R.id.ll_spinnersByStatus);
         View view_rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
         View view_btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
 
