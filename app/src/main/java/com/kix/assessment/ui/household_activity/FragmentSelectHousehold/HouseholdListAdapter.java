@@ -52,7 +52,7 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
         @Override
         public void onBindViewHolder(@NonNull HouseholdListAdapter.MyViewHolder holder, int position) {
             Modal_Household modalHousehold = householdList.get(position);
-            holder.tv_householdName.setText(modalHousehold.getHouseHold_Name());
+            holder.tv_householdName.setText(modalHousehold.getHouseholdName());
 //        holder.tv_studName.setSelected(false);
 
 /*        if(position==0){

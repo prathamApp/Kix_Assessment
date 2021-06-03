@@ -120,7 +120,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
             FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
             markAttendance(modalStudnet);
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
-            intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
+            intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.studName);
             startActivity(intent);
         //}
     }
@@ -134,14 +134,14 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         //</editor-fold>
         ArrayList<Attendance> attendances = new ArrayList<>();
         Attendance attendance = new Attendance();
-        attendance.SessionID = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
-        attendance.StudentID = stud.getStud_Id();
-        attendance.Date = KIX_Utility.getCurrentDateTime();
+        attendance.sessionId = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
+        attendance.studentId = stud.getStud_Id();
+        attendance.date = KIX_Utility.getCurrentDateTime();
         attendance.sentFlag = 0;
         attendances.add(attendance);
         attendanceDao.insertAttendance(attendances);
         Modal_Session s = new Modal_Session();
-        s.setSessionID(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
+        s.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
         s.setFromDate(KIX_Utility.getCurrentDateTime());
         s.setToDate("NA");
         sessionDao.insert(s);

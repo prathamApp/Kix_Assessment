@@ -200,10 +200,10 @@ public class BaseActivity extends AppCompatActivity {
                         studentDao.updateSentStudentFlags(student.getStud_Id());
                 if (pushedData.getSurveyors() != null)
                     for (Modal_Surveyor surveyor : pushedData.getSurveyors())
-                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvr_Code());
+                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvrCode());
                 if (pushedData.getHouseholds() != null)
                     for (Modal_Household household : pushedData.getHouseholds())
-                        householdDao.updateSentHouseholdFlags(household.getHouseHold_ID());
+                        householdDao.updateSentHouseholdFlags(household.getHouseholdId());
 
                 BackupDatabase.backup(KIXApplication.getInstance());
             } else

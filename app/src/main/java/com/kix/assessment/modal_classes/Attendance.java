@@ -9,49 +9,49 @@ import androidx.room.PrimaryKey;
 public class Attendance {
 
     @PrimaryKey(autoGenerate = true)
-    @SerializedName("AttendanceID")
-    public int AttendanceID;
-    @SerializedName("SessionID")
-    public String SessionID;
-    @SerializedName("StudentID")
-    public String StudentID;
-    @SerializedName("Date")
-    public String Date;
-    @SerializedName("Present")
-    public int Present;
+    @SerializedName("attendanceId")
+    public int attendanceId;
+    @SerializedName("sessionId")
+    public String sessionId;
+    @SerializedName("studentId")
+    public String studentId;
+    @SerializedName("date")
+    public String date;
+    @SerializedName("present")
+    public int present;
     @SerializedName("sentFlag")
     public int sentFlag;
 
-    public int getAttendanceID() {
-        return AttendanceID;
+    public int getAttendanceId() {
+        return attendanceId;
     }
 
-    public void setAttendanceID(int attendanceID) {
-        AttendanceID = attendanceID;
+    public void setAttendanceId(int attendanceId) {
+        this.attendanceId = attendanceId;
     }
 
-    public String getStudentID() {
-        return StudentID;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStudentID(String studentID) {
-        StudentID = studentID;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
 
     public int getPresent() {
-        return Present;
+        return present;
     }
 
     public void setPresent(int present) {
-        Present = present;
+        this.present = present;
     }
 
     public int getSentFlag() {
@@ -62,11 +62,11 @@ public class Attendance {
         this.sentFlag = sentFlag;
     }
 
-    public String getSessionID() {
-        return SessionID;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setSessionID(String sessionID) {
-        SessionID = sessionID;
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 }

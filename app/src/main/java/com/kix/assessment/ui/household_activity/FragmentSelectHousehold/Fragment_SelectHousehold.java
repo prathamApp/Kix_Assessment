@@ -107,7 +107,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
             Modal_Household modalHousehold = householdListAdapter.getitem(position);
             Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
             intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.HouseHold_ID);
+            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.householdId);
             startActivity(intent);
         //}
     }

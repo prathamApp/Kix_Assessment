@@ -149,12 +149,12 @@ public class Fragment_Svr_SignUp extends Fragment {
                         } else {
                             try {
                                 Modal_Surveyor modal_surveyor = new Modal_Surveyor();
-                                modal_surveyor.setSvr_Name(tie_svrName.getText().toString());
-                                modal_surveyor.setSvr_Email(tie_svrEmail.getText().toString());
-                                modal_surveyor.setSvr_Mobile(tie_svrMobile.getText().toString());
-                                modal_surveyor.setSvr_Password(tie_svrPassword.getText().toString());
-                                modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
-                                modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
+                                modal_surveyor.setSvrName(tie_svrName.getText().toString());
+                                modal_surveyor.setSvrEmail(tie_svrEmail.getText().toString());
+                                modal_surveyor.setSvrMobile(tie_svrMobile.getText().toString());
+                                modal_surveyor.setSvrPassword(tie_svrPassword.getText().toString());
+                                modal_surveyor.setSvrCode(String.valueOf(KIX_Utility.getUUID()));
+                                modal_surveyor.setSvrBooklet(spinner_booklet.getSelectedItem().toString());
                                 modal_surveyor.setSentFlag(0);
                                 surveyorDao.insertSurveyor(modal_surveyor);
                                 BackupDatabase.backup(getActivity());

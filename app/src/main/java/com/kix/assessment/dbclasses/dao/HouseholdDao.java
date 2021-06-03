@@ -15,21 +15,21 @@ public interface HouseholdDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertHousehold(Modal_Household modal_household);
 
-    @Query("SELECT * FROM Household WHERE Svr_Code=:svrCode")
+    @Query("SELECT * FROM Household WHERE svrCode=:svrCode")
     Modal_Household getHouseholdBySurveyorCode(String svrCode);
 
-    @Query("SELECT * FROM Household WHERE Svr_Code=:svrCode")
+    @Query("SELECT * FROM Household WHERE svrCode=:svrCode")
     List<Modal_Household> getAllHouseholdBySurveyorCode(String svrCode);
 
-    @Query("SELECT * FROM Household WHERE Svr_Code=:svrCode ORDER BY hh_ID DESC")
+    @Query("SELECT * FROM Household WHERE svrCode=:svrCode ORDER BY hhId DESC")
     List<Modal_Household> getAllHouseholdBySurveyorCodeDescending(String svrCode);
 
     @Query("select * from Household where sentFlag = 0")
     List<Modal_Household> getAllNewHouseholds();
 
-    @Query("SELECT HouseHold_Name FROM Household WHERE Svr_Code=:svrCode")
+    @Query("SELECT householdName FROM Household WHERE svrCode=:svrCode")
     List<String> getAllHouseholdNameBySurveyorCode(String svrCode);
 
-    @Query("update Household set sentFlag=1 where HouseHold_ID=:householdId")
+    @Query("update Household set sentFlag=1 where householdId=:householdId")
     void updateSentHouseholdFlags(String householdId);
 }

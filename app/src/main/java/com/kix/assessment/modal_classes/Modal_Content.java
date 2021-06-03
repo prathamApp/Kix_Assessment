@@ -11,17 +11,17 @@ public class Modal_Content implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     @Nullable
-    public int contentId;
+    public long contentId;
     public String contentCode;
     public String contentFolderName;
     public String contentBooklet;
 
 
-    public int getContentId() {
+    public long getContentId() {
         return contentId;
     }
 
-    public void setContentId(int contentId) {
+    public void setContentId(long contentId) {
         this.contentId = contentId;
     }
 

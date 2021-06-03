@@ -3,7 +3,7 @@ package com.kix.assessment.kix_utils;
 public class Kix_Constant {
 
 
-    public static final String PUSH_API = "http://13.76.6.250:81/upload";
+    public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
 
     public static final String KIX_BACKUP = "KixBackup";
     public static final String SURVEYOR_CODE = "SurveyorCode";

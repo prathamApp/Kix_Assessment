@@ -40,25 +40,25 @@ public interface ScoreDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void addScoreList(List<Score> contentList);
 
-    @Query("select * from Score where StudentID=:currentStudentID AND ResourceID=:resourceId AND Label=:label")
+    @Query("select * from Score where studentId=:currentStudentID AND resourceId=:resourceId AND label=:label")
     List<Score> getScoreByStudIDAndResID(String currentStudentID, String resourceId, String label);
 
     @Query("select * from Score where sentFlag = 0 ")
     List<Score> getAllNotSentScores();
 
-    @Query("select * from Score where sentFlag = 0 AND SessionID=:s_id")
+    @Query("select * from Score where sentFlag = 0 AND sessionId=:s_id")
     List<Score> getAllNewScores(String s_id);
 
-    @Query("UPDATE Score SET sentFlag = 1 where SessionID = :s_id")
+    @Query("UPDATE Score SET sentFlag = 1 where sessionId = :s_id")
     int updateFlag(String s_id);
 
-    @Query("select Student.Stud_Name as StudentName, Student.Stud_Age as StudentAge, Household.houseHold_Name as HouseholdName, count(DISTINCT(Score.SessionID)) as ExamsGiven from Score\n" +
-            "INNER JOIN Student on Score.StudentID = Student.StudentID\n" +
-            "INNER JOIN Household on Household.houseHold_ID = Student.houseHold_ID\n" +
-            "INNER JOIN Surveyor on Surveyor.Svr_Code= Household.Svr_Code\n" +
-            "WHERE Surveyor.Svr_Code=:svrCode GROUP by Student.StudentID, Surveyor.Svr_Name")
+    @Query("select Student.studName as StudentName, Student.studAge as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n" +
+            "INNER JOIN Student on Score.studentId = Student.studId\n" +
+            "INNER JOIN Household on Household.householdId = Student.householdId\n" +
+            "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n" +
+            "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studId, Surveyor.svrName")
     List<Modal_ProfileDetails> getProfileData(String svrCode);
 
-    @Query("select StudentID from Score where StudentID=:studId")
+    @Query("select studentId from Score where studentId=:studId")
     String getStudentId(String studId);
 }

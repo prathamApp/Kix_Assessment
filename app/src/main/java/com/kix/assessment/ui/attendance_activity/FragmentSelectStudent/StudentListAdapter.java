@@ -52,7 +52,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     @Override
     public void onBindViewHolder(@NonNull StudentListAdapter.MyViewHolder holder, int position) {
         Modal_Student modalStudnet = studnetList.get(position);
-        holder.tv_studName.setText(modalStudnet.getStud_Name());
+        holder.tv_studName.setText(modalStudnet.getStudName());
 //        holder.tv_studName.setSelected(false);
 
 /*        if(position==0){
