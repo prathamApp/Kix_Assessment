@@ -30,7 +30,7 @@
             android:textStyle="bold"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_20sdp"
-            android:text="Thank you!!!\nYour test is submitted."/>
+            android:text="Thank you!!!\nYour assessment is submitted."/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next_student"

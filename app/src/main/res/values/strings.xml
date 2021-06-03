@@ -27,6 +27,9 @@
     <string name="hint_district">District <font color='#FF0000'>*</font></string>
     <string name="hint_state">State <font color='#FF0000'>*</font></string>
 
+    <string name="all_age">All Age</string>
+    <string name="all_village">All Village</string>
+
     <string-array name="age">
         <item>Age 4  </item>
         <item>Age 5  </item>
@@ -36,6 +39,18 @@
         <item>Age 9  </item>
         <item>Age 10 </item>
     </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Age  </item>
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+
 
     <string-array name="gender">
         <item>Male</item>

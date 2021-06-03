@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="Exams Given"
+            android:text="Assessments Given"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp" />
 
@@ -50,7 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Exams Synced"
+            android:text="Assessments Synced"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAlignment="center"

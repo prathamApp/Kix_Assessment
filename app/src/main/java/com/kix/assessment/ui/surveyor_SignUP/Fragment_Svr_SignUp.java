@@ -3,7 +3,6 @@ package com.kix.assessment.ui.surveyor_SignUP;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -25,7 +24,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import androidx.fragment.app.Fragment;
@@ -67,11 +65,12 @@ public class Fragment_Svr_SignUp extends Fragment {
 
     @AfterViews
     public void initialize() {
-        List<String> bklt = contentDao.getBooklets();
-        for (int i=0;i<bklt.size();i++){
+        booklet = (ArrayList<String>) contentDao.getBooklets();
+        //todo : delete after testing
+/*        for (int i=0;i<bklt.size();i++){
             booklet.add(bklt.get(i));
             Log.e("KIX bklt: ",booklet.get(i));
-        }
+        }*/
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>
                 (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, booklet);
         spinner_booklet.setAdapter(spinnerArrayAdapter);

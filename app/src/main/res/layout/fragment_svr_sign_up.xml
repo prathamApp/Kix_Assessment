@@ -125,17 +125,26 @@
                 android:drawablePadding="@dimen/_5sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_booklet"
+        <LinearLayout
+            android:id="@+id/ll_spinnerBooklet"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:drawSelectorOnTop="true"
-            android:gravity="center"
-            android:popupBackground="@drawable/choose_level_bg"
-            android:textAlignment="center"/>
+            android:background="@drawable/rounded_greenborder_spinner"
+            android:paddingStart="@dimen/_10sdp">
+
+            <Spinner
+                android:id="@+id/spinner_booklet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorAccent"
+                android:drawSelectorOnTop="true"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:textColor="@color/colorText" />
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_svrSignUp"

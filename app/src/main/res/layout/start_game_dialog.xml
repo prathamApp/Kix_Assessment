@@ -22,7 +22,7 @@
             android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="Do you want to Start Exam?"
+            android:text="Do you want to Start Assessment?"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_15sdp" />
 

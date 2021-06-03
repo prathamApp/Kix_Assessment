@@ -3,63 +3,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment_profile.Fragment_Profile"
     android:background="@color/white"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    tools:context=".ui.fragment_profile.Fragment_Profile">
 
     <TextView
         android:id="@+id/tv_profileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="@dimen/_20sdp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal"
         android:layout_marginTop="@dimen/_20sdp"
-        android:textColor="@color/colorText"/>
+        android:gravity="center_horizontal"
+        android:text="Profile"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+<!--    <ImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_filter_list_black_48dp" />-->
 
     <TextView
         android:id="@+id/tv_studCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No. of Students :"
-        android:textSize="@dimen/_15sdp"
+        android:layout_below="@+id/tv_profileName"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_below="@+id/tv_profileName"
         android:gravity="center_horizontal"
-        android:textColor="@color/colorText"/>
+        android:text="No. of Students :"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_15sdp" />
 
-   <TextView
+    <TextView
         android:id="@+id/tv_householdCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No. of Villages :"
-        android:textSize="@dimen/_15sdp"
+        android:layout_below="@+id/tv_profileName"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/_10sdp"
-       android:layout_marginEnd="@dimen/_10sdp"
-       android:layout_below="@+id/tv_profileName"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:gravity="center_horizontal"
-       android:layout_alignParentEnd="true"
-       android:textColor="@color/colorText"/>
+        android:text="No. of Villages :"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_15sdp" />
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/tv_studCount">
+
+        <LinearLayout
+            android:id="@+id/ll_ageFilterSpinner"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:background="@drawable/rounder_border_spinner"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner_ageFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/orange"
+                android:drawSelectorOnTop="true"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:textColor="@color/colorText" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_villageFilterSpinner"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_below="@+id/ll_ageFilterSpinner"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:background="@drawable/rounder_border_spinner"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner_villageFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/orange"
+                android:drawSelectorOnTop="true"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:textColor="@color/colorText" />
+        </LinearLayout>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_examDetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/ll_filter"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tv_studCount"/>
+        android:layout_marginTop="@dimen/_5sdp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sync"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
-        android:id="@+id/fab_sync"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/ic_sync_white_48dp"
-        android:backgroundTint="@color/orange"/>
+        android:backgroundTint="@color/orange"
+        android:src="@drawable/ic_sync_white_48dp" />
 
 </RelativeLayout>

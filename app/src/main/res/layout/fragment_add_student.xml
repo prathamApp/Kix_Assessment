@@ -56,34 +56,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/til_label1"
-            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/spinner_age"
+            <LinearLayout
+                android:id="@+id/ll_age"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center" />
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
 
-            <Spinner
-                android:id="@+id/spinner_gender"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center"
-                android:layout_marginTop="@dimen/_8sdp"/>
+                <Spinner
+                    android:id="@+id/spinner_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
 
-            <Spinner
-                android:id="@+id/spinner_enrollStatus"
+            <LinearLayout
+                android:id="@+id/ll_gender"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center"
-                android:layout_marginTop="@dimen/_8sdp"/>
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_enrollStatus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinner_enrollStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -91,35 +121,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll_spinners1"
-            android:layout_marginTop="@dimen/_8sdp"
             android:orientation="vertical"
             android:visibility="gone">
 
-            <Spinner
-                android:id="@+id/spinner_schoolType"
+            <LinearLayout
+                android:id="@+id/ll_schoolType"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center" />
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
 
-            <Spinner
-                android:id="@+id/spinner_class"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center" />
+                <Spinner
+                    android:id="@+id/spinner_schoolType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
 
-            <Spinner
-                android:id="@+id/spinner_dropoutYear"
+            <LinearLayout
+                android:id="@+id/ll_spinnerClass"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:drawSelectorOnTop="true"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:popupBackground="@drawable/choose_level_bg"
-                android:textAlignment="center" />
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinner_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_spinnerDropout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_greenborder_spinner"
+                android:paddingStart="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinner_dropoutYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawSelectorOnTop="true"
+                    android:gravity="center_vertical"
+                    android:popupBackground="@drawable/choose_level_bg"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

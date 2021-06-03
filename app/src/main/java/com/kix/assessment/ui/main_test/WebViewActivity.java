@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebChromeClient;
@@ -68,7 +69,9 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         scoresList = new ArrayList<>();
         queCnt = 0;
         try {
-            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%Booklet 1%");
+            String bklet = ""+FastSave.getInstance().getString(Kix_Constant.BOOKLET,"Booklet 1");
+            Log.d("WebView", "Kix_Constant.BOOKLET: " + bklet);
+            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%"+bklet+"%");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -159,7 +162,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         } else {
             dismissLoadingDialog();
             webView.setVisibility(View.GONE);
-            tv_thankyou.setText("Thank you, " + studentName + "!\nYour test is submitted.");
+            tv_thankyou.setText("Thank you, " + studentName + "!\nYour assessment is submitted.");
             rl_gameover.setVisibility(View.VISIBLE);
         }
     }
@@ -195,7 +198,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         dia_yes = testover.findViewById(R.id.dia_yes);
         dia_no = testover.findViewById(R.id.dia_no);
         btn_cancel = testover.findViewById(R.id.btn_cancel);
-        dia_title.setText("Save and Submit Test");
+        dia_title.setText("Save and Submit Assessment");
         dia_no.setOnClickListener(v -> {
             testover.dismiss();
             finish();
@@ -238,7 +241,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         dia_yes = nextDialog.findViewById(R.id.dia_yes);
         dia_no = nextDialog.findViewById(R.id.dia_no);
         if (queCnt == gameListList.size() - 1)
-            dia_title.setText("Submit Test");
+            dia_title.setText("Submit Assessment");
         dia_no.setOnClickListener(v -> nextDialog.dismiss());
         dia_yes.setOnClickListener(v -> {
             addScoreToList(scoredMarks, label, startTime);

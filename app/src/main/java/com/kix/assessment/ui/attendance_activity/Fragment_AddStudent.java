@@ -27,6 +27,7 @@ import com.kix.assessment.ui.main_test.WebViewActivity_;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ItemSelect;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
@@ -60,6 +61,10 @@ public class Fragment_AddStudent extends Fragment {
 
     @ViewById(R.id.ll_spinnersByStatus)
     LinearLayout ll_spinnerByStatus;
+    @ViewById(R.id.ll_spinnerDropout)
+    LinearLayout ll_spinnerDropout;
+    @ViewById(R.id.ll_schoolType)
+    LinearLayout ll_schoolType;
 
     String age, surveyorCode, householdID;
     String schoolType, dropoutYear, standard;
@@ -97,8 +102,8 @@ public class Fragment_AddStudent extends Fragment {
                 if(selectedItem.equals("Enrolled"))
                 {
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
-                    spinner_dropoutYear.setVisibility(View.GONE);
-                    spinner_schoolType.setVisibility(View.VISIBLE);
+                    ll_spinnerDropout.setVisibility(View.GONE);
+                    ll_schoolType.setVisibility(View.VISIBLE);
                 }
                 else if(selectedItem.equals("Never Enrolled"))
                 {
@@ -107,8 +112,8 @@ public class Fragment_AddStudent extends Fragment {
                 if(selectedItem.equals("Drop Out"))
                 {
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
-                    spinner_schoolType.setVisibility(View.GONE);
-                    spinner_dropoutYear.setVisibility(View.VISIBLE);
+                    ll_schoolType.setVisibility(View.GONE);
+                    ll_spinnerDropout.setVisibility(View.VISIBLE);
                 }
             } // to close the onItemSelected
             public void onNothingSelected(AdapterView<?> parent)
@@ -116,6 +121,16 @@ public class Fragment_AddStudent extends Fragment {
 
             }
         });
+    }
+
+    @ItemSelect(R.id.spinner_age)
+    public void ageSelect(boolean sel) {
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
+    }
+
+    @ItemSelect(R.id.spinner_gender)
+    public void genderSelect(boolean sel) {
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
     }
 
     @Click(R.id.rl_parentLayout)

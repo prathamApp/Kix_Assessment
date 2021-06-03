@@ -34,4 +34,6 @@ public class Kix_Constant {
     public static final String SURVEYOR_NAME = "surveyor_name";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
+    public static final String ALL_AGE = "All Age";
+    public static final String ALL_VILLAGE = "All Village";
 }

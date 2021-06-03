@@ -10,6 +10,7 @@ import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import com.kix.assessment.view_holders.EmptyHolder;
 import com.kix.assessment.view_holders.ProfileViewHolder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -85,5 +86,10 @@ public class ProfileAdapter extends RecyclerView.Adapter{
     @Override
     public int getItemCount() {
         return detailsList.size();
+    }
+
+    public void updateList(ArrayList<Modal_ProfileDetails> list){
+        detailsList = list;
+        notifyDataSetChanged();
     }
 }
