@@ -61,4 +61,10 @@ public interface ScoreDao {
 
     @Query("select studentId from Score where studentId=:studId")
     String getStudentId(String studId);
+
+    @Query("select COUNT(*) from Score where sentFlag=0")
+    boolean getAllPushedScoresCount();
+
+    @Query("update Score set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }

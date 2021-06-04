@@ -24,8 +24,8 @@ public class Modal_Log {
     public String sessionId;
     @SerializedName("deviceId")
     public String deviceId;
-    @SerializedName("LogDetail")
-    public String LogDetail;
+    @SerializedName("logDetail")
+    public String logDetail;
     @SerializedName("sentFlag")
     public int sentFlag;
 
@@ -102,10 +102,10 @@ public class Modal_Log {
     }
 
     public String getLogDetail() {
-        return LogDetail;
+        return logDetail;
     }
 
     public void setLogDetail(String logDetail) {
-        LogDetail = logDetail;
+        this.logDetail = logDetail;
     }
 }

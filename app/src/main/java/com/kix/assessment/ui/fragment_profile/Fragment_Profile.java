@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
+import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Household;
@@ -215,6 +216,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         if (msg != null) {
             if (msg.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
                 Toast.makeText(getActivity(), "Data Pushed Successfully!", Toast.LENGTH_SHORT).show();
+                BackupDatabase.backup(getActivity());
             } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.PUSHFAILED)) {
                 Toast.makeText(getActivity(), "Data Push Failed.", Toast.LENGTH_SHORT).show();
             }

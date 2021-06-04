@@ -28,4 +28,7 @@ public interface SurveyorDao {
 
     @Query("update Surveyor set sentFlag=1 where svrCode=:svrCode")
     void updateSentSurveyorFlags(String svrCode);
+
+    @Query("update Surveyor set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }

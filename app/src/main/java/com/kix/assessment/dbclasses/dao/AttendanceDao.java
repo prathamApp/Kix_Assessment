@@ -27,4 +27,7 @@ public interface AttendanceDao {
 
     @Query("UPDATE Attendance SET sentFlag=1 WHERE sessionId=:s_id")
     void updateSentFlag(String s_id);
+
+    @Query("update Attendance set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }

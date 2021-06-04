@@ -33,4 +33,6 @@ public interface StudentDao {
     @Query("update Student set sentFlag=1 where studId=:s_id")
     void updateSentStudentFlags(String s_id);
 
+    @Query("update Student set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }

@@ -13,7 +13,7 @@ public class Kix_Constant {
     public static final String HOUSEHOLD_LIST = "Household_List";
     public static final String HOUSEHOLD_ID = "Household_Id";
     public static final String DATA_COPIED = "data_copied";
-    public static final String SESSIONID = "session_id";
+    public static final String SESSIONID = "sessionId";
     public static final String OTG_INSERTED ="otg_inserted";
     public static final String BACKUP_DB_COPIED = "backup_db_copied";
     public static final String BACKUP_DB_NOT_COPIED = "backup_db_not_copied";

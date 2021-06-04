@@ -8,6 +8,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.gson.Gson;
 import com.kix.assessment.KIXApplication;
+import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Attendance;
@@ -63,12 +64,6 @@ public class KixSmartSync { //extends AutoSync {
             JSONArray sessionArray = new JSONArray();
             List<Modal_Session> newSessions = sessionDao.getAllNewSessions();
             for (Modal_Session session : newSessions) {
-                //fetch all logs
-                JSONArray logArray = new JSONArray();
-                List<Modal_Log> allLogs = logDao.getAllLogs(session.getSessionId());
-                for (Modal_Log log : allLogs)
-                    logArray.put(new JSONObject(gson.toJson(log)));
-
                 //fetch attendance
                 JSONArray attendanceArray = new JSONArray();
                 List<Attendance> newAttendance = attendanceDao.getNewAttendances(session.getSessionId());
@@ -88,12 +83,16 @@ public class KixSmartSync { //extends AutoSync {
                 sessionJson.put(Kix_Constant.TODATE, session.getToDate());
                 sessionJson.put(Kix_Constant.SCORE, scoreArray);
                 sessionJson.put(Kix_Constant.ATTENDANCE, attendanceArray);
-                sessionJson.put(Kix_Constant.LOGS, logArray);
-
                 sessionArray.put(sessionJson);
             }
             // send if new records found
-            if (newSessions.size() > 0) {
+//            if (newSessions.size() > 0) {
+            //fetch all logs
+            JSONArray logArray = new JSONArray();
+            List<Modal_Log> allLogs = logDao.getAllLogs();
+            for (Modal_Log log : allLogs)
+                logArray.put(new JSONObject(gson.toJson(log)));
+
                 //fetch Students & convert to Json Array
                 JSONArray studentArray = new JSONArray();
                     List<Modal_Student> newStudents = studentDao.getAllNewStudents();
@@ -118,15 +117,17 @@ public class KixSmartSync { //extends AutoSync {
                 for (Modal_Status status : metadata) {
                     metadataJson.put(status.getStatusKey(), status.getValue());
                 }
-                metadataJson.put(Kix_Constant.SCORE_COUNT, (metadata.size() > 0) ? metadata.size() : 0);
+                metadataJson.put(Kix_Constant.SCORE_COUNT, scoreDao.getAllPushedScoresCount());
                 rootJson.put(Kix_Constant.SURVEYOR, surveyorArray);
                 rootJson.put(Kix_Constant.HOUSEHOLD, householdArray);
                 rootJson.put(Kix_Constant.STUDENTS, studentArray);
                 rootJson.put(Kix_Constant.SESSION, sessionArray);
+                rootJson.put(Kix_Constant.LOGS, logArray);
                 rootJson.put(Kix_Constant.METADATA, metadataJson);
                 Log.e("KIX : ", String.valueOf(rootJson));
                 pushDataToServer(rootJson,courseCount);
-            }/* else {
+//            }
+        /* else {
                 if (isPressed) {
                     EventMessage msg = new EventMessage();
                     msg.setMessage(Kix_Constant.SUCCESSFULLYPUSHED);
@@ -172,14 +173,15 @@ public class KixSmartSync { //extends AutoSync {
         AndroidNetworking.upload(url)
                 .addHeaders("Content-Type", "file/zip")
                 .addMultipartFile("file", new File(filepathstr + ".zip"))
-//                .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
+                .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
                         Log.e("PushData", "DATA PUSH "+response);
-//                        new File(filepathstr + ".zip").delete();
+                        new File(filepathstr + ".zip").delete();
+                        setSentFlag();
                         EventMessage msg = new EventMessage();
                         msg.setMessage(Kix_Constant.SUCCESSFULLYPUSHED);
                         msg.setPushData(data.toString());
@@ -199,6 +201,15 @@ public class KixSmartSync { //extends AutoSync {
                 });
     }
 
+    public static void setSentFlag(){
+        studentDao.updateSentFlag();
+        surveyorDao.updateSentFlag();
+        householdDao.updateSentFlag();
+        logDao.updateSentFlag();
+        attendanceDao.updateSentFlag();
+        sessionDao.updateSentFlag();
+        scoreDao.updateSentFlag();
+    }
 
     public static void zip(String[] _files, String zipFileName, File filepath) {
         try {

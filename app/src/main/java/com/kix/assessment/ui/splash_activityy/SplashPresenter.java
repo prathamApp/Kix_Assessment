@@ -65,9 +65,9 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             List<Modal_Content> modal_contentList = new ArrayList<>();
             for(int i=0; i<gameListList.size(); i++){
                 Modal_Content modal_content = new Modal_Content();
-                modal_content.setContentBooklet(""+gameListList.get(i).getBooklet());
-                modal_content.setContentCode(""+gameListList.get(i).getCode());
-                modal_content.setContentFolderName(""+gameListList.get(i).getFolder_name());
+                modal_content.setContentBooklet(""+gameListList.get(i).getContentBooklet());
+                modal_content.setContentCode(""+gameListList.get(i).getContentCode());
+                modal_content.setContentFolderName(""+gameListList.get(i).getContentFolderName());
                 modal_contentList.add(modal_content);
             }
             KixDatabase.getDatabaseInstance(mContext).getContentDao().insertAll(modal_contentList);
@@ -82,18 +82,18 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
     @Override
     public void populateDefaultDB() {
         Modal_Status statusObj = new Modal_Status();
-        if (statusDao.getKey("DeviceId") == null) {
-            statusObj.statusKey = "DeviceId";
+        if (statusDao.getKey("deviceId") == null) {
+            statusObj.statusKey = "deviceId";
             statusObj.value = KIX_Utility.getDeviceID();
             statusDao.insert(statusObj);
         }
-        if (statusDao.getKey("DeviceName") == null) {
-            statusObj.statusKey = "DeviceName";
+        if (statusDao.getKey("deviceName") == null) {
+            statusObj.statusKey = "deviceName";
             statusObj.value = KIX_Utility.getDeviceName();
             statusDao.insert(statusObj);
         }
-        if (statusDao.getKey("SerialID") == null) {
-            statusObj.statusKey = "SerialID";
+        if (statusDao.getKey("serialId") == null) {
+            statusObj.statusKey = "serialId";
             statusObj.value = KIX_Utility.getDeviceSerialID();
             statusDao.insert(statusObj);
         }
@@ -147,13 +147,13 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         Modal_Log modal_log = new Modal_Log();
         modal_log.setLogId(1);
         modal_log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
-        modal_log.setExceptionMessage("ExceptionMessage");
+        modal_log.setExceptionMessage("exceptionMessage");
         modal_log.setExceptionStackTrace("Exception Trace");
-        modal_log.setMethodName("MethodName");
-        modal_log.setErrorType("ErrorType");
+        modal_log.setMethodName("methodName");
+        modal_log.setErrorType("errorType");
         modal_log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID,"no_session"));
-        modal_log.setDeviceId("DeviceId");
-        modal_log.setLogDetail("LogDetail");
+        modal_log.setDeviceId("deviceId");
+        modal_log.setLogDetail("logDetail");
         modal_log.setSentFlag(0);
 
         logDao.insertLog(modal_log);

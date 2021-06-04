@@ -41,6 +41,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static com.kix.assessment.KIXApplication.contentSDPath;
+import static com.kix.assessment.KIXApplication.sessionDao;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 
@@ -71,7 +72,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         try {
             String bklet = ""+FastSave.getInstance().getString(Kix_Constant.BOOKLET,"Booklet 1");
             Log.d("WebView", "Kix_Constant.BOOKLET: " + bklet);
-            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%"+bklet+"%");
+            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%"+bklet+",%");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -171,6 +172,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     @Click(R.id.btn_next_student)
     public void nextStudentClicked() {
         KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+        sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
         FastSave.getInstance().saveString(STUDENT_ID, "NA");
         BackupDatabase.backup(this);
         finish();
@@ -201,6 +203,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         dia_title.setText("Save and Submit Assessment");
         dia_no.setOnClickListener(v -> {
             testover.dismiss();
+            sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
             finish();
         });
         btn_cancel.setOnClickListener(v -> {
@@ -208,6 +211,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         });
         dia_yes.setOnClickListener(v -> {
             KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+            sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
             FastSave.getInstance().saveString(STUDENT_ID, "NA");
             BackupDatabase.backup(this);
             finish();

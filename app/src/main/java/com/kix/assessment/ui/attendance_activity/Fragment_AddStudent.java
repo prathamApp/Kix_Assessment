@@ -216,9 +216,9 @@ public class Fragment_AddStudent extends Fragment {
         });
         dlg_yes.setOnClickListener(v -> {
             getFragmentManager().popBackStack();
-            markAttendance(modal_student);
             FastSave.getInstance().saveString(STUDENT_ID, ""+modal_student.getStud_Id());
             FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
+            markAttendance(modal_student);
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modal_student.studName);
             startActivity(intent);

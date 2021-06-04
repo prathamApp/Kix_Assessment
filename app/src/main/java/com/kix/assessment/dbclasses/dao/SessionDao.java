@@ -40,4 +40,6 @@ public interface SessionDao {
     @Query("select * from Session where sessionId = :SessionID")
     Modal_Session getSession(String SessionID);
 
+    @Query("update Session set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }

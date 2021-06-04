@@ -32,4 +32,7 @@ public interface HouseholdDao {
 
     @Query("update Household set sentFlag=1 where householdId=:householdId")
     void updateSentHouseholdFlags(String householdId);
+
+    @Query("update Household set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
 }
