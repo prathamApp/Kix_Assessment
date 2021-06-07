@@ -205,6 +205,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         //update recyclerview
         profileAdapter.updateList(filteredList);
         int studCount = filteredList.size()-1;
+        if(!(studCount<0))
         tv_studCount.setText("Total Students : " + studCount);
         if (filteredList.size() == 1)
             Toast.makeText(getActivity(), "No Match Found!!", Toast.LENGTH_SHORT).show();

@@ -55,7 +55,8 @@
                 android:drawablePadding="@dimen/_5sdp"
                 android:textColor="@color/colorText"
                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-                android:drawableStart="@drawable/ic_person_grey_24dp"/>
+                android:drawableStart="@drawable/ic_person_grey_24dp"
+                android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
