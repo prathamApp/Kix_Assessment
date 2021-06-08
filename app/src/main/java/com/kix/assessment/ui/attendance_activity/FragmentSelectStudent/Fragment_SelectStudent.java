@@ -41,6 +41,8 @@ import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 @EFragment(R.layout.fragment_select_student)
 public class Fragment_SelectStudent extends Fragment implements ContractStudentList{
 
+    private static final int REQUEST_CODE_ASSESSMENT_BACK = 1111;
+
     @ViewById(R.id.rv_student)
     RecyclerView rv_student;
 
@@ -121,7 +123,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
             markAttendance(modalStudnet);
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.studName);
-            startActivity(intent);
+            startActivityForResult(intent,REQUEST_CODE_ASSESSMENT_BACK);
         //}
     }
 
@@ -145,6 +147,14 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         s.setFromDate(KIX_Utility.getCurrentDateTime());
         s.setToDate("NA");
         sessionDao.insert(s);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_ASSESSMENT_BACK) {
+            studentListAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override

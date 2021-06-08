@@ -1,9 +1,12 @@
 package com.kix.assessment.ui.attendance_activity.FragmentSelectStudent;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
@@ -15,6 +18,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static com.kix.assessment.KIXApplication.scoreDao;
+
 public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.MyViewHolder>{
     private List<Modal_Student> studnetList;
     private Context context;
@@ -24,13 +29,15 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_studName;
-        public MaterialCardView materialCardView;
+        public MaterialCardView studentCardView;
+        public ImageView iv_studentCheck;
 //        public LottieAnimationView iv_stud_icon;
 
         public MyViewHolder(View view) {
             super(view);
             tv_studName = view.findViewById(R.id.tv_studName);
-            materialCardView = view.findViewById(R.id.student_view);
+            studentCardView = view.findViewById(R.id.student_cardView);
+            iv_studentCheck = view.findViewById(R.id.iv_studentCheck);
 //            iv_stud_icon = view.findViewById(R.id.item_stud_icon);
         }
     }
@@ -49,17 +56,19 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
         return new MyViewHolder(itemView);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull StudentListAdapter.MyViewHolder holder, int position) {
         Modal_Student modalStudnet = studnetList.get(position);
         holder.tv_studName.setText(modalStudnet.getStudName());
-//        holder.tv_studName.setSelected(false);
+        String examGivenByStud = scoreDao.getStudentId(modalStudnet.getStud_Id());
 
-/*        if(position==0){
-            holder.iv_stud_icon.setImageResource(R.drawable.ic_add_lightorange_24dp);
-        }else{
-            holder.iv_stud_icon.setAnimation(modalStudnet.getStudentAvatar());
-        }*/
+        if(examGivenByStud!=null){
+            holder.studentCardView.setCardBackgroundColor(Color.parseColor("#727272"));
+            holder.iv_studentCheck.setVisibility(View.VISIBLE);
+        } else {
+            holder.iv_studentCheck.setVisibility(View.GONE);
+        }
 
         holder.itemView.setOnClickListener(v -> {
             contractStudentList.itemSelected(holder.getAdapterPosition());

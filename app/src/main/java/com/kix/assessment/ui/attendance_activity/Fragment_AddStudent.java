@@ -85,8 +85,6 @@ public class Fragment_AddStudent extends Fragment {
         spinner_age.setAdapter(adapterAge);
         ArrayAdapter adapterGender = ArrayAdapter.createFromResource(getActivity(), R.array.gender, R.layout.support_simple_spinner_dropdown_item);
         spinner_gender.setAdapter(adapterGender);
-        ArrayAdapter adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
-        spinner_class.setAdapter(adapterClass);
         ArrayAdapter adapterEnrollStatus = ArrayAdapter.createFromResource(getActivity(), R.array.enrollment_status, R.layout.support_simple_spinner_dropdown_item);
         spinner_enrollStatue.setAdapter(adapterEnrollStatus);
         ArrayAdapter adapterSchoolType = ArrayAdapter.createFromResource(getActivity(), R.array.school_type, R.layout.support_simple_spinner_dropdown_item);
@@ -101,6 +99,8 @@ public class Fragment_AddStudent extends Fragment {
                 String selectedItem = parent.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Enrolled"))
                 {
+                    ArrayAdapter adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
+                    spinner_class.setAdapter(adapterClass);
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
                     ll_spinnerDropout.setVisibility(View.GONE);
                     ll_schoolType.setVisibility(View.VISIBLE);
@@ -111,6 +111,8 @@ public class Fragment_AddStudent extends Fragment {
                 }
                 if(selectedItem.equals("Drop Out"))
                 {
+                    ArrayAdapter adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_dropoutclass, R.layout.support_simple_spinner_dropdown_item);
+                    spinner_class.setAdapter(adapterClass);
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
                     ll_schoolType.setVisibility(View.GONE);
                     ll_spinnerDropout.setVisibility(View.VISIBLE);

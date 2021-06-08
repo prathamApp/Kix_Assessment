@@ -1,6 +1,7 @@
 package com.kix.assessment.ui.fragment_profile;
 
 import android.annotation.SuppressLint;
+import android.view.Gravity;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
+import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
@@ -79,6 +81,9 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
 
     //list for villageFilter
     ArrayList<String> villagesList = new ArrayList<>();
+
+    private BlurPopupWindow pushDialog;
+    private TextView tv_dialTitle;
 
     public Fragment_Profile() {
         // Required empty public constructor
@@ -216,10 +221,10 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     public void DataPushedSuccessfully(EventMessage msg) {
         if (msg != null) {
             if (msg.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
-                Toast.makeText(getActivity(), "Data Pushed Successfully!", Toast.LENGTH_SHORT).show();
+                pushDialog("Data Pushed Successfully!!");
                 BackupDatabase.backup(getActivity());
             } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.PUSHFAILED)) {
-                Toast.makeText(getActivity(), "Data Push Failed.", Toast.LENGTH_SHORT).show();
+                pushDialog("Data Push Failed!!");
             }
         }
     }
@@ -231,6 +236,25 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             ageSelected = String.valueOf(Integer.parseInt(split_age[1]));
         else
             ageSelected = "0";
+    }
+
+    public void pushDialog(String message){
+        pushDialog = new BlurPopupWindow.Builder(getActivity())
+                .setContentView(R.layout.dialog_push_result)
+                .bindClickListener(v -> {
+                    pushDialog.dismiss();
+                }, R.id.dia_btnOk)
+                .bindClickListener(v -> pushDialog.dismiss(), R.id.dia_cancel)
+                .setGravity(Gravity.CENTER)
+                .setDismissOnTouchBackground(true)
+                .setDismissOnClickBack(true)
+                .setScaleRatio(0.2f)
+                .setBlurRadius(10)
+                .setTintColor(0x30000000)
+                .build();
+        tv_dialTitle = pushDialog.findViewById(R.id.dia_title);
+        tv_dialTitle.setText(message);
+        pushDialog.show();
     }
 
     @Override
