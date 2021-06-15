@@ -1,5 +1,6 @@
 package com.kix.assessment.ui.attendance_activity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kix.assessment.R;
@@ -66,31 +68,60 @@ public class Fragment_AddStudent extends Fragment {
     @ViewById(R.id.ll_schoolType)
     LinearLayout ll_schoolType;
 
+    @ViewById(R.id.tv_label)
+    TextView tv_label;
+
     String age, surveyorCode, householdID;
     String schoolType, dropoutYear, standard;
 
     public Dialog startExamDialog;
     Button dlg_yes, dlg_no;
 
+    ArrayAdapter adapterAge, adapterGender, adapterEnrollStatus,
+            adapterClass, adapterSchoolType, adapterDropYear;
+
+    Modal_Student modalStudent;
+
+    String studId;
     public Fragment_AddStudent() {
         // Required empty public constructor
     }
 
+    @SuppressLint("SetTextI18n")
     @AfterViews
     public void initialize() {
         ll_spinnerByStatus.setVisibility(View.GONE);
+
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
-        ArrayAdapter adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.age, R.layout.support_simple_spinner_dropdown_item);
+        adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.age, R.layout.support_simple_spinner_dropdown_item);
         spinner_age.setAdapter(adapterAge);
-        ArrayAdapter adapterGender = ArrayAdapter.createFromResource(getActivity(), R.array.gender, R.layout.support_simple_spinner_dropdown_item);
+        adapterGender = ArrayAdapter.createFromResource(getActivity(), R.array.gender, R.layout.support_simple_spinner_dropdown_item);
         spinner_gender.setAdapter(adapterGender);
-        ArrayAdapter adapterEnrollStatus = ArrayAdapter.createFromResource(getActivity(), R.array.enrollment_status, R.layout.support_simple_spinner_dropdown_item);
+        adapterEnrollStatus = ArrayAdapter.createFromResource(getActivity(), R.array.enrollment_status, R.layout.support_simple_spinner_dropdown_item);
         spinner_enrollStatue.setAdapter(adapterEnrollStatus);
-        ArrayAdapter adapterSchoolType = ArrayAdapter.createFromResource(getActivity(), R.array.school_type, R.layout.support_simple_spinner_dropdown_item);
+        adapterSchoolType = ArrayAdapter.createFromResource(getActivity(), R.array.school_type, R.layout.support_simple_spinner_dropdown_item);
         spinner_schoolType.setAdapter(adapterSchoolType);
-        ArrayAdapter adapterDropYear = ArrayAdapter.createFromResource(getActivity(), R.array.dropout_year, R.layout.support_simple_spinner_dropdown_item);
+        adapterDropYear = ArrayAdapter.createFromResource(getActivity(), R.array.dropout_year, R.layout.support_simple_spinner_dropdown_item);
         spinner_dropoutYear.setAdapter(adapterDropYear);
+        adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
+        spinner_class.setAdapter(adapterClass);
+
+        if(getArguments().getString(Kix_Constant.EDIT_STUDENT)!=null) {
+            studId = getArguments().getString(STUDENT_ID);
+            modalStudent = studentDao.getStudentByStudId(studId);
+            tv_label.setText("Edit Child Information");
+            et_studentName.setText(modalStudent.getStudName());
+
+            spinner_age.setSelection(adapterAge.getPosition("Age "+modalStudent.getStudAge()));
+            spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getStudGender()));
+            spinner_enrollStatue.setSelection(adapterEnrollStatus.getPosition(modalStudent.getStudEnrollmentStatus()));
+            if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase("Enrolled")){
+                spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.getStudSchoolType()));
+            } else if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase("Drop Out")){
+                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.getStudDropoutYear()));
+            }
+        }
 
         spinner_enrollStatue.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
@@ -99,8 +130,12 @@ public class Fragment_AddStudent extends Fragment {
                 String selectedItem = parent.getItemAtPosition(position).toString();
                 if(selectedItem.equals("Enrolled"))
                 {
-                    ArrayAdapter adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
+                    adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
                     spinner_class.setAdapter(adapterClass);
+                    if(getArguments().getString(Kix_Constant.EDIT_STUDENT)!=null) {
+                        spinner_class.setSelection(adapterClass.getPosition(modalStudent.getStudClass()));
+                        spinner_dropoutYear.setSelection(0);
+                    }
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
                     ll_spinnerDropout.setVisibility(View.GONE);
                     ll_schoolType.setVisibility(View.VISIBLE);
@@ -111,8 +146,12 @@ public class Fragment_AddStudent extends Fragment {
                 }
                 if(selectedItem.equals("Drop Out"))
                 {
-                    ArrayAdapter adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_dropoutclass, R.layout.support_simple_spinner_dropdown_item);
+                    adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_dropoutclass, R.layout.support_simple_spinner_dropdown_item);
                     spinner_class.setAdapter(adapterClass);
+                    if(getArguments().getString(Kix_Constant.EDIT_STUDENT)!=null) {
+                        spinner_class.setSelection(adapterClass.getPosition(modalStudent.getStudClass()));
+                        spinner_schoolType.setSelection(0);
+                    }
                     ll_spinnerByStatus.setVisibility(View.VISIBLE);
                     ll_schoolType.setVisibility(View.GONE);
                     ll_spinnerDropout.setVisibility(View.VISIBLE);
@@ -145,8 +184,20 @@ public class Fragment_AddStudent extends Fragment {
         if(!et_studentName.getText().toString().isEmpty()) {
             if (spinner_enrollStatue.getSelectedItemPosition() == 0)
                 Toast.makeText(getActivity(), "Select Enrollment Status.", Toast.LENGTH_SHORT).show();
-            else
+            else {
+                if(getArguments().getString(Kix_Constant.EDIT_STUDENT)!=null) {
+                    getSelectedAge();
+                    getSpinnerValues();
+                    studentDao.updateStudent(et_studentName.getText().toString(), age,
+                            spinner_gender.getSelectedItem().toString(), standard,
+                            spinner_enrollStatue.getSelectedItem().toString(),
+                            schoolType, dropoutYear, studId);
+                    Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                    getFragmentManager().popBackStack();
+                }
+                else
                 insertStudent();
+            }
         } else {
             Toast.makeText(getActivity(), "Enter Name First.", Toast.LENGTH_SHORT).show();
         }

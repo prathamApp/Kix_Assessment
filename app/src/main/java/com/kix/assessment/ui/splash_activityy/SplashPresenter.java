@@ -13,7 +13,6 @@ import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.GameList;
 import com.kix.assessment.modal_classes.Modal_Content;
-import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_Status;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -27,7 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.kix.assessment.KIXApplication.contentSDPath;
-import static com.kix.assessment.KIXApplication.logDao;
 import static com.kix.assessment.KIXApplication.statusDao;
 
 @EBean
@@ -144,7 +142,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             statusObj.value = KIX_Utility.getScreenResolution();
             statusDao.insert(statusObj);
         }
-        Modal_Log modal_log = new Modal_Log();
+/*        Modal_Log modal_log = new Modal_Log();
         modal_log.setLogId(1);
         modal_log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
         modal_log.setExceptionMessage("exceptionMessage");
@@ -156,7 +154,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         modal_log.setLogDetail("logDetail");
         modal_log.setSentFlag(0);
 
-        logDao.insertLog(modal_log);
+        logDao.insertLog(modal_log);*/
     }
 }
 

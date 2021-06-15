@@ -30,7 +30,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_studName;
         public MaterialCardView studentCardView;
-        public ImageView iv_studentCheck;
+        public ImageView iv_studentCheck, iv_studentEdit;
 //        public LottieAnimationView iv_stud_icon;
 
         public MyViewHolder(View view) {
@@ -38,6 +38,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
             tv_studName = view.findViewById(R.id.tv_studName);
             studentCardView = view.findViewById(R.id.student_cardView);
             iv_studentCheck = view.findViewById(R.id.iv_studentCheck);
+            iv_studentEdit = view.findViewById(R.id.iv_studentEdit);
 //            iv_stud_icon = view.findViewById(R.id.item_stud_icon);
         }
     }
@@ -74,6 +75,10 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
             contractStudentList.itemSelected(holder.getAdapterPosition());
             index=position;
             notifyDataSetChanged();
+        });
+
+        holder.iv_studentEdit.setOnClickListener(v -> {
+            contractStudentList.editStudent(holder.getAdapterPosition());
         });
 
     }

@@ -1,6 +1,7 @@
 package com.kix.assessment.ui.household_activity;
 
 import android.content.Intent;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,21 +30,40 @@ public class Fragment_AddHousehold extends Fragment {
     @ViewById(R.id.et_houseHoldState)
     TextInputEditText et_houseHoldState;
 
-    String surveyorCode;
+    @ViewById(R.id.tv_label)
+    TextView tv_label;
+    String surveyorCode, villageId;
     public Fragment_AddHousehold() {
         // Required empty public constructor
     }
 
     @AfterViews
     public void initialize(){
+        if(getArguments().getString(Kix_Constant.EDIT_VILLAGE)!=null) {
+            villageId = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
+            Modal_Household modalVillage = householdDao.getVillageByVillId(villageId);
+            tv_label.setText("Edit Village");
+            et_houseHoldName.setText(modalVillage.getHouseholdName());
+            et_houseHoldDistrict.setText(modalVillage.getHouseholdDistrict());
+            et_houseHoldState.setText(modalVillage.getHouseholdState());
+        }
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
     }
 
     @Click(R.id.btn_saveHousehold)
     public void saveHousehold(){
         if(!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
-                && !et_houseHoldState.getText().toString().isEmpty())
-        insertHousehold();
+                && !et_houseHoldState.getText().toString().isEmpty()) {
+            if(getArguments().getString(Kix_Constant.EDIT_VILLAGE)!=null) {
+                householdDao.updateVillage(et_houseHoldName.getText().toString(),
+                        et_houseHoldDistrict.getText().toString(),
+                        et_houseHoldState.getText().toString(),
+                        villageId);
+                Toast.makeText(getActivity(), "Village Edited Successfully!", Toast.LENGTH_SHORT).show();
+                getFragmentManager().popBackStack();
+            } else
+            insertHousehold();
+        }
         else Toast.makeText(getActivity(), "All fields are mandatory!", Toast.LENGTH_SHORT).show();
     }
 

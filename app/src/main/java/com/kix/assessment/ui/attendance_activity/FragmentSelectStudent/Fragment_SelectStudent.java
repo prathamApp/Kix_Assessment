@@ -127,6 +127,17 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         //}
     }
 
+    @Override
+    public void editStudent(int position) {
+        Modal_Student modalStudnet = studentListAdapter.getitem(position);
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.EDIT_STUDENT,Kix_Constant.EDIT_STUDENT);
+        bundle.putString(STUDENT_ID,modalStudnet.getStud_Id());
+
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
+                bundle, Fragment_AddStudent.class.getSimpleName());
+    }
+
     private void markAttendance(Modal_Student stud) {
         //<editor-fold desc="below code is for saving the student attendance so as to pass it to "meri dukan" game, nothing else">
  /*       ArrayList<Modal_Student> stuList = new ArrayList<>();

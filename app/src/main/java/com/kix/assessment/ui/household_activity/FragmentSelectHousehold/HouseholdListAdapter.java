@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
@@ -25,12 +26,14 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
         public class MyViewHolder extends RecyclerView.ViewHolder {
             public TextView tv_householdName;
             public MaterialCardView materialCardView;
+            public ImageView iv_villageEdit;
 //        public LottieAnimationView iv_stud_icon;
 
             public MyViewHolder(View view) {
                 super(view);
                 tv_householdName = view.findViewById(R.id.tv_householdName);
                 materialCardView = view.findViewById(R.id.household_view);
+                iv_villageEdit = view.findViewById(R.id.iv_villageEdit);
 //            iv_stud_icon = view.findViewById(R.id.item_stud_icon);
             }
         }
@@ -65,6 +68,10 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
                 contractHouseholdList.itemSelected(holder.getAdapterPosition());
                 index=position;
                 notifyDataSetChanged();
+            });
+
+            holder.iv_villageEdit.setOnClickListener(v -> {
+                contractHouseholdList.editVillage(position);
             });
 
         }

@@ -112,6 +112,16 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         //}
     }
 
+    @Override
+    public void editVillage(int position) {
+        Modal_Household modalHousehold = householdListAdapter.getitem(position);
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.EDIT_VILLAGE,Kix_Constant.EDIT_VILLAGE);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID,modalHousehold.getHouseholdId());
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
+                bundle, Fragment_AddHousehold.class.getSimpleName());
+    }
+
     @Click(R.id.fab_profile)
     public void profile() {
         Bundle bundle = new Bundle();
