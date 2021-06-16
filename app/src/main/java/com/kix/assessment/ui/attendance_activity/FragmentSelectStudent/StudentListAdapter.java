@@ -6,14 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.card.MaterialCardView;
 import com.kix.assessment.R;
 import com.kix.assessment.modal_classes.Modal_Student;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.MyViewHolder>{
     private List<Modal_Student> studnetList;
@@ -52,7 +52,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     @Override
     public void onBindViewHolder(@NonNull StudentListAdapter.MyViewHolder holder, int position) {
         Modal_Student modalStudnet = studnetList.get(position);
-        holder.tv_studName.setText(modalStudnet.getStud_Name());
+        holder.tv_studName.setText(modalStudnet.getStudName());
 //        holder.tv_studName.setSelected(false);
 
 /*        if(position==0){

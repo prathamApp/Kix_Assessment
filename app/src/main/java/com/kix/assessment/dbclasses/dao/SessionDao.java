@@ -1,14 +1,14 @@
 package com.kix.assessment.dbclasses.dao;
 
-import com.kix.assessment.modal_classes.Modal_Session;
-
-import java.util.List;
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.kix.assessment.modal_classes.Modal_Session;
+
+import java.util.List;
 
 @Dao
 public interface SessionDao {
@@ -19,7 +19,7 @@ public interface SessionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<Modal_Session> sessions);
 
-    @Query("UPDATE Session SET sentFlag = 1 where SessionID = :s_id")
+    @Query("UPDATE Session SET sentFlag = 1 where sessionId = :s_id")
     int updateFlag(String s_id);
 
     @Query("UPDATE Session SET sentFlag = 1")
@@ -34,10 +34,10 @@ public interface SessionDao {
     @Query("select * from Session where sentFlag=0")
     List<Modal_Session> getAllNewSessions();
 
-    @Query("UPDATE Session SET toDate = :toDate where SessionID = :SessionID")
+    @Query("UPDATE Session SET toDate = :toDate where sessionId = :SessionID")
     void UpdateToDate(String SessionID, String toDate);
 
-    @Query("select * from Session where SessionID = :SessionID")
+    @Query("select * from Session where sessionId = :SessionID")
     Modal_Session getSession(String SessionID);
 
 }

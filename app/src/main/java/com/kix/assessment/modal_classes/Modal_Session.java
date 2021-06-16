@@ -1,17 +1,17 @@
 package com.kix.assessment.modal_classes;
 
-import com.google.gson.annotations.SerializedName;
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "Session")
 public class Modal_Session {
     @PrimaryKey
     @NonNull
-    @SerializedName("SessionID")
-    public String SessionID;
+    @SerializedName("sessionId")
+    public String sessionId;
     @SerializedName("fromDate")
     public String fromDate;
     @SerializedName("toDate")
@@ -20,12 +20,12 @@ public class Modal_Session {
     public int sentFlag;
 
     @NonNull
-    public String getSessionID() {
-        return SessionID;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setSessionID(@NonNull String sessionID) {
-        SessionID = sessionID;
+    public void setSessionId(@NonNull String sessionId) {
+        this.sessionId = sessionId;
     }
 
     public String getFromDate() {

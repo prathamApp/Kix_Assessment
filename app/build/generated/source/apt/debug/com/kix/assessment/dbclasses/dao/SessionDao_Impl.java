@@ -33,15 +33,15 @@ public final class SessionDao_Impl implements SessionDao {
     this.__insertionAdapterOfModal_Session = new EntityInsertionAdapter<Modal_Session>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Session`(`SessionID`,`fromDate`,`toDate`,`sentFlag`) VALUES (?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Session`(`sessionId`,`fromDate`,`toDate`,`sentFlag`) VALUES (?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Session value) {
-        if (value.SessionID == null) {
+        if (value.sessionId == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.SessionID);
+          stmt.bindString(1, value.sessionId);
         }
         if (value.fromDate == null) {
           stmt.bindNull(2);
@@ -59,22 +59,22 @@ public final class SessionDao_Impl implements SessionDao {
     this.__deletionAdapterOfModal_Session = new EntityDeletionOrUpdateAdapter<Modal_Session>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `Session` WHERE `SessionID` = ?";
+        return "DELETE FROM `Session` WHERE `sessionId` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Session value) {
-        if (value.SessionID == null) {
+        if (value.sessionId == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.SessionID);
+          stmt.bindString(1, value.sessionId);
         }
       }
     };
     this.__preparedStmtOfUpdateFlag = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE Session SET sentFlag = 1 where SessionID = ?";
+        final String _query = "UPDATE Session SET sentFlag = 1 where sessionId = ?";
         return _query;
       }
     };
@@ -88,7 +88,7 @@ public final class SessionDao_Impl implements SessionDao {
     this.__preparedStmtOfUpdateToDate = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE Session SET toDate = ? where SessionID = ?";
+        final String _query = "UPDATE Session SET toDate = ? where sessionId = ?";
         return _query;
       }
     };
@@ -204,7 +204,7 @@ public final class SessionDao_Impl implements SessionDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfFromDate = _cursor.getColumnIndexOrThrow("fromDate");
       final int _cursorIndexOfToDate = _cursor.getColumnIndexOrThrow("toDate");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -212,7 +212,7 @@ public final class SessionDao_Impl implements SessionDao {
       while(_cursor.moveToNext()) {
         final Modal_Session _item;
         _item = new Modal_Session();
-        _item.SessionID = _cursor.getString(_cursorIndexOfSessionID);
+        _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
         _item.fromDate = _cursor.getString(_cursorIndexOfFromDate);
         _item.toDate = _cursor.getString(_cursorIndexOfToDate);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -227,7 +227,7 @@ public final class SessionDao_Impl implements SessionDao {
 
   @Override
   public Modal_Session getSession(String SessionID) {
-    final String _sql = "select * from Session where SessionID = ?";
+    final String _sql = "select * from Session where sessionId = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (SessionID == null) {
@@ -237,14 +237,14 @@ public final class SessionDao_Impl implements SessionDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfFromDate = _cursor.getColumnIndexOrThrow("fromDate");
       final int _cursorIndexOfToDate = _cursor.getColumnIndexOrThrow("toDate");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final Modal_Session _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Session();
-        _result.SessionID = _cursor.getString(_cursorIndexOfSessionID);
+        _result.sessionId = _cursor.getString(_cursorIndexOfSessionId);
         _result.fromDate = _cursor.getString(_cursorIndexOfFromDate);
         _result.toDate = _cursor.getString(_cursorIndexOfToDate);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);

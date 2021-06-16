@@ -5,6 +5,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
@@ -22,8 +24,6 @@ import org.androidannotations.annotations.ViewById;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.contentDao;
 import static com.kix.assessment.KIXApplication.surveyorDao;
@@ -78,11 +78,11 @@ public class Fragment_Svr_SignUp extends Fragment {
                 Toast.makeText(getActivity(), "Profile is already saved..", Toast.LENGTH_SHORT).show();
             } else {
                 Modal_Surveyor modal_surveyor = new Modal_Surveyor();
-                modal_surveyor.setSvr_Name(tv_svrName.getText().toString());
-                modal_surveyor.setSvr_Email(tv_svrEmail.getText().toString());
-                modal_surveyor.setSvr_Mobile(tv_svrMobile.getText().toString());
-                modal_surveyor.setSvr_Password(tv_svrPassword.getText().toString());
-                modal_surveyor.setSvr_Code(String.valueOf(KIX_Utility.getUUID()));
+                modal_surveyor.setSvrName(tv_svrName.getText().toString());
+                modal_surveyor.setSvrEmail(tv_svrEmail.getText().toString());
+                modal_surveyor.setSvrMobile(tv_svrMobile.getText().toString());
+                modal_surveyor.setSvrPassword(tv_svrPassword.getText().toString());
+                modal_surveyor.setSvrCode(String.valueOf(KIX_Utility.getUUID()));
 //                modal_surveyor.setSvr_Booklet(spinner_booklet.getSelectedItem().toString());
                 modal_surveyor.setSentFlag(0);
                 surveyorDao.insertSurveyor(modal_surveyor);

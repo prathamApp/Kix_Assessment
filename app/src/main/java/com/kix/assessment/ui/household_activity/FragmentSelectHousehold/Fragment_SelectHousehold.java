@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.UiThread;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -23,10 +27,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
-
-import androidx.annotation.UiThread;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 @EFragment(R.layout.fragment_select_household)
 public class Fragment_SelectHousehold extends Fragment implements ContractHouseholdList {
@@ -50,7 +50,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         Log.e("KIX : ","selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
-        add_household.setHouseHold_Name("Add Village");
+        add_household.setHouseholdName("Add Village");
         if (!households.contains(add_household)){
             households.add(add_household);
         }
@@ -84,7 +84,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
             Modal_Household modalHousehold = householdListAdapter.getitem(position);
             Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
             intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.HouseHold_ID);
+            intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.householdId);
             startActivity(intent);
         }
     }

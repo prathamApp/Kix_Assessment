@@ -6,6 +6,10 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.UiThread;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kix.assessment.R;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
@@ -26,10 +30,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
-
-import androidx.annotation.UiThread;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import static com.kix.assessment.KIXApplication.attendanceDao;
 import static com.kix.assessment.KIXApplication.sessionDao;
@@ -69,7 +69,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
 
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCode(surveyorCode,householdID);
-        add_student.setStud_Name("Add Student");
+        add_student.setStudName("Add Student");
         if (!students.contains(add_student)){
             students.add(add_student);
         }
@@ -108,7 +108,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
                 FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
                 markAttendance(modalStudnet);
                 Intent intent = new Intent(getActivity(), WebViewActivity_.class);
-                intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.Stud_Name);
+                intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.studName);
                 startActivity(intent);
             } else {
                 Toast.makeText(getActivity(), "Please Select Booklet First!", Toast.LENGTH_SHORT).show();
@@ -125,14 +125,14 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         //</editor-fold>
         ArrayList<Attendance> attendances = new ArrayList<>();
         Attendance attendance = new Attendance();
-        attendance.SessionID = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
-        attendance.StudentID = stud.getStud_Id();
-        attendance.Date = KIX_Utility.getCurrentDateTime();
+        attendance.sessionId = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
+        attendance.studentId = stud.getStud_Id();
+        attendance.date = KIX_Utility.getCurrentDateTime();
         attendance.sentFlag = 0;
         attendances.add(attendance);
         attendanceDao.insertAttendance(attendances);
         Modal_Session s = new Modal_Session();
-        s.setSessionID(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
+        s.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
         s.setFromDate(KIX_Utility.getCurrentDateTime());
         s.setToDate("NA");
         sessionDao.insert(s);

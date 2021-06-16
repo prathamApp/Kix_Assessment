@@ -6,7 +6,6 @@ import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.kix.assessment.modal_classes.Modal_Country;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -29,11 +28,7 @@ public final class CountryDao_Impl implements CountryDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Country value) {
-        if (value.getCountryId() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindLong(1, value.getCountryId());
-        }
+        stmt.bindLong(1, value.getCountryId());
         if (value.getCountryName() == null) {
           stmt.bindNull(2);
         } else {
@@ -66,12 +61,8 @@ public final class CountryDao_Impl implements CountryDao {
       while(_cursor.moveToNext()) {
         final Modal_Country _item;
         _item = new Modal_Country();
-        final Integer _tmpCountryId;
-        if (_cursor.isNull(_cursorIndexOfCountryId)) {
-          _tmpCountryId = null;
-        } else {
-          _tmpCountryId = _cursor.getInt(_cursorIndexOfCountryId);
-        }
+        final long _tmpCountryId;
+        _tmpCountryId = _cursor.getLong(_cursorIndexOfCountryId);
         _item.setCountryId(_tmpCountryId);
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);

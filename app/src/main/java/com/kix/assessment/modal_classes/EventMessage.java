@@ -1,7 +1,5 @@
 package com.kix.assessment.modal_classes;
 
-import com.kix.assessment.temp.Modal_FileDownloading;
-
 public class EventMessage {
 	
     private String message;

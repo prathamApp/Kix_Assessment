@@ -28,28 +28,28 @@ public final class AttendanceDao_Impl implements AttendanceDao {
     this.__insertionAdapterOfAttendance = new EntityInsertionAdapter<Attendance>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Attendance`(`AttendanceID`,`SessionID`,`StudentID`,`Date`,`Present`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Attendance`(`attendanceId`,`sessionId`,`studentId`,`date`,`present`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Attendance value) {
-        stmt.bindLong(1, value.AttendanceID);
-        if (value.SessionID == null) {
+        stmt.bindLong(1, value.attendanceId);
+        if (value.sessionId == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.SessionID);
+          stmt.bindString(2, value.sessionId);
         }
-        if (value.StudentID == null) {
+        if (value.studentId == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.StudentID);
+          stmt.bindString(3, value.studentId);
         }
-        if (value.Date == null) {
+        if (value.date == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.Date);
+          stmt.bindString(4, value.date);
         }
-        stmt.bindLong(5, value.Present);
+        stmt.bindLong(5, value.present);
         stmt.bindLong(6, value.sentFlag);
       }
     };
@@ -63,7 +63,7 @@ public final class AttendanceDao_Impl implements AttendanceDao {
     this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE Attendance SET sentFlag=1 WHERE SessionID=?";
+        final String _query = "UPDATE Attendance SET sentFlag=1 WHERE sessionId=?";
         return _query;
       }
     };
@@ -118,21 +118,21 @@ public final class AttendanceDao_Impl implements AttendanceDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfAttendanceID = _cursor.getColumnIndexOrThrow("AttendanceID");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("Date");
-      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("Present");
+      final int _cursorIndexOfAttendanceId = _cursor.getColumnIndexOrThrow("attendanceId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
+      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("present");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Attendance> _result = new ArrayList<Attendance>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Attendance _item;
         _item = new Attendance();
-        _item.AttendanceID = _cursor.getInt(_cursorIndexOfAttendanceID);
-        _item.SessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.StudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.Date = _cursor.getString(_cursorIndexOfDate);
-        _item.Present = _cursor.getInt(_cursorIndexOfPresent);
+        _item.attendanceId = _cursor.getInt(_cursorIndexOfAttendanceId);
+        _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.date = _cursor.getString(_cursorIndexOfDate);
+        _item.present = _cursor.getInt(_cursorIndexOfPresent);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }
@@ -145,7 +145,7 @@ public final class AttendanceDao_Impl implements AttendanceDao {
 
   @Override
   public List<Attendance> getNewAttendances(String s_id) {
-    final String _sql = "SELECT * FROM Attendance WHERE sentFlag=0 AND SessionID=?";
+    final String _sql = "SELECT * FROM Attendance WHERE sentFlag=0 AND sessionId=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (s_id == null) {
@@ -155,21 +155,21 @@ public final class AttendanceDao_Impl implements AttendanceDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfAttendanceID = _cursor.getColumnIndexOrThrow("AttendanceID");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("Date");
-      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("Present");
+      final int _cursorIndexOfAttendanceId = _cursor.getColumnIndexOrThrow("attendanceId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
+      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("present");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Attendance> _result = new ArrayList<Attendance>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Attendance _item;
         _item = new Attendance();
-        _item.AttendanceID = _cursor.getInt(_cursorIndexOfAttendanceID);
-        _item.SessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.StudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.Date = _cursor.getString(_cursorIndexOfDate);
-        _item.Present = _cursor.getInt(_cursorIndexOfPresent);
+        _item.attendanceId = _cursor.getInt(_cursorIndexOfAttendanceId);
+        _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.date = _cursor.getString(_cursorIndexOfDate);
+        _item.present = _cursor.getInt(_cursorIndexOfPresent);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }
@@ -186,21 +186,21 @@ public final class AttendanceDao_Impl implements AttendanceDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfAttendanceID = _cursor.getColumnIndexOrThrow("AttendanceID");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("Date");
-      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("Present");
+      final int _cursorIndexOfAttendanceId = _cursor.getColumnIndexOrThrow("attendanceId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDate = _cursor.getColumnIndexOrThrow("date");
+      final int _cursorIndexOfPresent = _cursor.getColumnIndexOrThrow("present");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Attendance> _result = new ArrayList<Attendance>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Attendance _item;
         _item = new Attendance();
-        _item.AttendanceID = _cursor.getInt(_cursorIndexOfAttendanceID);
-        _item.SessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.StudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.Date = _cursor.getString(_cursorIndexOfDate);
-        _item.Present = _cursor.getInt(_cursorIndexOfPresent);
+        _item.attendanceId = _cursor.getInt(_cursorIndexOfAttendanceId);
+        _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.date = _cursor.getString(_cursorIndexOfDate);
+        _item.present = _cursor.getInt(_cursorIndexOfPresent);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }

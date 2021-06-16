@@ -65,25 +65,25 @@ public class KixSmartSync { //extends AutoSync {
             for (Modal_Session session : newSessions) {
                 //fetch all logs
                 JSONArray logArray = new JSONArray();
-                List<Modal_Log> allLogs = logDao.getAllLogs(session.getSessionID());
+                List<Modal_Log> allLogs = logDao.getAllLogs(session.getSessionId());
                 for (Modal_Log log : allLogs)
                     logArray.put(new JSONObject(gson.toJson(log)));
 
                 //fetch attendance
                 JSONArray attendanceArray = new JSONArray();
-                List<Attendance> newAttendance = attendanceDao.getNewAttendances(session.getSessionID());
+                List<Attendance> newAttendance = attendanceDao.getNewAttendances(session.getSessionId());
                 for (Attendance att : newAttendance) {
                     attendanceArray.put(new JSONObject(gson.toJson(att)));
                 }
                 //fetch Scores & convert to Json Array
                 JSONArray scoreArray = new JSONArray();
-                List<Score> newScores = scoreDao.getAllNewScores(session.getSessionID());
+                List<Score> newScores = scoreDao.getAllNewScores(session.getSessionId());
                 for (Score score : newScores) {
                     scoreArray.put(new JSONObject(gson.toJson(score)));
                 }
                 // fetch Session Data
                 JSONObject sessionJson = new JSONObject();
-                sessionJson.put(Kix_Constant.SESSIONID, session.getSessionID());
+                sessionJson.put(Kix_Constant.SESSIONID, session.getSessionId());
                 sessionJson.put(Kix_Constant.FROMDATE, session.getFromDate());
                 sessionJson.put(Kix_Constant.TODATE, session.getToDate());
                 sessionJson.put(Kix_Constant.SCORE, scoreArray);

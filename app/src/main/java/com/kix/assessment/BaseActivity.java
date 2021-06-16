@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.kix.assessment.async.CopyDbToOTG;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
@@ -26,9 +29,6 @@ import com.kix.assessment.modal_classes.Score;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import static com.kix.assessment.KIXApplication.attendanceDao;
 import static com.kix.assessment.KIXApplication.householdDao;
@@ -198,10 +198,10 @@ public class BaseActivity extends AppCompatActivity {
                         studentDao.updateSentStudentFlags(student.getStud_Id());
                 if (pushedData.getSurveyors() != null)
                     for (Modal_Surveyor surveyor : pushedData.getSurveyors())
-                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvr_Code());
+                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvrCode());
                 if (pushedData.getHouseholds() != null)
                     for (Modal_Household household : pushedData.getHouseholds())
-                        householdDao.updateSentHouseholdFlags(household.getHouseHold_ID());
+                        householdDao.updateSentHouseholdFlags(household.getHouseholdId());
 
                 BackupDatabase.backup(KIXApplication.getInstance());
             } else

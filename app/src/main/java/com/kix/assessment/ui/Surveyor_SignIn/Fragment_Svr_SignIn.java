@@ -5,6 +5,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -19,8 +21,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
 
 @EFragment(R.layout.fragment_svr_sign_in)
 public class Fragment_Svr_SignIn extends Fragment {
@@ -54,10 +54,10 @@ public class Fragment_Svr_SignIn extends Fragment {
                 Toast.makeText(getActivity(), "Invalid Email or Password.", Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(getActivity(), Activity_Household_.class);
-                intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorLogin.getSvr_Code());
-                FastSave.getInstance().saveString(Kix_Constant.BOOKLET,surveyorLogin.getSvr_Booklet());
-                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_NAME,surveyorLogin.getSvr_Name());
-                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_CODE,surveyorLogin.getSvr_Code());
+                intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorLogin.getSvrCode());
+                FastSave.getInstance().saveString(Kix_Constant.BOOKLET,surveyorLogin.getSvrBooklet());
+                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_NAME,surveyorLogin.getSvrName());
+                FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_CODE,surveyorLogin.getSvrCode());
                 startActivity(intent);
                 Toast.makeText(getActivity(), "Login Success..", Toast.LENGTH_SHORT).show();
             }

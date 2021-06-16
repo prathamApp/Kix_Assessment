@@ -3,10 +3,11 @@ package com.kix.assessment.kix_utils;
 public class Kix_Constant {
 
 
-    public static final String PUSH_API = "http://13.76.6.250:81/upload";
-    public static final String COUNTRY_API = "http://13.76.6.250:81/countries";
-    public static final String LANGUAGE_API = "http://13.76.6.250:81/languagesByCountries/";
-    public static final String BOOKLET_API = "http://13.76.6.250:81/bookletsByLanguages/";
+    public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
+    public static final String COUNTRY_API = "http://13.76.6.250:81/kix/countries";
+    public static final String LANGUAGE_API = "http://13.76.6.250:81/kix/languagesByCountries/";
+    public static final String BOOKLET_API = "http://13.76.6.250:81/kix/bookletsByLanguages/";
+    public static final String DOWNLOAD_BOOKLET_API = "http://13.76.6.250:81/kix/contentByBooklet/";
 
     public static final String KIX_BACKUP = "KixBackup";
     public static final String SURVEYOR_CODE = "SurveyorCode";
@@ -42,11 +43,6 @@ public class Kix_Constant {
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
 
-    public static final String DEVICE_ID_STR = "&deviceid=";
-    public static final String STUDENT_ID_STR = "&student_id=";
-    public static final String INTERNET_DOWNLOAD_RESOURCE = "internet_download_resource";
-    public static final String INTERNET_DOWNLOAD_RESOURCE_API = "http://devposapi.prathamopenschool.org/api/content/downloadv2?id=";
-    public static final String DOWNLOAD_BOOKLET_API = "http://13.76.6.250:81/contentByBooklet/";
     public static final String FILE_DOWNLOAD_STARTED = "file_download_started";
     public static final String RESPONSE_CODE_ERROR = "response_code_error";
     public static final String FILE_DOWNLOAD_ERROR = "file_download_error";

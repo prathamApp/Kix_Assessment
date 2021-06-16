@@ -1,26 +1,26 @@
 package com.kix.assessment.modal_classes;
 
-import com.google.gson.annotations.SerializedName;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "Booklet")
 public class Modal_Booklet {
 
     @PrimaryKey
     @SerializedName("bookletId")
-    private Integer bookletId;
+    private long bookletId;
     @SerializedName("bookletName")
     private String bookletName;
     @SerializedName("languageName")
     private String languageName;
 
-    public Integer getBookletId() {
+    public long getBookletId() {
         return bookletId;
     }
 
-    public void setBookletId(Integer bookletId) {
+    public void setBookletId(long bookletId) {
         this.bookletId = bookletId;
     }
 

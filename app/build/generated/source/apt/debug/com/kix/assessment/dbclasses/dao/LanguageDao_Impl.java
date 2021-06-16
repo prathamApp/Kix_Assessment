@@ -6,7 +6,6 @@ import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.kix.assessment.modal_classes.Modal_Language;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -29,11 +28,7 @@ public final class LanguageDao_Impl implements LanguageDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Language value) {
-        if (value.getLanguageId() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindLong(1, value.getLanguageId());
-        }
+        stmt.bindLong(1, value.getLanguageId());
         if (value.getLanguageCode() == null) {
           stmt.bindNull(2);
         } else {
@@ -78,12 +73,8 @@ public final class LanguageDao_Impl implements LanguageDao {
       while(_cursor.moveToNext()) {
         final Modal_Language _item;
         _item = new Modal_Language();
-        final Integer _tmpLanguageId;
-        if (_cursor.isNull(_cursorIndexOfLanguageId)) {
-          _tmpLanguageId = null;
-        } else {
-          _tmpLanguageId = _cursor.getInt(_cursorIndexOfLanguageId);
-        }
+        final long _tmpLanguageId;
+        _tmpLanguageId = _cursor.getLong(_cursorIndexOfLanguageId);
         _item.setLanguageId(_tmpLanguageId);
         final String _tmpLanguageCode;
         _tmpLanguageCode = _cursor.getString(_cursorIndexOfLanguageCode);

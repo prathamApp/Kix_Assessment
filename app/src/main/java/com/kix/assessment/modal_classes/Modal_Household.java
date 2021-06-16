@@ -10,23 +10,23 @@ import androidx.room.PrimaryKey;
 public class Modal_Household implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
-    public int hh_ID;
-    public String HouseHold_ID;
-    public String HouseHold_Name;
-    public String HouseHold_District;
-    public String HouseHold_State;
-    public String HouseHold_Address;
-    public String Svr_Code;
+    public int hhId;
+    public String householdId;
+    public String householdName;
+    public String householdDistrict;
+    public String householdState;
+    public String householdAddress;
+    public String svrCode;
     public int sentFlag;
 
     protected Modal_Household(Parcel in) {
-        hh_ID = in.readInt();
-        HouseHold_ID = in.readString();
-        HouseHold_Name = in.readString();
-        HouseHold_District = in.readString();
-        HouseHold_State = in.readString();
-        HouseHold_Address = in.readString();
-        Svr_Code = in.readString();
+        hhId = in.readInt();
+        householdId = in.readString();
+        householdName = in.readString();
+        householdDistrict = in.readString();
+        householdState = in.readString();
+        householdAddress = in.readString();
+        svrCode = in.readString();
         sentFlag = in.readInt();
     }
 
@@ -45,50 +45,50 @@ public class Modal_Household implements Comparable, Parcelable {
     public Modal_Household() {
     }
 
-    public int getHh_ID() {
-        return hh_ID;
+    public int getHhId() {
+        return hhId;
     }
 
-    public void setHh_ID(int hh_ID) {
-        this.hh_ID = hh_ID;
+    public void setHhId(int hhId) {
+        this.hhId = hhId;
     }
 
-    public String getHouseHold_ID() {
-        return HouseHold_ID;
+    public String getHouseholdId() {
+        return householdId;
     }
 
-    public void setHouseHold_ID(String HouseHold_ID) {
-        this.HouseHold_ID = HouseHold_ID;
+    public void setHouseholdId(String HouseHold_ID) {
+        this.householdId = HouseHold_ID;
     }
 
-    public String getHouseHold_Name() {
-        return HouseHold_Name;
+    public String getHouseholdName() {
+        return householdName;
     }
 
-    public void setHouseHold_Name(String houseHold_Name) {
-        this.HouseHold_Name = houseHold_Name;
+    public void setHouseholdName(String householdName) {
+        this.householdName = householdName;
     }
 
-    public String getHouseHold_District() { return HouseHold_District; }
+    public String getHouseholdDistrict() { return householdDistrict; }
 
-    public void setHouseHold_District(String houseHold_District) { HouseHold_District = houseHold_District; }
+    public void setHouseholdDistrict(String householdDistrict) { this.householdDistrict = householdDistrict; }
 
-    public String getHouseHold_State() { return HouseHold_State; }
+    public String getHouseholdState() { return householdState; }
 
-    public void setHouseHold_State(String houseHold_State) { HouseHold_State = houseHold_State; }
+    public void setHouseholdState(String householdState) { this.householdState = householdState; }
 
-    public String getHouseHold_Address() {
-        return HouseHold_Address;
+    public String getHouseholdAddress() {
+        return householdAddress;
     }
 
-    public void setHouseHold_Address(String HouseHold_Address) { this.HouseHold_Address = HouseHold_Address; }
+    public void setHouseholdAddress(String HouseHold_Address) { this.householdAddress = HouseHold_Address; }
 
-    public String getSvr_Code() {
-        return Svr_Code;
+    public String getSvrCode() {
+        return svrCode;
     }
 
-    public void setSvr_Code(String svr_Code) {
-        Svr_Code = svr_Code;
+    public void setSvrCode(String svrCode) {
+        this.svrCode = svrCode;
     }
 
     public int getSentFlag() { return sentFlag; }
@@ -106,11 +106,11 @@ public class Modal_Household implements Comparable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(hh_ID);
-        dest.writeString(HouseHold_ID);
-        dest.writeString(HouseHold_Name);
-        dest.writeString(HouseHold_Address);
-        dest.writeString(Svr_Code);
+        dest.writeInt(hhId);
+        dest.writeString(householdId);
+        dest.writeString(householdName);
+        dest.writeString(householdAddress);
+        dest.writeString(svrCode);
         dest.writeInt(sentFlag);
     }
 

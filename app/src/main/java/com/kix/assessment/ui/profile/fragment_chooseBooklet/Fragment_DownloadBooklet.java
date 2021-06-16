@@ -24,8 +24,8 @@ import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Booklet;
 import com.kix.assessment.modal_classes.Modal_Country;
+import com.kix.assessment.modal_classes.Modal_FileDownloading;
 import com.kix.assessment.modal_classes.Modal_Language;
-import com.kix.assessment.temp.Modal_FileDownloading;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;

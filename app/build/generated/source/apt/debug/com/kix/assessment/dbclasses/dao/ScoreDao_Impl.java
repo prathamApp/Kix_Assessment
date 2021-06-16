@@ -36,31 +36,31 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__insertionAdapterOfScore = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Score`(`ScoreId`,`SessionID`,`StudentID`,`DeviceID`,`ResourceID`,`ScoredMarks`,`StartDateTime`,`EndDateTime`,`Label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Score value) {
         stmt.bindLong(1, value.getScoreId());
-        if (value.getSessionID() == null) {
+        if (value.getSessionId() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getSessionID());
+          stmt.bindString(2, value.getSessionId());
         }
-        if (value.getStudentID() == null) {
+        if (value.getStudentId() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getStudentID());
+          stmt.bindString(3, value.getStudentId());
         }
-        if (value.getDeviceID() == null) {
+        if (value.getDeviceId() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getDeviceID());
+          stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceID() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceID());
+          stmt.bindString(5, value.getResourceId());
         }
         if (value.getScoredMarks() == null) {
           stmt.bindNull(6);
@@ -88,31 +88,31 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__insertionAdapterOfScore_1 = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Score`(`ScoreId`,`SessionID`,`StudentID`,`DeviceID`,`ResourceID`,`ScoredMarks`,`StartDateTime`,`EndDateTime`,`Label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Score value) {
         stmt.bindLong(1, value.getScoreId());
-        if (value.getSessionID() == null) {
+        if (value.getSessionId() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getSessionID());
+          stmt.bindString(2, value.getSessionId());
         }
-        if (value.getStudentID() == null) {
+        if (value.getStudentId() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getStudentID());
+          stmt.bindString(3, value.getStudentId());
         }
-        if (value.getDeviceID() == null) {
+        if (value.getDeviceId() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getDeviceID());
+          stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceID() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceID());
+          stmt.bindString(5, value.getResourceId());
         }
         if (value.getScoredMarks() == null) {
           stmt.bindNull(6);
@@ -140,7 +140,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__deletionAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `Score` WHERE `ScoreId` = ?";
+        return "DELETE FROM `Score` WHERE `scoreId` = ?";
       }
 
       @Override
@@ -151,31 +151,31 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__updateAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Score` SET `ScoreId` = ?,`SessionID` = ?,`StudentID` = ?,`DeviceID` = ?,`ResourceID` = ?,`ScoredMarks` = ?,`StartDateTime` = ?,`EndDateTime` = ?,`Label` = ?,`sentFlag` = ? WHERE `ScoreId` = ?";
+        return "UPDATE OR ABORT `Score` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Score value) {
         stmt.bindLong(1, value.getScoreId());
-        if (value.getSessionID() == null) {
+        if (value.getSessionId() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getSessionID());
+          stmt.bindString(2, value.getSessionId());
         }
-        if (value.getStudentID() == null) {
+        if (value.getStudentId() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getStudentID());
+          stmt.bindString(3, value.getStudentId());
         }
-        if (value.getDeviceID() == null) {
+        if (value.getDeviceId() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getDeviceID());
+          stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceID() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceID());
+          stmt.bindString(5, value.getResourceId());
         }
         if (value.getScoredMarks() == null) {
           stmt.bindNull(6);
@@ -211,7 +211,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__preparedStmtOfUpdateFlag = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE Score SET sentFlag = 1 where SessionID = ?";
+        final String _query = "UPDATE Score SET sentFlag = 1 where sessionId = ?";
         return _query;
       }
     };
@@ -325,15 +325,15 @@ public final class ScoreDao_Impl implements ScoreDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("ScoreId");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDeviceID = _cursor.getColumnIndexOrThrow("DeviceID");
-      final int _cursorIndexOfResourceID = _cursor.getColumnIndexOrThrow("ResourceID");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("ScoredMarks");
-      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("StartDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("EndDateTime");
-      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("Label");
+      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("scoreId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
+      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -342,18 +342,18 @@ public final class ScoreDao_Impl implements ScoreDao {
         final int _tmpScoreId;
         _tmpScoreId = _cursor.getInt(_cursorIndexOfScoreId);
         _item.setScoreId(_tmpScoreId);
-        final String _tmpSessionID;
-        _tmpSessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.setSessionID(_tmpSessionID);
-        final String _tmpStudentID;
-        _tmpStudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.setStudentID(_tmpStudentID);
-        final String _tmpDeviceID;
-        _tmpDeviceID = _cursor.getString(_cursorIndexOfDeviceID);
-        _item.setDeviceID(_tmpDeviceID);
-        final String _tmpResourceID;
-        _tmpResourceID = _cursor.getString(_cursorIndexOfResourceID);
-        _item.setResourceID(_tmpResourceID);
+        final String _tmpSessionId;
+        _tmpSessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.setSessionId(_tmpSessionId);
+        final String _tmpStudentId;
+        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.setStudentId(_tmpStudentId);
+        final String _tmpDeviceId;
+        _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
+        _item.setDeviceId(_tmpDeviceId);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -381,7 +381,7 @@ public final class ScoreDao_Impl implements ScoreDao {
   @Override
   public List<Score> getScoreByStudIDAndResID(String currentStudentID, String resourceId,
       String label) {
-    final String _sql = "select * from Score where StudentID=? AND ResourceID=? AND Label=?";
+    final String _sql = "select * from Score where studentId=? AND resourceId=? AND label=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 3);
     int _argIndex = 1;
     if (currentStudentID == null) {
@@ -403,15 +403,15 @@ public final class ScoreDao_Impl implements ScoreDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("ScoreId");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDeviceID = _cursor.getColumnIndexOrThrow("DeviceID");
-      final int _cursorIndexOfResourceID = _cursor.getColumnIndexOrThrow("ResourceID");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("ScoredMarks");
-      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("StartDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("EndDateTime");
-      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("Label");
+      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("scoreId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
+      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -420,18 +420,18 @@ public final class ScoreDao_Impl implements ScoreDao {
         final int _tmpScoreId;
         _tmpScoreId = _cursor.getInt(_cursorIndexOfScoreId);
         _item.setScoreId(_tmpScoreId);
-        final String _tmpSessionID;
-        _tmpSessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.setSessionID(_tmpSessionID);
-        final String _tmpStudentID;
-        _tmpStudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.setStudentID(_tmpStudentID);
-        final String _tmpDeviceID;
-        _tmpDeviceID = _cursor.getString(_cursorIndexOfDeviceID);
-        _item.setDeviceID(_tmpDeviceID);
-        final String _tmpResourceID;
-        _tmpResourceID = _cursor.getString(_cursorIndexOfResourceID);
-        _item.setResourceID(_tmpResourceID);
+        final String _tmpSessionId;
+        _tmpSessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.setSessionId(_tmpSessionId);
+        final String _tmpStudentId;
+        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.setStudentId(_tmpStudentId);
+        final String _tmpDeviceId;
+        _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
+        _item.setDeviceId(_tmpDeviceId);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -462,15 +462,15 @@ public final class ScoreDao_Impl implements ScoreDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("ScoreId");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDeviceID = _cursor.getColumnIndexOrThrow("DeviceID");
-      final int _cursorIndexOfResourceID = _cursor.getColumnIndexOrThrow("ResourceID");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("ScoredMarks");
-      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("StartDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("EndDateTime");
-      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("Label");
+      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("scoreId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
+      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -479,18 +479,18 @@ public final class ScoreDao_Impl implements ScoreDao {
         final int _tmpScoreId;
         _tmpScoreId = _cursor.getInt(_cursorIndexOfScoreId);
         _item.setScoreId(_tmpScoreId);
-        final String _tmpSessionID;
-        _tmpSessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.setSessionID(_tmpSessionID);
-        final String _tmpStudentID;
-        _tmpStudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.setStudentID(_tmpStudentID);
-        final String _tmpDeviceID;
-        _tmpDeviceID = _cursor.getString(_cursorIndexOfDeviceID);
-        _item.setDeviceID(_tmpDeviceID);
-        final String _tmpResourceID;
-        _tmpResourceID = _cursor.getString(_cursorIndexOfResourceID);
-        _item.setResourceID(_tmpResourceID);
+        final String _tmpSessionId;
+        _tmpSessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.setSessionId(_tmpSessionId);
+        final String _tmpStudentId;
+        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.setStudentId(_tmpStudentId);
+        final String _tmpDeviceId;
+        _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
+        _item.setDeviceId(_tmpDeviceId);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -517,7 +517,7 @@ public final class ScoreDao_Impl implements ScoreDao {
 
   @Override
   public List<Score> getAllNewScores(String s_id) {
-    final String _sql = "select * from Score where sentFlag = 0 AND SessionID=?";
+    final String _sql = "select * from Score where sentFlag = 0 AND sessionId=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (s_id == null) {
@@ -527,15 +527,15 @@ public final class ScoreDao_Impl implements ScoreDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("ScoreId");
-      final int _cursorIndexOfSessionID = _cursor.getColumnIndexOrThrow("SessionID");
-      final int _cursorIndexOfStudentID = _cursor.getColumnIndexOrThrow("StudentID");
-      final int _cursorIndexOfDeviceID = _cursor.getColumnIndexOrThrow("DeviceID");
-      final int _cursorIndexOfResourceID = _cursor.getColumnIndexOrThrow("ResourceID");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("ScoredMarks");
-      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("StartDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("EndDateTime");
-      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("Label");
+      final int _cursorIndexOfScoreId = _cursor.getColumnIndexOrThrow("scoreId");
+      final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
+      final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -544,18 +544,18 @@ public final class ScoreDao_Impl implements ScoreDao {
         final int _tmpScoreId;
         _tmpScoreId = _cursor.getInt(_cursorIndexOfScoreId);
         _item.setScoreId(_tmpScoreId);
-        final String _tmpSessionID;
-        _tmpSessionID = _cursor.getString(_cursorIndexOfSessionID);
-        _item.setSessionID(_tmpSessionID);
-        final String _tmpStudentID;
-        _tmpStudentID = _cursor.getString(_cursorIndexOfStudentID);
-        _item.setStudentID(_tmpStudentID);
-        final String _tmpDeviceID;
-        _tmpDeviceID = _cursor.getString(_cursorIndexOfDeviceID);
-        _item.setDeviceID(_tmpDeviceID);
-        final String _tmpResourceID;
-        _tmpResourceID = _cursor.getString(_cursorIndexOfResourceID);
-        _item.setResourceID(_tmpResourceID);
+        final String _tmpSessionId;
+        _tmpSessionId = _cursor.getString(_cursorIndexOfSessionId);
+        _item.setSessionId(_tmpSessionId);
+        final String _tmpStudentId;
+        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.setStudentId(_tmpStudentId);
+        final String _tmpDeviceId;
+        _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
+        _item.setDeviceId(_tmpDeviceId);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -582,11 +582,11 @@ public final class ScoreDao_Impl implements ScoreDao {
 
   @Override
   public List<Modal_StudentDetails> getProfileData(String svrCode) {
-    final String _sql = "select Student.Stud_Name as StudentName, Household.houseHold_Name as HouseholdName, count(DISTINCT(Score.SessionID)) as ExamsGiven from Score\n"
-            + "INNER JOIN Student on Score.StudentID = Student.StudentID\n"
-            + "INNER JOIN Household on Household.houseHold_ID = Student.houseHold_ID\n"
-            + "INNER JOIN Surveyor on Surveyor.Svr_Code= Household.Svr_Code\n"
-            + "WHERE Surveyor.Svr_Code=? GROUP by Student.Stud_Name, Surveyor.Svr_Name";
+    final String _sql = "select Student.studName as StudentName, Household.householdName as HouseholdName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n"
+            + "INNER JOIN Student on Score.studentId = Student.studId\n"
+            + "INNER JOIN Household on Household.householdId = Student.householdId\n"
+            + "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n"
+            + "WHERE Surveyor.svrCode=? GROUP by Student.studName, Surveyor.svrName";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (svrCode == null) {

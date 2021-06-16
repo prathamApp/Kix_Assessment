@@ -11,24 +11,24 @@ import java.io.Serializable;
 public class Score implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "ScoreId")
-    private int ScoreId;
-    @ColumnInfo(name = "SessionID")
-    private String SessionID;
-    @ColumnInfo(name = "StudentID")
-    private String StudentID;
-    @ColumnInfo(name = "DeviceID")
-    private String DeviceID;
-    @ColumnInfo(name = "ResourceID")
-    private String ResourceID;
-    @ColumnInfo(name = "ScoredMarks")
-    private String ScoredMarks;
-    @ColumnInfo(name = "StartDateTime")
-    private String StartDateTime;
-    @ColumnInfo(name = "EndDateTime")
-    private String EndDateTime;
-    @ColumnInfo(name = "Label")
-    private String Label;
+    @ColumnInfo(name = "scoreId")
+    private int scoreId;
+    @ColumnInfo(name = "sessionId")
+    private String sessionId;
+    @ColumnInfo(name = "studentId")
+    private String studentId;
+    @ColumnInfo(name = "deviceId")
+    private String deviceId;
+    @ColumnInfo(name = "resourceId")
+    private String resourceId;
+    @ColumnInfo(name = "scoredMarks")
+    private String scoredMarks;
+    @ColumnInfo(name = "startDateTime")
+    private String startDateTime;
+    @ColumnInfo(name = "endDateTime")
+    private String endDateTime;
+    @ColumnInfo(name = "label")
+    private String label;
     @ColumnInfo(name = "sentFlag")
     private int sentFlag;
 
@@ -36,14 +36,14 @@ public class Score implements Serializable {
     @Override
     public String toString() {
         return "Score{" +
-                "ScoreId='" + ScoreId + '\'' +
-                ", SessionID='" + SessionID + '\'' +
-                ", StudentID='" + StudentID + '\'' +
-                ", DeviceId='" + DeviceID + '\'' +
-                ", ResourceID='" + ResourceID + '\'' +
-                ", ScoredMarks=" + ScoredMarks +
-                ", StartDateTime='" + StartDateTime + '\'' +
-                ", EndDateTime='" + EndDateTime + '\'' +
+                "ScoreId='" + scoreId + '\'' +
+                ", SessionID='" + sessionId + '\'' +
+                ", StudentID='" + studentId + '\'' +
+                ", DeviceId='" + deviceId + '\'' +
+                ", ResourceID='" + resourceId + '\'' +
+                ", ScoredMarks=" + scoredMarks +
+                ", StartDateTime='" + startDateTime + '\'' +
+                ", EndDateTime='" + endDateTime + '\'' +
                 '}';
     }
 
@@ -57,74 +57,74 @@ public class Score implements Serializable {
 
     @NonNull
     public int getScoreId() {
-        return ScoreId;
+        return scoreId;
     }
 
     public void setScoreId(@NonNull int scoreId) {
-        ScoreId = scoreId;
+        this.scoreId = scoreId;
     }
 
-    public String getSessionID() {
-        return SessionID;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setSessionID(String sessionID) {
-        SessionID = sessionID;
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 
-    public String getStudentID() {
-        return StudentID;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStudentID(String studentID) {
-        StudentID = studentID;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getDeviceID() {
-        return DeviceID;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    public void setDeviceID(String deviceID) {
-        DeviceID = deviceID;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
-    public String getResourceID() {
-        return ResourceID;
+    public String getResourceId() {
+        return resourceId;
     }
 
-    public void setResourceID(String resourceID) {
-        ResourceID = resourceID;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     public String getScoredMarks() {
-        return ScoredMarks;
+        return scoredMarks;
     }
 
     public void setScoredMarks(String scoredMarks) {
-        ScoredMarks = scoredMarks;
+        this.scoredMarks = scoredMarks;
     }
 
     public String getStartDateTime() {
-        return StartDateTime;
+        return startDateTime;
     }
 
     public void setStartDateTime(String startDateTime) {
-        StartDateTime = startDateTime;
+        this.startDateTime = startDateTime;
     }
 
     public String getEndDateTime() {
-        return EndDateTime;
+        return endDateTime;
     }
 
     public void setEndDateTime(String endDateTime) {
-        EndDateTime = endDateTime;
+        this.endDateTime = endDateTime;
     }
 
     public String getLabel() {
-        return Label;
+        return label;
     }
 
     public void setLabel(String label) {
-        Label = label;
+        this.label = label;
     }
 }

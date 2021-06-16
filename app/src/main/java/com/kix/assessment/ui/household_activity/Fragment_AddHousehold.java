@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -14,8 +16,6 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
-
-import androidx.fragment.app.Fragment;
 
 import static com.kix.assessment.KIXApplication.householdDao;
 
@@ -47,12 +47,12 @@ public class Fragment_AddHousehold extends Fragment {
     private void insertHousehold() {
         String houseID = KIX_Utility.getUUID().toString();
         Modal_Household modal_household = new Modal_Household();
-        modal_household.setHouseHold_ID(""+ houseID);
-        modal_household.setHouseHold_Name(et_houseHoldName.getText().toString());
-        modal_household.setHouseHold_District(et_houseHoldDistrict.getText().toString());
-        modal_household.setHouseHold_State(et_houseHoldState.getText().toString());
-        modal_household.setHouseHold_Address("NA");
-        modal_household.setSvr_Code(surveyorCode);
+        modal_household.setHouseholdId(""+ houseID);
+        modal_household.setHouseholdName(et_houseHoldName.getText().toString());
+        modal_household.setHouseholdDistrict(et_houseHoldDistrict.getText().toString());
+        modal_household.setHouseholdState(et_houseHoldState.getText().toString());
+        modal_household.setHouseholdAddress("NA");
+        modal_household.setSvrCode(surveyorCode);
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(getActivity());

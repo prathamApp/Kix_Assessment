@@ -6,7 +6,6 @@ import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.kix.assessment.modal_classes.Modal_Booklet;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -29,11 +28,7 @@ public final class BookletDao_Impl implements BookletDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Booklet value) {
-        if (value.getBookletId() == null) {
-          stmt.bindNull(1);
-        } else {
-          stmt.bindLong(1, value.getBookletId());
-        }
+        stmt.bindLong(1, value.getBookletId());
         if (value.getBookletName() == null) {
           stmt.bindNull(2);
         } else {
@@ -72,12 +67,8 @@ public final class BookletDao_Impl implements BookletDao {
       while(_cursor.moveToNext()) {
         final Modal_Booklet _item;
         _item = new Modal_Booklet();
-        final Integer _tmpBookletId;
-        if (_cursor.isNull(_cursorIndexOfBookletId)) {
-          _tmpBookletId = null;
-        } else {
-          _tmpBookletId = _cursor.getInt(_cursorIndexOfBookletId);
-        }
+        final long _tmpBookletId;
+        _tmpBookletId = _cursor.getLong(_cursorIndexOfBookletId);
         _item.setBookletId(_tmpBookletId);
         final String _tmpBookletName;
         _tmpBookletName = _cursor.getString(_cursorIndexOfBookletName);

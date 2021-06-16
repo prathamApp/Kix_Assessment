@@ -7,65 +7,65 @@ import androidx.room.PrimaryKey;
 public class Modal_Surveyor {
 
     @PrimaryKey(autoGenerate = true)
-    public int Svr_Id;
-    public String Svr_Name;
-    public String Svr_Email;
-    public String Svr_Mobile;
-    public String Svr_Password;
-    public String Svr_Code;
-    public String Svr_Booklet;
+    public int svrId;
+    public String svrName;
+    public String svrEmail;
+    public String svrMobile;
+    public String svrPassword;
+    public String svrCode;
+    public String svrBooklet;
     public int sentFlag;
 
-    public int getSvr_Id() {
-        return Svr_Id;
+    public int getSvrId() {
+        return svrId;
     }
 
-    public void setSvr_Id(int svr_Id) {
-        Svr_Id = svr_Id;
+    public void setSvrId(int svrId) {
+        this.svrId = svrId;
     }
 
-    public String getSvr_Name() {
-        return Svr_Name;
+    public String getSvrName() {
+        return svrName;
     }
 
-    public void setSvr_Name(String svr_Name) {
-        Svr_Name = svr_Name;
+    public void setSvrName(String svrName) {
+        this.svrName = svrName;
     }
 
-    public String getSvr_Email() {
-        return Svr_Email;
+    public String getSvrEmail() {
+        return svrEmail;
     }
 
-    public void setSvr_Email(String svr_Email) {
-        Svr_Email = svr_Email;
+    public void setSvrEmail(String svrEmail) {
+        this.svrEmail = svrEmail;
     }
 
-    public String getSvr_Mobile() {
-        return Svr_Mobile;
+    public String getSvrMobile() {
+        return svrMobile;
     }
 
-    public void setSvr_Mobile(String svr_Mobile) {
-        Svr_Mobile = svr_Mobile;
+    public void setSvrMobile(String svrMobile) {
+        this.svrMobile = svrMobile;
     }
 
-    public String getSvr_Password() {
-        return Svr_Password;
+    public String getSvrPassword() {
+        return svrPassword;
     }
 
-    public void setSvr_Password(String svr_Password) {
-        Svr_Password = svr_Password;
+    public void setSvrPassword(String svrPassword) {
+        this.svrPassword = svrPassword;
     }
 
-    public String getSvr_Code() { return Svr_Code; }
+    public String getSvrCode() { return svrCode; }
 
-    public void setSvr_Code(String svr_Code) { Svr_Code = svr_Code; }
+    public void setSvrCode(String svrCode) { this.svrCode = svrCode; }
 
-    public String getSvr_Booklet() {
-        return Svr_Booklet;
+    public String getSvrBooklet() {
+        return svrBooklet;
     }
 
-    public void setSvr_Booklet(String svr_Booklet) {
-        Svr_Booklet = svr_Booklet;
+    public void setSvrBooklet(String svrBooklet) {
+        this.svrBooklet = svrBooklet;
     }
 
     public int getSentFlag() { return sentFlag; }

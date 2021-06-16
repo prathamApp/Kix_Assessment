@@ -39,6 +39,7 @@ public class API_Content {
             Log.d("API_Content_LOG", "url_id: " + url_id);
             AndroidNetworking.get(url_id)
                     .addHeaders("Content-Type", "application/json")
+                    .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                     .build()
                     .getAsString(new StringRequestListener() {
                         @Override
@@ -66,63 +67,12 @@ public class API_Content {
         }
     }
 
-//    public void getInternetTimeApi(final String requestType, String url) {
-//        try {
-//            Log.d("API_Content_LOG", "getAPIContent: " + url);
-//            AndroidNetworking.get(url)
-//                    .addHeaders("Content-Type", "application/json")
-//                    .build()
-//                    .getAsString(new StringRequestListener() {
-//                        @Override
-//                        public void onResponse(String response) {
-//                            //Success - Send requestType and response to the calling class.
-//                            if (apiContentResult != null)
-//                                apiContentResult.receivedContent(requestType, response);
-//                        }
-//
-//                        @Override
-//                        public void onError(ANError anError) {
-//                            try {
-//                                Log.d("Error:", anError.getErrorDetail());
-//                                // Log.d("Error::", anError.getResponse().toString());
-//                            } catch (Exception e) {
-//                                e.printStackTrace();
-//                            }
-//                            //Success - Send requestType and response to the calling class.
-//                            if (apiContentResult != null)
-//                                apiContentResult.receivedError(requestType);
-//                        }
-//                    });
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public static void downloadImage(String url, String filename) {
-//        File dir = new File(KIXApplication.kixPath /*+ "" + App_Thumbs_Path*/); //Creating an internal dir;
-//        if (!dir.exists()) dir.mkdirs();
-//        AndroidNetworking.download(url, dir.getAbsolutePath(), filename)
-//                .setPriority(Priority.HIGH)
-//                .setExecutor(Executors.newSingleThreadExecutor())
-//                .build()
-//                .startDownload(new DownloadListener() {
-//                    @Override
-//                    public void onDownloadComplete() {
-//                        Log.d("image::", "DownloadComplete");
-//                    }
-//
-//                    @Override
-//                    public void onError(ANError anError) {
-//                        Log.d("image::", "Not Downloaded");
-//                    }
-//                });
-//    }
-
     //Used to get the countries from server
     public void getCountry(final String requestType, String url) {
         try {
             AndroidNetworking.get(url)
                     .addHeaders("Content-Type", "application/json")
+                    .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                     .build()
                     .getAsString(new StringRequestListener() {
                         @Override
@@ -157,6 +107,7 @@ public class API_Content {
             url = url+countryName;
             AndroidNetworking.get(url)
                     .addHeaders("Content-Type", "application/json")
+                    .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                     .build()
                     .getAsString(new StringRequestListener() {
                         @Override
@@ -189,6 +140,7 @@ public class API_Content {
             url = url+languageName;
             AndroidNetworking.get(url)
                     .addHeaders("Content-Type", "application/json")
+                    .addHeaders("Authorization","Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                     .build()
                     .getAsString(new StringRequestListener() {
                         @Override

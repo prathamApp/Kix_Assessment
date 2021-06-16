@@ -6,14 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.card.MaterialCardView;
 import com.kix.assessment.R;
 import com.kix.assessment.modal_classes.Modal_Household;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdapter.MyViewHolder>{
         private List<Modal_Household> householdList;
@@ -52,7 +52,7 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
         @Override
         public void onBindViewHolder(@NonNull HouseholdListAdapter.MyViewHolder holder, int position) {
             Modal_Household modalHousehold = householdList.get(position);
-            holder.tv_householdName.setText(modalHousehold.getHouseHold_Name());
+            holder.tv_householdName.setText(modalHousehold.getHouseholdName());
 //        holder.tv_studName.setSelected(false);
 
 /*        if(position==0){

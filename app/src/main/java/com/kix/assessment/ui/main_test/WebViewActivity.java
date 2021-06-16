@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebChromeClient;
@@ -68,7 +69,9 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         scoresList = new ArrayList<>();
         queCnt = 0;
         try {
-            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%Booklet 1%");
+            String bklet = ""+FastSave.getInstance().getString(Kix_Constant.BOOKLET,"Booklet 1");
+            Log.d("WebView", "Kix_Constant.BOOKLET: " + bklet);
+            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%"+bklet+",%");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -251,14 +254,14 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 
     private void addScoreToList(String scoredMarks, String label, String startTime) {
         Score score = new Score();
-        score.setSessionID(""+FastSave.getInstance().getString(Kix_Constant.SESSIONID,""));
-        score.setDeviceID("");
-        score.setResourceID("" + gameListList.get(queCnt).getContentCode());
+        score.setSessionId(""+FastSave.getInstance().getString(Kix_Constant.SESSIONID,""));
+        score.setDeviceId("");
+        score.setResourceId("" + gameListList.get(queCnt).getContentCode());
         score.setStartDateTime("" + startTime);
         score.setEndDateTime(KIX_Utility.getCurrentDateTime());
         score.setScoredMarks("" + scoredMarks);
         if (!FastSave.getInstance().getString(STUDENT_ID, "NA").equalsIgnoreCase("NA"))
-            score.setStudentID("" + FastSave.getInstance().getString(STUDENT_ID, "NA"));
+            score.setStudentId("" + FastSave.getInstance().getString(STUDENT_ID, "NA"));
         score.setLabel(label);
         score.setSentFlag(0);
         scoresList.add(score);

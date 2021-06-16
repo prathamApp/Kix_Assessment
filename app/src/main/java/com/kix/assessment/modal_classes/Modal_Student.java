@@ -10,31 +10,31 @@ import androidx.room.PrimaryKey;
 public class Modal_Student implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
-    public int S_Id;
-    public String StudentID;
-    public String Stud_Name;
-    public String Stud_Age;
-    public String Stud_Gender;
-    public String Stud_Class;
-    public String Stud_EnrollmentStatus;
-    public String Stud_SchoolType;
-    public String Stud_DropoutYear;
-    public String Svr_Code;
-    public String HouseHold_ID;
+    public int sId;
+    public String studId;
+    public String studName;
+    public String studAge;
+    public String studGender;
+    public String studClass;
+    public String studEnrollmentStatus;
+    public String studSchoolType;
+    public String studDropoutYear;
+    public String svrCode;
+    public String householdId;
     public int sentFlag;
 
     protected Modal_Student(Parcel in) {
-        S_Id = in.readInt();
-        StudentID = in.readString();
-        Stud_Name = in.readString();
-        Stud_Age = in.readString();
-        Stud_Gender = in.readString();
-        Stud_Class = in.readString();
-        Stud_EnrollmentStatus = in.readString();
-        Stud_SchoolType = in.readString();
-        Stud_DropoutYear = in.readString();
-        Svr_Code = in.readString();
-        HouseHold_ID = in.readString();
+        sId = in.readInt();
+        studId = in.readString();
+        studName = in.readString();
+        studAge = in.readString();
+        studGender = in.readString();
+        studClass = in.readString();
+        studEnrollmentStatus = in.readString();
+        studSchoolType = in.readString();
+        studDropoutYear = in.readString();
+        svrCode = in.readString();
+        householdId = in.readString();
         sentFlag = in.readInt();
     }
 
@@ -53,73 +53,73 @@ public class Modal_Student implements Comparable, Parcelable {
     public Modal_Student() {
     }
 
-    public int getS_Id() {
-        return S_Id;
+    public int getsId() {
+        return sId;
     }
 
-    public void setS_Id(int S_Id) {
+    public void setsId(int S_Id) {
         S_Id = S_Id;
     }
 
     public String getStud_Id() {
-        return StudentID;
+        return studId;
     }
 
     public void setStud_Id(String stud_Id) {
-        StudentID = stud_Id;
+        studId = stud_Id;
     }
 
     public static Creator<Modal_Student> getCREATOR() {
         return CREATOR;
     }
 
-    public String getStud_Name() {
-        return Stud_Name;
+    public String getStudName() {
+        return studName;
     }
 
-    public void setStud_Name(String stud_Name) {
-        Stud_Name = stud_Name;
+    public void setStudName(String studName) {
+        this.studName = studName;
     }
 
-    public String getStud_Age() {
-        return Stud_Age;
+    public String getStudAge() {
+        return studAge;
     }
 
-    public void setStud_Age(String stud_Age) {
-        Stud_Age = stud_Age;
+    public void setStudAge(String studAge) {
+        this.studAge = studAge;
     }
 
-    public String getStud_Gender() {
-        return Stud_Gender;
+    public String getStudGender() {
+        return studGender;
     }
 
-    public void setStud_Gender(String stud_Gender) {
-        Stud_Gender = stud_Gender;
+    public void setStudGender(String studGender) {
+        this.studGender = studGender;
     }
 
-    public String getStud_Class() { return Stud_Class; }
+    public String getStudClass() { return studClass; }
 
-    public void setStud_Class(String stud_Class) { Stud_Class = stud_Class; }
+    public void setStudClass(String studClass) { this.studClass = studClass; }
 
-    public String getSvr_Code() { return Svr_Code; }
+    public String getSvrCode() { return svrCode; }
 
-    public void setSvr_Code(String svr_Code) { Svr_Code = svr_Code; }
+    public void setSvrCode(String svrCode) { this.svrCode = svrCode; }
 
-    public String getHousehold_ID() { return HouseHold_ID; }
+    public String getHousehold_ID() { return householdId; }
 
-    public void setHousehold_ID(String household_ID) { HouseHold_ID = household_ID; }
+    public void setHousehold_ID(String household_ID) { householdId = household_ID; }
 
-    public String getStud_EnrollmentStatus() { return Stud_EnrollmentStatus; }
+    public String getStudEnrollmentStatus() { return studEnrollmentStatus; }
 
-    public void setStud_EnrollmentStatus(String stud_EnrollmentStatus) { Stud_EnrollmentStatus = stud_EnrollmentStatus; }
+    public void setStudEnrollmentStatus(String studEnrollmentStatus) { this.studEnrollmentStatus = studEnrollmentStatus; }
 
-    public String getStud_SchoolType() { return Stud_SchoolType; }
+    public String getStudSchoolType() { return studSchoolType; }
 
-    public void setStud_SchoolType(String stud_SchoolType) { Stud_SchoolType = stud_SchoolType; }
+    public void setStudSchoolType(String studSchoolType) { this.studSchoolType = studSchoolType; }
 
-    public String getStud_DropoutYear() { return Stud_DropoutYear; }
+    public String getStudDropoutYear() { return studDropoutYear; }
 
-    public void setStud_DropoutYear(String stud_DropoutYear) { Stud_DropoutYear = stud_DropoutYear; }
+    public void setStudDropoutYear(String studDropoutYear) { this.studDropoutYear = studDropoutYear; }
 
     public int getSentFlag() { return sentFlag; }
 
@@ -132,17 +132,17 @@ public class Modal_Student implements Comparable, Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(S_Id);
-        dest.writeString(StudentID);
-        dest.writeString(Stud_Name);
-        dest.writeString(Stud_Age);
-        dest.writeString(Stud_Gender);
-        dest.writeString(Stud_Class);
-        dest.writeString(Stud_EnrollmentStatus);
-        dest.writeString(Stud_SchoolType);
-        dest.writeString(Stud_DropoutYear);
-        dest.writeString(Svr_Code);
-        dest.writeString(HouseHold_ID);
+        dest.writeInt(sId);
+        dest.writeString(studId);
+        dest.writeString(studName);
+        dest.writeString(studAge);
+        dest.writeString(studGender);
+        dest.writeString(studClass);
+        dest.writeString(studEnrollmentStatus);
+        dest.writeString(studSchoolType);
+        dest.writeString(studDropoutYear);
+        dest.writeString(svrCode);
+        dest.writeString(householdId);
         dest.writeInt(sentFlag);
     }
 

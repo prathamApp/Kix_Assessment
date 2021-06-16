@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.kix.assessment.R;
-import com.kix.assessment.temp.Modal_FileDownloading;
+import com.kix.assessment.modal_classes.Modal_FileDownloading;
 import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.FragmentBuilder;

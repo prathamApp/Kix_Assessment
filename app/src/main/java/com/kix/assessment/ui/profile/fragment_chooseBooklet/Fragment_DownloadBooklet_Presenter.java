@@ -102,6 +102,7 @@ public class Fragment_DownloadBooklet_Presenter implements DownloadBooklet_Contr
                 mydir = new File(KIXApplication.kixPath + "/.KIX");
                 if (!mydir.exists()) mydir.mkdirs();
                 zipDownloader.initialize(mContext, download_content.getDownloadurl(), fileName, pos, dwContent);
+//                zipDownloader.initialize(mContext, "http://13.76.6.250:81/kix/downloads/1622716158912.zip", fileName, pos, dwContent);
 //                downloadZip(download_content.getDownloadurl(), KIXApplication.kixPath + "/.KIX", fileName);
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -7,7 +7,7 @@ import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Content;
 import com.kix.assessment.modal_classes.Modal_Download;
-import com.kix.assessment.temp.Modal_FileDownloading;
+import com.kix.assessment.modal_classes.Modal_FileDownloading;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EBean;
@@ -88,6 +88,8 @@ public class ContentDownloadingTask {
             URL urlFormed = new URL(url);
             connection = (HttpURLConnection) urlFormed.openConnection();
             connection.setConnectTimeout(15000);
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas");
             connection.connect();
             // expect HTTP 200 OK, so we don't mistakenly save error report
             // instead of the file
