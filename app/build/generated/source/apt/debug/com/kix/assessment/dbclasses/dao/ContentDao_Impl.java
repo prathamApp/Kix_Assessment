@@ -80,7 +80,7 @@ public final class ContentDao_Impl implements ContentDao {
       while(_cursor.moveToNext()) {
         final Modal_Content _item;
         _item = new Modal_Content();
-        _item.contentId = _cursor.getInt(_cursorIndexOfContentId);
+        _item.contentId = _cursor.getLong(_cursorIndexOfContentId);
         _item.contentCode = _cursor.getString(_cursorIndexOfContentCode);
         _item.contentFolderName = _cursor.getString(_cursorIndexOfContentFolderName);
         _item.contentBooklet = _cursor.getString(_cursorIndexOfContentBooklet);

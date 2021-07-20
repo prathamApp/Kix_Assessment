@@ -56,7 +56,9 @@ public final class Fragment_AddHousehold_
         super.onDestroyView();
         contentView_ = null;
         et_houseHoldName = null;
-        et_houseHoldAddress = null;
+        et_houseHoldDistrict = null;
+        et_houseHoldState = null;
+        tv_label = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -86,7 +88,9 @@ public final class Fragment_AddHousehold_
     @Override
     public void onViewChanged(HasViews hasViews) {
         this.et_houseHoldName = hasViews.internalFindViewById(R.id.et_houseHoldName);
-        this.et_houseHoldAddress = hasViews.internalFindViewById(R.id.et_houseHoldAddress);
+        this.et_houseHoldDistrict = hasViews.internalFindViewById(R.id.et_houseHoldDistrict);
+        this.et_houseHoldState = hasViews.internalFindViewById(R.id.et_houseHoldState);
+        this.tv_label = hasViews.internalFindViewById(R.id.tv_label);
         View view_btn_saveHousehold = hasViews.internalFindViewById(R.id.btn_saveHousehold);
 
         if (view_btn_saveHousehold!= null) {
@@ -94,7 +98,7 @@ public final class Fragment_AddHousehold_
 
                 @Override
                 public void onClick(View view) {
-                    Fragment_AddHousehold_.this.saveStudent();
+                    Fragment_AddHousehold_.this.saveHousehold();
                 }
             }
             );

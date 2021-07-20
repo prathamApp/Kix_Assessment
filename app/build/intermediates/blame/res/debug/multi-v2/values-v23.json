@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\734a61ec27484443a899f2c136500ef0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\e4e16ea3b2f65d7e6bb7268aabf0fead\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

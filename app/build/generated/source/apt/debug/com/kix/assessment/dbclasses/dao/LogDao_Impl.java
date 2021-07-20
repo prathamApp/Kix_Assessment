@@ -23,12 +23,14 @@ public final class LogDao_Impl implements LogDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteLogs;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateSentFlag;
+
   public LogDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfModal_Log = new EntityInsertionAdapter<Modal_Log>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Logs`(`logId`,`currentDateTime`,`exceptionMessage`,`exceptionStackTrace`,`methodName`,`errorType`,`sessionId`,`deviceId`,`LogDetail`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Logs`(`logId`,`currentDateTime`,`exceptionMessage`,`exceptionStackTrace`,`methodName`,`errorType`,`sessionId`,`deviceId`,`logDetail`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -69,10 +71,10 @@ public final class LogDao_Impl implements LogDao {
         } else {
           stmt.bindString(8, value.deviceId);
         }
-        if (value.LogDetail == null) {
+        if (value.logDetail == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.LogDetail);
+          stmt.bindString(9, value.logDetail);
         }
         stmt.bindLong(10, value.sentFlag);
       }
@@ -80,7 +82,7 @@ public final class LogDao_Impl implements LogDao {
     this.__insertionAdapterOfModal_Log_1 = new EntityInsertionAdapter<Modal_Log>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Logs`(`logId`,`currentDateTime`,`exceptionMessage`,`exceptionStackTrace`,`methodName`,`errorType`,`sessionId`,`deviceId`,`LogDetail`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Logs`(`logId`,`currentDateTime`,`exceptionMessage`,`exceptionStackTrace`,`methodName`,`errorType`,`sessionId`,`deviceId`,`logDetail`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -121,10 +123,10 @@ public final class LogDao_Impl implements LogDao {
         } else {
           stmt.bindString(8, value.deviceId);
         }
-        if (value.LogDetail == null) {
+        if (value.logDetail == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.LogDetail);
+          stmt.bindString(9, value.logDetail);
         }
         stmt.bindLong(10, value.sentFlag);
       }
@@ -133,6 +135,13 @@ public final class LogDao_Impl implements LogDao {
       @Override
       public String createQuery() {
         final String _query = "DELETE FROM Logs";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "update Logs set sentFlag=1 where sentFlag=0";
         return _query;
       }
     };
@@ -174,6 +183,19 @@ public final class LogDao_Impl implements LogDao {
   }
 
   @Override
+  public void updateSentFlag() {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateSentFlag.acquire();
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateSentFlag.release(_stmt);
+    }
+  }
+
+  @Override
   public List<Modal_Log> getAllLogs(String s_id) {
     final String _sql = "select * from Logs where sentFlag=0 AND sessionId=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
@@ -193,7 +215,7 @@ public final class LogDao_Impl implements LogDao {
       final int _cursorIndexOfErrorType = _cursor.getColumnIndexOrThrow("errorType");
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfLogDetail = _cursor.getColumnIndexOrThrow("LogDetail");
+      final int _cursorIndexOfLogDetail = _cursor.getColumnIndexOrThrow("logDetail");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Modal_Log> _result = new ArrayList<Modal_Log>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -207,7 +229,7 @@ public final class LogDao_Impl implements LogDao {
         _item.errorType = _cursor.getString(_cursorIndexOfErrorType);
         _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
         _item.deviceId = _cursor.getString(_cursorIndexOfDeviceId);
-        _item.LogDetail = _cursor.getString(_cursorIndexOfLogDetail);
+        _item.logDetail = _cursor.getString(_cursorIndexOfLogDetail);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }
@@ -232,7 +254,7 @@ public final class LogDao_Impl implements LogDao {
       final int _cursorIndexOfErrorType = _cursor.getColumnIndexOrThrow("errorType");
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfLogDetail = _cursor.getColumnIndexOrThrow("LogDetail");
+      final int _cursorIndexOfLogDetail = _cursor.getColumnIndexOrThrow("logDetail");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Modal_Log> _result = new ArrayList<Modal_Log>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -246,7 +268,7 @@ public final class LogDao_Impl implements LogDao {
         _item.errorType = _cursor.getString(_cursorIndexOfErrorType);
         _item.sessionId = _cursor.getString(_cursorIndexOfSessionId);
         _item.deviceId = _cursor.getString(_cursorIndexOfDeviceId);
-        _item.LogDetail = _cursor.getString(_cursorIndexOfLogDetail);
+        _item.logDetail = _cursor.getString(_cursorIndexOfLogDetail);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }

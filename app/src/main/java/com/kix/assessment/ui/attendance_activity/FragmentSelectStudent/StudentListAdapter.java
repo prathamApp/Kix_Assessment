@@ -65,10 +65,10 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
         String examGivenByStud = scoreDao.getStudentId(modalStudnet.getStud_Id());
 
         if(examGivenByStud!=null){
-            holder.studentCardView.setCardBackgroundColor(Color.parseColor("#727272"));
+                holder.studentCardView.setCardBackgroundColor(context.getResources().getColor(R.color.colorExamGiven));
             holder.iv_studentCheck.setVisibility(View.VISIBLE);
         } else {
-            holder.iv_studentCheck.setVisibility(View.GONE);
+            holder.iv_studentCheck.setVisibility(View.INVISIBLE);
         }
 
         holder.itemView.setOnClickListener(v -> {

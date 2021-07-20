@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
         app:cardCornerRadius="@dimen/_10sdp"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/colorBtnRedLight"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_5sdp">

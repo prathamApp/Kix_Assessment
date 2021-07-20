@@ -8,6 +8,13 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -46,10 +53,10 @@
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
             android:name="com.kix.assessment.ui.household_activity.Activity_Household_"
-            android:screenOrientation="sensorLandscape" />
+            android:screenOrientation="sensorPortrait" />
         <activity
             android:name="com.kix.assessment.ui.splash_activityy.SplashActivity_"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
@@ -60,14 +67,14 @@
         </activity>
         <activity
             android:name="com.kix.assessment.ui.attendance_activity.Activity_Attendance_"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.kix.assessment.CatchoTransparentActivity"
             android:configChanges="orientation|screenSize"
             android:parentActivityName="com.kix.assessment.BaseActivity"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <provider
@@ -86,6 +93,13 @@
         <activity
             android:name="com.kix.assessment.ui.main_test.WebViewActivity_"
             android:screenOrientation="sensorLandscape" />
+
+        <!-- This activity is used to restart the app, when crashed. -->
+        <activity
+            android:name="com.kix.assessment.custom.ProcessPhoenix"
+            android:process=":phoenix"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.kix.assessment.services.OTGListener"

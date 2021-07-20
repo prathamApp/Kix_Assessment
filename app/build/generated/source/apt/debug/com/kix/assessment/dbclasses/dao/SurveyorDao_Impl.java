@@ -21,46 +21,48 @@ public final class SurveyorDao_Impl implements SurveyorDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateSentSurveyorFlags;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateSentFlag;
+
   public SurveyorDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfModal_Surveyor = new EntityInsertionAdapter<Modal_Surveyor>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Surveyor`(`Svr_Id`,`Svr_Name`,`Svr_Email`,`Svr_Mobile`,`Svr_Password`,`Svr_Code`,`Svr_Booklet`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Surveyor`(`svrId`,`svrName`,`svrEmail`,`svrMobile`,`svrPassword`,`svrCode`,`svrBooklet`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Surveyor value) {
-        stmt.bindLong(1, value.Svr_Id);
-        if (value.Svr_Name == null) {
+        stmt.bindLong(1, value.svrId);
+        if (value.svrName == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.Svr_Name);
+          stmt.bindString(2, value.svrName);
         }
-        if (value.Svr_Email == null) {
+        if (value.svrEmail == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.Svr_Email);
+          stmt.bindString(3, value.svrEmail);
         }
-        if (value.Svr_Mobile == null) {
+        if (value.svrMobile == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.Svr_Mobile);
+          stmt.bindString(4, value.svrMobile);
         }
-        if (value.Svr_Password == null) {
+        if (value.svrPassword == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.Svr_Password);
+          stmt.bindString(5, value.svrPassword);
         }
-        if (value.Svr_Code == null) {
+        if (value.svrCode == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.Svr_Code);
+          stmt.bindString(6, value.svrCode);
         }
-        if (value.Svr_Booklet == null) {
+        if (value.svrBooklet == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.Svr_Booklet);
+          stmt.bindString(7, value.svrBooklet);
         }
         stmt.bindLong(8, value.sentFlag);
       }
@@ -68,7 +70,14 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     this.__preparedStmtOfUpdateSentSurveyorFlags = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "update Surveyor set sentFlag=1 where Svr_Code=?";
+        final String _query = "update Surveyor set sentFlag=1 where svrCode=?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "update Surveyor set sentFlag=1 where sentFlag=0";
         return _query;
       }
     };
@@ -105,8 +114,21 @@ public final class SurveyorDao_Impl implements SurveyorDao {
   }
 
   @Override
+  public void updateSentFlag() {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateSentFlag.acquire();
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateSentFlag.release(_stmt);
+    }
+  }
+
+  @Override
   public Modal_Surveyor getSurveyorByEmail(String email) {
-    final String _sql = "SELECT * FROM Surveyor WHERE Svr_Email=?";
+    final String _sql = "SELECT * FROM Surveyor WHERE svrEmail=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (email == null) {
@@ -116,24 +138,24 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("Svr_Id");
-      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("Svr_Name");
-      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("Svr_Email");
-      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("Svr_Mobile");
-      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("Svr_Password");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("Svr_Booklet");
+      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("svrId");
+      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("svrName");
+      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
+      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
+      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final Modal_Surveyor _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Surveyor();
-        _result.Svr_Id = _cursor.getInt(_cursorIndexOfSvrId);
-        _result.Svr_Name = _cursor.getString(_cursorIndexOfSvrName);
-        _result.Svr_Email = _cursor.getString(_cursorIndexOfSvrEmail);
-        _result.Svr_Mobile = _cursor.getString(_cursorIndexOfSvrMobile);
-        _result.Svr_Password = _cursor.getString(_cursorIndexOfSvrPassword);
-        _result.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
-        _result.Svr_Booklet = _cursor.getString(_cursorIndexOfSvrBooklet);
+        _result.svrId = _cursor.getInt(_cursorIndexOfSvrId);
+        _result.svrName = _cursor.getString(_cursorIndexOfSvrName);
+        _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
+        _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
+        _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
+        _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
       } else {
         _result = null;
@@ -146,14 +168,55 @@ public final class SurveyorDao_Impl implements SurveyorDao {
   }
 
   @Override
-  public Modal_Surveyor getSurveyorLogin(String email, String password) {
-    final String _sql = "SELECT * FROM Surveyor WHERE Svr_Email=? and Svr_Password=?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+  public Modal_Surveyor getSurveyorByMobile(String mobile) {
+    final String _sql = "SELECT * FROM Surveyor WHERE svrMobile=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
-    if (email == null) {
+    if (mobile == null) {
       _statement.bindNull(_argIndex);
     } else {
-      _statement.bindString(_argIndex, email);
+      _statement.bindString(_argIndex, mobile);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("svrId");
+      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("svrName");
+      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
+      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
+      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
+      final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final Modal_Surveyor _result;
+      if(_cursor.moveToFirst()) {
+        _result = new Modal_Surveyor();
+        _result.svrId = _cursor.getInt(_cursorIndexOfSvrId);
+        _result.svrName = _cursor.getString(_cursorIndexOfSvrName);
+        _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
+        _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
+        _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
+        _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
+        _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public Modal_Surveyor getSurveyorLogin(String mobile, String password) {
+    final String _sql = "SELECT * FROM Surveyor WHERE svrMobile=? and svrPassword=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    if (mobile == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, mobile);
     }
     _argIndex = 2;
     if (password == null) {
@@ -163,24 +226,24 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     }
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("Svr_Id");
-      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("Svr_Name");
-      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("Svr_Email");
-      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("Svr_Mobile");
-      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("Svr_Password");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("Svr_Booklet");
+      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("svrId");
+      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("svrName");
+      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
+      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
+      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final Modal_Surveyor _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Surveyor();
-        _result.Svr_Id = _cursor.getInt(_cursorIndexOfSvrId);
-        _result.Svr_Name = _cursor.getString(_cursorIndexOfSvrName);
-        _result.Svr_Email = _cursor.getString(_cursorIndexOfSvrEmail);
-        _result.Svr_Mobile = _cursor.getString(_cursorIndexOfSvrMobile);
-        _result.Svr_Password = _cursor.getString(_cursorIndexOfSvrPassword);
-        _result.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
-        _result.Svr_Booklet = _cursor.getString(_cursorIndexOfSvrBooklet);
+        _result.svrId = _cursor.getInt(_cursorIndexOfSvrId);
+        _result.svrName = _cursor.getString(_cursorIndexOfSvrName);
+        _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
+        _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
+        _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
+        _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
       } else {
         _result = null;
@@ -198,25 +261,25 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final Cursor _cursor = __db.query(_statement);
     try {
-      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("Svr_Id");
-      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("Svr_Name");
-      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("Svr_Email");
-      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("Svr_Mobile");
-      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("Svr_Password");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("Svr_Code");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("Svr_Booklet");
+      final int _cursorIndexOfSvrId = _cursor.getColumnIndexOrThrow("svrId");
+      final int _cursorIndexOfSvrName = _cursor.getColumnIndexOrThrow("svrName");
+      final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
+      final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
+      final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Modal_Surveyor> _result = new ArrayList<Modal_Surveyor>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Modal_Surveyor _item;
         _item = new Modal_Surveyor();
-        _item.Svr_Id = _cursor.getInt(_cursorIndexOfSvrId);
-        _item.Svr_Name = _cursor.getString(_cursorIndexOfSvrName);
-        _item.Svr_Email = _cursor.getString(_cursorIndexOfSvrEmail);
-        _item.Svr_Mobile = _cursor.getString(_cursorIndexOfSvrMobile);
-        _item.Svr_Password = _cursor.getString(_cursorIndexOfSvrPassword);
-        _item.Svr_Code = _cursor.getString(_cursorIndexOfSvrCode);
-        _item.Svr_Booklet = _cursor.getString(_cursorIndexOfSvrBooklet);
+        _item.svrId = _cursor.getInt(_cursorIndexOfSvrId);
+        _item.svrName = _cursor.getString(_cursorIndexOfSvrName);
+        _item.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
+        _item.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
+        _item.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
+        _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _result.add(_item);
       }

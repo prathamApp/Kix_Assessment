@@ -104,10 +104,16 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
                 webView.getSettings().setDomStorageEnabled(true);
                 webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
                 dismissLoadingDialog();
-            } else Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.d("TAG", "createWebView: PATH :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName());
+                Log.d("TAG", "createWebView: ID :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentCode());
+                Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
+            Log.d("TAG", "createWebView: PATH :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName());
+            Log.d("TAG", "createWebView: ID :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentCode());
             Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
         }
     }
@@ -231,29 +237,36 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     }
 */
 
+boolean dialogOpen = false;
+
     @Override
     @UiThread
     public void onNextGame(String scoredMarks, String label, String startTime) {
-        nextDialog = null;
-        nextDialog = new Dialog(this);
-        nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Objects.requireNonNull(nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        nextDialog.setContentView(R.layout.next_game_dialog);
-        nextDialog.setCanceledOnTouchOutside(false);
+        if(!dialogOpen) {
+            nextDialog = null;
+            dialogOpen = true;
+            nextDialog = new Dialog(this);
+            nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            Objects.requireNonNull(nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            nextDialog.setContentView(R.layout.next_game_dialog);
+            nextDialog.setCanceledOnTouchOutside(false);
 
-        dia_title = nextDialog.findViewById(R.id.dia_title);
-        dia_yes = nextDialog.findViewById(R.id.dia_yes);
-        dia_no = nextDialog.findViewById(R.id.dia_no);
-        if (queCnt == gameListList.size() - 1)
-            dia_title.setText("Submit Assessment");
-        dia_no.setOnClickListener(v -> nextDialog.dismiss());
-        dia_yes.setOnClickListener(v -> {
-            addScoreToList(scoredMarks, label, startTime);
-            nextClicked();
-            nextDialog.dismiss();
-            showLoader();
-        });
-        nextDialog.show();
+            dia_title = nextDialog.findViewById(R.id.dia_title);
+            dia_yes = nextDialog.findViewById(R.id.dia_yes);
+            dia_no = nextDialog.findViewById(R.id.dia_no);
+            if (queCnt == gameListList.size() - 1)
+                dia_title.setText("Submit Assessment");
+            dia_no.setOnClickListener(v -> {nextDialog.dismiss();
+                dialogOpen = false;});
+            dia_yes.setOnClickListener(v -> {
+                addScoreToList(scoredMarks, label, startTime);
+                nextClicked();
+                dialogOpen = false;
+                nextDialog.dismiss();
+                showLoader();
+            });
+            nextDialog.show();
+        }
     }
 
     private void addScoreToList(String scoredMarks, String label, String startTime) {

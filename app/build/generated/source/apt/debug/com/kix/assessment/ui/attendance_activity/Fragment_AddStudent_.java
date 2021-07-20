@@ -14,7 +14,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import com.kix.assessment.R;
+import com.kix.assessment.modal_classes.Modal_Student;
+import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.FragmentBuilder;
 import org.androidannotations.api.view.HasViews;
@@ -59,6 +63,13 @@ public final class Fragment_AddStudent_
         spinner_age = null;
         spinner_gender = null;
         spinner_class = null;
+        spinner_enrollStatue = null;
+        spinner_schoolType = null;
+        spinner_dropoutYear = null;
+        ll_spinnerByStatus = null;
+        ll_spinnerDropout = null;
+        ll_schoolType = null;
+        tv_label = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -91,6 +102,13 @@ public final class Fragment_AddStudent_
         this.spinner_age = hasViews.internalFindViewById(R.id.spinner_age);
         this.spinner_gender = hasViews.internalFindViewById(R.id.spinner_gender);
         this.spinner_class = hasViews.internalFindViewById(R.id.spinner_class);
+        this.spinner_enrollStatue = hasViews.internalFindViewById(R.id.spinner_enrollStatus);
+        this.spinner_schoolType = hasViews.internalFindViewById(R.id.spinner_schoolType);
+        this.spinner_dropoutYear = hasViews.internalFindViewById(R.id.spinner_dropoutYear);
+        this.ll_spinnerByStatus = hasViews.internalFindViewById(R.id.ll_spinnersByStatus);
+        this.ll_spinnerDropout = hasViews.internalFindViewById(R.id.ll_spinnerDropout);
+        this.ll_schoolType = hasViews.internalFindViewById(R.id.ll_schoolType);
+        this.tv_label = hasViews.internalFindViewById(R.id.tv_label);
         View view_rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
         View view_btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
 
@@ -114,7 +132,49 @@ public final class Fragment_AddStudent_
             }
             );
         }
+        if (this.spinner_age!= null) {
+            ((AdapterView<?> ) this.spinner_age).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_AddStudent_.this.ageSelect(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_AddStudent_.this.ageSelect(true);
+                }
+            }
+            );
+        }
+        if (this.spinner_gender!= null) {
+            ((AdapterView<?> ) this.spinner_gender).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_AddStudent_.this.genderSelect(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_AddStudent_.this.genderSelect(true);
+                }
+            }
+            );
+        }
         initialize();
+    }
+
+    @Override
+    public void startDialog(final Modal_Student modal_student) {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                Fragment_AddStudent_.super.startDialog(modal_student);
+            }
+        }
+        , 0L);
     }
 
     public static class FragmentBuilder_

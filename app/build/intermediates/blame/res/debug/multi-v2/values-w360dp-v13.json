@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-v13\\values-w360dp-v13.xml",
+            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-v13\\values-w360dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\AndroidProjects\\Kix_Assessment\\app\\src\\main\\res\\values-w360dp\\dimen.xml",
+                    "source": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\src\\main\\res\\values-w360dp\\dimen.xml",
                     "from": {
                         "startLines": "3,2",
                         "startColumns": "4,4",

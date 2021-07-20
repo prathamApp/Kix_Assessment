@@ -55,11 +55,15 @@ public final class Fragment_Svr_SignUp_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
-        tv_svrName = null;
-        tv_svrEmail = null;
-        tv_svrMobile = null;
+        tie_svrName = null;
+        tie_svrEmail = null;
+        tie_svrMobile = null;
         spinner_booklet = null;
-        tv_svrPassword = null;
+        tie_svrPassword = null;
+        til_svrName = null;
+        til_svrEmail = null;
+        til_svrMobile = null;
+        til_svrPassword = null;
         ll_parentLayout = null;
     }
 
@@ -89,11 +93,15 @@ public final class Fragment_Svr_SignUp_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.tv_svrName = hasViews.internalFindViewById(R.id.et_svrName);
-        this.tv_svrEmail = hasViews.internalFindViewById(R.id.et_svrEmail);
-        this.tv_svrMobile = hasViews.internalFindViewById(R.id.et_svrMobile);
+        this.tie_svrName = hasViews.internalFindViewById(R.id.et_svrName);
+        this.tie_svrEmail = hasViews.internalFindViewById(R.id.et_svrEmail);
+        this.tie_svrMobile = hasViews.internalFindViewById(R.id.et_svrMobile);
         this.spinner_booklet = hasViews.internalFindViewById(R.id.spinner_booklet);
-        this.tv_svrPassword = hasViews.internalFindViewById(R.id.et_svrPassword);
+        this.tie_svrPassword = hasViews.internalFindViewById(R.id.et_svrPassword);
+        this.til_svrName = hasViews.internalFindViewById(R.id.til_svrName);
+        this.til_svrEmail = hasViews.internalFindViewById(R.id.til_svrEmail);
+        this.til_svrMobile = hasViews.internalFindViewById(R.id.til_svrMobile);
+        this.til_svrPassword = hasViews.internalFindViewById(R.id.til_svrPassword);
         this.ll_parentLayout = hasViews.internalFindViewById(R.id.ll_parentLayer);
         View view_btn_svrSignUp = hasViews.internalFindViewById(R.id.btn_svrSignUp);
 

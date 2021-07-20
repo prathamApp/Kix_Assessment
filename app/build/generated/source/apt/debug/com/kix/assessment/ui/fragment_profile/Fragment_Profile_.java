@@ -8,13 +8,17 @@
 package com.kix.assessment.ui.fragment_profile;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import com.kix.assessment.R;
+import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.FragmentBuilder;
@@ -60,6 +64,10 @@ public final class Fragment_Profile_
         tv_studCount = null;
         tv_householdCount = null;
         rv_examDetail = null;
+        ll_ageFilterSpinner = null;
+        ll_villageFilterSpinner = null;
+        spinner_ageFilter = null;
+        spinner_villageFilter = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -93,10 +101,14 @@ public final class Fragment_Profile_
         this.tv_studCount = hasViews.internalFindViewById(R.id.tv_studCount);
         this.tv_householdCount = hasViews.internalFindViewById(R.id.tv_householdCount);
         this.rv_examDetail = hasViews.internalFindViewById(R.id.rv_examDetail);
-        View view_iv_sync = hasViews.internalFindViewById(R.id.iv_sync);
+        this.ll_ageFilterSpinner = hasViews.internalFindViewById(R.id.ll_ageFilterSpinner);
+        this.ll_villageFilterSpinner = hasViews.internalFindViewById(R.id.ll_villageFilterSpinner);
+        this.spinner_ageFilter = hasViews.internalFindViewById(R.id.spinner_ageFilter);
+        this.spinner_villageFilter = hasViews.internalFindViewById(R.id.spinner_villageFilter);
+        View view_fab_sync = hasViews.internalFindViewById(R.id.fab_sync);
 
-        if (view_iv_sync!= null) {
-            view_iv_sync.setOnClickListener(new OnClickListener() {
+        if (view_fab_sync!= null) {
+            view_fab_sync.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
@@ -105,7 +117,49 @@ public final class Fragment_Profile_
             }
             );
         }
+        if (this.spinner_ageFilter!= null) {
+            ((AdapterView<?> ) this.spinner_ageFilter).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_Profile_.this.ageFilter(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_Profile_.this.ageFilter(true);
+                }
+            }
+            );
+        }
+        if (this.spinner_villageFilter!= null) {
+            ((AdapterView<?> ) this.spinner_villageFilter).setOnItemSelectedListener(new OnItemSelectedListener() {
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                    Fragment_Profile_.this.villageFilter(false);
+                }
+
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Fragment_Profile_.this.villageFilter(true);
+                }
+            }
+            );
+        }
         initialize();
+    }
+
+    @Override
+    public void showProfileData(final List<Modal_ProfileDetails> profileDetails) {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                Fragment_Profile_.super.showProfileData(profileDetails);
+            }
+        }
+        , 0L);
     }
 
     @Override

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\942bf554bfe5c27e09dd4734f3c0d7a9\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\4cbb64fca7817f7bcb449c671c957833\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\aafb90eb141c9b0c18f8fd22239ebb40\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.joielechong:zip4jandroid:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6e818e3edb79471f4964a3d6be00e60d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6e818e3edb79471f4964a3d6be00e60d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c96c3dfa8494248e57c271c7f4e7582c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c96c3dfa8494248e57c271c7f4e7582c/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.joielechong/zip4jandroid/1.0.1/dbfb94c6d189c2ad07c47af5f90314e77022fe7d/zip4jandroid-1.0.1-javadoc.jar!/" />

@@ -55,9 +55,10 @@ public final class Fragment_Svr_SignIn_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
-        et_email = null;
+        et_mobile = null;
         et_password = null;
         rl_parentLayout = null;
+        til_svrMobile = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -86,9 +87,10 @@ public final class Fragment_Svr_SignIn_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.et_email = hasViews.internalFindViewById(R.id.et_email);
-        this.et_password = hasViews.internalFindViewById(R.id.et_password);
+        this.et_mobile = hasViews.internalFindViewById(R.id.tie_mobile);
+        this.et_password = hasViews.internalFindViewById(R.id.tie_password);
         this.rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
+        this.til_svrMobile = hasViews.internalFindViewById(R.id.til_svrMobile);
         View view_btn_signIn = hasViews.internalFindViewById(R.id.btn_signIn);
 
         if (this.rl_parentLayout!= null) {

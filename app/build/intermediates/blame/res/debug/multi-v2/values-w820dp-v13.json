@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidProjects\\Kix_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pefpr\\.gradle\\caches\\transforms-2\\files-2.1\\5e6900ab593c0bc712b6467fa4127bd7\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\f1d2eaf797ef836e6a7311e7a322001f\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

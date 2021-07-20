@@ -8,6 +8,7 @@
 package com.kix.assessment.ui.fragment_profile;
 
 import android.content.Context;
+import org.androidannotations.api.BackgroundExecutor;
 
 public final class ProfilePresenter_
     extends ProfilePresenter
@@ -42,5 +43,21 @@ public final class ProfilePresenter_
     public void rebind(Context context) {
         context_ = context;
         init_();
+    }
+
+    @Override
+    public void loadProfileData() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0L, "") {
+
+            @Override
+            public void execute() {
+                try {
+                    ProfilePresenter_.super.loadProfileData();
+                } catch (final Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+        }
+        );
     }
 }
