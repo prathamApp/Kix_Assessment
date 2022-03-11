@@ -1,113 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.household_activity.Fragment_AddHousehold"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
-    android:id="@+id/rl_parentLayout">
+    tools:context=".ui.household_activity.Fragment_AddHousehold">
 
     <TextView
         android:id="@+id/tv_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Village"
-        android:textSize="@dimen/_15sdp"
-        android:textStyle="bold"
-        android:textColor="@color/colorText"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/add_household"
         android:textAlignment="center"
-        android:layout_marginTop="@dimen/_20sdp"/>
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_below="@+id/tv_label"
         android:layout_marginTop="@dimen/_20sdp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:layout_below="@+id/tv_label"
-        android:hint="@string/hint_village">
-        <com.google.android.material.textfield.TextInputEditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_houseHoldName"
-            android:imeOptions="actionNext"
-            android:layout_marginBottom="8dp"
-            android:inputType="text"
-            android:textColor="@color/colorText"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp">
+<!--
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_label1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:layout_below="@+id/til_label"
-        android:hint="@string/hint_district">
-        <com.google.android.material.textfield.TextInputEditText
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"/>
+-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_form_bg"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_svrName"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH00_hName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionNext|flagNoExtractUi"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_form_bg"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_respondentName"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH01_respondentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_form_bg"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name of the household head"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH02_houseHeadName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_houseHoldDistrict"
-            android:imeOptions="actionNext"
-            android:layout_marginBottom="8dp"
-            android:inputType="text"
-            android:textColor="@color/colorText"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_label2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:layout_below="@+id/til_label1"
-        android:hint="@string/hint_state">
-        <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of members regularly living in the household"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH03_memberCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_houseHoldState"
-            android:imeOptions="actionDone"
-            android:layout_marginBottom="8dp"
-            android:inputType="text"
-            android:textColor="@color/colorText"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_saveHousehold"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/til_label2"
-        android:layout_marginTop="@dimen/_50sdp"
-        android:text="Save"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        app:cornerRadius="@dimen/_20sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        android:textAppearance="@dimen/_5sdp"
-        android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/til_HH04_houseHeadNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telephone number of the household"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
 
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH04_houseHeadNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/til_HH05a_houseHeadNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Does the HH have children (living regularly) in the age group 4-10 years?"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rg_HH05a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_HH05a_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/colorBtnGreenDark"
+                    android:text="Yes"
+                    android:textColor="@color/colorText" />
+
+                <RadioButton
+                    android:id="@+id/rb_HH05a_No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/red"
+                    android:text="No"
+                    android:textColor="@color/colorText" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_HH05b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:hint="How many"
+                android:textColorHint="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_HH05b_houseAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/til_HH06_houseLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Does the HH have children (living regularly) in the age group 4-10 years?"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rg_HH06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/rb_HH06_same"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/colorBtnGreenDark"
+                    android:text="Same as text"
+                    android:textColor="@color/colorText" />
+
+                <RadioButton
+                    android:id="@+id/rb_HH06_No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/red"
+                    android:text="Different from text"
+                    android:textColor="@color/colorText" />
+            </RadioGroup>
+        </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_saveHousehold"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/save"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

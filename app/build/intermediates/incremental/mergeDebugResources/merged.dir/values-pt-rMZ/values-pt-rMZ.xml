@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="age">
+        <item>Idade 4  </item>
+        <item>Idade 5  </item>
+        <item>Idade 6  </item>
+        <item>Idade 7  </item>
+        <item>Idade 8  </item>
+        <item>Idade 9  </item>
+        <item>Idade 10 </item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>All Idade</item>
+        <item>Idade 4  </item>
+        <item>Idade 5  </item>
+        <item>Idade 6  </item>
+        <item>Idade 7  </item>
+        <item>Idade 8  </item>
+        <item>Idade 9  </item>
+        <item>Idade 10 </item>
+    </string-array>
+    <string-array name="country_list">
+        <item>Seleccionar o Pais</item>
+        <item>Índia</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+    <string-array name="dropout_year_list">
+        <item>Ano em que a criança desistiu?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+    <string-array name="enrollment_status">
+        <item>Frequencia escolar</item>
+        <item>Mariculado/a</item>
+        <item>Nunca Matrículado/a</item>
+        <item>Desistente</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string-array name="school_type">
+        <item>Tipo de escola</item>
+        <item>Pública</item>
+        <item>Privada</item>
+        <item>Outra</item>
+    </string-array>
+    <string-array name="student_class">
+        <item>Classe</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+    <string-array name="student_dropoutclass">
+        <item>Em que classe a criança desistiu?</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+    <string name="add_child_information">Adicionar informação da criança</string>
+    <string name="add_village">Adicionar a aldeia</string>
+    <string name="all_age">All Idade</string>
+    <string name="all_village">All Aldeia</string>
+    <string name="app_name">KIX Assessment</string>
+    <string name="drop_out">Desistente </string>
+    <string name="enrolled">Mariculado/a</string>
+    <string name="goto_next_task">Você pretende ir para o próximo exercício?</string>
+    <string name="have_account_sign_in">Já tem conta? Entrar</string>
+    <string name="hint_district">Distrito</string>
+    <string name="hint_state">Província</string>
+    <string name="hint_svrEmail">Email (opcional)</string>
+    <string name="hint_svrMobile">Número de telefone.</string>
+    <string name="hint_svrName">Nome</string>
+    <string name="hint_svrPassword">Palavra passe</string>
+    <string name="hint_village">Aldeia</string>
+    <string name="never_enrolled">Nunca Matrículado/a</string>
+    <string name="next_student">Próximo menino/a</string>
+    <string name="no">Não</string>
+    <string name="save">Guardar</string>
+    <string name="save_n_submit">Salvar e Submeter Avaliação</string>
+    <string name="select_child">Seleccionar a criança</string>
+    <string name="select_country">Seleccionar o Pais</string>
+    <string name="select_village">Seleccionar a aldeia</string>
+    <string name="sign_in">Entrar</string>
+    <string name="sign_up">Inscrição</string>
+    <string name="submit_assessment">Submeter a avaliacão.</string>
+    <string name="test_submitted">A sua avaliacão foi submetida</string>
+    <string name="thank_you">Obrigado</string>
+    <string name="want_to_start_assessment">Você pretende iniciar a avalaicão?</string>
+    <string name="yes">Sim</string>
+    <string name="you_want_to_exit">Tem a certeza de que quer sair?</string>
+</resources>

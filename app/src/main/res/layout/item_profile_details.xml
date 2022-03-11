@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="StudName"
+            android:text="@string/child_name"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/colorText"/>
@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Village"
+            android:text="@string/village"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/colorText"/>
@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="AssessmentGiven"
+            android:text="@string/assessment_given"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/colorText"/>
@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="StudName"
+            android:text="@string/child_name"
             android:textAlignment="center"
             android:textSize="@dimen/_10sdp"
             android:visibility="gone"/>

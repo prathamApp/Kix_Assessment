@@ -1,12 +1,12 @@
 package com.kix.assessment.dbclasses.dao;
 
-import com.kix.assessment.modal_classes.Attendance;
-
-import java.util.List;
-
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.kix.assessment.modal_classes.Attendance;
+
+import java.util.List;
 
 @Dao
 public interface AttendanceDao {
@@ -25,8 +25,8 @@ public interface AttendanceDao {
     @Query("SELECT * FROM Attendance WHERE sentFlag=0")
     List<Attendance> getNewAttendances();
 
-    @Query("UPDATE Attendance SET sentFlag=1 WHERE sessionId=:s_id")
-    void updateSentFlag(String s_id);
+//    @Query("UPDATE Attendance SET sentFlag=1 WHERE sessionId=:s_id")
+//    void updateSentFlag(String s_id);
 
     @Query("update Attendance set sentFlag=1 where sentFlag=0")
     void updateSentFlag();

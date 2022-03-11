@@ -59,12 +59,14 @@ public final class Fragment_Svr_SignUp_
         tie_svrEmail = null;
         tie_svrMobile = null;
         spinner_booklet = null;
+        spinner_country = null;
         tie_svrPassword = null;
         til_svrName = null;
         til_svrEmail = null;
         til_svrMobile = null;
         til_svrPassword = null;
         ll_parentLayout = null;
+        ll_spinnerBooklet = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -97,12 +99,14 @@ public final class Fragment_Svr_SignUp_
         this.tie_svrEmail = hasViews.internalFindViewById(R.id.et_svrEmail);
         this.tie_svrMobile = hasViews.internalFindViewById(R.id.et_svrMobile);
         this.spinner_booklet = hasViews.internalFindViewById(R.id.spinner_booklet);
+        this.spinner_country = hasViews.internalFindViewById(R.id.spinner_country);
         this.tie_svrPassword = hasViews.internalFindViewById(R.id.et_svrPassword);
         this.til_svrName = hasViews.internalFindViewById(R.id.til_svrName);
         this.til_svrEmail = hasViews.internalFindViewById(R.id.til_svrEmail);
         this.til_svrMobile = hasViews.internalFindViewById(R.id.til_svrMobile);
         this.til_svrPassword = hasViews.internalFindViewById(R.id.til_svrPassword);
         this.ll_parentLayout = hasViews.internalFindViewById(R.id.ll_parentLayer);
+        this.ll_spinnerBooklet = hasViews.internalFindViewById(R.id.ll_spinnerBooklet);
         View view_btn_svrSignUp = hasViews.internalFindViewById(R.id.btn_svrSignUp);
 
         if (this.ll_parentLayout!= null) {

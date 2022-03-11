@@ -1,9 +1,9 @@
 package com.kix.assessment.modal_classes;
 
-import com.google.gson.annotations.SerializedName;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
 
 @Entity
 public class Attendance {
@@ -16,7 +16,7 @@ public class Attendance {
     @SerializedName("studentId")
     public String studentId;
     @SerializedName("date")
-    public String date;
+    public String attendanceDate;
     @SerializedName("present")
     public int present;
     @SerializedName("sentFlag")
@@ -38,12 +38,12 @@ public class Attendance {
         this.studentId = studentId;
     }
 
-    public String getDate() {
-        return date;
+    public String getAttendanceDate() {
+        return attendanceDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setAttendanceDate(String attendanceDate) {
+        this.attendanceDate = attendanceDate;
     }
 
     public int getPresent() {

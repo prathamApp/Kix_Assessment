@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.kix.assessment.R;
+import com.kix.assessment.async.PushDataBaseZipToServer_;
 import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
@@ -61,8 +62,8 @@ public final class Fragment_Profile_
         super.onDestroyView();
         contentView_ = null;
         tv_profileName = null;
-        tv_studCount = null;
-        tv_householdCount = null;
+        tv_TotStudCount = null;
+        tv_AssessmentGivenCount = null;
         rv_examDetail = null;
         ll_ageFilterSpinner = null;
         ll_villageFilterSpinner = null;
@@ -73,6 +74,7 @@ public final class Fragment_Profile_
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         this.profilePresenter = ProfilePresenter_.getInstance_(getActivity(), this);
+        this.pushDataBaseZipToServer = PushDataBaseZipToServer_.getInstance_(getActivity(), this);
     }
 
     @Override
@@ -98,14 +100,15 @@ public final class Fragment_Profile_
     @Override
     public void onViewChanged(HasViews hasViews) {
         this.tv_profileName = hasViews.internalFindViewById(R.id.tv_profileName);
-        this.tv_studCount = hasViews.internalFindViewById(R.id.tv_studCount);
-        this.tv_householdCount = hasViews.internalFindViewById(R.id.tv_householdCount);
+        this.tv_TotStudCount = hasViews.internalFindViewById(R.id.tv_TotStudCount);
+        this.tv_AssessmentGivenCount = hasViews.internalFindViewById(R.id.tv_AssessmentGivenCount);
         this.rv_examDetail = hasViews.internalFindViewById(R.id.rv_examDetail);
         this.ll_ageFilterSpinner = hasViews.internalFindViewById(R.id.ll_ageFilterSpinner);
         this.ll_villageFilterSpinner = hasViews.internalFindViewById(R.id.ll_villageFilterSpinner);
         this.spinner_ageFilter = hasViews.internalFindViewById(R.id.spinner_ageFilter);
         this.spinner_villageFilter = hasViews.internalFindViewById(R.id.spinner_villageFilter);
         View view_fab_sync = hasViews.internalFindViewById(R.id.fab_sync);
+        View view_fab_db_sync = hasViews.internalFindViewById(R.id.fab_db_sync);
 
         if (view_fab_sync!= null) {
             view_fab_sync.setOnClickListener(new OnClickListener() {
@@ -113,6 +116,16 @@ public final class Fragment_Profile_
                 @Override
                 public void onClick(View view) {
                     Fragment_Profile_.this.sync();
+                }
+            }
+            );
+        }
+        if (view_fab_db_sync!= null) {
+            view_fab_db_sync.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_Profile_.this.syncDB();
                 }
             }
             );

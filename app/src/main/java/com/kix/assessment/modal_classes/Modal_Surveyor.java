@@ -3,26 +3,22 @@ package com.kix.assessment.modal_classes;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import org.jetbrains.annotations.NotNull;
+
 @Entity(tableName = "Surveyor")
 public class Modal_Surveyor {
 
-    @PrimaryKey(autoGenerate = true)
-    public int svrId;
+    @PrimaryKey
+    @NotNull
+    public String svrCode;
     public String svrName;
     public String svrEmail;
     public String svrMobile;
     public String svrPassword;
-    public String svrCode;
     public String svrBooklet;
+    public String svrRegistrationDate;
+    public String svrCountry;
     public int sentFlag;
-
-    public int getSvrId() {
-        return svrId;
-    }
-
-    public void setSvrId(int svrId) {
-        this.svrId = svrId;
-    }
 
     public String getSvrName() {
         return svrName;
@@ -66,6 +62,22 @@ public class Modal_Surveyor {
 
     public void setSvrBooklet(String svrBooklet) {
         this.svrBooklet = svrBooklet;
+    }
+
+    public String getSvrRegistrationDate() {
+        return svrRegistrationDate;
+    }
+
+    public void setSvrRegistrationDate(String svrRegistrationDate) {
+        this.svrRegistrationDate = svrRegistrationDate;
+    }
+
+    public String getSvrCountry() {
+        return svrCountry;
+    }
+
+    public void setSvrCountry(String svrCountry) {
+        this.svrCountry = svrCountry;
     }
 
     public int getSentFlag() { return sentFlag; }

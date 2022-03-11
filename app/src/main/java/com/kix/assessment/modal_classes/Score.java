@@ -29,6 +29,12 @@ public class Score implements Serializable {
     private String endDateTime;
     @ColumnInfo(name = "label")
     private String label;
+    @ColumnInfo(name = "svrCode")
+    private String svrCode;
+    @ColumnInfo(name = "bookletNo")
+    private String bookletNo;
+    @ColumnInfo(name = "countryName")
+    private String countryName;
     @ColumnInfo(name = "sentFlag")
     private int sentFlag;
 
@@ -44,6 +50,9 @@ public class Score implements Serializable {
                 ", ScoredMarks=" + scoredMarks +
                 ", StartDateTime='" + startDateTime + '\'' +
                 ", EndDateTime='" + endDateTime + '\'' +
+                ", svrCode='" + svrCode + '\'' +
+                ", bookletNo='" + bookletNo + '\'' +
+                ", countryName='" + countryName+ '\'' +
                 '}';
     }
 
@@ -126,5 +135,29 @@ public class Score implements Serializable {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public String getSvrCode() {
+        return svrCode;
+    }
+
+    public void setSvrCode(String svrCode) {
+        this.svrCode = svrCode;
+    }
+
+    public String getBookletNo() {
+        return bookletNo;
+    }
+
+    public void setBookletNo(String bookletNo) {
+        this.bookletNo = bookletNo;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 }

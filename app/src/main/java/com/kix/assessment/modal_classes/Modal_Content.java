@@ -1,10 +1,10 @@
 package com.kix.assessment.modal_classes;
 
-import java.io.Serializable;
-
 import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
 
 @Entity(tableName = "Content")
 public class Modal_Content implements Serializable {
@@ -15,6 +15,7 @@ public class Modal_Content implements Serializable {
     public String contentCode;
     public String contentFolderName;
     public String contentBooklet;
+    public String contentCountry;
 
 
     public long getContentId() {
@@ -49,4 +50,11 @@ public class Modal_Content implements Serializable {
         this.contentBooklet = contentBooklet;
     }
 
+    public String getContentCountry() {
+        return contentCountry;
+    }
+
+    public void setContentCountry(String contentCountry) {
+        this.contentCountry = contentCountry;
+    }
 }

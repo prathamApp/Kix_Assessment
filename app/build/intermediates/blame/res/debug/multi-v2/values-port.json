@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "D:\\Android Projects\\KIX_Assessment\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pratham PC3\\.gradle\\caches\\transforms-2\\files-2.1\\317c19d01274fbeae9143df41fdfc758\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\pratham\\.gradle\\caches\\transforms-2\\files-2.1\\6573481ae1a873bf487a077d61048ff4\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

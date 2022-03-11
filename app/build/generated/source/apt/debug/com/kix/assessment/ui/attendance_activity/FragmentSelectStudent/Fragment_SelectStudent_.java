@@ -87,12 +87,24 @@ public final class Fragment_SelectStudent_
     public void onViewChanged(HasViews hasViews) {
         this.rv_student = hasViews.internalFindViewById(R.id.rv_student);
         this.fab_addChild = hasViews.internalFindViewById(R.id.fab_addChild);
+        View view_fab_sync = hasViews.internalFindViewById(R.id.fab_sync);
+
         if (this.fab_addChild!= null) {
             this.fab_addChild.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
                     Fragment_SelectStudent_.this.addChild();
+                }
+            }
+            );
+        }
+        if (view_fab_sync!= null) {
+            view_fab_sync.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_SelectStudent_.this.sync();
                 }
             }
             );

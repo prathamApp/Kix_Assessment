@@ -7,6 +7,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.isupatches.wisefy.WiseFy;
 import com.kix.assessment.dbclasses.KixDatabase;
+import com.kix.assessment.dbclasses.dao.AbandonedScoreDao;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
@@ -16,6 +17,8 @@ import com.kix.assessment.dbclasses.dao.SessionDao;
 import com.kix.assessment.dbclasses.dao.StatusDao;
 import com.kix.assessment.dbclasses.dao.StudentDao;
 import com.kix.assessment.dbclasses.dao.SurveyorDao;
+import com.kix.assessment.dbclasses.dao.VillageDao;
+import com.kix.assessment.dbclasses.dao.VillageInformationDao;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -29,12 +32,19 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 
+
 public class KIXApplication extends Application {
 
     public static String contentSDPath="";
     public static String kixPath="";
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
+//    public static String returnLang = "Spanish-Mexico";
+    public static final String appBuildDate = "08-Feb-22";
+//    public static String returnLang = "urdu";
+//    public static String returnLang = "kiswahili";
+//    public static String returnLang = "Hindi-India";
+    public static boolean isSDCard;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
     private static final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
@@ -42,34 +52,37 @@ public class KIXApplication extends Application {
     public static StudentDao studentDao;
     public static SurveyorDao surveyorDao;
     public static HouseholdDao householdDao;
+    public static VillageDao villageDao;
+    public static VillageInformationDao villageInformationDao;
     public static ContentDao contentDao;
     public static LogDao logDao;
     public static AttendanceDao attendanceDao;
     public static SessionDao sessionDao;
     public static ScoreDao scoreDao;
+    public static AbandonedScoreDao abandonedScoreDao;
     public static StatusDao statusDao;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        FastSave.init(getApplicationContext());
+        FastSave.init(this.getApplicationContext());
         Fresco.initialize(this);
-        if (kixApplication == null) {
-            kixApplication = this;
+        if (KIXApplication.kixApplication == null) {
+            KIXApplication.kixApplication = this;
         }
-        initializeDatabaseDaos();
-        setKixPath();
-        wiseF = new WiseFy.Brains(getApplicationContext()).logging(true).getSmarts();
-        okHttpClient = new OkHttpClient().newBuilder()
-                .connectTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
+        this.initializeDatabaseDaos();
+        this.setKixPath();
+        KIXApplication.wiseF = new WiseFy.Brains(this.getApplicationContext()).logging(true).getSmarts();
+        this.okHttpClient = new OkHttpClient().newBuilder()
+                .connectTimeout(50, TimeUnit.SECONDS)
+                .readTimeout(50, TimeUnit.SECONDS)
+                .writeTimeout(50, TimeUnit.SECONDS)
                 .build();
-        AndroidNetworking.initialize(getApplicationContext(), okHttpClient);
+        AndroidNetworking.initialize(this.getApplicationContext(), this.okHttpClient);
     }
 
     @Override
-    protected void attachBaseContext(Context base) {
+    protected void attachBaseContext(final Context base) {
         super.attachBaseContext(base);
     }
 
@@ -78,32 +91,35 @@ public class KIXApplication extends Application {
     }
 
     public static KIXApplication getInstance() {
-        return kixApplication;
+        return KIXApplication.kixApplication;
     }
 
     private void initializeDatabaseDaos() {
-        KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
-        studentDao = kixDatabase.getStudentDao();
-        surveyorDao = kixDatabase.getSurveyorDao();
-        householdDao = kixDatabase.getHouseholdDao();
-        contentDao = kixDatabase.getContentDao();
-        logDao = kixDatabase.getLogDao();
-        attendanceDao = kixDatabase.getAttendanceDao();
-        sessionDao = kixDatabase.getSessionDao();
-        scoreDao = kixDatabase.getScoreDao();
-        statusDao = kixDatabase.getStatusDao();
+        final KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
+        KIXApplication.studentDao = kixDatabase.getStudentDao();
+        KIXApplication.surveyorDao = kixDatabase.getSurveyorDao();
+        KIXApplication.householdDao = kixDatabase.getHouseholdDao();
+        KIXApplication.villageDao = kixDatabase.getVillageDao();
+        KIXApplication.villageInformationDao = kixDatabase.getVillageInformationDao();
+        KIXApplication.contentDao = kixDatabase.getContentDao();
+        KIXApplication.logDao = kixDatabase.getLogDao();
+        KIXApplication.attendanceDao = kixDatabase.getAttendanceDao();
+        KIXApplication.sessionDao = kixDatabase.getSessionDao();
+        KIXApplication.scoreDao = kixDatabase.getScoreDao();
+        KIXApplication.abandonedScoreDao = kixDatabase.getAbandonedScoreDao();
+        KIXApplication.statusDao = kixDatabase.getStatusDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
     }
 
     public void setKixPath() {
         try {
-            kixPath = KIX_Utility.getInternalPath(this);
-            File f = new File(kixPath);
+            KIXApplication.kixPath = KIX_Utility.getInternalPath(this);
+            final File f = new File(KIXApplication.kixPath);
             if (!f.exists()) f.mkdirs();
-            File nmFile = new File(kixPath, ".nomedia");
+            final File nmFile = new File(KIXApplication.kixPath, ".nomedia");
             if (!nmFile.exists()) nmFile.createNewFile();
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
         }
     }

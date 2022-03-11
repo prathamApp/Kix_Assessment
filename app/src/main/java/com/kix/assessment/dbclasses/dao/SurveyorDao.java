@@ -1,13 +1,13 @@
 package com.kix.assessment.dbclasses.dao;
 
-import com.kix.assessment.modal_classes.Modal_Surveyor;
-
-import java.util.List;
-
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.kix.assessment.modal_classes.Modal_Surveyor;
+
+import java.util.List;
 
 @Dao
 public interface SurveyorDao {
@@ -26,8 +26,8 @@ public interface SurveyorDao {
     @Query("select * from Surveyor where sentFlag = 0")
     List<Modal_Surveyor> getAllNewSurveyor();
 
-    @Query("update Surveyor set sentFlag=1 where svrCode=:svrCode")
-    void updateSentSurveyorFlags(String svrCode);
+//    @Query("update Surveyor set sentFlag=1 where svrCode=:svrCode")
+//    void updateSentSurveyorFlags(String svrCode);
 
     @Query("update Surveyor set sentFlag=1 where sentFlag=0")
     void updateSentFlag();

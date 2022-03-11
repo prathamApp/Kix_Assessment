@@ -1,13 +1,17 @@
 package com.kix.assessment.ui.attendance_activity.FragmentSelectStudent;
 
+import static com.kix.assessment.KIXApplication.scoreDao;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.card.MaterialCardView;
 import com.kix.assessment.R;
@@ -15,14 +19,9 @@ import com.kix.assessment.modal_classes.Modal_Student;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import static com.kix.assessment.KIXApplication.scoreDao;
-
-public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.MyViewHolder>{
-    private List<Modal_Student> studnetList;
-    private Context context;
+public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.MyViewHolder> {
+    private final List<Modal_Student> studnetList;
+    private final Context context;
     private final ContractStudentList contractStudentList;
 
     public int index = -1;
@@ -46,7 +45,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     public StudentListAdapter(List<Modal_Student> studnetList, Context context, ContractStudentList contractStudentList) {
         this.studnetList = studnetList;
         this.context = context;
-        this.contractStudentList=contractStudentList;
+        this.contractStudentList = contractStudentList;
     }
 
     @NonNull
@@ -62,10 +61,10 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     public void onBindViewHolder(@NonNull StudentListAdapter.MyViewHolder holder, int position) {
         Modal_Student modalStudnet = studnetList.get(position);
         holder.tv_studName.setText(modalStudnet.getStudName());
-        String examGivenByStud = scoreDao.getStudentId(modalStudnet.getStud_Id());
+        String examGivenByStud = scoreDao.getStudentId(modalStudnet.getStudentId());
 
-        if(examGivenByStud!=null){
-                holder.studentCardView.setCardBackgroundColor(context.getResources().getColor(R.color.colorExamGiven));
+        if (examGivenByStud != null) {
+            holder.studentCardView.setCardBackgroundColor(context.getResources().getColor(R.color.colorBtnGreenDark));
             holder.iv_studentCheck.setVisibility(View.VISIBLE);
         } else {
             holder.iv_studentCheck.setVisibility(View.INVISIBLE);
@@ -73,14 +72,13 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
 
         holder.itemView.setOnClickListener(v -> {
             contractStudentList.itemSelected(holder.getAdapterPosition());
-            index=position;
+            index = position;
             notifyDataSetChanged();
         });
 
         holder.iv_studentEdit.setOnClickListener(v -> {
             contractStudentList.editStudent(holder.getAdapterPosition());
         });
-
     }
 
     public Modal_Student getitem(int pos) {
@@ -92,4 +90,3 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
         return studnetList.size();
     }
 }
-

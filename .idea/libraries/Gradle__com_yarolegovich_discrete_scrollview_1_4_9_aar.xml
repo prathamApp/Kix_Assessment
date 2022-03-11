@@ -2,12 +2,19 @@
   <library name="Gradle: com.yarolegovich:discrete-scrollview:1.4.9@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/AndroidManifest.xml" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yarolegovich/discrete-scrollview/1.4.9/e2b1b87b163d37a18be763fd46d8c2b241ade8e9/discrete-scrollview-1.4.9-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yarolegovich/discrete-scrollview/1.4.9/9222fe822dfaf67f250b094bd599848c156750e5/discrete-scrollview-1.4.9-sources.jar!/" />
     </SOURCES>

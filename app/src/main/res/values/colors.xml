@@ -9,10 +9,15 @@
     <color name="colorPrimary">#F4511E</color>
     <color name="colorAccent">#00c853</color>
 
+    <color name="bg_color">#f8fffd</color>
+    <color name="newPrimary">#1ad5ad</color>
+    <color name="newPrimaryDark">#106b53</color>
+    <color name="newTextColor">#0a3a2d</color>
     <color name="test_item">#FFFDF7EC</color>
     <color name="colorParent">#F2F1E7</color>
     <color name="colorText">#262B4B</color>
 
+    <color name="colorRedLight">#FF8383</color>
     <color name="strokeColor">#344955</color>
     <color name="white">#ffffff</color>
     <color name="yellow">#FFFFFF00</color>

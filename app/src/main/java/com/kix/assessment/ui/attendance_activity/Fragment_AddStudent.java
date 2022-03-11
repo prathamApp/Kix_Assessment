@@ -1,10 +1,16 @@
 package com.kix.assessment.ui.attendance_activity;
 
+import static com.kix.assessment.KIXApplication.attendanceDao;
+import static com.kix.assessment.KIXApplication.sessionDao;
+import static com.kix.assessment.KIXApplication.studentDao;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -15,6 +21,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
@@ -35,13 +43,6 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
-
-import static com.kix.assessment.KIXApplication.attendanceDao;
-import static com.kix.assessment.KIXApplication.sessionDao;
-import static com.kix.assessment.KIXApplication.studentDao;
-import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 @EFragment(R.layout.fragment_add_student)
 public class Fragment_AddStudent extends Fragment {
@@ -91,6 +92,7 @@ public class Fragment_AddStudent extends Fragment {
     @AfterViews
     public void initialize() {
         ll_spinnerByStatus.setVisibility(View.GONE);
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
 
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
@@ -102,7 +104,7 @@ public class Fragment_AddStudent extends Fragment {
         spinner_enrollStatue.setAdapter(adapterEnrollStatus);
         adapterSchoolType = ArrayAdapter.createFromResource(getActivity(), R.array.school_type, R.layout.support_simple_spinner_dropdown_item);
         spinner_schoolType.setAdapter(adapterSchoolType);
-        adapterDropYear = ArrayAdapter.createFromResource(getActivity(), R.array.dropout_year, R.layout.support_simple_spinner_dropdown_item);
+        adapterDropYear = ArrayAdapter.createFromResource(getActivity(), R.array.dropout_year_list, R.layout.support_simple_spinner_dropdown_item);
         spinner_dropoutYear.setAdapter(adapterDropYear);
         adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
         spinner_class.setAdapter(adapterClass);
@@ -110,15 +112,15 @@ public class Fragment_AddStudent extends Fragment {
         if(getArguments().getString(Kix_Constant.EDIT_STUDENT)!=null) {
             studId = getArguments().getString(STUDENT_ID);
             modalStudent = studentDao.getStudentByStudId(studId);
-            tv_label.setText("Edit Child Information");
+            tv_label.setText(getResources().getString(R.string.edit_child_info));
             et_studentName.setText(modalStudent.getStudName());
 
             spinner_age.setSelection(adapterAge.getPosition("Age "+modalStudent.getStudAge()));
             spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getStudGender()));
             spinner_enrollStatue.setSelection(adapterEnrollStatus.getPosition(modalStudent.getStudEnrollmentStatus()));
-            if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase("Enrolled")){
+            if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase(getResources().getString(R.string.enrolled))){
                 spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.getStudSchoolType()));
-            } else if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase("Drop Out")){
+            } else if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase(getResources().getString(R.string.drop_out))){
                 spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.getStudDropoutYear()));
             }
         }
@@ -128,7 +130,7 @@ public class Fragment_AddStudent extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString();
-                if(selectedItem.equals("Enrolled"))
+                if(selectedItem.equals(getResources().getString(R.string.enrolled)))
                 {
                     adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
                     spinner_class.setAdapter(adapterClass);
@@ -140,11 +142,11 @@ public class Fragment_AddStudent extends Fragment {
                     ll_spinnerDropout.setVisibility(View.GONE);
                     ll_schoolType.setVisibility(View.VISIBLE);
                 }
-                else if(selectedItem.equals("Never Enrolled"))
+                else if(selectedItem.equals(getResources().getString(R.string.never_enrolled)))
                 {
                     ll_spinnerByStatus.setVisibility(View.GONE);
                 }
-                if(selectedItem.equals("Drop Out"))
+                if(selectedItem.equals(getResources().getString(R.string.drop_out)))
                 {
                     adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_dropoutclass, R.layout.support_simple_spinner_dropdown_item);
                     spinner_class.setAdapter(adapterClass);
@@ -206,8 +208,10 @@ public class Fragment_AddStudent extends Fragment {
     private void insertStudent() {
         getSelectedAge();
         getSpinnerValues();
+        String sId = KIX_Utility.getUUID().toString();
+        Log.d("TAG", "insertStudent: "+sId);
         Modal_Student modal_student = new Modal_Student();
-        modal_student.setStud_Id("" + KIX_Utility.getUUID());
+        modal_student.setStudentId(sId);
         modal_student.setStudName(et_studentName.getText().toString());
         modal_student.setStudAge(age);
         modal_student.setStudGender(spinner_gender.getSelectedItem().toString());
@@ -217,6 +221,7 @@ public class Fragment_AddStudent extends Fragment {
         modal_student.setStudDropoutYear(dropoutYear);
         modal_student.setSvrCode(surveyorCode);
         modal_student.setHousehold_ID(householdID);
+        modal_student.setStudentRegistrationDate(KIX_Utility.getCurrentDateTime());
         modal_student.setSentFlag(0);
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
@@ -269,7 +274,7 @@ public class Fragment_AddStudent extends Fragment {
         });
         dlg_yes.setOnClickListener(v -> {
             getFragmentManager().popBackStack();
-            FastSave.getInstance().saveString(STUDENT_ID, ""+modal_student.getStud_Id());
+            FastSave.getInstance().saveString(STUDENT_ID, ""+modal_student.getStudentId());
             FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
             markAttendance(modal_student);
             Intent intent = new Intent(getActivity(), WebViewActivity_.class);
@@ -284,15 +289,15 @@ public class Fragment_AddStudent extends Fragment {
         ArrayList<Attendance> attendances = new ArrayList<>();
         Attendance attendance = new Attendance();
         attendance.sessionId = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
-        attendance.studentId = stud.getStud_Id();
-        attendance.date = KIX_Utility.getCurrentDateTime();
+        attendance.studentId = stud.getStudentId();
+        attendance.attendanceDate = KIX_Utility.getCurrentDateTime();
         attendance.sentFlag = 0;
         attendances.add(attendance);
         attendanceDao.insertAttendance(attendances);
         Modal_Session s = new Modal_Session();
         s.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
         s.setFromDate(KIX_Utility.getCurrentDateTime());
-        s.setToDate("NA");
+//        s.setToDate("NA");
         sessionDao.insert(s);
     }
 

@@ -22,7 +22,7 @@
             android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="Do you want to Start Assessment?"
+            android:text="@string/want_to_start_assessment"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_15sdp" />
 
@@ -45,7 +45,8 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:padding="@dimen/_5sdp"
-                android:text="YES"
+                android:text="@string/yes"
+                android:textAllCaps="true"
                 android:textAlignment="center"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:strokeColor="@color/colorBtnGreenDark"
@@ -64,7 +65,8 @@
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:text="NO"
+                android:text="@string/no"
+                android:textAllCaps="true"
                 android:textAlignment="center"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:strokeColor="@color/colorBtnRedDark"

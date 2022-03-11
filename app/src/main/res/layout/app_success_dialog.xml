@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
         android:gravity="center"
-        android:text="Please wait, pushing Data..."
+        android:text="@string/please_wait_pushing"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="@dimen/_12sdp" />
 
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Check your wifi is connected to Pratham Kolibri !"
+        android:text="@string/check_wifi_connected_kolibri"
         android:textColor="@color/charcoal"
         android:textSize="@dimen/_12sdp"
         android:visibility="gone" />

@@ -1,9 +1,9 @@
 package com.kix.assessment.ui.household_activity;
 
+import static com.kix.assessment.KIXApplication.householdDao;
+
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.Gravity;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
@@ -11,6 +11,7 @@ import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.household_activity.FragmentSelectHousehold.Fragment_SelectHousehold;
 import com.kix.assessment.ui.household_activity.FragmentSelectHousehold.Fragment_SelectHousehold_;
 
@@ -18,8 +19,6 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 
 import java.util.ArrayList;
-
-import static com.kix.assessment.KIXApplication.householdDao;
 
 @EActivity(R.layout.activity_household)
 public class Activity_Household extends BaseActivity {
@@ -30,20 +29,21 @@ public class Activity_Household extends BaseActivity {
 
     @AfterViews
     public void initialize() {
-        surveyorCode = getIntent().getStringExtra(Kix_Constant.SURVEYOR_CODE);
-        Bundle bundle = new Bundle();
-        ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
-        bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-        bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
-        KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
-                bundle, Fragment_SelectHousehold.class.getSimpleName());
-
+        this.surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "NA");
+        if(!this.surveyorCode.equalsIgnoreCase("NA")) {
+            final Bundle bundle = new Bundle();
+            final ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(this.surveyorCode);
+            bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
+            bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
+            KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
+                    bundle, Fragment_SelectHousehold.class.getSimpleName());
+        }
         /*        Modal_Household household = KixDatabase.getDatabaseInstance(this).getHouseholdDao().getHouseholdBySurveyorCode(surveyorCode);
         Bundle bundle = new Bundle();
         if (household == null) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
-            KIX_Utility.addFragment(this, new Fragment_AddHousehold_(), R.id.household_frame,
-                    bundle, Fragment_AddHousehold.class.getSimpleName());
+            KIX_Utility.addFragment(this, new Fragment_AddVillage_(), R.id.household_frame,
+                    bundle, Fragment_AddVillage.class.getSimpleName());
         } else {
             ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
             bundle.putString(Kix_Constant.SURVEYOR_CODE,surveyorCode);
@@ -55,9 +55,10 @@ public class Activity_Household extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        Log.e("KIX : ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
-        if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
-            exitDialog = new BlurPopupWindow.Builder(this)
+        Log.e("KIX : ", String.valueOf(this.getSupportFragmentManager().getBackStackEntryCount()));
+        if (this.getSupportFragmentManager().getBackStackEntryCount() == 1) {
+            finish();
+/*            exitDialog = new BlurPopupWindow.Builder(this)
                     .setContentView(R.layout.app_exit_dialog)
                     .bindClickListener(v -> {
                         exitDialog.dismiss();
@@ -71,9 +72,9 @@ public class Activity_Household extends BaseActivity {
                     .setBlurRadius(10)
                     .setTintColor(0x30000000)
                     .build();
-            exitDialog.show();
+            exitDialog.show();*/
         } else {
-            getSupportFragmentManager().popBackStackImmediate();
+            this.getSupportFragmentManager().popBackStackImmediate();
         }
     }
 }

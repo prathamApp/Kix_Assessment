@@ -1,12 +1,16 @@
 package com.kix.assessment.ui.splash_activityy;
 
 
+import static com.kix.assessment.KIXApplication.contentSDPath;
+import static com.kix.assessment.KIXApplication.statusDao;
+
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -24,9 +28,6 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.kix.assessment.KIXApplication.contentSDPath;
-import static com.kix.assessment.KIXApplication.statusDao;
 
 @EBean
 public class SplashPresenter implements SplashContract.SplashPresenter {
@@ -48,29 +49,38 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
     public void addDataToDB() {
         try {
             List<GameList> gameListList = new ArrayList<>();
-            InputStream is = new FileInputStream(contentSDPath + "/.KIX/Data.json");
+
+            InputStream is;
+            if (KIXApplication.isSDCard) {
+                is = new FileInputStream(contentSDPath + "/.KIX/Data.json");
+            } else {
+                is = mContext.getAssets().open(Kix_Constant.assessment_Games + "/Data.json");
+            }
+
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
+
             String jsonStr = new String(buffer);
-//            JSONObject jsonObj = new JSONObject(jsonStr);
             Gson gson = new Gson();
             Type type = new TypeToken<List<GameList>>() {
             }.getType();
             gameListList = gson.fromJson(jsonStr, type);
 
             List<Modal_Content> modal_contentList = new ArrayList<>();
-            for(int i=0; i<gameListList.size(); i++){
+            for (int i = 0; i < gameListList.size(); i++) {
                 Modal_Content modal_content = new Modal_Content();
-                modal_content.setContentBooklet(""+gameListList.get(i).getContentBooklet());
-                modal_content.setContentCode(""+gameListList.get(i).getContentCode());
-                modal_content.setContentFolderName(""+gameListList.get(i).getContentFolderName());
+                modal_content.setContentBooklet("" + gameListList.get(i).getContentBooklet());
+                modal_content.setContentCode("" + gameListList.get(i).getContentCode());
+                modal_content.setContentFolderName("" + gameListList.get(i).getContentFolderName());
+                modal_content.setContentCountry("" + gameListList.get(i).getContentCountry());
                 modal_contentList.add(modal_content);
             }
             KixDatabase.getDatabaseInstance(mContext).getContentDao().insertAll(modal_contentList);
-            FastSave.getInstance().saveBoolean(Kix_Constant.DATA_COPIED,true);
+            FastSave.getInstance().saveBoolean(Kix_Constant.DATA_COPIED, true);
             BackupDatabase.backup(mContext);
+            splashView.openSignupFragment();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -140,6 +150,11 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         if (statusDao.getKey("screenResolution") == null) {
             statusObj.statusKey = "screenResolution";
             statusObj.value = KIX_Utility.getScreenResolution();
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("appBuildDate") == null) {
+            statusObj.statusKey = "appBuildDate";
+            statusObj.value = KIXApplication.appBuildDate;
             statusDao.insert(statusObj);
         }
 /*        Modal_Log modal_log = new Modal_Log();

@@ -22,7 +22,7 @@
             android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="Do you want to go to the next task?"
+            android:text="@string/goto_next_task"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_15sdp" />
 
@@ -44,7 +44,8 @@
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:text="YES"
+                android:text="@string/yes"
+                android:textAllCaps="true"
                 android:textAlignment="center"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:strokeColor="@color/colorBtnGreenDark"
@@ -63,7 +64,8 @@
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_weight="1"
                 android:padding="@dimen/_5sdp"
-                android:text="NO"
+                android:text="@string/no"
+                android:textAllCaps="true"
                 android:textAlignment="center"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:strokeColor="@color/colorBtnRedDark"

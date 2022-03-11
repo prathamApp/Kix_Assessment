@@ -1,5 +1,8 @@
 package com.kix.assessment.ui.main_test;
 
+import static com.kix.assessment.KIXApplication.sessionDao;
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.pm.ApplicationInfo;
@@ -19,12 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kix.assessment.BaseActivity;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.CustomLodingDialog;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.AbandonedScore;
 import com.kix.assessment.modal_classes.Modal_Content;
 import com.kix.assessment.modal_classes.Score;
 import com.kix.assessment.services.shared_preferences.FastSave;
@@ -35,14 +40,9 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import static com.kix.assessment.KIXApplication.contentSDPath;
-import static com.kix.assessment.KIXApplication.sessionDao;
-import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 
 @EActivity(R.layout.activity_web_view)
@@ -59,92 +59,103 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 
     public static List<Modal_Content> gameListList;
     public static List<Score> scoresList;
+    public static List<AbandonedScore> abandonedScoreList;
     public String studentName;
-    public static int queCnt = 0;
+    public static int queCnt;
+    public static boolean testOnFlg;
 
     @AfterViews
     public void init() {
-        studentName = getIntent().getStringExtra(Kix_Constant.STUDENT_NAME);
-        rl_gameover.setVisibility(View.GONE);
-        gameListList = new ArrayList<>();
-        scoresList = new ArrayList<>();
-        queCnt = 0;
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        this.studentName = this.getIntent().getStringExtra(Kix_Constant.STUDENT_NAME);
+        this.rl_gameover.setVisibility(View.GONE);
+        WebViewActivity.gameListList = new ArrayList<>();
+        WebViewActivity.scoresList = new ArrayList<>();
+        WebViewActivity.queCnt = 0;
         try {
-            String bklet = ""+FastSave.getInstance().getString(Kix_Constant.BOOKLET,"Booklet 1");
+            final String bklet = "" + FastSave.getInstance().getString(Kix_Constant.BOOKLET, "Booklet 1");
+            final String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
             Log.d("WebView", "Kix_Constant.BOOKLET: " + bklet);
-            gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBooklet("%"+bklet+",%");
-        } catch (Exception e) {
+            WebViewActivity.gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBookletCountry("%" + bklet + ",%", country);
+        } catch (final Exception e) {
             e.printStackTrace();
         }
-        createWebView(queCnt);
+        this.createWebView(WebViewActivity.queCnt);
     }
 
     @UiThread
-    @SuppressLint("JavascriptInterface")
-    public void createWebView(int pos) {
+    @SuppressLint({"JavascriptInterface", "SetJavaScriptEnabled"})
+    public void createWebView(final int pos) {
         try {
-            if (new File(contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName()).exists()) {
-                webView.loadUrl(contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName());
-                webView.getSettings().setJavaScriptEnabled(true);
-                webView.getSettings().setMediaPlaybackRequiresUserGesture(false);
-                webView.addJavascriptInterface(new JSInterface(this, this, webView, ""), "Android");
+            WebViewActivity.testOnFlg = true;
+            this.webView.getSettings().setJavaScriptEnabled(true);
+            this.webView.getSettings().setMediaPlaybackRequiresUserGesture(false);
+            this.webView.addJavascriptInterface(new JSInterface(this, this, this.webView, ""), "Android");
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    if (0 != (this.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
-                        WebView.setWebContentsDebuggingEnabled(true);
-                    }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
+                    WebView.setWebContentsDebuggingEnabled(true);
                 }
-
-                webView.setWebViewClient(new WebViewClient());
-                webView.setWebChromeClient(new WebChromeClient());
-                webView.clearCache(true);
-                webView.setVerticalScrollBarEnabled(false);
-                webView.getSettings().setAllowFileAccess(true);
-                webView.getSettings().setLoadsImagesAutomatically(true);
-                webView.getSettings().setDomStorageEnabled(true);
-                webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                dismissLoadingDialog();
-            } else {
-                Log.d("TAG", "createWebView: PATH :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName());
-                Log.d("TAG", "createWebView: ID :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentCode());
-                Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
             }
 
-        } catch (Exception e) {
+            this.webView.setWebViewClient(new WebViewClient());
+            this.webView.setWebChromeClient(new WebChromeClient());
+            this.webView.clearCache(true);
+            this.webView.setVerticalScrollBarEnabled(false);
+            this.webView.getSettings().setAllowFileAccess(true);
+            this.webView.getSettings().setLoadsImagesAutomatically(true);
+            this.webView.getSettings().setDomStorageEnabled(true);
+            this.webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
+            if (KIXApplication.isSDCard)
+                this.webView.loadUrl(KIXApplication.contentSDPath + "/.KIX/" + WebViewActivity.gameListList.get(pos).getContentFolderName());
+            else
+                this.webView.loadUrl("file:///android_asset/" + Kix_Constant.assessment_Games + "/" + WebViewActivity.gameListList.get(pos).getContentFolderName());
+
+            this.dismissLoadingDialog();
+
+        } catch (final Exception e) {
             e.printStackTrace();
-            Log.d("TAG", "createWebView: PATH :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentFolderName());
-            Log.d("TAG", "createWebView: ID :  "+contentSDPath + "/.KIX/" + gameListList.get(pos).getContentCode());
+            Log.d("TAG", "createWebView: PATH :  file:///android_asset/" + Kix_Constant.assessment_Games + "/" + WebViewActivity.gameListList.get(pos).getContentFolderName());
+            Log.d("TAG", "createWebView: ID :  file:///android_asset/" + Kix_Constant.assessment_Games + "/" + WebViewActivity.gameListList.get(pos).getContentCode());
             Toast.makeText(this, "Problem Loading", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private boolean loaderVisible = false;
+    @Override
+    public void onResume() {
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        super.onResume();
+    }
+
+    private boolean loaderVisible;
     private CustomLodingDialog myLoadingDialog;
 
     @UiThread
     public void showLoader() {
-        if (!loaderVisible) {
-            loaderVisible = true;
-            myLoadingDialog = new CustomLodingDialog(this);
-            myLoadingDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            Objects.requireNonNull(myLoadingDialog.getWindow()).
+        if (!this.loaderVisible) {
+            this.loaderVisible = true;
+            this.myLoadingDialog = new CustomLodingDialog(this);
+            this.myLoadingDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            Objects.requireNonNull(this.myLoadingDialog.getWindow()).
                     setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            myLoadingDialog.setContentView(R.layout.loading_dialog);
-            myLoadingDialog.setCanceledOnTouchOutside(false);
+            this.myLoadingDialog.setContentView(R.layout.loading_dialog);
+            this.myLoadingDialog.setCanceledOnTouchOutside(false);
 //        myLoadingDialog.setCancelable(false);
-            myLoadingDialog.show();
+            this.myLoadingDialog.show();
         }
     }
 
     @UiThread
     public void dismissLoadingDialog() {
         try {
-            loaderVisible = false;
+            this.loaderVisible = false;
             new Handler().postDelayed(() -> {
-                if (myLoadingDialog != null && myLoadingDialog.isShowing())
-                    myLoadingDialog.dismiss();
+                if (this.myLoadingDialog != null && this.myLoadingDialog.isShowing())
+                    this.myLoadingDialog.dismiss();
             }, 300);
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
@@ -163,67 +174,99 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
 
     @UiThread
     public void nextClicked() {
-        queCnt++;
-        if (queCnt < gameListList.size()) {
-            createWebView(queCnt);
+        WebViewActivity.queCnt++;
+        if (WebViewActivity.queCnt < WebViewActivity.gameListList.size()) {
+            this.createWebView(WebViewActivity.queCnt);
         } else {
-            dismissLoadingDialog();
-            webView.setVisibility(View.GONE);
-            tv_thankyou.setText("Thank you, " + studentName + "!\nYour assessment is submitted.");
-            rl_gameover.setVisibility(View.VISIBLE);
+            this.dismissLoadingDialog();
+            this.webView.setVisibility(View.GONE);
+            WebViewActivity.testOnFlg = false;
+            this.tv_thankyou.setText(this.getResources().getString(R.string.thank_you)+", " + this.studentName
+                    + "!\n"+ this.getResources().getString(R.string.test_submitted));
+            this.btn_next_student.setText(this.getResources().getString(R.string.next_student));
+            this.rl_gameover.setVisibility(View.VISIBLE);
         }
     }
 
     @UiThread
     @Click(R.id.btn_next_student)
     public void nextStudentClicked() {
-        KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+        KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(WebViewActivity.scoresList);
         sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
         FastSave.getInstance().saveString(STUDENT_ID, "NA");
         BackupDatabase.backup(this);
-        finish();
+        this.finish();
     }
 
     @Override
     public void onBackPressed() {
-        testOverDialog();
+        this.testOverDialog();
     }
 
     public Dialog nextDialog, testover;
     Button dia_yes, dia_no, btn_cancel;
     TextView dia_title;
 
+    @Override
+    protected void onPause() {
+        sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
+        super.onPause();
+    }
+
     @UiThread
     public void testOverDialog() {
-        testover = null;
-        testover = new Dialog(this);
-        testover.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Objects.requireNonNull(testover.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        testover.setContentView(R.layout.exit_game_dialog);
-        testover.setCanceledOnTouchOutside(false);
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        this.testover = null;
+        this.testover = new Dialog(this);
+        this.testover.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(this.testover.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.testover.setContentView(R.layout.exit_game_dialog);
+        this.testover.setCanceledOnTouchOutside(false);
 
-        dia_title = testover.findViewById(R.id.dia_title);
-        dia_yes = testover.findViewById(R.id.dia_yes);
-        dia_no = testover.findViewById(R.id.dia_no);
-        btn_cancel = testover.findViewById(R.id.btn_cancel);
-        dia_title.setText("Save and Submit Assessment");
-        dia_no.setOnClickListener(v -> {
-            testover.dismiss();
+        this.dia_title = this.testover.findViewById(R.id.dia_title);
+        this.dia_yes = this.testover.findViewById(R.id.dia_yes);
+        this.dia_no = this.testover.findViewById(R.id.dia_no);
+        this.btn_cancel = this.testover.findViewById(R.id.btn_cancel);
+        this.dia_title.setText(this.getResources().getString(R.string.save_n_submit));
+        this.dia_no.setOnClickListener(v -> {
+            this.testover.dismiss();
+            WebViewActivity.abandonedScoreList = new ArrayList<>();
+            for (int i = 0; i< WebViewActivity.scoresList.size(); i++) {
+                final AbandonedScore abandonedScore = new AbandonedScore();
+                abandonedScore.setDeviceId(WebViewActivity.scoresList.get(i).getDeviceId());
+                abandonedScore.setResourceId(WebViewActivity.scoresList.get(i).getResourceId());
+                abandonedScore.setScoredMarks(WebViewActivity.scoresList.get(i).getScoredMarks());
+                abandonedScore.setSessionId(WebViewActivity.scoresList.get(i).getSessionId());
+                abandonedScore.setStudentId(WebViewActivity.scoresList.get(i).getStudentId());
+                abandonedScore.setStartDateTime(WebViewActivity.scoresList.get(i).getStartDateTime());
+                abandonedScore.setEndDateTime(WebViewActivity.scoresList.get(i).getEndDateTime());
+                abandonedScore.setLabel(WebViewActivity.scoresList.get(i).getLabel());
+                abandonedScore.setSvrCode(WebViewActivity.scoresList.get(i).getSvrCode());
+                abandonedScore.setSentFlag(WebViewActivity.scoresList.get(i).getSentFlag());
+                abandonedScore.setBookletNo(WebViewActivity.scoresList.get(i).getBookletNo());
+                abandonedScore.setCountryName(WebViewActivity.scoresList.get(i).getCountryName());
+                abandonedScore.setReason("Data Not Saved");
+                WebViewActivity.abandonedScoreList.add(abandonedScore);
+            }
+            KixDatabase.getDatabaseInstance(this).getAbandonedScoreDao().addAbandonedScoreList(WebViewActivity.abandonedScoreList);
             sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
-            finish();
+            FastSave.getInstance().saveString(STUDENT_ID, "NA");
+//            FastSave.getInstance().saveString(Kix_Constant.SESSIONID, "NA");
+            this.finish();
         });
-        btn_cancel.setOnClickListener(v -> {
-            testover.dismiss();
+        this.btn_cancel.setOnClickListener(v -> {
+            this.testover.dismiss();
         });
-        dia_yes.setOnClickListener(v -> {
-            KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(scoresList);
+        this.dia_yes.setOnClickListener(v -> {
+            KixDatabase.getDatabaseInstance(this).getScoreDao().addScoreList(WebViewActivity.scoresList);
             sessionDao.UpdateToDate(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""), KIX_Utility.getCurrentDateTime());
             FastSave.getInstance().saveString(STUDENT_ID, "NA");
             BackupDatabase.backup(this);
-            finish();
-            testover.dismiss();
+//            FastSave.getInstance().saveString(Kix_Constant.SESSIONID, "NA");
+            this.testover.dismiss();
+            this.finish();
         });
-        testover.show();
+        this.testover.show();
     }
 
 /*
@@ -237,51 +280,59 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     }
 */
 
-boolean dialogOpen = false;
+    boolean dialogOpen;
 
     @Override
     @UiThread
-    public void onNextGame(String scoredMarks, String label, String startTime) {
-        if(!dialogOpen) {
-            nextDialog = null;
-            dialogOpen = true;
-            nextDialog = new Dialog(this);
-            nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            Objects.requireNonNull(nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            nextDialog.setContentView(R.layout.next_game_dialog);
-            nextDialog.setCanceledOnTouchOutside(false);
+    public void onNextGame(final String scoredMarks, final String label, final String startTime) {
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        if (!this.dialogOpen) {
+            this.nextDialog = null;
+            this.dialogOpen = true;
+            this.nextDialog = new Dialog(this);
+            this.nextDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            Objects.requireNonNull(this.nextDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            this.nextDialog.setContentView(R.layout.next_game_dialog);
+            this.nextDialog.setCanceledOnTouchOutside(false);
 
-            dia_title = nextDialog.findViewById(R.id.dia_title);
-            dia_yes = nextDialog.findViewById(R.id.dia_yes);
-            dia_no = nextDialog.findViewById(R.id.dia_no);
-            if (queCnt == gameListList.size() - 1)
-                dia_title.setText("Submit Assessment");
-            dia_no.setOnClickListener(v -> {nextDialog.dismiss();
-                dialogOpen = false;});
-            dia_yes.setOnClickListener(v -> {
-                addScoreToList(scoredMarks, label, startTime);
-                nextClicked();
-                dialogOpen = false;
-                nextDialog.dismiss();
-                showLoader();
+            this.dia_title = this.nextDialog.findViewById(R.id.dia_title);
+            this.dia_yes = this.nextDialog.findViewById(R.id.dia_yes);
+            this.dia_no = this.nextDialog.findViewById(R.id.dia_no);
+            if (WebViewActivity.queCnt == WebViewActivity.gameListList.size() - 1)
+                this.dia_title.setText(this.getResources().getString(R.string.submit_assessment));
+            else
+                this.dia_title.setText(this.getResources().getString(R.string.goto_next_task));
+            this.dia_no.setOnClickListener(v -> {
+                this.nextDialog.dismiss();
+                this.dialogOpen = false;
             });
-            nextDialog.show();
+            this.dia_yes.setOnClickListener(v -> {
+                this.addScoreToList(scoredMarks, label, startTime);
+                this.nextClicked();
+                this.dialogOpen = false;
+                this.nextDialog.dismiss();
+                this.showLoader();
+            });
+            this.nextDialog.show();
         }
     }
 
-    private void addScoreToList(String scoredMarks, String label, String startTime) {
-        Score score = new Score();
-        score.setSessionId(""+FastSave.getInstance().getString(Kix_Constant.SESSIONID,""));
-        score.setDeviceId("");
-        score.setResourceId("" + gameListList.get(queCnt).getContentCode());
+    private void addScoreToList(final String scoredMarks, final String label, final String startTime) {
+        final Score score = new Score();
+        score.setSessionId("" + FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
+        score.setDeviceId(""+KIX_Utility.getDeviceID());
+        score.setResourceId("" + WebViewActivity.gameListList.get(WebViewActivity.queCnt).getContentCode());
         score.setStartDateTime("" + startTime);
         score.setEndDateTime(KIX_Utility.getCurrentDateTime());
         score.setScoredMarks("" + scoredMarks);
         if (!FastSave.getInstance().getString(STUDENT_ID, "NA").equalsIgnoreCase("NA"))
             score.setStudentId("" + FastSave.getInstance().getString(STUDENT_ID, "NA"));
         score.setLabel(label);
+        score.setSvrCode(FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, ""));
+        score.setBookletNo(FastSave.getInstance().getString(Kix_Constant.BOOKLET, ""));
+        score.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY, "NA"));
         score.setSentFlag(0);
-        scoresList.add(score);
+        WebViewActivity.scoresList.add(score);
     }
 
 }

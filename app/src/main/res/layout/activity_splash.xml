@@ -5,7 +5,7 @@
     android:id="@+id/splash_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE"
+    android:background="@color/bg_color"
     android:focusableInTouchMode="true"
     tools:context="com.kix.assessment.ui.splash_activityy.SplashActivity">
 
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="KIX Assessment"
+        android:text="@string/kix_assessment"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/_20sdp"
@@ -40,7 +40,6 @@
             android:layout_marginStart="@dimen/_40sdp"
             android:layout_marginEnd="@dimen/_40sdp"
             android:padding="@dimen/_5sdp"
-            android:text="Sign Up"
             android:textAlignment="center"
             android:textAppearance="@dimen/_5sdp"
             android:textColor="@color/white"
@@ -59,7 +58,6 @@
             android:layout_marginEnd="@dimen/_40sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:padding="@dimen/_5sdp"
-            android:text="Already Have Account? Sign In."
             android:textAlignment="center"
             android:textAppearance="@dimen/_5sdp"
             android:textColor="@color/colorBtnGreenDark"

@@ -1,10 +1,10 @@
-#Wed Jul 07 15:54:19 IST 2021
+#Fri Mar 11 09:58:52 IST 2022
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=E\:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.1=E\:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-base.0=E\:\\AndroidReferenceProjects\\KIX_Master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+base.2=D\:\\Android Projects\\KIX_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.1=D\:\\Android Projects\\KIX_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.0=D\:\\Android Projects\\KIX_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0

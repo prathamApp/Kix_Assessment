@@ -1,17 +1,21 @@
 package com.kix.assessment.ui.main_test;
 
+import static com.kix.assessment.ui.main_test.WebViewActivity.gameListList;
+import static com.kix.assessment.ui.main_test.WebViewActivity.queCnt;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.speech.SpeechRecognizer;
+import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewFragment;
 
-import static com.kix.assessment.ui.main_test.WebViewActivity.gameListList;
-import static com.kix.assessment.ui.main_test.WebViewActivity.queCnt;
+import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 
 public class JSInterface {
@@ -24,7 +28,7 @@ public class JSInterface {
     WebView webView;
     boolean resArray = false;
     private Intent recognizerIntent;
-    private SpeechRecognizer speech = null;
+    private final SpeechRecognizer speech = null;
 
 
     public JSInterface(Context mContext, WebViewInterface webViewInterface, WebView webView, String resID) {
@@ -44,15 +48,37 @@ public class JSInterface {
 
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
-    public String getLanguage(){
-        //TODO Return Language
-        return "lang";
+    public String getGameLang(){
+//        return returnLang;
+        String s = FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
+        return s;
     }
 
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public void gotoNextGame(String scoredMarks, String startTime, String label){
-        webViewInterface.onNextGame(scoredMarks, label, startTime);
+        String[] splited;
+        String[] splitedDate;
+        String[] splitedTime;
+        String customDate, customTime, finalTime;
+
+        splited = startTime.split("\\s+");
+        splitedDate = splited[0].split("\\-+");
+        splitedTime = splited[1].split("\\:+");
+        customDate = formatCustomDate(splitedDate, "-");
+        customTime = formatCustomDate(splitedTime, ":");
+        finalTime = customDate + " " + customTime;
+
+        webViewInterface.onNextGame(scoredMarks, label, finalTime);
+    }
+
+    public String formatCustomDate(String[] splitedDate, String delimiter) {
+        for (int k = 0; k < splitedDate.length; k++) {
+            if (Integer.parseInt(splitedDate[k]) < 10) {
+                splitedDate[k] = "0" + splitedDate[k];
+            }
+        }
+        return TextUtils.join(delimiter, splitedDate);
     }
 
     @SuppressLint("StaticFieldLeak")

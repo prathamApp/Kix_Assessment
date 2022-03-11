@@ -130,6 +130,18 @@ public final class SplashActivity_
         , 0L);
     }
 
+    @Override
+    public void openSignupFragment() {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                SplashActivity_.super.openSignupFragment();
+            }
+        }
+        , 0L);
+    }
+
     public static class IntentBuilder_
         extends ActivityIntentBuilder<SplashActivity_.IntentBuilder_>
     {

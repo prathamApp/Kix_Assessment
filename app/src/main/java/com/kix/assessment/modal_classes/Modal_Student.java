@@ -11,7 +11,7 @@ public class Modal_Student implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     public int sId;
-    public String studId;
+    public String studentId;
     public String studName;
     public String studAge;
     public String studGender;
@@ -19,13 +19,14 @@ public class Modal_Student implements Comparable, Parcelable {
     public String studEnrollmentStatus;
     public String studSchoolType;
     public String studDropoutYear;
+    public String studentRegistrationDate;
     public String svrCode;
     public String householdId;
     public int sentFlag;
 
     protected Modal_Student(Parcel in) {
         sId = in.readInt();
-        studId = in.readString();
+        studentId = in.readString();
         studName = in.readString();
         studAge = in.readString();
         studGender = in.readString();
@@ -35,6 +36,7 @@ public class Modal_Student implements Comparable, Parcelable {
         studDropoutYear = in.readString();
         svrCode = in.readString();
         householdId = in.readString();
+        studentRegistrationDate = in.readString();
         sentFlag = in.readInt();
     }
 
@@ -61,12 +63,12 @@ public class Modal_Student implements Comparable, Parcelable {
         S_Id = S_Id;
     }
 
-    public String getStud_Id() {
-        return studId;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStud_Id(String stud_Id) {
-        studId = stud_Id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public static Creator<Modal_Student> getCREATOR() {
@@ -121,6 +123,22 @@ public class Modal_Student implements Comparable, Parcelable {
 
     public void setStudDropoutYear(String studDropoutYear) { this.studDropoutYear = studDropoutYear; }
 
+    public String getStudentRegistrationDate() {
+        return studentRegistrationDate;
+    }
+
+    public void setStudentRegistrationDate(String studentRegistrationDate) {
+        this.studentRegistrationDate = studentRegistrationDate;
+    }
+
+    public String getHouseholdId() {
+        return householdId;
+    }
+
+    public void setHouseholdId(String householdId) {
+        this.householdId = householdId;
+    }
+
     public int getSentFlag() { return sentFlag; }
 
     public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
@@ -133,7 +151,7 @@ public class Modal_Student implements Comparable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(sId);
-        dest.writeString(studId);
+        dest.writeString(studentId);
         dest.writeString(studName);
         dest.writeString(studAge);
         dest.writeString(studGender);

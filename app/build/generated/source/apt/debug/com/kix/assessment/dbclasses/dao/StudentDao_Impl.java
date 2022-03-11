@@ -19,8 +19,6 @@ public final class StudentDao_Impl implements StudentDao {
 
   private final EntityInsertionAdapter __insertionAdapterOfModal_Student;
 
-  private final SharedSQLiteStatement __preparedStmtOfUpdateSentStudentFlags;
-
   private final SharedSQLiteStatement __preparedStmtOfUpdateSentFlag;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateStudent;
@@ -30,16 +28,16 @@ public final class StudentDao_Impl implements StudentDao {
     this.__insertionAdapterOfModal_Student = new EntityInsertionAdapter<Modal_Student>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Student`(`sId`,`studId`,`studName`,`studAge`,`studGender`,`studClass`,`studEnrollmentStatus`,`studSchoolType`,`studDropoutYear`,`svrCode`,`householdId`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Student`(`sId`,`studentId`,`studName`,`studAge`,`studGender`,`studClass`,`studEnrollmentStatus`,`studSchoolType`,`studDropoutYear`,`studentRegistrationDate`,`svrCode`,`householdId`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Student value) {
         stmt.bindLong(1, value.sId);
-        if (value.studId == null) {
+        if (value.studentId == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.studId);
+          stmt.bindString(2, value.studentId);
         }
         if (value.studName == null) {
           stmt.bindNull(3);
@@ -76,24 +74,22 @@ public final class StudentDao_Impl implements StudentDao {
         } else {
           stmt.bindString(9, value.studDropoutYear);
         }
-        if (value.svrCode == null) {
+        if (value.studentRegistrationDate == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.svrCode);
+          stmt.bindString(10, value.studentRegistrationDate);
         }
-        if (value.householdId == null) {
+        if (value.svrCode == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.householdId);
+          stmt.bindString(11, value.svrCode);
         }
-        stmt.bindLong(12, value.sentFlag);
-      }
-    };
-    this.__preparedStmtOfUpdateSentStudentFlags = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "update Student set sentFlag=1 where studId=?";
-        return _query;
+        if (value.householdId == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.householdId);
+        }
+        stmt.bindLong(13, value.sentFlag);
       }
     };
     this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
@@ -106,7 +102,7 @@ public final class StudentDao_Impl implements StudentDao {
     this.__preparedStmtOfUpdateStudent = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "update Student set studName=?, studAge=?, studGender=?,studClass=?, studEnrollmentStatus=?, studSchoolType=?,studDropOutYear=?, sentFlag=0 where studId=?";
+        final String _query = "update Student set studName=?, studAge=?, studGender=?,studClass=?, studEnrollmentStatus=?, studSchoolType=?,studDropOutYear=?, sentFlag=0 where studentId=?";
         return _query;
       }
     };
@@ -120,25 +116,6 @@ public final class StudentDao_Impl implements StudentDao {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
-    }
-  }
-
-  @Override
-  public void updateSentStudentFlags(String s_id) {
-    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateSentStudentFlags.acquire();
-    __db.beginTransaction();
-    try {
-      int _argIndex = 1;
-      if (s_id == null) {
-        _stmt.bindNull(_argIndex);
-      } else {
-        _stmt.bindString(_argIndex, s_id);
-      }
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfUpdateSentStudentFlags.release(_stmt);
     }
   }
 
@@ -236,7 +213,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -244,6 +221,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -251,7 +229,7 @@ public final class StudentDao_Impl implements StudentDao {
       if(_cursor.moveToFirst()) {
         _result = new Modal_Student();
         _result.sId = _cursor.getInt(_cursorIndexOfSId);
-        _result.studId = _cursor.getString(_cursorIndexOfStudId);
+        _result.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _result.studName = _cursor.getString(_cursorIndexOfStudName);
         _result.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _result.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -259,6 +237,7 @@ public final class StudentDao_Impl implements StudentDao {
         _result.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _result.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _result.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _result.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -291,7 +270,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -299,6 +278,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -307,7 +287,7 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        _item.studId = _cursor.getString(_cursorIndexOfStudId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _item.studName = _cursor.getString(_cursorIndexOfStudName);
         _item.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _item.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -315,6 +295,7 @@ public final class StudentDao_Impl implements StudentDao {
         _item.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _item.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _item.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _item.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -347,7 +328,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -355,6 +336,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -363,7 +345,7 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        _item.studId = _cursor.getString(_cursorIndexOfStudId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _item.studName = _cursor.getString(_cursorIndexOfStudName);
         _item.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _item.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -371,6 +353,7 @@ public final class StudentDao_Impl implements StudentDao {
         _item.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _item.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _item.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _item.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -396,7 +379,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -404,6 +387,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -412,7 +396,7 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        _item.studId = _cursor.getString(_cursorIndexOfStudId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _item.studName = _cursor.getString(_cursorIndexOfStudName);
         _item.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _item.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -420,6 +404,7 @@ public final class StudentDao_Impl implements StudentDao {
         _item.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _item.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _item.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _item.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -439,7 +424,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -447,6 +432,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -455,7 +441,7 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        _item.studId = _cursor.getString(_cursorIndexOfStudId);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _item.studName = _cursor.getString(_cursorIndexOfStudName);
         _item.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _item.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -463,6 +449,7 @@ public final class StudentDao_Impl implements StudentDao {
         _item.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _item.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _item.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _item.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -477,7 +464,7 @@ public final class StudentDao_Impl implements StudentDao {
 
   @Override
   public Modal_Student getStudentByStudId(String studId) {
-    final String _sql = "SELECT * FROM Student WHERE studId=?";
+    final String _sql = "SELECT * FROM Student WHERE studentId=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (studId == null) {
@@ -488,7 +475,7 @@ public final class StudentDao_Impl implements StudentDao {
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfSId = _cursor.getColumnIndexOrThrow("sId");
-      final int _cursorIndexOfStudId = _cursor.getColumnIndexOrThrow("studId");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfStudName = _cursor.getColumnIndexOrThrow("studName");
       final int _cursorIndexOfStudAge = _cursor.getColumnIndexOrThrow("studAge");
       final int _cursorIndexOfStudGender = _cursor.getColumnIndexOrThrow("studGender");
@@ -496,6 +483,7 @@ public final class StudentDao_Impl implements StudentDao {
       final int _cursorIndexOfStudEnrollmentStatus = _cursor.getColumnIndexOrThrow("studEnrollmentStatus");
       final int _cursorIndexOfStudSchoolType = _cursor.getColumnIndexOrThrow("studSchoolType");
       final int _cursorIndexOfStudDropoutYear = _cursor.getColumnIndexOrThrow("studDropoutYear");
+      final int _cursorIndexOfStudentRegistrationDate = _cursor.getColumnIndexOrThrow("studentRegistrationDate");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -503,7 +491,7 @@ public final class StudentDao_Impl implements StudentDao {
       if(_cursor.moveToFirst()) {
         _result = new Modal_Student();
         _result.sId = _cursor.getInt(_cursorIndexOfSId);
-        _result.studId = _cursor.getString(_cursorIndexOfStudId);
+        _result.studentId = _cursor.getString(_cursorIndexOfStudentId);
         _result.studName = _cursor.getString(_cursorIndexOfStudName);
         _result.studAge = _cursor.getString(_cursorIndexOfStudAge);
         _result.studGender = _cursor.getString(_cursorIndexOfStudGender);
@@ -511,6 +499,7 @@ public final class StudentDao_Impl implements StudentDao {
         _result.studEnrollmentStatus = _cursor.getString(_cursorIndexOfStudEnrollmentStatus);
         _result.studSchoolType = _cursor.getString(_cursorIndexOfStudSchoolType);
         _result.studDropoutYear = _cursor.getString(_cursorIndexOfStudDropoutYear);
+        _result.studentRegistrationDate = _cursor.getString(_cursorIndexOfStudentRegistrationDate);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);

@@ -13,9 +13,11 @@ public class Modal_Household implements Comparable, Parcelable {
     public int hhId;
     public String householdId;
     public String householdName;
+    public String countryName;
     public String householdDistrict;
     public String householdState;
     public String householdAddress;
+    public String householdDate;
     public String svrCode;
     public int sentFlag;
 
@@ -24,8 +26,10 @@ public class Modal_Household implements Comparable, Parcelable {
         householdId = in.readString();
         householdName = in.readString();
         householdDistrict = in.readString();
+        countryName = in.readString();
         householdState = in.readString();
         householdAddress = in.readString();
+        householdDate = in.readString();
         svrCode = in.readString();
         sentFlag = in.readInt();
     }
@@ -83,6 +87,14 @@ public class Modal_Household implements Comparable, Parcelable {
 
     public void setHouseholdAddress(String HouseHold_Address) { this.householdAddress = HouseHold_Address; }
 
+    public String getHouseholdDate() {
+        return householdDate;
+    }
+
+    public void setHouseholdDate(String householdDate) {
+        this.householdDate = householdDate;
+    }
+
     public String getSvrCode() {
         return svrCode;
     }
@@ -99,6 +111,14 @@ public class Modal_Household implements Comparable, Parcelable {
 
     public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
 
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -109,6 +129,7 @@ public class Modal_Household implements Comparable, Parcelable {
         dest.writeInt(hhId);
         dest.writeString(householdId);
         dest.writeString(householdName);
+        dest.writeString(countryName);
         dest.writeString(householdAddress);
         dest.writeString(svrCode);
         dest.writeInt(sentFlag);

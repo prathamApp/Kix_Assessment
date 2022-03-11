@@ -1,10 +1,16 @@
 package com.kix.assessment.ui.splash_activityy;
 
+import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
+
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
@@ -24,11 +30,6 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
-import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
-
 
 @EActivity(R.layout.activity_splash)
 public class SplashActivity extends BaseActivity implements SplashContract.SplashView {
@@ -47,17 +48,22 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
 
     @AfterViews
     public void init() {
-        gotoNext();
+        this.kix_utility = new KIX_Utility(this);
+        this.splashPresenter.setView(this);
+        Log.d("TAG", "init: SPLASH LANGUAGE CODE "+FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"));
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        this.gotoNext();
         FastSave.getInstance().saveString(STUDENT_ID, "NA");
-        kix_utility = new KIX_Utility(this);
-        splashPresenter.populateDefaultDB();
+        this.splashPresenter.populateDefaultDB();
     }
 
     @UiThread
     public void gotoNext() {
-        tv_surveyorSignIn.setVisibility(View.VISIBLE);
-        btn_signUp.setVisibility(View.VISIBLE);
-        checkPermissionss();
+        this.tv_surveyorSignIn.setVisibility(View.VISIBLE);
+        this.btn_signUp.setVisibility(View.VISIBLE);
+        this.tv_surveyorSignIn.setText(R.string.have_account_sign_in);
+        this.btn_signUp.setText(R.string.sign_up);
+        this.checkPermissionss();
     }
 
     @Click(R.id.btn_signUp)
@@ -66,15 +72,22 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
                 == PackageManager.PERMISSION_GRANTED) {
             KIX_Utility.getSdCardPath(this);
             if (!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED, false))
-                splashPresenter.addDataToDB();
-            KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
+                this.splashPresenter.addDataToDB();
+            else
+                KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
                     null, Fragment_Svr_SignUp.class.getSimpleName());
         } else {
             Toast.makeText(this, "Please Allow, Mandatory Permission.", Toast.LENGTH_LONG).show();
-
             ActivityCompat.requestPermissions(this, new String[]{
                     Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
         }
+    }
+
+    @UiThread
+    @Override
+    public void openSignupFragment(){
+        KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
+                null, Fragment_Svr_SignUp.class.getSimpleName());
     }
 
     @Click(R.id.btn_surveyouSignIn)

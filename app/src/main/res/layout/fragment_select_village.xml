@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/label_selectVillage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/select_village"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/fab_profile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:elevation="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/profile_background"
+        android:src="@drawable/kix_logo_r"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_village"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_selectVillage"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_55sdp"
+        android:padding="@dimen/_5sdp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/fab_addVillage"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_add_white_64dp"/>
+
+</RelativeLayout>

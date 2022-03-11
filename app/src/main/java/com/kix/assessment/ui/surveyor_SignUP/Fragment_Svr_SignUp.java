@@ -1,20 +1,29 @@
 package com.kix.assessment.ui.surveyor_SignUP;
 
+import static com.kix.assessment.KIXApplication.contentDao;
+import static com.kix.assessment.KIXApplication.surveyorDao;
+
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.kix.assessment.R;
-import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
+import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Modal_Sort_Booklet;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
+import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn;
 import com.kix.assessment.ui.Surveyor_SignIn.Fragment_Svr_SignIn_;
 
@@ -24,12 +33,9 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
-
-import androidx.fragment.app.Fragment;
-
-import static com.kix.assessment.KIXApplication.contentDao;
-import static com.kix.assessment.KIXApplication.surveyorDao;
 
 @EFragment(R.layout.fragment_svr_sign_up)
 public class Fragment_Svr_SignUp extends Fragment {
@@ -42,6 +48,8 @@ public class Fragment_Svr_SignUp extends Fragment {
     TextInputEditText tie_svrMobile;
     @ViewById(R.id.spinner_booklet)
     Spinner spinner_booklet;
+    @ViewById(R.id.spinner_country)
+    Spinner spinner_country;
     @ViewById(R.id.et_svrPassword)
     TextInputEditText tie_svrPassword;
 
@@ -56,8 +64,16 @@ public class Fragment_Svr_SignUp extends Fragment {
 
     @ViewById(R.id.ll_parentLayer)
     LinearLayout ll_parentLayout;
+    @ViewById(R.id.ll_spinnerBooklet)
+    LinearLayout ll_spinnerBooklet;
 
     ArrayList<String> booklet = new ArrayList<>();
+    ArrayList<String> countryList = new ArrayList<>();
+    List<Modal_Sort_Booklet> modal_sort_bookletList = new ArrayList<>();
+    ArrayAdapter<String> spinnerArrayAdapter;
+    ArrayAdapter<String> adapterCountry;
+    int countryPos = 0;
+    String mySelectedCountry = "NA";
 
     public Fragment_Svr_SignUp() {
         // Required empty public constructor
@@ -65,25 +81,37 @@ public class Fragment_Svr_SignUp extends Fragment {
 
     @AfterViews
     public void initialize() {
-        booklet = (ArrayList<String>) contentDao.getBooklets();
-        //todo : delete after testing
-/*        for (int i=0;i<bklt.size();i++){
-            booklet.add(bklt.get(i));
-            Log.e("KIX bklt: ",booklet.get(i));
-        }*/
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>
-                (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, booklet);
-        spinner_booklet.setAdapter(spinnerArrayAdapter);
+        ll_spinnerBooklet.setVisibility(View.GONE);
+
+        countryList= new ArrayList<>();
+        countryList.add(getResources().getString(R.string.select_country));
+        countryList.addAll(contentDao.getCountryList());
+
+        adapterCountry = new ArrayAdapter<String>(getActivity(),R.layout.support_simple_spinner_dropdown_item,countryList);
+        spinner_country.setAdapter(adapterCountry);
+
+        spinner_country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                countryPos = position;
+                if(position>0) {
+                    setNewBooklet(""+parent.getItemAtPosition(position).toString());
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         tie_svrMobile.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -96,14 +124,10 @@ public class Fragment_Svr_SignUp extends Fragment {
 
         tie_svrEmail.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -114,14 +138,10 @@ public class Fragment_Svr_SignUp extends Fragment {
 
         tie_svrPassword.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -129,6 +149,36 @@ public class Fragment_Svr_SignUp extends Fragment {
                 else til_svrPassword.setError(null);
             }
         });
+    }
+
+    public void setNewBooklet(String selectedCountry) {
+        ll_spinnerBooklet.setVisibility(View.VISIBLE);
+        mySelectedCountry = selectedCountry;
+        FastSave.getInstance().saveString(Kix_Constant.COUNTRY_NAME, mySelectedCountry);
+        booklet = new ArrayList<>();
+        booklet = (ArrayList<String>) contentDao.getBooklets(mySelectedCountry);
+        Modal_Sort_Booklet modal_sort_booklet;
+        for(int i=0; i<booklet.size(); i++) {
+            String[] separated = booklet.get(i).split(" ");
+            modal_sort_booklet = new Modal_Sort_Booklet();
+            modal_sort_booklet.setBooklet_Name(booklet.get(i));
+            modal_sort_booklet.setBooklet_No(Integer.parseInt(separated[1]));
+            modal_sort_bookletList.add(modal_sort_booklet);
+        }
+
+        Collections.sort(modal_sort_bookletList, (o1, o2) -> o1.getBooklet_No() - o2.getBooklet_No());
+        booklet= new ArrayList<>();
+
+        for (int j=0;j<modal_sort_bookletList.size();j++)
+            booklet.add(modal_sort_bookletList.get(j).booklet_Name);
+        if(spinnerArrayAdapter == null) {
+            spinnerArrayAdapter = new ArrayAdapter<String>
+                    (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, booklet);
+            spinner_booklet.setAdapter(spinnerArrayAdapter);
+        }else{
+            spinnerArrayAdapter.notifyDataSetChanged();
+        }
+
     }
 
     @Click(R.id.ll_parentLayer)
@@ -139,7 +189,7 @@ public class Fragment_Svr_SignUp extends Fragment {
     @Click(R.id.btn_svrSignUp)
     public void signUp() {
         if (!tie_svrName.getText().toString().isEmpty() && !tie_svrMobile.getText().toString().isEmpty()
-                && !tie_svrPassword.getText().toString().isEmpty()) {
+                && !tie_svrPassword.getText().toString().isEmpty() && countryPos!=0) {
             if(isValidEmail(tie_svrEmail.getText().toString())) {
                 if(tie_svrMobile.getText().toString().length()==10) {
                     if(tie_svrPassword.getText().toString().length()>=3) {
@@ -155,10 +205,14 @@ public class Fragment_Svr_SignUp extends Fragment {
                                 modal_surveyor.setSvrPassword(tie_svrPassword.getText().toString());
                                 modal_surveyor.setSvrCode(String.valueOf(KIX_Utility.getUUID()));
                                 modal_surveyor.setSvrBooklet(spinner_booklet.getSelectedItem().toString());
+                                modal_surveyor.setSvrRegistrationDate(KIX_Utility.getCurrentDateTime());
+                                modal_surveyor.setSvrCountry(mySelectedCountry);
                                 modal_surveyor.setSentFlag(0);
                                 surveyorDao.insertSurveyor(modal_surveyor);
-                                BackupDatabase.backup(getActivity());
-                                Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
+
+                                String selectedLanguageCode = KIX_Utility.getLanguageCode(mySelectedCountry);
+                                KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+                                //                                Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
                                 KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
                                         null, Fragment_Svr_SignIn.class.getSimpleName());
                             } catch (Exception e){

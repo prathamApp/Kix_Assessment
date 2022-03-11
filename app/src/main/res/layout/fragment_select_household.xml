@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:clickable="true"
     android:focusable="true">
 
@@ -10,7 +9,7 @@
         android:id="@+id/label_selectVillage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Village"
+        android:text="@string/select_household"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="@dimen/_15sdp"
@@ -28,17 +27,16 @@
         android:elevation="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
         android:background="@drawable/profile_background"
-        android:src="@drawable/unknown_profile"/>
+        android:src="@drawable/kix_logo_r"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_houseHold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/label_selectVillage"
-        android:padding="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_55sdp"
-        />
+        android:padding="@dimen/_5sdp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="@dimen/_50sdp"

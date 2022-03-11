@@ -38,7 +38,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__insertionAdapterOfScore = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -84,13 +84,28 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        stmt.bindLong(10, value.getSentFlag());
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getSvrCode());
+        }
+        if (value.getBookletNo() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getBookletNo());
+        }
+        if (value.getCountryName() == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.getCountryName());
+        }
+        stmt.bindLong(13, value.getSentFlag());
       }
     };
     this.__insertionAdapterOfScore_1 = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -136,7 +151,22 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        stmt.bindLong(10, value.getSentFlag());
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getSvrCode());
+        }
+        if (value.getBookletNo() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getBookletNo());
+        }
+        if (value.getCountryName() == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.getCountryName());
+        }
+        stmt.bindLong(13, value.getSentFlag());
       }
     };
     this.__deletionAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
@@ -153,7 +183,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__updateAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Score` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
+        return "UPDATE OR ABORT `Score` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`svrCode` = ?,`bookletNo` = ?,`countryName` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
       }
 
       @Override
@@ -199,8 +229,23 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        stmt.bindLong(10, value.getSentFlag());
-        stmt.bindLong(11, value.getScoreId());
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getSvrCode());
+        }
+        if (value.getBookletNo() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getBookletNo());
+        }
+        if (value.getCountryName() == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.getCountryName());
+        }
+        stmt.bindLong(13, value.getSentFlag());
+        stmt.bindLong(14, value.getScoreId());
       }
     };
     this.__preparedStmtOfDeleteAllScores = new SharedSQLiteStatement(__db) {
@@ -356,6 +401,9 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -388,6 +436,15 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
+        final String _tmpBookletNo;
+        _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
+        _item.setBookletNo(_tmpBookletNo);
+        final String _tmpCountryName;
+        _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
+        _item.setCountryName(_tmpCountryName);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -434,6 +491,9 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -466,6 +526,15 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
+        final String _tmpBookletNo;
+        _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
+        _item.setBookletNo(_tmpBookletNo);
+        final String _tmpCountryName;
+        _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
+        _item.setCountryName(_tmpCountryName);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -493,6 +562,9 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -525,6 +597,15 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
+        final String _tmpBookletNo;
+        _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
+        _item.setBookletNo(_tmpBookletNo);
+        final String _tmpCountryName;
+        _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
+        _item.setCountryName(_tmpCountryName);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -558,6 +639,9 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -590,6 +674,15 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
+        final String _tmpBookletNo;
+        _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
+        _item.setBookletNo(_tmpBookletNo);
+        final String _tmpCountryName;
+        _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
+        _item.setCountryName(_tmpCountryName);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -605,10 +698,10 @@ public final class ScoreDao_Impl implements ScoreDao {
   @Override
   public List<Modal_ProfileDetails> getProfileData(String svrCode) {
     final String _sql = "select Student.studName as StudentName, Student.studAge as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n"
-            + "INNER JOIN Student on Score.studentId = Student.studId\n"
+            + "INNER JOIN Student on Score.studentId = Student.studentId\n"
             + "INNER JOIN Household on Household.householdId = Student.householdId\n"
             + "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n"
-            + "WHERE Surveyor.svrCode=? GROUP by Student.studId, Surveyor.svrName";
+            + "WHERE Surveyor.svrCode=? GROUP by Student.studentId, Surveyor.svrName";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (svrCode == null) {

@@ -1,20 +1,36 @@
 package com.kix.assessment.ui.fragment_profile;
 
+import static com.kix.assessment.KIXApplication.householdDao;
+import static com.kix.assessment.KIXApplication.logDao;
+import static com.kix.assessment.kix_utils.KIX_Utility.context;
+
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
+import com.kix.assessment.async.PushDataBaseZipToServer;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
+import com.kix.assessment.custom.CustomLodingDialog;
 import com.kix.assessment.dbclasses.BackupDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
 import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import com.kix.assessment.modal_classes.Modal_Student;
 import com.kix.assessment.services.KixSmartSync;
@@ -35,24 +51,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import static com.kix.assessment.KIXApplication.householdDao;
-
 @EFragment(R.layout.fragment_profile)
 public class Fragment_Profile extends Fragment implements ProfileContract.ProfileView {
 
-    private List<Modal_ProfileDetails> detailsList = new ArrayList<>();
+    private final List<Modal_ProfileDetails> detailsList = new ArrayList<>();
 
     @ViewById(R.id.tv_profileName)
     TextView tv_profileName;
-    @ViewById(R.id.tv_studCount)
+/*    @ViewById(R.id.tv_studCount)
     TextView tv_studCount;
+
     @ViewById(R.id.tv_householdCount)
-    TextView tv_householdCount;
+    TextView tv_householdCount;*/
+
+    @ViewById(R.id.tv_TotStudCount)
+    TextView tv_TotStudCount;
+
+    @ViewById(R.id.tv_AssessmentGivenCount)
+    TextView tv_AssessmentGivenCount;
 
     @ViewById(R.id.rv_examDetail)
     RecyclerView rv_examDetail;
@@ -73,67 +89,45 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     ProfilePresenter profilePresenter;
     private ProfileAdapter profileAdapter;
 
-    String selectedAge;
-
-    String ageSelected, villageSelected;
-
-    String surveyorCode, householdId;
+    String selectedAge, ageSelected, villageSelected,surveyorCode, householdId;
 
     //list for villageFilter
     ArrayList<String> villagesList = new ArrayList<>();
-
-    private BlurPopupWindow pushDialog;
+    @Bean(PushDataBaseZipToServer.class)
+    PushDataBaseZipToServer pushDataBaseZipToServer;
     private TextView tv_dialTitle;
+    boolean loaderFlg = false;
+    private BlurPopupWindow pushDialog, pushStatusDialogue;
+    private TextView tv_dia_vil;
+    private TextView tv_dia_survey;
 
     public Fragment_Profile() {
         // Required empty public constructor
     }
+    private TextView tv_dia_stud;
 
-    @AfterViews
-    public void initialize() {
-        profilePresenter.setView(this);
-        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
-        //get total no. of student
-        List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
-        //get total no. of household
-        List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
-        tv_profileName.setText("Hi, " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
-        tv_studCount.setText("Total Students : " + stud.size());
-        tv_householdCount.setText("Total Villages : " + households.size());
-        if (stud.size() == 0)
-            Toast.makeText(getActivity(), "No Student Found!", Toast.LENGTH_SHORT).show();
-        else
-            profilePresenter.loadProfileData();
-        //temp();
-        initializeAdapter();
-
-        ArrayAdapter adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.ageFilter, R.layout.support_simple_spinner_dropdown_item);
-        spinner_ageFilter.setAdapter(adapterAge);
-        villagesList = (ArrayList<String>) householdDao.getAllHouseholdNameBySurveyorCode(surveyorCode);
-        villagesList.add(0, Kix_Constant.ALL_VILLAGE);
-        ArrayAdapter<String> adapterVillage = new ArrayAdapter<String>
-                (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, villagesList);
-        spinner_villageFilter.setAdapter(adapterVillage);
-        ageSelected = spinner_ageFilter.getSelectedItem().toString();
-        villageSelected = spinner_villageFilter.getSelectedItem().toString();
-    }
+    int assGiven = 0;
 
     @UiThread
     @Override
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
         //recycler header values
-        Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name",
+        Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
                 "Village", "Assessments Given", "Assessment Synced", "");
         detailsList.add(details);
         if (profileDetails.size() == 0) {
-            Toast.makeText(getActivity(), "Assessment Not Given By Student", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Assessment Not Given By Child", Toast.LENGTH_SHORT).show();
         }
+        assGiven = 0;
         for (int i = 0; i < profileDetails.size(); i++) {
+            if (profileDetails.get(i).getExamsGiven() != null)
+                assGiven++;
             details = new Modal_ProfileDetails(profileDetails.get(i).getStudentName(),
                     profileDetails.get(i).getHouseholdName(), profileDetails.get(i).getExamsGiven(), "0",
                     profileDetails.get(i).getStudentAge());
             detailsList.add(details);
         }
+        tv_AssessmentGivenCount.setText("Children assessed: " + assGiven);
     }
 
     @UiThread
@@ -149,11 +143,85 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             profileAdapter.notifyDataSetChanged();
         }
     }
+    private TextView tv_dia_score;
+    private CustomLodingDialog myLoadingDialog;
+
+    @AfterViews
+    public void initialize() {
+        profilePresenter.setView(this);
+        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        //get total no. of student
+        List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
+        //get total no. of household
+        List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
+        tv_profileName.setText("Hi, " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
+        tv_TotStudCount.setText("Children surveyed: " + stud.size());
+/*        tv_studCount.setText("No. of Children : " + stud.size());
+        tv_householdCount.setText("Total Villages : " + households.size());*/
+        if (stud.size() == 0)
+            Toast.makeText(getActivity(), "No Children Found!", Toast.LENGTH_SHORT).show();
+        else
+            profilePresenter.loadProfileData();
+        //temp();
+        initializeAdapter();
+
+        ArrayAdapter adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.ageFilter, R.layout.support_simple_spinner_dropdown_item);
+        spinner_ageFilter.setAdapter(adapterAge);
+        villagesList = (ArrayList<String>) householdDao.getAllHouseholdNameBySurveyorCode(surveyorCode);
+        villagesList.add(0, getResources().getString(R.string.all_village));
+        ArrayAdapter<String> adapterVillage = new ArrayAdapter<String>
+                (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, villagesList);
+        spinner_villageFilter.setAdapter(adapterVillage);
+        ageSelected = spinner_ageFilter.getSelectedItem().toString();
+        villageSelected = spinner_villageFilter.getSelectedItem().toString();
+    }
 
     @Click(R.id.fab_sync)
     public void sync() {
         if (KIXApplication.wiseF.isDeviceConnectedToWifiNetwork() || KIXApplication.wiseF.isDeviceConnectedToMobileNetwork()) {
+            showLoadingDialog();
+            Modal_Log log = new Modal_Log();
+            log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
+            log.setErrorType("Sync Data");
+            log.setExceptionMessage("");
+            log.setExceptionStackTrace("");
+            log.setMethodName("Profile");
+            log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, "no_session"));
+            log.setDeviceId(KIX_Utility.getDeviceID());
+            logDao.insertLog(log);
             KixSmartSync.pushUsageToServer(true);
+        } else {
+            Toast.makeText(getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @androidx.annotation.UiThread
+    public void showLoadingDialog() {
+        loaderFlg = true;
+        myLoadingDialog = new CustomLodingDialog(Objects.requireNonNull(getActivity()));
+        myLoadingDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        myLoadingDialog.setContentView(R.layout.dialog_loader);
+        Objects.requireNonNull(myLoadingDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myLoadingDialog.setCancelable(false);
+        myLoadingDialog.setCanceledOnTouchOutside(false);
+        myLoadingDialog.show();
+    }
+
+    @Click(R.id.fab_db_sync)
+    public void syncDB() {
+        if (KIXApplication.wiseF.isDeviceConnectedToWifiNetwork() || KIXApplication.wiseF.isDeviceConnectedToMobileNetwork()) {
+            showLoadingDialog();
+            Modal_Log log = new Modal_Log();
+            log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
+            log.setErrorType("Sync DB");
+            log.setExceptionMessage("");
+            log.setExceptionStackTrace("");
+            log.setMethodName("Profile");
+            log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, "no_session"));
+            log.setDeviceId(KIX_Utility.getDeviceID());
+            logDao.insertLog(log);
+            BackupDatabase.backup(getActivity());
+            pushDataBaseZipToServer.startDataBasePush(context, true);
         } else {
             Toast.makeText(getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
         }
@@ -165,53 +233,49 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             getSelectedAge();
             //filter(ageSelected,villageSelected);
             filter(ageSelected, villageSelected);
-        }
-        else {
+        } else {
             ageSelected = spinner_ageFilter.getSelectedItem().toString();
-            filter(ageSelected,villageSelected);
+            filter(ageSelected, villageSelected);
         }
 
     }
 
     @ItemSelect(R.id.spinner_villageFilter)
     public void villageFilter(boolean sel) {
-            //filter(ageSelected, spinner_villageFilter.getSelectedItem().toString());
+        //filter(ageSelected, spinner_villageFilter.getSelectedItem().toString());
         villageSelected = spinner_villageFilter.getSelectedItem().toString();
-        filter(ageSelected,villageSelected);
+        filter(ageSelected, villageSelected);
     }
 
     @SuppressLint("SetTextI18n")
     private void filter(String ageFilter, String villageFilter) {
         ArrayList<Modal_ProfileDetails> filteredList = new ArrayList();
-        if(ageSelected.equalsIgnoreCase(Kix_Constant.ALL_AGE) && villageSelected.equalsIgnoreCase(Kix_Constant.ALL_VILLAGE)){
+        if (ageSelected.equalsIgnoreCase(getResources().getString(R.string.all_age)) && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_village))) {
             filteredList.addAll(detailsList);
-        }
-        else {
-            Modal_ProfileDetails details = new Modal_ProfileDetails("Student Name",
+        } else {
+            Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
                     "Village", "Assessments Given", "Assessment Synced", "");
             filteredList.add(details);
             for (Modal_ProfileDetails d : detailsList) {
-                if(ageFilter.equalsIgnoreCase(Kix_Constant.ALL_AGE) && !villageFilter.isEmpty()) {
+                if (ageFilter.equalsIgnoreCase(getResources().getString(R.string.all_age)) && !villageFilter.isEmpty()) {
                     if (d.getHouseholdName().contains(villageFilter)) {
                         filteredList.add(d);
                     }
-                }
-                else if(villageFilter.equalsIgnoreCase(Kix_Constant.ALL_VILLAGE) && !ageFilter.isEmpty()){
-                    if(d.getStudentAge().contains(ageFilter)){
+                } else if (villageFilter.equalsIgnoreCase(getResources().getString(R.string.all_village)) && !ageFilter.isEmpty()) {
+                    if (d.getStudentAge().contains(ageFilter)) {
                         filteredList.add(d);
                     }
-                }
-                else {
-                    if(d.getStudentAge().contains(ageFilter) && d.getHouseholdName().contains(villageFilter))
+                } else {
+                    if (d.getStudentAge().contains(ageFilter) && d.getHouseholdName().contains(villageFilter))
                         filteredList.add(d);
                 }
             }
         }
         //update recyclerview
         profileAdapter.updateList(filteredList);
-        int studCount = filteredList.size()-1;
-        if(!(studCount<0))
-        tv_studCount.setText("Total Students : " + studCount);
+        int studCount = filteredList.size() - 1;
+/*        if (!(studCount < 0))
+            tv_studCount.setText("No. of Children : " + studCount);*/
         if (filteredList.size() == 1)
             Toast.makeText(getActivity(), "No Match Found!!", Toast.LENGTH_SHORT).show();
     }
@@ -221,10 +285,25 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     public void DataPushedSuccessfully(EventMessage msg) {
         if (msg != null) {
             if (msg.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
-                pushDialog("Data Pushed Successfully!!");
+                if (loaderFlg) {
+                    myLoadingDialog.dismiss();
+                    loaderFlg = false;
+                }
+                pushDialog("Data Synced Successfully!!", Kix_Constant.SUCCESSFULLYPUSHED);
+                BackupDatabase.backup(getActivity());
+            } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.DBSUCCESSFULLYPUSHED)) {
+                if (loaderFlg) {
+                    myLoadingDialog.dismiss();
+                    loaderFlg = false;
+                }
+                pushDialog("DB Synced Successfully!!", Kix_Constant.DBSUCCESSFULLYPUSHED);
                 BackupDatabase.backup(getActivity());
             } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.PUSHFAILED)) {
-                pushDialog("Data Push Failed!!");
+                if (loaderFlg) {
+                    myLoadingDialog.dismiss();
+                    loaderFlg = false;
+                }
+                pushDialog("Sync Failed!!", Kix_Constant.PUSHFAILED);
             }
         }
     }
@@ -238,23 +317,56 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             ageSelected = "0";
     }
 
-    public void pushDialog(String message){
+    public void pushDialog(String message, String pushType) {
         pushDialog = new BlurPopupWindow.Builder(getActivity())
                 .setContentView(R.layout.dialog_push_result)
                 .bindClickListener(v -> {
+                    if (pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED))
+                        pushStatsDialog();
                     pushDialog.dismiss();
                 }, R.id.dia_btnOk)
-                .bindClickListener(v -> pushDialog.dismiss(), R.id.dia_cancel)
                 .setGravity(Gravity.CENTER)
-                .setDismissOnTouchBackground(true)
+                .setDismissOnTouchBackground(false)
                 .setDismissOnClickBack(true)
                 .setScaleRatio(0.2f)
                 .setBlurRadius(10)
                 .setTintColor(0x30000000)
                 .build();
         tv_dialTitle = pushDialog.findViewById(R.id.dia_title);
-        tv_dialTitle.setText(message);
+        tv_dialTitle.setText(""+message);
+        if (pushType.equalsIgnoreCase(Kix_Constant.DBSUCCESSFULLYPUSHED) ||
+                pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED))
+            tv_dialTitle.setTextColor(getResources().getColor(R.color.colorBtnGreenDark));
+        else
+            tv_dialTitle.setTextColor(getResources().getColor(R.color.colorRedDark));
         pushDialog.show();
+    }
+
+    public void pushStatsDialog() {
+        pushStatusDialogue = new BlurPopupWindow.Builder(getActivity())
+                .setContentView(R.layout.dialog_push_stats)
+                .bindClickListener(v -> {
+                    pushStatusDialogue.dismiss();
+                }, R.id.dia_btnOk)
+                .setGravity(Gravity.CENTER)
+                .setDismissOnTouchBackground(false)
+                .setDismissOnClickBack(true)
+                .setScaleRatio(0.2f)
+                .setBlurRadius(10)
+                .setTintColor(0x30000000)
+                .build();
+
+        tv_dia_vil = pushStatusDialogue.findViewById(R.id.dia_vil);
+        tv_dia_survey = pushStatusDialogue.findViewById(R.id.dia_survey);
+        tv_dia_stud = pushStatusDialogue.findViewById(R.id.dia_stud);
+        tv_dia_score = pushStatusDialogue.findViewById(R.id.dia_score);
+
+        tv_dia_score.setText("Score Count : " + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
+        tv_dia_stud.setText("Student Count : " + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
+        tv_dia_vil.setText("Village Count : " + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
+        tv_dia_survey.setText("Surveyor Count : " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+
+        pushStatusDialogue.show();
     }
 
     @Override

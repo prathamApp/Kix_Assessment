@@ -3,12 +3,15 @@ package com.kix.assessment.ui.attendance_activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.fragment.app.Fragment;
+
 import com.kix.assessment.BaseActivity;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.FragmentSelectStudent.Fragment_SelectStudent_;
 
 import org.androidannotations.annotations.AfterViews;
@@ -16,18 +19,17 @@ import org.androidannotations.annotations.EActivity;
 
 import java.util.ArrayList;
 
-import androidx.fragment.app.Fragment;
-
 @EActivity(R.layout.activity_attendance)
 public class Activity_Attendance extends BaseActivity {
 
     String surveyorCode, householdID;
-    private ArrayList<Modal_Student> students = new ArrayList<>();
+    private final ArrayList<Modal_Student> students = new ArrayList<>();
 
     private BlurPopupWindow exitDialog;
 
     @AfterViews
     public void initialize() {
+        KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         Log.e("KIX b1: ", String.valueOf(getSupportFragmentManager().getBackStackEntryCount()));
         surveyorCode = getIntent().getStringExtra(Kix_Constant.SURVEYOR_CODE);
         householdID = getIntent().getStringExtra(Kix_Constant.HOUSEHOLD_ID);

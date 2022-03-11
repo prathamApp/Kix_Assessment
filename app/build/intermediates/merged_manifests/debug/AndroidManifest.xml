@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kix.assessment"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="5"
+    android:versionName="1.0.5" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -15,7 +15,11 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--
+        <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE"
+        tools:ignore="ManifestOrder" />
+    -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -30,15 +34,26 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
+    <!-- Permission will be merged into the manifest of the hosting app. -->
+    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!--
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    -->
     <application
         android:name="com.kix.assessment.KIXApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:hardwareAccelerated="true"
@@ -47,12 +62,14 @@
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/kix_logo"
+        android:roundIcon="@drawable/kix_logo_r"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity
             android:name="com.kix.assessment.ui.household_activity.Activity_Household_"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name="com.kix.assessment.ui.village_activity.Activity_Village_"
             android:screenOrientation="sensorPortrait" />
         <activity
             android:name="com.kix.assessment.ui.splash_activityy.SplashActivity_"

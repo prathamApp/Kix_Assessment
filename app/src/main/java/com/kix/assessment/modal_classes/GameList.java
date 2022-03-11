@@ -8,6 +8,7 @@ public class GameList implements Serializable {
     String contentCode;
     String contentFolderName;
     String contentBooklet;
+    String contentCountry;
 
     public String getContentCode() {
         return contentCode;
@@ -31,5 +32,13 @@ public class GameList implements Serializable {
 
     public void setContentBooklet(String contentBooklet) {
         this.contentBooklet = contentBooklet;
+    }
+
+    public String getContentCountry() {
+        return contentCountry;
+    }
+
+    public void setContentCountry(String contentCountry) {
+        this.contentCountry = contentCountry;
     }
 }

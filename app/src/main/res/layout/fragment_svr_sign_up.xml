@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:text="Create Surveyor Account"
+        android:text="@string/create_surveyor"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/_15sdp"
@@ -127,6 +127,27 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
+            android:id="@+id/ll_spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/rounded_greenborder_spinner"
+            android:paddingStart="@dimen/_10sdp">
+
+            <Spinner
+                android:id="@+id/spinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorAccent"
+                android:drawSelectorOnTop="true"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:textColor="@color/colorText" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/ll_spinnerBooklet"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_24sdp"
@@ -155,7 +176,8 @@
             android:layout_marginTop="@dimen/_50sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_5sdp"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
+            android:textAllCaps="true"
             android:textAlignment="center"
             android:textAppearance="@dimen/_5sdp"
             android:textColor="@color/white"
@@ -163,7 +185,5 @@
             app:cornerRadius="@dimen/_20sdp"/>
 
     </LinearLayout>
-    <!--        </LinearLayout>
-        </androidx.core.widget.NestedScrollView-->>
 
 </LinearLayout>

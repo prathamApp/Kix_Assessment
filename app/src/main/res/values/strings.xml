@@ -1,85 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">KIX Assessment</string>
 
-    <string name="Okay">Okay</string>
-
     <!--Permission Dialog Strings-->
-    <string name="permissions_head"><b>KIX uses the following permissions to enhance learning experience:</b></string>
-    <string name="permissions">
+    <string name="permissions_head" translatable="false"><b>KIX uses the following permissions to enhance learning experience:</b></string>
+    <string name="permissions" translatable="false">
         <b><i>LOCATION:</i></b> Customize content for region\n<b><i>
-<!--        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>-->
+        <!--        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>-->
         STORAGE:</i></b> To save the content and enable offline access\n<b><i>
-<!--        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>-->
+        <!--        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>-->
         RECORD_AUDIO:</i></b> Using speech recognition for advanced \n reading exercises</string>
 
+    <string name="Collecting_Data" translatable="false">Collecting Data</string>
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
-    <string name="exit_statement">Are you sure you want to exit?</string>
 
+    <string name="push_success">Pushed Successfully!!</string>
+    <string name="push_fail">Push Failed!!</string>
+    <string name="kix_assessment">KIX Assessment</string>
+    <string name="Okay">Okay</string>
+    <string name="ok">Ok</string>
+    <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">Please wait, pushing Data...</string>
+    <string name="check_wifi_connected_kolibri">Check your wifi is connected to Pratham Kolibri !</string>
+    <string name="details">Details</string>
+    <string name="goto_next">Goto Next</string>
+    <string name="cancel">Cancel</string>
+    <string name="profile">Profile</string>
+    <string name="create_surveyor">Create Surveyor Account</string>
+    <string name="children_surveyed">Children surveyed: </string>
+    <string name="children_assessed">Children assessed: </string>
+    <string name="child_name">Child Name</string>
+    <string name="village">Village</string>
+    <string name="assessment_given">Assessment Given</string>
+    <string name="assessments_synced">Assessments Synced</string>
+    <string name="score_count">Score Count : </string>
+    <string name="student_count">Child Count : </string>
+    <string name="village_count">Village Count : </string>
+    <string name="surveyor_count">Surveyor Count : </string>
+    <string name="edit_child_info">Edit Child Information</string>
+
+    <string-array name="spinner_booklet_list">
+        <item>Booklet 1</item>
+        <item>Booklet 2</item>
+        <item>Booklet 3</item>
+        <item>Booklet 4</item>
+    </string-array>
+
+    <string-array name="spinner_booklet_code_list">
+        <item>Booklet_1</item>
+        <item>Booklet_2</item>
+        <item>Booklet_3</item>
+        <item>Booklet_4</item>
+    </string-array>
+
+    <string name="add_village_info">Add Village Information</string>
+x    <string name="str_village_info">Village Information</string>
+    <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
+    <string name="str_V02">Is there public transport facility available to the village?</string>
+    <string name="str_V03">Does the village have electricity connection?</string>
+    <string name="str_V04">Does the village have any government/public health facility?</string>
+    <string name="str_V05">Does the village have any private health facility?</string>
+    <string name="str_V06a">Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
+    <string name="str_V07a">Does the village have any schools offering primary grades/classes (definition of primary grades would vary from country to country, so select accordingly. Eg. in India primary grades are 1 to 5)</string>
+    <string name="str_HH07a">Household roofing</string>
+    <string name="str_HH07b">Household wall (external) material</string>
+    <string name="str_HH07c">What is the source of lighting regularly used in the household</string>
+    <string name="str_HH07d">What is the source of drinking water used regularly in the household</string>
+    <string name="str_HH07e">Electricity connection (to be marked yes if HH06c is Electricity)</string>
+    <string name="str_HH07f">Toilet</string>
+    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed high school diploma?</string>
+    <string name="str_HH07h">Any reading material other than school textbooks and religious books.</string>
+    <string name="str_HH07i">Computer</string>
+    <string name="str_HH07j">Television</string>
+    <string name="str_HH07k">Radio</string>
+    <string name="str_HH07l">Mobile phone</string>
+    <string name="str_HH07m">If yes in HH06l, is it a smartphone?</string>
+    <string name="str_HH07n">Motorised 4-wheeler?</string>
+    <string name="str_HH07o">Motorised 2-wheeler?</string>
+    <string name="str_HH07p">Bicycle?</string>
+    <string name="str_HH_have_lbl">Does this household have:</string>
+    <string name="select_household">Select Household</string>
+    <string name="add_household">Add Household</string>
+    <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
+    <string name="add_hh_info">Add Household Information</string>
+
+    <!--ENGLISH START ____________________________________________________________________-->
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account_sign_in">Already Have Account? Sign In.</string>
     <string name="hint_svrName">Name <font color='#FF0000'>*</font></string>
     <string name="hint_svrEmail">Email(optional) </string>
     <string name="hint_svrMobile">Mobile No. <font color='#FF0000'>*</font></string>
     <string name="hint_svrPassword">Password <font color='#FF0000'>*</font></string>
-
+    <string name="sign_in">Sign In</string>
+    <string name="select_village">Select Village</string>
+    <string name="add_village">Add Village</string>
     <string name="hint_village">Village <font color='#FF0000'>*</font></string>
     <string name="hint_district">District <font color='#FF0000'>*</font></string>
     <string name="hint_state">State <font color='#FF0000'>*</font></string>
+    <string name="save">Save</string>
+    <string name="select_child">Select Child</string>
+    <string name="add_child_information">Add Child Information</string>
+    <string name="want_to_start_assessment">Do you want to Start Assessment?</string>
+    <string name="goto_next_task">Do you want to goto the next task?</string>
+    <string name="thank_you">Thank you</string>
+    <string name="test_submitted">Your assessment is submitted.</string>
+    <string name="next_student">Next Child</string>
+    <string name="submit_assessment">Submit Assessment</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="select_country">Select Country</string>
+    <string name="enrolled">Enrolled</string>
+    <string name="drop_out">Drop Out</string>
+    <string name="never_enrolled">Never Enrolled</string>
+    <string name="save_n_submit">   Save and Submit Assessment</string>
+    <string name="you_want_to_exit">Are you sure you want to exit?</string>
+    <string name="all_age">All Ages</string>
+    <string name="all_village">All Villages</string>
 
-    <string name="all_age">All Age</string>
-    <string name="all_village">All Village</string>
-
-    <string name="push_success">Data Pushed Successfully!!</string>
-    <string name="push_fail">Data Push Failed!!</string>
-
-
-
-    <string-array name="age">
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
+    <string-array name="country_list">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
     </string-array>
-
-    <string-array name="ageFilter">
-        <item>All Age  </item>
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
-    </string-array>
-
 
     <string-array name="gender">
         <item>Male</item>
         <item>Female</item>
-    </string-array>
-
-    <string-array name="student_class">
-        <item>Std</item>
-        <item>Pre-primary</item>
-        <item>Std 1</item>
-        <item>Std 2</item>
-        <item>Std 3</item>
-        <item>Std 4</item>
-        <item>Std 5</item>
-    </string-array>
-
-    <string-array name="student_dropoutclass">
-        <item>Std in which child dropped out</item>
-        <item>Pre-primary</item>
-        <item>Std 1</item>
-        <item>Std 2</item>
-        <item>Std 3</item>
-        <item>Std 4</item>
-        <item>Std 5</item>
     </string-array>
 
     <string-array name="enrollment_status">
@@ -96,7 +152,7 @@
         <item>Other</item>
     </string-array>
 
-    <string-array name="dropout_year">
+    <string-array name="dropout_year_list">
         <item>Year in which child dropped out</item>
         <item>2015</item>
         <item>2016</item>
@@ -107,18 +163,1373 @@
         <item>2021</item>
     </string-array>
 
-    <string-array name="spinner_booklet">
-        <item>Booklet 1</item>
-        <item>Booklet 2</item>
-        <item>Booklet 3</item>
-        <item>Booklet 4</item>
+    <string-array name="student_dropoutclass">
+        <item>Std in which child dropped out</item>
+        <item>Pre-primary</item>
+        <item>Std 1</item>
+        <item>Std 2</item>
+        <item>Std 3</item>
+        <item>Std 4</item>
+        <item>Std 5</item>
     </string-array>
 
-    <string-array name="spinner_booklet_code">
-        <item>Booklet_1</item>
-        <item>Booklet_2</item>
-        <item>Booklet_3</item>
-        <item>Booklet_4</item>
+    <string-array name="age">
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
     </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Ages  </item>
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Std</item>
+        <item>Pre-primary</item>
+        <item>Std 1</item>
+        <item>Std 2</item>
+        <item>Std 3</item>
+        <item>Std 4</item>
+        <item>Std 5</item>
+    </string-array>
+    <!--ENGLISH END ____________________________________________________________________-->
+
+    <!--PORTUGUESE (MOZAMBIQUE)  START ____________________________________________________________________-->
+<!--
+    <string name="sign_up">Inscrição</string>
+    <string name="have_account_sign_in">Já tem conta? Entrar.</string>
+    <string name="hint_svrName">Nome <font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">Email (opcional) </string>
+    <string name="hint_svrMobile">Número de telefone. <font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">Palavra passe <font color='#FF0000'>*</font></string>
+    <string name="sign_in">Entrar</string>
+    <string name="select_village">Seleccionar a aldeia</string>
+    <string name="add_village">Adicionar a aldeia</string>
+    <string name="hint_village">Aldeia <font color='#FF0000'>*</font></string>
+    <string name="hint_district">Distrito <font color='#FF0000'>*</font></string>
+    <string name="hint_state">Província <font color='#FF0000'>*</font></string>
+    <string name="save">Guardar </string>
+    <string name="select_child">Seleccionar a criança </string>
+    <string name="add_child_information">Adicionar informação da criança </string>
+    <string name="want_to_start_assessment">Você pretende iniciar a avalaicão? </string>
+    <string name="goto_next_task">Você pretende ir para o próximo exercício?</string>
+    <string name="thank_you">Obrigado</string>
+    <string name="test_submitted">A sua avaliacão foi submetida.</string>
+    <string name="next_student">Próximo menino/a</string>
+    <string name="submit_assessment">Submeter a avaliacão.</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="select_country">Seleccionar o Pais </string>
+    <string name="enrolled">Mariculado/a</string>
+    <string name="drop_out">Desistente </string>
+    <string name="never_enrolled">Nunca Matrículado/a</string>
+    <string name="save_n_submit">Salvar e Submeter Avaliação</string>
+    <string name="you_want_to_exit">Tem a certeza de que quer sair?</string>
+    <string name="all_age">All Idade</string>
+    <string name="all_village">All Aldeia</string>
+
+    <string-array name="country_list">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Frequencia escolar </item>
+        <item>Mariculado/a</item>
+        <item>Nunca Matrículado/a</item>
+        <item>Desistente</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Tipo de escola</item>
+        <item>Pública</item>
+        <item>Privada</item>
+        <item>Outra</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>Ano em que a crianca desistiu?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>Em que classe a criança desistiu?</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Idade 4  </item>
+        <item>Idade 5  </item>
+        <item>Idade 6  </item>
+        <item>Idade 7  </item>
+        <item>Idade 8  </item>
+        <item>Idade 9  </item>
+        <item>Idade 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Idade  </item>
+        <item>Idade 4  </item>
+        <item>Idade 5  </item>
+        <item>Idade 6  </item>
+        <item>Idade 7  </item>
+        <item>Idade 8  </item>
+        <item>Idade 9  </item>
+        <item>Idade 10 </item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Classe</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+-->
+    <!--PORTUGUESE (MOZAMBIQUE) END ____________________________________________________________________-->
+
+    <!--Hindi START ____________________________________________________________________-->
+<!--
+    <string name="sign_up">साइन अप</string>
+    <string name="have_account_sign_in">पहले से अकाउंट है? साइन इन</string>
+    <string name="hint_svrName">नाम <font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">ईमेल (वैकल्पिक) </string>
+    <string name="hint_svrMobile">मोबाईल न. <font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">पास्वोर्ड <font color='#FF0000'>*</font></string>
+    <string name="sign_in">साइन इन</string>
+    <string name="select_village">गाँव चुनें</string>
+    <string name="add_village">गाँव का नाम ऐड करें</string>
+    <string name="hint_village">गाँव <font color='#FF0000'>*</font></string>
+    <string name="hint_district">जिला <font color='#FF0000'>*</font></string>
+    <string name="hint_state">राज्य <font color='#FF0000'>*</font></string>
+    <string name="save">सेव</string>
+    <string name="select_child">बच्चे को चुनें</string>
+    <string name="add_child_information">बच्चे की जानकारी ऐड करें</string>
+    <string name="want_to_start_assessment">क्या आपको आकलन शुरू करना है?</string>
+    <string name="goto_next_task">क्या आपको अगले टास्क पर जाना है?</string>
+    <string name="thank_you">धन्यवाद</string>
+    <string name="test_submitted">आपका आकलन जमा हो गया है</string>
+    <string name="next_student">अगला बच्चा</string>
+    <string name="submit_assessment">आकलन जमा करें</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="select_country">देश चुनें</string>
+    <string name="enrolled">नामांकित</string>
+    <string name="drop_out">विद्यालय जाना छोड़ दिया</string>
+    <string name="never_enrolled">कभी नामांकित नहीं हुए</string>
+    <string name="save_n_submit">आकलन सेव और जमा करें</string>
+    <string name="you_want_to_exit">क्या आप निश्चित हैं आपको निकास करना है?</string>
+    <string name="all_age">All आयु</string>
+    <string name="all_village">All गाँव</string>
+
+    <string-array name="country_list">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>लड़का</item>
+        <item>लड़की</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>नामांकन स्थिति</item>
+        <item>नामांकित</item>
+        <item>कभी नामांकित नहीं हुए</item>
+        <item>विद्यालय जाना छोड़ दिया</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>विद्यालय का प्रकार</item>
+        <item>सरकारी</item>
+        <item>निजी</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>कौन से वर्ष से विद्यालय जाना छोड़ा?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>कौन सी कक्षा से विद्यालय जाना छोड़ा?</item>
+        <item>Pre-primary</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>आयु 4  </item>
+        <item>आयु 5  </item>
+        <item>आयु 6  </item>
+        <item>आयु 7  </item>
+        <item>आयु 8  </item>
+        <item>आयु 9  </item>
+        <item>आयु 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All आयु</item>
+        <item>आयु 4  </item>
+        <item>आयु 5  </item>
+        <item>आयु 6  </item>
+        <item>आयु 7  </item>
+        <item>आयु 8  </item>
+        <item>आयु 9  </item>
+        <item>आयु 10 </item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>कक्षा</item>
+        <item>Pre-primary</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+    </string-array>
+-->
+    <!--HINDI END ____________________________________________________________________-->
+
+    <!--Spanish-Mexico START ____________________________________________________________________-->
+    <!--<string name="sign_up">Registrarse</string>
+    <string name="have_account_sign_in">¿Ya tienes una cuenta? Inicia sesión</string>
+    <string name="hint_svrName">Nombre</string>
+    <string name="hint_svrEmail">Correo electrónico (opcional)</string>
+    <string name="hint_svrMobile">Número telefónico</string>
+    <string name="hint_svrPassword">Contraseña</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="select_village">Seleccionar localidad</string>
+    <string name="add_village">Añadir localidad</string>
+    <string name="hint_village">Localidad</string>
+    <string name="hint_district">Distrito</string>
+    <string name="hint_state">Estado</string>
+    <string name="save">Guardar</string>
+    <string name="select_child">Seleccionar niño(a)</string>
+    <string name="add_child_information">Añadir información del(la) niño(a)</string>
+    <string name="want_to_start_assessment">¿Deseas iniciar la evaluación?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="goto_next_task">¿Quieres pasar a la siguiente tarea?</string>
+    <string name="thank_you">Gracias</string>
+    <string name="test_submitted">Su evaluación ha sido enviada</string>
+    <string name="next_student">Siguiente niño(a)</string>
+    <string name="submit_assessment">Enviar la evaluación</string>
+    <string name="select_country">Seleccionar país</string>
+    <string name="enrolled">Inscrito</string>
+    <string name="drop_out">Abandonó la escuela</string>
+    <string name="never_enrolled">Nunca se inscribió</string>
+    <string name="save_n_submit">Guardar y enviar la evaluación</string>
+    <string name="you_want_to_exit">¿Estás seguro de que quieres salir?</string>
+
+    <string name="all_age">All Edad</string>
+    <string name="all_village">All localidad</string>
+
+    <string-array name="country_list">
+        <item>Seleccionar país</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Estado de inscripción</item>
+        <item>Inscrito</item>
+        <item>Nunca se inscribió</item>
+        <item>Abandonó la escuela</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Tipo de escuela</item>
+        <item>Gobierno</item>
+        <item>Privada</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>¿En que año el(la) niño(a) abandonó los estudios?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Edad 4  </item>
+        <item>Edad 5  </item>
+        <item>Edad 6  </item>
+        <item>Edad 7  </item>
+        <item>Edad 8  </item>
+        <item>Edad 9  </item>
+        <item>Edad 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Edad</item>
+        <item>Edad 4  </item>
+        <item>Edad 5  </item>
+        <item>Edad 6  </item>
+        <item>Edad 7  </item>
+        <item>Edad 8  </item>
+        <item>Edad 9  </item>
+        <item>Edad 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>¿En qué grado el(la) niño(a) abandonó los estudios?</item>
+        <item>Pre-primary</item>
+        <item>Grado escolar 1</item>
+        <item>Grado escolar 2</item>
+        <item>Grado escolar 3</item>
+        <item>Grado escolar 4</item>
+        <item>Grado escolar 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Grado escolar</item>
+        <item>Pre-primary</item>
+        <item>Grado escolar 1</item>
+        <item>Grado escolar 2</item>
+        <item>Grado escolar 3</item>
+        <item>Grado escolar 4</item>
+        <item>Grado escolar 5</item>
+    </string-array>-->
+    <!--Spanish-Mexico END ____________________________________________________________________-->
+
+    <!--Spanish-Nicaragua START ____________________________________________________________________-->
+    <!--<string name="sign_up">Inscribirse</string>
+    <string name="have_account_sign_in">¿Ya tienes una cuenta? Iniciar sesión</string>
+    <string name="hint_svrName">Nombre</string>
+    <string name="hint_svrEmail">Correo eléctrónico</string>
+    <string name="hint_svrMobile">Número de celular</string>
+    <string name="hint_svrPassword">Contraseña</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="select_village">Seleccionar comunidad</string>
+    <string name="add_village">Agregar comunidad</string>
+    <string name="hint_village">Comunidad</string>
+    <string name="hint_district">Distrito</string>
+    <string name="hint_state">Departamento</string>
+    <string name="save">Guardar</string>
+    <string name="select_child">Seleccionar niño o niña</string>
+    <string name="add_child_information">Agregar información del niño o niña</string>
+    <string name="want_to_start_assessment">¿Quieres iniciar la evaluación?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="goto_next_task">¿Quieres pasar al siguiente ejercicio?</string>
+    <string name="thank_you">Gracias</string>
+    <string name="test_submitted">Su evaluación está enviada</string>
+    <string name="next_student">Próximo niño/a</string>
+    <string name="submit_assessment">Enviar evaluación</string>
+    <string name="select_country">Seleccionar país</string>
+    <string name="enrolled">inscrita/o - matriculada/o</string>
+    <string name="drop_out">Se retiró</string>
+    <string name="never_enrolled">Nunca matriculada/o</string>
+    <string name="save_n_submit">Guardar y enviar la evaluación</string>
+    <string name="you_want_to_exit">¿Estás seguro de que quieres salir?</string>
+
+    <string name="all_age">All Edad</string>
+    <string name="all_village">All Comunidad</string>
+
+    <string-array name="country_list">
+        <item>Seleccionar país</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Estado de inscripción / matrícula</item>
+        <item>inscrita/o - matriculada/o</item>
+        <item>Nunca matriculada/o</item>
+        <item>Se retiró</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Tipo de escuela</item>
+        <item>Pública</item>
+        <item>Privada</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>¿Año en qué la niña o el niño se retiró?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Edad 4  </item>
+        <item>Edad 5  </item>
+        <item>Edad 6  </item>
+        <item>Edad 7  </item>
+        <item>Edad 8  </item>
+        <item>Edad 9  </item>
+        <item>Edad 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Edad</item>
+        <item>Edad 4  </item>
+        <item>Edad 5  </item>
+        <item>Edad 6  </item>
+        <item>Edad 7  </item>
+        <item>Edad 8  </item>
+        <item>Edad 9  </item>
+        <item>Edad 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>¿Grado en qué el niño o la niña se retiró?</item>
+        <item>Pre-primary</item>
+        <item>Grado 1</item>
+        <item>Grado 2</item>
+        <item>Grado 3</item>
+        <item>Grado 4</item>
+        <item>Grado 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Grado</item>
+        <item>Pre-primary</item>
+        <item>Grado 1</item>
+        <item>Grado 2</item>
+        <item>Grado 3</item>
+        <item>Grado 4</item>
+        <item>Grado 5</item>
+    </string-array>-->
+    <!--Spanish-Nicaragua END ____________________________________________________________________-->
+
+    <!--Kenya-Kiswahili START ____________________________________________________________________-->
+<!--    <string name="sign_up">Jisajili</string>
+    <string name="have_account_sign_in">Tayari una akaunti? Ingia</string>
+    <string name="hint_svrName">Jina</string>
+    <string name="hint_svrEmail">Barua pepe(sio lazima)</string>
+    <string name="hint_svrMobile">Namba ya simu</string>
+    <string name="hint_svrPassword">Neno la siri</string>
+    <string name="sign_in">Ingia</string>
+    <string name="select_village">Chagua kijiji</string>
+    <string name="add_village">ingiza Kijiji</string>
+    <string name="hint_village">kijiji</string>
+    <string name="hint_district">Wilaya</string>
+    <string name="hint_state">Mji</string>
+    <string name="save">Hifadhi</string>
+    <string name="select_child">chagua mtoto</string>
+    <string name="add_child_information">Ingiza taarifa za mtoto</string>
+    <string name="want_to_start_assessment">Unataka kuanza tathimini?</string>
+    <string name="yes">Ndiyo</string>
+    <string name="no">Hapana</string>
+    <string name="goto_next_task">Unataka kwenda hatua inayofuata</string>
+    <string name="thank_you">Asante</string>
+    <string name="test_submitted">Taarifa yako imetumwa</string>
+    <string name="next_student">Mtoto mwingine</string>
+    <string name="submit_assessment">Wasilisha taarifa</string>
+    <string name="select_country">Chagua nchi</string>
+    <string name="enrolled">Aliandikishwa</string>
+    <string name="drop_out">Aliacha </string>
+    <string name="never_enrolled">Hajawahi andikishwa</string>
+    <string name="save_n_submit">Hifadhi na uwasilishe Tathmini</string>
+    <string name="you_want_to_exit">Je, una uhakika unataka kuondoka?</string>
+
+    <string name="all_age">All Umri</string>
+    <string name="all_village">All Aldeia</string>
+
+    <string-array name="country_list">
+        <item>Chagua nchi</item>
+        <item>Índia</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Mwanaume</item>
+        <item>Mwanamke</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Hali ya uandikishaji</item>
+        <item>Aliandikishwa</item>
+        <item>Hajawahi andikishwa</item>
+        <item>Aliacha</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Aina ya shule</item>
+        <item>Serikali</item>
+        <item>Binafsi</item>
+        <item>Zingine</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>Mwaka alioacha shule</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>Aliacha shule darasa la ngapi?</item>
+        <item>Pre-primary</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Umri 4  </item>
+        <item>Umri 5  </item>
+        <item>Umri 6  </item>
+        <item>Umri 7  </item>
+        <item>Umri 8  </item>
+        <item>Umri 9  </item>
+        <item>Umri 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Umri</item>
+        <item>Umri 4  </item>
+        <item>Umri 5  </item>
+        <item>Umri 6  </item>
+        <item>Umri 7  </item>
+        <item>Umri 8  </item>
+        <item>Umri 9  </item>
+        <item>Umri 10 </item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Umri</item>
+        <item>Pre-primary</item>
+        <item>Umri 1</item>
+        <item>Umri 2</item>
+        <item>Umri 3</item>
+        <item>Umri 4</item>
+        <item>Umri 5</item>
+    </string-array>-->
+    <!--Kenya-Kiswahili END ____________________________________________________________________-->
+
+    <!--Tanzania-Kiswahili START ____________________________________________________________________-->
+<!--    <string name="sign_up">Jisajili</string>
+    <string name="have_account_sign_in">Tayari una akaunti? Ingia</string>
+    <string name="hint_svrName">Jina</string>
+    <string name="hint_svrEmail">Barua pepe(sio lazima)</string>
+    <string name="hint_svrMobile">Namba ya simu</string>
+    <string name="hint_svrPassword">Neno la siri</string>
+    <string name="sign_in">Ingia</string>
+    <string name="select_village">Chagua kijiji</string>
+    <string name="add_village">ingiza Kijiji</string>
+    <string name="hint_village">kijiji</string>
+    <string name="hint_district">Wilaya</string>
+    <string name="hint_state">Mji</string>
+    <string name="save">Hifadhi</string>
+    <string name="select_child">chagua mtoto</string>
+    <string name="add_child_information">Ingiza taarifa za mtoto</string>
+    <string name="want_to_start_assessment">Unataka kuanza tathimini?</string>
+    <string name="yes">Ndiyo</string>
+    <string name="no">Hapana</string>
+    <string name="goto_next_task">Unataka kwenda hatua inayofuata</string>
+    <string name="thank_you">Asante</string>
+    <string name="test_submitted">Taarifa yako imetumwa</string>
+    <string name="next_student">Mtoto mwingine</string>
+    <string name="submit_assessment">Wasilisha taarifa</string>
+    <string name="select_country">Chagua nchi</string>
+    <string name="enrolled">Aliandikishwa</string>
+    <string name="drop_out">Aliacha </string>
+    <string name="never_enrolled">Hajawahi andikishwa</string>
+    <string name="save_n_submit">Hifadhi na uwasilishe Tathmini</string>
+    <string name="you_want_to_exit">Je, una uhakika unataka kuondoka?</string>
+
+    <string name="all_age">All Umri</string>
+    <string name="all_village">All Aldeia</string>
+
+    <string-array name="country_list">
+        <item>Chagua nchi</item>
+        <item>Índia</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Mwanaume</item>
+        <item>Mwanamke</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Hali ya uandikishaji</item>
+        <item>Aliandikishwa</item>
+        <item>Hajawahi andikishwa</item>
+        <item>Aliacha</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Aina ya shule</item>
+        <item>Serikali</item>
+        <item>Binafsi</item>
+        <item>Zingine</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>Mwaka alioacha shule</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>Aliacha shule darasa la ngapi?</item>
+        <item>Pre-primary</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Umri 4  </item>
+        <item>Umri 5  </item>
+        <item>Umri 6  </item>
+        <item>Umri 7  </item>
+        <item>Umri 8  </item>
+        <item>Umri 9  </item>
+        <item>Umri 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Umri</item>
+        <item>Umri 4  </item>
+        <item>Umri 5  </item>
+        <item>Umri 6  </item>
+        <item>Umri 7  </item>
+        <item>Umri 8  </item>
+        <item>Umri 9  </item>
+        <item>Umri 10 </item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Umri</item>
+        <item>Pre-primary</item>
+        <item>Umri 1</item>
+        <item>Umri 2</item>
+        <item>Umri 3</item>
+        <item>Umri 4</item>
+        <item>Umri 5</item>
+    </string-array>-->
+    <!--Tanzania-Kiswahili END ____________________________________________________________________-->
+
+    <!--French-Senegal START ____________________________________________________________________-->
+    <!--<string name="hint_svrName">Nom</string>
+    <string name="hint_svrEmail">Courriel (facultatif)</string>
+    <string name="hint_svrMobile">Numéro de portable</string>
+    <string name="have_account_sign_in">Vous avez déjà un compte ? Se connecter</string>
+    <string name="hint_svrPassword">Mot de passe</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="select_village">Sélectionner un village</string>
+    <string name="add_village">Ajouter un village</string>
+    <string name="hint_village">Village</string>
+    <string name="hint_district">District</string>
+    <string name="hint_state">État</string>
+    <string name="save">Enregistrer</string>
+    <string name="select_child">Sélectionner un enfant</string>
+    <string name="add_child_information">Ajouter des informations sur lenfant</string>
+    <string name="want_to_start_assessment">Voulez-vous commencer lévaluation ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="sign_up">Sinscrire</string>
+    <string name="goto_next_task">Voulez-vous passer à la tâche suivante ?</string>
+    <string name="thank_you">Merci</string>
+    <string name="test_submitted">Votre évaluation est soumise</string>
+    <string name="next_student">Élève suivant</string>
+    <string name="submit_assessment">Soumettre lévaluation</string>
+    <string name="select_country">Chagua nchi</string>
+    <string name="enrolled">Inscrit</string>
+    <string name="drop_out">Abandon scolaire</string>
+    <string name="never_enrolled">Jamais inscrit</string>
+    <string name="save_n_submit">Sauvegarder et soumettre lévaluation</string>
+    <string name="you_want_to_exit">Vous êtes sûr de vouloir sortir ?</string>
+
+    <string name="all_age">All Âge</string>
+    <string name="all_village">All Village</string>
+
+    <string-array name="country_list">
+        <item>Chagua nchi</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Statut dinscription</item>
+        <item>Inscrit</item>
+        <item>Jamais inscrit</item>
+        <item>Abandon scolaire</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Type décole</item>
+        <item>Etatique</item>
+        <item>Privée</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>Année dabandon de lenfant ?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Âge 4  </item>
+        <item>Âge 5  </item>
+        <item>Âge 6  </item>
+        <item>Âge 7  </item>
+        <item>Âge 8  </item>
+        <item>Âge 9  </item>
+        <item>Âge 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Âge</item>
+        <item>Âge 4  </item>
+        <item>Âge 5  </item>
+        <item>Âge 6  </item>
+        <item>Âge 7  </item>
+        <item>Âge 8  </item>
+        <item>Âge 9  </item>
+        <item>Âge 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>Niveau dans lequel lenfant a abandonné ?</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Classe</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>-->
+    <!--French-Senegal END ____________________________________________________________________-->
+
+    <!--French-Mali START ____________________________________________________________________-->
+<!--    <string name="sign_up">Créer un compte</string>
+    <string name="have_account_sign_in">As-tu déjà un compte ? Se connecter</string>
+    <string name="hint_svrName">Nom</string>
+    <string name="hint_svrEmail">Email (Facultatif)</string>
+    <string name="hint_svrMobile">Numéro de téléphone</string>
+    <string name="hint_svrPassword">Mot de passe</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="select_village">Sélectionner un village</string>
+    <string name="add_village">Ajouter un village</string>
+    <string name="hint_village">Village</string>
+    <string name="hint_district">Cercle</string>
+    <string name="hint_state">Région</string>
+    <string name="save">Enregister</string>
+    <string name="select_child">Sélectionner un enfant</string>
+    <string name="add_child_information">Ajouter un enfant</string>
+    <string name="want_to_start_assessment">Voulez-vous commencer lévaluation ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="goto_next_task">Voulez-vous passer à la tâche suivante ?</string>
+    <string name="thank_you">Merci</string>
+    <string name="test_submitted">Votre évaluation est soumise</string>
+    <string name="next_student">Elève suivant</string>
+    <string name="submit_assessment">Soumettez lévaluation</string>
+    <string name="select_country">Sélectinner le pays</string>
+    <string name="enrolled">Scolarisé</string>
+    <string name="drop_out">Abandon</string>
+    <string name="never_enrolled">Jamais scolarisé</string>
+    <string name="save_n_submit">Sauvegarder et soumettre lévaluation</string>
+    <string name="you_want_to_exit">Vous êtes sûr de vouloir sortir ?</string>
+
+    <string name="all_age">All Age</string>
+    <string name="all_village">All Village</string>
+
+
+    <string-array name="country_list">
+        <item>Sélectinner le pays</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Garçon</item>
+        <item>Féminin</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>Statut scolaire</item>
+        <item>Scolarisé</item>
+        <item>Jamais scolarisé</item>
+        <item>Abandon</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>Type décole</item>
+        <item>Etatique</item>
+        <item>Privée</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>Année au cours de laquelle lenfant a abandonné ses études ?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All Age</item>
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>Niveau dans lequel lenfant a abandonné ?</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>Classe</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>-->
+    <!--French-Mali END ____________________________________________________________________-->
+
+    <!--Bangla-Bengali START ____________________________________________________________________-->
+    <!--<string name="sign_up">সাইন আপ করুন</string>
+    <string name="have_account_sign_in">ইতিমধ্যে একাউন্ট আছে? তাহলে, সাইন-ইন করুন</string>
+    <string name="hint_svrName">নাম</string>
+    <string name="hint_svrEmail">ইমেইল (অপশনাল)</string>
+    <string name="hint_svrMobile">মোবাইল নাম্বার</string>
+    <string name="hint_svrPassword">পাসওয়ার্ড</string>
+    <string name="sign_in">সাইন-ইন করুন</string>
+    <string name="select_village">গ্রাম নির্বাচন করুন</string>
+    <string name="add_village">গ্রাম যোগ করুন</string>
+    <string name="hint_village">গ্রাম</string>
+    <string name="hint_district">জেলা</string>
+    <string name="hint_state">বিভাগ</string>
+    <string name="save">সেইভ করুন</string>
+    <string name="select_child">শিশু নির্বাচন করুন</string>
+    <string name="add_child_information">শিশুটির তথ্য যোগ করুন</string>
+    <string name="want_to_start_assessment">আপনি কি মূল্যায়ন শুরু করতে চান?</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="no">না</string>
+    <string name="goto_next_task">আপনি কি পরের টাস্কটিতে যেতে চান?</string>
+    <string name="thank_you">ধন্যবাদ</string>
+    <string name="test_submitted">আপনার মূল্যায়নটি জমা দেওয়া হয়েছে</string>
+    <string name="next_student">পরবর্তী শিশু</string>
+    <string name="submit_assessment">মূল্যায়নটি জমা দিন</string>
+    <string name="select_country">দেশ নির্বাচন করুন</string>
+    <string name="enrolled">ভর্তিকৃত</string>
+    <string name="drop_out">ড্রপআউট (ঝরে পড়া)</string>
+    <string name="never_enrolled">কখনো ভর্তি হয়নি</string>
+    <string name="save_n_submit">সংরক্ষণ করুন এবং মূল্যায়ন জমা দিন</string>
+    <string name="you_want_to_exit">আপনি প্রস্থান করতে চান?</string>
+
+    <string name="all_age">All বয়স</string>
+    <string name="all_village">All localidad</string>
+
+    <string-array name="country_list">
+        <item>দেশ নির্বাচন করুন</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>ছেলে</item>
+        <item>মেয়ে</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>ভর্তি বিষয়ক তথ্য</item>
+        <item>ভর্তিকৃত</item>
+        <item>কখনো ভর্তি হয়নি</item>
+        <item>ড্রপআউট (ঝরে পড়া)</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>স্কুলের ধরন</item>
+        <item>সরকার</item>
+        <item>বেসরকারি</item>
+        <item>অন্যান্য</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>কোন সালে শিশুটির ড্রপআউট হয়েছে?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>বয়স 4  </item>
+        <item>বয়স 5  </item>
+        <item>বয়স 6  </item>
+        <item>বয়স 7  </item>
+        <item>বয়স 8  </item>
+        <item>বয়স 9  </item>
+        <item>বয়স 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All বয়স</item>
+        <item>বয়স 4  </item>
+        <item>বয়স 5  </item>
+        <item>বয়স 6  </item>
+        <item>বয়স 7  </item>
+        <item>বয়স 8  </item>
+        <item>বয়স 9  </item>
+        <item>বয়স 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>কোন ক্লাসে শিশুটির ড্রপআউট হয়েছে?</item>
+        <item>Pre-primary</item>
+        <item>ক্লাস/গ্রেড 1</item>
+        <item>ক্লাস/গ্রেড 2</item>
+        <item>ক্লাস/গ্রেড 3</item>
+        <item>ক্লাস/গ্রেড 4</item>
+        <item>ক্লাস/গ্রেড 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>ক্লাস/গ্রেড</item>
+        <item>Pre-primary</item>
+        <item>ক্লাস/গ্রেড 1</item>
+        <item>ক্লাস/গ্রেড 2</item>
+        <item>ক্লাস/গ্রেড 3</item>
+        <item>ক্লাস/গ্রেড 4</item>
+        <item>ক্লাস/গ্রেড 5</item>
+    </string-array>-->
+    <!--Bangla-Bengali END ____________________________________________________________________-->
+
+    <!--Nepali-Nepal START ____________________________________________________________________-->
+    <!--<string name="sign_up">खाता खोल्नुहोस्</string>
+    <string name="have_account_sign_in">खाता पहिले नै खोलिसकेको छ? छ भने साइन इन गर्नुहोस्</string>
+    <string name="hint_svrName">नाम</string>
+    <string name="hint_svrEmail">ईमेल (अनिवार्य होइन)</string>
+    <string name="hint_svrMobile">मोबाईल नं.</string>
+    <string name="hint_svrPassword">पासवर्ड</string>
+    <string name="sign_in">साइन इन गर्नुहोस्</string>
+    <string name="select_village">गाउँ छान्नुहोस्</string>
+    <string name="add_village">गाउँको नाम add गर्नुहोस्</string>
+    <string name="hint_village">गाउँ</string>
+    <string name="hint_district">जिल्ला</string>
+    <string name="hint_state">प्रदेश</string>
+    <string name="save">सेभ गर्नुहोस्</string>
+    <string name="select_child">बालबालिका छान्नुहोस्</string>
+    <string name="add_child_information">बालबालिकाको जानकारी भर्नुहोस्</string>
+    <string name="want_to_start_assessment">अब मापन सुरु गर्दा हुन्छ?</string>
+    <string name="yes">हुन्छ</string>
+    <string name="no">हुँदैन</string>
+    <string name="goto_next_task">अर्को कार्य सुरु गर्न चाहनु हुन्छ?</string>
+    <string name="thank_you">धन्यवाद</string>
+    <string name="test_submitted">तपाईको मापन सब्मिसन भयो</string>
+    <string name="next_student">अब अर्को बालबालिका</string>
+    <string name="submit_assessment">मापन सब्मिट गर्नुहोस्</string>
+    <string name="select_country">देशको नाम छान्नुहोस्</string>
+    <string name="enrolled">विद्यालय गईरहेको</string>
+    <string name="drop_out">विद्यालय बिचमै छोडेको </string>
+    <string name="never_enrolled">कहिले भर्ना नै नगरिएको </string>
+    <string name="save_n_submit">बचत गर्नुहोस् र मूल्याङ्कन पेश गर्नुहोस्</string>
+    <string name="you_want_to_exit">के तपाईं बाहिर निस्कन चाहनुहुन्छ?</string>
+
+    <string name="all_age">All उमेर</string>
+    <string name="all_village">All गाउँ</string>
+
+
+    <string-array name="country_list">
+        <item>देशको नाम छान्नुहोस्</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>विद्यालय भर्नाको अवस्था</item>
+        <item>विद्यालय गईरहेको</item>
+        <item>कहिले भर्ना नै नगरिएको</item>
+        <item>विद्यालय बिचमै छोडेको</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>विद्यालयको प्रकार</item>
+        <item>सरकारी</item>
+        <item>निजी</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>कुन सालमा विद्यालय जान छोडेको?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>उमेर 4  </item>
+        <item>उमेर 5  </item>
+        <item>उमेर 6  </item>
+        <item>उमेर 7  </item>
+        <item>उमेर 8  </item>
+        <item>उमेर 9  </item>
+        <item>उमेर 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All उमेर</item>
+        <item>उमेर 4  </item>
+        <item>उमेर 5  </item>
+        <item>उमेर 6  </item>
+        <item>उमेर 7  </item>
+        <item>उमेर 8  </item>
+        <item>उमेर 9  </item>
+        <item>उमेर 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item>कति कक्षामा पढ्दा पढ्दै विद्यालय जान छोडेको?</item>
+        <item>Pre-primary</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>कक्षा</item>
+        <item>Pre-primary</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+    </string-array>-->
+    <!--Nepali-Nepal END ____________________________________________________________________-->
+
+    <!--Urdu-Pakistan START ____________________________________________________________________-->
+<!--
+    <string name="sign_up">رجسٹر کریں</string>
+    <string name="have_account_sign_in">پہلے اکاؤنٹ بنایا ہوا ہے؟ داخل ہوں</string>
+    <string name="hint_svrName">نام <font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">ای میل </string>
+    <string name="hint_svrMobile">موبائل نمبر <font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">پاسورڈ <font color='#FF0000'>*</font></string>
+    <string name="sign_in">داخل ہوں</string>
+    <string name="select_village">گاؤں منتخب کریں</string>
+    <string name="add_village">گاؤں کا اندراج کریں</string>
+    <string name="hint_village">گاؤں <font color='#FF0000'>*</font></string>
+    <string name="hint_district">ضلع <font color='#FF0000'>*</font></string>
+    <string name="hint_state">صوبہ <font color='#FF0000'>*</font></string>
+    <string name="save">محفوظ کریں</string>
+    <string name="select_child">بچہ منتخب کریں</string>
+    <string name="add_child_information">بچے کی معلومات درج کریں</string>
+    <string name="want_to_start_assessment">کیا آپ اسسمنٹ شروع کرنا چا ہتے ہیں؟</string>
+    <string name="goto_next_task">کیا آپ اگلے ٹاسک کی طرف بڑھنا چاہتے ہیں؟</string>
+    <string name="thank_you">شکریہ</string>
+    <string name="test_submitted">آپ کی اسسمنٹ جمع ہو گئی ہے</string>
+    <string name="next_student">اگلا بچہ</string>
+    <string name="submit_assessment">اسسمنٹ جمع کرائیں</string>
+    <string name="yes">جی ہاں</string>
+    <string name="no">جی نہیں</string>
+    <string name="select_country">ملک منتخب کریں</string>
+    <string name="enrolled">سکول میں داخل ہے</string>
+    <string name="never_enrolled">کبھی سکول نہیں گیا</string>
+    <string name="drop_out">سکول چھوڑ چکا ہے</string>
+    <string name="save_n_submit">محفوظ اور جمع کریں</string>
+    <string name="you_want_to_exit">کیا آپ یقیناً اسے ختم کرناچاہتے ہیں؟</string>
+
+    <string name="all_age">All عمر</string>
+    <string name="all_village">All گاؤں</string>
+
+    <string-array name="country_list">
+        <item>ملک منتخب کریں</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>مرد/لڑکا</item>
+        <item>عورت/لڑکی</item>
+    </string-array>
+
+    <string-array name="enrollment_status">
+        <item>سکول میں داخلے کی معلومات</item>
+        <item>سکول میں داخل ہے</item>
+        <item>کبھی سکول نہیں گیا</item>
+        <item>سکول چھوڑ چکا ہے</item>
+    </string-array>
+
+    <string-array name="school_type">
+        <item>سکول  کی  قسم</item>
+        <item>گورنمنٹ</item>
+        <item>پرائیویٹ</item>
+        <item>کوئی  اور</item>
+    </string-array>
+
+    <string-array name="dropout_year_list">
+        <item>بچے نے کس سال سکول چھوڑا؟</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>عمر 4  </item>
+        <item>عمر 5  </item>
+        <item>عمر 6  </item>
+        <item>عمر 7  </item>
+        <item>عمر 8  </item>
+        <item>عمر 9  </item>
+        <item>عمر 10 </item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>All عمر</item>
+        <item>عمر 4  </item>
+        <item>عمر 5  </item>
+        <item>عمر 6  </item>
+        <item>عمر 7  </item>
+        <item>عمر 8  </item>
+        <item>عمر 9  </item>
+        <item>عمر 10 </item>
+    </string-array>
+
+    <string-array name="student_dropoutclass">
+        <item> کس کلاس سے بچے نے سکول چھوڑا؟</item>
+        <item>Pre-primary</item>
+        <item>کلاس 1</item>
+        <item>کلاس 2</item>
+        <item>کلاس 3</item>
+        <item>کلاس 4</item>
+        <item>کلاس 5</item>
+    </string-array>
+
+    <string-array name="student_class">
+        <item>کلاس</item>
+        <item>Pre-primary</item>
+        <item>کلاس 1</item>
+        <item>کلاس 2</item>
+        <item>کلاس 3</item>
+        <item>کلاس 4</item>
+        <item>کلاس 5</item>
+    </string-array>
+-->
+    <!--Urdu-Pakistan END ____________________________________________________________________-->
+
 
 </resources>

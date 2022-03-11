@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_5sdp"
+    android:paddingStart="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tv_CardInfo"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounder_bg_red"
+        android:gravity="center"
+        android:text="VIF"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_toStartOf="@+id/tv_CardInfo"
+        android:background="@drawable/rounder_bg_white"
+        android:orientation="horizontal"
+        android:weightSum="20">
+
+        <TextView
+            android:id="@+id/tv_CardName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="18"
+            android:background="#00000000"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="@string/child_name"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_CardEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="2"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

@@ -111,7 +111,8 @@ public final class WebViewActivity_
     }
 
     @SuppressLint({
-        "JavascriptInterface"
+        "JavascriptInterface",
+        "SetJavaScriptEnabled"
     })
     @Override
     public void createWebView(final int pos) {

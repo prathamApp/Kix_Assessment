@@ -23,7 +23,7 @@ public final class ContentDao_Impl implements ContentDao {
     this.__insertionAdapterOfModal_Content = new EntityInsertionAdapter<Modal_Content>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Content`(`contentId`,`contentCode`,`contentFolderName`,`contentBooklet`) VALUES (nullif(?, 0),?,?,?)";
+        return "INSERT OR REPLACE INTO `Content`(`contentId`,`contentCode`,`contentFolderName`,`contentBooklet`,`contentCountry`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -43,6 +43,11 @@ public final class ContentDao_Impl implements ContentDao {
           stmt.bindNull(4);
         } else {
           stmt.bindString(4, value.contentBooklet);
+        }
+        if (value.contentCountry == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.contentCountry);
         }
       }
     };
@@ -76,6 +81,7 @@ public final class ContentDao_Impl implements ContentDao {
       final int _cursorIndexOfContentCode = _cursor.getColumnIndexOrThrow("contentCode");
       final int _cursorIndexOfContentFolderName = _cursor.getColumnIndexOrThrow("contentFolderName");
       final int _cursorIndexOfContentBooklet = _cursor.getColumnIndexOrThrow("contentBooklet");
+      final int _cursorIndexOfContentCountry = _cursor.getColumnIndexOrThrow("contentCountry");
       final List<Modal_Content> _result = new ArrayList<Modal_Content>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Modal_Content _item;
@@ -84,6 +90,7 @@ public final class ContentDao_Impl implements ContentDao {
         _item.contentCode = _cursor.getString(_cursorIndexOfContentCode);
         _item.contentFolderName = _cursor.getString(_cursorIndexOfContentFolderName);
         _item.contentBooklet = _cursor.getString(_cursorIndexOfContentBooklet);
+        _item.contentCountry = _cursor.getString(_cursorIndexOfContentCountry);
         _result.add(_item);
       }
       return _result;
@@ -94,16 +101,75 @@ public final class ContentDao_Impl implements ContentDao {
   }
 
   @Override
-  public List<String> getBooklets() {
-    final String _sql = "WITH split(contentCode,contentBooklet,str) AS (\n"
-            + "SELECT contentCode,'',contentBooklet||',' FROM Content\n"
-            + "UNION ALL SELECT contentCode,\n"
-            + "substr(str,0,instr(str,',')),\n"
-            + "substr(str,instr(str,',')+1)\n"
-            + "FROM split where str!=''\n"
-            + "\n"
-            + ")SELECT DISTINCT(contentBooklet) FROM split WHERE contentBooklet!='' ORDER by contentBooklet ASC";
+  public List<Modal_Content> getContentByBookletCountry(String booklet, String country) {
+    final String _sql = "select * from Content where contentBooklet like? AND contentCountry=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    if (booklet == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, booklet);
+    }
+    _argIndex = 2;
+    if (country == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, country);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfContentId = _cursor.getColumnIndexOrThrow("contentId");
+      final int _cursorIndexOfContentCode = _cursor.getColumnIndexOrThrow("contentCode");
+      final int _cursorIndexOfContentFolderName = _cursor.getColumnIndexOrThrow("contentFolderName");
+      final int _cursorIndexOfContentBooklet = _cursor.getColumnIndexOrThrow("contentBooklet");
+      final int _cursorIndexOfContentCountry = _cursor.getColumnIndexOrThrow("contentCountry");
+      final List<Modal_Content> _result = new ArrayList<Modal_Content>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Modal_Content _item;
+        _item = new Modal_Content();
+        _item.contentId = _cursor.getLong(_cursorIndexOfContentId);
+        _item.contentCode = _cursor.getString(_cursorIndexOfContentCode);
+        _item.contentFolderName = _cursor.getString(_cursorIndexOfContentFolderName);
+        _item.contentBooklet = _cursor.getString(_cursorIndexOfContentBooklet);
+        _item.contentCountry = _cursor.getString(_cursorIndexOfContentCountry);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<String> getCountryList() {
+    final String _sql = "select DISTINCT contentCountry from Content";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final List<String> _result = new ArrayList<String>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final String _item;
+        _item = _cursor.getString(0);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<String> getBooklets(String country) {
+    final String _sql = "WITH split(contentCountry,contentCode,contentBooklet,str) AS (SELECT contentCountry,contentCode,'',contentBooklet||',' FROM Content UNION ALL SELECT contentCountry, contentCode, substr(str,0,instr(str,',')), substr(str,instr(str,',')+1) FROM split where str!='' ) SELECT DISTINCT(contentBooklet) FROM split WHERE contentBooklet!='' and contentCountry=? ORDER by contentBooklet ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (country == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, country);
+    }
     final Cursor _cursor = __db.query(_statement);
     try {
       final List<String> _result = new ArrayList<String>(_cursor.getCount());

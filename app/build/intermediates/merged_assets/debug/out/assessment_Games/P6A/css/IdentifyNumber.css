@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+body {
+    user-select: none;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+#homeAndLogoBtn
+{
+    margin-top: 1vh;
+}
+#gamePage{
+    user-select: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	position:relative;
+	height:82vh;
+}
+.BtnPosition{
+  position: fixed;
+  bottom: 0vh;
+}
+.cls
+{
+    margin-left: 1vw;
+}
+#optionDiv
+{
+    margin-top: 17vh;
+} 
+.nopadding {
+	padding: 0px !important;
+}

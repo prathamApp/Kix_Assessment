@@ -11,33 +11,22 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.gson.JsonSyntaxException;
 import com.kix.assessment.async.CopyDbToOTG;
 import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
 import com.kix.assessment.dbclasses.BackupDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
-import com.kix.assessment.modal_classes.Attendance;
 import com.kix.assessment.modal_classes.EventMessage;
-import com.kix.assessment.modal_classes.Modal_Household;
-import com.kix.assessment.modal_classes.Modal_PushData;
-import com.kix.assessment.modal_classes.Modal_Student;
-import com.kix.assessment.modal_classes.Modal_Surveyor;
-import com.kix.assessment.modal_classes.Score;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 import net.alhazmy13.catcho.library.Catcho;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import static com.kix.assessment.KIXApplication.attendanceDao;
-import static com.kix.assessment.KIXApplication.householdDao;
-import static com.kix.assessment.KIXApplication.scoreDao;
-import static com.kix.assessment.KIXApplication.sessionDao;
-import static com.kix.assessment.KIXApplication.studentDao;
-import static com.kix.assessment.KIXApplication.surveyorDao;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -133,6 +122,11 @@ public class BaseActivity extends AppCompatActivity {
                 .activity(CatchoTransparentActivity.class)
 //                .recipients("abc@gm.com")
                 .build();
+        try {
+            KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void hideSystemUI() {
@@ -160,12 +154,22 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
+        try {
+            KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         EventBus.getDefault().unregister(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        try {
+            KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         hideSystemUI();
         BackupDatabase.backup(this);
     }
@@ -184,36 +188,40 @@ public class BaseActivity extends AppCompatActivity {
 
     @Subscribe
     public void updateFlagsWhenPushed(EventMessage message) {
-        if (message != null) {
-            if (message.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
-                Gson gson = new Gson();
-                Modal_PushData pushedData = gson.fromJson(message.getPushData(), Modal_PushData.class);
-                for (Modal_PushData.Modal_PushSessionData pushed : pushedData.getPushSession()) {
-                    sessionDao.updateFlag(pushed.getSessionId());
-                    for (Score score : pushed.getScores())
-                        scoreDao.updateFlag(pushed.getSessionId());
-                    for (Attendance att : pushed.getAttendances())
-                        attendanceDao.updateSentFlag(pushed.getSessionId());
-                }
-                if (pushedData.getStudents() != null)
-                    for (Modal_Student student : pushedData.getStudents())
-                        studentDao.updateSentStudentFlags(student.getStud_Id());
-                if (pushedData.getSurveyors() != null)
-                    for (Modal_Surveyor surveyor : pushedData.getSurveyors())
-                        surveyorDao.updateSentSurveyorFlags(surveyor.getSvrCode());
-                if (pushedData.getHouseholds() != null)
-                    for (Modal_Household household : pushedData.getHouseholds())
-                        householdDao.updateSentHouseholdFlags(household.getHouseholdId());
+        try {
+            if (message != null) {
+                if (message.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
+/*                    Gson gson = new Gson();
+                    Modal_PushData pushedData = gson.fromJson(message.getPushData(), Modal_PushData.class);
+                    for (Modal_PushData.Modal_PushSessionData pushed : pushedData.getPushSession()) {
+                        sessionDao.updateFlag(pushed.getSessionId());
+                        for (Score score : pushed.getScores())
+                            scoreDao.updateFlag(pushed.getSessionId());
+                        for (Attendance att : pushed.getAttendances())
+                            attendanceDao.updateSentFlag(pushed.getSessionId());
+                    }
+                    if (pushedData.getStudents() != null)
+                        for (Modal_Student student : pushedData.getStudents())
+                            studentDao.updateSentStudentFlags(student.getStudentId());
+                    if (pushedData.getSurveyors() != null)
+                        for (Modal_Surveyor surveyor : pushedData.getSurveyors())
+                            surveyorDao.updateSentSurveyorFlags(surveyor.getSvrCode());
+                    if (pushedData.getHouseholds() != null)
+                        for (Modal_Household household : pushedData.getHouseholds())
+                            householdDao.updateSentHouseholdFlags(household.getHouseholdId());
 
-                BackupDatabase.backup(KIXApplication.getInstance());
-            } else
-            if (message.getMessage().equalsIgnoreCase(Kix_Constant.OTG_INSERTED)) {
-                mHandler.sendEmptyMessage(SHOW_OTG_TRANSFER_DIALOG);
-            } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_COPIED)) {
-                mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_SUCCESS);
-            } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_NOT_COPIED)) {
-                mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_FAILED);
+                    BackupDatabase.backup(KIXApplication.getInstance());*/
+                } else
+                if (message.getMessage().equalsIgnoreCase(Kix_Constant.OTG_INSERTED)) {
+                    mHandler.sendEmptyMessage(SHOW_OTG_TRANSFER_DIALOG);
+                } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_COPIED)) {
+                    mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_SUCCESS);
+                } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_NOT_COPIED)) {
+                    mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_FAILED);
+                }
             }
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
         }
     }
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="age">
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>All Age</item>
+        <item>Age 4  </item>
+        <item>Age 5  </item>
+        <item>Age 6  </item>
+        <item>Age 7  </item>
+        <item>Age 8  </item>
+        <item>Age 9  </item>
+        <item>Age 10 </item>
+    </string-array>
+    <string-array name="country_list">
+        <item>Sélectinner le pays</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+    <string-array name="dropout_year_list">
+        <item>Année au cours de laquelle lenfant a abandonné ses études ?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+    <string-array name="enrollment_status">
+    <item>Statut scolaire</item>
+    <item>Scolarisé</item>
+    <item>Jamais scolarisé</item>
+    <item>Abandon</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Garçon</item>
+        <item>Féminin</item>
+    </string-array>
+    <string-array name="school_type">
+    <item>Type décole</item>
+    <item>Etatique</item>
+    <item>Privée</item>
+    <item>Autre</item>
+    </string-array>
+    <string-array name="student_class">
+        <item>Classe</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+    <string-array name="student_dropoutclass">
+        <item>Niveau dans lequel lenfant a abandonné ?</item>
+        <item>Pre-primary</item>
+        <item>Classe 1</item>
+        <item>Classe 2</item>
+        <item>Classe 3</item>
+        <item>Classe 4</item>
+        <item>Classe 5</item>
+    </string-array>
+    <string name="add_child_information">Ajouter un enfant</string>
+    <string name="add_village">Ajouter un village</string>
+    <string name="all_age">All Age</string>
+    <string name="all_village">All Village</string>
+    <string name="drop_out">Abandon</string>
+    <string name="enrolled">Scolarisé</string>
+    <string name="goto_next_task">Voulez-vous passer à la tâche suivante ?</string>
+    <string name="have_account_sign_in">As-tu déjà un compte ? Se connecter</string>
+    <string name="hint_district">Cercle</string>
+    <string name="hint_state">Région</string>
+    <string name="hint_svrEmail">Email (Facultatif)</string>
+    <string name="hint_svrMobile">Numéro de téléphone</string>
+    <string name="hint_svrName">Nom</string>
+    <string name="hint_svrPassword">Mot de passe</string>
+    <string name="hint_village">Village</string>
+    <string name="never_enrolled">Jamais scolarisé</string>
+    <string name="next_student">Elève suivant</string>
+    <string name="no">Non</string>
+    <string name="save">Enregister</string>
+    <string name="save_n_submit">Sauvegarder et soumettre lévaluation</string>
+    <string name="select_child">Sélectionner un enfant</string>
+    <string name="select_country">Sélectinner le pays</string>
+    <string name="select_village">Sélectionner un village</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_up">Créer un compte</string>
+    <string name="submit_assessment">Soumettez lévaluation</string>
+    <string name="test_submitted">Votre évaluation est soumise</string>
+    <string name="thank_you">Merci</string>
+    <string name="want_to_start_assessment">Voulez-vous commencer lévaluation ?</string>
+    <string name="yes">Oui</string>
+    <string name="you_want_to_exit">Vous êtes sûr de vouloir sortir ?</string>
+</resources>

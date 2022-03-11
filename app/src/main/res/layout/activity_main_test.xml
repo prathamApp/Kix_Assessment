@@ -26,18 +26,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:text="@string/test_submitted"
             android:textAlignment="center"
-            android:textStyle="bold"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_20sdp"
-            android:text="Thank you!!!\nYour assessment is submitted."/>
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next_student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_thankyou"
-            android:text="Next Student"
+            android:text="@string/next_student"
             android:layout_marginTop="@dimen/_30sdp"
             android:layout_centerHorizontal="true"
             android:paddingStart="@dimen/_15sdp"
@@ -65,26 +65,4 @@
         android:textSize="@dimen/_20sdp"
         android:textColor="@color/colorText"
         android:layout_margin="@dimen/_5sdp"/>
-
-    <RelativeLayout
-        android:id="@+id/parent_dots_indicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_alignParentBottom="true">
-
-        <com.kix.assessment.custom.dots_indicator.WormDotsIndicator
-            android:id="@+id/dots_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="@dimen/_5sdp"
-            app:dotsColor="@color/colorBtnRedDark"
-            app:dotsCornerRadius="5dp"
-            app:dotsSize="10dp"
-            app:dotsSpacing="2dp"
-            app:dotsStrokeColor="@color/colorBtnRedDark"
-            app:dotsStrokeWidth="1dp" />
-    </RelativeLayout>
-
 </RelativeLayout>

@@ -1,16 +1,16 @@
 package com.kix.assessment.dbclasses.dao;
 
-import com.kix.assessment.modal_classes.Modal_ProfileDetails;
-import com.kix.assessment.modal_classes.Score;
-
-import java.util.List;
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.kix.assessment.modal_classes.Modal_ProfileDetails;
+import com.kix.assessment.modal_classes.Score;
+
+import java.util.List;
 
 
 @Dao
@@ -53,10 +53,10 @@ public interface ScoreDao {
     int updateFlag(String s_id);
 
     @Query("select Student.studName as StudentName, Student.studAge as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n" +
-            "INNER JOIN Student on Score.studentId = Student.studId\n" +
+            "INNER JOIN Student on Score.studentId = Student.studentId\n" +
             "INNER JOIN Household on Household.householdId = Student.householdId\n" +
             "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n" +
-            "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studId, Surveyor.svrName")
+            "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studentId, Surveyor.svrName")
     List<Modal_ProfileDetails> getProfileData(String svrCode);
 
     @Query("select studentId from Score where studentId=:studId")

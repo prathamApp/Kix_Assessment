@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/KIX_Master.iml" filepath="$PROJECT_DIR$/.idea/KIX_Master.iml" group="KIX_Master" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="KIX_Master/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KIX_Assessment.iml" filepath="$PROJECT_DIR$/.idea/modules/KIX_Assessment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KIX_Assessment.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KIX_Assessment.app.iml" />
     </modules>
   </component>
 </project>
