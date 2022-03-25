@@ -8,199 +8,940 @@
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
     tools:context=".ui.attendance_activity.Fragment_AddStudent_">
 
     <TextView
         android:id="@+id/tv_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="@string/add_child_information"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/_15sdp"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/_20sdp"/>
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_studentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_label"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/rounded_form_bg"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:elevation="@dimen/_2sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_svrName"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_14sdp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_CH01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawablePadding="@dimen/_5sdp"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_below="@+id/ll_studentName"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounded_form_bg"
+        android:elevation="@dimen/_2sdp"
+        android:paddingStart="@dimen/_10sdp">
+
+        <Spinner
+            android:id="@+id/spn_CH02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorAccent"
+            android:drawSelectorOnTop="true"
+            android:gravity="center_vertical"
+            android:popupBackground="@drawable/choose_level_bg"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_age"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_below="@id/ll_gender"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounded_form_bg"
+        android:elevation="@dimen/_2sdp"
+        android:paddingStart="@dimen/_10sdp">
+
+        <Spinner
+            android:id="@+id/spn_CH03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorAccent"
+            android:drawSelectorOnTop="true"
+            android:gravity="center_vertical"
+            android:popupBackground="@drawable/choose_level_bg"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/rl_fillDetails"
+        android:id="@+id/rl_CH04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_age"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounded_form_bg"
+        android:elevation="@dimen/_2sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/lbl_CH04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_CH04"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_13sdp" />
+
+        <RadioGroup
+            android:id="@+id/rg_CH04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_CH04"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_CH04_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorBtnGreenDark"
+                android:text="Yes"
+                android:textColor="@color/light_black" />
+
+            <RadioButton
+                android:id="@+id/rb_CH04_No"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="No"
+                android:textColor="@color/light_black" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tv_label"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_20sdp">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_label1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_svrName"
-            android:textColorHint="#757575">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_studentName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:drawablePadding="@dimen/_5sdp"
-                android:textColor="@color/colorText"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-                android:drawableStart="@drawable/ic_person_grey_24dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_below="@+id/rl_CH04"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
-            android:id="@+id/ll_spinners1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/til_label1"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/ll_age"
+                android:id="@+id/ll_enrolledChildFields"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_CH04"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-                <Spinner
-                    android:id="@+id/spinner_age"
+                <LinearLayout
+                    android:id="@+id/ll_spinnerClass"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
-                    android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spn_CH05a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_schoolType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spn_CH05b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_CH05c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/lbl_CH05c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_CH05c"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_CH05c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_CH05c"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05c_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="Yes"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05c_No"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/red"
+                            android:text="No"
+                            android:textColor="@color/light_black" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_CH05d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/lbl_CH05d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_CH05d"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_CH05d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_CH05d"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05d_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05d_one"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05d_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05d_two"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05d_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05d_three"
+                            android:textColor="@color/light_black" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_CH05e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/lbl_CH05e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_CH05e"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_CH05e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_CH05e"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05e_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05e_one"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05e_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05e_two"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05e_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="@string/str_CH05e_three"
+                            android:textColor="@color/light_black" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_CH05f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/lbl_CH05f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_CH05f"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_CH05f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_CH05f"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05f_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="Yes"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH05f_No"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/red"
+                            android:text="No"
+                            android:textColor="@color/light_black" />
+                    </RadioGroup>
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_gender"
+                android:id="@+id/ll_notEnrolledChildFields"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_enrolledChildFields"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-                <Spinner
-                    android:id="@+id/spinner_gender"
+                <RelativeLayout
+                    android:id="@+id/rl_CH06a"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
-                    android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_form_bg"
+                    android:elevation="@dimen/_2sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/lbl_CH06a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_CH06a"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_CH06a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_CH06a"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_CH06a_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorBtnGreenDark"
+                            android:text="Yes"
+                            android:textColor="@color/light_black" />
+
+                        <RadioButton
+                            android:id="@+id/rb_CH06a_No"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/red"
+                            android:text="No"
+                            android:textColor="@color/light_black" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sub_CHo6a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_spinnerDropout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_form_bg"
+                        android:elevation="@dimen/_2sdp"
+                        android:paddingStart="@dimen/_10sdp">
+
+                        <Spinner
+                            android:id="@+id/spn_CH06b1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:drawSelectorOnTop="true"
+                            android:gravity="center_vertical"
+                            android:popupBackground="@drawable/choose_level_bg"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_spinnerDropOutClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_form_bg"
+                        android:elevation="@dimen/_2sdp"
+                        android:paddingStart="@dimen/_10sdp">
+
+                        <Spinner
+                            android:id="@+id/spn_CH06b2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:drawSelectorOnTop="true"
+                            android:gravity="center_vertical"
+                            android:popupBackground="@drawable/choose_level_bg"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_reasonToDrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/rounded_form_bg"
+                        android:elevation="@dimen/_2sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/lbl_reasonToDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_reasonToDrop"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_CH06b3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_reasonToDrop"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_one"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_two"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_three"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_four"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_five"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_five"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_six"
+                                android:textColor="@color/light_black" />
+
+                            <RadioButton
+                                android:id="@+id/rb_CH06b3_seven"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorBtnGreenDark"
+                                android:text="@string/str_reasonToDrop_seven"
+                                android:textColor="@color/light_black" />
+
+                        </RadioGroup>
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_enrollStatus"
+            <RelativeLayout
+                android:id="@+id/rl_CH07"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_form_bg"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+                android:elevation="@dimen/_2sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp">
 
-                <Spinner
-                    android:id="@+id/spinner_enrollStatus"
+                <TextView
+                    android:id="@+id/lbl_CH07"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_CH07"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_13sdp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_CH07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl_CH07"
                     android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
-            </LinearLayout>
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_CH07_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:text="Yes"
+                        android:textColor="@color/light_black" />
+
+                    <RadioButton
+                        android:id="@+id/rb_CH07_No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/red"
+                        android:text="No"
+                        android:textColor="@color/light_black" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_CH08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_form_bg"
+                android:elevation="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/lbl_CH08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_CH08"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_13sdp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_CH08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl_CH08"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_CH08_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:text="Yes"
+                        android:textColor="@color/light_black" />
+
+                    <RadioButton
+                        android:id="@+id/rb_CH08_No"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/red"
+                        android:text="No"
+                        android:textColor="@color/light_black" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_saveStudent"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
         </LinearLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:id="@+id/ll_spinnersByStatus"
+    <!--    <RelativeLayout
+            android:id="@+id/rl_fillDetails"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_spinners1"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_label"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_label1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_svrName"
+                android:textColorHint="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_studentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/colorText"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_person_grey_24dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
-                android:id="@+id/ll_schoolType"
+                android:id="@+id/ll_spinners1"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_label1"
+                android:orientation="vertical">
 
-                <Spinner
-                    android:id="@+id/spinner_schoolType"
+                <LinearLayout
+                    android:id="@+id/ll_age"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
-                    android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_enrollStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_enrollStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_spinnerClass"
+                android:id="@+id/ll_spinnersByStatus"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_spinners1"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-                <Spinner
-                    android:id="@+id/spinner_class"
+                <LinearLayout
+                    android:id="@+id/ll_schoolType"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
-                    android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_schoolType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_spinnerClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_spinnerDropout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_greenborder_spinner"
+                    android:paddingStart="@dimen/_10sdp">
+
+                    <Spinner
+                        android:id="@+id/spinner_dropoutYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="center_vertical"
+                        android:popupBackground="@drawable/choose_level_bg"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_spinnerDropout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/rounded_greenborder_spinner"
-                android:paddingStart="@dimen/_10sdp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_saveStudent"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_spinnersByStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp" />
 
-                <Spinner
-                    android:id="@+id/spinner_dropoutYear"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorAccent"
-                    android:drawSelectorOnTop="true"
-                    android:gravity="center_vertical"
-                    android:popupBackground="@drawable/choose_level_bg"
-                    android:textColor="@color/colorText" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_saveStudent"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ll_spinnersByStatus"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_50sdp"
-            android:paddingTop="@dimen/_5sdp"
-            android:paddingBottom="@dimen/_5sdp"
-            android:text="@string/save"
-            android:textAllCaps="true"
-            android:textAlignment="center"
-            android:textAppearance="@dimen/_5sdp"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_10sdp"
-            app:cornerRadius="@dimen/_20sdp" />
-
-    </RelativeLayout>
+        </RelativeLayout>-->
 
 
 </RelativeLayout>

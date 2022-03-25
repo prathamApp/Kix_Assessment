@@ -1,27 +1,57 @@
 package com.kix.assessment.ui.household_activity;
 
+import android.content.Intent;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
 
 import com.kix.assessment.R;
+import com.kix.assessment.dbclasses.BackupDatabase;
+import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.services.shared_preferences.FastSave;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
+
+import static com.kix.assessment.KIXApplication.householdDao;
 
 @EFragment(R.layout.fragment_add_household)
 public class Fragment_AddHousehold extends Fragment {
 
-/*    @ViewById(R.id.et_houseHoldName)
-    TextInputEditText et_houseHoldName;
-    @ViewById(R.id.et_houseHoldDistrict)
-    TextInputEditText et_houseHoldDistrict;
-    @ViewById(R.id.et_houseHoldState)
-    TextInputEditText et_houseHoldState;
+    @ViewById(R.id.et_HH00_hName)
+    EditText et_householdName;
 
-    @ViewById(R.id.tv_label)
-    TextView tv_label;
-    String surveyorCode, villageId, selectedLanguageCode;
-    ArrayAdapter adapterCountry;*/
+    @ViewById(R.id.et_HH01_respondentName)
+    EditText et_respondentName;
+
+    @ViewById(R.id.et_HH02_houseHeadName)
+    EditText et_houseHeadName;
+
+    @ViewById(R.id.et_HH03_memberCount)
+    EditText et_memberCount;
+
+    @ViewById(R.id.et_HH04_houseHeadNum)
+    EditText et_telephoneNum;
+
+    @ViewById(R.id.et_HH05b_houseAge)
+    EditText et_noOfChilds;
+
+    @ViewById(R.id.rg_HH05a)
+    RadioGroup rg_haveChildren;
+
+    @ViewById(R.id.rg_HH06)
+    RadioGroup rg_speakLang;
+
+    RadioButton rb_HH05a, rb_HH06;
+
     String surveyorCode, villageId, selectedLanguageCode;
 
     public Fragment_AddHousehold() {
@@ -30,21 +60,24 @@ public class Fragment_AddHousehold extends Fragment {
 
     @AfterViews
     public void initialize() {
-        if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-/*            villageId = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
-            Modal_Household modalVillage = householdDao.getVillageByVillId(villageId);
-            tv_label.setText("Edit Village");
-            et_houseHoldName.setText(modalVillage.getHouseholdName());
-            et_houseHoldDistrict.setText(modalVillage.getHouseholdDistrict());
-            et_houseHoldState.setText(modalVillage.getHouseholdState());*/
-        }
-        this.surveyorCode = this.getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "NA");
+        villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
     }
 
-/*
     @Click(R.id.btn_saveHousehold)
     public void saveHousehold() {
-        if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
+        if(!et_householdName.getText().toString().isEmpty() && !et_respondentName.getText().toString().isEmpty()){
+            if(getArguments().getString(Kix_Constant.EDIT_SURVEYOR) != null){
+
+            } else {
+                insertHousehold();
+            }
+        } else{
+            Toast.makeText(getActivity(), "Household and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    /*    if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
                 && !et_houseHoldState.getText().toString().isEmpty()) {
             if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
                 householdDao.updateVillage(et_houseHoldName.getText().toString(),
@@ -57,28 +90,49 @@ public class Fragment_AddHousehold extends Fragment {
                 insertHousehold();
         } else
             Toast.makeText(getActivity(), "All fields are mandatory!", Toast.LENGTH_SHORT).show();
-    }
-
+    }*/
     private void insertHousehold() {
+        getRadioButtonValues();
+        String str_haveChildren;
+        String str_speakLanguage;
+
+        if(rb_HH05a==null) str_haveChildren="";
+        else str_haveChildren = rb_HH05a.getText().toString();
+        if(rb_HH06==null) str_speakLanguage="";
+        else str_speakLanguage = rb_HH06.getText().toString();
+
         String houseID = KIX_Utility.getUUID().toString();
         Modal_Household modal_household = new Modal_Household();
-        modal_household.setHouseholdId("" + houseID);
-        modal_household.setHouseholdName(et_houseHoldName.getText().toString());
-        modal_household.setHouseholdDistrict(et_houseHoldDistrict.getText().toString());
-        modal_household.setHouseholdState(et_houseHoldState.getText().toString());
-        modal_household.setHouseholdAddress("NA");
-        modal_household.setHouseholdDate("" + KIX_Utility.getCurrentDateTime());
-        modal_household.setSvrCode(surveyorCode);
-        modal_household.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"));
+        modal_household.setHouseholdId(houseID);
+        modal_household.setHouseholdName(et_householdName.getText().toString());
+        modal_household.setHH01(et_respondentName.getText().toString());
+        modal_household.setHH02(et_houseHeadName.getText().toString());
+        modal_household.setHH03(et_memberCount.getText().toString());
+        modal_household.setHH04(et_telephoneNum.getText().toString());
+        modal_household.setHH05a(str_haveChildren);
+        modal_household.setHH05b(et_noOfChilds.getText().toString());
+        modal_household.setHH06(str_speakLanguage);
+        modal_household.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
+        modal_household.setsvrCode(surveyorCode);
+        modal_household.setVillageId(villageId);
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getActivity(), Activity_Household_.class);
+        Toast.makeText(getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();
+        getFragmentManager().popBackStack();
+/*        Intent intent = new Intent(getActivity(), Activity_Household_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-        intent.putExtra(Kix_Constant.HOUSEHOLD_ID, houseID);
-        startActivity(intent);
+        intent.putExtra(Kix_Constant.VILLAGE_ID, villageId);
+        startActivity(intent);*/
     }
-*/
+
+    public void getRadioButtonValues(){
+        int selectedHH05a = rg_haveChildren.getCheckedRadioButtonId();
+        int selectedHH06 = rg_speakLang.getCheckedRadioButtonId();
+
+        rb_HH05a = getView().findViewById(selectedHH05a);
+        rb_HH06 = getView().findViewById(selectedHH06);
+
+    }
 
 }

@@ -9,6 +9,7 @@ package com.kix.assessment.ui.attendance_activity;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,9 @@ import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
 
+@SuppressLint({
+    "NonConstantResourceId"
+})
 public final class Fragment_AddStudent_
     extends com.kix.assessment.ui.attendance_activity.Fragment_AddStudent
     implements BeanHolder, HasViews, OnViewChangedListener
@@ -62,14 +66,26 @@ public final class Fragment_AddStudent_
         et_studentName = null;
         spinner_age = null;
         spinner_gender = null;
+        rg_isStudentEnrolled = null;
         spinner_class = null;
-        spinner_enrollStatue = null;
         spinner_schoolType = null;
+        rg_instructionLang = null;
+        rg_schoolStatus = null;
+        rg_schoolActivities = null;
+        rg_haveTextbooks = null;
+        rg_isStudentEverEnrolled = null;
         spinner_dropoutYear = null;
-        ll_spinnerByStatus = null;
+        spinner_dropout_class = null;
+        rg_dropOutReason = null;
+        rg_everEnrolledInNursary = null;
+        rg_paidTution = null;
         ll_spinnerDropout = null;
         ll_schoolType = null;
         tv_label = null;
+        ll_enrolledChildFields = null;
+        ll_notEnrolledChildFields = null;
+        ll_dropoutFields = null;
+        btn_saveStudent = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -98,19 +114,30 @@ public final class Fragment_AddStudent_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.et_studentName = hasViews.internalFindViewById(R.id.et_studentName);
-        this.spinner_age = hasViews.internalFindViewById(R.id.spinner_age);
-        this.spinner_gender = hasViews.internalFindViewById(R.id.spinner_gender);
-        this.spinner_class = hasViews.internalFindViewById(R.id.spinner_class);
-        this.spinner_enrollStatue = hasViews.internalFindViewById(R.id.spinner_enrollStatus);
-        this.spinner_schoolType = hasViews.internalFindViewById(R.id.spinner_schoolType);
-        this.spinner_dropoutYear = hasViews.internalFindViewById(R.id.spinner_dropoutYear);
-        this.ll_spinnerByStatus = hasViews.internalFindViewById(R.id.ll_spinnersByStatus);
+        this.et_studentName = hasViews.internalFindViewById(R.id.et_CH01);
+        this.spinner_age = hasViews.internalFindViewById(R.id.spn_CH02);
+        this.spinner_gender = hasViews.internalFindViewById(R.id.spn_CH03);
+        this.rg_isStudentEnrolled = hasViews.internalFindViewById(R.id.rg_CH04);
+        this.spinner_class = hasViews.internalFindViewById(R.id.spn_CH05a);
+        this.spinner_schoolType = hasViews.internalFindViewById(R.id.spn_CH05b);
+        this.rg_instructionLang = hasViews.internalFindViewById(R.id.rg_CH05c);
+        this.rg_schoolStatus = hasViews.internalFindViewById(R.id.rg_CH05d);
+        this.rg_schoolActivities = hasViews.internalFindViewById(R.id.rg_CH05e);
+        this.rg_haveTextbooks = hasViews.internalFindViewById(R.id.rg_CH05f);
+        this.rg_isStudentEverEnrolled = hasViews.internalFindViewById(R.id.rg_CH06a);
+        this.spinner_dropoutYear = hasViews.internalFindViewById(R.id.spn_CH06b1);
+        this.spinner_dropout_class = hasViews.internalFindViewById(R.id.spn_CH06b2);
+        this.rg_dropOutReason = hasViews.internalFindViewById(R.id.rg_CH06b3);
+        this.rg_everEnrolledInNursary = hasViews.internalFindViewById(R.id.rg_CH07);
+        this.rg_paidTution = hasViews.internalFindViewById(R.id.rg_CH08);
         this.ll_spinnerDropout = hasViews.internalFindViewById(R.id.ll_spinnerDropout);
         this.ll_schoolType = hasViews.internalFindViewById(R.id.ll_schoolType);
         this.tv_label = hasViews.internalFindViewById(R.id.tv_label);
+        this.ll_enrolledChildFields = hasViews.internalFindViewById(R.id.ll_enrolledChildFields);
+        this.ll_notEnrolledChildFields = hasViews.internalFindViewById(R.id.ll_notEnrolledChildFields);
+        this.ll_dropoutFields = hasViews.internalFindViewById(R.id.ll_sub_CHo6a);
+        this.btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
         View view_rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
-        View view_btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
 
         if (view_rl_parentLayout!= null) {
             view_rl_parentLayout.setOnClickListener(new OnClickListener() {
@@ -122,8 +149,8 @@ public final class Fragment_AddStudent_
             }
             );
         }
-        if (view_btn_saveStudent!= null) {
-            view_btn_saveStudent.setOnClickListener(new OnClickListener() {
+        if (this.btn_saveStudent!= null) {
+            this.btn_saveStudent.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
@@ -132,8 +159,8 @@ public final class Fragment_AddStudent_
             }
             );
         }
-        if (this.spinner_age!= null) {
-            ((AdapterView<?> ) this.spinner_age).setOnItemSelectedListener(new OnItemSelectedListener() {
+        if (this.spinner_gender!= null) {
+            ((AdapterView<?> ) this.spinner_gender).setOnItemSelectedListener(new OnItemSelectedListener() {
 
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
@@ -147,8 +174,8 @@ public final class Fragment_AddStudent_
             }
             );
         }
-        if (this.spinner_gender!= null) {
-            ((AdapterView<?> ) this.spinner_gender).setOnItemSelectedListener(new OnItemSelectedListener() {
+        if (this.spinner_age!= null) {
+            ((AdapterView<?> ) this.spinner_age).setOnItemSelectedListener(new OnItemSelectedListener() {
 
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {

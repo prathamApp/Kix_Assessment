@@ -220,4 +220,6 @@
     <color name="grey_400">#bdbdbd</color>
 
     <color name="bluetheme">#488feb</color>
+
+    <color name="transparent">#00FFFFFF</color>
 </resources>

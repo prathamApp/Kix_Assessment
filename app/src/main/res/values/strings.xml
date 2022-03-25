@@ -56,7 +56,8 @@
     </string-array>
 
     <string name="add_village_info">Add Village Information</string>
-x    <string name="str_village_info">Village Information</string>
+    x
+    <string name="str_village_info">Village Information</string>
     <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
     <string name="str_V02">Is there public transport facility available to the village?</string>
     <string name="str_V03">Does the village have electricity connection?</string>
@@ -85,6 +86,41 @@ x    <string name="str_village_info">Village Information</string>
     <string name="add_household">Add Household</string>
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
     <string name="add_hh_info">Add Household Information</string>
+
+    <string name="str_CH04">Is [child name] currently enrolled in any school or preschool?</string>
+    <string name="str_CH05d">What is the current status of the school?</string>
+    <string name="str_CH05c">Is [test lang] the official medium of instruction in this school?
+        (for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
+    <string name="str_CH05d_one">School is open and teaching-learning activities are being conducted for this class</string>
+    <string name="str_CH05d_two">School is open but no teaching-learning activities are being conducted</string>
+    <string name="str_CH05d_three">School is closed</string>
+    <string name="str_CH05e">What kind of activities are being conducted?	</string>
+    <string name="str_CH05e_one">Online/Remote only (via zoom, WhatsApp, Google Meet, SMS etc.)</string>
+    <string name="str_CH05e_two">Physical/in-person activities only (child goes to school to attend classes)	</string>
+    <string name="str_CH05e_three">Hybrid (both online/remote and in-person activities</string>
+    <string name="str_CH05f">Does [child name] have textbooks for the current grade?</string>
+    <string name="str_CH06a">Was [child name] ever enrolled in school?</string>
+    <string name="str_reasonToDrop">What was the main reason [child name] dropped out?</string>
+    <string name="str_reasonToDrop_one">Could not afford the fees</string>
+    <string name="str_reasonToDrop_two">School closed down</string>
+    <string name="str_reasonToDrop_three">Was not promoted so discontinued</string>
+    <string name="str_reasonToDrop_four">No school available nearby for the next grade</string>
+    <string name="str_reasonToDrop_five">Not interested anymore</string>
+    <string name="str_reasonToDrop_six">Other</string>
+    <string name="str_reasonToDrop_seven">Don\'t know</string>
+    <string name="str_CH07">Was [child name] ever enrolled in a pre-primary/nursery class?</string>
+    <string name="str_CH08">Does [child name] take any paid tuition class (coaching) currently?</string>
+
+    <string name="add_parent_information">Add Parent Information</string>
+    <string name="hint_motherName">Mother\'s Name <font color='#FF0000'>*</font></string>
+    <string name="hint_fatherName">Father\'s Name <font color='#FF0000'>*</font></string>
+    <string name="str_PT01c">Has the mother ever attended school?</string>
+    <string name="str_PT01e">Does the mother have an income generating work/job?</string>
+    <string name="str_PT01f">What kind?</string>
+    <string name="str_PT01f_one">Agricultural or related work that is family/self owned</string>
+    <string name="str_PT01f_two">Agricultural or related work that is owned by someone else</string>
+    <string name="str_PT01f_three">Non-agricultural work in a family/self owned enterprise</string>
+    <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else</string>
 
     <!--ENGLISH START ____________________________________________________________________-->
     <string name="sign_up">Sign Up</string>
@@ -153,7 +189,7 @@ x    <string name="str_village_info">Village Information</string>
     </string-array>
 
     <string-array name="dropout_year_list">
-        <item>Year in which child dropped out</item>
+        <item>Year of dropping out</item>
         <item>2015</item>
         <item>2016</item>
         <item>2017</item>
@@ -164,7 +200,7 @@ x    <string name="str_village_info">Village Information</string>
     </string-array>
 
     <string-array name="student_dropoutclass">
-        <item>Std in which child dropped out</item>
+        <item>Last grade/class completed before dropping out</item>
         <item>Pre-primary</item>
         <item>Std 1</item>
         <item>Std 2</item>
@@ -203,10 +239,39 @@ x    <string name="str_village_info">Village Information</string>
         <item>Std 4</item>
         <item>Std 5</item>
     </string-array>
+
+    <string-array name="parentAge">
+        <item>Age  </item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+    </string-array>
+
+    <string-array name="parentGrade">
+        <item>Std</item>
+        <item>Std 5</item>
+        <item>Std 6</item>
+        <item>Std 7</item>
+        <item>Std 8</item>
+        <item>Std 9</item>
+        <item>SSC</item>
+        <item>HSC</item>
+        <item>Graduate</item>
+        <item>PostGraduate</item>
+    </string-array>
+
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--PORTUGUESE (MOZAMBIQUE)  START ____________________________________________________________________-->
-<!--
+    <!--
     <string name="sign_up">Inscrição</string>
     <string name="have_account_sign_in">Já tem conta? Entrar.</string>
     <string name="hint_svrName">Nome <font color='#FF0000'>*</font></string>
@@ -327,7 +392,7 @@ x    <string name="str_village_info">Village Information</string>
     <!--PORTUGUESE (MOZAMBIQUE) END ____________________________________________________________________-->
 
     <!--Hindi START ____________________________________________________________________-->
-<!--
+    <!--
     <string name="sign_up">साइन अप</string>
     <string name="have_account_sign_in">पहले से अकाउंट है? साइन इन</string>
     <string name="hint_svrName">नाम <font color='#FF0000'>*</font></string>
@@ -688,7 +753,7 @@ x    <string name="str_village_info">Village Information</string>
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
     <!--Kenya-Kiswahili START ____________________________________________________________________-->
-<!--    <string name="sign_up">Jisajili</string>
+    <!--    <string name="sign_up">Jisajili</string>
     <string name="have_account_sign_in">Tayari una akaunti? Ingia</string>
     <string name="hint_svrName">Jina</string>
     <string name="hint_svrEmail">Barua pepe(sio lazima)</string>
@@ -808,7 +873,7 @@ x    <string name="str_village_info">Village Information</string>
     <!--Kenya-Kiswahili END ____________________________________________________________________-->
 
     <!--Tanzania-Kiswahili START ____________________________________________________________________-->
-<!--    <string name="sign_up">Jisajili</string>
+    <!--    <string name="sign_up">Jisajili</string>
     <string name="have_account_sign_in">Tayari una akaunti? Ingia</string>
     <string name="hint_svrName">Jina</string>
     <string name="hint_svrEmail">Barua pepe(sio lazima)</string>
@@ -1048,7 +1113,7 @@ x    <string name="str_village_info">Village Information</string>
     <!--French-Senegal END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-<!--    <string name="sign_up">Créer un compte</string>
+    <!--    <string name="sign_up">Créer un compte</string>
     <string name="have_account_sign_in">As-tu déjà un compte ? Se connecter</string>
     <string name="hint_svrName">Nom</string>
     <string name="hint_svrEmail">Email (Facultatif)</string>
@@ -1410,7 +1475,7 @@ x    <string name="str_village_info">Village Information</string>
     <!--Nepali-Nepal END ____________________________________________________________________-->
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
-<!--
+    <!--
     <string name="sign_up">رجسٹر کریں</string>
     <string name="have_account_sign_in">پہلے اکاؤنٹ بنایا ہوا ہے؟ داخل ہوں</string>
     <string name="hint_svrName">نام <font color='#FF0000'>*</font></string>

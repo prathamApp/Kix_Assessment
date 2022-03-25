@@ -23,17 +23,19 @@ import java.util.ArrayList;
 @EActivity(R.layout.activity_household)
 public class Activity_Household extends BaseActivity {
 
-    String surveyorCode;
+    String surveyorCode, villageId;
 
     private BlurPopupWindow exitDialog;
 
     @AfterViews
     public void initialize() {
         this.surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "NA");
+        villageId = getIntent().getStringExtra(Kix_Constant.VILLAGE_ID);
         if(!this.surveyorCode.equalsIgnoreCase("NA")) {
             final Bundle bundle = new Bundle();
-            final ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(this.surveyorCode);
+            final ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode, villageId);
             bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
+            bundle.putString(Kix_Constant.VILLAGE_ID,villageId);
             bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);
             KIX_Utility.addFragment(this, new Fragment_SelectHousehold_(), R.id.household_frame,
                     bundle, Fragment_SelectHousehold.class.getSimpleName());
@@ -55,7 +57,7 @@ public class Activity_Household extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        Log.e("KIX : ", String.valueOf(this.getSupportFragmentManager().getBackStackEntryCount()));
+        Log.e("KIX H: ", String.valueOf(this.getSupportFragmentManager().getBackStackEntryCount()));
         if (this.getSupportFragmentManager().getBackStackEntryCount() == 1) {
             finish();
 /*            exitDialog = new BlurPopupWindow.Builder(this)

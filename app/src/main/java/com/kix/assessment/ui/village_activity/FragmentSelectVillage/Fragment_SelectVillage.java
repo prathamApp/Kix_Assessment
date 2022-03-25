@@ -47,7 +47,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
     private ArrayList<Modal_Village> villageArrayList = new ArrayList<>();
     private boolean itemSelected;
     String surveyorCode, villageID;
-    Modal_Village add_Village = new Modal_Village();
+    Modal_Village village = new Modal_Village();
 
     private VillageListAdapter villageListAdapter;
 
@@ -102,16 +102,19 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
 
     @Override
     public void itemSelected(final int position) {
-//        Modal_Village modal_village = villageListAdapter.getitem(position);
+        Modal_Village modal_village = villageListAdapter.getitem(position);
 //        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
 //        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
 //        intent.putExtra(Kix_Constant.VILLAGE_ID, modal_village.villageId);
 //        FastSave.getInstance().saveString(Kix_Constant.COUNTRY, modal_village.getCountryName());
 //        if (!FastSave.getInstance().getString(Kix_Constant.COUNTRY, "NA").equalsIgnoreCase("NA"))
 //            startActivity(intent);
-        final Intent intent = new Intent(this.getActivity(), Activity_Household_.class);
-        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-        this.startActivity(intent);
+        final Intent intent = new Intent(getActivity(), Activity_Household_.class);
+        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        intent.putExtra(Kix_Constant.VILLAGE_ID,modal_village.villageId);
+        FastSave.getInstance().saveString(Kix_Constant.COUNTRY, modal_village.getCountryName());
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        startActivity(intent);
     }
 
     @Override

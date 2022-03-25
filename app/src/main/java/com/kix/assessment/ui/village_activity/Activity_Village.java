@@ -41,7 +41,7 @@ public class Activity_Village extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        Log.e("KIX : ", String.valueOf(this.getSupportFragmentManager().getBackStackEntryCount()));
+        Log.e("KIX V: ", String.valueOf(this.getSupportFragmentManager().getBackStackEntryCount()));
         if (this.getSupportFragmentManager().getBackStackEntryCount() == 1) {
             this.exitDialog = new BlurPopupWindow.Builder(this)
                     .setContentView(R.layout.app_exit_dialog)

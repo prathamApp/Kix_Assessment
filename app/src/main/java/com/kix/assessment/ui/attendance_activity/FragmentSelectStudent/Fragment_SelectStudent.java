@@ -36,6 +36,7 @@ import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Attendance;
 import com.kix.assessment.modal_classes.EventMessage;
+import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_Session;
 import com.kix.assessment.modal_classes.Modal_Student;
@@ -43,6 +44,10 @@ import com.kix.assessment.services.KixSmartSync;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent;
 import com.kix.assessment.ui.attendance_activity.Fragment_AddStudent_;
+import com.kix.assessment.ui.attendance_activity.Fragment_ParentInfoForm;
+import com.kix.assessment.ui.attendance_activity.Fragment_ParentInfoForm_;
+import com.kix.assessment.ui.household_activity.household_information_form.Fragment_AddHouseholdInformation;
+import com.kix.assessment.ui.household_activity.household_information_form.Fragment_AddHouseholdInformation_;
 import com.kix.assessment.ui.main_test.WebViewActivity_;
 
 import org.androidannotations.annotations.AfterViews;
@@ -163,7 +168,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
             FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
         this.markAttendance(modalStudnet);
             final Intent intent = new Intent(this.getActivity(), WebViewActivity_.class);
-            intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.studName);
+            intent.putExtra(Kix_Constant.STUDENT_NAME, modalStudnet.getCH01());
         this.startActivityForResult(intent, Fragment_SelectStudent.REQUEST_CODE_ASSESSMENT_BACK);
         //}
     }
@@ -177,6 +182,16 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
 
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
                 bundle, Fragment_AddStudent.class.getSimpleName());
+    }
+
+    @Override
+    public void addPIF(int position) {
+        final Modal_Student modal_student = this.studentListAdapter.getitem(position);
+        final Bundle bundle = new Bundle();
+        bundle.putString(STUDENT_ID, modal_student.getStudentId());
+        KIX_Utility.showFragment(this.getActivity(), new Fragment_ParentInfoForm_(), R.id.attendance_frame,
+                bundle, Fragment_ParentInfoForm.class.getSimpleName());
+
     }
 
     private void markAttendance(final Modal_Student stud) {

@@ -89,7 +89,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     ProfilePresenter profilePresenter;
     private ProfileAdapter profileAdapter;
 
-    String selectedAge, ageSelected, villageSelected,surveyorCode, householdId;
+    String selectedAge, ageSelected, villageSelected,surveyorCode, householdId, villageID;
 
     //list for villageFilter
     ArrayList<String> villagesList = new ArrayList<>();
@@ -150,10 +150,11 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     public void initialize() {
         profilePresenter.setView(this);
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        villageID = getArguments().getString(Kix_Constant.VILLAGE_ID);
         //get total no. of student
         List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
         //get total no. of household
-        List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode);
+        List<Modal_Household> households = KIXApplication.householdDao.getAllHouseholdBySurveyorCode(surveyorCode, villageID);
         tv_profileName.setText("Hi, " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
         tv_TotStudCount.setText("Children surveyed: " + stud.size());
 /*        tv_studCount.setText("No. of Children : " + stud.size());

@@ -56,7 +56,7 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
             });
 
             holder.iv_CardEdit.setOnClickListener(v -> {
-                this.contractHouseholdList.editVillage(position);
+                this.contractHouseholdList.editHousehold(position);
             });
 
             holder.tv_CardInfo.setOnClickListener(v -> {

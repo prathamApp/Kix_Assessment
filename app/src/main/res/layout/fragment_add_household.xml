@@ -271,7 +271,7 @@
                 android:id="@+id/til_HH06_houseLang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Does the HH have children (living regularly) in the age group 4-10 years?"
+                android:text="What language do you speak at home, most often with your children?"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/_14sdp" />
 
@@ -291,7 +291,7 @@
                     android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
                     android:buttonTint="@color/colorBtnGreenDark"
-                    android:text="Same as text"
+                    android:text="Same as test"
                     android:textColor="@color/colorText" />
 
                 <RadioButton
@@ -301,7 +301,7 @@
                     android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
                     android:buttonTint="@color/red"
-                    android:text="Different from text"
+                    android:text="Different from test"
                     android:textColor="@color/colorText" />
             </RadioGroup>
         </LinearLayout>

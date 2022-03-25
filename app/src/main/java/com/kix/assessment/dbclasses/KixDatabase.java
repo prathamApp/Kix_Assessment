@@ -42,7 +42,7 @@ import com.kix.assessment.modal_classes.Score;
         Modal_Content.class, Modal_Household.class, Modal_Log.class, Attendance.class,
         Modal_Session.class, Modal_Status.class, AbandonedScore.class, Modal_Village.class,
         Modal_VIF.class},
-        version = 2, exportSchema = false)
+        version = 1, exportSchema = false)
 
 public abstract class KixDatabase extends RoomDatabase {
 
@@ -69,7 +69,11 @@ public abstract class KixDatabase extends RoomDatabase {
 
     public abstract StatusDao getStatusDao();
 
-    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    public abstract VillageDao getVillageDao();
+
+    public abstract VillageInformationDao getVillageInformationDao();
+
+/*    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(final SupportSQLiteDatabase database) {
             Log.d("AppDatabase", "MIGRATION_1_2:                                  1");
@@ -85,14 +89,14 @@ public abstract class KixDatabase extends RoomDatabase {
                     "'villageId' TEXT, 'svrCode' TEXT," +
                     "'sentFlag' INTEGER NOT NULL DEFAULT 0)");
         }
-    };
+    };*/
 
     public static KixDatabase getDatabaseInstance(Context context) {
         if (KixDatabase.INSTANCE == null) {
             KixDatabase.INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                     KixDatabase.class, KixDatabase.DB_NAME)
                     .allowMainThreadQueries()
-                    .addMigrations(KixDatabase.MIGRATION_1_2)
+        //            .addMigrations(KixDatabase.MIGRATION_1_2)
                     .build();
         }
         return KixDatabase.INSTANCE;
@@ -101,10 +105,6 @@ public abstract class KixDatabase extends RoomDatabase {
     public static void destroyInstance() {
         KixDatabase.INSTANCE = null;
     }
-
-    public abstract VillageDao getVillageDao();
-
-    public abstract VillageInformationDao getVillageInformationDao();
 
     @NonNull
     @Override

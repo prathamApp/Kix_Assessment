@@ -12,6 +12,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import com.kix.assessment.R;
 import org.androidannotations.api.bean.BeanHolder;
@@ -54,6 +55,14 @@ public final class Fragment_AddHousehold_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        et_householdName = null;
+        et_respondentName = null;
+        et_houseHeadName = null;
+        et_memberCount = null;
+        et_telephoneNum = null;
+        et_noOfChilds = null;
+        rg_haveChildren = null;
+        rg_speakLang = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -82,6 +91,26 @@ public final class Fragment_AddHousehold_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.et_householdName = hasViews.internalFindViewById(R.id.et_HH00_hName);
+        this.et_respondentName = hasViews.internalFindViewById(R.id.et_HH01_respondentName);
+        this.et_houseHeadName = hasViews.internalFindViewById(R.id.et_HH02_houseHeadName);
+        this.et_memberCount = hasViews.internalFindViewById(R.id.et_HH03_memberCount);
+        this.et_telephoneNum = hasViews.internalFindViewById(R.id.et_HH04_houseHeadNum);
+        this.et_noOfChilds = hasViews.internalFindViewById(R.id.et_HH05b_houseAge);
+        this.rg_haveChildren = hasViews.internalFindViewById(R.id.rg_HH05a);
+        this.rg_speakLang = hasViews.internalFindViewById(R.id.rg_HH06);
+        View view_btn_saveHousehold = hasViews.internalFindViewById(R.id.btn_saveHousehold);
+
+        if (view_btn_saveHousehold!= null) {
+            view_btn_saveHousehold.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_AddHousehold_.this.saveHousehold();
+                }
+            }
+            );
+        }
         initialize();
     }
 

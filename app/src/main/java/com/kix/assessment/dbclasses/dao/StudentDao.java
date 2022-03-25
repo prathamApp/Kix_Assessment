@@ -39,9 +39,9 @@ public interface StudentDao {
     @Query("update Student set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
 
-    @Query("update Student set studName=:studName, studAge=:studAge, studGender=:studGender," +
-            "studClass=:studClass, studEnrollmentStatus=:studEnrollment, studSchoolType=:studSchoolType," +
-            "studDropOutYear=:studDropoutYear, sentFlag=0 where studentId=:sId")
+    @Query("update Student set CH01=:studName, CH02=:studAge, CH03=:studGender," +
+            "CH05a=:studClass, CH04=:studEnrollment, CH05b=:studSchoolType," +
+            "CH06b1=:studDropoutYear, sentFlag=0 where studentId=:sId")
     void updateStudent(String studName, String studAge, String studGender, String studClass,
                        String studEnrollment, String studSchoolType, String studDropoutYear, String sId);
 

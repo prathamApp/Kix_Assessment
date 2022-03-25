@@ -48,7 +48,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
 
     private ArrayList<Modal_Household> households = new ArrayList<>();
     private boolean itemSelected;
-    String surveyorCode, householdID;
+    String surveyorCode, householdID, villageId;
     Modal_Household add_household = new Modal_Household();
 
     private HouseholdListAdapter householdListAdapter;
@@ -61,11 +61,12 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     public void initialize() {
         KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         Log.e("KIX : ", "selectstud");
-        this.surveyorCode = this.getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
 //        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
-        this.households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(this.surveyorCode);
+        this.households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(surveyorCode, villageId);
         if (this.households.size() == 0) {
-            Toast.makeText(this.getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), "No Household Found.", Toast.LENGTH_SHORT).show();
             final Animation anim = android.view.animation.AnimationUtils.loadAnimation(this.fab_addVillage.getContext(), R.anim.shake);
             anim.setDuration(200L);
             this.fab_addVillage.startAnimation(anim);
@@ -100,37 +101,36 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     }
 
     @Click(R.id.fab_addVillage)
-    public void addVillage() {
+    public void addHousehold() {
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
+        bundle.putString(Kix_Constant.VILLAGE_ID, villageId);
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
                 bundle, Fragment_AddHousehold.class.getSimpleName());
     }
 
     @Override
     public void itemSelected(final int position) {
+        Log.e("kix p : ",String.valueOf(position));
         /*Bundle bundle = new Bundle();
         if (position == households.size() - 1) {
             bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
             KIX_Utility.showFragment(getActivity(), new Fragment_AddVillage_(), R.id.household_frame,
                     bundle, Fragment_AddVillage.class.getSimpleName());
         } else {*/
-        final Modal_Household modalHousehold = this.householdListAdapter.getitem(position);
-        final Intent intent = new Intent(this.getActivity(), Activity_Attendance_.class);
+        final Modal_Household modalHousehold = householdListAdapter.getitem(position);
+        final Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, modalHousehold.householdId);
-        FastSave.getInstance().saveString(Kix_Constant.COUNTRY, modalHousehold.getCountryName());
-        if (!FastSave.getInstance().getString(Kix_Constant.COUNTRY, "NA").equalsIgnoreCase("NA"))
-            this.startActivity(intent);
+        startActivity(intent);
         //}
     }
 
     @Override
-    public void editVillage(final int position) {
+    public void editHousehold(final int position) {
         final Modal_Household modalHousehold = this.householdListAdapter.getitem(position);
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.EDIT_VILLAGE, Kix_Constant.EDIT_VILLAGE);
-        bundle.putString(Kix_Constant.HOUSEHOLD_ID, modalHousehold.getHouseholdId());
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
                 bundle, Fragment_AddHousehold.class.getSimpleName());
     }
@@ -140,7 +140,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         final Modal_Household modalHousehold = this.householdListAdapter.getitem(position);
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.EDIT_VILLAGE, Kix_Constant.EDIT_VILLAGE);
-        bundle.putString(Kix_Constant.HOUSEHOLD_ID, modalHousehold.getHouseholdId());
+
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHouseholdInformation_(), R.id.household_frame,
                 bundle, Fragment_AddHouseholdInformation.class.getSimpleName());
     }
@@ -150,6 +150,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
         bundle.putString(Kix_Constant.HOUSEHOLD_ID, this.householdID);
+        bundle.putString(Kix_Constant.VILLAGE_ID, this.villageId);
         KIX_Utility.showFragment(this.getActivity(), new Fragment_Profile_(), R.id.household_frame,
                 bundle, Fragment_Profile.class.getSimpleName());
     }

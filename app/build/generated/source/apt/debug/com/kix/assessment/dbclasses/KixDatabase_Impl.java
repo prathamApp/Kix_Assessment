@@ -71,14 +71,14 @@ public final class KixDatabase_Impl extends KixDatabase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`sId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `studentId` TEXT, `studName` TEXT, `studAge` TEXT, `studGender` TEXT, `studClass` TEXT, `studEnrollmentStatus` TEXT, `studSchoolType` TEXT, `studDropoutYear` TEXT, `studentRegistrationDate` TEXT, `svrCode` TEXT, `householdId` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`sId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `studentId` TEXT, `CH01` TEXT, `CH02` TEXT, `CH03` TEXT, `CH04` TEXT, `CH05a` TEXT, `CH05b` TEXT, `CH05c` TEXT, `CH05d` TEXT, `CH05e` TEXT, `CH05f` TEXT, `CH06a` TEXT, `CH06b1` TEXT, `CH06b2` TEXT, `CH06b3` TEXT, `CH07` TEXT, `CH08` TEXT, `createdOn` TEXT, `svrCode` TEXT, `householdId` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Surveyor` (`svrCode` TEXT NOT NULL, `svrName` TEXT, `svrEmail` TEXT, `svrMobile` TEXT, `svrPassword` TEXT, `svrBooklet` TEXT, `svrRegistrationDate` TEXT, `svrCountry` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`svrCode`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Score` (`scoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `deviceId` TEXT, `resourceId` TEXT, `scoredMarks` TEXT, `startDateTime` TEXT, `endDateTime` TEXT, `label` TEXT, `svrCode` TEXT, `bookletNo` TEXT, `countryName` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Content` (`contentId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contentCode` TEXT, `contentFolderName` TEXT, `contentBooklet` TEXT, `contentCountry` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Household` (`hhId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `householdId` TEXT, `householdName` TEXT, `countryName` TEXT, `householdDistrict` TEXT, `householdState` TEXT, `householdAddress` TEXT, `householdDate` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Household` (`hhId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `householdId` TEXT, `householdName` TEXT, `HH01` TEXT, `HH02` TEXT, `HH03` TEXT, `HH04` TEXT, `HH05a` TEXT, `HH05b` TEXT, `HH06` TEXT, `createdOn` TEXT, `villageId` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Logs` (`logId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `currentDateTime` TEXT, `exceptionMessage` TEXT, `exceptionStackTrace` TEXT, `methodName` TEXT, `errorType` TEXT, `sessionId` TEXT, `deviceId` TEXT, `logDetail` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Attendance` (`attendanceId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `attendanceDate` TEXT, `present` INTEGER NOT NULL, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Session` (`sessionId` TEXT NOT NULL, `fromDate` TEXT, `toDate` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`sessionId`))");
@@ -87,7 +87,7 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Village` (`villageId` TEXT NOT NULL, `villageName` TEXT, `villageDistrict` TEXT, `villageState` TEXT, `villageDate` TEXT, `countryName` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`villageId`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `VillageInformartion` (`vif_Id` TEXT NOT NULL, `V01` TEXT, `V02` TEXT, `V03` TEXT, `V04` TEXT, `V05` TEXT, `V06a` TEXT, `V06b` TEXT, `V07a` TEXT, `V07b` TEXT, `villageId` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`vif_Id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"921e20892e8391a3d49d92cadecc3823\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"68b77614b44f3aa9c39fa322712bd2ad\")");
       }
 
       @Override
@@ -128,17 +128,26 @@ public final class KixDatabase_Impl extends KixDatabase {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsStudent = new HashMap<String, TableInfo.Column>(13);
+        final HashMap<String, TableInfo.Column> _columnsStudent = new HashMap<String, TableInfo.Column>(22);
         _columnsStudent.put("sId", new TableInfo.Column("sId", "INTEGER", true, 1));
         _columnsStudent.put("studentId", new TableInfo.Column("studentId", "TEXT", false, 0));
-        _columnsStudent.put("studName", new TableInfo.Column("studName", "TEXT", false, 0));
-        _columnsStudent.put("studAge", new TableInfo.Column("studAge", "TEXT", false, 0));
-        _columnsStudent.put("studGender", new TableInfo.Column("studGender", "TEXT", false, 0));
-        _columnsStudent.put("studClass", new TableInfo.Column("studClass", "TEXT", false, 0));
-        _columnsStudent.put("studEnrollmentStatus", new TableInfo.Column("studEnrollmentStatus", "TEXT", false, 0));
-        _columnsStudent.put("studSchoolType", new TableInfo.Column("studSchoolType", "TEXT", false, 0));
-        _columnsStudent.put("studDropoutYear", new TableInfo.Column("studDropoutYear", "TEXT", false, 0));
-        _columnsStudent.put("studentRegistrationDate", new TableInfo.Column("studentRegistrationDate", "TEXT", false, 0));
+        _columnsStudent.put("CH01", new TableInfo.Column("CH01", "TEXT", false, 0));
+        _columnsStudent.put("CH02", new TableInfo.Column("CH02", "TEXT", false, 0));
+        _columnsStudent.put("CH03", new TableInfo.Column("CH03", "TEXT", false, 0));
+        _columnsStudent.put("CH04", new TableInfo.Column("CH04", "TEXT", false, 0));
+        _columnsStudent.put("CH05a", new TableInfo.Column("CH05a", "TEXT", false, 0));
+        _columnsStudent.put("CH05b", new TableInfo.Column("CH05b", "TEXT", false, 0));
+        _columnsStudent.put("CH05c", new TableInfo.Column("CH05c", "TEXT", false, 0));
+        _columnsStudent.put("CH05d", new TableInfo.Column("CH05d", "TEXT", false, 0));
+        _columnsStudent.put("CH05e", new TableInfo.Column("CH05e", "TEXT", false, 0));
+        _columnsStudent.put("CH05f", new TableInfo.Column("CH05f", "TEXT", false, 0));
+        _columnsStudent.put("CH06a", new TableInfo.Column("CH06a", "TEXT", false, 0));
+        _columnsStudent.put("CH06b1", new TableInfo.Column("CH06b1", "TEXT", false, 0));
+        _columnsStudent.put("CH06b2", new TableInfo.Column("CH06b2", "TEXT", false, 0));
+        _columnsStudent.put("CH06b3", new TableInfo.Column("CH06b3", "TEXT", false, 0));
+        _columnsStudent.put("CH07", new TableInfo.Column("CH07", "TEXT", false, 0));
+        _columnsStudent.put("CH08", new TableInfo.Column("CH08", "TEXT", false, 0));
+        _columnsStudent.put("createdOn", new TableInfo.Column("createdOn", "TEXT", false, 0));
         _columnsStudent.put("svrCode", new TableInfo.Column("svrCode", "TEXT", false, 0));
         _columnsStudent.put("householdId", new TableInfo.Column("householdId", "TEXT", false, 0));
         _columnsStudent.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
@@ -208,15 +217,19 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoContent + "\n"
                   + " Found:\n" + _existingContent);
         }
-        final HashMap<String, TableInfo.Column> _columnsHousehold = new HashMap<String, TableInfo.Column>(10);
+        final HashMap<String, TableInfo.Column> _columnsHousehold = new HashMap<String, TableInfo.Column>(14);
         _columnsHousehold.put("hhId", new TableInfo.Column("hhId", "INTEGER", true, 1));
         _columnsHousehold.put("householdId", new TableInfo.Column("householdId", "TEXT", false, 0));
         _columnsHousehold.put("householdName", new TableInfo.Column("householdName", "TEXT", false, 0));
-        _columnsHousehold.put("countryName", new TableInfo.Column("countryName", "TEXT", false, 0));
-        _columnsHousehold.put("householdDistrict", new TableInfo.Column("householdDistrict", "TEXT", false, 0));
-        _columnsHousehold.put("householdState", new TableInfo.Column("householdState", "TEXT", false, 0));
-        _columnsHousehold.put("householdAddress", new TableInfo.Column("householdAddress", "TEXT", false, 0));
-        _columnsHousehold.put("householdDate", new TableInfo.Column("householdDate", "TEXT", false, 0));
+        _columnsHousehold.put("HH01", new TableInfo.Column("HH01", "TEXT", false, 0));
+        _columnsHousehold.put("HH02", new TableInfo.Column("HH02", "TEXT", false, 0));
+        _columnsHousehold.put("HH03", new TableInfo.Column("HH03", "TEXT", false, 0));
+        _columnsHousehold.put("HH04", new TableInfo.Column("HH04", "TEXT", false, 0));
+        _columnsHousehold.put("HH05a", new TableInfo.Column("HH05a", "TEXT", false, 0));
+        _columnsHousehold.put("HH05b", new TableInfo.Column("HH05b", "TEXT", false, 0));
+        _columnsHousehold.put("HH06", new TableInfo.Column("HH06", "TEXT", false, 0));
+        _columnsHousehold.put("createdOn", new TableInfo.Column("createdOn", "TEXT", false, 0));
+        _columnsHousehold.put("villageId", new TableInfo.Column("villageId", "TEXT", false, 0));
         _columnsHousehold.put("svrCode", new TableInfo.Column("svrCode", "TEXT", false, 0));
         _columnsHousehold.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysHousehold = new HashSet<TableInfo.ForeignKey>(0);
@@ -357,7 +370,7 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Found:\n" + _existingVillageInformartion);
         }
       }
-    }, "921e20892e8391a3d49d92cadecc3823", "6b8d48f784b5481ce006bd00a3d1747c");
+    }, "68b77614b44f3aa9c39fa322712bd2ad", "925e24afe654bf54e6f2ad0fb4546e6d");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

@@ -94,7 +94,7 @@ public final class Fragment_SelectHousehold_
 
                 @Override
                 public void onClick(View view) {
-                    Fragment_SelectHousehold_.this.addVillage();
+                    Fragment_SelectHousehold_.this.addHousehold();
                 }
             }
             );

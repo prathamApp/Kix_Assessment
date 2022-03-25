@@ -8,12 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.card.MaterialCardView;
 import com.kix.assessment.R;
 import com.kix.assessment.modal_classes.Modal_Student;
 
@@ -27,17 +28,18 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     public int index = -1;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView tv_studName;
-        public MaterialCardView studentCardView;
+        public TextView tv_studName, tv_parentInfo;
+        public LinearLayout studentCardView;
         public ImageView iv_studentCheck, iv_studentEdit;
 //        public LottieAnimationView iv_stud_icon;
 
         public MyViewHolder(View view) {
             super(view);
             tv_studName = view.findViewById(R.id.tv_studName);
-            studentCardView = view.findViewById(R.id.student_cardView);
+            studentCardView = view.findViewById(R.id.ll_card);
             iv_studentCheck = view.findViewById(R.id.iv_studentCheck);
             iv_studentEdit = view.findViewById(R.id.iv_studentEdit);
+            tv_parentInfo = view.findViewById(R.id.tv_ParentInfo);
 //            iv_stud_icon = view.findViewById(R.id.item_stud_icon);
         }
     }
@@ -60,11 +62,11 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     @Override
     public void onBindViewHolder(@NonNull StudentListAdapter.MyViewHolder holder, int position) {
         Modal_Student modalStudnet = studnetList.get(position);
-        holder.tv_studName.setText(modalStudnet.getStudName());
+        holder.tv_studName.setText(modalStudnet.getCH01());
         String examGivenByStud = scoreDao.getStudentId(modalStudnet.getStudentId());
 
         if (examGivenByStud != null) {
-            holder.studentCardView.setCardBackgroundColor(context.getResources().getColor(R.color.colorBtnGreenDark));
+            holder.studentCardView.setBackground(context.getDrawable(R.drawable.rounded_bg_green));
             holder.iv_studentCheck.setVisibility(View.VISIBLE);
         } else {
             holder.iv_studentCheck.setVisibility(View.INVISIBLE);
@@ -78,6 +80,10 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
 
         holder.iv_studentEdit.setOnClickListener(v -> {
             contractStudentList.editStudent(holder.getAdapterPosition());
+        });
+
+        holder.tv_parentInfo.setOnClickListener(v -> {
+            contractStudentList.addPIF(holder.getAdapterPosition());
         });
     }
 

@@ -728,7 +728,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
 
   @Override
   public List<Modal_ProfileDetails> getProfileData(String svrCode) {
-    final String _sql = "select Student.studName as StudentName, Student.studAge as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(AbandonedScore.sessionId)) as ExamsGiven from AbandonedScore\n"
+    final String _sql = "select Student.CH01 as StudentName, Student.CH03 as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(AbandonedScore.sessionId)) as ExamsGiven from AbandonedScore\n"
             + "INNER JOIN Student on AbandonedScore.studentId = Student.studentId\n"
             + "INNER JOIN Household on Household.householdId = Student.householdId\n"
             + "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n"
