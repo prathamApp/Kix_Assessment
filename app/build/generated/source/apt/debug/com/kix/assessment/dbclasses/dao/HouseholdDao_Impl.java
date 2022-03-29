@@ -21,6 +21,8 @@ public final class HouseholdDao_Impl implements HouseholdDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateSentFlag;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateHousehold;
+
   public HouseholdDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfModal_Household = new EntityInsertionAdapter<Modal_Household>(__db) {
@@ -102,6 +104,13 @@ public final class HouseholdDao_Impl implements HouseholdDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateHousehold = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "update Household set householdName=?, HH01=?, HH02=?, HH03=?,HH04=?, HH05a=?, HH05b=?, HH06=?, sentFlag=0 where householdId=? AND villageId=?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -129,14 +138,95 @@ public final class HouseholdDao_Impl implements HouseholdDao {
   }
 
   @Override
-  public Modal_Household getHouseholdBySurveyorCode(String svrCode) {
-    final String _sql = "SELECT * FROM Household WHERE svrCode=?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+  public void updateHousehold(String househldName, String respondentName, String householdHead,
+      String memberCount, String telephoneNum, String haveChildren, String noOfChildren,
+      String speakLang, String hId, String villageId) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateHousehold.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (househldName == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, househldName);
+      }
+      _argIndex = 2;
+      if (respondentName == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, respondentName);
+      }
+      _argIndex = 3;
+      if (householdHead == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, householdHead);
+      }
+      _argIndex = 4;
+      if (memberCount == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, memberCount);
+      }
+      _argIndex = 5;
+      if (telephoneNum == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, telephoneNum);
+      }
+      _argIndex = 6;
+      if (haveChildren == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, haveChildren);
+      }
+      _argIndex = 7;
+      if (noOfChildren == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, noOfChildren);
+      }
+      _argIndex = 8;
+      if (speakLang == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, speakLang);
+      }
+      _argIndex = 9;
+      if (hId == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, hId);
+      }
+      _argIndex = 10;
+      if (villageId == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, villageId);
+      }
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateHousehold.release(_stmt);
+    }
+  }
+
+  @Override
+  public Modal_Household getHouseholdBySurveyorCode(String householdId, String villageId) {
+    final String _sql = "SELECT * FROM Household WHERE householdId=? AND villageId=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
-    if (svrCode == null) {
+    if (householdId == null) {
       _statement.bindNull(_argIndex);
     } else {
-      _statement.bindString(_argIndex, svrCode);
+      _statement.bindString(_argIndex, householdId);
+    }
+    _argIndex = 2;
+    if (villageId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, villageId);
     }
     final Cursor _cursor = __db.query(_statement);
     try {

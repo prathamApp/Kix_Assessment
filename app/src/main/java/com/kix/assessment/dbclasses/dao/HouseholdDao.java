@@ -15,8 +15,8 @@ public interface HouseholdDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertHousehold(Modal_Household modal_household);
 
-    @Query("SELECT * FROM Household WHERE svrCode=:svrCode")
-    Modal_Household getHouseholdBySurveyorCode(String svrCode);
+    @Query("SELECT * FROM Household WHERE householdId=:householdId AND villageId=:villageId")
+    Modal_Household getHouseholdBySurveyorCode(String householdId, String villageId);
 
     @Query("SELECT * FROM Household WHERE svrCode=:svrCode AND villageId=:villageId")
     List<Modal_Household> getAllHouseholdBySurveyorCode(String svrCode, String villageId);
@@ -35,4 +35,10 @@ public interface HouseholdDao {
 
     @Query("update Household set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
+
+    @Query("update Household set householdName=:househldName, HH01=:respondentName, HH02=:householdHead, HH03=:memberCount," +
+            "HH04=:telephoneNum, HH05a=:haveChildren, HH05b=:noOfChildren, HH06=:speakLang, sentFlag=0" +
+            " where householdId=:hId AND villageId=:villageId")
+    void updateHousehold(String househldName, String respondentName, String householdHead, String memberCount, String telephoneNum,
+                       String haveChildren, String noOfChildren, String speakLang, String hId, String villageId);
 }

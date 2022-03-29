@@ -48,7 +48,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
 
     private ArrayList<Modal_Household> households = new ArrayList<>();
     private boolean itemSelected;
-    String surveyorCode, householdID, villageId;
+    String surveyorCode, householdID, villageId, householdId;
     Modal_Household add_household = new Modal_Household();
 
     private HouseholdListAdapter householdListAdapter;
@@ -63,6 +63,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         Log.e("KIX : ", "selectstud");
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+
 //        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
         this.households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(surveyorCode, villageId);
         if (this.households.size() == 0) {
@@ -130,7 +131,9 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     public void editHousehold(final int position) {
         final Modal_Household modalHousehold = this.householdListAdapter.getitem(position);
         final Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.EDIT_VILLAGE, Kix_Constant.EDIT_VILLAGE);
+        bundle.putString(Kix_Constant.EDIT_HOUSEHOLD, Kix_Constant.EDIT_HOUSEHOLD);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID, modalHousehold.householdId);
+        bundle.putString(Kix_Constant.VILLAGE_ID, modalHousehold.villageId);
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHousehold_(), R.id.household_frame,
                 bundle, Fragment_AddHousehold.class.getSimpleName());
     }

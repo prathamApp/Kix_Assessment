@@ -61,8 +61,10 @@ public final class Fragment_AddHousehold_
         et_memberCount = null;
         et_telephoneNum = null;
         et_noOfChilds = null;
+        til_noOfChilds = null;
         rg_haveChildren = null;
         rg_speakLang = null;
+        btn_saveAndEdit = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -97,12 +99,12 @@ public final class Fragment_AddHousehold_
         this.et_memberCount = hasViews.internalFindViewById(R.id.et_HH03_memberCount);
         this.et_telephoneNum = hasViews.internalFindViewById(R.id.et_HH04_houseHeadNum);
         this.et_noOfChilds = hasViews.internalFindViewById(R.id.et_HH05b_houseAge);
+        this.til_noOfChilds = hasViews.internalFindViewById(R.id.til_HH05b);
         this.rg_haveChildren = hasViews.internalFindViewById(R.id.rg_HH05a);
         this.rg_speakLang = hasViews.internalFindViewById(R.id.rg_HH06);
-        View view_btn_saveHousehold = hasViews.internalFindViewById(R.id.btn_saveHousehold);
-
-        if (view_btn_saveHousehold!= null) {
-            view_btn_saveHousehold.setOnClickListener(new OnClickListener() {
+        this.btn_saveAndEdit = hasViews.internalFindViewById(R.id.btn_saveHousehold);
+        if (this.btn_saveAndEdit!= null) {
+            this.btn_saveAndEdit.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {

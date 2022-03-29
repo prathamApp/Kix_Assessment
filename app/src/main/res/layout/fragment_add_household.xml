@@ -213,7 +213,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:checkedButton="@id/rb_HH05a_No">
 
                 <RadioButton
                     android:id="@+id/rb_HH05a_yes"
@@ -242,6 +243,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_1sdp"
                 android:hint="How many"
+                android:visibility="gone"
                 android:textColorHint="#757575">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -282,7 +284,8 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="2"
+                android:checkedButton="@id/rb_HH06_No">
 
                 <RadioButton
                     android:id="@+id/rb_HH06_same"

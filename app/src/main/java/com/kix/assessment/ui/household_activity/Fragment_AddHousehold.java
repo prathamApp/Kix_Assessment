@@ -2,6 +2,8 @@ package com.kix.assessment.ui.household_activity;
 
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -9,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -44,15 +47,21 @@ public class Fragment_AddHousehold extends Fragment {
     @ViewById(R.id.et_HH05b_houseAge)
     EditText et_noOfChilds;
 
+    @ViewById(R.id.til_HH05b)
+    TextInputLayout til_noOfChilds;
+
     @ViewById(R.id.rg_HH05a)
     RadioGroup rg_haveChildren;
 
     @ViewById(R.id.rg_HH06)
     RadioGroup rg_speakLang;
 
+    @ViewById(R.id.btn_saveHousehold)
+    Button btn_saveAndEdit;
+
     RadioButton rb_HH05a, rb_HH06;
 
-    String surveyorCode, villageId, selectedLanguageCode;
+    String surveyorCode, villageId, selectedLanguageCode, householdId;
 
     public Fragment_AddHousehold() {
         // Required empty public constructor
@@ -62,13 +71,58 @@ public class Fragment_AddHousehold extends Fragment {
     public void initialize() {
         surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "NA");
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+        householdId = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
+
+        Log.e("hhh : ", householdId+" | "+villageId);
+
+        if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
+            Modal_Household modal_household = householdDao.getHouseholdBySurveyorCode(householdId, villageId);
+            et_householdName.setText(modal_household.getHouseholdName());
+            et_respondentName.setText(modal_household.getHH01());
+            et_houseHeadName.setText(modal_household.getHH02());
+            et_memberCount.setText(modal_household.getHH03());
+            et_telephoneNum.setText(modal_household.getHH04());
+            et_noOfChilds.setText(modal_household.getHH05b());
+
+            if (modal_household.getHH05a().equalsIgnoreCase(Kix_Constant.YES)) {
+                rg_haveChildren.check(R.id.rb_HH05a_yes);
+                til_noOfChilds.setVisibility(View.VISIBLE);
+            } else rg_haveChildren.check(R.id.rb_HH05a_No);
+
+            btn_saveAndEdit.setText("Edit");
+        }
+
+        rg_haveChildren.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
+                case R.id.rb_HH05a_yes:
+                    til_noOfChilds.setVisibility(View.VISIBLE);
+                    break;
+
+                case R.id.rb_HH05a_No:
+                    til_noOfChilds.setVisibility(View.GONE);
+                    break;
+            }
+        });
     }
 
     @Click(R.id.btn_saveHousehold)
     public void saveHousehold() {
         if(!et_householdName.getText().toString().isEmpty() && !et_respondentName.getText().toString().isEmpty()){
-            if(getArguments().getString(Kix_Constant.EDIT_SURVEYOR) != null){
-
+            if(getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null){
+                getRadioButtonValues();
+                householdDao.updateHousehold(
+                        et_householdName.getText().toString(),
+                        et_respondentName.getText().toString(),
+                        et_houseHeadName.getText().toString(),
+                        et_memberCount.getText().toString(),
+                        et_telephoneNum.getText().toString(),
+                        rb_HH05a.getText().toString(),
+                        et_noOfChilds.getText().toString(),
+                        rb_HH06.getText().toString(),
+                        householdId,
+                        villageId);
+                Toast.makeText(this.getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
+                this.getFragmentManager().popBackStack();
             } else {
                 insertHousehold();
             }
