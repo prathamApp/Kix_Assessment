@@ -56,7 +56,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V01"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V01_No">
 
                     <RadioButton
                         android:id="@+id/rb_V01_yes"
@@ -65,7 +66,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -75,7 +76,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
             </RelativeLayout>
@@ -107,7 +108,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V02"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V02_No">
 
                     <RadioButton
                         android:id="@+id/rb_V02_yes"
@@ -116,7 +118,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -126,7 +128,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
             </RelativeLayout>
@@ -158,7 +160,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V03"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V03_No">
 
                     <RadioButton
                         android:id="@+id/rb_V03_yes"
@@ -167,7 +170,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -177,7 +180,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
             </RelativeLayout>
@@ -209,7 +212,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V04"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V04_No">
 
                     <RadioButton
                         android:id="@+id/rb_V04_yes"
@@ -218,7 +222,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -228,7 +232,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
             </RelativeLayout>
@@ -260,7 +264,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V05"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V05_No">
 
                     <RadioButton
                         android:id="@+id/rb_V05_yes"
@@ -269,7 +274,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -279,7 +284,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
             </RelativeLayout>
@@ -311,7 +316,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V06a"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V06a_No">
 
                     <RadioButton
                         android:id="@+id/rb_V06a_yes"
@@ -320,7 +326,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -330,7 +336,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
 
@@ -339,7 +345,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rg_V06a"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <CheckBox
                         android:id="@+id/ch1_V06b"
@@ -370,6 +377,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:background="@drawable/rounded_form_bg"
                 android:elevation="@dimen/_2sdp"
                 android:paddingStart="@dimen/_10sdp"
@@ -391,7 +399,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V07a"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rb_V07a_No">
 
                     <RadioButton
                         android:id="@+id/rb_V07a_yes"
@@ -400,7 +409,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
+                        android:text="@string/yes"
                         android:textColor="@color/light_black" />
 
                     <RadioButton
@@ -410,7 +419,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
 
@@ -419,7 +428,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rg_V07a"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <CheckBox
                         android:id="@+id/ch1_V07b"
@@ -450,8 +460,6 @@
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:text="@string/save"
@@ -461,6 +469,23 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_10sdp"
                 app:cornerRadius="@dimen/_20sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/edit"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                android:visibility="gone"/>
 
             <!--
             <View

@@ -154,6 +154,7 @@
     <string name="you_want_to_exit">Are you sure you want to exit?</string>
     <string name="all_age">All Ages</string>
     <string name="all_village">All Villages</string>
+    <string name="edit">Edit</string>
 
     <string-array name="country_list">
         <item>Select Country</item>

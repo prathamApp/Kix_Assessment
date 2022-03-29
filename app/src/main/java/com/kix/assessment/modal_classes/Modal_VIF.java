@@ -10,9 +10,9 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "VillageInformartion")
 public class Modal_VIF implements Comparable, Parcelable {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @NonNull
-    public String vif_Id;
+    public int vif_Id;
     public String V01;
     public String V02;
     public String V03;
@@ -24,10 +24,11 @@ public class Modal_VIF implements Comparable, Parcelable {
     public String V07b;
     public String villageId;
     public String svrCode;
+    public String createdOn;
     public int sentFlag;
 
     protected Modal_VIF(final Parcel in) {
-        this.vif_Id = in.readString();
+        this.vif_Id = in.readInt();
         this.V01 = in.readString();
         this.V02 = in.readString();
         this.V03 = in.readString();
@@ -39,6 +40,7 @@ public class Modal_VIF implements Comparable, Parcelable {
         this.V07b = in.readString();
         this.villageId = in.readString();
         this.svrCode = in.readString();
+        this.createdOn = in.readString();
         this.sentFlag = in.readInt();
     }
 
@@ -58,11 +60,11 @@ public class Modal_VIF implements Comparable, Parcelable {
     }
 
     @NonNull
-    public String getVif_Id() {
+    public int getVif_Id() {
         return vif_Id;
     }
 
-    public void setVif_Id(@NonNull String vif_Id) {
+    public void setVif_Id(@NonNull int vif_Id) {
         this.vif_Id = vif_Id;
     }
 
@@ -162,6 +164,10 @@ public class Modal_VIF implements Comparable, Parcelable {
         this.sentFlag = sentFlag;
     }
 
+    public String getCreatedOn() { return this.createdOn; }
+
+    public void setCreatedOn(final String createdOn) { this.createdOn = createdOn; }
+
     public static Parcelable.Creator<Modal_VIF> getCREATOR() {
         return Modal_VIF.CREATOR;
     }
@@ -173,7 +179,7 @@ public class Modal_VIF implements Comparable, Parcelable {
 
     @Override
     public void writeToParcel(final Parcel dest, final int flags) {
-        dest.writeString(this.vif_Id);
+        dest.writeInt(this.vif_Id);
         dest.writeString(this.V01);
         dest.writeString(this.V02);
         dest.writeString(this.V03);
@@ -185,6 +191,7 @@ public class Modal_VIF implements Comparable, Parcelable {
         dest.writeString(this.V07b);
         dest.writeString(this.villageId);
         dest.writeString(this.svrCode);
+        dest.writeString(this.createdOn);
         dest.writeInt(this.sentFlag);
     }
 

@@ -169,3 +169,5 @@ Caused by: java.lang.annotation.AnnotationTypeMismatchException: Incorrectly typ
 	at com.sun.proxy.$Proxy90.value(Unknown Source)
 	... 156 more
 
+13:18:07.785 [Execution worker for ':' Thread 4] ERROR o.a.i.p.ModelValidator:74 - method annotated with org.androidannotations.annotations.ViewById can only have the following parameter: [ any type ]
+13:18:07.789 [Execution worker for ':' Thread 4] WARN  o.a.i.p.ModelValidator:84 - Element saveVIF() invalidated by ViewByIdHandler

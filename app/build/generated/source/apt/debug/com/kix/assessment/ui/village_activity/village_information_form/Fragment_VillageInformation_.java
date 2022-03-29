@@ -55,6 +55,15 @@ public final class Fragment_VillageInformation_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        tv_haveRoad = null;
+        tv_haveTransport = null;
+        tv_haveElectricity = null;
+        tv_haveGovtHosp = null;
+        tv_havePvtHosp = null;
+        tv_havePrePrimSchool = null;
+        tv_v06b_schoolType = null;
+        tv_havePrimSchool = null;
+        tv_v07b_schoolType = null;
         scroll_View = null;
         fab_Edit_VIF = null;
     }
@@ -85,6 +94,15 @@ public final class Fragment_VillageInformation_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.tv_haveRoad = hasViews.internalFindViewById(R.id.tv_V01_val);
+        this.tv_haveTransport = hasViews.internalFindViewById(R.id.tv_V02_val);
+        this.tv_haveElectricity = hasViews.internalFindViewById(R.id.tv_V03_val);
+        this.tv_haveGovtHosp = hasViews.internalFindViewById(R.id.tv_V04_val);
+        this.tv_havePvtHosp = hasViews.internalFindViewById(R.id.tv_V05_val);
+        this.tv_havePrePrimSchool = hasViews.internalFindViewById(R.id.tv_V06a_val);
+        this.tv_v06b_schoolType = hasViews.internalFindViewById(R.id.tv_V06b_val);
+        this.tv_havePrimSchool = hasViews.internalFindViewById(R.id.tv_V07a_val);
+        this.tv_v07b_schoolType = hasViews.internalFindViewById(R.id.tv_V07b_val);
         this.scroll_View = hasViews.internalFindViewById(R.id.scroll_View);
         this.fab_Edit_VIF = hasViews.internalFindViewById(R.id.fab_Edit_VIF);
         if (this.fab_Edit_VIF!= null) {

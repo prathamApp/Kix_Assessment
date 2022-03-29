@@ -12,6 +12,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import com.kix.assessment.R;
 import org.androidannotations.api.bean.BeanHolder;
@@ -54,14 +55,23 @@ public final class Fragment_AddVillageInformation_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        rg_haveRoad = null;
+        rg_haveTransport = null;
+        rg_haveElectricity = null;
+        rg_haveGovHosp = null;
+        rg_havePvtHosp = null;
+        rg_havePrePrimSchool = null;
+        rg_havePrimSchool = null;
         ll_V06b = null;
-        ch1_V06b = null;
-        ch2_V06b = null;
-        ch3_V06b = null;
+        cb_v06bPvt = null;
+        cb_v06bGovt = null;
+        cb_v06bPublic = null;
         ll_V07b = null;
-        ch1_V07b = null;
-        ch2_V07b = null;
-        ch3_V07b = null;
+        cb_v07bPvt = null;
+        cb_v07bGovt = null;
+        cb_v07bPublic = null;
+        btn_saveVIF = null;
+        btn_editVIF = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -90,14 +100,43 @@ public final class Fragment_AddVillageInformation_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.rg_haveRoad = hasViews.internalFindViewById(R.id.rg_V01);
+        this.rg_haveTransport = hasViews.internalFindViewById(R.id.rg_V02);
+        this.rg_haveElectricity = hasViews.internalFindViewById(R.id.rg_V03);
+        this.rg_haveGovHosp = hasViews.internalFindViewById(R.id.rg_V04);
+        this.rg_havePvtHosp = hasViews.internalFindViewById(R.id.rg_V05);
+        this.rg_havePrePrimSchool = hasViews.internalFindViewById(R.id.rg_V06a);
+        this.rg_havePrimSchool = hasViews.internalFindViewById(R.id.rg_V07a);
         this.ll_V06b = hasViews.internalFindViewById(R.id.ll_V06b);
-        this.ch1_V06b = hasViews.internalFindViewById(R.id.ch1_V06b);
-        this.ch2_V06b = hasViews.internalFindViewById(R.id.ch2_V06b);
-        this.ch3_V06b = hasViews.internalFindViewById(R.id.ch3_V06b);
+        this.cb_v06bPvt = hasViews.internalFindViewById(R.id.ch1_V06b);
+        this.cb_v06bGovt = hasViews.internalFindViewById(R.id.ch2_V06b);
+        this.cb_v06bPublic = hasViews.internalFindViewById(R.id.ch3_V06b);
         this.ll_V07b = hasViews.internalFindViewById(R.id.ll_V07b);
-        this.ch1_V07b = hasViews.internalFindViewById(R.id.ch1_V07b);
-        this.ch2_V07b = hasViews.internalFindViewById(R.id.ch2_V07b);
-        this.ch3_V07b = hasViews.internalFindViewById(R.id.ch3_V07b);
+        this.cb_v07bPvt = hasViews.internalFindViewById(R.id.ch1_V07b);
+        this.cb_v07bGovt = hasViews.internalFindViewById(R.id.ch2_V07b);
+        this.cb_v07bPublic = hasViews.internalFindViewById(R.id.ch3_V07b);
+        this.btn_saveVIF = hasViews.internalFindViewById(R.id.btn_save);
+        this.btn_editVIF = hasViews.internalFindViewById(R.id.btn_edit);
+        if (this.btn_saveVIF!= null) {
+            this.btn_saveVIF.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_AddVillageInformation_.this.saveVIF();
+                }
+            }
+            );
+        }
+        if (this.btn_editVIF!= null) {
+            this.btn_editVIF.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_AddVillageInformation_.this.editVIF();
+                }
+            }
+            );
+        }
         initialize();
     }
 

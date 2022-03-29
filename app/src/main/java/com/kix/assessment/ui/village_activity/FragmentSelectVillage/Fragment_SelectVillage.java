@@ -1,6 +1,7 @@
 package com.kix.assessment.ui.village_activity.FragmentSelectVillage;
 
 import static com.kix.assessment.KIXApplication.villageDao;
+import static com.kix.assessment.KIXApplication.villageInformationDao;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,11 +21,14 @@ import com.kix.assessment.custom.flexbox.FlexboxLayoutManager;
 import com.kix.assessment.custom.flexbox.JustifyContent;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Modal_VIF;
 import com.kix.assessment.modal_classes.Modal_Village;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.household_activity.Activity_Household_;
 import com.kix.assessment.ui.village_activity.Fragment_AddVillage;
 import com.kix.assessment.ui.village_activity.Fragment_AddVillage_;
+import com.kix.assessment.ui.village_activity.village_information_form.Fragment_AddVillageInformation;
+import com.kix.assessment.ui.village_activity.village_information_form.Fragment_AddVillageInformation_;
 import com.kix.assessment.ui.village_activity.village_information_form.Fragment_VillageInformation;
 import com.kix.assessment.ui.village_activity.village_information_form.Fragment_VillageInformation_;
 
@@ -122,9 +126,15 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         final Modal_Village modal_village = this.villageListAdapter.getitem(position);
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.VILLAGE_ID, modal_village.getVillageId());
-        KIX_Utility.showFragment(this.getActivity(), new Fragment_VillageInformation_(), R.id.frag_frame,
-                bundle, Fragment_VillageInformation.class.getSimpleName());
 
+        Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(modal_village.getVillageId());
+        if(modal_vif!=null){
+            KIX_Utility.showFragment(this.getActivity(), new Fragment_VillageInformation_(), R.id.frag_frame,
+                    bundle, Fragment_VillageInformation.class.getSimpleName());
+        } else {
+            KIX_Utility.showFragment(this.getActivity(), new Fragment_AddVillageInformation_(), R.id.frag_frame,
+                    bundle, Fragment_AddVillageInformation.class.getSimpleName());
+        }
     }
 
     @Override

@@ -55,4 +55,7 @@ public class Kix_Constant {
     public static final String VILLAGE_COUNT = "villageCount";
     public static final String SURVEYOR_COUNT = "surveyorCount";
 
+    public static final String YES = "Yes";
+    public static final String NO = "No";
+
 }

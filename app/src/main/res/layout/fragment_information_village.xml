@@ -48,7 +48,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V01"
+                    android:id="@+id/tv_V01_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V01"
@@ -86,7 +86,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V02"
+                    android:id="@+id/tv_V02_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V02"
@@ -124,7 +124,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V03"
+                    android:id="@+id/tv_V03_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V03"
@@ -162,7 +162,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V04"
+                    android:id="@+id/tv_V04_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V04"
@@ -200,7 +200,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V05"
+                    android:id="@+id/tv_V05_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V05"
@@ -238,7 +238,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V06a"
+                    android:id="@+id/tv_V06a_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V06a"
@@ -256,10 +256,10 @@
                     android:gravity="center_vertical"/>
 
                 <TextView
-                    android:id="@+id/tv_V06b"
+                    android:id="@+id/tv_V06b_val"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/rg_V06a"
+                    android:layout_below="@+id/tv_V06a_val"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
                     android:textColor="@color/colorText"
@@ -286,7 +286,7 @@
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/rg_V07a"
+                    android:id="@+id/tv_V07a_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V07a"
@@ -304,10 +304,10 @@
                     android:gravity="center_vertical"/>
 
                 <TextView
-                    android:id="@+id/tv_V07b"
+                    android:id="@+id/tv_V07b_val"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/rg_V07a"
+                    android:layout_below="@+id/tv_V07a_val"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
                     android:textColor="@color/colorText"
@@ -330,6 +330,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/ic_edit_white_24dp" />
+        android:src="@drawable/ic_edit_white_24dp"/>
 
 </RelativeLayout>

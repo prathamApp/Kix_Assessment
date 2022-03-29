@@ -85,9 +85,9 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Status` (`statusKey` TEXT NOT NULL, `value` TEXT NOT NULL, `description` TEXT, PRIMARY KEY(`statusKey`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `AbandonedScore` (`scoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `deviceId` TEXT, `resourceId` TEXT, `scoredMarks` TEXT, `startDateTime` TEXT, `endDateTime` TEXT, `label` TEXT, `svrCode` TEXT, `bookletNo` TEXT, `reason` TEXT, `countryName` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Village` (`villageId` TEXT NOT NULL, `villageName` TEXT, `villageDistrict` TEXT, `villageState` TEXT, `villageDate` TEXT, `countryName` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`villageId`))");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `VillageInformartion` (`vif_Id` TEXT NOT NULL, `V01` TEXT, `V02` TEXT, `V03` TEXT, `V04` TEXT, `V05` TEXT, `V06a` TEXT, `V06b` TEXT, `V07a` TEXT, `V07b` TEXT, `villageId` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`vif_Id`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `VillageInformartion` (`vif_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `V01` TEXT, `V02` TEXT, `V03` TEXT, `V04` TEXT, `V05` TEXT, `V06a` TEXT, `V06b` TEXT, `V07a` TEXT, `V07b` TEXT, `villageId` TEXT, `svrCode` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"68b77614b44f3aa9c39fa322712bd2ad\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"1f505174149b5bb101de5de4ea8da4b5\")");
       }
 
       @Override
@@ -346,8 +346,8 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoVillage + "\n"
                   + " Found:\n" + _existingVillage);
         }
-        final HashMap<String, TableInfo.Column> _columnsVillageInformartion = new HashMap<String, TableInfo.Column>(13);
-        _columnsVillageInformartion.put("vif_Id", new TableInfo.Column("vif_Id", "TEXT", true, 1));
+        final HashMap<String, TableInfo.Column> _columnsVillageInformartion = new HashMap<String, TableInfo.Column>(14);
+        _columnsVillageInformartion.put("vif_Id", new TableInfo.Column("vif_Id", "INTEGER", true, 1));
         _columnsVillageInformartion.put("V01", new TableInfo.Column("V01", "TEXT", false, 0));
         _columnsVillageInformartion.put("V02", new TableInfo.Column("V02", "TEXT", false, 0));
         _columnsVillageInformartion.put("V03", new TableInfo.Column("V03", "TEXT", false, 0));
@@ -359,6 +359,7 @@ public final class KixDatabase_Impl extends KixDatabase {
         _columnsVillageInformartion.put("V07b", new TableInfo.Column("V07b", "TEXT", false, 0));
         _columnsVillageInformartion.put("villageId", new TableInfo.Column("villageId", "TEXT", false, 0));
         _columnsVillageInformartion.put("svrCode", new TableInfo.Column("svrCode", "TEXT", false, 0));
+        _columnsVillageInformartion.put("createdOn", new TableInfo.Column("createdOn", "TEXT", false, 0));
         _columnsVillageInformartion.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysVillageInformartion = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesVillageInformartion = new HashSet<TableInfo.Index>(0);
@@ -370,7 +371,7 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Found:\n" + _existingVillageInformartion);
         }
       }
-    }, "68b77614b44f3aa9c39fa322712bd2ad", "925e24afe654bf54e6f2ad0fb4546e6d");
+    }, "1f505174149b5bb101de5de4ea8da4b5", "dad7aaced24adbe5a4dd9720facb2a73");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

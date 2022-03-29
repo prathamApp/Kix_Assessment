@@ -2206,6 +2206,7 @@ id beginning
 id blocking
 id bottom
 id btn_cancel
+id btn_edit
 id btn_next
 id btn_next_student
 id btn_perm_okay
@@ -2736,8 +2737,15 @@ id tv_ParentInfo
 id tv_StudName
 id tv_TitleLBL
 id tv_TotStudCount
-id tv_V06b
-id tv_V07b
+id tv_V01_val
+id tv_V02_val
+id tv_V03_val
+id tv_V04_val
+id tv_V05_val
+id tv_V06a_val
+id tv_V06b_val
+id tv_V07a_val
+id tv_V07b_val
 id tv_errormsg
 id tv_label
 id tv_profileName
@@ -2967,6 +2975,7 @@ string details
 string drop_out
 string dsv_ex_msg_adapter_wrong_recycler
 string dsv_ex_msg_dont_set_lm
+string edit
 string edit_child_info
 string enrolled
 string fab_transformation_scrim_behavior
