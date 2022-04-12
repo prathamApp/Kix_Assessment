@@ -20,8 +20,12 @@ import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.ContentDao_Impl;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao_Impl;
+import com.kix.assessment.dbclasses.dao.HouseholdInformationDao;
+import com.kix.assessment.dbclasses.dao.HouseholdInformationDao_Impl;
 import com.kix.assessment.dbclasses.dao.LogDao;
 import com.kix.assessment.dbclasses.dao.LogDao_Impl;
+import com.kix.assessment.dbclasses.dao.ParentInformationDao;
+import com.kix.assessment.dbclasses.dao.ParentInformationDao_Impl;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao_Impl;
 import com.kix.assessment.dbclasses.dao.SessionDao;
@@ -69,6 +73,10 @@ public final class KixDatabase_Impl extends KixDatabase {
 
   private volatile VillageInformationDao _villageInformationDao;
 
+  private volatile HouseholdInformationDao _householdInformationDao;
+
+  private volatile ParentInformationDao _parentInformationDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
@@ -86,8 +94,10 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `AbandonedScore` (`scoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `deviceId` TEXT, `resourceId` TEXT, `scoredMarks` TEXT, `startDateTime` TEXT, `endDateTime` TEXT, `label` TEXT, `svrCode` TEXT, `bookletNo` TEXT, `reason` TEXT, `countryName` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Village` (`villageId` TEXT NOT NULL, `villageName` TEXT, `villageDistrict` TEXT, `villageState` TEXT, `villageDate` TEXT, `countryName` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`villageId`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `VillageInformartion` (`vif_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `V01` TEXT, `V02` TEXT, `V03` TEXT, `V04` TEXT, `V05` TEXT, `V06a` TEXT, `V06b` TEXT, `V07a` TEXT, `V07b` TEXT, `villageId` TEXT, `svrCode` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `HouseholdInformation` (`hif_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `HH07a` TEXT, `HH07b` TEXT, `HH07c` TEXT, `HH07cOther` TEXT, `HH07d` TEXT, `HH07dOther` TEXT, `HH07e` TEXT, `HH07f` TEXT, `HH07g` TEXT, `HH07h` TEXT, `HH07i` TEXT, `HH07j` TEXT, `HH07k` TEXT, `HH07l` TEXT, `HH07m` TEXT, `HH07n` TEXT, `HH07o` TEXT, `HH07p` TEXT, `householdId` TEXT, `villageId` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `ParentInformation` (`pifId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PT01a` TEXT, `PT01b` TEXT, `PT01c` TEXT, `PT01d` TEXT, `PT01e` TEXT, `PT01f` TEXT, `PT02a` TEXT, `PT02b` TEXT, `PT02c` TEXT, `PT02d` TEXT, `PT02e` TEXT, `PT02f` TEXT, `studentId` TEXT, `householdId` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"1f505174149b5bb101de5de4ea8da4b5\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"03e5f760652c0b2eb62796ed608b0ebb\")");
       }
 
       @Override
@@ -104,6 +114,8 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("DROP TABLE IF EXISTS `AbandonedScore`");
         _db.execSQL("DROP TABLE IF EXISTS `Village`");
         _db.execSQL("DROP TABLE IF EXISTS `VillageInformartion`");
+        _db.execSQL("DROP TABLE IF EXISTS `HouseholdInformation`");
+        _db.execSQL("DROP TABLE IF EXISTS `ParentInformation`");
       }
 
       @Override
@@ -370,8 +382,68 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoVillageInformartion + "\n"
                   + " Found:\n" + _existingVillageInformartion);
         }
+        final HashMap<String, TableInfo.Column> _columnsHouseholdInformation = new HashMap<String, TableInfo.Column>(23);
+        _columnsHouseholdInformation.put("hif_Id", new TableInfo.Column("hif_Id", "INTEGER", true, 1));
+        _columnsHouseholdInformation.put("HH07a", new TableInfo.Column("HH07a", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07b", new TableInfo.Column("HH07b", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07c", new TableInfo.Column("HH07c", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07cOther", new TableInfo.Column("HH07cOther", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07d", new TableInfo.Column("HH07d", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07dOther", new TableInfo.Column("HH07dOther", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07e", new TableInfo.Column("HH07e", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07f", new TableInfo.Column("HH07f", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07g", new TableInfo.Column("HH07g", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07h", new TableInfo.Column("HH07h", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07i", new TableInfo.Column("HH07i", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07j", new TableInfo.Column("HH07j", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07k", new TableInfo.Column("HH07k", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07l", new TableInfo.Column("HH07l", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07m", new TableInfo.Column("HH07m", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07n", new TableInfo.Column("HH07n", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07o", new TableInfo.Column("HH07o", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("HH07p", new TableInfo.Column("HH07p", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("householdId", new TableInfo.Column("householdId", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("villageId", new TableInfo.Column("villageId", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("createdOn", new TableInfo.Column("createdOn", "TEXT", false, 0));
+        _columnsHouseholdInformation.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysHouseholdInformation = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesHouseholdInformation = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoHouseholdInformation = new TableInfo("HouseholdInformation", _columnsHouseholdInformation, _foreignKeysHouseholdInformation, _indicesHouseholdInformation);
+        final TableInfo _existingHouseholdInformation = TableInfo.read(_db, "HouseholdInformation");
+        if (! _infoHouseholdInformation.equals(_existingHouseholdInformation)) {
+          throw new IllegalStateException("Migration didn't properly handle HouseholdInformation(com.kix.assessment.modal_classes.Modal_HIF).\n"
+                  + " Expected:\n" + _infoHouseholdInformation + "\n"
+                  + " Found:\n" + _existingHouseholdInformation);
+        }
+        final HashMap<String, TableInfo.Column> _columnsParentInformation = new HashMap<String, TableInfo.Column>(17);
+        _columnsParentInformation.put("pifId", new TableInfo.Column("pifId", "INTEGER", true, 1));
+        _columnsParentInformation.put("PT01a", new TableInfo.Column("PT01a", "TEXT", false, 0));
+        _columnsParentInformation.put("PT01b", new TableInfo.Column("PT01b", "TEXT", false, 0));
+        _columnsParentInformation.put("PT01c", new TableInfo.Column("PT01c", "TEXT", false, 0));
+        _columnsParentInformation.put("PT01d", new TableInfo.Column("PT01d", "TEXT", false, 0));
+        _columnsParentInformation.put("PT01e", new TableInfo.Column("PT01e", "TEXT", false, 0));
+        _columnsParentInformation.put("PT01f", new TableInfo.Column("PT01f", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02a", new TableInfo.Column("PT02a", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02b", new TableInfo.Column("PT02b", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02c", new TableInfo.Column("PT02c", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02d", new TableInfo.Column("PT02d", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02e", new TableInfo.Column("PT02e", "TEXT", false, 0));
+        _columnsParentInformation.put("PT02f", new TableInfo.Column("PT02f", "TEXT", false, 0));
+        _columnsParentInformation.put("studentId", new TableInfo.Column("studentId", "TEXT", false, 0));
+        _columnsParentInformation.put("householdId", new TableInfo.Column("householdId", "TEXT", false, 0));
+        _columnsParentInformation.put("createdOn", new TableInfo.Column("createdOn", "TEXT", false, 0));
+        _columnsParentInformation.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysParentInformation = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesParentInformation = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoParentInformation = new TableInfo("ParentInformation", _columnsParentInformation, _foreignKeysParentInformation, _indicesParentInformation);
+        final TableInfo _existingParentInformation = TableInfo.read(_db, "ParentInformation");
+        if (! _infoParentInformation.equals(_existingParentInformation)) {
+          throw new IllegalStateException("Migration didn't properly handle ParentInformation(com.kix.assessment.modal_classes.Modal_PIF).\n"
+                  + " Expected:\n" + _infoParentInformation + "\n"
+                  + " Found:\n" + _existingParentInformation);
+        }
       }
-    }, "1f505174149b5bb101de5de4ea8da4b5", "dad7aaced24adbe5a4dd9720facb2a73");
+    }, "03e5f760652c0b2eb62796ed608b0ebb", "61097f6e312adab9c86e87ec40c9c7d9");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -382,7 +454,7 @@ public final class KixDatabase_Impl extends KixDatabase {
 
   @Override
   protected InvalidationTracker createInvalidationTracker() {
-    return new InvalidationTracker(this, "Student","Surveyor","Score","Content","Household","Logs","Attendance","Session","Status","AbandonedScore","Village","VillageInformartion");
+    return new InvalidationTracker(this, "Student","Surveyor","Score","Content","Household","Logs","Attendance","Session","Status","AbandonedScore","Village","VillageInformartion","HouseholdInformation","ParentInformation");
   }
 
   @Override
@@ -403,6 +475,8 @@ public final class KixDatabase_Impl extends KixDatabase {
       _db.execSQL("DELETE FROM `AbandonedScore`");
       _db.execSQL("DELETE FROM `Village`");
       _db.execSQL("DELETE FROM `VillageInformartion`");
+      _db.execSQL("DELETE FROM `HouseholdInformation`");
+      _db.execSQL("DELETE FROM `ParentInformation`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -577,6 +651,34 @@ public final class KixDatabase_Impl extends KixDatabase {
           _villageInformationDao = new VillageInformationDao_Impl(this);
         }
         return _villageInformationDao;
+      }
+    }
+  }
+
+  @Override
+  public HouseholdInformationDao getHouseholdInformationDao() {
+    if (_householdInformationDao != null) {
+      return _householdInformationDao;
+    } else {
+      synchronized(this) {
+        if(_householdInformationDao == null) {
+          _householdInformationDao = new HouseholdInformationDao_Impl(this);
+        }
+        return _householdInformationDao;
+      }
+    }
+  }
+
+  @Override
+  public ParentInformationDao getParentInformationDao() {
+    if (_parentInformationDao != null) {
+      return _parentInformationDao;
+    } else {
+      synchronized(this) {
+        if(_parentInformationDao == null) {
+          _parentInformationDao = new ParentInformationDao_Impl(this);
+        }
+        return _parentInformationDao;
       }
     }
   }

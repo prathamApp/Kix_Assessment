@@ -11,23 +11,23 @@ public class Modal_Student implements Comparable, Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     public int sId;
-    String studentId;
-    String CH01;//name
-    String CH02;//sex
-    String CH03;//age
-    String CH04;//Is [child name] currently enrolled in any school or preschool?
-    String CH05a;//Grade/Class (write 0 if child is enrolled in preschool/pre-primary)
-    String CH05b;//School type (tick only one)
-    String CH05c;//Is [test lang] the official medium of instruction in this school?
-    String CH05d;//What is the current status of the school?
-    String CH05e;//If the first option is chosen in CH05d, then ask What kind of activities are being conducted?
-    String CH05f;//Does [child name] have textbooks for the current grade?
-    String CH06a;//Was [child name] ever enrolled in school?
-    String CH06b1;//Year of dropping out
-    String CH06b2;//Last grade/class completed before dropping out
-    String CH06b3;//What was the main reason [child name] dropped out?
-    String CH07;//Was [child name] ever enrolled in a pre-primary/nursery class? (ask only if the child is currently not enrolled in pre-primary/nursery)
-    String CH08;//Does [child name] take any paid tuition class (coaching) currently?
+    public String studentId;
+    public String CH01;//name
+    public String CH02;//sex
+    public String CH03;//age
+    public String CH04;//Is [child name] currently enrolled in any school or preschool?
+    public String CH05a;//Grade/Class (write 0 if child is enrolled in preschool/pre-primary)
+    public String CH05b;//School type (tick only one)
+    public String CH05c;//Is [test lang] the official medium of instruction in this school?
+    public String CH05d;//What is the current status of the school?
+    public String CH05e;//If the first option is chosen in CH05d, then ask What kind of activities are being conducted?
+    public String CH05f;//Does [child name] have textbooks for the current grade?
+    public String CH06a;//Was [child name] ever enrolled in school?
+    public String CH06b1;//Year of dropping out
+    public String CH06b2;//Last grade/class completed before dropping out
+    public String CH06b3;//What was the main reason [child name] dropped out?
+    public String CH07;//Was [child name] ever enrolled in a pre-primary/nursery class? (ask only if the child is currently not enrolled in pre-primary/nursery)
+    public String CH08;//Does [child name] take any paid tuition class (coaching) currently?
     public String createdOn;
     public String svrCode;
     public String householdId;

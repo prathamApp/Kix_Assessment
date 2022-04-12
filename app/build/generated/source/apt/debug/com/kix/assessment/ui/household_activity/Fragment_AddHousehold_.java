@@ -55,6 +55,7 @@ public final class Fragment_AddHousehold_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        tv_title = null;
         et_householdName = null;
         et_respondentName = null;
         et_houseHeadName = null;
@@ -93,6 +94,7 @@ public final class Fragment_AddHousehold_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.tv_title = hasViews.internalFindViewById(R.id.tv_label);
         this.et_householdName = hasViews.internalFindViewById(R.id.et_HH00_hName);
         this.et_respondentName = hasViews.internalFindViewById(R.id.et_HH01_respondentName);
         this.et_houseHeadName = hasViews.internalFindViewById(R.id.et_HH02_houseHeadName);

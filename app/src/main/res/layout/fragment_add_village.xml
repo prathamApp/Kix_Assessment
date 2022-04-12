@@ -28,68 +28,101 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lbl_Village"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="@string/hint_village">
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_village"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_VillageName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-                android:imeOptions="actionNext"
+                android:drawablePadding="@dimen/_5sdp"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:inputType="text"
                 android:singleLine="true"
                 android:textColor="@color/colorText" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lbl_District"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="@string/hint_district"
-            tools:ignore="ObsoleteLayoutParam">
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_district"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_District"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-                android:imeOptions="actionNext"
+                android:drawablePadding="@dimen/_5sdp"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:inputType="text"
                 android:singleLine="true"
                 android:textColor="@color/colorText" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lbl_State"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_form_bg"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_30sdp"
-            android:hint="@string/hint_state">
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_state"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_State"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-                android:imeOptions="actionDone"
+                android:drawablePadding="@dimen/_5sdp"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:inputType="text"
                 android:singleLine="true"
                 android:textColor="@color/colorText" />
-        </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_save"

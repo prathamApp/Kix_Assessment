@@ -1,15 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.yarolegovich:discrete-scrollview:1.4.9@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/470edc21416c5abaef1bda0a8f519dfd/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e9df03f4f01ee6c724dc0a677a30def8/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

@@ -461,4 +461,57 @@ public final class HouseholdDao_Impl implements HouseholdDao {
       _statement.release();
     }
   }
+
+  @Override
+  public Modal_Household getHouseholdByHouseholdId(String householdId) {
+    final String _sql = "SELECT * FROM Household WHERE householdId=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (householdId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, householdId);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfHhId = _cursor.getColumnIndexOrThrow("hhId");
+      final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
+      final int _cursorIndexOfHouseholdName = _cursor.getColumnIndexOrThrow("householdName");
+      final int _cursorIndexOfHH01 = _cursor.getColumnIndexOrThrow("HH01");
+      final int _cursorIndexOfHH02 = _cursor.getColumnIndexOrThrow("HH02");
+      final int _cursorIndexOfHH03 = _cursor.getColumnIndexOrThrow("HH03");
+      final int _cursorIndexOfHH04 = _cursor.getColumnIndexOrThrow("HH04");
+      final int _cursorIndexOfHH05a = _cursor.getColumnIndexOrThrow("HH05a");
+      final int _cursorIndexOfHH05b = _cursor.getColumnIndexOrThrow("HH05b");
+      final int _cursorIndexOfHH06 = _cursor.getColumnIndexOrThrow("HH06");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
+      final int _cursorIndexOfVillageId = _cursor.getColumnIndexOrThrow("villageId");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final Modal_Household _result;
+      if(_cursor.moveToFirst()) {
+        _result = new Modal_Household();
+        _result.hhId = _cursor.getInt(_cursorIndexOfHhId);
+        _result.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
+        _result.householdName = _cursor.getString(_cursorIndexOfHouseholdName);
+        _result.HH01 = _cursor.getString(_cursorIndexOfHH01);
+        _result.HH02 = _cursor.getString(_cursorIndexOfHH02);
+        _result.HH03 = _cursor.getString(_cursorIndexOfHH03);
+        _result.HH04 = _cursor.getString(_cursorIndexOfHH04);
+        _result.HH05a = _cursor.getString(_cursorIndexOfHH05a);
+        _result.HH05b = _cursor.getString(_cursorIndexOfHH05b);
+        _result.HH06 = _cursor.getString(_cursorIndexOfHH06);
+        _result.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
+        _result.villageId = _cursor.getString(_cursorIndexOfVillageId);
+        _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
 }

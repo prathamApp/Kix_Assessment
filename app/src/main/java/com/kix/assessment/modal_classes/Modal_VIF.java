@@ -13,15 +13,15 @@ public class Modal_VIF implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     public int vif_Id;
-    public String V01;
-    public String V02;
-    public String V03;
-    public String V04;
-    public String V05;
-    public String V06a;
-    public String V06b;
-    public String V07a;
-    public String V07b;
+    public String V01;//Is there tarmac/all weather road leading to the village?
+    public String V02;//Is there public transport facility available to the village?
+    public String V03;//Does the village have electricity connection?
+    public String V04;//Does the village have any government/public health facility?
+    public String V05;//Does the village have any private health facility?
+    public String V06a;//Does the village have any pre-primary schools or any school offering pre-primary grades/classes?
+    public String V06b;//If yes in V06a, which type of school(s) in the village offers pre-primary grades/classes? (Tick all that apply)
+    public String V07a;//Does the village have any schools offering primary grades/classes (definition of primary grades would vary from country to country, so select accordingly. Eg. in India primary grades are 1 to 5)
+    public String V07b;//If yes in V07a, which type of school(s) in the village offers primary grades/classes? (Tick all that apply)
     public String villageId;
     public String svrCode;
     public String createdOn;

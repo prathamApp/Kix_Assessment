@@ -56,7 +56,6 @@
     </string-array>
 
     <string name="add_village_info">Add Village Information</string>
-    x
     <string name="str_village_info">Village Information</string>
     <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
     <string name="str_V02">Is there public transport facility available to the village?</string>
@@ -65,11 +64,36 @@
     <string name="str_V05">Does the village have any private health facility?</string>
     <string name="str_V06a">Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
     <string name="str_V07a">Does the village have any schools offering primary grades/classes (definition of primary grades would vary from country to country, so select accordingly. Eg. in India primary grades are 1 to 5)</string>
+
+    <string name="str_add_household">Add Household</string>
+    <string name="str_HH06">What language do you speak at home, most often with your children?</string>
+    <string name="str_HH06a">Same as test</string>
+    <string name="str_HH06b">Different from test</string>
+
+    <string name="str_add_household_info">Add Household Information</string>
+    <string name="str_household_info">Household Information</string>
     <string name="str_HH07a">Household roofing</string>
+    <string name="str_HH07a_one">No roofing</string>
+    <string name="str_HH07a_two">Finished roofing</string>
+    <string name="str_HH07a_three">Natural or rudimentary roofing</string>
     <string name="str_HH07b">Household wall (external) material</string>
+    <string name="str_HH07b_one">No walls</string>
+    <string name="str_HH07b_two">Finished walls</string>
+    <string name="str_HH07b_three">Natural or rudimentary walls</string>
     <string name="str_HH07c">What is the source of lighting regularly used in the household</string>
+    <string name="str_HH07c_one">Electricity</string>
+    <string name="str_HH07c_two">Solar</string>
+    <string name="str_HH07c_three">Paraffin</string>
+    <string name="str_HH07c_four">Other</string>
     <string name="str_HH07d">What is the source of drinking water used regularly in the household</string>
-    <string name="str_HH07e">Electricity connection (to be marked yes if HH06c is Electricity)</string>
+    <string name="str_HH07d_one">Piped water</string>
+    <string name="str_HH07d_two">Handpump</string>
+    <string name="str_HH07d_three">Borehole</string>
+    <string name="str_HH07d_four">Well</string>
+    <string name="str_HH07d_five">River/Stream</string>
+    <string name="str_HH07d_six">Buy water</string>
+    <string name="str_HH07d_seven">Other</string>
+    <string name="str_HH07e">Electricity connection</string>
     <string name="str_HH07f">Toilet</string>
     <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed high school diploma?</string>
     <string name="str_HH07h">Any reading material other than school textbooks and religious books.</string>
@@ -77,7 +101,7 @@
     <string name="str_HH07j">Television</string>
     <string name="str_HH07k">Radio</string>
     <string name="str_HH07l">Mobile phone</string>
-    <string name="str_HH07m">If yes in HH06l, is it a smartphone?</string>
+    <string name="str_HH07m">Is it a smartphone?</string>
     <string name="str_HH07n">Motorised 4-wheeler?</string>
     <string name="str_HH07o">Motorised 2-wheeler?</string>
     <string name="str_HH07p">Bicycle?</string>
@@ -87,7 +111,7 @@
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
     <string name="add_hh_info">Add Household Information</string>
 
-    <string name="str_CH04">Is [child name] currently enrolled in any school or preschool?</string>
+    <string name="str_CH04">Is child currently enrolled in any school or preschool?</string>
     <string name="str_CH05d">What is the current status of the school?</string>
     <string name="str_CH05c">Is [test lang] the official medium of instruction in this school?
         (for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
@@ -96,11 +120,11 @@
     <string name="str_CH05d_three">School is closed</string>
     <string name="str_CH05e">What kind of activities are being conducted?	</string>
     <string name="str_CH05e_one">Online/Remote only (via zoom, WhatsApp, Google Meet, SMS etc.)</string>
-    <string name="str_CH05e_two">Physical/in-person activities only (child goes to school to attend classes)	</string>
+    <string name="str_CH05e_two">Physical/in-person activities only (child goes to school to attend classes)</string>
     <string name="str_CH05e_three">Hybrid (both online/remote and in-person activities</string>
-    <string name="str_CH05f">Does [child name] have textbooks for the current grade?</string>
-    <string name="str_CH06a">Was [child name] ever enrolled in school?</string>
-    <string name="str_reasonToDrop">What was the main reason [child name] dropped out?</string>
+    <string name="str_CH05f">Does child have textbooks for the current grade?</string>
+    <string name="str_CH06a">Was child ever enrolled in school?</string>
+    <string name="str_reasonToDrop">What was the main reason child dropped out?</string>
     <string name="str_reasonToDrop_one">Could not afford the fees</string>
     <string name="str_reasonToDrop_two">School closed down</string>
     <string name="str_reasonToDrop_three">Was not promoted so discontinued</string>
@@ -108,14 +132,28 @@
     <string name="str_reasonToDrop_five">Not interested anymore</string>
     <string name="str_reasonToDrop_six">Other</string>
     <string name="str_reasonToDrop_seven">Don\'t know</string>
-    <string name="str_CH07">Was [child name] ever enrolled in a pre-primary/nursery class?</string>
-    <string name="str_CH08">Does [child name] take any paid tuition class (coaching) currently?</string>
+    <string name="str_CH07">Was child ever enrolled in a pre-primary/nursery class?</string>
+    <string name="str_CH08">Does child take any paid tuition class (coaching) currently?</string>
 
     <string name="add_parent_information">Add Parent Information</string>
+    <string name="parent_information">Parent Information</string>
+    <string name="mothers_details">Mother\'s Detail</string>
+    <string name="fathers_details">Father\'s Detail</string>
     <string name="hint_motherName">Mother\'s Name <font color='#FF0000'>*</font></string>
     <string name="hint_fatherName">Father\'s Name <font color='#FF0000'>*</font></string>
+    <string name="str_motherName">Mother\'s Name </string>
+    <string name="str_fatherName">Father\'s Name </string>
+    <string name="str_PT01b">Mother\'s Age</string>
+    <string name="str_PT02b">Father\'s Age</string>
+    <string name="str_PT01d">Mother\'s Grade</string>
+    <string name="str_PT02d">Father\'s Grade</string>
+    <string name="str_mother">Mother</string>
+    <string name="str_father">Father</string>
+    <string name="str_both">Both</string>
     <string name="str_PT01c">Has the mother ever attended school?</string>
+    <string name="str_PT02c">Has the father ever attended school?</string>
     <string name="str_PT01e">Does the mother have an income generating work/job?</string>
+    <string name="str_PT02e">Does the father have an income generating work/job?</string>
     <string name="str_PT01f">What kind?</string>
     <string name="str_PT01f_one">Agricultural or related work that is family/self owned</string>
     <string name="str_PT01f_two">Agricultural or related work that is owned by someone else</string>

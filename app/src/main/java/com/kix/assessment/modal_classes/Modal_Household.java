@@ -13,13 +13,13 @@ public class Modal_Household implements Comparable, Parcelable {
     public int hhId;
     public String householdId;
     public String householdName;
-    public String HH01;
-    public String HH02;
-    public String HH03;
-    public String HH04;
-    public String HH05a;
-    public String HH05b;
-    public String HH06;
+    public String HH01;//Name of the respondent
+    public String HH02;//Name of the householdhead
+    public String HH03;//Number of members regularly living in the household
+    public String HH04;//Telephone/Mobile number of the household
+    public String HH05a;//Does the HH have children (living regularly) in the age group 4-10 years?
+    public String HH05b;//If yes in HH05a, how many?
+    public String HH06;//What language do you speak at home, most often with your children?
     public String createdOn;
     public String villageId;
     public String svrCode;

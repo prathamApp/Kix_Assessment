@@ -213,8 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:checkedButton="@id/rb_HH05a_No">
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rb_HH05a_yes"
@@ -273,7 +272,7 @@
                 android:id="@+id/til_HH06_houseLang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="What language do you speak at home, most often with your children?"
+                android:text="@string/str_HH06"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/_14sdp" />
 
@@ -284,8 +283,7 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:checkedButton="@id/rb_HH06_No">
+                android:weightSum="2">
 
                 <RadioButton
                     android:id="@+id/rb_HH06_same"
@@ -294,17 +292,17 @@
                     android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
                     android:buttonTint="@color/colorBtnGreenDark"
-                    android:text="Same as test"
+                    android:text="@string/str_HH06a"
                     android:textColor="@color/colorText" />
 
                 <RadioButton
-                    android:id="@+id/rb_HH06_No"
+                    android:id="@+id/rb_HH06_diff"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
                     android:buttonTint="@color/red"
-                    android:text="Different from test"
+                    android:text="@string/str_HH06b"
                     android:textColor="@color/colorText" />
             </RadioGroup>
         </LinearLayout>

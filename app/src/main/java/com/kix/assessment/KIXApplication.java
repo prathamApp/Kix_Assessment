@@ -11,7 +11,9 @@ import com.kix.assessment.dbclasses.dao.AbandonedScoreDao;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
+import com.kix.assessment.dbclasses.dao.HouseholdInformationDao;
 import com.kix.assessment.dbclasses.dao.LogDao;
+import com.kix.assessment.dbclasses.dao.ParentInformationDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.SessionDao;
 import com.kix.assessment.dbclasses.dao.StatusDao;
@@ -50,8 +52,10 @@ public class KIXApplication extends Application {
     private static final DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
 
     public static StudentDao studentDao;
+    public static ParentInformationDao parentInformationDao;
     public static SurveyorDao surveyorDao;
     public static HouseholdDao householdDao;
+    public static HouseholdInformationDao householdInformationDao;
     public static VillageDao villageDao;
     public static VillageInformationDao villageInformationDao;
     public static ContentDao contentDao;
@@ -97,8 +101,10 @@ public class KIXApplication extends Application {
     private void initializeDatabaseDaos() {
         final KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
         KIXApplication.studentDao = kixDatabase.getStudentDao();
+        KIXApplication.parentInformationDao = kixDatabase.getParentInformationDao();
         KIXApplication.surveyorDao = kixDatabase.getSurveyorDao();
         KIXApplication.householdDao = kixDatabase.getHouseholdDao();
+        KIXApplication.householdInformationDao = kixDatabase.getHouseholdInformationDao();
         KIXApplication.villageDao = kixDatabase.getVillageDao();
         KIXApplication.villageInformationDao = kixDatabase.getVillageInformationDao();
         KIXApplication.contentDao = kixDatabase.getContentDao();

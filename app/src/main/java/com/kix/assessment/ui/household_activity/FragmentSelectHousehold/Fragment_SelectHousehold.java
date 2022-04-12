@@ -1,6 +1,8 @@
 package com.kix.assessment.ui.household_activity.FragmentSelectHousehold;
 
 import static com.kix.assessment.KIXApplication.householdDao;
+import static com.kix.assessment.KIXApplication.householdInformationDao;
+import static com.kix.assessment.KIXApplication.villageInformationDao;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +22,9 @@ import com.kix.assessment.custom.flexbox.FlexboxLayoutManager;
 import com.kix.assessment.custom.flexbox.JustifyContent;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.Modal_HIF;
 import com.kix.assessment.modal_classes.Modal_Household;
+import com.kix.assessment.modal_classes.Modal_VIF;
 import com.kix.assessment.services.shared_preferences.FastSave;
 import com.kix.assessment.ui.attendance_activity.Activity_Attendance_;
 import com.kix.assessment.ui.fragment_profile.Fragment_Profile;
@@ -29,6 +33,8 @@ import com.kix.assessment.ui.household_activity.Fragment_AddHousehold;
 import com.kix.assessment.ui.household_activity.Fragment_AddHousehold_;
 import com.kix.assessment.ui.household_activity.household_information_form.Fragment_AddHouseholdInformation;
 import com.kix.assessment.ui.household_activity.household_information_form.Fragment_AddHouseholdInformation_;
+import com.kix.assessment.ui.household_activity.household_information_form.Fragment_HouseholdInformation;
+import com.kix.assessment.ui.household_activity.household_information_form.Fragment_HouseholdInformation_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -142,10 +148,16 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
     public void addHIF(final int position) {
         final Modal_Household modalHousehold = this.householdListAdapter.getitem(position);
         final Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.EDIT_VILLAGE, Kix_Constant.EDIT_VILLAGE);
+        bundle.putString(Kix_Constant.HOUSEHOLD_ID, modalHousehold.householdId);
+        bundle.putString(Kix_Constant.VILLAGE_ID, modalHousehold.villageId);
 
-        KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHouseholdInformation_(), R.id.household_frame,
+        Modal_HIF modal_hif = householdInformationDao.getHIFbyHouseholdId(modalHousehold.householdId);
+        if (modal_hif!=null)
+            KIX_Utility.showFragment(this.getActivity(), new Fragment_HouseholdInformation_(), R.id.household_frame,
                 bundle, Fragment_AddHouseholdInformation.class.getSimpleName());
+        else
+            KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHouseholdInformation_(), R.id.household_frame,
+                bundle, Fragment_HouseholdInformation.class.getSimpleName());
     }
 
     @Click(R.id.fab_profile)

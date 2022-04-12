@@ -10,6 +10,8 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -20,6 +22,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,14 +100,14 @@ public class Fragment_AddStudent extends Fragment {
     LinearLayout ll_notEnrolledChildFields;
     @ViewById(R.id.ll_sub_CHo6a)
     LinearLayout ll_dropoutFields;
-
+    @ViewById(R.id.rl_CH05e)
+    RelativeLayout rl_kindOfActivities;
 
     @ViewById(R.id.btn_saveStudent)
     Button btn_saveStudent;
 
-
     String age, surveyorCode, householdID;
-    String schoolType, dropoutYear, standard;
+    String schoolType, dropoutYear, standard, dropoutStandard;
 
     public Dialog startExamDialog;
     Button dlg_yes, dlg_no;
@@ -149,16 +152,7 @@ public class Fragment_AddStudent extends Fragment {
         if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
             studId = getArguments().getString(STUDENT_ID);
             modalStudent = studentDao.getStudentByStudId(studId);
-            tv_label.setText(getResources().getString(R.string.edit_child_info));
-            et_studentName.setText(modalStudent.getCH01());
-
-            spinner_age.setSelection(adapterAge.getPosition("Age "+modalStudent.getCH03()));
-            spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH02()));
-/*            if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase(getResources().getString(R.string.enrolled))){
-                spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.getStudSchoolType()));
-            } else if(modalStudent.getStudEnrollmentStatus().equalsIgnoreCase(getResources().getString(R.string.drop_out))){
-                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.getStudDropoutYear()));
-            }*/
+            fetchChildDetails(modalStudent);
         }
 
         rg_isStudentEnrolled.setOnCheckedChangeListener((group, checkedId) ->
@@ -190,6 +184,14 @@ public class Fragment_AddStudent extends Fragment {
                 case R.id.rb_CH06a_No:
                     ll_dropoutFields.setVisibility(View.GONE);
                     break;
+            }
+        });
+
+        rg_schoolStatus.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == R.id.rb_CH05d_one) rl_kindOfActivities.setVisibility(View.VISIBLE);
+            else {
+                rl_kindOfActivities.setVisibility(View.GONE);
+                rg_schoolActivities.clearCheck();//todo test
             }
         });
 
@@ -234,6 +236,82 @@ public class Fragment_AddStudent extends Fragment {
         });*/
     }
 
+    private void fetchChildDetails(Modal_Student modalStudent) {
+        tv_label.setText(getResources().getString(R.string.edit_child_info));
+        btn_saveStudent.setText("EDIT");
+        btn_saveStudent.setVisibility(View.VISIBLE);
+        et_studentName.setText(modalStudent.getCH01());
+
+        spinner_age.setSelection(adapterAge.getPosition("Age " + modalStudent.getCH03()));
+        spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH02()));
+
+        if (modalStudent.CH04.equalsIgnoreCase(getString(R.string.yes))) {
+            isStudCurrentlyEnrolled = true;
+            rg_isStudentEnrolled.check(R.id.rb_CH04_yes);
+            ll_enrolledChildFields.setVisibility(View.VISIBLE);
+            spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH05a));
+            spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH05b));
+
+            if (modalStudent.CH05c.equalsIgnoreCase(getString(R.string.yes)))
+                rg_instructionLang.check(R.id.rb_CH05c_yes);
+            else rg_instructionLang.check(R.id.rb_CH05c_No);
+
+            if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_one))){
+                rl_kindOfActivities.setVisibility(View.VISIBLE);
+                rg_schoolStatus.check(R.id.rb_CH05d_one);
+
+                if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_one)))
+                    rg_schoolActivities.check(R.id.rb_CH05e_one);
+                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_two)))
+                    rg_schoolActivities.check(R.id.rb_CH05e_two);
+                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_three)))
+                    rg_schoolActivities.check(R.id.rb_CH05e_three);
+            }
+            else if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_two)))
+                rg_schoolStatus.check(R.id.rb_CH05d_two);
+            else rg_schoolStatus.check(R.id.rb_CH05d_three);
+
+            if (modalStudent.CH05f.equalsIgnoreCase(getString(R.string.yes)))
+                rg_haveTextbooks.check(R.id.rb_CH05f_yes);
+            else rg_haveTextbooks.check(R.id.rb_CH05f_No);
+        } else {
+            isStudCurrentlyEnrolled = false;
+            rg_isStudentEnrolled.check(R.id.rb_CH04_No);
+            ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+            if (modalStudent.CH06a.equalsIgnoreCase(getString(R.string.yes))) {
+                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_yes);
+                ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+                ll_dropoutFields.setVisibility(View.VISIBLE);
+                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH06b1));
+                spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH06b2));
+                if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_one)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_one);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_two)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_two);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_three)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_three);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_four)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_four);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_five)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_five);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_six)))
+                    rg_dropOutReason.check(R.id.rb_CH06b3_six);
+                else rg_dropOutReason.check(R.id.rb_CH06b3_seven);
+            } else {
+                ll_dropoutFields.setVisibility(View.GONE);
+                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_No);
+            }
+        }
+
+        if (modalStudent.CH07.equalsIgnoreCase(getString(R.string.yes)))
+            rg_everEnrolledInNursary.check(R.id.rb_CH07_yes);
+        else rg_everEnrolledInNursary.check(R.id.rb_CH07_No);
+
+        if (modalStudent.CH08.equalsIgnoreCase(getString(R.string.yes)))
+            rg_paidTution.check(R.id.rb_CH08_yes);
+        else rg_paidTution.check(R.id.rb_CH08_No);
+    }
+
     @ItemSelect(R.id.spn_CH03)
     public void ageSelect(boolean sel) {
         KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
@@ -251,16 +329,15 @@ public class Fragment_AddStudent extends Fragment {
 
     @Click(R.id.btn_saveStudent)
     public void saveStudent() {
+        getSelectedAge();
+        getSpinnerValues();
+        getRadioButtonValues();
+
         if (!et_studentName.getText().toString().isEmpty()) {
             if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                getSelectedAge();
-                getSpinnerValues();
-           /*         studentDao.updateStudent(et_studentName.getText().toString(), age,
-                            spinner_gender.getSelectedItem().toString(), standard,
-                            spinner_enrollStatue.getSelectedItem().toString(),
-                            schoolType, dropoutYear, studId);*/
-                Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
-                getFragmentManager().popBackStack();
+                insertStudent();
+//                Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+//                getFragmentManager().popBackStack();
             } else
                 insertStudent();
         } else {
@@ -269,49 +346,96 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     private void insertStudent() {
-        getSelectedAge();
-        getSpinnerValues();
-        getRadioButtonValues();
 
-            if (isStudCurrentlyEnrolled) {
-                str_CH05a = standard;
-                str_CH05b = schoolType;
+        if (isStudCurrentlyEnrolled) {
+            str_CH05a = standard;
+            str_CH05b = schoolType;
 
-                if(rb_CH05c==null) str_CH05c="";
-                else str_CH05c = rb_CH05c.getText().toString();
-
-                if(rb_CH05d==null) str_CH05d="";
-                else str_CH05d = rb_CH05d.getText().toString();
-
-                if(rb_CH05e==null) str_CH05e="";
+            if (rb_CH05c == null || rb_CH05d == null || rb_CH05f == null ||
+                    rb_CH07 == null || rb_CH08 == null) {
+                Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            } else {
+                str_CH05c = rb_CH05c.getText().toString();
+                str_CH05d = rb_CH05d.getText().toString();
+                if (rb_CH05e == null) str_CH05e = "NA";
                 else str_CH05e = rb_CH05e.getText().toString();
-
-                if(rb_CH05f==null) str_CH05f="";
-                else str_CH05f = rb_CH05f.getText().toString();
+                str_CH05f = rb_CH05f.getText().toString();
 
                 str_CH06a = "";
                 str_CH06b1 = "";
                 str_CH06b2 = "";
                 str_CH06b3 = "";
-            } else
-                {
-                str_CH05a = "";
-                str_CH05b = "";
-                str_CH05c = "";
-                str_CH05d = "";
-                str_CH05e = "";
-                str_CH05f = "";
-
-                if(rb_CH06a==null) str_CH06a="";
-                else str_CH06a = rb_CH06a.getText().toString();
-
-                str_CH06b1 = dropoutYear;
-                str_CH06b2 = standard;
-
-                if(rb_CH06b3==null) str_CH06b3="";
-                else str_CH06b3 = rb_CH06b3.getText().toString();
+                if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                    studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
+                            rb_CH04.getText().toString(),
+                            str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
+                            str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
+                            rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                            studId);
+                    BackupDatabase.backup(getActivity());
+                    Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                    getFragmentManager().popBackStack();
+                } else insertStud();
             }
+        } else {
+            str_CH05a = "";
+            str_CH05b = "";
+            str_CH05c = "";
+            str_CH05d = "";
+            str_CH05e = "";
+            str_CH05f = "";
 
+            if (rb_CH06a == null || rb_CH07 == null || rb_CH08 == null) {
+                Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+            } else {
+                str_CH06a = rb_CH06a.getText().toString();
+                if (str_CH06a.equalsIgnoreCase("yes")) {
+                    str_CH06b1 = dropoutYear;
+                    str_CH06b2 = dropoutStandard;
+
+                    if (rb_CH06b3 == null) {
+                        Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                    } else {
+                        str_CH06b3 = rb_CH06b3.getText().toString();
+                        if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                            studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
+                                    rb_CH04.getText().toString(),
+                                    str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
+                                    str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
+                                    rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                                    studId);
+                            BackupDatabase.backup(getActivity());
+                            Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                            getFragmentManager().popBackStack();
+                        } else insertStud();
+                    }
+                } else {
+                    if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                        studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
+                                rb_CH04.getText().toString(),
+                                str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
+                                str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
+                                rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                                studId);
+                        BackupDatabase.backup(getActivity());
+                        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                        getFragmentManager().popBackStack();
+                    } else insertStud();
+                }
+            }
+        }
+
+/*        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
+        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
+        startActivity(intent);*/
+    }
+
+    private void updateStudent() {
+        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void insertStud() {
         String sId = KIX_Utility.getUUID().toString();
         Log.d("TAG", "insertStudent: " + sId);
         Modal_Student modal_student = new Modal_Student();
@@ -341,10 +465,7 @@ public class Fragment_AddStudent extends Fragment {
         BackupDatabase.backup(getActivity());
         Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
         startDialog(modal_student);
-/*        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
-        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-        intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
-        startActivity(intent);*/
+
     }
 
     private void getSelectedAge() {
@@ -367,9 +488,12 @@ public class Fragment_AddStudent extends Fragment {
 
         if (spinner_class.getSelectedItemPosition() == 0) standard = "NA";
         else standard = spinner_class.getSelectedItem().toString();
+
+        if (spinner_dropout_class.getSelectedItemPosition() == 0) dropoutStandard = "NA";
+        else dropoutStandard = spinner_dropout_class.getSelectedItem().toString();
     }
 
-    public void getRadioButtonValues(){
+    public void getRadioButtonValues() {
         int selectedCH04 = rg_isStudentEnrolled.getCheckedRadioButtonId();
         int selectedCH05c = rg_instructionLang.getCheckedRadioButtonId();
         int selectedCH05d = rg_schoolStatus.getCheckedRadioButtonId();

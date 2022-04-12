@@ -12,6 +12,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import com.kix.assessment.R;
 import org.androidannotations.api.bean.BeanHolder;
@@ -54,14 +55,29 @@ public final class Fragment_AddHouseholdInformation_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
-        ll_V06b = null;
-        ch1_V06b = null;
-        ch2_V06b = null;
-        ch3_V06b = null;
-        ll_V07b = null;
-        ch1_V07b = null;
-        ch2_V07b = null;
-        ch3_V07b = null;
+        tv_title = null;
+        rg_hhRoofing = null;
+        rg_hhWall = null;
+        rg_lightSource = null;
+        rg_waterSource = null;
+        rg_electricity = null;
+        rg_toilet = null;
+        rg_memberCompletedDiploma = null;
+        rg_readingMaterial = null;
+        rg_computer = null;
+        rg_television = null;
+        rg_radio = null;
+        rg_mobile = null;
+        rg_isItSmartphone = null;
+        rg_fourWheeler = null;
+        rg_twoWheeler = null;
+        rg_bicycle = null;
+        rl_isItSmartphone = null;
+        til_HH07c = null;
+        til_HH07d = null;
+        et_HH07c_other = null;
+        et_HH07d_other = null;
+        btn_save = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -90,14 +106,39 @@ public final class Fragment_AddHouseholdInformation_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.ll_V06b = hasViews.internalFindViewById(R.id.ll_V06b);
-        this.ch1_V06b = hasViews.internalFindViewById(R.id.ch1_V06b);
-        this.ch2_V06b = hasViews.internalFindViewById(R.id.ch2_V06b);
-        this.ch3_V06b = hasViews.internalFindViewById(R.id.ch3_V06b);
-        this.ll_V07b = hasViews.internalFindViewById(R.id.ll_V07b);
-        this.ch1_V07b = hasViews.internalFindViewById(R.id.ch1_V07b);
-        this.ch2_V07b = hasViews.internalFindViewById(R.id.ch2_V07b);
-        this.ch3_V07b = hasViews.internalFindViewById(R.id.ch3_V07b);
+        this.tv_title = hasViews.internalFindViewById(R.id.tv_title);
+        this.rg_hhRoofing = hasViews.internalFindViewById(R.id.rg_HH07a);
+        this.rg_hhWall = hasViews.internalFindViewById(R.id.rg_HH07b);
+        this.rg_lightSource = hasViews.internalFindViewById(R.id.rg_HH07c);
+        this.rg_waterSource = hasViews.internalFindViewById(R.id.rg_HH07d);
+        this.rg_electricity = hasViews.internalFindViewById(R.id.rg_HH07e);
+        this.rg_toilet = hasViews.internalFindViewById(R.id.rg_HH07f);
+        this.rg_memberCompletedDiploma = hasViews.internalFindViewById(R.id.rg_HH07g);
+        this.rg_readingMaterial = hasViews.internalFindViewById(R.id.rg_HH07h);
+        this.rg_computer = hasViews.internalFindViewById(R.id.rg_HH07i);
+        this.rg_television = hasViews.internalFindViewById(R.id.rg_HH07j);
+        this.rg_radio = hasViews.internalFindViewById(R.id.rg_HH07k);
+        this.rg_mobile = hasViews.internalFindViewById(R.id.rg_HH07l);
+        this.rg_isItSmartphone = hasViews.internalFindViewById(R.id.rg_HH07m);
+        this.rg_fourWheeler = hasViews.internalFindViewById(R.id.rg_HH07n);
+        this.rg_twoWheeler = hasViews.internalFindViewById(R.id.rg_HH07o);
+        this.rg_bicycle = hasViews.internalFindViewById(R.id.rg_HH07p);
+        this.rl_isItSmartphone = hasViews.internalFindViewById(R.id.rl_HH07m);
+        this.til_HH07c = hasViews.internalFindViewById(R.id.til_HH07c);
+        this.til_HH07d = hasViews.internalFindViewById(R.id.til_HH07d);
+        this.et_HH07c_other = hasViews.internalFindViewById(R.id.et_HH07c_other);
+        this.et_HH07d_other = hasViews.internalFindViewById(R.id.et_HH07d_other);
+        this.btn_save = hasViews.internalFindViewById(R.id.btn_save);
+        if (this.btn_save!= null) {
+            this.btn_save.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_AddHouseholdInformation_.this.saveHIF();
+                }
+            }
+            );
+        }
         initialize();
     }
 

@@ -85,6 +85,7 @@ public final class Fragment_AddStudent_
         ll_enrolledChildFields = null;
         ll_notEnrolledChildFields = null;
         ll_dropoutFields = null;
+        rl_kindOfActivities = null;
         btn_saveStudent = null;
     }
 
@@ -136,6 +137,7 @@ public final class Fragment_AddStudent_
         this.ll_enrolledChildFields = hasViews.internalFindViewById(R.id.ll_enrolledChildFields);
         this.ll_notEnrolledChildFields = hasViews.internalFindViewById(R.id.ll_notEnrolledChildFields);
         this.ll_dropoutFields = hasViews.internalFindViewById(R.id.ll_sub_CHo6a);
+        this.rl_kindOfActivities = hasViews.internalFindViewById(R.id.rl_CH05e);
         this.btn_saveStudent = hasViews.internalFindViewById(R.id.btn_saveStudent);
         View view_rl_parentLayout = hasViews.internalFindViewById(R.id.rl_parentLayout);
 

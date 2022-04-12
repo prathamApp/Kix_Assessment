@@ -34,90 +34,90 @@ public final class StudentDao_Impl implements StudentDao {
       @Override
       public void bind(SupportSQLiteStatement stmt, Modal_Student value) {
         stmt.bindLong(1, value.sId);
-        if (value.getStudentId() == null) {
+        if (value.studentId == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getStudentId());
+          stmt.bindString(2, value.studentId);
         }
-        if (value.getCH01() == null) {
+        if (value.CH01 == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getCH01());
+          stmt.bindString(3, value.CH01);
         }
-        if (value.getCH02() == null) {
+        if (value.CH02 == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getCH02());
+          stmt.bindString(4, value.CH02);
         }
-        if (value.getCH03() == null) {
+        if (value.CH03 == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getCH03());
+          stmt.bindString(5, value.CH03);
         }
-        if (value.getCH04() == null) {
+        if (value.CH04 == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getCH04());
+          stmt.bindString(6, value.CH04);
         }
-        if (value.getCH05a() == null) {
+        if (value.CH05a == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getCH05a());
+          stmt.bindString(7, value.CH05a);
         }
-        if (value.getCH05b() == null) {
+        if (value.CH05b == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getCH05b());
+          stmt.bindString(8, value.CH05b);
         }
-        if (value.getCH05c() == null) {
+        if (value.CH05c == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getCH05c());
+          stmt.bindString(9, value.CH05c);
         }
-        if (value.getCH05d() == null) {
+        if (value.CH05d == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getCH05d());
+          stmt.bindString(10, value.CH05d);
         }
-        if (value.getCH05e() == null) {
+        if (value.CH05e == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getCH05e());
+          stmt.bindString(11, value.CH05e);
         }
-        if (value.getCH05f() == null) {
+        if (value.CH05f == null) {
           stmt.bindNull(12);
         } else {
-          stmt.bindString(12, value.getCH05f());
+          stmt.bindString(12, value.CH05f);
         }
-        if (value.getCH06a() == null) {
+        if (value.CH06a == null) {
           stmt.bindNull(13);
         } else {
-          stmt.bindString(13, value.getCH06a());
+          stmt.bindString(13, value.CH06a);
         }
-        if (value.getCH06b1() == null) {
+        if (value.CH06b1 == null) {
           stmt.bindNull(14);
         } else {
-          stmt.bindString(14, value.getCH06b1());
+          stmt.bindString(14, value.CH06b1);
         }
-        if (value.getCH06b2() == null) {
+        if (value.CH06b2 == null) {
           stmt.bindNull(15);
         } else {
-          stmt.bindString(15, value.getCH06b2());
+          stmt.bindString(15, value.CH06b2);
         }
-        if (value.getCH06b3() == null) {
+        if (value.CH06b3 == null) {
           stmt.bindNull(16);
         } else {
-          stmt.bindString(16, value.getCH06b3());
+          stmt.bindString(16, value.CH06b3);
         }
-        if (value.getCH07() == null) {
+        if (value.CH07 == null) {
           stmt.bindNull(17);
         } else {
-          stmt.bindString(17, value.getCH07());
+          stmt.bindString(17, value.CH07);
         }
-        if (value.getCH08() == null) {
+        if (value.CH08 == null) {
           stmt.bindNull(18);
         } else {
-          stmt.bindString(18, value.getCH08());
+          stmt.bindString(18, value.CH08);
         }
         if (value.createdOn == null) {
           stmt.bindNull(19);
@@ -147,7 +147,7 @@ public final class StudentDao_Impl implements StudentDao {
     this.__preparedStmtOfUpdateStudent = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "update Student set CH01=?, CH02=?, CH03=?,CH05a=?, CH04=?, CH05b=?,CH06b1=?, sentFlag=0 where studentId=?";
+        final String _query = "update Student set CH01=?, CH02=?, CH03=?, CH04=?, CH05a=?, CH05b=?,CH05c=?, CH05d=?, CH05e=?, CH05f=?, CH06a=?,CH06b1=?, CH06b2=?, CH06b3=?, CH07=?, CH08=?, sentFlag=0 where studentId=?";
         return _query;
       }
     };
@@ -178,8 +178,11 @@ public final class StudentDao_Impl implements StudentDao {
   }
 
   @Override
-  public void updateStudent(String studName, String studAge, String studGender, String studClass,
-      String studEnrollment, String studSchoolType, String studDropoutYear, String sId) {
+  public void updateStudent(String studName, String studAge, String studGender,
+      String studEnrollment, String studClass, String studSchoolType, String instructionLang,
+      String schoolStatus, String schoolActivities, String haveTextBooks,
+      String isStudentEverEnrolled, String studDropoutYear, String studDropoutGrade,
+      String dropoutReason, String everEnrolledInNursary, String paidTution, String sId) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateStudent.acquire();
     __db.beginTransaction();
     try {
@@ -202,16 +205,16 @@ public final class StudentDao_Impl implements StudentDao {
         _stmt.bindString(_argIndex, studGender);
       }
       _argIndex = 4;
-      if (studClass == null) {
-        _stmt.bindNull(_argIndex);
-      } else {
-        _stmt.bindString(_argIndex, studClass);
-      }
-      _argIndex = 5;
       if (studEnrollment == null) {
         _stmt.bindNull(_argIndex);
       } else {
         _stmt.bindString(_argIndex, studEnrollment);
+      }
+      _argIndex = 5;
+      if (studClass == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, studClass);
       }
       _argIndex = 6;
       if (studSchoolType == null) {
@@ -220,12 +223,66 @@ public final class StudentDao_Impl implements StudentDao {
         _stmt.bindString(_argIndex, studSchoolType);
       }
       _argIndex = 7;
+      if (instructionLang == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, instructionLang);
+      }
+      _argIndex = 8;
+      if (schoolStatus == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, schoolStatus);
+      }
+      _argIndex = 9;
+      if (schoolActivities == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, schoolActivities);
+      }
+      _argIndex = 10;
+      if (haveTextBooks == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, haveTextBooks);
+      }
+      _argIndex = 11;
+      if (isStudentEverEnrolled == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, isStudentEverEnrolled);
+      }
+      _argIndex = 12;
       if (studDropoutYear == null) {
         _stmt.bindNull(_argIndex);
       } else {
         _stmt.bindString(_argIndex, studDropoutYear);
       }
-      _argIndex = 8;
+      _argIndex = 13;
+      if (studDropoutGrade == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, studDropoutGrade);
+      }
+      _argIndex = 14;
+      if (dropoutReason == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, dropoutReason);
+      }
+      _argIndex = 15;
+      if (everEnrolledInNursary == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, everEnrolledInNursary);
+      }
+      _argIndex = 16;
+      if (paidTution == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, paidTution);
+      }
+      _argIndex = 17;
       if (sId == null) {
         _stmt.bindNull(_argIndex);
       } else {
@@ -283,57 +340,23 @@ public final class StudentDao_Impl implements StudentDao {
       if(_cursor.moveToFirst()) {
         _result = new Modal_Student();
         _result.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _result.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _result.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _result.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _result.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _result.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _result.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _result.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _result.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _result.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _result.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _result.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _result.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _result.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _result.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _result.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _result.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _result.setCH08(_tmpCH08);
+        _result.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _result.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _result.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _result.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _result.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _result.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _result.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _result.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _result.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _result.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _result.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _result.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _result.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _result.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _result.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _result.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _result.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _result.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
@@ -393,57 +416,23 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _item.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _item.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _item.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _item.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _item.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _item.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _item.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _item.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _item.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _item.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _item.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _item.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _item.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _item.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _item.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _item.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _item.setCH08(_tmpCH08);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _item.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _item.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _item.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _item.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _item.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _item.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _item.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _item.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _item.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _item.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _item.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _item.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _item.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _item.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _item.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
@@ -503,57 +492,23 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _item.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _item.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _item.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _item.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _item.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _item.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _item.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _item.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _item.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _item.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _item.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _item.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _item.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _item.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _item.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _item.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _item.setCH08(_tmpCH08);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _item.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _item.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _item.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _item.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _item.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _item.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _item.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _item.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _item.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _item.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _item.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _item.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _item.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _item.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _item.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
@@ -606,57 +561,23 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _item.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _item.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _item.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _item.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _item.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _item.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _item.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _item.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _item.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _item.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _item.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _item.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _item.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _item.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _item.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _item.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _item.setCH08(_tmpCH08);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _item.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _item.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _item.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _item.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _item.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _item.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _item.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _item.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _item.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _item.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _item.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _item.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _item.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _item.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _item.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
@@ -703,57 +624,23 @@ public final class StudentDao_Impl implements StudentDao {
         final Modal_Student _item;
         _item = new Modal_Student();
         _item.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _item.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _item.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _item.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _item.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _item.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _item.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _item.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _item.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _item.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _item.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _item.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _item.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _item.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _item.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _item.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _item.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _item.setCH08(_tmpCH08);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _item.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _item.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _item.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _item.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _item.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _item.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _item.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _item.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _item.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _item.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _item.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _item.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _item.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _item.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _item.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
@@ -805,57 +692,23 @@ public final class StudentDao_Impl implements StudentDao {
       if(_cursor.moveToFirst()) {
         _result = new Modal_Student();
         _result.sId = _cursor.getInt(_cursorIndexOfSId);
-        final String _tmpStudentId;
-        _tmpStudentId = _cursor.getString(_cursorIndexOfStudentId);
-        _result.setStudentId(_tmpStudentId);
-        final String _tmpCH01;
-        _tmpCH01 = _cursor.getString(_cursorIndexOfCH01);
-        _result.setCH01(_tmpCH01);
-        final String _tmpCH02;
-        _tmpCH02 = _cursor.getString(_cursorIndexOfCH02);
-        _result.setCH02(_tmpCH02);
-        final String _tmpCH03;
-        _tmpCH03 = _cursor.getString(_cursorIndexOfCH03);
-        _result.setCH03(_tmpCH03);
-        final String _tmpCH04;
-        _tmpCH04 = _cursor.getString(_cursorIndexOfCH04);
-        _result.setCH04(_tmpCH04);
-        final String _tmpCH05a;
-        _tmpCH05a = _cursor.getString(_cursorIndexOfCH05a);
-        _result.setCH05a(_tmpCH05a);
-        final String _tmpCH05b;
-        _tmpCH05b = _cursor.getString(_cursorIndexOfCH05b);
-        _result.setCH05b(_tmpCH05b);
-        final String _tmpCH05c;
-        _tmpCH05c = _cursor.getString(_cursorIndexOfCH05c);
-        _result.setCH05c(_tmpCH05c);
-        final String _tmpCH05d;
-        _tmpCH05d = _cursor.getString(_cursorIndexOfCH05d);
-        _result.setCH05d(_tmpCH05d);
-        final String _tmpCH05e;
-        _tmpCH05e = _cursor.getString(_cursorIndexOfCH05e);
-        _result.setCH05e(_tmpCH05e);
-        final String _tmpCH05f;
-        _tmpCH05f = _cursor.getString(_cursorIndexOfCH05f);
-        _result.setCH05f(_tmpCH05f);
-        final String _tmpCH06a;
-        _tmpCH06a = _cursor.getString(_cursorIndexOfCH06a);
-        _result.setCH06a(_tmpCH06a);
-        final String _tmpCH06b1;
-        _tmpCH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
-        _result.setCH06b1(_tmpCH06b1);
-        final String _tmpCH06b2;
-        _tmpCH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
-        _result.setCH06b2(_tmpCH06b2);
-        final String _tmpCH06b3;
-        _tmpCH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
-        _result.setCH06b3(_tmpCH06b3);
-        final String _tmpCH07;
-        _tmpCH07 = _cursor.getString(_cursorIndexOfCH07);
-        _result.setCH07(_tmpCH07);
-        final String _tmpCH08;
-        _tmpCH08 = _cursor.getString(_cursorIndexOfCH08);
-        _result.setCH08(_tmpCH08);
+        _result.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _result.CH01 = _cursor.getString(_cursorIndexOfCH01);
+        _result.CH02 = _cursor.getString(_cursorIndexOfCH02);
+        _result.CH03 = _cursor.getString(_cursorIndexOfCH03);
+        _result.CH04 = _cursor.getString(_cursorIndexOfCH04);
+        _result.CH05a = _cursor.getString(_cursorIndexOfCH05a);
+        _result.CH05b = _cursor.getString(_cursorIndexOfCH05b);
+        _result.CH05c = _cursor.getString(_cursorIndexOfCH05c);
+        _result.CH05d = _cursor.getString(_cursorIndexOfCH05d);
+        _result.CH05e = _cursor.getString(_cursorIndexOfCH05e);
+        _result.CH05f = _cursor.getString(_cursorIndexOfCH05f);
+        _result.CH06a = _cursor.getString(_cursorIndexOfCH06a);
+        _result.CH06b1 = _cursor.getString(_cursorIndexOfCH06b1);
+        _result.CH06b2 = _cursor.getString(_cursorIndexOfCH06b2);
+        _result.CH06b3 = _cursor.getString(_cursorIndexOfCH06b3);
+        _result.CH07 = _cursor.getString(_cursorIndexOfCH07);
+        _result.CH08 = _cursor.getString(_cursorIndexOfCH08);
         _result.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.householdId = _cursor.getString(_cursorIndexOfHouseholdId);

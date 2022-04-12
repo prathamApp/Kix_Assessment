@@ -45,6 +45,7 @@ public class Kix_Constant {
     public static final String EDIT_VILLAGE = "editVillage";
     public static final String EDIT_SURVEYOR = "editSurveyor";
     public static final String EDIT_HOUSEHOLD = "editHousehold";
+    public static final String EDIT_PARENT = "editParent";
     public static String STORING_IN = "";
     public static final String HELPER_FOLDER = "helper";
     public static final String ALL_AGE = "All Ages";

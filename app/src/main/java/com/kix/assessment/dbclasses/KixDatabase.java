@@ -17,7 +17,9 @@ import com.kix.assessment.dbclasses.dao.AbandonedScoreDao;
 import com.kix.assessment.dbclasses.dao.AttendanceDao;
 import com.kix.assessment.dbclasses.dao.ContentDao;
 import com.kix.assessment.dbclasses.dao.HouseholdDao;
+import com.kix.assessment.dbclasses.dao.HouseholdInformationDao;
 import com.kix.assessment.dbclasses.dao.LogDao;
+import com.kix.assessment.dbclasses.dao.ParentInformationDao;
 import com.kix.assessment.dbclasses.dao.ScoreDao;
 import com.kix.assessment.dbclasses.dao.SessionDao;
 import com.kix.assessment.dbclasses.dao.StatusDao;
@@ -28,8 +30,10 @@ import com.kix.assessment.dbclasses.dao.VillageInformationDao;
 import com.kix.assessment.modal_classes.AbandonedScore;
 import com.kix.assessment.modal_classes.Attendance;
 import com.kix.assessment.modal_classes.Modal_Content;
+import com.kix.assessment.modal_classes.Modal_HIF;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
+import com.kix.assessment.modal_classes.Modal_PIF;
 import com.kix.assessment.modal_classes.Modal_Session;
 import com.kix.assessment.modal_classes.Modal_Status;
 import com.kix.assessment.modal_classes.Modal_Student;
@@ -41,7 +45,7 @@ import com.kix.assessment.modal_classes.Score;
 @Database(entities = {Modal_Student.class, Modal_Surveyor.class, Score.class,
         Modal_Content.class, Modal_Household.class, Modal_Log.class, Attendance.class,
         Modal_Session.class, Modal_Status.class, AbandonedScore.class, Modal_Village.class,
-        Modal_VIF.class},
+        Modal_VIF.class, Modal_HIF.class, Modal_PIF.class},
         version = 1, exportSchema = false)
 
 public abstract class KixDatabase extends RoomDatabase {
@@ -72,6 +76,10 @@ public abstract class KixDatabase extends RoomDatabase {
     public abstract VillageDao getVillageDao();
 
     public abstract VillageInformationDao getVillageInformationDao();
+
+    public abstract HouseholdInformationDao getHouseholdInformationDao();
+
+    public abstract ParentInformationDao getParentInformationDao();
 
 /*    static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override

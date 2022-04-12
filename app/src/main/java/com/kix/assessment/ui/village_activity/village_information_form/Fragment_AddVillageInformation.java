@@ -7,6 +7,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.UiThread;
@@ -29,8 +30,8 @@ import static com.kix.assessment.KIXApplication.villageInformationDao;
 @EFragment(R.layout.fragment_add_information_village)
 public class Fragment_AddVillageInformation extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
-//    @ViewById(R.id.ll_V06b)
-//    LinearLayout ll_V06b;
+    @ViewById(R.id.tv_title)
+    TextView tv_title;
 
     @ViewById(R.id.rg_V01)
     RadioGroup rg_haveRoad;
@@ -57,20 +58,20 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     LinearLayout ll_V06b;
 
     @ViewById(R.id.ch1_V06b)
-    CheckBox cb_v06bPvt;
-    @ViewById(R.id.ch2_V06b)
     CheckBox cb_v06bGovt;
-    @ViewById(R.id.ch3_V06b)
+    @ViewById(R.id.ch2_V06b)
     CheckBox cb_v06bPublic;
+    @ViewById(R.id.ch3_V06b)
+    CheckBox cb_v06bPvt;
 
     @ViewById(R.id.ll_V07b)
     LinearLayout ll_V07b;
     @ViewById(R.id.ch1_V07b)
-    CheckBox cb_v07bPvt;
-    @ViewById(R.id.ch2_V07b)
     CheckBox cb_v07bGovt;
-    @ViewById(R.id.ch3_V07b)
+    @ViewById(R.id.ch2_V07b)
     CheckBox cb_v07bPublic;
+    @ViewById(R.id.ch3_V07b)
+    CheckBox cb_v07bPvt;
 
     @ViewById(R.id.btn_save)
     Button btn_saveVIF;
@@ -82,7 +83,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     RadioButton rb_V01, rb_V02, rb_V03, rb_V04, rb_V05, rb_V06a, rb_V07a;
 
-    String str_v06b_schoolType="", str_v07b_schoolType="";
+    String str_v06b_schoolType = "", str_v07b_schoolType = "";
 
     public Fragment_AddVillageInformation() {
         // Required empty public constructor
@@ -94,6 +95,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
 
         if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            tv_title.setText("Edit Village Information");
 
             Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(villageId);
 
@@ -141,6 +143,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
                 case R.id.rb_V06a_No:
                     ll_V06b.setVisibility(View.GONE);
+                    cb_v06bGovt.setChecked(false);
+                    cb_v06bPvt.setChecked(false);
+                    cb_v06bPublic.setChecked(false);
                     break;
             }
         });
@@ -153,6 +158,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
                 case R.id.rb_V07a_No:
                     ll_V07b.setVisibility(View.GONE);
+                    cb_v07bGovt.setChecked(false);
+                    cb_v07bPvt.setChecked(false);
+                    cb_v07bPublic.setChecked(false);
                     break;
             }
         });
@@ -167,28 +175,42 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     @Click(R.id.btn_save)
     public void saveVIF() {
-        insertVIF();
+        getRadioButtonValues();
+        getCheckedBoxValues();
+        if (rb_V01 == null || rb_V02 == null || rb_V03 == null || rb_V04 == null || rb_V05 == null || rb_V06a == null || rb_V07a == null) {
+            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+        } else {
+            if (rb_V06a.getText().toString().equalsIgnoreCase(Kix_Constant.YES) &&
+                    rb_V07a.getText().toString().equalsIgnoreCase(Kix_Constant.YES)) {
+                if (str_v06b_schoolType.equalsIgnoreCase("") || str_v07b_schoolType.equalsIgnoreCase("")) {
+                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+                } else {
+                    insertVIF();
+                }
+            } else {
+                insertVIF();
+            }
+        }
     }
 
     @Click(R.id.btn_edit)
     public void editVIF() {
         getRadioButtonValues();
         getCheckedBoxValues();
-        villageInformationDao.updateVillage(
-                rb_V01.getText().toString(),
-                rb_V02.getText().toString(),
-                rb_V03.getText().toString(),
-                rb_V04.getText().toString(),
-                rb_V05.getText().toString(),
-                rb_V06a.getText().toString(),
-                str_v06b_schoolType,
-                rb_V07a.getText().toString(),
-                str_v07b_schoolType,
-                villageId);
-
-        BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "VillageInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
-        getFragmentManager().popBackStack();
+        if (rb_V01 == null || rb_V02 == null || rb_V03 == null || rb_V04 == null || rb_V05 == null || rb_V06a == null || rb_V07a == null) {
+            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+        } else {
+            if (rb_V06a.getText().toString().equalsIgnoreCase(Kix_Constant.YES) &&
+                    rb_V07a.getText().toString().equalsIgnoreCase(Kix_Constant.YES)) {
+                if (str_v06b_schoolType.equalsIgnoreCase("") || str_v07b_schoolType.equalsIgnoreCase("")) {
+                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+                } else {
+                    updateVIF();
+                }
+            } else {
+                updateVIF();
+            }
+        }
     }
 
     public void getRadioButtonValues() {
@@ -226,9 +248,6 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     }
 
     public void insertVIF() {
-        getRadioButtonValues();
-        getCheckedBoxValues();
-
         Modal_VIF modal_vif = new Modal_VIF();
         modal_vif.setV01(rb_V01.getText().toString());
         modal_vif.setV02(rb_V02.getText().toString());
@@ -250,6 +269,23 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         getFragmentManager().popBackStack();
     }
 
+    public void updateVIF(){
+        villageInformationDao.updateVillage(
+                rb_V01.getText().toString(),
+                rb_V02.getText().toString(),
+                rb_V03.getText().toString(),
+                rb_V04.getText().toString(),
+                rb_V05.getText().toString(),
+                rb_V06a.getText().toString(),
+                str_v06b_schoolType,
+                rb_V07a.getText().toString(),
+                str_v07b_schoolType,
+                villageId);
+
+        BackupDatabase.backup(getActivity());
+        Toast.makeText(getActivity(), "VillageInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        getFragmentManager().popBackStack();
+    }
     @Override
     public void onResume() {
         KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));

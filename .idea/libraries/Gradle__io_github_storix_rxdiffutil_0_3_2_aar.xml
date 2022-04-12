@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.github.storix:rxdiffutil:0.3.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e1a61183b81a7c06ffa89c505c68747/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e1a61183b81a7c06ffa89c505c68747/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e1a61183b81a7c06ffa89c505c68747/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/420f8540e09a7e90023e03f99099e8a2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/420f8540e09a7e90023e03f99099e8a2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/420f8540e09a7e90023e03f99099e8a2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/420f8540e09a7e90023e03f99099e8a2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

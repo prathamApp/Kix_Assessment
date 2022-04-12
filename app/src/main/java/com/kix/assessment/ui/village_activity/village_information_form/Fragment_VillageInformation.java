@@ -110,10 +110,6 @@ public class Fragment_VillageInformation extends Fragment {
         super.onResume();
     }
 
-    @UiThread
-    public void initializeAdapter() {
-    }
-
     @Click(R.id.fab_Edit_VIF)
     public void EditClicked() {
         final Bundle bundle = new Bundle();

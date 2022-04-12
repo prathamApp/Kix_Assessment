@@ -55,6 +55,7 @@ public final class Fragment_AddVillageInformation_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        tv_title = null;
         rg_haveRoad = null;
         rg_haveTransport = null;
         rg_haveElectricity = null;
@@ -63,13 +64,13 @@ public final class Fragment_AddVillageInformation_
         rg_havePrePrimSchool = null;
         rg_havePrimSchool = null;
         ll_V06b = null;
-        cb_v06bPvt = null;
         cb_v06bGovt = null;
         cb_v06bPublic = null;
+        cb_v06bPvt = null;
         ll_V07b = null;
-        cb_v07bPvt = null;
         cb_v07bGovt = null;
         cb_v07bPublic = null;
+        cb_v07bPvt = null;
         btn_saveVIF = null;
         btn_editVIF = null;
     }
@@ -100,6 +101,7 @@ public final class Fragment_AddVillageInformation_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.tv_title = hasViews.internalFindViewById(R.id.tv_title);
         this.rg_haveRoad = hasViews.internalFindViewById(R.id.rg_V01);
         this.rg_haveTransport = hasViews.internalFindViewById(R.id.rg_V02);
         this.rg_haveElectricity = hasViews.internalFindViewById(R.id.rg_V03);
@@ -108,13 +110,13 @@ public final class Fragment_AddVillageInformation_
         this.rg_havePrePrimSchool = hasViews.internalFindViewById(R.id.rg_V06a);
         this.rg_havePrimSchool = hasViews.internalFindViewById(R.id.rg_V07a);
         this.ll_V06b = hasViews.internalFindViewById(R.id.ll_V06b);
-        this.cb_v06bPvt = hasViews.internalFindViewById(R.id.ch1_V06b);
-        this.cb_v06bGovt = hasViews.internalFindViewById(R.id.ch2_V06b);
-        this.cb_v06bPublic = hasViews.internalFindViewById(R.id.ch3_V06b);
+        this.cb_v06bGovt = hasViews.internalFindViewById(R.id.ch1_V06b);
+        this.cb_v06bPublic = hasViews.internalFindViewById(R.id.ch2_V06b);
+        this.cb_v06bPvt = hasViews.internalFindViewById(R.id.ch3_V06b);
         this.ll_V07b = hasViews.internalFindViewById(R.id.ll_V07b);
-        this.cb_v07bPvt = hasViews.internalFindViewById(R.id.ch1_V07b);
-        this.cb_v07bGovt = hasViews.internalFindViewById(R.id.ch2_V07b);
-        this.cb_v07bPublic = hasViews.internalFindViewById(R.id.ch3_V07b);
+        this.cb_v07bGovt = hasViews.internalFindViewById(R.id.ch1_V07b);
+        this.cb_v07bPublic = hasViews.internalFindViewById(R.id.ch2_V07b);
+        this.cb_v07bPvt = hasViews.internalFindViewById(R.id.ch3_V07b);
         this.btn_saveVIF = hasViews.internalFindViewById(R.id.btn_save);
         this.btn_editVIF = hasViews.internalFindViewById(R.id.btn_edit);
         if (this.btn_saveVIF!= null) {

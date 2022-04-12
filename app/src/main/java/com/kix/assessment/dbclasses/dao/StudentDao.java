@@ -39,10 +39,12 @@ public interface StudentDao {
     @Query("update Student set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
 
-    @Query("update Student set CH01=:studName, CH02=:studAge, CH03=:studGender," +
-            "CH05a=:studClass, CH04=:studEnrollment, CH05b=:studSchoolType," +
-            "CH06b1=:studDropoutYear, sentFlag=0 where studentId=:sId")
-    void updateStudent(String studName, String studAge, String studGender, String studClass,
-                       String studEnrollment, String studSchoolType, String studDropoutYear, String sId);
+    @Query("update Student set CH01=:studName, CH02=:studAge, CH03=:studGender, CH04=:studEnrollment, CH05a=:studClass, CH05b=:studSchoolType," +
+            "CH05c=:instructionLang, CH05d=:schoolStatus, CH05e=:schoolActivities, CH05f=:haveTextBooks, CH06a=:isStudentEverEnrolled," +
+            "CH06b1=:studDropoutYear, CH06b2=:studDropoutGrade, CH06b3=:dropoutReason, CH07=:everEnrolledInNursary, CH08=:paidTution, sentFlag=0 where studentId=:sId")
+    void updateStudent(String studName, String studAge, String studGender, String studEnrollment, String studClass, String studSchoolType,
+                       String instructionLang, String schoolStatus, String schoolActivities, String haveTextBooks, String isStudentEverEnrolled,
+                       String studDropoutYear, String studDropoutGrade, String dropoutReason, String everEnrolledInNursary,
+                       String paidTution, String sId);
 
 }

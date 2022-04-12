@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -28,6 +29,9 @@ import static com.kix.assessment.KIXApplication.householdDao;
 
 @EFragment(R.layout.fragment_add_household)
 public class Fragment_AddHousehold extends Fragment {
+
+    @ViewById(R.id.tv_label)
+    TextView tv_title;
 
     @ViewById(R.id.et_HH00_hName)
     EditText et_householdName;
@@ -76,6 +80,7 @@ public class Fragment_AddHousehold extends Fragment {
         Log.e("hhh : ", householdId+" | "+villageId);
 
         if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
+            tv_title.setText("Edit Household");
             Modal_Household modal_household = householdDao.getHouseholdBySurveyorCode(householdId, villageId);
             et_householdName.setText(modal_household.getHouseholdName());
             et_respondentName.setText(modal_household.getHH01());
@@ -88,6 +93,10 @@ public class Fragment_AddHousehold extends Fragment {
                 rg_haveChildren.check(R.id.rb_HH05a_yes);
                 til_noOfChilds.setVisibility(View.VISIBLE);
             } else rg_haveChildren.check(R.id.rb_HH05a_No);
+
+            if (modal_household.getHH06().equalsIgnoreCase(getString(R.string.str_HH06a))){
+                rg_speakLang.check(R.id.rb_HH06_same);
+            } else rg_speakLang.check(R.id.rb_HH06_diff);
 
             btn_saveAndEdit.setText("Edit");
         }
@@ -107,29 +116,32 @@ public class Fragment_AddHousehold extends Fragment {
 
     @Click(R.id.btn_saveHousehold)
     public void saveHousehold() {
+        getRadioButtonValues();
         if(!et_householdName.getText().toString().isEmpty() && !et_respondentName.getText().toString().isEmpty()){
-            if(getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null){
-                getRadioButtonValues();
-                householdDao.updateHousehold(
-                        et_householdName.getText().toString(),
-                        et_respondentName.getText().toString(),
-                        et_houseHeadName.getText().toString(),
-                        et_memberCount.getText().toString(),
-                        et_telephoneNum.getText().toString(),
-                        rb_HH05a.getText().toString(),
-                        et_noOfChilds.getText().toString(),
-                        rb_HH06.getText().toString(),
-                        householdId,
-                        villageId);
-                Toast.makeText(this.getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
-                this.getFragmentManager().popBackStack();
+            if(rb_HH05a!=null && rb_HH06!=null) {
+                if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
+                    householdDao.updateHousehold(
+                            et_householdName.getText().toString(),
+                            et_respondentName.getText().toString(),
+                            et_houseHeadName.getText().toString(),
+                            et_memberCount.getText().toString(),
+                            et_telephoneNum.getText().toString(),
+                            rb_HH05a.getText().toString(),
+                            et_noOfChilds.getText().toString(),
+                            rb_HH06.getText().toString(),
+                            householdId,
+                            villageId);
+                    Toast.makeText(this.getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
+                    this.getFragmentManager().popBackStack();
+                } else {
+                    insertHousehold();
+                }
             } else {
-                insertHousehold();
+                Toast.makeText(getActivity(), "Please select radio button fields.", Toast.LENGTH_SHORT).show();
             }
         } else{
             Toast.makeText(getActivity(), "Household and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
         }
-
     }
     /*    if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
                 && !et_houseHoldState.getText().toString().isEmpty()) {

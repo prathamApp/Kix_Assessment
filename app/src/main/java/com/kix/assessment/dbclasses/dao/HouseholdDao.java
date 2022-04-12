@@ -30,6 +30,9 @@ public interface HouseholdDao {
     @Query("SELECT householdName FROM Household WHERE svrCode=:svrCode")
     List<String> getAllHouseholdNameBySurveyorCode(String svrCode);
 
+    @Query("SELECT * FROM Household WHERE householdId=:householdId")
+    Modal_Household getHouseholdByHouseholdId(String householdId);
+
 //    @Query("update Household set sentFlag=1 where householdId=:householdId")
 //    void updateSentHouseholdFlags(String householdId);
 
