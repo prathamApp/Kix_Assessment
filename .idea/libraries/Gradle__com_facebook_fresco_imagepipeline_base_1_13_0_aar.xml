@@ -2,11 +2,19 @@
   <library name="Gradle: com.facebook.fresco:imagepipeline-base:1.13.0@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15e734b77687fac88f665703176a77db/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9ec351b2abb02b9a4a34b638ed4b2ff/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d134cccdc6d2d6df23ca7848a7bcb76/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15e734b77687fac88f665703176a77db/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15e734b77687fac88f665703176a77db/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/15e734b77687fac88f665703176a77db/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9ec351b2abb02b9a4a34b638ed4b2ff/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9ec351b2abb02b9a4a34b638ed4b2ff/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9ec351b2abb02b9a4a34b638ed4b2ff/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d134cccdc6d2d6df23ca7848a7bcb76/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d134cccdc6d2d6df23ca7848a7bcb76/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d134cccdc6d2d6df23ca7848a7bcb76/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/imagepipeline-base/1.13.0/b980e841351b532bfa366fee4152699448bc5a20/imagepipeline-base-1.13.0-javadoc.jar!/" />

@@ -193,6 +193,9 @@
     <string name="all_age">All Ages</string>
     <string name="all_village">All Villages</string>
     <string name="edit">Edit</string>
+    <string name="str_government">Government</string>
+    <string name="str_public">Public</string>
+    <string name="str_private">Private</string>
 
     <string-array name="country_list">
         <item>Select Country</item>

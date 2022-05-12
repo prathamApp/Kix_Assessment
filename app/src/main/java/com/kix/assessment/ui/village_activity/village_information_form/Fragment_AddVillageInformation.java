@@ -122,6 +122,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
             if (modal_vif.getV06a().equalsIgnoreCase(Kix_Constant.YES)) {
                 rg_havePrePrimSchool.check(R.id.rb_V06a_yes);
                 ll_V06b.setVisibility(View.VISIBLE);
+                if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_government))) cb_v06bGovt.setChecked(true);
+                else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_private))) cb_v06bPvt.setChecked(true);
+                else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_public))) cb_v06bPublic.setChecked(true);
             } else {
                 rg_havePrePrimSchool.check(R.id.rb_V06a_No);
             }
@@ -129,6 +132,10 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
             if (modal_vif.getV07a().equalsIgnoreCase(Kix_Constant.YES)) {
                 rg_havePrimSchool.check(R.id.rb_V07a_yes);
                 ll_V07b.setVisibility(View.VISIBLE);
+                if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_government))) cb_v07bGovt.setChecked(true);
+                else if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_private))) cb_v07bPvt.setChecked(true);
+                else if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_public))) cb_v07bPublic.setChecked(true);
+
             } else rg_havePrimSchool.check(R.id.rb_V07a_No);
 
             btn_saveVIF.setVisibility(View.GONE);

@@ -3180,9 +3180,12 @@ string str_add_household_info
 string str_both
 string str_father
 string str_fatherName
+string str_government
 string str_household_info
 string str_mother
 string str_motherName
+string str_private
+string str_public
 string str_reasonToDrop
 string str_reasonToDrop_five
 string str_reasonToDrop_four

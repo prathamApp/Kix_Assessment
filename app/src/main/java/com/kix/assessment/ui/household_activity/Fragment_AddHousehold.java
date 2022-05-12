@@ -109,6 +109,7 @@ public class Fragment_AddHousehold extends Fragment {
 
                 case R.id.rb_HH05a_No:
                     til_noOfChilds.setVisibility(View.GONE);
+                    et_noOfChilds.setText("");
                     break;
             }
         });
