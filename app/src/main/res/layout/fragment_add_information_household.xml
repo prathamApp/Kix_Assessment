@@ -10,7 +10,7 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/add_hh_info"
         android:textAlignment="center"
         android:textColor="@color/colorText"
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07a"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07a"
@@ -63,9 +63,14 @@
                         android:id="@+id/rb_HH07a_one"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07a_one"
                         android:textColor="@color/light_black" />
 
@@ -73,9 +78,14 @@
                         android:id="@+id/rb_HH07a_two"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07a_two"
                         android:textColor="@color/light_black" />
 
@@ -83,9 +93,14 @@
                         android:id="@+id/rb_HH07a_three"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07a_three"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
@@ -111,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07b"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07b"
@@ -125,9 +140,14 @@
                         android:id="@+id/rb_HH07b_one"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07b_one"
                         android:textColor="@color/light_black" />
 
@@ -135,9 +155,14 @@
                         android:id="@+id/rb_HH07b_two"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07b_two"
                         android:textColor="@color/light_black" />
 
@@ -145,9 +170,14 @@
                         android:id="@+id/rb_HH07b_three"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07b_three"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
@@ -173,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07c"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07c"
@@ -187,9 +217,14 @@
                         android:id="@+id/rb_HH07c_one"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07c_one"
                         android:textColor="@color/light_black" />
 
@@ -197,9 +232,14 @@
                         android:id="@+id/rb_HH07c_two"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07c_two"
                         android:textColor="@color/light_black" />
 
@@ -207,9 +247,14 @@
                         android:id="@+id/rb_HH07c_three"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07c_three"
                         android:textColor="@color/light_black" />
 
@@ -217,9 +262,14 @@
                         android:id="@+id/rb_HH07c_four"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold"
                         android:text="@string/str_HH07c_four"
                         android:textColor="@color/light_black" />
                 </RadioGroup>
@@ -238,6 +288,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="@color/colorText" />
                 </com.google.android.material.textfield.TextInputLayout>
             </RelativeLayout>
@@ -262,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07d"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07d"
@@ -276,65 +327,106 @@
                         android:id="@+id/rb_HH07d_one"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_one"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_two"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_two"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_three"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_three"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_four"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_four"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_five"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_five"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_six"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_six"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                     <RadioButton
                         android:id="@+id/rb_HH07d_seven"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
+                        android:buttonTint="@color/colorSignBoard"
                         android:text="@string/str_HH07d_seven"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
                 </RadioGroup>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -351,6 +443,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="@color/colorText" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -389,7 +482,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07e"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07e"
@@ -403,21 +496,31 @@
                         android:id="@+id/rb_HH07e_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07e_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
                 </RadioGroup>
             </RelativeLayout>
 
@@ -441,7 +544,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07f"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07f"
@@ -455,21 +558,31 @@
                         android:id="@+id/rb_HH07f_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07f_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
                 </RadioGroup>
 
             </RelativeLayout>
@@ -494,7 +607,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07g"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07g"
@@ -508,21 +621,32 @@
                         android:id="@+id/rb_HH07g_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07g_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -547,7 +671,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07h"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07h"
@@ -561,21 +685,31 @@
                         android:id="@+id/rb_HH07h_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07h_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
                 </RadioGroup>
 
             </RelativeLayout>
@@ -600,7 +734,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07i"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07i"
@@ -614,21 +748,32 @@
                         android:id="@+id/rb_HH07i_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07i_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -653,7 +798,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07j"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07j"
@@ -667,21 +812,32 @@
                         android:id="@+id/rb_HH07j_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07j_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -706,7 +862,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07k"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07k"
@@ -720,21 +876,32 @@
                         android:id="@+id/rb_HH07k_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07k_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -759,7 +926,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07l"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07l"
@@ -773,21 +940,32 @@
                         android:id="@+id/rb_HH07l_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07l_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -813,7 +991,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07m"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07m"
@@ -827,21 +1005,32 @@
                         android:id="@+id/rb_HH07m_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07m_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -866,7 +1055,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07n"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07n"
@@ -880,21 +1069,32 @@
                         android:id="@+id/rb_HH07n_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07n_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -919,7 +1119,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07o"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07o"
@@ -933,21 +1133,32 @@
                         android:id="@+id/rb_HH07o_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07o_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>
@@ -972,7 +1183,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_HH07p"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_13sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
                     android:id="@+id/rg_HH07p"
@@ -986,21 +1197,32 @@
                         android:id="@+id/rb_HH07p_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorBtnGreenDark"
-                        android:text="Yes"
-                        android:textColor="@color/light_black" />
+                        android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07p_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="No"
-                        android:textColor="@color/light_black" />
+                        android:text="@string/no"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
                 </RadioGroup>
 
             </RelativeLayout>

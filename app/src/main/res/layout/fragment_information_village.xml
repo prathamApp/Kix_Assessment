@@ -9,7 +9,7 @@
         android:id="@+id/label_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/str_village_info"
         android:textAlignment="center"
         android:textColor="@color/colorText"
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V01"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V01_val"
@@ -53,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V01"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/rounder_bg_green"
                     android:gravity="center_vertical"
@@ -62,7 +63,7 @@
                     android:paddingBottom="@dimen/_1sdp"
                     android:text="Yes"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
             </RelativeLayout>
             <View style="@style/Divider"/>
@@ -83,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V02"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V02_val"
@@ -91,17 +92,18 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V02"
                     android:layout_alignParentEnd="true"
-                    android:text="Yes"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:paddingStart="@dimen/_10sdp"
-                    android:paddingEnd="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_1sdp"
-                    android:paddingBottom="@dimen/_1sdp"
-                    android:background="@drawable/rounder_bg_green"
-                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:gravity="center_vertical"/>
+                    android:background="@drawable/rounder_bg_green"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Yes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <View style="@style/Divider"/>
 
@@ -121,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V03"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V03_val"
@@ -129,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_V03"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/rounded_bg_red"
                     android:gravity="center_vertical"
@@ -138,7 +141,7 @@
                     android:paddingBottom="@dimen/_1sdp"
                     android:text="No"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
             </RelativeLayout>
             <View style="@style/Divider"/>
@@ -159,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V04"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V04_val"
@@ -175,7 +178,8 @@
                     android:paddingTop="@dimen/_1sdp"
                     android:paddingBottom="@dimen/_1sdp"
                     android:background="@drawable/rounder_bg_green"
-                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:gravity="center_vertical"/>
             </RelativeLayout>
@@ -197,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V05"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V05_val"
@@ -213,7 +217,8 @@
                     android:paddingTop="@dimen/_1sdp"
                     android:paddingBottom="@dimen/_1sdp"
                     android:background="@drawable/rounder_bg_green"
-                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:gravity="center_vertical"/>
             </RelativeLayout>
@@ -235,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V06a"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V06a_val"
@@ -251,7 +256,8 @@
                     android:paddingTop="@dimen/_1sdp"
                     android:paddingBottom="@dimen/_1sdp"
                     android:background="@drawable/rounder_bg_green"
-                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:gravity="center_vertical"/>
 
@@ -262,7 +268,8 @@
                     android:layout_below="@+id/tv_V06a_val"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
-                    android:textColor="@color/colorText"
+                    android:textColor="@color/colorSignBoard"
+                    android:textStyle="italic|bold"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
             <View style="@style/Divider"/>
@@ -283,7 +290,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/str_V07a"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/tv_V07a_val"
@@ -299,7 +306,8 @@
                     android:paddingTop="@dimen/_1sdp"
                     android:paddingBottom="@dimen/_1sdp"
                     android:background="@drawable/rounder_bg_green"
-                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:gravity="center_vertical"/>
 
@@ -310,7 +318,8 @@
                     android:layout_below="@+id/tv_V07a_val"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
-                    android:textColor="@color/colorText"
+                    android:textColor="@color/colorSignBoard"
+                    android:textStyle="italic|bold"
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
 

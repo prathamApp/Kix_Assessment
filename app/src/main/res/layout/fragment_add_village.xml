@@ -5,7 +5,6 @@
     android:id="@+id/rl_parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     tools:context=".ui.household_activity.Fragment_AddHousehold">
@@ -31,43 +30,54 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_form_bg"
-            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="vertical"
             android:paddingStart="@dimen/_15sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
             android:paddingBottom="@dimen/_5sdp">
+            <!--            android:background="@drawable/rounded_form_bg"-->
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hint_village"
+                android:text="@string/hint_state"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_VillageName"
+            <Spinner
+                android:id="@+id/spn_State"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/_5sdp"
-                android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="text"
-                android:singleLine="true"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/gradient_spinner"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
                 android:textColor="@color/colorText" />
 
+            <!--            <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_State"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:imeOptions="actionNext|flagNoExtractUi"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="@color/colorText" />-->
+
         </LinearLayout>
+        <!--                android:textColor="@color/colorText" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_form_bg"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_30sdp"
             android:paddingStart="@dimen/_15sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
@@ -78,28 +88,38 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hint_district"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_District"
+            <Spinner
+                android:id="@+id/spn_District"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/_5sdp"
-                android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="text"
-                android:singleLine="true"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/gradient_spinner"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
                 android:textColor="@color/colorText" />
+
+            <!--            <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_District"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_5sdp"
+        android:imeOptions="actionNext|flagNoExtractUi"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/colorText" />-->
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_form_bg"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_30sdp"
             android:paddingStart="@dimen/_15sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
@@ -108,19 +128,29 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hint_state"
+                android:text="@string/hint_village"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_State"
+            <Spinner
+                android:id="@+id/spn_Village"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/_5sdp"
-                android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="text"
-                android:singleLine="true"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/gradient_spinner"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
                 android:textColor="@color/colorText" />
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/et_VillageName"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:drawablePadding="@dimen/_5sdp"-->
+            <!--                android:imeOptions="actionNext|flagNoExtractUi"-->
+            <!--                android:inputType="text"-->
+            <!--                android:singleLine="true"-->
 
         </LinearLayout>
 

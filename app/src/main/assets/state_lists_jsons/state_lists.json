@@ -1,0 +1,172 @@
+{
+  "StateList": [
+    {
+      "StateName": "Maharashtra",
+      "DistrictList": [
+        {
+          "DistrictName": "MH_D1",
+          "VillageList": [
+            {
+              "VillageName": "MH_D1_V1"
+            },
+            {
+              "VillageName": "MH_D1_V2"
+            },
+            {
+              "VillageName": "MH_D1_V3"
+            },
+            {
+              "VillageName": "MH_D1_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "MH_D2",
+          "VillageList": [
+            {
+              "VillageName": "MH_D2_V1"
+            },
+            {
+              "VillageName": "MH_D2_V2"
+            },
+            {
+              "VillageName": "MH_D2_V3"
+            },
+            {
+              "VillageName": "MH_D2_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "MH_D3",
+          "VillageList": [
+            {
+              "VillageName": "MH_D3_V1"
+            },
+            {
+              "VillageName": "MH_D3_V2"
+            },
+            {
+              "VillageName": "MH_D3_V3"
+            },
+            {
+              "VillageName": "MH_D3_V4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StateName": "Rajasthan",
+      "DistrictList": [
+        {
+          "DistrictName": "RJ_D1",
+          "VillageList": [
+            {
+              "VillageName": "RJ_D1_V1"
+            },
+            {
+              "VillageName": "RJ_D1_V2"
+            },
+            {
+              "VillageName": "RJ_D1_V3"
+            },
+            {
+              "VillageName": "RJ_D1_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "RJ_D2",
+          "VillageList": [
+            {
+              "VillageName": "RJ_D2_V1"
+            },
+            {
+              "VillageName": "RJ_D2_V2"
+            },
+            {
+              "VillageName": "RJ_D2_V3"
+            },
+            {
+              "VillageName": "RJ_D2_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "RJ_D3",
+          "VillageList": [
+            {
+              "VillageName": "RJ_D3_V1"
+            },
+            {
+              "VillageName": "RJ_D3_V2"
+            },
+            {
+              "VillageName": "RJ_D3_V3"
+            },
+            {
+              "VillageName": "RJ_D3_V4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "StateName": "Gujarat",
+      "DistrictList": [
+        {
+          "DistrictName": "GJ_D1",
+          "VillageList": [
+            {
+              "VillageName": "GJ_D1_V1"
+            },
+            {
+              "VillageName": "GJ_D1_V2"
+            },
+            {
+              "VillageName": "GJ_D1_V3"
+            },
+            {
+              "VillageName": "GJ_D1_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "GJ_D2",
+          "VillageList": [
+            {
+              "VillageName": "GJ_D2_V1"
+            },
+            {
+              "VillageName": "GJ_D2_V2"
+            },
+            {
+              "VillageName": "GJ_D2_V3"
+            },
+            {
+              "VillageName": "GJ_D2_V4"
+            }
+          ]
+        },
+        {
+          "DistrictName": "GJ_D3",
+          "VillageList": [
+            {
+              "VillageName": "GJ_D3_V1"
+            },
+            {
+              "VillageName": "GJ_D3_V2"
+            },
+            {
+              "VillageName": "GJ_D3_V3"
+            },
+            {
+              "VillageName": "GJ_D3_V4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

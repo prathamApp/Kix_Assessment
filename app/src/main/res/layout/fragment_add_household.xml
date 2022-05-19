@@ -5,7 +5,6 @@
     android:id="@+id/rl_parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     tools:context=".ui.household_activity.Fragment_AddHousehold">
@@ -14,7 +13,7 @@
         android:id="@+id/tv_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/add_household"
         android:textAlignment="center"
         android:textColor="@color/colorText"
@@ -25,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tv_label"
-        android:layout_marginTop="@dimen/_20sdp">
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hint_svrName"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_HH00_hName"
@@ -66,6 +65,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:imeOptions="actionNext|flagNoExtractUi"
                     android:inputType="text"
+                    android:textSize="@dimen/_11sdp"
                     android:singleLine="true"
                     android:textColor="@color/colorText" />
 
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hint_respondentName"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_HH01_respondentName"
@@ -96,6 +96,7 @@
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
                     android:drawablePadding="@dimen/_5sdp"
                     android:inputType="text"
+                    android:textSize="@dimen/_11sdp"
                     android:singleLine="true"
                     android:textColor="@color/colorText" />
             </LinearLayout>
@@ -116,13 +117,14 @@
                     android:layout_height="wrap_content"
                     android:text="Name of the household head"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_HH02_houseHeadName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:textSize="@dimen/_11sdp"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:singleLine="true"
@@ -145,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:text="Number of members regularly living in the household"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_HH03_memberCount"
@@ -153,6 +155,7 @@
                     android:layout_height="wrap_content"
                     android:digits="0123456789"
                     android:inputType="phone"
+                    android:textSize="@dimen/_11sdp"
                     android:maxLength="2"
                     android:singleLine="true"
                     android:textColor="@color/colorText" />
@@ -175,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:text="Telephone number of the household"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_HH04_houseHeadNum"
@@ -183,6 +186,7 @@
                     android:layout_height="wrap_content"
                     android:digits="0123456789"
                     android:inputType="phone"
+                    android:textSize="@dimen/_11sdp"
                     android:maxLength="10"
                     android:singleLine="true"
                     android:textColor="@color/colorText" />
@@ -205,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:text="Does the HH have children (living regularly) in the age group 4-10 years?"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
             <RadioGroup
                 android:id="@+id/rg_HH05a"
@@ -219,21 +223,33 @@
                     android:id="@+id/rb_HH05a_yes"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_5sdp"
                     android:layout_weight="1"
-                    android:buttonTint="@color/colorBtnGreenDark"
-                    android:text="Yes"
-                    android:textColor="@color/colorText" />
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:buttonTint="@color/colorSignBoard"
+                    android:text="@string/yes"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorSignBoard"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/rb_HH05a_No"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_5sdp"
                     android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:text="@string/no"
+                    android:textAllCaps="true"
+                    android:textColor="@color/red"
                     android:buttonTint="@color/red"
-                    android:text="No"
-                    android:textColor="@color/colorText" />
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
             </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -242,6 +258,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_1sdp"
                 android:hint="How many"
+                app:hintTextAppearance="@dimen/_10sdp"
                 android:visibility="gone"
                 android:textColorHint="#757575">
 
@@ -251,6 +268,7 @@
                     android:layout_height="wrap_content"
                     android:digits="0123456789"
                     android:inputType="phone"
+                    android:textSize="@dimen/_11sdp"
                     android:maxLength="2"
                     android:singleLine="true"
                     android:textColor="@color/colorText" />
@@ -274,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/str_HH06"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_12sdp" />
 
             <RadioGroup
                 android:id="@+id/rg_HH06"
@@ -289,21 +307,33 @@
                     android:id="@+id/rb_HH06_same"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
-                    android:buttonTint="@color/colorBtnGreenDark"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:buttonTint="@color/colorSignBoard"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorSignBoard"
+                    android:textSize="@dimen/_10sdp"
                     android:text="@string/str_HH06a"
-                    android:textColor="@color/colorText" />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/rb_HH06_diff"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_10sdp"
                     android:buttonTint="@color/red"
                     android:text="@string/str_HH06b"
-                    android:textColor="@color/colorText" />
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -317,6 +347,7 @@
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:text="@string/save"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textAppearance="@dimen/_5sdp"

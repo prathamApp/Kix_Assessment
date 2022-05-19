@@ -10,12 +10,9 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -124,7 +121,7 @@ public class Fragment_AddStudent extends Fragment {
     String str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f;
     String str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3;
 
-    public boolean isStudCurrentlyEnrolled = false;
+    public boolean isStudCurrentlyEnrolled;
 
     public Fragment_AddStudent() {
         // Required empty public constructor
@@ -133,65 +130,65 @@ public class Fragment_AddStudent extends Fragment {
     @SuppressLint("SetTextI18n")
     @AfterViews
     public void initialize() {
-        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
 
-        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
-        householdID = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
-        adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.age, R.layout.support_simple_spinner_dropdown_item);
-        spinner_age.setAdapter(adapterAge);
-        adapterGender = ArrayAdapter.createFromResource(getActivity(), R.array.gender, R.layout.support_simple_spinner_dropdown_item);
-        spinner_gender.setAdapter(adapterGender);
-        adapterSchoolType = ArrayAdapter.createFromResource(getActivity(), R.array.school_type, R.layout.support_simple_spinner_dropdown_item);
-        spinner_schoolType.setAdapter(adapterSchoolType);
-        adapterDropYear = ArrayAdapter.createFromResource(getActivity(), R.array.dropout_year_list, R.layout.support_simple_spinner_dropdown_item);
-        spinner_dropoutYear.setAdapter(adapterDropYear);
-        adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.support_simple_spinner_dropdown_item);
-        spinner_class.setAdapter(adapterClass);
-        spinner_dropout_class.setAdapter(adapterClass);
+        this.surveyorCode = this.getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        this.householdID = this.getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
+        this.adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(this.getActivity()), R.array.age, R.layout.spinner_item);
+        this.spinner_age.setAdapter(this.adapterAge);
+        this.adapterGender = ArrayAdapter.createFromResource(this.getActivity(), R.array.gender, R.layout.spinner_item);
+        this.spinner_gender.setAdapter(this.adapterGender);
+        this.adapterSchoolType = ArrayAdapter.createFromResource(this.getActivity(), R.array.school_type, R.layout.spinner_item);
+        this.spinner_schoolType.setAdapter(this.adapterSchoolType);
+        this.adapterDropYear = ArrayAdapter.createFromResource(this.getActivity(), R.array.dropout_year_list, R.layout.spinner_item);
+        this.spinner_dropoutYear.setAdapter(this.adapterDropYear);
+        this.adapterClass = ArrayAdapter.createFromResource(this.getActivity(), R.array.student_class, R.layout.spinner_item);
+        this.spinner_class.setAdapter(this.adapterClass);
+        this.spinner_dropout_class.setAdapter(this.adapterClass);
 
-        if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-            studId = getArguments().getString(STUDENT_ID);
-            modalStudent = studentDao.getStudentByStudId(studId);
-            fetchChildDetails(modalStudent);
+        if (this.getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+            this.studId = this.getArguments().getString(STUDENT_ID);
+            this.modalStudent = studentDao.getStudentByStudId(this.studId);
+            this.fetchChildDetails(this.modalStudent);
         }
 
-        rg_isStudentEnrolled.setOnCheckedChangeListener((group, checkedId) ->
+        this.rg_isStudentEnrolled.setOnCheckedChangeListener((group, checkedId) ->
         {
             switch (checkedId) {
                 case R.id.rb_CH04_yes:
-                    ll_enrolledChildFields.setVisibility(View.VISIBLE);
-                    ll_notEnrolledChildFields.setVisibility(View.GONE);
-                    btn_saveStudent.setVisibility(View.VISIBLE);
-                    isStudCurrentlyEnrolled = true;
+                    this.ll_enrolledChildFields.setVisibility(View.VISIBLE);
+                    this.ll_notEnrolledChildFields.setVisibility(View.GONE);
+                    this.btn_saveStudent.setVisibility(View.VISIBLE);
+                    this.isStudCurrentlyEnrolled = true;
                     break;
 
                 case R.id.rb_CH04_No:
-                    ll_enrolledChildFields.setVisibility(View.GONE);
-                    ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-                    btn_saveStudent.setVisibility(View.VISIBLE);
-                    isStudCurrentlyEnrolled = false;
+                    this.ll_enrolledChildFields.setVisibility(View.GONE);
+                    this.ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+                    this.btn_saveStudent.setVisibility(View.VISIBLE);
+                    this.isStudCurrentlyEnrolled = false;
                     break;
             }
         });
 
-        rg_isStudentEverEnrolled.setOnCheckedChangeListener((group, checkedId) ->
+        this.rg_isStudentEverEnrolled.setOnCheckedChangeListener((group, checkedId) ->
         {
             switch (checkedId) {
                 case R.id.rb_CH06a_yes:
-                    ll_dropoutFields.setVisibility(View.VISIBLE);
+                    this.ll_dropoutFields.setVisibility(View.VISIBLE);
                     break;
 
                 case R.id.rb_CH06a_No:
-                    ll_dropoutFields.setVisibility(View.GONE);
+                    this.ll_dropoutFields.setVisibility(View.GONE);
                     break;
             }
         });
 
-        rg_schoolStatus.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.rb_CH05d_one) rl_kindOfActivities.setVisibility(View.VISIBLE);
+        this.rg_schoolStatus.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == R.id.rb_CH05d_one) this.rl_kindOfActivities.setVisibility(View.VISIBLE);
             else {
-                rl_kindOfActivities.setVisibility(View.GONE);
-                rg_schoolActivities.clearCheck();//todo test
+                this.rl_kindOfActivities.setVisibility(View.GONE);
+                this.rg_schoolActivities.clearCheck();//todo test
             }
         });
 
@@ -236,191 +233,191 @@ public class Fragment_AddStudent extends Fragment {
         });*/
     }
 
-    private void fetchChildDetails(Modal_Student modalStudent) {
-        tv_label.setText(getResources().getString(R.string.edit_child_info));
-        btn_saveStudent.setText("EDIT");
-        btn_saveStudent.setVisibility(View.VISIBLE);
-        et_studentName.setText(modalStudent.getCH01());
+    private void fetchChildDetails(final Modal_Student modalStudent) {
+        this.tv_label.setText(this.getResources().getString(R.string.edit_child_info));
+        this.btn_saveStudent.setText("EDIT");
+        this.btn_saveStudent.setVisibility(View.VISIBLE);
+        this.et_studentName.setText(modalStudent.getCH01());
 
-        spinner_age.setSelection(adapterAge.getPosition("Age " + modalStudent.getCH03()));
-        spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH02()));
+        this.spinner_age.setSelection(this.adapterAge.getPosition("Age " + modalStudent.getCH03()));
+        this.spinner_gender.setSelection(this.adapterGender.getPosition(modalStudent.getCH02()));
 
-        if (modalStudent.CH04.equalsIgnoreCase(getString(R.string.yes))) {
-            isStudCurrentlyEnrolled = true;
-            rg_isStudentEnrolled.check(R.id.rb_CH04_yes);
-            ll_enrolledChildFields.setVisibility(View.VISIBLE);
-            spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH05a));
-            spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH05b));
+        if (modalStudent.CH04.equalsIgnoreCase(this.getString(R.string.yes))) {
+            this.isStudCurrentlyEnrolled = true;
+            this.rg_isStudentEnrolled.check(R.id.rb_CH04_yes);
+            this.ll_enrolledChildFields.setVisibility(View.VISIBLE);
+            this.spinner_class.setSelection(this.adapterClass.getPosition(modalStudent.CH05a));
+            this.spinner_schoolType.setSelection(this.adapterSchoolType.getPosition(modalStudent.CH05b));
 
-            if (modalStudent.CH05c.equalsIgnoreCase(getString(R.string.yes)))
-                rg_instructionLang.check(R.id.rb_CH05c_yes);
-            else rg_instructionLang.check(R.id.rb_CH05c_No);
+            if (modalStudent.CH05c.equalsIgnoreCase(this.getString(R.string.yes)))
+                this.rg_instructionLang.check(R.id.rb_CH05c_yes);
+            else this.rg_instructionLang.check(R.id.rb_CH05c_No);
 
-            if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_one))){
-                rl_kindOfActivities.setVisibility(View.VISIBLE);
-                rg_schoolStatus.check(R.id.rb_CH05d_one);
+            if (modalStudent.CH05d.equalsIgnoreCase(this.getString(R.string.str_CH05d_one))){
+                this.rl_kindOfActivities.setVisibility(View.VISIBLE);
+                this.rg_schoolStatus.check(R.id.rb_CH05d_one);
 
-                if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_one)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_one);
-                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_two)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_two);
-                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_three)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_three);
+                if(modalStudent.CH05e.equalsIgnoreCase(this.getString(R.string.str_CH05e_one)))
+                    this.rg_schoolActivities.check(R.id.rb_CH05e_one);
+                else if(modalStudent.CH05e.equalsIgnoreCase(this.getString(R.string.str_CH05e_two)))
+                    this.rg_schoolActivities.check(R.id.rb_CH05e_two);
+                else if(modalStudent.CH05e.equalsIgnoreCase(this.getString(R.string.str_CH05e_three)))
+                    this.rg_schoolActivities.check(R.id.rb_CH05e_three);
             }
-            else if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_two)))
-                rg_schoolStatus.check(R.id.rb_CH05d_two);
-            else rg_schoolStatus.check(R.id.rb_CH05d_three);
+            else if (modalStudent.CH05d.equalsIgnoreCase(this.getString(R.string.str_CH05d_two)))
+                this.rg_schoolStatus.check(R.id.rb_CH05d_two);
+            else this.rg_schoolStatus.check(R.id.rb_CH05d_three);
 
-            if (modalStudent.CH05f.equalsIgnoreCase(getString(R.string.yes)))
-                rg_haveTextbooks.check(R.id.rb_CH05f_yes);
-            else rg_haveTextbooks.check(R.id.rb_CH05f_No);
+            if (modalStudent.CH05f.equalsIgnoreCase(this.getString(R.string.yes)))
+                this.rg_haveTextbooks.check(R.id.rb_CH05f_yes);
+            else this.rg_haveTextbooks.check(R.id.rb_CH05f_No);
         } else {
-            isStudCurrentlyEnrolled = false;
-            rg_isStudentEnrolled.check(R.id.rb_CH04_No);
-            ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-            if (modalStudent.CH06a.equalsIgnoreCase(getString(R.string.yes))) {
-                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_yes);
-                ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-                ll_dropoutFields.setVisibility(View.VISIBLE);
-                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH06b1));
-                spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH06b2));
-                if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_one)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_one);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_two)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_two);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_three)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_three);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_four)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_four);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_five)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_five);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_six)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_six);
-                else rg_dropOutReason.check(R.id.rb_CH06b3_seven);
+            this.isStudCurrentlyEnrolled = false;
+            this.rg_isStudentEnrolled.check(R.id.rb_CH04_No);
+            this.ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+            if (modalStudent.CH06a.equalsIgnoreCase(this.getString(R.string.yes))) {
+                this.rg_isStudentEverEnrolled.check(R.id.rb_CH06a_yes);
+                this.ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+                this.ll_dropoutFields.setVisibility(View.VISIBLE);
+                this.spinner_dropoutYear.setSelection(this.adapterDropYear.getPosition(modalStudent.CH06b1));
+                this.spinner_dropout_class.setSelection(this.adapterClass.getPosition(modalStudent.CH06b2));
+                if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_one)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_one);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_two)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_two);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_three)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_three);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_four)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_four);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_five)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_five);
+                else if (modalStudent.CH06b3.equalsIgnoreCase(this.getString(R.string.str_reasonToDrop_six)))
+                    this.rg_dropOutReason.check(R.id.rb_CH06b3_six);
+                else this.rg_dropOutReason.check(R.id.rb_CH06b3_seven);
             } else {
-                ll_dropoutFields.setVisibility(View.GONE);
-                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_No);
+                this.ll_dropoutFields.setVisibility(View.GONE);
+                this.rg_isStudentEverEnrolled.check(R.id.rb_CH06a_No);
             }
         }
 
-        if (modalStudent.CH07.equalsIgnoreCase(getString(R.string.yes)))
-            rg_everEnrolledInNursary.check(R.id.rb_CH07_yes);
-        else rg_everEnrolledInNursary.check(R.id.rb_CH07_No);
+        if (modalStudent.CH07.equalsIgnoreCase(this.getString(R.string.yes)))
+            this.rg_everEnrolledInNursary.check(R.id.rb_CH07_yes);
+        else this.rg_everEnrolledInNursary.check(R.id.rb_CH07_No);
 
-        if (modalStudent.CH08.equalsIgnoreCase(getString(R.string.yes)))
-            rg_paidTution.check(R.id.rb_CH08_yes);
-        else rg_paidTution.check(R.id.rb_CH08_No);
+        if (modalStudent.CH08.equalsIgnoreCase(this.getString(R.string.yes)))
+            this.rg_paidTution.check(R.id.rb_CH08_yes);
+        else this.rg_paidTution.check(R.id.rb_CH08_No);
     }
 
     @ItemSelect(R.id.spn_CH03)
-    public void ageSelect(boolean sel) {
-        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
+    public void ageSelect(final boolean sel) {
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(this.getActivity()));
     }
 
     @ItemSelect(R.id.spn_CH02)
-    public void genderSelect(boolean sel) {
-        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
+    public void genderSelect(final boolean sel) {
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(this.getActivity()));
     }
 
     @Click(R.id.rl_parentLayout)
     public void hideKeyboard() {
-        KIX_Utility.HideInputKeypad(getActivity());
+        KIX_Utility.HideInputKeypad(this.getActivity());
     }
 
     @Click(R.id.btn_saveStudent)
     public void saveStudent() {
-        getSelectedAge();
-        getSpinnerValues();
-        getRadioButtonValues();
+        this.getSelectedAge();
+        this.getSpinnerValues();
+        this.getRadioButtonValues();
 
-        if (!et_studentName.getText().toString().isEmpty()) {
-            if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                insertStudent();
+        if (!this.et_studentName.getText().toString().isEmpty()) {
+            if (this.getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                this.insertStudent();
 //                Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
 //                getFragmentManager().popBackStack();
             } else
-                insertStudent();
+                this.insertStudent();
         } else {
-            Toast.makeText(getActivity(), "Enter Name First.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), "Enter Name First.", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void insertStudent() {
 
-        if (isStudCurrentlyEnrolled) {
-            str_CH05a = standard;
-            str_CH05b = schoolType;
+        if (this.isStudCurrentlyEnrolled) {
+            this.str_CH05a = this.standard;
+            this.str_CH05b = this.schoolType;
 
-            if (rb_CH05c == null || rb_CH05d == null || rb_CH05f == null ||
-                    rb_CH07 == null || rb_CH08 == null) {
-                Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            if (this.rb_CH05c == null || this.rb_CH05d == null || this.rb_CH05f == null ||
+                    this.rb_CH07 == null || this.rb_CH08 == null) {
+                Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH05c = rb_CH05c.getText().toString();
-                str_CH05d = rb_CH05d.getText().toString();
-                if (rb_CH05e == null) str_CH05e = "NA";
-                else str_CH05e = rb_CH05e.getText().toString();
-                str_CH05f = rb_CH05f.getText().toString();
+                this.str_CH05c = this.rb_CH05c.getText().toString();
+                this.str_CH05d = this.rb_CH05d.getText().toString();
+                if (this.rb_CH05e == null) this.str_CH05e = "NA";
+                else this.str_CH05e = this.rb_CH05e.getText().toString();
+                this.str_CH05f = this.rb_CH05f.getText().toString();
 
-                str_CH06a = "";
-                str_CH06b1 = "";
-                str_CH06b2 = "";
-                str_CH06b3 = "";
-                if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                    studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                            rb_CH04.getText().toString(),
-                            str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                            str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                            rb_CH07.getText().toString(), rb_CH08.getText().toString(),
-                            studId);
-                    BackupDatabase.backup(getActivity());
-                    Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
-                    getFragmentManager().popBackStack();
-                } else insertStud();
+                this.str_CH06a = "";
+                this.str_CH06b1 = "";
+                this.str_CH06b2 = "";
+                this.str_CH06b3 = "";
+                if (this.getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                    studentDao.updateStudent(this.et_studentName.getText().toString(), this.age, this.spinner_gender.getSelectedItem().toString(),
+                            this.rb_CH04.getText().toString(),
+                            this.str_CH05a, this.str_CH05b, this.str_CH05c, this.str_CH05d, this.str_CH05e, this.str_CH05f,
+                            this.str_CH06a, this.str_CH06b1, this.str_CH06b2, this.str_CH06b3,
+                            this.rb_CH07.getText().toString(), this.rb_CH08.getText().toString(),
+                            this.studId);
+                    BackupDatabase.backup(this.getActivity());
+                    Toast.makeText(this.getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                    this.getFragmentManager().popBackStack();
+                } else this.insertStud();
             }
         } else {
-            str_CH05a = "";
-            str_CH05b = "";
-            str_CH05c = "";
-            str_CH05d = "";
-            str_CH05e = "";
-            str_CH05f = "";
+            this.str_CH05a = "";
+            this.str_CH05b = "";
+            this.str_CH05c = "";
+            this.str_CH05d = "";
+            this.str_CH05e = "";
+            this.str_CH05f = "";
 
-            if (rb_CH06a == null || rb_CH07 == null || rb_CH08 == null) {
-                Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+            if (this.rb_CH06a == null || this.rb_CH07 == null || this.rb_CH08 == null) {
+                Toast.makeText(this.getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH06a = rb_CH06a.getText().toString();
-                if (str_CH06a.equalsIgnoreCase("yes")) {
-                    str_CH06b1 = dropoutYear;
-                    str_CH06b2 = dropoutStandard;
+                this.str_CH06a = this.rb_CH06a.getText().toString();
+                if (this.str_CH06a.equalsIgnoreCase("yes")) {
+                    this.str_CH06b1 = this.dropoutYear;
+                    this.str_CH06b2 = this.dropoutStandard;
 
-                    if (rb_CH06b3 == null) {
-                        Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                    if (this.rb_CH06b3 == null) {
+                        Toast.makeText(this.getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
                     } else {
-                        str_CH06b3 = rb_CH06b3.getText().toString();
-                        if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                            studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                                    rb_CH04.getText().toString(),
-                                    str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                                    str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                                    rb_CH07.getText().toString(), rb_CH08.getText().toString(),
-                                    studId);
-                            BackupDatabase.backup(getActivity());
-                            Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
-                            getFragmentManager().popBackStack();
-                        } else insertStud();
+                        this.str_CH06b3 = this.rb_CH06b3.getText().toString();
+                        if (this.getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                            studentDao.updateStudent(this.et_studentName.getText().toString(), this.age, this.spinner_gender.getSelectedItem().toString(),
+                                    this.rb_CH04.getText().toString(),
+                                    this.str_CH05a, this.str_CH05b, this.str_CH05c, this.str_CH05d, this.str_CH05e, this.str_CH05f,
+                                    this.str_CH06a, this.str_CH06b1, this.str_CH06b2, this.str_CH06b3,
+                                    this.rb_CH07.getText().toString(), this.rb_CH08.getText().toString(),
+                                    this.studId);
+                            BackupDatabase.backup(this.getActivity());
+                            Toast.makeText(this.getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                            this.getFragmentManager().popBackStack();
+                        } else this.insertStud();
                     }
                 } else {
-                    if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                        studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                                rb_CH04.getText().toString(),
-                                str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                                str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                                rb_CH07.getText().toString(), rb_CH08.getText().toString(),
-                                studId);
-                        BackupDatabase.backup(getActivity());
-                        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
-                        getFragmentManager().popBackStack();
-                    } else insertStud();
+                    if (this.getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
+                        studentDao.updateStudent(this.et_studentName.getText().toString(), this.age, this.spinner_gender.getSelectedItem().toString(),
+                                this.rb_CH04.getText().toString(),
+                                this.str_CH05a, this.str_CH05b, this.str_CH05c, this.str_CH05d, this.str_CH05e, this.str_CH05f,
+                                this.str_CH06a, this.str_CH06b1, this.str_CH06b2, this.str_CH06b3,
+                                this.rb_CH07.getText().toString(), this.rb_CH08.getText().toString(),
+                                this.studId);
+                        BackupDatabase.backup(this.getActivity());
+                        Toast.makeText(this.getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                        this.getFragmentManager().popBackStack();
+                    } else this.insertStud();
                 }
             }
         }
@@ -432,131 +429,131 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     private void updateStudent() {
-        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
     }
 
     public void insertStud() {
-        String sId = KIX_Utility.getUUID().toString();
+        final String sId = KIX_Utility.getUUID().toString();
         Log.d("TAG", "insertStudent: " + sId);
-        Modal_Student modal_student = new Modal_Student();
+        final Modal_Student modal_student = new Modal_Student();
         modal_student.setStudentId(sId);
-        modal_student.setCH01(et_studentName.getText().toString());
-        modal_student.setCH02(spinner_gender.getSelectedItem().toString());
-        modal_student.setCH03(age);
-        modal_student.setCH04(rb_CH04.getText().toString());
-        modal_student.setCH05a(str_CH05a);
-        modal_student.setCH05b(str_CH05b);
-        modal_student.setCH05c(str_CH05c);
-        modal_student.setCH05d(str_CH05d);
-        modal_student.setCH05e(str_CH05e);
-        modal_student.setCH05f(str_CH05f);
-        modal_student.setCH06a(str_CH06a);
-        modal_student.setCH06b1(str_CH06b1);
-        modal_student.setCH06b2(str_CH06b2);
-        modal_student.setCH06b3(str_CH06b3);
-        modal_student.setCH07(rb_CH07.getText().toString());
-        modal_student.setCH08(rb_CH08.getText().toString());
-        modal_student.setSvrCode(surveyorCode);
-        modal_student.setHouseholdId(householdID);
+        modal_student.setCH01(this.et_studentName.getText().toString());
+        modal_student.setCH02(this.spinner_gender.getSelectedItem().toString());
+        modal_student.setCH03(this.age);
+        modal_student.setCH04(this.rb_CH04.getText().toString());
+        modal_student.setCH05a(this.str_CH05a);
+        modal_student.setCH05b(this.str_CH05b);
+        modal_student.setCH05c(this.str_CH05c);
+        modal_student.setCH05d(this.str_CH05d);
+        modal_student.setCH05e(this.str_CH05e);
+        modal_student.setCH05f(this.str_CH05f);
+        modal_student.setCH06a(this.str_CH06a);
+        modal_student.setCH06b1(this.str_CH06b1);
+        modal_student.setCH06b2(this.str_CH06b2);
+        modal_student.setCH06b3(this.str_CH06b3);
+        modal_student.setCH07(this.rb_CH07.getText().toString());
+        modal_student.setCH08(this.rb_CH08.getText().toString());
+        modal_student.setSvrCode(this.surveyorCode);
+        modal_student.setHouseholdId(this.householdID);
         modal_student.setCreatedOn(KIX_Utility.getCurrentDateTime());
         modal_student.setSentFlag(0);
 
         studentDao.insertStudent(modal_student);
-        BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
-        startDialog(modal_student);
+        BackupDatabase.backup(this.getActivity());
+        Toast.makeText(this.getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
+        this.startDialog(modal_student);
 
     }
 
     private void getSelectedAge() {
-        String age1 = spinner_age.getSelectedItem().toString();
-        String[] split_age = age1.split(" ");
+        final String age1 = this.spinner_age.getSelectedItem().toString();
+        final String[] split_age = age1.split(" ");
         if (split_age.length > 1)
-            age = String.valueOf(Integer.parseInt(split_age[1]));
+            this.age = String.valueOf(Integer.parseInt(split_age[1]));
             //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, Integer.parseInt(split_age[1]));
         else
-            age = "0";
+            this.age = "0";
         //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, 0);
     }
 
     private void getSpinnerValues() {
-        if (spinner_schoolType.getSelectedItemPosition() == 0) schoolType = "NA";
-        else schoolType = spinner_schoolType.getSelectedItem().toString();
+        if (this.spinner_schoolType.getSelectedItemPosition() == 0) this.schoolType = "NA";
+        else this.schoolType = this.spinner_schoolType.getSelectedItem().toString();
 
-        if (spinner_dropoutYear.getSelectedItemPosition() == 0) dropoutYear = "NA";
-        else dropoutYear = spinner_dropoutYear.getSelectedItem().toString();
+        if (this.spinner_dropoutYear.getSelectedItemPosition() == 0) this.dropoutYear = "NA";
+        else this.dropoutYear = this.spinner_dropoutYear.getSelectedItem().toString();
 
-        if (spinner_class.getSelectedItemPosition() == 0) standard = "NA";
-        else standard = spinner_class.getSelectedItem().toString();
+        if (this.spinner_class.getSelectedItemPosition() == 0) this.standard = "NA";
+        else this.standard = this.spinner_class.getSelectedItem().toString();
 
-        if (spinner_dropout_class.getSelectedItemPosition() == 0) dropoutStandard = "NA";
-        else dropoutStandard = spinner_dropout_class.getSelectedItem().toString();
+        if (this.spinner_dropout_class.getSelectedItemPosition() == 0) this.dropoutStandard = "NA";
+        else this.dropoutStandard = this.spinner_dropout_class.getSelectedItem().toString();
     }
 
     public void getRadioButtonValues() {
-        int selectedCH04 = rg_isStudentEnrolled.getCheckedRadioButtonId();
-        int selectedCH05c = rg_instructionLang.getCheckedRadioButtonId();
-        int selectedCH05d = rg_schoolStatus.getCheckedRadioButtonId();
-        int selectedCH05e = rg_schoolActivities.getCheckedRadioButtonId();
-        int selectedCH05f = rg_haveTextbooks.getCheckedRadioButtonId();
-        int selectedCH06a = rg_isStudentEverEnrolled.getCheckedRadioButtonId();
-        int selectedCH06b3 = rg_dropOutReason.getCheckedRadioButtonId();
-        int selectedCH07 = rg_everEnrolledInNursary.getCheckedRadioButtonId();
-        int selectedCH08 = rg_paidTution.getCheckedRadioButtonId();
+        final int selectedCH04 = this.rg_isStudentEnrolled.getCheckedRadioButtonId();
+        final int selectedCH05c = this.rg_instructionLang.getCheckedRadioButtonId();
+        final int selectedCH05d = this.rg_schoolStatus.getCheckedRadioButtonId();
+        final int selectedCH05e = this.rg_schoolActivities.getCheckedRadioButtonId();
+        final int selectedCH05f = this.rg_haveTextbooks.getCheckedRadioButtonId();
+        final int selectedCH06a = this.rg_isStudentEverEnrolled.getCheckedRadioButtonId();
+        final int selectedCH06b3 = this.rg_dropOutReason.getCheckedRadioButtonId();
+        final int selectedCH07 = this.rg_everEnrolledInNursary.getCheckedRadioButtonId();
+        final int selectedCH08 = this.rg_paidTution.getCheckedRadioButtonId();
 
-        rb_CH04 = getView().findViewById(selectedCH04);
-        rb_CH05c = getView().findViewById(selectedCH05c);
-        rb_CH05d = getView().findViewById(selectedCH05d);
-        rb_CH05e = getView().findViewById(selectedCH05e);
-        rb_CH05f = getView().findViewById(selectedCH05f);
-        rb_CH06a = getView().findViewById(selectedCH06a);
-        rb_CH06b3 = getView().findViewById(selectedCH06b3);
-        rb_CH07 = getView().findViewById(selectedCH07);
-        rb_CH08 = getView().findViewById(selectedCH08);
+        this.rb_CH04 = this.getView().findViewById(selectedCH04);
+        this.rb_CH05c = this.getView().findViewById(selectedCH05c);
+        this.rb_CH05d = this.getView().findViewById(selectedCH05d);
+        this.rb_CH05e = this.getView().findViewById(selectedCH05e);
+        this.rb_CH05f = this.getView().findViewById(selectedCH05f);
+        this.rb_CH06a = this.getView().findViewById(selectedCH06a);
+        this.rb_CH06b3 = this.getView().findViewById(selectedCH06b3);
+        this.rb_CH07 = this.getView().findViewById(selectedCH07);
+        this.rb_CH08 = this.getView().findViewById(selectedCH08);
 
     }
 
 
     @UiThread
-    public void startDialog(Modal_Student modal_student) {
-        startExamDialog = null;
-        startExamDialog = new Dialog(Objects.requireNonNull(getActivity()));
-        startExamDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Objects.requireNonNull(startExamDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        startExamDialog.setContentView(R.layout.start_game_dialog);
-        startExamDialog.setCanceledOnTouchOutside(false);
+    public void startDialog(final Modal_Student modal_student) {
+        this.startExamDialog = null;
+        this.startExamDialog = new Dialog(Objects.requireNonNull(this.getActivity()));
+        this.startExamDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(this.startExamDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.startExamDialog.setContentView(R.layout.start_game_dialog);
+        this.startExamDialog.setCanceledOnTouchOutside(false);
 
 //        dia_title = startExamDialog.findViewById(R.id.dia_title);
-        dlg_yes = startExamDialog.findViewById(R.id.dlg_yes);
-        dlg_no = startExamDialog.findViewById(R.id.dlg_no);
+        this.dlg_yes = this.startExamDialog.findViewById(R.id.dlg_yes);
+        this.dlg_no = this.startExamDialog.findViewById(R.id.dlg_no);
 //        dia_title.setText("Save and Submit Test");
-        dlg_no.setOnClickListener(v -> {
-            getFragmentManager().popBackStack();
-            startExamDialog.dismiss();
+        this.dlg_no.setOnClickListener(v -> {
+            this.getFragmentManager().popBackStack();
+            this.startExamDialog.dismiss();
         });
-        dlg_yes.setOnClickListener(v -> {
-            getFragmentManager().popBackStack();
+        this.dlg_yes.setOnClickListener(v -> {
+            this.getFragmentManager().popBackStack();
             FastSave.getInstance().saveString(STUDENT_ID, "" + modal_student.getStudentId());
             FastSave.getInstance().saveString(Kix_Constant.SESSIONID, KIX_Utility.getUUID().toString());
-            markAttendance(modal_student);
-            Intent intent = new Intent(getActivity(), WebViewActivity_.class);
+            this.markAttendance(modal_student);
+            final Intent intent = new Intent(this.getActivity(), WebViewActivity_.class);
             intent.putExtra(Kix_Constant.STUDENT_NAME, modal_student.getCH01());
-            startActivity(intent);
-            startExamDialog.dismiss();
+            this.startActivity(intent);
+            this.startExamDialog.dismiss();
         });
-        startExamDialog.show();
+        this.startExamDialog.show();
     }
 
-    private void markAttendance(Modal_Student stud) {
-        ArrayList<Attendance> attendances = new ArrayList<>();
-        Attendance attendance = new Attendance();
+    private void markAttendance(final Modal_Student stud) {
+        final ArrayList<Attendance> attendances = new ArrayList<>();
+        final Attendance attendance = new Attendance();
         attendance.sessionId = FastSave.getInstance().getString(Kix_Constant.SESSIONID, "");
         attendance.studentId = stud.getStudentId();
         attendance.attendanceDate = KIX_Utility.getCurrentDateTime();
         attendance.sentFlag = 0;
         attendances.add(attendance);
         attendanceDao.insertAttendance(attendances);
-        Modal_Session s = new Modal_Session();
+        final Modal_Session s = new Modal_Session();
         s.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, ""));
         s.setFromDate(KIX_Utility.getCurrentDateTime());
 //        s.setToDate("NA");
