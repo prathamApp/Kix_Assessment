@@ -10,6 +10,8 @@ import com.kix.assessment.modal_classes.Modal_PIF;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unchecked")
 public final class ParentInformationDao_Impl implements ParentInformationDao {
@@ -272,6 +274,59 @@ public final class ParentInformationDao_Impl implements ParentInformationDao {
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
       } else {
         _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<Modal_PIF> getAllPIF() {
+    final String _sql = "Select * from ParentInformation where sentFlag = 0";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfPifId = _cursor.getColumnIndexOrThrow("pifId");
+      final int _cursorIndexOfPT01a = _cursor.getColumnIndexOrThrow("PT01a");
+      final int _cursorIndexOfPT01b = _cursor.getColumnIndexOrThrow("PT01b");
+      final int _cursorIndexOfPT01c = _cursor.getColumnIndexOrThrow("PT01c");
+      final int _cursorIndexOfPT01d = _cursor.getColumnIndexOrThrow("PT01d");
+      final int _cursorIndexOfPT01e = _cursor.getColumnIndexOrThrow("PT01e");
+      final int _cursorIndexOfPT01f = _cursor.getColumnIndexOrThrow("PT01f");
+      final int _cursorIndexOfPT02a = _cursor.getColumnIndexOrThrow("PT02a");
+      final int _cursorIndexOfPT02b = _cursor.getColumnIndexOrThrow("PT02b");
+      final int _cursorIndexOfPT02c = _cursor.getColumnIndexOrThrow("PT02c");
+      final int _cursorIndexOfPT02d = _cursor.getColumnIndexOrThrow("PT02d");
+      final int _cursorIndexOfPT02e = _cursor.getColumnIndexOrThrow("PT02e");
+      final int _cursorIndexOfPT02f = _cursor.getColumnIndexOrThrow("PT02f");
+      final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
+      final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
+      final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final List<Modal_PIF> _result = new ArrayList<Modal_PIF>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Modal_PIF _item;
+        _item = new Modal_PIF();
+        _item.pifId = _cursor.getInt(_cursorIndexOfPifId);
+        _item.PT01a = _cursor.getString(_cursorIndexOfPT01a);
+        _item.PT01b = _cursor.getString(_cursorIndexOfPT01b);
+        _item.PT01c = _cursor.getString(_cursorIndexOfPT01c);
+        _item.PT01d = _cursor.getString(_cursorIndexOfPT01d);
+        _item.PT01e = _cursor.getString(_cursorIndexOfPT01e);
+        _item.PT01f = _cursor.getString(_cursorIndexOfPT01f);
+        _item.PT02a = _cursor.getString(_cursorIndexOfPT02a);
+        _item.PT02b = _cursor.getString(_cursorIndexOfPT02b);
+        _item.PT02c = _cursor.getString(_cursorIndexOfPT02c);
+        _item.PT02d = _cursor.getString(_cursorIndexOfPT02d);
+        _item.PT02e = _cursor.getString(_cursorIndexOfPT02e);
+        _item.PT02f = _cursor.getString(_cursorIndexOfPT02f);
+        _item.studentId = _cursor.getString(_cursorIndexOfStudentId);
+        _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
+        _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _result.add(_item);
       }
       return _result;
     } finally {

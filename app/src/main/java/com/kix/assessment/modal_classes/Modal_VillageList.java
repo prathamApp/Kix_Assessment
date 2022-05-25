@@ -5,7 +5,17 @@ import android.os.Parcelable;
 
 public class Modal_VillageList implements Comparable, Parcelable {
 
+    public String ContentBooklet;
     public String VillageName;
+
+
+    public String getContentBooklet() {
+        return ContentBooklet;
+    }
+
+    public void setContentBooklet(String contentBooklet) {
+        ContentBooklet = contentBooklet;
+    }
 
     public String getVillageName() {
         return VillageName;

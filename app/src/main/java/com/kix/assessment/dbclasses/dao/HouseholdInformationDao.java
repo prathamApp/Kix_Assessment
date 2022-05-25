@@ -6,13 +6,17 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.kix.assessment.modal_classes.Modal_HIF;
-import com.kix.assessment.modal_classes.Modal_VIF;
+
+import java.util.List;
 
 @Dao
 public interface HouseholdInformationDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertHouseholdInfo(Modal_HIF modal_hif);
+
+    @Query("select * from HouseholdInformation where sentFlag = 0")
+    List<Modal_HIF> getAllNewHIF();
 
     @Query("Select * from HouseholdInformation where householdId =:householdId")
     Modal_HIF getHIFbyHouseholdId(String householdId);

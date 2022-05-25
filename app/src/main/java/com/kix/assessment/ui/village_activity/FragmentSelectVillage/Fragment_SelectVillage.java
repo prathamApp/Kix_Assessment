@@ -61,89 +61,90 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
 
     @AfterViews
     public void initialize() {
-        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         Log.e("KIX : ", "selectstud");
-        this.surveyorCode = this.getArguments().getString(Kix_Constant.SURVEYOR_CODE);
-        this.villageArrayList = (ArrayList<Modal_Village>) villageDao.getAllVillageBySurveyorCode(this.surveyorCode);
-        if (this.villageArrayList.size() == 0) {
-            Toast.makeText(this.getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
-            final Animation anim = android.view.animation.AnimationUtils.loadAnimation(this.fab_addVillage.getContext(), R.anim.shake);
+        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        villageArrayList = (ArrayList<Modal_Village>) villageDao.getAllVillageBySurveyorCode(surveyorCode);
+        if (villageArrayList.size() == 0) {
+            Toast.makeText(getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
+            Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addVillage.getContext(), R.anim.shake);
             anim.setDuration(200L);
-            this.fab_addVillage.startAnimation(anim);
+            fab_addVillage.startAnimation(anim);
         }
-        this.initializeAdapter();
+        initializeAdapter();
     }
 
     @Override
     public void onResume() {
-        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         super.onResume();
     }
 
     @UiThread
     public void initializeAdapter() {
         FastSave.getInstance().saveString(Kix_Constant.COUNTRY, "NA");
-        if (this.villageListAdapter == null) {
-            this.villageListAdapter = new VillageListAdapter(this.villageArrayList, this.getActivity(), this);
-            this.rv_village.setHasFixedSize(true);
-            final FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(this.getActivity(), FlexDirection.ROW);
+        if (villageListAdapter == null) {
+            villageListAdapter = new VillageListAdapter(villageArrayList, getActivity(), this);
+            rv_village.setHasFixedSize(true);
+            FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager(getActivity(), FlexDirection.ROW);
             flexboxLayoutManager.setJustifyContent(JustifyContent.FLEX_START);
             flexboxLayoutManager.setAlignItems(AlignItems.CENTER);
-            this.rv_village.setLayoutManager(flexboxLayoutManager);
-            this.rv_village.setAdapter(this.villageListAdapter);
+            rv_village.setLayoutManager(flexboxLayoutManager);
+            rv_village.setAdapter(villageListAdapter);
         } else {
-            this.villageListAdapter.notifyDataSetChanged();
+            villageListAdapter.notifyDataSetChanged();
         }
     }
 
     @Click(R.id.fab_addVillage)
     public void addVillage() {
-        final Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
-        KIX_Utility.showFragment(this.getActivity(), new Fragment_AddVillage_(), R.id.frag_frame,
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddVillage_(), R.id.frag_frame,
                 bundle, Fragment_AddVillage.class.getSimpleName());
     }
 
     @Override
-    public void itemSelected(final int position) {
-        Modal_Village modal_village = villageListAdapter.getitem(position);
+    public void itemSelected(int position) {
+        final Modal_Village modal_village = this.villageListAdapter.getitem(position);
+        FastSave.getInstance().saveString(Kix_Constant.BOOKLET,modal_village.getVillageBooklet());
 //        Intent intent = new Intent(getActivity(), Activity_Attendance_.class);
 //        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
 //        intent.putExtra(Kix_Constant.VILLAGE_ID, modal_village.villageId);
 //        FastSave.getInstance().saveString(Kix_Constant.COUNTRY, modal_village.getCountryName());
 //        if (!FastSave.getInstance().getString(Kix_Constant.COUNTRY, "NA").equalsIgnoreCase("NA"))
 //            startActivity(intent);
-        final Intent intent = new Intent(getActivity(), Activity_Household_.class);
-        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+        Intent intent = new Intent(this.getActivity(), Activity_Household_.class);
+        intent.putExtra(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
         intent.putExtra(Kix_Constant.VILLAGE_ID,modal_village.villageId);
         FastSave.getInstance().saveString(Kix_Constant.COUNTRY, modal_village.getCountryName());
-        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-        startActivity(intent);
+        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        this.startActivity(intent);
     }
 
     @Override
-    public void addVIF(final int position){
-        final Modal_Village modal_village = this.villageListAdapter.getitem(position);
-        final Bundle bundle = new Bundle();
+    public void addVIF(int position){
+        Modal_Village modal_village = villageListAdapter.getitem(position);
+        Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.VILLAGE_ID, modal_village.getVillageId());
 
-        Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(modal_village.getVillageId());
+        final Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(modal_village.getVillageId());
         if(modal_vif!=null){
-            KIX_Utility.showFragment(this.getActivity(), new Fragment_VillageInformation_(), R.id.frag_frame,
+            KIX_Utility.showFragment(getActivity(), new Fragment_VillageInformation_(), R.id.frag_frame,
                     bundle, Fragment_VillageInformation.class.getSimpleName());
         } else {
-            KIX_Utility.showFragment(this.getActivity(), new Fragment_AddVillageInformation_(), R.id.frag_frame,
+            KIX_Utility.showFragment(getActivity(), new Fragment_AddVillageInformation_(), R.id.frag_frame,
                     bundle, Fragment_AddVillageInformation.class.getSimpleName());
         }
     }
 
     @Override
-    public void editVillage(final int position) {
-        final Modal_Village modal_village = this.villageListAdapter.getitem(position);
-        final Bundle bundle = new Bundle();
+    public void editVillage(int position) {
+        Modal_Village modal_village = villageListAdapter.getitem(position);
+        Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.EDIT_VILLAGE, Kix_Constant.EDIT_VILLAGE);
         bundle.putString(Kix_Constant.VILLAGE_ID, modal_village.getVillageId());
-        KIX_Utility.showFragment(this.getActivity(), new Fragment_AddVillage_(), R.id.frag_frame,
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddVillage_(), R.id.frag_frame,
                 bundle, Fragment_AddVillage.class.getSimpleName());
     }
 
@@ -159,8 +160,8 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        this.rv_village.setAdapter(null);
-        this.villageListAdapter = null;
-        this.rv_village = null;
+        rv_village.setAdapter(null);
+        villageListAdapter = null;
+        rv_village = null;
     }
 }

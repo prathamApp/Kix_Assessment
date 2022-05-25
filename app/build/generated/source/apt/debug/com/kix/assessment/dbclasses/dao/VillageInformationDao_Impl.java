@@ -10,6 +10,8 @@ import com.kix.assessment.modal_classes.Modal_VIF;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unchecked")
 public final class VillageInformationDao_Impl implements VillageInformationDao {
@@ -206,6 +208,53 @@ public final class VillageInformationDao_Impl implements VillageInformationDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfUpdateVillage.release(_stmt);
+    }
+  }
+
+  @Override
+  public List<Modal_VIF> getAllNewVIF() {
+    final String _sql = "Select * from VillageInformartion where sentFlag=0";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfVifId = _cursor.getColumnIndexOrThrow("vif_Id");
+      final int _cursorIndexOfV01 = _cursor.getColumnIndexOrThrow("V01");
+      final int _cursorIndexOfV02 = _cursor.getColumnIndexOrThrow("V02");
+      final int _cursorIndexOfV03 = _cursor.getColumnIndexOrThrow("V03");
+      final int _cursorIndexOfV04 = _cursor.getColumnIndexOrThrow("V04");
+      final int _cursorIndexOfV05 = _cursor.getColumnIndexOrThrow("V05");
+      final int _cursorIndexOfV06a = _cursor.getColumnIndexOrThrow("V06a");
+      final int _cursorIndexOfV06b = _cursor.getColumnIndexOrThrow("V06b");
+      final int _cursorIndexOfV07a = _cursor.getColumnIndexOrThrow("V07a");
+      final int _cursorIndexOfV07b = _cursor.getColumnIndexOrThrow("V07b");
+      final int _cursorIndexOfVillageId = _cursor.getColumnIndexOrThrow("villageId");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
+      final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final List<Modal_VIF> _result = new ArrayList<Modal_VIF>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Modal_VIF _item;
+        _item = new Modal_VIF();
+        _item.vif_Id = _cursor.getInt(_cursorIndexOfVifId);
+        _item.V01 = _cursor.getString(_cursorIndexOfV01);
+        _item.V02 = _cursor.getString(_cursorIndexOfV02);
+        _item.V03 = _cursor.getString(_cursorIndexOfV03);
+        _item.V04 = _cursor.getString(_cursorIndexOfV04);
+        _item.V05 = _cursor.getString(_cursorIndexOfV05);
+        _item.V06a = _cursor.getString(_cursorIndexOfV06a);
+        _item.V06b = _cursor.getString(_cursorIndexOfV06b);
+        _item.V07a = _cursor.getString(_cursorIndexOfV07a);
+        _item.V07b = _cursor.getString(_cursorIndexOfV07b);
+        _item.villageId = _cursor.getString(_cursorIndexOfVillageId);
+        _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
+        _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
     }
   }
 

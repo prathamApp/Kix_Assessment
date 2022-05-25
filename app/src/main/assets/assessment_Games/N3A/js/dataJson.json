@@ -1,0 +1,612 @@
+[
+    {
+        "nodeType": "Resource",
+        "storyTitle": "आम गिरा धप्प",
+        "storyImage": "Aam_Gira_Thap_Cover_Page.png",
+        "pageList":
+            [
+                {
+                    "pageImage": "Aam_Gira_Thap_1.png",
+                    "pageText": "जंगल में पेड़ से एक आम गिरा - धप्प!",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37891,
+                            "word": "जंगल",
+                            "wordFrom": "0.0000",
+                            "wordTo": "0.6000",
+                            "wordDuration": "0.6"
+                        },
+                        {
+                            "WordId": 37892,
+                            "word": "में",
+                            "wordFrom": "0.6000",
+                            "wordTo": "1.2190",
+                            "wordDuration": "0.6190000000000001"
+                        },
+                        {
+                            "WordId": 37893,
+                            "word": "पेड़",
+                            "wordFrom": "1.2190",
+                            "wordTo": "1.5500",
+                            "wordDuration": "0.33099999999999996"
+                        },
+                        {
+                            "WordId": 37894,
+                            "word": "से",
+                            "wordFrom": "1.5500",
+                            "wordTo": "2.4000",
+                            "wordDuration": "0.8499999999999999"
+                        },
+                        {
+                            "WordId": 37895,
+                            "word": "एक",
+                            "wordFrom": "2.4000",
+                            "wordTo": "2.8000",
+                            "wordDuration": "0.3999999999999999"
+                        },
+                        {
+                            "WordId": 37896,
+                            "word": "आम",
+                            "wordFrom": "2.8000",
+                            "wordTo": "3.3638",
+                            "wordDuration": "0.5638000000000001"
+                        },
+                        {
+                            "WordId": 37897,
+                            "word": "गिरा",
+                            "wordFrom": "3.3638",
+                            "wordTo": "3.8298",
+                            "wordDuration": "0.4660000000000002"
+                        },
+                        {
+                            "WordId": 37898,
+                            "word": "-",
+                            "wordFrom": "3.8298",
+                            "wordTo": "3.8327",
+                            "wordDuration": "0.0028999999999999027"
+                        },
+                        {
+                            "WordId": 37899,
+                            "word": "धप्प!",
+                            "wordFrom": "3.8327",
+                            "wordTo": "5.1337",
+                            "wordDuration": "1.3010000000000002"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_2.png",
+                    "pageText": "सारे जानवर डरकर भागे।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37900,
+                            "word": "सारे",
+                            "wordFrom": "5.1337",
+                            "wordTo": "5.7800",
+                            "wordDuration": "0.6463000000000001"
+                        },
+                        {
+                            "WordId": 37901,
+                            "word": "जानवर",
+                            "wordFrom": "5.7800",
+                            "wordTo": "6.5479",
+                            "wordDuration": "0.7679"
+                        },
+                        {
+                            "WordId": 37902,
+                            "word": "डरकर",
+                            "wordFrom": "6.5479",
+                            "wordTo": "7.1079",
+                            "wordDuration": "0.5599999999999996"
+                        },
+                        {
+                            "WordId": 37903,
+                            "word": "भागे।",
+                            "wordFrom": "7.1079",
+                            "wordTo": "8.5077",
+                            "wordDuration": "1.3998"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_3.png",
+                    "pageText": "आम तो उसी जगह पड़ा रह गया।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37904,
+                            "word": "आम",
+                            "wordFrom": "8.5077",
+                            "wordTo": "9.1054",
+                            "wordDuration": "0.5976999999999997"
+                        },
+                        {
+                            "WordId": 37905,
+                            "word": "तो",
+                            "wordFrom": "9.1054",
+                            "wordTo": "9.7394",
+                            "wordDuration": "0.6340000000000003"
+                        },
+                        {
+                            "WordId": 37906,
+                            "word": "उसी",
+                            "wordFrom": "9.7394",
+                            "wordTo": "10.2561",
+                            "wordDuration": "0.5167000000000002"
+                        },
+                        {
+                            "WordId": 37907,
+                            "word": "जगह",
+                            "wordFrom": "10.2561",
+                            "wordTo": "11.0739",
+                            "wordDuration": "0.8178000000000001"
+                        },
+                        {
+                            "WordId": 37908,
+                            "word": "पड़ा",
+                            "wordFrom": "11.0739",
+                            "wordTo": "11.3324",
+                            "wordDuration": "0.25849999999999973"
+                        },
+                        {
+                            "WordId": 37909,
+                            "word": "रह",
+                            "wordFrom": "11.3324",
+                            "wordTo": "11.6298",
+                            "wordDuration": "0.29739999999999966"
+                        },
+                        {
+                            "WordId": 37910,
+                            "word": "गया।",
+                            "wordFrom": "11.6298",
+                            "wordTo": "13.0979",
+                            "wordDuration": "1.4680999999999997"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_4.png",
+                    "pageText": "कुछ दिनों बाद सिर्फ़ गुठली ही मिली।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37911,
+                            "word": "कुछ",
+                            "wordFrom": "13.0979",
+                            "wordTo": "13.5125",
+                            "wordDuration": "0.4146000000000001"
+                        },
+                        {
+                            "WordId": 37912,
+                            "word": "दिनों",
+                            "wordFrom": "13.5125",
+                            "wordTo": "13.8864",
+                            "wordDuration": "0.3739000000000008"
+                        },
+                        {
+                            "WordId": 37913,
+                            "word": "बाद",
+                            "wordFrom": "13.8864",
+                            "wordTo": "14.7364",
+                            "wordDuration": "0.8499999999999996"
+                        },
+                        {
+                            "WordId": 37914,
+                            "word": "सिर्फ़",
+                            "wordFrom": "14.7364",
+                            "wordTo": "15.2567",
+                            "wordDuration": "0.5203000000000007"
+                        },
+                        {
+                            "WordId": 37915,
+                            "word": "गुठली",
+                            "wordFrom": "15.2567",
+                            "wordTo": "15.7990",
+                            "wordDuration": "0.5422999999999991"
+                        },
+                        {
+                            "WordId": 37916,
+                            "word": "ही",
+                            "wordFrom": "15.7990",
+                            "wordTo": "16.1182",
+                            "wordDuration": "0.31920000000000215"
+                        },
+                        {
+                            "WordId": 37917,
+                            "word": "मिली।",
+                            "wordFrom": "16.1182",
+                            "wordTo": "17.5682",
+                            "wordDuration": "1.4499999999999993"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_5.png",
+                    "pageText": "सब गुठली को दूर से ही देखते।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37918,
+                            "word": "सब",
+                            "wordFrom": "17.5682",
+                            "wordTo": "18.0284",
+                            "wordDuration": "0.4602000000000004"
+                        },
+                        {
+                            "WordId": 37919,
+                            "word": "गुठली",
+                            "wordFrom": "18.0284",
+                            "wordTo": "18.6010",
+                            "wordDuration": "0.5725999999999978"
+                        },
+                        {
+                            "WordId": 37920,
+                            "word": "को",
+                            "wordFrom": "18.6010",
+                            "wordTo": "19.2024",
+                            "wordDuration": "0.6014000000000017"
+                        },
+                        {
+                            "WordId": 37921,
+                            "word": "दूर",
+                            "wordFrom": "19.2024",
+                            "wordTo": "19.5012",
+                            "wordDuration": "0.29879999999999995"
+                        },
+                        {
+                            "WordId": 37922,
+                            "word": "से",
+                            "wordFrom": "19.5012",
+                            "wordTo": "19.7064",
+                            "wordDuration": "0.20519999999999783"
+                        },
+                        {
+                            "WordId": 37923,
+                            "word": "ही",
+                            "wordFrom": "19.7064",
+                            "wordTo": "19.9700",
+                            "wordDuration": "0.2636000000000003"
+                        },
+                        {
+                            "WordId": 37924,
+                            "word": "देखते।",
+                            "wordFrom": "19.9700",
+                            "wordTo": "21.8677",
+                            "wordDuration": "1.8977000000000004"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_6.png",
+                    "pageText": "बरसात हुई, लेकिन गुठली पड़ी रही।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37925,
+                            "word": "बरसात",
+                            "wordFrom": "21.8677",
+                            "wordTo": "22.5762",
+                            "wordDuration": "0.7085000000000008"
+                        },
+                        {
+                            "WordId": 37926,
+                            "word": "हुई,",
+                            "wordFrom": "22.5762",
+                            "wordTo": "23.5197",
+                            "wordDuration": "0.9435000000000002"
+                        },
+                        {
+                            "WordId": 37927,
+                            "word": "लेकिन",
+                            "wordFrom": "23.5197",
+                            "wordTo": "24.6342",
+                            "wordDuration": "1.1144999999999996"
+                        },
+                        {
+                            "WordId": 37928,
+                            "word": "गुठली",
+                            "wordFrom": "24.6342",
+                            "wordTo": "25.2500",
+                            "wordDuration": "0.6158000000000001"
+                        },
+                        {
+                            "WordId": 37929,
+                            "word": "पड़ी",
+                            "wordFrom": "25.2500",
+                            "wordTo": "25.4971",
+                            "wordDuration": "0.24709999999999965"
+                        },
+                        {
+                            "WordId": 37930,
+                            "word": "रही।",
+                            "wordFrom": "25.4971",
+                            "wordTo": "26.8000",
+                            "wordDuration": "1.302900000000001"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_7.png",
+                    "pageText": "धीरे-धीरे पत्तों और मिट्टी ने उसे ढक दिया।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37931,
+                            "word": "धीरे-धीरे",
+                            "wordFrom": "26.8000",
+                            "wordTo": "28.2713",
+                            "wordDuration": "1.4712999999999994"
+                        },
+                        {
+                            "WordId": 37932,
+                            "word": "पत्तों",
+                            "wordFrom": "28.2713",
+                            "wordTo": "28.9962",
+                            "wordDuration": "0.7249000000000017"
+                        },
+                        {
+                            "WordId": 37933,
+                            "word": "और",
+                            "wordFrom": "28.9962",
+                            "wordTo": "29.7046",
+                            "wordDuration": "0.7083999999999975"
+                        },
+                        {
+                            "WordId": 37934,
+                            "word": "मिट्टी",
+                            "wordFrom": "29.7046",
+                            "wordTo": "30.1985",
+                            "wordDuration": "0.4939"
+                        },
+                        {
+                            "WordId": 37935,
+                            "word": "ने",
+                            "wordFrom": "30.1985",
+                            "wordTo": "30.8497",
+                            "wordDuration": "0.6511999999999993"
+                        },
+                        {
+                            "WordId": 37936,
+                            "word": "उसे",
+                            "wordFrom": "30.8497",
+                            "wordTo": "31.6355",
+                            "wordDuration": "0.7858000000000018"
+                        },
+                        {
+                            "WordId": 37937,
+                            "word": "ढक",
+                            "wordFrom": "31.6355",
+                            "wordTo": "32.0652",
+                            "wordDuration": "0.42969999999999686"
+                        },
+                        {
+                            "WordId": 37938,
+                            "word": "दिया।",
+                            "wordFrom": "32.0652",
+                            "wordTo": "33.5046",
+                            "wordDuration": "1.4394000000000062"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_8.png",
+                    "pageText": "कई दिनों तक लगातार बरसात होती रही।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37939,
+                            "word": "कई",
+                            "wordFrom": "33.5046",
+                            "wordTo": "34.0232",
+                            "wordDuration": "0.5185999999999993"
+                        },
+                        {
+                            "WordId": 37940,
+                            "word": "दिनों",
+                            "wordFrom": "34.0232",
+                            "wordTo": "34.4821",
+                            "wordDuration": "0.45889999999999986"
+                        },
+                        {
+                            "WordId": 37941,
+                            "word": "तक",
+                            "wordFrom": "34.4821",
+                            "wordTo": "35.1836",
+                            "wordDuration": "0.7014999999999958"
+                        },
+                        {
+                            "WordId": 37942,
+                            "word": "लगातार",
+                            "wordFrom": "35.1836",
+                            "wordTo": "36.3989",
+                            "wordDuration": "1.2152999999999992"
+                        },
+                        {
+                            "WordId": 37943,
+                            "word": "बरसात",
+                            "wordFrom": "36.3989",
+                            "wordTo": "37.1715",
+                            "wordDuration": "0.7726000000000042"
+                        },
+                        {
+                            "WordId": 37944,
+                            "word": "होती",
+                            "wordFrom": "37.1715",
+                            "wordTo": "37.5821",
+                            "wordDuration": "0.4105999999999952"
+                        },
+                        {
+                            "WordId": 37945,
+                            "word": "रही।",
+                            "wordFrom": "37.5821",
+                            "wordTo": "39.1394",
+                            "wordDuration": "1.557300000000005"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_9.png",
+                    "pageText": "फिर कुछ समय के बाद उस जगह एक पौधा निकल आया।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37946,
+                            "word": "फिर",
+                            "wordFrom": "39.1394",
+                            "wordTo": "39.5072",
+                            "wordDuration": "0.36779999999999546"
+                        },
+                        {
+                            "WordId": 37947,
+                            "word": "कुछ",
+                            "wordFrom": "39.5072",
+                            "wordTo": "39.8096",
+                            "wordDuration": "0.3024000000000058"
+                        },
+                        {
+                            "WordId": 37948,
+                            "word": "समय",
+                            "wordFrom": "39.8096",
+                            "wordTo": "40.2684",
+                            "wordDuration": "0.45879999999999654"
+                        },
+                        {
+                            "WordId": 37949,
+                            "word": "के",
+                            "wordFrom": "40.2684",
+                            "wordTo": "40.4746",
+                            "wordDuration": "0.2062000000000026"
+                        },
+                        {
+                            "WordId": 37950,
+                            "word": "बाद",
+                            "wordFrom": "40.4746",
+                            "wordTo": "41.3626",
+                            "wordDuration": "0.8879999999999981"
+                        },
+                        {
+                            "WordId": 37951,
+                            "word": "उस",
+                            "wordFrom": "41.3626",
+                            "wordTo": "41.8419",
+                            "wordDuration": "0.47930000000000206"
+                        },
+                        {
+                            "WordId": 37952,
+                            "word": "जगह",
+                            "wordFrom": "41.8419",
+                            "wordTo": "42.8344",
+                            "wordDuration": "0.9924999999999997"
+                        },
+                        {
+                            "WordId": 37953,
+                            "word": "एक",
+                            "wordFrom": "42.8344",
+                            "wordTo": "43.3681",
+                            "wordDuration": "0.5336999999999961"
+                        },
+                        {
+                            "WordId": 37954,
+                            "word": "पौधा",
+                            "wordFrom": "43.3681",
+                            "wordTo": "43.8747",
+                            "wordDuration": "0.5065999999999988"
+                        },
+                        {
+                            "WordId": 37955,
+                            "word": "निकल",
+                            "wordFrom": "43.8747",
+                            "wordTo": "44.2003",
+                            "wordDuration": "0.32560000000000144"
+                        },
+                        {
+                            "WordId": 37956,
+                            "word": "आया।",
+                            "wordFrom": "44.2003",
+                            "wordTo": "45.4373",
+                            "wordDuration": "1.2370000000000019"
+                        }
+                    ]
+                },
+                {
+                    "pageImage": "Aam_Gira_Thap_10.png",
+                    "pageText": "कुछ सालों बाद वह एक छायादार बड़ा पेड़ बन गया।",
+                    "readPageAudio": "1_aam_gira_dhap.mp3",
+                    "readList": [
+                        {
+                            "WordId": 37957,
+                            "word": "कुछ",
+                            "wordFrom": "45.4373",
+                            "wordTo": "45.7900",
+                            "wordDuration": "0.3526999999999987"
+                        },
+                        {
+                            "WordId": 37958,
+                            "word": "सालों",
+                            "wordFrom": "45.7900",
+                            "wordTo": "46.3139",
+                            "wordDuration": "0.5238999999999976"
+                        },
+                        {
+                            "WordId": 37959,
+                            "word": "बाद",
+                            "wordFrom": "46.3139",
+                            "wordTo": "47.2444",
+                            "wordDuration": "0.9305000000000021"
+                        },
+                        {
+                            "WordId": 37960,
+                            "word": "वह",
+                            "wordFrom": "47.2444",
+                            "wordTo": "48.0000",
+                            "wordDuration": "0.7556000000000012"
+                        },
+                        {
+                            "WordId": 37961,
+                            "word": "एक",
+                            "wordFrom": "48.0000",
+                            "wordTo": "48.3300",
+                            "wordDuration": "0.3299999999999983"
+                        },
+                        {
+                            "WordId": 37962,
+                            "word": "छायादार",
+                            "wordFrom": "48.3300",
+                            "wordTo": "49.5525",
+                            "wordDuration": "1.2225000000000037"
+                        },
+                        {
+                            "WordId": 37963,
+                            "word": "बड़ा",
+                            "wordFrom": "49.5525",
+                            "wordTo": "50.0032",
+                            "wordDuration": "0.45069999999999766"
+                        },
+                        {
+                            "WordId": 37964,
+                            "word": "पेड़",
+                            "wordFrom": "50.0032",
+                            "wordTo": "50.6647",
+                            "wordDuration": "0.6615000000000038"
+                        },
+                        {
+                            "WordId": 37965,
+                            "word": "बन",
+                            "wordFrom": "50.6647",
+                            "wordTo": "50.9000",
+                            "wordDuration": "0.23529999999999518"
+                        },
+                        {
+                            "WordId": 37966,
+                            "word": "गया।",
+                            "wordFrom": "50.9000",
+                            "wordTo": "51.5760",
+                            "wordDuration": "0.6760000000000019"
+                        }
+                    ]
+                }
+            ]
+    }
+]

@@ -36,6 +36,10 @@ public class Kix_Constant {
     public static final String METADATA = "metadata";
     public static final String SURVEYOR = "surveyor";
     public static final String HOUSEHOLD = "household";
+    public static final String HIF = "HIF";
+    public static final String PIF = "PIF";
+    public static final String VIF = "PIF";
+    public static final String VILLAGE = "village";
     public static final String BOOKLET = "booklet";
     public static final String SUCCESSFULLYPUSHED = "successfully_pushed";
     public static final String DBSUCCESSFULLYPUSHED = "successfully_pushed_db";
@@ -55,6 +59,7 @@ public class Kix_Constant {
     public static final String SCORE_COUNT = "scoreCount";
     public static final String STUDENT_COUNT = "studentCount";
     public static final String VILLAGE_COUNT = "villageCount";
+    public static final String HOUSEHOLD_COUNT = "householdCount";
     public static final String SURVEYOR_COUNT = "surveyorCount";
 
     public static final String YES = "Yes";

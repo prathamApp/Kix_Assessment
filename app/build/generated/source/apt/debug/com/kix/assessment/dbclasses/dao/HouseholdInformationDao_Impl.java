@@ -10,6 +10,8 @@ import com.kix.assessment.modal_classes.Modal_HIF;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unchecked")
 public final class HouseholdInformationDao_Impl implements HouseholdInformationDao {
@@ -285,6 +287,71 @@ public final class HouseholdInformationDao_Impl implements HouseholdInformationD
     } finally {
       __db.endTransaction();
       __preparedStmtOfUpdateHousehold.release(_stmt);
+    }
+  }
+
+  @Override
+  public List<Modal_HIF> getAllNewHIF() {
+    final String _sql = "select * from HouseholdInformation where sentFlag = 0";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfHifId = _cursor.getColumnIndexOrThrow("hif_Id");
+      final int _cursorIndexOfHH07a = _cursor.getColumnIndexOrThrow("HH07a");
+      final int _cursorIndexOfHH07b = _cursor.getColumnIndexOrThrow("HH07b");
+      final int _cursorIndexOfHH07c = _cursor.getColumnIndexOrThrow("HH07c");
+      final int _cursorIndexOfHH07cOther = _cursor.getColumnIndexOrThrow("HH07cOther");
+      final int _cursorIndexOfHH07d = _cursor.getColumnIndexOrThrow("HH07d");
+      final int _cursorIndexOfHH07dOther = _cursor.getColumnIndexOrThrow("HH07dOther");
+      final int _cursorIndexOfHH07e = _cursor.getColumnIndexOrThrow("HH07e");
+      final int _cursorIndexOfHH07f = _cursor.getColumnIndexOrThrow("HH07f");
+      final int _cursorIndexOfHH07g = _cursor.getColumnIndexOrThrow("HH07g");
+      final int _cursorIndexOfHH07h = _cursor.getColumnIndexOrThrow("HH07h");
+      final int _cursorIndexOfHH07i = _cursor.getColumnIndexOrThrow("HH07i");
+      final int _cursorIndexOfHH07j = _cursor.getColumnIndexOrThrow("HH07j");
+      final int _cursorIndexOfHH07k = _cursor.getColumnIndexOrThrow("HH07k");
+      final int _cursorIndexOfHH07l = _cursor.getColumnIndexOrThrow("HH07l");
+      final int _cursorIndexOfHH07m = _cursor.getColumnIndexOrThrow("HH07m");
+      final int _cursorIndexOfHH07n = _cursor.getColumnIndexOrThrow("HH07n");
+      final int _cursorIndexOfHH07o = _cursor.getColumnIndexOrThrow("HH07o");
+      final int _cursorIndexOfHH07p = _cursor.getColumnIndexOrThrow("HH07p");
+      final int _cursorIndexOfHouseholdId = _cursor.getColumnIndexOrThrow("householdId");
+      final int _cursorIndexOfVillageId = _cursor.getColumnIndexOrThrow("villageId");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
+      final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final List<Modal_HIF> _result = new ArrayList<Modal_HIF>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Modal_HIF _item;
+        _item = new Modal_HIF();
+        _item.hif_Id = _cursor.getInt(_cursorIndexOfHifId);
+        _item.HH07a = _cursor.getString(_cursorIndexOfHH07a);
+        _item.HH07b = _cursor.getString(_cursorIndexOfHH07b);
+        _item.HH07c = _cursor.getString(_cursorIndexOfHH07c);
+        _item.HH07cOther = _cursor.getString(_cursorIndexOfHH07cOther);
+        _item.HH07d = _cursor.getString(_cursorIndexOfHH07d);
+        _item.HH07dOther = _cursor.getString(_cursorIndexOfHH07dOther);
+        _item.HH07e = _cursor.getString(_cursorIndexOfHH07e);
+        _item.HH07f = _cursor.getString(_cursorIndexOfHH07f);
+        _item.HH07g = _cursor.getString(_cursorIndexOfHH07g);
+        _item.HH07h = _cursor.getString(_cursorIndexOfHH07h);
+        _item.HH07i = _cursor.getString(_cursorIndexOfHH07i);
+        _item.HH07j = _cursor.getString(_cursorIndexOfHH07j);
+        _item.HH07k = _cursor.getString(_cursorIndexOfHH07k);
+        _item.HH07l = _cursor.getString(_cursorIndexOfHH07l);
+        _item.HH07m = _cursor.getString(_cursorIndexOfHH07m);
+        _item.HH07n = _cursor.getString(_cursorIndexOfHH07n);
+        _item.HH07o = _cursor.getString(_cursorIndexOfHH07o);
+        _item.HH07p = _cursor.getString(_cursorIndexOfHH07p);
+        _item.householdId = _cursor.getString(_cursorIndexOfHouseholdId);
+        _item.villageId = _cursor.getString(_cursorIndexOfVillageId);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
+        _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
     }
   }
 

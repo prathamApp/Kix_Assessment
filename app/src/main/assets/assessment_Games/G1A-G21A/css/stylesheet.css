@@ -1,0 +1,23 @@
+
+#question{
+	color: rgb(0, 0, 0);
+    font-size:2vw;
+    font-weight: bold;
+    height: 13vh;
+	text-align: center;
+}
+
+#option,#optionPatt2{
+	margin-top:12vh;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.border{
+	border: 6px solid rgb(255, 190, 0);
+}
+
+#patImg1{
+	padding-left: 0;
+}

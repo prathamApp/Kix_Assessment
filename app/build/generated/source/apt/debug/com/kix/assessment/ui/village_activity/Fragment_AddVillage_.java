@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import com.kix.assessment.R;
+import com.kix.assessment.modal_classes.Modal_Village;
+import org.androidannotations.api.UiThreadExecutor;
 import org.androidannotations.api.bean.BeanHolder;
 import org.androidannotations.api.builder.FragmentBuilder;
 import org.androidannotations.api.view.HasViews;
@@ -55,9 +57,9 @@ public final class Fragment_AddVillage_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
-        et_VillageName = null;
-        et_District = null;
-        et_State = null;
+        spn_Village = null;
+        spn_District = null;
+        spn_State = null;
         tv_TitleLBL = null;
     }
 
@@ -87,9 +89,9 @@ public final class Fragment_AddVillage_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        this.et_VillageName = hasViews.internalFindViewById(R.id.et_VillageName);
-        this.et_District = hasViews.internalFindViewById(R.id.et_District);
-        this.et_State = hasViews.internalFindViewById(R.id.et_State);
+        this.spn_Village = hasViews.internalFindViewById(R.id.spn_Village);
+        this.spn_District = hasViews.internalFindViewById(R.id.spn_District);
+        this.spn_State = hasViews.internalFindViewById(R.id.spn_State);
         this.tv_TitleLBL = hasViews.internalFindViewById(R.id.tv_TitleLBL);
         View view_btn_save = hasViews.internalFindViewById(R.id.btn_save);
 
@@ -104,6 +106,42 @@ public final class Fragment_AddVillage_
             );
         }
         initialize();
+    }
+
+    @Override
+    public void setStates(final Modal_Village modalVillage) {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                Fragment_AddVillage_.super.setStates(modalVillage);
+            }
+        }
+        , 0L);
+    }
+
+    @Override
+    public void setDistricts(final int statePos, final Modal_Village modalVillage) {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                Fragment_AddVillage_.super.setDistricts(statePos, modalVillage);
+            }
+        }
+        , 0L);
+    }
+
+    @Override
+    public void setVillages(final int distPoss, final Modal_Village modalVillage) {
+        UiThreadExecutor.runTask("", new Runnable() {
+
+            @Override
+            public void run() {
+                Fragment_AddVillage_.super.setVillages(distPoss, modalVillage);
+            }
+        }
+        , 0L);
     }
 
     public static class FragmentBuilder_

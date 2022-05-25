@@ -18,101 +18,110 @@ public class Modal_Village implements Comparable, Parcelable {
     public String villageState;
     public String villageDate;
     public String countryName;
-    public String svrCode;
-    public int sentFlag;
-
-    protected Modal_Village(final Parcel in) {
-        this.villageId = in.readString();
-        this.villageName = in.readString();
-        this.villageDistrict = in.readString();
-        this.countryName = in.readString();
-        this.villageState = in.readString();
-        this.villageDate = in.readString();
-        this.svrCode = in.readString();
-        this.sentFlag = in.readInt();
-    }
-
     public static final Parcelable.Creator<Modal_Village> CREATOR = new Parcelable.Creator<Modal_Village>() {
         @Override
-        public Modal_Village createFromParcel(final Parcel in) {
+        public Modal_Village createFromParcel(Parcel in) {
             return new Modal_Village(in);
         }
 
         @Override
-        public Modal_Village[] newArray(final int size) {
+        public Modal_Village[] newArray(int size) {
             return new Modal_Village[size];
         }
     };
+    public String svrCode;
+    public int sentFlag;
+    public String villageBooklet;
+
+    protected Modal_Village(Parcel in) {
+        villageId = in.readString();
+        villageName = in.readString();
+        villageDistrict = in.readString();
+        countryName = in.readString();
+        villageState = in.readString();
+        villageDate = in.readString();
+        villageBooklet = in.readString();
+        svrCode = in.readString();
+        sentFlag = in.readInt();
+    }
 
     public Modal_Village() {
     }
 
-    public String getVillageId() {
-        return this.villageId;
+    public static Parcelable.Creator<Modal_Village> getCREATOR() {
+        return CREATOR;
     }
 
-    public void setVillageId(final String villageId) {
+    public String getVillageId() {
+        return villageId;
+    }
+
+    public void setVillageId(String villageId) {
         this.villageId = villageId;
     }
 
     public String getVillageName() {
-        return this.villageName;
+        return villageName;
     }
 
-    public void setVillageName(final String villageName) {
+    public void setVillageName(String villageName) {
         this.villageName = villageName;
     }
 
     public String getVillageDistrict() {
-        return this.villageDistrict;
+        return villageDistrict;
     }
 
-    public void setVillageDistrict(final String villageDistrict) {
+    public void setVillageDistrict(String villageDistrict) {
         this.villageDistrict = villageDistrict;
     }
 
     public String getVillageState() {
-        return this.villageState;
+        return villageState;
     }
 
-    public void setVillageState(final String villageState) {
+    public void setVillageState(String villageState) {
         this.villageState = villageState;
     }
 
     public String getVillageDate() {
-        return this.villageDate;
+        return villageDate;
     }
 
-    public void setVillageDate(final String villageDate) {
+    public void setVillageDate(String villageDate) {
         this.villageDate = villageDate;
     }
 
     public String getCountryName() {
-        return this.countryName;
+        return countryName;
     }
 
-    public void setCountryName(final String countryName) {
+    public void setCountryName(String countryName) {
         this.countryName = countryName;
     }
 
-    public String getSvrCode() {
-        return this.svrCode;
+    public String getVillageBooklet() {
+        return villageBooklet;
     }
 
-    public void setSvrCode(final String svrCode) {
+    public void setVillageBooklet(String villageBooklet) {
+        this.villageBooklet = villageBooklet;
+    }
+
+    public String getSvrCode() {
+        return svrCode;
+    }
+
+    public void setSvrCode(String svrCode) {
         this.svrCode = svrCode;
     }
 
     public int getSentFlag() {
-        return this.sentFlag;
+        return sentFlag;
     }
 
-    public void setSentFlag(final int sentFlag) {
+    public void setSentFlag(int sentFlag) {
         this.sentFlag = sentFlag;
-    }
-
-    public static Parcelable.Creator<Modal_Village> getCREATOR() {
-        return Modal_Village.CREATOR;
     }
 
     @Override
@@ -121,16 +130,17 @@ public class Modal_Village implements Comparable, Parcelable {
     }
 
     @Override
-    public void writeToParcel(final Parcel dest, final int flags) {
-        dest.writeString(this.villageId);
-        dest.writeString(this.villageName);
-        dest.writeString(this.countryName);
-        dest.writeString(this.svrCode);
-        dest.writeInt(this.sentFlag);
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(villageId);
+        dest.writeString(villageName);
+        dest.writeString(countryName);
+        dest.writeString(villageBooklet);
+        dest.writeString(svrCode);
+        dest.writeInt(sentFlag);
     }
 
     @Override
-    public int compareTo(final Object o) {
+    public int compareTo(Object o) {
         return 0;
     }
 }

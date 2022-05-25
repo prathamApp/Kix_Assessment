@@ -39,6 +39,6 @@ public interface VillageDao {
     @Query("update Village set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
 
-    @Query("update Village set villageName=:vName, villageDistrict=:vDistrict, villageState=:vState, sentFlag=0, countryName=:countryName where villageId=:vId")
-    void updateVillage(String vName, String vDistrict, String vState, String vId, String countryName);
+    @Query("update Village set villageName=:vName, villageDistrict=:vDistrict, villageState=:vState, sentFlag=0, countryName=:countryName, villageBooklet=:booklet where villageId=:vId")
+    void updateVillage(String vName, String vDistrict, String vState, String vId, String countryName, String booklet);
 }

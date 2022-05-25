@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="css/animate.css" rel="stylesheet"></link>
+	<link href="css/animations.css" rel="stylesheet"></link>
+	<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="css/stylesheet.css" rel="stylesheet"></link>
+	<link href="css/commonKIXStyle.css" rel="stylesheet" type="text/css"></link>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/classificationScript.js"></script>
+	<script src="js/classificationData.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+	<audio id="playSound"></audio>
+	<div class="centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1" id='queNo'></div>
+		<div class='col-xs-1 col-sm-1 col-lg-1 col-md-1' id='resetDiv' onclick='resetGame()'>
+			<i class="glyphicon glyphicon-repeat"></i>
+		</div>
+		<div class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-9 col-lg-offset-9 col-md-offset-9 col-xs-offset-9" id="nextDiv" onclick='Classification.makeChoice()'>
+			<i class="glyphicon glyphicon-arrow-right"></i>
+		</div>
+	</div>
+	<div class="noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12" id="gamapage">
+		<div class="Box noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-5 col-lg-offset-5 col-md-offset-5 col-xs-offset-5" id="dropDiv">
+			<div class="Box noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12" id="Box1">
+				<div class=" dropBox noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12"id="dropBox1"></div>
+			</div>
+		</div>
+		<div class="heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" id="outerDiv">
+		<div class="noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12" id="container1"></div>
+			<div class="noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12" id="container2"></div>
+		</div>
+	</div>	
+	<div class='col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding' id='footer'>
+		<div class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' id='questioMark' onclick='showQues()'>
+			<i class="glyphicon glyphicon-question-sign"></i>
+		</div>
+		<div  class="col-xs-12 col-sm-12 col-lg-12 col-md-12" id="myModal" style='margin-right:3vw'>
+			<div  class='borderTop txtClass centerClass col-sm-12 col-lg-12 col-md-12 col-xs-12'>
+				<div class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding' id='heading'></div>
+				<div  class="glyphicon glyphicon-remove" id='close' onclick='hideQuestion()'></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

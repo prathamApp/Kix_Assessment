@@ -15,72 +15,72 @@ public class Modal_Surveyor {
     public String svrEmail;
     public String svrMobile;
     public String svrPassword;
-    public String svrBooklet;
+//    public String svrBooklet;
     public String svrRegistrationDate;
     public String svrCountry;
     public int sentFlag;
 
     public String getSvrName() {
-        return svrName;
+        return this.svrName;
     }
 
-    public void setSvrName(String svrName) {
+    public void setSvrName(final String svrName) {
         this.svrName = svrName;
     }
 
     public String getSvrEmail() {
-        return svrEmail;
+        return this.svrEmail;
     }
 
-    public void setSvrEmail(String svrEmail) {
+    public void setSvrEmail(final String svrEmail) {
         this.svrEmail = svrEmail;
     }
 
     public String getSvrMobile() {
-        return svrMobile;
+        return this.svrMobile;
     }
 
-    public void setSvrMobile(String svrMobile) {
+    public void setSvrMobile(final String svrMobile) {
         this.svrMobile = svrMobile;
     }
 
     public String getSvrPassword() {
-        return svrPassword;
+        return this.svrPassword;
     }
 
-    public void setSvrPassword(String svrPassword) {
+    public void setSvrPassword(final String svrPassword) {
         this.svrPassword = svrPassword;
     }
 
-    public String getSvrCode() { return svrCode; }
+    public String getSvrCode() { return this.svrCode; }
 
-    public void setSvrCode(String svrCode) { this.svrCode = svrCode; }
+    public void setSvrCode(final String svrCode) { this.svrCode = svrCode; }
 
-    public String getSvrBooklet() {
-        return svrBooklet;
-    }
-
-    public void setSvrBooklet(String svrBooklet) {
-        this.svrBooklet = svrBooklet;
-    }
+//    public String getSvrBooklet() {
+//        return svrBooklet;
+//    }
+//
+//    public void setSvrBooklet(String svrBooklet) {
+//        this.svrBooklet = svrBooklet;
+//    }
 
     public String getSvrRegistrationDate() {
-        return svrRegistrationDate;
+        return this.svrRegistrationDate;
     }
 
-    public void setSvrRegistrationDate(String svrRegistrationDate) {
+    public void setSvrRegistrationDate(final String svrRegistrationDate) {
         this.svrRegistrationDate = svrRegistrationDate;
     }
 
     public String getSvrCountry() {
-        return svrCountry;
+        return this.svrCountry;
     }
 
-    public void setSvrCountry(String svrCountry) {
+    public void setSvrCountry(final String svrCountry) {
         this.svrCountry = svrCountry;
     }
 
-    public int getSentFlag() { return sentFlag; }
+    public int getSentFlag() { return this.sentFlag; }
 
-    public void setSentFlag(int sentFlag) { this.sentFlag = sentFlag; }
+    public void setSentFlag(final int sentFlag) { this.sentFlag = sentFlag; }
 }

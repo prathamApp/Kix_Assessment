@@ -1,0 +1,48 @@
+
+#question{
+	color: rgb(0, 0, 0);
+    font-size:2vw;
+    font-weight: bold;
+    height: 13vh;
+	text-align: center;
+}
+
+#option{
+	margin-top:15vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+	/* border: 2px solid rgb(102 98 85);
+	box-shadow: 4px 4px 7px; */
+	padding:10px;
+}
+.queClass{
+	margin-top: 5vh;
+}
+
+.border{
+	border: 6px solid rgb(255, 190, 0);
+}
+.codeStyle{
+	color:white;
+	font-size: 2vw;
+	text-align: left;
+	background-color: rgb(143, 136, 136);
+	padding: 13px;
+}
+.directCode{
+	margin-top:7vh;
+	display: none;
+}
+.code{
+  color:black;
+  font-size: 2vw;
+  text-align: left;
+  font-weight: bold;
+}
+
+.selectClass{
+  border: 6px solid rgb(255, 190, 0);
+}

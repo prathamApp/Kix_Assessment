@@ -26,7 +26,7 @@ public final class SurveyorDao_Impl implements SurveyorDao {
     this.__insertionAdapterOfModal_Surveyor = new EntityInsertionAdapter<Modal_Surveyor>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Surveyor`(`svrCode`,`svrName`,`svrEmail`,`svrMobile`,`svrPassword`,`svrBooklet`,`svrRegistrationDate`,`svrCountry`,`sentFlag`) VALUES (?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Surveyor`(`svrCode`,`svrName`,`svrEmail`,`svrMobile`,`svrPassword`,`svrRegistrationDate`,`svrCountry`,`sentFlag`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -56,22 +56,17 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         } else {
           stmt.bindString(5, value.svrPassword);
         }
-        if (value.svrBooklet == null) {
+        if (value.svrRegistrationDate == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.svrBooklet);
-        }
-        if (value.svrRegistrationDate == null) {
-          stmt.bindNull(7);
-        } else {
-          stmt.bindString(7, value.svrRegistrationDate);
+          stmt.bindString(6, value.svrRegistrationDate);
         }
         if (value.svrCountry == null) {
-          stmt.bindNull(8);
+          stmt.bindNull(7);
         } else {
-          stmt.bindString(8, value.svrCountry);
+          stmt.bindString(7, value.svrCountry);
         }
-        stmt.bindLong(9, value.sentFlag);
+        stmt.bindLong(8, value.sentFlag);
       }
     };
     this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
@@ -124,7 +119,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
       final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
       final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
       final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSvrRegistrationDate = _cursor.getColumnIndexOrThrow("svrRegistrationDate");
       final int _cursorIndexOfSvrCountry = _cursor.getColumnIndexOrThrow("svrCountry");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -136,7 +130,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
         _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
         _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
-        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _result.svrRegistrationDate = _cursor.getString(_cursorIndexOfSvrRegistrationDate);
         _result.svrCountry = _cursor.getString(_cursorIndexOfSvrCountry);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -167,7 +160,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
       final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
       final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
       final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSvrRegistrationDate = _cursor.getColumnIndexOrThrow("svrRegistrationDate");
       final int _cursorIndexOfSvrCountry = _cursor.getColumnIndexOrThrow("svrCountry");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -179,7 +171,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
         _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
         _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
-        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _result.svrRegistrationDate = _cursor.getString(_cursorIndexOfSvrRegistrationDate);
         _result.svrCountry = _cursor.getString(_cursorIndexOfSvrCountry);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -216,7 +207,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
       final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
       final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
       final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSvrRegistrationDate = _cursor.getColumnIndexOrThrow("svrRegistrationDate");
       final int _cursorIndexOfSvrCountry = _cursor.getColumnIndexOrThrow("svrCountry");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -228,7 +218,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         _result.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
         _result.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
         _result.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
-        _result.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _result.svrRegistrationDate = _cursor.getString(_cursorIndexOfSvrRegistrationDate);
         _result.svrCountry = _cursor.getString(_cursorIndexOfSvrCountry);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
@@ -253,7 +242,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
       final int _cursorIndexOfSvrEmail = _cursor.getColumnIndexOrThrow("svrEmail");
       final int _cursorIndexOfSvrMobile = _cursor.getColumnIndexOrThrow("svrMobile");
       final int _cursorIndexOfSvrPassword = _cursor.getColumnIndexOrThrow("svrPassword");
-      final int _cursorIndexOfSvrBooklet = _cursor.getColumnIndexOrThrow("svrBooklet");
       final int _cursorIndexOfSvrRegistrationDate = _cursor.getColumnIndexOrThrow("svrRegistrationDate");
       final int _cursorIndexOfSvrCountry = _cursor.getColumnIndexOrThrow("svrCountry");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
@@ -266,7 +254,6 @@ public final class SurveyorDao_Impl implements SurveyorDao {
         _item.svrEmail = _cursor.getString(_cursorIndexOfSvrEmail);
         _item.svrMobile = _cursor.getString(_cursorIndexOfSvrMobile);
         _item.svrPassword = _cursor.getString(_cursorIndexOfSvrPassword);
-        _item.svrBooklet = _cursor.getString(_cursorIndexOfSvrBooklet);
         _item.svrRegistrationDate = _cursor.getString(_cursorIndexOfSvrRegistrationDate);
         _item.svrCountry = _cursor.getString(_cursorIndexOfSvrCountry);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);

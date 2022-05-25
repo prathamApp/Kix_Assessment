@@ -7,6 +7,8 @@ import androidx.room.Query;
 
 import com.kix.assessment.modal_classes.Modal_VIF;
 
+import java.util.List;
+
 @Dao
 public interface VillageInformationDao {
 
@@ -15,6 +17,9 @@ public interface VillageInformationDao {
 
     @Query("update VillageInformartion set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
+
+    @Query("Select * from VillageInformartion where sentFlag=0")
+    List<Modal_VIF> getAllNewVIF();
 
     @Query("Select * from VillageInformartion where villageId=:villageId")
     Modal_VIF getVIFbyVillageId(String villageId);

@@ -83,7 +83,7 @@ public final class KixDatabase_Impl extends KixDatabase {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Student` (`sId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `studentId` TEXT, `CH01` TEXT, `CH02` TEXT, `CH03` TEXT, `CH04` TEXT, `CH05a` TEXT, `CH05b` TEXT, `CH05c` TEXT, `CH05d` TEXT, `CH05e` TEXT, `CH05f` TEXT, `CH06a` TEXT, `CH06b1` TEXT, `CH06b2` TEXT, `CH06b3` TEXT, `CH07` TEXT, `CH08` TEXT, `createdOn` TEXT, `svrCode` TEXT, `householdId` TEXT, `sentFlag` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Surveyor` (`svrCode` TEXT NOT NULL, `svrName` TEXT, `svrEmail` TEXT, `svrMobile` TEXT, `svrPassword` TEXT, `svrBooklet` TEXT, `svrRegistrationDate` TEXT, `svrCountry` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`svrCode`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Surveyor` (`svrCode` TEXT NOT NULL, `svrName` TEXT, `svrEmail` TEXT, `svrMobile` TEXT, `svrPassword` TEXT, `svrRegistrationDate` TEXT, `svrCountry` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`svrCode`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Score` (`scoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `deviceId` TEXT, `resourceId` TEXT, `scoredMarks` TEXT, `startDateTime` TEXT, `endDateTime` TEXT, `label` TEXT, `svrCode` TEXT, `bookletNo` TEXT, `countryName` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Content` (`contentId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contentCode` TEXT, `contentFolderName` TEXT, `contentBooklet` TEXT, `contentCountry` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Household` (`hhId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `householdId` TEXT, `householdName` TEXT, `HH01` TEXT, `HH02` TEXT, `HH03` TEXT, `HH04` TEXT, `HH05a` TEXT, `HH05b` TEXT, `HH06` TEXT, `createdOn` TEXT, `villageId` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL)");
@@ -92,12 +92,12 @@ public final class KixDatabase_Impl extends KixDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Session` (`sessionId` TEXT NOT NULL, `fromDate` TEXT, `toDate` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`sessionId`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Status` (`statusKey` TEXT NOT NULL, `value` TEXT NOT NULL, `description` TEXT, PRIMARY KEY(`statusKey`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `AbandonedScore` (`scoreId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` TEXT, `studentId` TEXT, `deviceId` TEXT, `resourceId` TEXT, `scoredMarks` TEXT, `startDateTime` TEXT, `endDateTime` TEXT, `label` TEXT, `svrCode` TEXT, `bookletNo` TEXT, `reason` TEXT, `countryName` TEXT, `sentFlag` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Village` (`villageId` TEXT NOT NULL, `villageName` TEXT, `villageDistrict` TEXT, `villageState` TEXT, `villageDate` TEXT, `countryName` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`villageId`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Village` (`villageId` TEXT NOT NULL, `villageName` TEXT, `villageDistrict` TEXT, `villageState` TEXT, `villageDate` TEXT, `countryName` TEXT, `villageBooklet` TEXT, `svrCode` TEXT, `sentFlag` INTEGER NOT NULL, PRIMARY KEY(`villageId`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `VillageInformartion` (`vif_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `V01` TEXT, `V02` TEXT, `V03` TEXT, `V04` TEXT, `V05` TEXT, `V06a` TEXT, `V06b` TEXT, `V07a` TEXT, `V07b` TEXT, `villageId` TEXT, `svrCode` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `HouseholdInformation` (`hif_Id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `HH07a` TEXT, `HH07b` TEXT, `HH07c` TEXT, `HH07cOther` TEXT, `HH07d` TEXT, `HH07dOther` TEXT, `HH07e` TEXT, `HH07f` TEXT, `HH07g` TEXT, `HH07h` TEXT, `HH07i` TEXT, `HH07j` TEXT, `HH07k` TEXT, `HH07l` TEXT, `HH07m` TEXT, `HH07n` TEXT, `HH07o` TEXT, `HH07p` TEXT, `householdId` TEXT, `villageId` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `ParentInformation` (`pifId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PT01a` TEXT, `PT01b` TEXT, `PT01c` TEXT, `PT01d` TEXT, `PT01e` TEXT, `PT01f` TEXT, `PT02a` TEXT, `PT02b` TEXT, `PT02c` TEXT, `PT02d` TEXT, `PT02e` TEXT, `PT02f` TEXT, `studentId` TEXT, `householdId` TEXT, `createdOn` TEXT, `sentFlag` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"03e5f760652c0b2eb62796ed608b0ebb\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"909edc2c13f6b645ef6ec941f050638f\")");
       }
 
       @Override
@@ -172,13 +172,12 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoStudent + "\n"
                   + " Found:\n" + _existingStudent);
         }
-        final HashMap<String, TableInfo.Column> _columnsSurveyor = new HashMap<String, TableInfo.Column>(9);
+        final HashMap<String, TableInfo.Column> _columnsSurveyor = new HashMap<String, TableInfo.Column>(8);
         _columnsSurveyor.put("svrCode", new TableInfo.Column("svrCode", "TEXT", true, 1));
         _columnsSurveyor.put("svrName", new TableInfo.Column("svrName", "TEXT", false, 0));
         _columnsSurveyor.put("svrEmail", new TableInfo.Column("svrEmail", "TEXT", false, 0));
         _columnsSurveyor.put("svrMobile", new TableInfo.Column("svrMobile", "TEXT", false, 0));
         _columnsSurveyor.put("svrPassword", new TableInfo.Column("svrPassword", "TEXT", false, 0));
-        _columnsSurveyor.put("svrBooklet", new TableInfo.Column("svrBooklet", "TEXT", false, 0));
         _columnsSurveyor.put("svrRegistrationDate", new TableInfo.Column("svrRegistrationDate", "TEXT", false, 0));
         _columnsSurveyor.put("svrCountry", new TableInfo.Column("svrCountry", "TEXT", false, 0));
         _columnsSurveyor.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
@@ -340,13 +339,14 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Expected:\n" + _infoAbandonedScore + "\n"
                   + " Found:\n" + _existingAbandonedScore);
         }
-        final HashMap<String, TableInfo.Column> _columnsVillage = new HashMap<String, TableInfo.Column>(8);
+        final HashMap<String, TableInfo.Column> _columnsVillage = new HashMap<String, TableInfo.Column>(9);
         _columnsVillage.put("villageId", new TableInfo.Column("villageId", "TEXT", true, 1));
         _columnsVillage.put("villageName", new TableInfo.Column("villageName", "TEXT", false, 0));
         _columnsVillage.put("villageDistrict", new TableInfo.Column("villageDistrict", "TEXT", false, 0));
         _columnsVillage.put("villageState", new TableInfo.Column("villageState", "TEXT", false, 0));
         _columnsVillage.put("villageDate", new TableInfo.Column("villageDate", "TEXT", false, 0));
         _columnsVillage.put("countryName", new TableInfo.Column("countryName", "TEXT", false, 0));
+        _columnsVillage.put("villageBooklet", new TableInfo.Column("villageBooklet", "TEXT", false, 0));
         _columnsVillage.put("svrCode", new TableInfo.Column("svrCode", "TEXT", false, 0));
         _columnsVillage.put("sentFlag", new TableInfo.Column("sentFlag", "INTEGER", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysVillage = new HashSet<TableInfo.ForeignKey>(0);
@@ -443,7 +443,7 @@ public final class KixDatabase_Impl extends KixDatabase {
                   + " Found:\n" + _existingParentInformation);
         }
       }
-    }, "03e5f760652c0b2eb62796ed608b0ebb", "61097f6e312adab9c86e87ec40c9c7d9");
+    }, "909edc2c13f6b645ef6ec941f050638f", "0d7fdd3da0f0f78801d39e284267f817");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

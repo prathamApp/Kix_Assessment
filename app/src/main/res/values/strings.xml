@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">KIX Assessment</string>
+    <string name="app_name" translatable="false">ELANA</string>
 
     <!--Permission Dialog Strings-->
     <string name="permissions_head" translatable="false"><b>KIX uses the following permissions to enhance learning experience:</b></string>
@@ -19,7 +19,8 @@
 
     <string name="push_success">Pushed Successfully!!</string>
     <string name="push_fail">Push Failed!!</string>
-    <string name="kix_assessment">KIX Assessment</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">Okay</string>
     <string name="ok">Ok</string>
     <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">Please wait, pushing Data...</string>
@@ -212,6 +213,7 @@
     </string-array>
 
     <string-array name="gender">
+        <item>Gender</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>
@@ -244,14 +246,15 @@
     <string-array name="student_dropoutclass">
         <item>Last grade/class completed before dropping out</item>
         <item>Pre-primary</item>
-        <item>Std 1</item>
-        <item>Std 2</item>
-        <item>Std 3</item>
-        <item>Std 4</item>
-        <item>Std 5</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
     </string-array>
 
     <string-array name="age">
+        <item>Age    </item>
         <item>Age 4  </item>
         <item>Age 5  </item>
         <item>Age 6  </item>
@@ -273,37 +276,109 @@
     </string-array>
 
     <string-array name="student_class">
-        <item>Std</item>
+        <item>Class</item>
         <item>Pre-primary</item>
-        <item>Std 1</item>
-        <item>Std 2</item>
-        <item>Std 3</item>
-        <item>Std 4</item>
-        <item>Std 5</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
     </string-array>
 
     <string-array name="parentAge">
-        <item>Age  </item>
-        <item>25</item>
-        <item>26</item>
-        <item>27</item>
-        <item>28</item>
-        <item>29</item>
-        <item>30</item>
-        <item>31</item>
-        <item>32</item>
-        <item>33</item>
-        <item>34</item>
-        <item>35</item>
+        <item>Age     </item>
+        <item>Age 18  </item>
+        <item>Age 19  </item>
+        <item>Age 20  </item>
+        <item>Age 21  </item>
+        <item>Age 22  </item>
+        <item>Age 23  </item>
+        <item>Age 24  </item>
+        <item>Age 25  </item>
+        <item>Age 26  </item>
+        <item>Age 27  </item>
+        <item>Age 28  </item>
+        <item>Age 29  </item>
+        <item>Age 30  </item>
+        <item>Age 31  </item>
+        <item>Age 32  </item>
+        <item>Age 33  </item>
+        <item>Age 34  </item>
+        <item>Age 35  </item>
+        <item>Age 36  </item>
+        <item>Age 37  </item>
+        <item>Age 38  </item>
+        <item>Age 39  </item>
+        <item>Age 40  </item>
+        <item>Age 41  </item>
+        <item>Age 42  </item>
+        <item>Age 43  </item>
+        <item>Age 44  </item>
+        <item>Age 45  </item>
+        <item>Age 46  </item>
+        <item>Age 47  </item>
+        <item>Age 48  </item>
+        <item>Age 49  </item>
+        <item>Age 50  </item>
+        <item>Age 51  </item>
+        <item>Age 52  </item>
+        <item>Age 53  </item>
+        <item>Age 54  </item>
+        <item>Age 55  </item>
+        <item>Age 56  </item>
+        <item>Age 57  </item>
+        <item>Age 58  </item>
+        <item>Age 59  </item>
+        <item>Age 60  </item>
+        <item>Age 61  </item>
+        <item>Age 62  </item>
+        <item>Age 63  </item>
+        <item>Age 64  </item>
+        <item>Age 65  </item>
+        <item>Age 66  </item>
+        <item>Age 67  </item>
+        <item>Age 68  </item>
+        <item>Age 69  </item>
+        <item>Age 70  </item>
+        <item>Age 71  </item>
+        <item>Age 72  </item>
+        <item>Age 73  </item>
+        <item>Age 74  </item>
+        <item>Age 75  </item>
+        <item>Age 76  </item>
+        <item>Age 77  </item>
+        <item>Age 78  </item>
+        <item>Age 79  </item>
+        <item>Age 80  </item>
+        <item>Age 81  </item>
+        <item>Age 82  </item>
+        <item>Age 83  </item>
+        <item>Age 84  </item>
+        <item>Age 85  </item>
+        <item>Age 86  </item>
+        <item>Age 87  </item>
+        <item>Age 88  </item>
+        <item>Age 89  </item>
+        <item>Age 90  </item>
+        <item>Age 91  </item>
+        <item>Age 92  </item>
+        <item>Age 93  </item>
+        <item>Age 94  </item>
+        <item>Age 95  </item>
+        <item>Age 96  </item>
+        <item>Age 97  </item>
+        <item>Age 98  </item>
+        <item>Age 99  </item>
+        <item>Age 100 </item>
     </string-array>
 
     <string-array name="parentGrade">
-        <item>Std</item>
-        <item>Std 5</item>
-        <item>Std 6</item>
-        <item>Std 7</item>
-        <item>Std 8</item>
-        <item>Std 9</item>
+        <item>Class</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+        <item>Class 8</item>
+        <item>Class 9</item>
         <item>SSC</item>
         <item>HSC</item>
         <item>Graduate</item>

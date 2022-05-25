@@ -7,6 +7,8 @@ import androidx.room.Query;
 
 import com.kix.assessment.modal_classes.Modal_PIF;
 
+import java.util.List;
+
 @Dao
 public interface ParentInformationDao {
 
@@ -15,6 +17,9 @@ public interface ParentInformationDao {
 
     @Query("Select * from ParentInformation where studentId =:studentId")
     Modal_PIF getPIFbyStudentId(String studentId);
+
+    @Query("Select * from ParentInformation where sentFlag = 0")
+    List<Modal_PIF> getAllPIF();
 
     @Query("update ParentInformation set PT01a=:PT01a, PT01b=:PT01b, PT01c=:PT01c, PT01d=:PT01d, PT01e=:PT01e, PT01f=:PT01f,"+
             "PT02a=:PT02a, PT02b=:PT02b, PT02c=:PT02c, PT02d=:PT02d, PT02e=:PT02e, PT02f=:PT02f, sentFlag=0 where studentId=:studentId")
