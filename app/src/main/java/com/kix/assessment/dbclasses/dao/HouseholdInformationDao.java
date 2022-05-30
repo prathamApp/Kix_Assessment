@@ -21,6 +21,9 @@ public interface HouseholdInformationDao {
     @Query("Select * from HouseholdInformation where householdId =:householdId")
     Modal_HIF getHIFbyHouseholdId(String householdId);
 
+    @Query("update HouseholdInformation set sentFlag=1 where sentFlag=0")
+    void updateSentFlag();
+
     @Query("update HouseholdInformation set HH07a=:HH07a, HH07b=:HH07b, HH07c=:HH07c, HH07cOther=:HH07cOther, HH07d=:HH07d, " +
             "HH07dOther=:HH07dOther, HH07e=:HH07e, HH07f=:HH07f, HH07g=:HH07g, HH07h=:HH07h, HH07i=:HH07i, HH07j=:HH07j, HH07k=:HH07k, " +
             "HH07l=:HH07l, HH07m=:HH07m, HH07n=:HH07n, HH07o=:HH07o, HH07p=:HH07p, sentFlag=0 where householdId=:householdId")
