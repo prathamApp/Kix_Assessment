@@ -50,7 +50,8 @@
                 android:digits="0123456789"
                 android:maxLength="10"
                 android:drawableStart="@drawable/ic_phone_android_grey_24dp"
-                android:drawablePadding="@dimen/_5sdp" />
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="9999999999"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +77,8 @@
                 android:inputType="textPassword"
                 android:textColor="@color/colorText"
                 android:drawableStart="@drawable/ic_lock_grey_24dp"
-                android:drawablePadding="@dimen/_5sdp"/>
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="1234"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton

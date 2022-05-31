@@ -58,20 +58,20 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     LinearLayout ll_V06b;
 
     @ViewById(R.id.ch1_V06b)
-    CheckBox cb_v06bGovt;
+    CheckBox cb_v06bGovtPub;
     @ViewById(R.id.ch2_V06b)
-    CheckBox cb_v06bPublic;
-    @ViewById(R.id.ch3_V06b)
     CheckBox cb_v06bPvt;
+    @ViewById(R.id.ch3_V06b)
+    CheckBox cb_v06bOther;
 
     @ViewById(R.id.ll_V07b)
     LinearLayout ll_V07b;
     @ViewById(R.id.ch1_V07b)
-    CheckBox cb_v07bGovt;
+    CheckBox cb_v07bGovtPub;
     @ViewById(R.id.ch2_V07b)
-    CheckBox cb_v07bPublic;
-    @ViewById(R.id.ch3_V07b)
     CheckBox cb_v07bPvt;
+    @ViewById(R.id.ch3_V07b)
+    CheckBox cb_v07bOther;
 
     @ViewById(R.id.btn_save)
     Button btn_saveVIF;
@@ -122,9 +122,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
             if (modal_vif.getV06a().equalsIgnoreCase(Kix_Constant.YES)) {
                 rg_havePrePrimSchool.check(R.id.rb_V06a_yes);
                 ll_V06b.setVisibility(View.VISIBLE);
-                if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_government))) cb_v06bGovt.setChecked(true);
+                if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_government_public))) cb_v06bGovtPub.setChecked(true);
                 else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_private))) cb_v06bPvt.setChecked(true);
-                else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_public))) cb_v06bPublic.setChecked(true);
+                else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_other))) cb_v06bOther.setChecked(true);
             } else {
                 rg_havePrePrimSchool.check(R.id.rb_V06a_No);
             }
@@ -132,9 +132,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
             if (modal_vif.getV07a().equalsIgnoreCase(Kix_Constant.YES)) {
                 rg_havePrimSchool.check(R.id.rb_V07a_yes);
                 ll_V07b.setVisibility(View.VISIBLE);
-                if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_government))) cb_v07bGovt.setChecked(true);
+                if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_government_public))) cb_v07bGovtPub.setChecked(true);
                 else if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_private))) cb_v07bPvt.setChecked(true);
-                else if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_public))) cb_v07bPublic.setChecked(true);
+                else if(modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_other))) cb_v07bOther.setChecked(true);
 
             } else rg_havePrimSchool.check(R.id.rb_V07a_No);
 
@@ -150,9 +150,9 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
                 case R.id.rb_V06a_No:
                     ll_V06b.setVisibility(View.GONE);
-                    cb_v06bGovt.setChecked(false);
+                    cb_v06bGovtPub.setChecked(false);
+                    cb_v06bOther.setChecked(false);
                     cb_v06bPvt.setChecked(false);
-                    cb_v06bPublic.setChecked(false);
                     break;
             }
         });
@@ -165,19 +165,19 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
                 case R.id.rb_V07a_No:
                     ll_V07b.setVisibility(View.GONE);
-                    cb_v07bGovt.setChecked(false);
+                    cb_v07bGovtPub.setChecked(false);
+                    cb_v07bOther.setChecked(false);
                     cb_v07bPvt.setChecked(false);
-                    cb_v07bPublic.setChecked(false);
                     break;
             }
         });
 
-        cb_v06bGovt.setOnCheckedChangeListener(this);
+        cb_v06bGovtPub.setOnCheckedChangeListener(this);
+        cb_v06bOther.setOnCheckedChangeListener(this);
         cb_v06bPvt.setOnCheckedChangeListener(this);
-        cb_v06bPublic.setOnCheckedChangeListener(this);
-        cb_v07bGovt.setOnCheckedChangeListener(this);
+        cb_v07bGovtPub.setOnCheckedChangeListener(this);
+        cb_v07bOther.setOnCheckedChangeListener(this);
         cb_v07bPvt.setOnCheckedChangeListener(this);
-        cb_v07bPublic.setOnCheckedChangeListener(this);
     }
 
     @Click(R.id.btn_save)
@@ -239,19 +239,19 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     }
 
     public void getCheckedBoxValues() {
-        if (cb_v06bGovt.isChecked())
-            str_v06b_schoolType = "Government"; //else str_v06b_schoolType = "";
+        if (cb_v06bGovtPub.isChecked())
+            str_v06b_schoolType = "Government/Public"; //else str_v06b_schoolType = "";
+        if (cb_v06bOther.isChecked())
+            str_v06b_schoolType = "Other"; //else str_v06b_schoolType = "";
         if (cb_v06bPvt.isChecked())
             str_v06b_schoolType = "Private"; //else str_v06b_schoolType = "";
-        if (cb_v06bPublic.isChecked())
-            str_v06b_schoolType = "Public"; //else str_v06b_schoolType = "";
 
-        if (cb_v07bGovt.isChecked())
-            str_v07b_schoolType = "Government"; //else str_v07b_schoolType = "";
+        if (cb_v07bGovtPub.isChecked())
+            str_v07b_schoolType = "Government/Public"; //else str_v07b_schoolType = "";
+        if (cb_v07bOther.isChecked())
+            str_v07b_schoolType = "Other"; //else str_v07b_schoolType = "";
         if (cb_v07bPvt.isChecked())
             str_v07b_schoolType = "Private"; //else str_v07b_schoolType = "";
-        if (cb_v07bPublic.isChecked())
-            str_v07b_schoolType = "Public"; //else str_v07b_schoolType = "";
     }
 
     public void insertVIF() {

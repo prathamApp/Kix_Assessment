@@ -414,12 +414,20 @@
                     android:orientation="vertical"
                     android:visibility="gone">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_V06b"
+                        android:textColor="@color/blue"
+                        android:textStyle="italic"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
                     <CheckBox
                         android:id="@+id/ch1_V06b"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_government"
+                        android:text="@string/str_government_public"
                         android:textSize="@dimen/_11sdp" />
 
                     <CheckBox
@@ -427,7 +435,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_public"
+                        android:text="@string/str_private"
                         android:textSize="@dimen/_11sdp" />
 
                     <CheckBox
@@ -435,7 +443,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_private"
+                        android:text="@string/str_other"
                         android:textSize="@dimen/_11sdp" />
                 </LinearLayout>
             </RelativeLayout>
@@ -511,12 +519,20 @@
                     android:orientation="vertical"
                     android:visibility="gone">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_V07b"
+                        android:textColor="@color/blue"
+                        android:textStyle="italic"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
                     <CheckBox
                         android:id="@+id/ch1_V07b"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_government"
+                        android:text="@string/str_government_public"
                         android:textSize="@dimen/_11sdp" />
 
                     <CheckBox
@@ -524,7 +540,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_public"
+                        android:text="@string/str_private"
                         android:textSize="@dimen/_11sdp" />
 
                     <CheckBox
@@ -532,7 +548,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="@string/str_private"
+                        android:text="@string/str_other"
                         android:textSize="@dimen/_11sdp" />
                 </LinearLayout>
             </RelativeLayout>

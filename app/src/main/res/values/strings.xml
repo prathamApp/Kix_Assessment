@@ -60,11 +60,13 @@
     <string name="str_village_info">Village Information</string>
     <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
     <string name="str_V02">Is there public transport facility available to the village?</string>
-    <string name="str_V03">Does the village have electricity connection?</string>
-    <string name="str_V04">Does the village have any government/public health facility?</string>
-    <string name="str_V05">Does the village have any private health facility?</string>
+    <string name="str_V03">Does the village have access to electricity connection?</string>
+    <string name="str_V04">Does the village have any government/public health clinic/hospital?</string>
+    <string name="str_V05">Does the village have any private health clinic/hospital?</string>
     <string name="str_V06a">Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
-    <string name="str_V07a">Does the village have any schools offering primary grades/classes (definition of primary grades would vary from country to country, so select accordingly. Eg. in India primary grades are 1 to 5)</string>
+    <string name="str_V06b">Which type of school(s) in the village offers pre-primary grades/classes?</string>
+    <string name="str_V07a">Does the village have any schools offering primary grades/classes?</string>
+    <string name="str_V07b">Which type of school(s) in the village offers primary grades/classes?</string>
 
     <string name="str_add_household">Add Household</string>
     <string name="str_HH06">What language do you speak at home, most often with your children?</string>
@@ -195,8 +197,10 @@
     <string name="all_village">All Villages</string>
     <string name="edit">Edit</string>
     <string name="str_government">Government</string>
+    <string name="str_government_public">Government/Public</string>
     <string name="str_public">Public</string>
     <string name="str_private">Private</string>
+    <string name="str_other">Other</string>
 
     <string-array name="country_list">
         <item>Select Country</item>
@@ -227,7 +231,7 @@
 
     <string-array name="school_type">
         <item>School Type</item>
-        <item>Government</item>
+        <item>Government/Public</item>
         <item>Private</item>
         <item>Other</item>
     </string-array>
