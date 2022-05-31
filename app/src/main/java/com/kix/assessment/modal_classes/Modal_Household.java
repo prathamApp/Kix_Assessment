@@ -12,14 +12,12 @@ public class Modal_Household implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     public int hhId;
     public String householdId;
-    public String householdName;
-    public String HH01;//Name of the respondent
-    public String HH02;//Name of the householdhead
-    public String HH03;//Number of members regularly living in the household
-    public String HH04;//Telephone/Mobile number of the household
-    public String HH05a;//Does the HH have children (living regularly) in the age group 4-10 years?
-    public String HH05b;//If yes in HH05a, how many?
-    public String HH06;//What language do you speak at home, most often with your children?
+    public String HH01;//Household number from the houselisting format
+    public String HH02;//Name of the respondent
+    public String HH03;//Name of the household head
+    public String HH04a;//Does the HH have children (living regularly) in the age group 4-10 years?
+    public String HH04b;//If yes in HH05a, how many?
+    public String HH05;//Telephone/Mobile number of the household (write only if available and willing to share)
     public String createdOn;
     public String villageId;
     public String svrCode;
@@ -28,14 +26,12 @@ public class Modal_Household implements Comparable, Parcelable {
     protected Modal_Household(Parcel in) {
         hhId = in.readInt();
         householdId = in.readString();
-        householdName = in.readString();
         HH01 = in.readString();
         HH02 = in.readString();
         HH03 = in.readString();
-        HH04 = in.readString();
-        HH05a = in.readString();
-        HH05b = in.readString();
-        HH06 = in.readString();
+        HH04a = in.readString();
+        HH04b = in.readString();
+        HH05 = in.readString();
         createdOn = in.readString();
         villageId = in.readString();
         svrCode = in.readString();
@@ -72,14 +68,6 @@ public class Modal_Household implements Comparable, Parcelable {
         this.householdId = householdId;
     }
 
-    public String getHouseholdName() {
-        return this.householdName;
-    }
-
-    public void setHouseholdName(final String householdName) {
-        this.householdName = householdName;
-    }
-
     public String getHH01() {
         return this.HH01;
     }
@@ -104,36 +92,28 @@ public class Modal_Household implements Comparable, Parcelable {
         this.HH03 = HH03;
     }
 
-    public String getHH04() {
-        return this.HH04;
+    public String getHH04a() {
+        return this.HH04a;
     }
 
-    public void setHH04(final String HH04) {
-        this.HH04 = HH04;
+    public void setHH04a(final String HH04a) {
+        this.HH04a = HH04a;
     }
 
-    public String getHH05a() {
-        return this.HH05a;
+    public String getHH04b() {
+        return this.HH04b;
     }
 
-    public void setHH05a(final String HH05a) {
-        this.HH05a = HH05a;
+    public void setHH04b(final String HH04b) {
+        this.HH04b = HH04b;
     }
 
-    public String getHH05b() {
-        return this.HH05b;
+    public String getHH05() {
+        return this.HH05;
     }
 
-    public void setHH05b(final String HH05b) {
-        this.HH05b = HH05b;
-    }
-
-    public String getHH06() {
-        return this.HH06;
-    }
-
-    public void setHH06(final String HH06) {
-        this.HH06 = HH06;
+    public void setHH05(final String HH05) {
+        this.HH05 = HH05;
     }
 
     public String getCreatedOn() {
@@ -181,14 +161,12 @@ public class Modal_Household implements Comparable, Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(hhId);
         dest.writeString(householdId);
-        dest.writeString(householdName);
         dest.writeString(HH01);
         dest.writeString(HH02);
         dest.writeString(HH03);
-        dest.writeString(HH04);
-        dest.writeString(HH05a);
-        dest.writeString(HH05b);
-        dest.writeString(HH06);
+        dest.writeString(HH04a);
+        dest.writeString(HH04b);
+        dest.writeString(HH05);
         dest.writeString(createdOn);
         dest.writeString(villageId);
         dest.writeString(svrCode);

@@ -36,6 +36,14 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
     @ViewById(R.id.tv_title)
     TextView tv_title;
+    @ViewById(R.id.et_HH06a_members)
+    EditText et_members;
+    @ViewById(R.id.rg_HH06b)
+    RadioGroup rg_speakEnglish;
+    @ViewById(R.id.rg_HH06c)
+    RadioGroup rg_engHowOften;
+    @ViewById(R.id.rg_HH06d)
+    RadioGroup rg_anyOtherLang;
     @ViewById(R.id.rg_HH07a)
     RadioGroup rg_hhRoofing;
     @ViewById(R.id.rg_HH07b)
@@ -68,9 +76,14 @@ public class Fragment_AddHouseholdInformation extends Fragment {
     RadioGroup rg_twoWheeler;
     @ViewById(R.id.rg_HH07p)
     RadioGroup rg_bicycle;
+    @ViewById(R.id.rg_HH07q)
+    RadioGroup rg_otherBooks;
 
     @ViewById(R.id.rl_HH07m)
     RelativeLayout rl_isItSmartphone;
+
+    @ViewById(R.id.rl_HH06c)
+    RelativeLayout rl_howOften;
 
     @ViewById(R.id.til_HH07c)
     TextInputLayout til_HH07c;
@@ -85,10 +98,10 @@ public class Fragment_AddHouseholdInformation extends Fragment {
     @ViewById(R.id.btn_save)
     Button btn_save;
 
-    String surveyorCode, villageId, householdId, hh07c_other="NA", hh07d_other="NA", str_isSmartphone;
+    String surveyorCode, villageId, householdId, hh07c_other="NA", hh07d_other="NA", str_isSmartphone, str_howOften="NA";
 
-    RadioButton rb_HH07a, rb_HH07b, rb_HH07c, rb_HH07d, rb_HH07e, rb_HH07f, rb_HH07g, rb_HH07h,
-            rb_HH07i, rb_HH07j, rb_HH07k, rb_HH07l, rb_HH07m, rb_HH07n, rb_HH07o, rb_HH07p;
+    RadioButton rb_HH06b, rb_HH06c, rb_HH06d, rb_HH07a, rb_HH07b, rb_HH07c, rb_HH07d, rb_HH07e, rb_HH07f, rb_HH07g, rb_HH07h,
+            rb_HH07i, rb_HH07j, rb_HH07k, rb_HH07l, rb_HH07m, rb_HH07n, rb_HH07o, rb_HH07p, rb_HH07q;
 
     public Fragment_AddHouseholdInformation() {
         // Required empty public constructor
@@ -102,10 +115,15 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         btn_save.setText("Save");
 
         if(getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD)!=null){
-            btn_save.setText("Edit");
-            tv_title.setText("Edit Household Information");
+            btn_save.setText("Update");
+            tv_title.setText("Update Household Information");
             Modal_HIF modalHif = householdInformationDao.getHIFbyHouseholdId(householdId);
+            et_members.setText(modalHif.HH06a);
             setRadioButtonValues(modalHif);
+            if (modalHif.getHH06b().equalsIgnoreCase(Kix_Constant.YES)) {
+                rl_howOften.setVisibility(View.VISIBLE);
+            }
+
         }
 
         rg_lightSource.setOnCheckedChangeListener((group, checkedId) -> {
@@ -134,15 +152,34 @@ public class Fragment_AddHouseholdInformation extends Fragment {
                 rg_isItSmartphone.clearCheck();
             }
         });
+
+        rg_speakEnglish.setOnCheckedChangeListener((group, checkedId) -> {
+            if(checkedId == R.id.rb_HH06b_yes) {
+                rl_howOften.setVisibility(View.VISIBLE);
+            } else {
+                rl_howOften.setVisibility(View.GONE);
+                rg_engHowOften.clearCheck();
+            }
+        });
+
+        rg_engHowOften.setOnCheckedChangeListener((group, checkedId) -> {
+            if(checkedId==R.id.rb_HH06c_yes) {
+                str_howOften="Always";
+            } else if(checkedId==R.id.rb_HH06c_No){
+                str_howOften="Sometimes";
+            } else {
+                str_howOften="NA";
+            }
+        });
     }
 
     @Click(R.id.btn_save)
     public void saveHIF(){
         getRadioButtonValues();
 
-        if(rb_HH07a==null || rb_HH07b==null || rb_HH07c==null || rb_HH07d==null || rb_HH07e==null ||
+        if(rb_HH06b==null || rb_HH06d==null || rb_HH07a==null || rb_HH07b==null || rb_HH07c==null || rb_HH07d==null || rb_HH07e==null ||
         rb_HH07f==null || rb_HH07g==null || rb_HH07h==null || rb_HH07i==null || rb_HH07j==null ||
-        rb_HH07l==null || rb_HH07l==null || rb_HH07n==null || rb_HH07o==null || rb_HH07p==null) {
+        rb_HH07k==null || rb_HH07l==null || rb_HH07n==null || rb_HH07o==null || rb_HH07p==null || rb_HH07q==null) {
             Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
             if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
@@ -184,6 +221,10 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         if(!et_HH07d_other.getText().toString().isEmpty()) hh07d_other = et_HH07d_other.getText().toString();
 
         Modal_HIF modal_hif = new Modal_HIF();
+        modal_hif.setHH06a(et_members.getText().toString());
+        modal_hif.setHH06b(rb_HH06b.getText().toString());
+        modal_hif.setHH06c(str_howOften);
+        modal_hif.setHH06d(rb_HH06d.getText().toString());
         modal_hif.setHH07a(rb_HH07a.getText().toString());
         modal_hif.setHH07b(rb_HH07b.getText().toString());
         modal_hif.setHH07c(rb_HH07c.getText().toString());
@@ -202,6 +243,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         modal_hif.setHH07n(rb_HH07n.getText().toString());
         modal_hif.setHH07o(rb_HH07o.getText().toString());
         modal_hif.setHH07p(rb_HH07p.getText().toString());
+        modal_hif.setHH07q(rb_HH07q.getText().toString());
         modal_hif.setCreatedOn(KIX_Utility.getCurrentDateTime());
         modal_hif.setHouseholdId(householdId);
         modal_hif.setVillageId(villageId);
@@ -216,6 +258,10 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
     private void updateHIF(String isSmartphone) {
         householdInformationDao.updateHousehold(
+                et_members.getText().toString(),
+                rb_HH06b.getText().toString(),
+                str_howOften,
+                rb_HH06d.getText().toString(),
                 rb_HH07a.getText().toString(),
                 rb_HH07b.getText().toString(),
                 rb_HH07c.getText().toString(),
@@ -234,6 +280,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
                 rb_HH07n.getText().toString(),
                 rb_HH07o.getText().toString(),
                 rb_HH07p.getText().toString(),
+                rb_HH07q.getText().toString(),
                 householdId);
 
         BackupDatabase.backup(getActivity());
@@ -242,6 +289,15 @@ public class Fragment_AddHouseholdInformation extends Fragment {
     }
 
     private void setRadioButtonValues(Modal_HIF modalHif) {
+
+        if(modalHif.HH06b.equalsIgnoreCase(getString(R.string.yes))) rg_speakEnglish.check(R.id.rb_HH06b_yes);
+        else rg_speakEnglish.check(R.id.rb_HH06b_No);
+
+        if(modalHif.HH06c.equalsIgnoreCase(getString(R.string.str_always))) rg_engHowOften.check(R.id.rb_HH06c_yes);
+        else if (modalHif.HH06c.equalsIgnoreCase(getString(R.string.str_sometimes))) rg_engHowOften.check(R.id.rb_HH06c_No);
+
+        if(modalHif.HH06d.equalsIgnoreCase(getString(R.string.yes))) rg_anyOtherLang.check(R.id.rb_HH06d_yes);
+        else rg_anyOtherLang.check(R.id.rb_HH06d_No);
 
         if(modalHif.getHH07a().equalsIgnoreCase(getString(R.string.str_HH07a_one))) rg_hhRoofing.check(R.id.rb_HH07a_one);
         else if(modalHif.getHH07a().equalsIgnoreCase(getString(R.string.str_HH07a_two))) rg_hhRoofing.check(R.id.rb_HH07a_two);
@@ -312,9 +368,15 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
         if(modalHif.HH07p.equalsIgnoreCase(getString(R.string.yes))) rg_bicycle.check(R.id.rb_HH07p_yes);
         else rg_bicycle.check(R.id.rb_HH07p_No);
+
+        if(modalHif.HH07q.equalsIgnoreCase(getString(R.string.yes))) rg_otherBooks.check(R.id.rb_HH07q_yes);
+        else rg_otherBooks.check(R.id.rb_HH07q_No);
     }
 
     public void getRadioButtonValues(){
+        int selectedHH06b = rg_speakEnglish.getCheckedRadioButtonId();
+        int selectedHH06c = rg_engHowOften.getCheckedRadioButtonId();
+        int selectedHH06d = rg_anyOtherLang.getCheckedRadioButtonId();
         int selectedHH07a = rg_hhRoofing.getCheckedRadioButtonId();
         int selectedHH07b = rg_hhWall.getCheckedRadioButtonId();
         int selectedHH07c = rg_lightSource.getCheckedRadioButtonId();
@@ -331,7 +393,11 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         int selectedHH07n = rg_fourWheeler.getCheckedRadioButtonId();
         int selectedHH07o = rg_twoWheeler.getCheckedRadioButtonId();
         int selectedHH07p = rg_bicycle.getCheckedRadioButtonId();
+        int selectedHH07q = rg_otherBooks.getCheckedRadioButtonId();
 
+        rb_HH06b = getView().findViewById(selectedHH06b);
+        rb_HH06c = getView().findViewById(selectedHH06c);
+        rb_HH06d = getView().findViewById(selectedHH06d);
         rb_HH07a = getView().findViewById(selectedHH07a);
         rb_HH07b = getView().findViewById(selectedHH07b);
         rb_HH07c = getView().findViewById(selectedHH07c);
@@ -348,6 +414,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         rb_HH07n = getView().findViewById(selectedHH07n);
         rb_HH07o = getView().findViewById(selectedHH07o);
         rb_HH07p = getView().findViewById(selectedHH07p);
+        rb_HH07q = getView().findViewById(selectedHH07q);
     }
 
     @Override

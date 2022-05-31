@@ -27,6 +27,15 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_information_household)
 public class Fragment_HouseholdInformation extends Fragment {
 
+
+    @ViewById(R.id.tv_HH06a_val)
+    TextView tv_members;
+    @ViewById(R.id.tv_HH06b_val)
+    TextView tv_speakEnglish;
+    @ViewById(R.id.tv_HH06c_val)
+    TextView tv_howOften;
+    @ViewById(R.id.tv_HH06d_val)
+    TextView tv_otherLang;
     @ViewById(R.id.tv_HH07a_val)
     TextView tv_roof;
     @ViewById(R.id.tv_HH07b_val)
@@ -59,6 +68,8 @@ public class Fragment_HouseholdInformation extends Fragment {
     TextView tv_twoWheeler;
     @ViewById(R.id.tv_HH07p_val)
     TextView tv_bicycle;
+    @ViewById(R.id.tv_HH07q_val)
+    TextView tv_otherBook;
 
     @ViewById(R.id.scroll_View)
     ScrollView scroll_View;
@@ -77,9 +88,10 @@ public class Fragment_HouseholdInformation extends Fragment {
         Modal_Household modalHousehold = householdDao.getHouseholdByHouseholdId(householdId);
         Modal_HIF modalHif = householdInformationDao.getHIFbyHouseholdId(householdId);
 
-        String houseName = "NA";
-        houseName = modalHousehold.householdName;
-
+        tv_members.setText(modalHif.HH06a);
+        tv_speakEnglish.setText(modalHif.HH06b);
+        tv_howOften.setText(modalHif.HH06c);
+        tv_otherLang.setText(modalHif.HH06d);
         tv_roof.setText(modalHif.HH07a);
         tv_wall.setText(modalHif.HH07b);
         if(modalHif.HH07c.equalsIgnoreCase(getString(R.string.str_HH07c_four))) tv_lightSource.setText(modalHif.HH07cOther);
@@ -90,6 +102,7 @@ public class Fragment_HouseholdInformation extends Fragment {
         tv_toilet.setText(modalHif.HH07f);
         tv_memberCompletedDiploma.setText(modalHif.HH07g);
         tv_readingMaterial.setText(modalHif.HH07h);
+        tv_otherBook.setText(modalHif.HH07q);
         tv_computer.setText(modalHif.HH07i);
         tv_television.setText(modalHif.HH07j);
         tv_radio.setText(modalHif.HH07k);
@@ -99,6 +112,10 @@ public class Fragment_HouseholdInformation extends Fragment {
         tv_twoWheeler.setText(modalHif.HH07o);
         tv_bicycle.setText(modalHif.HH07p);
 
+        if(modalHif.getHH06b().equalsIgnoreCase("Yes")) tv_speakEnglish.setBackgroundResource(R.drawable.rounder_bg_green);
+        else tv_speakEnglish.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modalHif.getHH06d().equalsIgnoreCase("Yes")) tv_otherLang.setBackgroundResource(R.drawable.rounder_bg_green);
+        else tv_otherLang.setBackgroundResource(R.drawable.rounded_bg_red);
         if(modalHif.getHH07e().equalsIgnoreCase("Yes")) tv_electricity.setBackgroundResource(R.drawable.rounder_bg_green);
         else tv_electricity.setBackgroundResource(R.drawable.rounded_bg_red);
         if(modalHif.getHH07f().equalsIgnoreCase("Yes")) tv_toilet.setBackgroundResource(R.drawable.rounder_bg_green);
@@ -123,6 +140,8 @@ public class Fragment_HouseholdInformation extends Fragment {
         else tv_twoWheeler.setBackgroundResource(R.drawable.rounded_bg_red);
         if(modalHif.getHH07p().equalsIgnoreCase("Yes")) tv_bicycle.setBackgroundResource(R.drawable.rounder_bg_green);
         else tv_bicycle.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modalHif.getHH07q().equalsIgnoreCase("Yes")) tv_otherBook.setBackgroundResource(R.drawable.rounder_bg_green);
+        else tv_otherBook.setBackgroundResource(R.drawable.rounded_bg_red);
 
     }
 

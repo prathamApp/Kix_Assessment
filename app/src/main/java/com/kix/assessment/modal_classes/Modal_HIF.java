@@ -13,6 +13,10 @@ public class Modal_HIF implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     public int hif_Id;
+    public String HH06a;//Number of members regularly living in the household
+    public String HH06b;//Do you speak English at home?
+    public String HH06c;//(If yes in HH06a), how often do you speak English at home?
+    public String HH06d;//Do you speak any other language at home? (ask this irrespective of the responses in HH06a and HH06b)
     public String HH07a;//HH roofing (tick only one)
     public String HH07b;//HH wall (external) material (tick only one)
     public String HH07c;//What is the source of lighting regularly used in the household (tick only one)
@@ -31,6 +35,7 @@ public class Modal_HIF implements Comparable, Parcelable {
     public String HH07n;//Motorised 4-wheeler?
     public String HH07o;//Motorised 2-wheeler?
     public String HH07p;//Bicycle?
+    public String HH07q;//Any other books or reading materials, like religious textbooks, newspapers magazines etc?
     public String householdId;
     public String villageId;
     public String createdOn;
@@ -38,6 +43,10 @@ public class Modal_HIF implements Comparable, Parcelable {
 
     protected Modal_HIF(final Parcel in) {
         hif_Id = in.readInt();
+        HH06a = in.readString();
+        HH06b = in.readString();
+        HH06c = in.readString();
+        HH06d = in.readString();
         HH07a = in.readString();
         HH07b = in.readString();
         HH07c = in.readString();
@@ -56,6 +65,7 @@ public class Modal_HIF implements Comparable, Parcelable {
         HH07n = in.readString();
         HH07o = in.readString();
         HH07p = in.readString();
+        HH07q = in.readString();
         householdId = in.readString();
         villageId = in.readString();
         createdOn = in.readString();
@@ -83,6 +93,38 @@ public class Modal_HIF implements Comparable, Parcelable {
 
     public void setHif_Id(final int hif_Id) {
         this.hif_Id = hif_Id;
+    }
+
+    public String getHH06a() {
+        return this.HH06a;
+    }
+
+    public void setHH06a(final String HH06a) {
+        this.HH06a = HH06a;
+    }
+
+    public String getHH06b() {
+        return this.HH06b;
+    }
+
+    public void setHH06b(final String HH06b) {
+        this.HH06b = HH06b;
+    }
+
+    public String getHH06c() {
+        return this.HH06c;
+    }
+
+    public void setHH06c(final String HH06c) {
+        this.HH06c = HH06c;
+    }
+
+    public String getHH06d() {
+        return this.HH06d;
+    }
+
+    public void setHH06d(final String HH06d) {
+        this.HH06d = HH06d;
     }
 
     public String getHH07a() {
@@ -213,6 +255,10 @@ public class Modal_HIF implements Comparable, Parcelable {
         this.HH07p = HH07p;
     }
 
+    public String getHH07q() { return this.HH07q; }
+
+    public void setHH07q(final String HH07q) { this.HH07q = HH07q; }
+
     public String getHouseholdId() {
         return this.householdId;
     }
@@ -265,6 +311,10 @@ public class Modal_HIF implements Comparable, Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(hif_Id);
+        dest.writeString(HH06a);
+        dest.writeString(HH06b);
+        dest.writeString(HH06c);
+        dest.writeString(HH06d);
         dest.writeString(HH07a);
         dest.writeString(HH07b);
         dest.writeString(HH07c);
@@ -283,6 +333,7 @@ public class Modal_HIF implements Comparable, Parcelable {
         dest.writeString(HH07n);
         dest.writeString(HH07o);
         dest.writeString(HH07p);
+        dest.writeString(HH07q);
         dest.writeString(householdId);
         dest.writeString(villageId);
         dest.writeString(createdOn);

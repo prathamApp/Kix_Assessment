@@ -69,12 +69,28 @@
     <string name="str_V07b">Which type of school(s) in the village offers primary grades/classes?</string>
 
     <string name="str_add_household">Add Household</string>
+    <string name="str_isSampledHH">Is the sampled household?</string>
+    <string name="str_isSampledHH_one">Locked</string>
+    <string name="str_isSampledHH_two">Not Responding</string>
+    <string name="str_isSampledHH_three">Open(to survey)</string>
+    <string name="str_HH01">Household number from the house listing format <font color='#FF0000'>*</font></string>
+<!--
     <string name="str_HH06">What language do you speak at home, most often with your children?</string>
     <string name="str_HH06a">Same as test</string>
     <string name="str_HH06b">Different from test</string>
+-->
 
     <string name="str_add_household_info">Add Household Information</string>
     <string name="str_household_info">Household Information</string>
+    <string name="str_gnr_household_info">General information of surveyed household</string>
+    <string name="str_HH06a">Number of members regularly living in the household</string>
+    <string name="str_HH06b">Do you speak English at home?</string>
+    <string name="str_HH06c">How often do you speak English at home?</string>
+    <string name="str_HH06d">Do you speak any other language at home?</string>
+    <string name="str_always">Always</string>
+    <string name="str_sometimes">Sometimes</string>
+    <string name="str_HH_asset_info">Household Asset information</string>
+
     <string name="str_HH07a">Household roofing</string>
     <string name="str_HH07a_one">No roofing</string>
     <string name="str_HH07a_two">Finished roofing</string>
@@ -90,24 +106,25 @@
     <string name="str_HH07c_four">Other</string>
     <string name="str_HH07d">What is the source of drinking water used regularly in the household</string>
     <string name="str_HH07d_one">Piped water</string>
-    <string name="str_HH07d_two">Handpump</string>
+    <string name="str_HH07d_two">Handpump/tubewell</string>
     <string name="str_HH07d_three">Borehole</string>
     <string name="str_HH07d_four">Well</string>
-    <string name="str_HH07d_five">River/Stream</string>
+    <string name="str_HH07d_five">River/Stream/pond</string>
     <string name="str_HH07d_six">Buy water</string>
     <string name="str_HH07d_seven">Other</string>
-    <string name="str_HH07e">Electricity connection</string>
-    <string name="str_HH07f">Toilet</string>
-    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed high school diploma?</string>
-    <string name="str_HH07h">Any reading material other than school textbooks and religious books.</string>
-    <string name="str_HH07i">Computer</string>
-    <string name="str_HH07j">Television</string>
-    <string name="str_HH07k">Radio</string>
-    <string name="str_HH07l">Mobile phone</string>
+    <string name="str_HH07e">Electricity connection?</string>
+    <string name="str_HH07f">Toilet/Latrines?</string>
+    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate?</string>
+    <string name="str_HH07h">Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
+    <string name="str_HH07i">Computer/laptop/tablet?</string>
+    <string name="str_HH07j">Television?</string>
+    <string name="str_HH07k">Radio?</string>
+    <string name="str_HH07l">Mobile phone?</string>
     <string name="str_HH07m">Is it a smartphone?</string>
     <string name="str_HH07n">Motorised 4-wheeler?</string>
     <string name="str_HH07o">Motorised 2-wheeler?</string>
     <string name="str_HH07p">Bicycle?</string>
+    <string name="str_HH07q">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
     <string name="select_household">Select Household</string>
     <string name="add_household">Add Household</string>

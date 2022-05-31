@@ -27,7 +27,7 @@ public interface HouseholdDao {
     @Query("select * from Household where sentFlag = 0")
     List<Modal_Household> getAllNewHouseholds();
 
-    @Query("SELECT householdName FROM Household WHERE svrCode=:svrCode")
+    @Query("SELECT HH02 FROM Household WHERE svrCode=:svrCode")
     List<String> getAllHouseholdNameBySurveyorCode(String svrCode);
 
     @Query("SELECT * FROM Household WHERE householdId=:householdId")
@@ -39,9 +39,9 @@ public interface HouseholdDao {
     @Query("update Household set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
 
-    @Query("update Household set householdName=:househldName, HH01=:respondentName, HH02=:householdHead, HH03=:memberCount," +
-            "HH04=:telephoneNum, HH05a=:haveChildren, HH05b=:noOfChildren, HH06=:speakLang, sentFlag=0" +
+    @Query("update Household set HH01=:househldNumber, HH02=:respondentName, HH03=:householdHead," +
+            "HH05=:telephoneNum, HH04a=:haveChildren, HH04b=:noOfChildren, sentFlag=0" +
             " where householdId=:hId AND villageId=:villageId")
-    void updateHousehold(String househldName, String respondentName, String householdHead, String memberCount, String telephoneNum,
-                       String haveChildren, String noOfChildren, String speakLang, String hId, String villageId);
+    void updateHousehold(String househldNumber, String respondentName, String householdHead, String telephoneNum,
+                       String haveChildren, String noOfChildren, String hId, String villageId);
 }

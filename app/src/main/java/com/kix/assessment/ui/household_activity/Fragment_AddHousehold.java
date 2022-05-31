@@ -5,8 +5,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,37 +35,40 @@ public class Fragment_AddHousehold extends Fragment {
     @ViewById(R.id.tv_label)
     TextView tv_title;
 
-    @ViewById(R.id.et_HH00_hName)
-    EditText et_householdName;
+    @ViewById(R.id.rg_isSampledHH)
+    RadioGroup rg_isSampledHH;
 
-    @ViewById(R.id.et_HH01_respondentName)
+    @ViewById(R.id.sv_household)
+    ScrollView sv_householdDetail;
+
+    @ViewById(R.id.et_HH01)
+    EditText et_hhNumber;
+
+    @ViewById(R.id.et_HH02_respondentName)
     EditText et_respondentName;
 
-    @ViewById(R.id.et_HH02_houseHeadName)
+    @ViewById(R.id.et_HH03_houseHeadName)
     EditText et_houseHeadName;
 
-    @ViewById(R.id.et_HH03_memberCount)
-    EditText et_memberCount;
-
-    @ViewById(R.id.et_HH04_houseHeadNum)
+    @ViewById(R.id.et_HH05_mobile)
     EditText et_telephoneNum;
 
-    @ViewById(R.id.et_HH05b_houseAge)
+    @ViewById(R.id.et_HH04b_noOfChild)
     EditText et_noOfChilds;
 
-    @ViewById(R.id.til_HH05b)
+    @ViewById(R.id.til_HH04b)
     TextInputLayout til_noOfChilds;
 
-    @ViewById(R.id.rg_HH05a)
+    @ViewById(R.id.rg_HH04a)
     RadioGroup rg_haveChildren;
-
-    @ViewById(R.id.rg_HH06)
-    RadioGroup rg_speakLang;
 
     @ViewById(R.id.btn_saveHousehold)
     Button btn_saveAndEdit;
 
-    RadioButton rb_HH05a, rb_HH06;
+    @ViewById(R.id.ll_isSampledHH)
+    LinearLayout ll_isSampledHH;
+
+    RadioButton rb_HH04a;
 
     String surveyorCode, villageId, selectedLanguageCode, householdId;
 
@@ -80,37 +85,46 @@ public class Fragment_AddHousehold extends Fragment {
         Log.e("hhh : ", householdId+" | "+villageId);
 
         if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
-            tv_title.setText("Edit Household");
+            ll_isSampledHH.setVisibility(View.GONE);
+            sv_householdDetail.setVisibility(View.VISIBLE);
+            tv_title.setText("Update Household");
             Modal_Household modal_household = householdDao.getHouseholdBySurveyorCode(householdId, villageId);
-            et_householdName.setText(modal_household.getHouseholdName());
-            et_respondentName.setText(modal_household.getHH01());
-            et_houseHeadName.setText(modal_household.getHH02());
-            et_memberCount.setText(modal_household.getHH03());
-            et_telephoneNum.setText(modal_household.getHH04());
-            et_noOfChilds.setText(modal_household.getHH05b());
+            et_hhNumber.setText(modal_household.getHH01());
+            et_respondentName.setText(modal_household.getHH02());
+            et_houseHeadName.setText(modal_household.getHH03());
+            et_telephoneNum.setText(modal_household.getHH05());
+            et_noOfChilds.setText(modal_household.getHH04b());
 
-            if (modal_household.getHH05a().equalsIgnoreCase(Kix_Constant.YES)) {
-                rg_haveChildren.check(R.id.rb_HH05a_yes);
+            if (modal_household.getHH04a().equalsIgnoreCase(Kix_Constant.YES)) {
+                rg_haveChildren.check(R.id.rb_HH04a_yes);
                 til_noOfChilds.setVisibility(View.VISIBLE);
-            } else rg_haveChildren.check(R.id.rb_HH05a_No);
-
-            if (modal_household.getHH06().equalsIgnoreCase(getString(R.string.str_HH06a))){
-                rg_speakLang.check(R.id.rb_HH06_same);
-            } else rg_speakLang.check(R.id.rb_HH06_diff);
-
-            btn_saveAndEdit.setText("Edit");
+            } else rg_haveChildren.check(R.id.rb_HH04a_No);
+            
+            btn_saveAndEdit.setText("Update");
         }
 
         rg_haveChildren.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
-                case R.id.rb_HH05a_yes:
+                case R.id.rb_HH04a_yes:
                     til_noOfChilds.setVisibility(View.VISIBLE);
                     break;
 
-                case R.id.rb_HH05a_No:
+                case R.id.rb_HH04a_No:
                     til_noOfChilds.setVisibility(View.GONE);
                     et_noOfChilds.setText("");
                     break;
+            }
+        });
+
+        rg_isSampledHH.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
+                case R.id.rb_isSampledHH_one:
+                case R.id.rb_isSampledHH_two:
+                    sv_householdDetail.setVisibility(View.GONE);
+                    break;
+
+                case R.id.rb_isSampledHH_three:
+                    sv_householdDetail.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -118,18 +132,16 @@ public class Fragment_AddHousehold extends Fragment {
     @Click(R.id.btn_saveHousehold)
     public void saveHousehold() {
         getRadioButtonValues();
-        if(!et_householdName.getText().toString().isEmpty() && !et_respondentName.getText().toString().isEmpty()){
-            if(rb_HH05a!=null && rb_HH06!=null) {
+        if(!et_hhNumber.getText().toString().isEmpty() && !et_respondentName.getText().toString().isEmpty()){
+            if(rb_HH04a!=null) {
                 if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
                     householdDao.updateHousehold(
-                            et_householdName.getText().toString(),
+                            et_hhNumber.getText().toString(),
                             et_respondentName.getText().toString(),
                             et_houseHeadName.getText().toString(),
-                            et_memberCount.getText().toString(),
                             et_telephoneNum.getText().toString(),
-                            rb_HH05a.getText().toString(),
+                            rb_HH04a.getText().toString(),
                             et_noOfChilds.getText().toString(),
-                            rb_HH06.getText().toString(),
                             householdId,
                             villageId);
                     Toast.makeText(this.getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
@@ -141,7 +153,7 @@ public class Fragment_AddHousehold extends Fragment {
                 Toast.makeText(getActivity(), "Please select radio button fields.", Toast.LENGTH_SHORT).show();
             }
         } else{
-            Toast.makeText(getActivity(), "Household and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Household Number and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
         }
     }
     /*    if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
@@ -163,22 +175,18 @@ public class Fragment_AddHousehold extends Fragment {
         String str_haveChildren;
         String str_speakLanguage;
 
-        if(rb_HH05a==null) str_haveChildren="";
-        else str_haveChildren = rb_HH05a.getText().toString();
-        if(rb_HH06==null) str_speakLanguage="";
-        else str_speakLanguage = rb_HH06.getText().toString();
+        if(rb_HH04a==null) str_haveChildren="";
+        else str_haveChildren = rb_HH04a.getText().toString();
 
         String houseID = KIX_Utility.getUUID().toString();
         Modal_Household modal_household = new Modal_Household();
         modal_household.setHouseholdId(houseID);
-        modal_household.setHouseholdName(et_householdName.getText().toString());
-        modal_household.setHH01(et_respondentName.getText().toString());
-        modal_household.setHH02(et_houseHeadName.getText().toString());
-        modal_household.setHH03(et_memberCount.getText().toString());
-        modal_household.setHH04(et_telephoneNum.getText().toString());
-        modal_household.setHH05a(str_haveChildren);
-        modal_household.setHH05b(et_noOfChilds.getText().toString());
-        modal_household.setHH06(str_speakLanguage);
+        modal_household.setHH01(et_hhNumber.getText().toString());
+        modal_household.setHH02(et_respondentName.getText().toString());
+        modal_household.setHH03(et_houseHeadName.getText().toString());
+        modal_household.setHH05(et_telephoneNum.getText().toString());
+        modal_household.setHH04a(str_haveChildren);
+        modal_household.setHH04b(et_noOfChilds.getText().toString());
         modal_household.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
         modal_household.setsvrCode(surveyorCode);
         modal_household.setVillageId(villageId);
@@ -195,11 +203,8 @@ public class Fragment_AddHousehold extends Fragment {
 
     public void getRadioButtonValues(){
         int selectedHH05a = rg_haveChildren.getCheckedRadioButtonId();
-        int selectedHH06 = rg_speakLang.getCheckedRadioButtonId();
 
-        rb_HH05a = getView().findViewById(selectedHH05a);
-        rb_HH06 = getView().findViewById(selectedHH06);
-
+        rb_HH04a = getView().findViewById(selectedHH05a);
     }
 
 }
