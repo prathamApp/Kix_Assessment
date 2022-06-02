@@ -43,8 +43,8 @@ public class Fragment_AddParentInfoForm extends Fragment {
     Spinner spinner_mothersAge;
     @ViewById(R.id.rg_PT01c)
     RadioGroup rg_motherAttendSchool;
-    @ViewById(R.id.spinner_mothersGrade)
-    Spinner spinner_mothersGrade;
+    @ViewById(R.id.rg_PT01d)
+    RadioGroup rg_mothersScooling;
     @ViewById(R.id.rg_PT01e)
     RadioGroup rg_motherIncome;
     @ViewById(R.id.rg_PT01f)
@@ -56,8 +56,8 @@ public class Fragment_AddParentInfoForm extends Fragment {
     Spinner spinner_fathersAge;
     @ViewById(R.id.rg_PT02c)
     RadioGroup rg_fatherAttendSchool;
-    @ViewById(R.id.spinner_fathersGrade)
-    Spinner spinner_fathersGrade;
+    @ViewById(R.id.rg_PT02d)
+    RadioGroup rg_fathersSchooling;
     @ViewById(R.id.rg_PT02e)
     RadioGroup rg_fatherIncome;
     @ViewById(R.id.rg_PT02f)
@@ -68,12 +68,12 @@ public class Fragment_AddParentInfoForm extends Fragment {
     @ViewById(R.id.rl_PT02f)
     RelativeLayout rl_fatherWork;
 
-    @ViewById(R.id.ll_PT01d)
-    LinearLayout ll_spinnerMothersGrade;
-    @ViewById(R.id.ll_PT02d)
-    LinearLayout ll_spinnerFathersGrade;
+    @ViewById(R.id.rl_PT01d)
+    RelativeLayout rl_motherSchooling;
+    @ViewById(R.id.rl_PT02d)
+    RelativeLayout rl_fatherSchooling;
 
-    @ViewById(R.id.rg_eslectPerson)
+    @ViewById(R.id.rg_selectPerson)
     RadioGroup rg_selectPerson;
     @ViewById(R.id.ll_selectPerson)
     LinearLayout ll_selectPerson;
@@ -89,11 +89,11 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
     ArrayAdapter ageAdapter, gradeAdapter;
 
-    RadioButton rb_PT01c, rb_PT01e, rb_PT01f, rb_PT02c, rb_PT02e, rb_PT02f, rb_selectPerson;
+    RadioButton rb_PT01c, rb_PT01d, rb_PT01e, rb_PT01f, rb_PT02c, rb_PT02d, rb_PT02e, rb_PT02f, rb_selectPerson;
     String str_selectedPerson;// str_PT01c, str_PT01e, str_PT01f, str_PT02c, str_PT02e, str_PT02f;
 
     //public String mothersName, fathersName;
-    public String mothersAge, mothersGrade, fathersAge, fathersGrade;
+    public String mothersAge, mothersSchooling, fathersAge, fathersSchooling;
     public String studentId, householdId;
 
     public Fragment_AddParentInfoForm() {
@@ -109,17 +109,14 @@ public class Fragment_AddParentInfoForm extends Fragment {
         this.ageAdapter = ArrayAdapter.createFromResource(Objects.requireNonNull(this.getActivity()), R.array.parentAge, R.layout.spinner_item);
         this.spinner_mothersAge.setAdapter(this.ageAdapter);
         this.spinner_fathersAge.setAdapter(this.ageAdapter);
-        this.gradeAdapter = ArrayAdapter.createFromResource(Objects.requireNonNull(this.getActivity()), R.array.parentGrade, R.layout.spinner_item);
-        this.spinner_mothersGrade.setAdapter(this.gradeAdapter);
-        this.spinner_fathersGrade.setAdapter(this.gradeAdapter);
 
         if (this.getArguments().getString(EDIT_PARENT) != null) {
             this.ll_selectPerson.setVisibility(View.GONE);
             this.sv_pif.setVisibility(View.VISIBLE);
             this.ll_motherInfo.setVisibility(View.VISIBLE);
             this.ll_fatherInfo.setVisibility(View.VISIBLE);
-            this.btn_saveParent.setText("EDIT");
-            this.tv_label.setText("Edit Parent Information");
+            this.btn_saveParent.setText("Update");
+            this.tv_label.setText("Update Parent Information");
             this.btn_saveParent.setVisibility(View.VISIBLE);
 
             final Modal_PIF modalPif = parentInformationDao.getPIFbyStudentId(this.studentId);
@@ -127,18 +124,18 @@ public class Fragment_AddParentInfoForm extends Fragment {
         }
 
         this.rg_motherAttendSchool.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.rb_PT01c_yes) this.ll_spinnerMothersGrade.setVisibility(View.VISIBLE);
+            if (checkedId == R.id.rb_PT01c_yes) this.rl_motherSchooling.setVisibility(View.VISIBLE);
             else {
-                this.ll_spinnerMothersGrade.setVisibility(View.GONE);
-                this.spinner_mothersGrade.setSelection(0);
+                this.rl_motherSchooling.setVisibility(View.GONE);
+                rg_mothersScooling.clearCheck();
             }
         });
 
         this.rg_fatherAttendSchool.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.rb_PT02c_yes) this.ll_spinnerFathersGrade.setVisibility(View.VISIBLE);
+            if (checkedId == R.id.rb_PT02c_yes) this.rl_fatherSchooling.setVisibility(View.VISIBLE);
             else {
-                this.ll_spinnerFathersGrade.setVisibility(View.GONE);
-                this.spinner_fathersGrade.setSelection(0);
+                this.rl_fatherSchooling.setVisibility(View.GONE);
+                rg_fathersSchooling.clearCheck();
             }
         });
 
@@ -165,8 +162,15 @@ public class Fragment_AddParentInfoForm extends Fragment {
         this.spinner_mothersAge.setSelection(this.ageAdapter.getPosition(modalPif.PT01b));
         if (modalPif.PT01c.equalsIgnoreCase(this.getString(R.string.yes))) {
             this.rg_motherAttendSchool.check(R.id.rb_PT01c_yes);
-            this.ll_spinnerMothersGrade.setVisibility(View.VISIBLE);
-            this.spinner_mothersGrade.setSelection(this.gradeAdapter.getPosition(modalPif.PT01d));
+            this.rl_motherSchooling.setVisibility(View.VISIBLE);
+            if (modalPif.PT01d.equalsIgnoreCase(getString(R.string.str_PT0d_one)))
+                rg_mothersScooling.check(R.id.rb_PT01d_one);
+            else if (modalPif.PT01d.equalsIgnoreCase(getString(R.string.str_PT0d_two)))
+                rg_mothersScooling.check(R.id.rb_PT01d_two);
+            else if (modalPif.PT01d.equalsIgnoreCase(getString(R.string.str_PT0d_three)))
+                rg_mothersScooling.check(R.id.rb_PT01d_three);
+            else if (modalPif.PT01d.equalsIgnoreCase(getString(R.string.str_PT0d_four)))
+                rg_mothersScooling.check(R.id.rb_PT01d_four);
         } else this.rg_motherAttendSchool.check(R.id.rb_PT01c_No);
         if (modalPif.PT01e.equalsIgnoreCase(this.getString(R.string.yes))) {
             this.rg_motherIncome.check(R.id.rb_PT01e_yes);
@@ -185,8 +189,15 @@ public class Fragment_AddParentInfoForm extends Fragment {
         this.spinner_fathersAge.setSelection(this.ageAdapter.getPosition(modalPif.PT02b));
         if (modalPif.PT02c.equalsIgnoreCase(this.getString(R.string.yes))) {
             this.rg_fatherAttendSchool.check(R.id.rb_PT02c_yes);
-            this.ll_spinnerFathersGrade.setVisibility(View.VISIBLE);
-            this.spinner_fathersGrade.setSelection(this.gradeAdapter.getPosition(modalPif.PT02d));
+            this.rl_fatherSchooling.setVisibility(View.VISIBLE);
+            if (modalPif.PT02d.equalsIgnoreCase(getString(R.string.str_PT0d_one)))
+                rg_fathersSchooling.check(R.id.rb_PT02d_one);
+            else if (modalPif.PT02d.equalsIgnoreCase(getString(R.string.str_PT0d_two)))
+                rg_fathersSchooling.check(R.id.rb_PT02d_two);
+            else if (modalPif.PT02d.equalsIgnoreCase(getString(R.string.str_PT0d_three)))
+                rg_fathersSchooling.check(R.id.rb_PT02d_three);
+            else if (modalPif.PT02d.equalsIgnoreCase(getString(R.string.str_PT0d_four)))
+                rg_fathersSchooling.check(R.id.rb_PT02d_four);
         } else this.rg_fatherAttendSchool.check(R.id.rb_PT02c_No);
         if (modalPif.PT02e.equalsIgnoreCase(this.getString(R.string.yes))) {
             this.rg_fatherIncome.check(R.id.rb_PT02e_yes);
@@ -243,6 +254,10 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 else str_PT01f = this.rb_PT01f.getText().toString();
                 if(this.rb_PT02f == null) str_PT02f="NA";
                 else str_PT02f = this.rb_PT02f.getText().toString();
+                if(rb_PT01d == null) mothersSchooling="NA";
+                else mothersSchooling=rb_PT01d.getText().toString();
+                if(rb_PT02d == null) fathersSchooling="NA";
+                else fathersSchooling=rb_PT02d.getText().toString();
 
                 this.updatePIF(this.rb_PT01c.getText().toString(), this.rb_PT01e.getText().toString(), str_PT01f,
                         this.rb_PT02c.getText().toString(), this.rb_PT02e.getText().toString(), str_PT02f);
@@ -252,6 +267,9 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 if (this.rb_PT01c == null || this.rb_PT01e == null || this.et_motherName.getText().toString().isEmpty()) {
                     Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
                 } else {
+                    if(rb_PT01d == null) mothersSchooling="NA";
+                    else mothersSchooling=rb_PT01d.getText().toString();
+                    fathersSchooling="NA";
                     if (this.rb_PT01e.getText().toString().equalsIgnoreCase(this.getString(R.string.yes))) {
                         if (this.rb_PT01f != null) {
                             this.insertPIF(this.et_motherName.getText().toString(), this.rb_PT01c.getText().toString(), this.rb_PT01e.getText().toString(), this.rb_PT01f.getText().toString(),
@@ -270,6 +288,9 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 if (this.rb_PT02c == null || this.rb_PT02e == null || this.et_fatherName.getText().toString().isEmpty()) {
                     Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
                 } else {
+                    if(rb_PT02d == null) fathersSchooling="NA";
+                    else fathersSchooling=rb_PT02d.getText().toString();
+                    mothersSchooling="NA";
                     if (this.rb_PT02e.getText().toString().equalsIgnoreCase(this.getString(R.string.yes))) {
                         if (this.rb_PT02f != null) {
                             this.insertPIF("NA", "NA", "NA", "NA",
@@ -287,6 +308,11 @@ public class Fragment_AddParentInfoForm extends Fragment {
                         this.et_motherName.getText().toString().isEmpty() || this.et_fatherName.getText().toString().isEmpty()) {
                     Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
                 } else {
+                    if(rb_PT01d == null) mothersSchooling="NA";
+                    else mothersSchooling=rb_PT01d.getText().toString();
+                    if(rb_PT02d == null) fathersSchooling="NA";
+                    else fathersSchooling=rb_PT02d.getText().toString();
+
                     if (this.rb_PT01e.getText().toString().equalsIgnoreCase(this.getString(R.string.yes)) && this.rb_PT02e.getText().toString().equalsIgnoreCase(this.getString(R.string.yes))) {
                         if (this.rb_PT01f != null && this.rb_PT02f != null) {
                             this.insertPIF(this.et_motherName.getText().toString(), this.rb_PT01c.getText().toString(), this.rb_PT01e.getText().toString(), this.rb_PT01f.getText().toString(),
@@ -324,13 +350,13 @@ public class Fragment_AddParentInfoForm extends Fragment {
         modalPif.setPT01a(mothersName);
         modalPif.setPT01b(this.mothersAge);
         modalPif.setPT01c(str_PT01c);
-        modalPif.setPT01d(this.mothersGrade);
+        modalPif.setPT01d(mothersSchooling);
         modalPif.setPT01e(str_PT01e);
         modalPif.setPT01f(str_PT01f);
         modalPif.setPT02a(fathersName);
         modalPif.setPT02b(this.fathersAge);
         modalPif.setPT02c(str_PT02c);
-        modalPif.setPT02d(this.fathersGrade);
+        modalPif.setPT02d(fathersSchooling);
         modalPif.setPT02e(str_PT02e);
         modalPif.setPT02f(str_PT02f);
         modalPif.setStudentId(this.studentId);
@@ -350,13 +376,13 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 this.et_motherName.getText().toString(),
                 this.mothersAge,
                 str_PT01c,
-                this.mothersGrade,
+                mothersSchooling,
                 str_PT01e,
                 str_PT01f,
                 this.et_fatherName.getText().toString(),
                 this.fathersAge,
                 str_PT02c,
-                this.fathersGrade,
+                fathersSchooling,
                 str_PT02e,
                 str_PT02f,
                 this.studentId);
@@ -368,16 +394,20 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
     public void getRadioButtonValues() {
         final int selectedPT01c = this.rg_motherAttendSchool.getCheckedRadioButtonId();
+        final int selectedPT01d = this.rg_mothersScooling.getCheckedRadioButtonId();
         final int selectedPT01e = this.rg_motherIncome.getCheckedRadioButtonId();
         final int selectedPT01f = this.rg_motherWork.getCheckedRadioButtonId();
         final int selectedPT02c = this.rg_fatherAttendSchool.getCheckedRadioButtonId();
+        final int selectedPT02d = this.rg_fathersSchooling.getCheckedRadioButtonId();
         final int selectedPT02e = this.rg_fatherIncome.getCheckedRadioButtonId();
         final int selectedPT02f = this.rg_fatherWork.getCheckedRadioButtonId();
 
         this.rb_PT01c = this.getView().findViewById(selectedPT01c);
+        this.rb_PT01d = this.getView().findViewById(selectedPT01d);
         this.rb_PT01e = this.getView().findViewById(selectedPT01e);
         this.rb_PT01f = this.getView().findViewById(selectedPT01f);
         this.rb_PT02c = this.getView().findViewById(selectedPT02c);
+        this.rb_PT02d = this.getView().findViewById(selectedPT02d);
         this.rb_PT02e = this.getView().findViewById(selectedPT02e);
         this.rb_PT02f = this.getView().findViewById(selectedPT02f);
     }
@@ -386,15 +416,9 @@ public class Fragment_AddParentInfoForm extends Fragment {
         if (this.spinner_mothersAge.getSelectedItemPosition() == 0) this.mothersAge = "NA";
         else this.mothersAge = this.spinner_mothersAge.getSelectedItem().toString();
 
-        if (this.spinner_mothersGrade.getSelectedItemPosition() == 0) this.mothersGrade = "NA";
-        else this.mothersGrade = this.spinner_mothersGrade.getSelectedItem().toString();
-
         if (this.spinner_fathersAge.getSelectedItemPosition() == 0) this.fathersAge = "NA";
         else this.fathersAge = this.spinner_fathersAge.getSelectedItem().toString();
-
-        if (this.spinner_fathersGrade.getSelectedItemPosition() == 0) this.fathersGrade = "NA";
-        else this.fathersGrade = this.spinner_fathersGrade.getSelectedItem().toString();
     }
 
-
+//todo check pif
 }

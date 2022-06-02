@@ -131,20 +131,29 @@
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
     <string name="add_hh_info">Add Household Information</string>
 
-    <string name="str_CH04">Is child currently enrolled in any school or preschool?</string>
-    <string name="str_CH05d">What is the current status of the school?</string>
-    <string name="str_CH05c">Is [test lang] the official medium of instruction in this school?
+
+    <string name="str_CH04a">Does the child have any known disability?</string>
+    <string name="str_CH04b">If yes in CH04a then, which disability? (select all that is applicable)</string>
+    <string name="str_CH04b_op1">Visual</string>
+    <string name="str_CH04b_op2">Hearing/Speech</string>
+    <string name="str_CH04b_op3">Physical</string>
+    <string name="str_CH04b_op4">Cognitive</string>
+
+    <string name="str_CH05">Is child currently enrolled in any school or preschool?</string>
+    <string name="str_CH06c">Is [test lang] the official medium of instruction in this school?
         (for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
-    <string name="str_CH05d_one">School is open and teaching-learning activities are being conducted for this class</string>
-    <string name="str_CH05d_two">School is open but no teaching-learning activities are being conducted</string>
-    <string name="str_CH05d_three">School is closed</string>
-    <string name="str_CH05e">What kind of activities are being conducted?	</string>
-    <string name="str_CH05e_one">Online/Remote only (via zoom, WhatsApp, Google Meet, SMS etc.)</string>
-    <string name="str_CH05e_two">Physical/in-person activities only (child goes to school to attend classes)</string>
-    <string name="str_CH05e_three">Hybrid (both online/remote and in-person activities</string>
-    <string name="str_CH05f">Does child have textbooks for the current grade?</string>
-    <string name="str_CH06a">Was child ever enrolled in school?</string>
-    <string name="str_reasonToDrop">What was the main reason child dropped out?</string>
+    <string name="str_CH06d">What is the current status of the school?</string>
+    <string name="str_CH06d_one">School is open and teaching-learning activities are being conducted for this class</string>
+    <string name="str_CH06d_two">School is open but no teaching-learning activities are being conducted</string>
+    <string name="str_CH06d_three">School is closed</string>
+    <string name="str_CH06e">What kind of activities are being conducted?	</string>
+    <string name="str_CH06e_one">Online/Remote only (via zoom, WhatsApp, Google Meet, SMS etc.)</string>
+    <string name="str_CH06e_two">Physical/in-person activities only (child goes to school to attend classes)</string>
+    <string name="str_CH06e_three">Hybrid (both online/remote and in-person activities</string>
+    <string name="str_CH06f">Does child have textbooks for the current grade?</string>
+    <string name="str_CH06g">Has the [child name] ever repeated a grade in school?</string>
+    <string name="str_CH07a">Was child ever enrolled in school?</string>
+    <string name="str_CH07d">What was the main reason child dropped out?</string>
     <string name="str_reasonToDrop_one">Could not afford the fees</string>
     <string name="str_reasonToDrop_two">School closed down</string>
     <string name="str_reasonToDrop_three">Was not promoted so discontinued</string>
@@ -152,8 +161,25 @@
     <string name="str_reasonToDrop_five">Not interested anymore</string>
     <string name="str_reasonToDrop_six">Other</string>
     <string name="str_reasonToDrop_seven">Don\'t know</string>
-    <string name="str_CH07">Was child ever enrolled in a pre-primary/nursery class?</string>
     <string name="str_CH08">Does child take any paid tuition class (coaching) currently?</string>
+    <string name="str_CH09">Has [child name] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or anyother place?</string>
+    <string name="str_CH10a">Does anyone at home help the child with their homework?</string>
+    <string name="str_CH10b">Who helps [child name] MOST often?</string>
+    <string name="str_CH10b_one">Father</string>
+    <string name="str_CH10b_two">Mother</string>
+    <string name="str_CH10b_three">Elder sibling</string>
+    <string name="str_CH10b_four">Uncle</string>
+    <string name="str_CH10b_five">Aunty</string>
+    <string name="str_CH10b_six">Cousin</string>
+    <string name="str_CH10b_seven">Other</string>
+    <string name="str_CH10c">How often does someone is the household read or tell stories to [child name]?</string>
+    <string name="str_CH10c_one">Never</string>
+    <string name="str_CH10c_two">Less than once a week</string>
+    <string name="str_CH10c_three">1-2 days per week</string>
+    <string name="str_CH10c_four">3-4 days per week</string>
+    <string name="str_CH10c_five">5-7 days per week</string>
+    <string name="additional_learning_sup">Additional learning support at home </string>
+
 
     <string name="add_parent_information">Add Parent Information</string>
     <string name="parent_information">Parent Information</string>
@@ -165,8 +191,11 @@
     <string name="str_fatherName">Father\'s Name </string>
     <string name="str_PT01b">Mother\'s Age</string>
     <string name="str_PT02b">Father\'s Age</string>
-    <string name="str_PT01d">Mother\'s Grade</string>
-    <string name="str_PT02d">Father\'s Grade</string>
+    <string name="str_PT0d">Upto what level of schooling has she completed?</string>
+    <string name="str_PT0d_one">None</string>
+    <string name="str_PT0d_two">Primary</string>
+    <string name="str_PT0d_three">Secondary</string>
+    <string name="str_PT0d_four">Beyond Secondary</string>
     <string name="str_mother">Mother</string>
     <string name="str_father">Father</string>
     <string name="str_both">Both</string>

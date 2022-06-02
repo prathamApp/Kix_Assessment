@@ -36,7 +36,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
     @ViewById(R.id.tv_title)
     TextView tv_title;
-    @ViewById(R.id.et_HH06a_members)
+    @ViewById(R.id.et_HH06a)
     EditText et_members;
     @ViewById(R.id.rg_HH06b)
     RadioGroup rg_speakEnglish;

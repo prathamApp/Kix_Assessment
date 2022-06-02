@@ -56,32 +56,44 @@ public class Fragment_AddStudent extends Fragment {
     Spinner spinner_age;
     @ViewById(R.id.spn_CH03)
     Spinner spinner_gender;
-    @ViewById(R.id.rg_CH04)
+    @ViewById(R.id.rg_CH04a)
+    RadioGroup rg_anyDisability;
+    @ViewById(R.id.rg_CH04b)
+    RadioGroup rg_whichDisability;
+    @ViewById(R.id.rg_CH05)
     RadioGroup rg_isStudentEnrolled;
-    @ViewById(R.id.spn_CH05a)
+    @ViewById(R.id.spn_CH06a)
     Spinner spinner_class;
-    @ViewById(R.id.spn_CH05b)
+    @ViewById(R.id.spn_CH06b)
     Spinner spinner_schoolType;
-    @ViewById(R.id.rg_CH05c)
+    @ViewById(R.id.rg_CH06c)
     RadioGroup rg_instructionLang;
-    @ViewById(R.id.rg_CH05d)
+    @ViewById(R.id.rg_CH06d)
     RadioGroup rg_schoolStatus;
-    @ViewById(R.id.rg_CH05e)
+    @ViewById(R.id.rg_CH06e)
     RadioGroup rg_schoolActivities;
-    @ViewById(R.id.rg_CH05f)
+    @ViewById(R.id.rg_CH06f)
     RadioGroup rg_haveTextbooks;
-    @ViewById(R.id.rg_CH06a)
+    @ViewById(R.id.rg_CH06g)
+    RadioGroup rg_gradeRepeat;
+    @ViewById(R.id.rg_CH07a)
     RadioGroup rg_isStudentEverEnrolled;
-    @ViewById(R.id.spn_CH06b1)
+    @ViewById(R.id.spn_CH07b)
     Spinner spinner_dropoutYear;
-    @ViewById(R.id.spn_CH06b2)
+    @ViewById(R.id.spn_CH07c)
     Spinner spinner_dropout_class;
-    @ViewById(R.id.rg_CH06b3)
+    @ViewById(R.id.rg_CH07d)
     RadioGroup rg_dropOutReason;
-    @ViewById(R.id.rg_CH07)
-    RadioGroup rg_everEnrolledInNursary;
     @ViewById(R.id.rg_CH08)
     RadioGroup rg_paidTution;
+    @ViewById(R.id.rg_CH09)
+    RadioGroup rg_readMaterial;
+    @ViewById(R.id.rg_CH10a)
+    RadioGroup rg_helpChild;
+    @ViewById(R.id.rg_CH10b)
+    RadioGroup rg_mostOften;
+    @ViewById(R.id.rg_CH10c)
+    RadioGroup rg_oftenReads;
 
     @ViewById(R.id.ll_spinnerDropout)
     LinearLayout ll_spinnerDropout;
@@ -91,14 +103,20 @@ public class Fragment_AddStudent extends Fragment {
     @ViewById(R.id.tv_label)
     TextView tv_label;
 
+    @ViewById(R.id.rl_CH04b)
+    RelativeLayout rl_CH04b;
     @ViewById(R.id.ll_enrolledChildFields)
     LinearLayout ll_enrolledChildFields;
     @ViewById(R.id.ll_notEnrolledChildFields)
     LinearLayout ll_notEnrolledChildFields;
-    @ViewById(R.id.ll_sub_CHo6a)
+    @ViewById(R.id.ll_sub_CH07b)
     LinearLayout ll_dropoutFields;
-    @ViewById(R.id.rl_CH05e)
+    @ViewById(R.id.rl_CH06e)
     RelativeLayout rl_kindOfActivities;
+    @ViewById(R.id.rl_CH10a)
+    RelativeLayout rl_CH10a;
+    @ViewById(R.id.rl_CH10b)
+    RelativeLayout rl_CH10b;
 
     @ViewById(R.id.btn_saveStudent)
     Button btn_saveStudent;
@@ -116,10 +134,13 @@ public class Fragment_AddStudent extends Fragment {
 
     String studId;
 
-    RadioButton rb_CH04, rb_CH05c, rb_CH05d, rb_CH05e, rb_CH05f, rb_CH06a, rb_CH06b3, rb_CH07, rb_CH08;
+    RadioButton rb_CH04a, rb_CH04b, rb_CH05, rb_CH06c, rb_CH06d, rb_CH06e, rb_CH06f, rb_CH06g, rb_CH07a, rb_CH07d, rb_CH08,
+            rb_CH09, rb_CH10a, rb_CH10b, rb_CH10c ;
 
-    String str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f;
-    String str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3;
+    String str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g;
+    String str_CH07a, str_CH07b, str_CH07c, str_CH07d;
+    String str_CH10a, str_CH10b;
+    String str_CH04b;
 
     public boolean isStudCurrentlyEnrolled;
 
@@ -155,16 +176,20 @@ public class Fragment_AddStudent extends Fragment {
         rg_isStudentEnrolled.setOnCheckedChangeListener((group, checkedId) ->
         {
             switch (checkedId) {
-                case R.id.rb_CH04_yes:
+                case R.id.rb_CH05_yes:
                     ll_enrolledChildFields.setVisibility(View.VISIBLE);
                     ll_notEnrolledChildFields.setVisibility(View.GONE);
+                    rl_CH10a.setVisibility(View.VISIBLE);
+                    rl_CH10b.setVisibility(View.VISIBLE);
                     btn_saveStudent.setVisibility(View.VISIBLE);
                     isStudCurrentlyEnrolled = true;
                     break;
 
-                case R.id.rb_CH04_No:
+                case R.id.rb_CH05_No:
                     ll_enrolledChildFields.setVisibility(View.GONE);
                     ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+                    rl_CH10a.setVisibility(View.GONE);
+                    rl_CH10b.setVisibility(View.GONE);
                     btn_saveStudent.setVisibility(View.VISIBLE);
                     isStudCurrentlyEnrolled = false;
                     break;
@@ -174,21 +199,29 @@ public class Fragment_AddStudent extends Fragment {
         rg_isStudentEverEnrolled.setOnCheckedChangeListener((group, checkedId) ->
         {
             switch (checkedId) {
-                case R.id.rb_CH06a_yes:
+                case R.id.rb_CH07a_yes:
                     ll_dropoutFields.setVisibility(View.VISIBLE);
                     break;
 
-                case R.id.rb_CH06a_No:
+                case R.id.rb_CH07a_No:
                     ll_dropoutFields.setVisibility(View.GONE);
                     break;
             }
         });
 
         rg_schoolStatus.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.rb_CH05d_one) rl_kindOfActivities.setVisibility(View.VISIBLE);
+            if (checkedId == R.id.rb_CH06d_one) rl_kindOfActivities.setVisibility(View.VISIBLE);
             else {
                 rl_kindOfActivities.setVisibility(View.GONE);
                 rg_schoolActivities.clearCheck();//todo test
+            }
+        });
+
+        rg_anyDisability.setOnCheckedChangeListener((group, checkedId) -> {
+            if(checkedId==R.id.rb_CH04a_yes) rl_CH04b.setVisibility(View.VISIBLE);
+            else {
+                rl_CH04b.setVisibility(View.GONE);
+                rg_whichDisability.clearCheck();
             }
         });
 
@@ -235,78 +268,117 @@ public class Fragment_AddStudent extends Fragment {
 
     private void fetchChildDetails(Modal_Student modalStudent) {
         tv_label.setText(getResources().getString(R.string.edit_child_info));
-        btn_saveStudent.setText("EDIT");
+        btn_saveStudent.setText("Update");
         btn_saveStudent.setVisibility(View.VISIBLE);
         et_studentName.setText(modalStudent.getCH01());
 
-        spinner_age.setSelection(adapterAge.getPosition("Age " + modalStudent.getCH03()));
-        spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH02()));
+        spinner_age.setSelection(adapterAge.getPosition("Age " + modalStudent.getCH02()));
+        spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH03()));
 
-        if (modalStudent.CH04.equalsIgnoreCase(getString(R.string.yes))) {
-            isStudCurrentlyEnrolled = true;
-            rg_isStudentEnrolled.check(R.id.rb_CH04_yes);
-            ll_enrolledChildFields.setVisibility(View.VISIBLE);
-            spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH05a));
-            spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH05b));
+        if(modalStudent.CH04a.equalsIgnoreCase(getString(R.string.yes))){
+            rg_anyDisability.check(R.id.rb_CH04a_yes);
+            rl_CH04b.setVisibility(View.VISIBLE);
 
-            if (modalStudent.CH05c.equalsIgnoreCase(getString(R.string.yes)))
-                rg_instructionLang.check(R.id.rb_CH05c_yes);
-            else rg_instructionLang.check(R.id.rb_CH05c_No);
-
-            if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_one))){
-                rl_kindOfActivities.setVisibility(View.VISIBLE);
-                rg_schoolStatus.check(R.id.rb_CH05d_one);
-
-                if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_one)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_one);
-                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_two)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_two);
-                else if(modalStudent.CH05e.equalsIgnoreCase(getString(R.string.str_CH05e_three)))
-                    rg_schoolActivities.check(R.id.rb_CH05e_three);
-            }
-            else if (modalStudent.CH05d.equalsIgnoreCase(getString(R.string.str_CH05d_two)))
-                rg_schoolStatus.check(R.id.rb_CH05d_two);
-            else rg_schoolStatus.check(R.id.rb_CH05d_three);
-
-            if (modalStudent.CH05f.equalsIgnoreCase(getString(R.string.yes)))
-                rg_haveTextbooks.check(R.id.rb_CH05f_yes);
-            else rg_haveTextbooks.check(R.id.rb_CH05f_No);
+            if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op1)))
+                rg_whichDisability.check(R.id.rb_CH04b_op1);
+            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op2)))
+                rg_whichDisability.check(R.id.rb_CH04b_op2);
+            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op3)))
+                rg_whichDisability.check(R.id.rb_CH04b_op3);
+            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op4)))
+                rg_whichDisability.check(R.id.rb_CH04b_op4);
         } else {
-            isStudCurrentlyEnrolled = false;
-            rg_isStudentEnrolled.check(R.id.rb_CH04_No);
-            ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-            if (modalStudent.CH06a.equalsIgnoreCase(getString(R.string.yes))) {
-                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_yes);
-                ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-                ll_dropoutFields.setVisibility(View.VISIBLE);
-                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH06b1));
-                spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH06b2));
-                if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_one)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_one);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_two)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_two);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_three)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_three);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_four)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_four);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_five)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_five);
-                else if (modalStudent.CH06b3.equalsIgnoreCase(getString(R.string.str_reasonToDrop_six)))
-                    rg_dropOutReason.check(R.id.rb_CH06b3_six);
-                else rg_dropOutReason.check(R.id.rb_CH06b3_seven);
-            } else {
-                ll_dropoutFields.setVisibility(View.GONE);
-                rg_isStudentEverEnrolled.check(R.id.rb_CH06a_No);
-            }
+            rg_anyDisability.check(R.id.rb_CH04a_No);
         }
 
-        if (modalStudent.CH07.equalsIgnoreCase(getString(R.string.yes)))
-            rg_everEnrolledInNursary.check(R.id.rb_CH07_yes);
-        else rg_everEnrolledInNursary.check(R.id.rb_CH07_No);
+        if (modalStudent.CH05.equalsIgnoreCase(getString(R.string.yes))) {
+            isStudCurrentlyEnrolled = true;
+            rg_isStudentEnrolled.check(R.id.rb_CH05_yes);
+            ll_enrolledChildFields.setVisibility(View.VISIBLE);
+            rl_CH10a.setVisibility(View.VISIBLE);
+            spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH06a));
+            spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH06b));
+
+            if (modalStudent.CH06c.equalsIgnoreCase(getString(R.string.yes)))
+                rg_instructionLang.check(R.id.rb_CH06c_yes);
+            else rg_instructionLang.check(R.id.rb_CH06c_No);
+
+            if (modalStudent.CH06d.equalsIgnoreCase(getString(R.string.str_CH06d_one))){
+                rl_kindOfActivities.setVisibility(View.VISIBLE);
+                rg_schoolStatus.check(R.id.rb_CH06d_one);
+
+                if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_one)))
+                    rg_schoolActivities.check(R.id.rb_CH06e_one);
+                else if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_two)))
+                    rg_schoolActivities.check(R.id.rb_CH06e_two);
+                else if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_three)))
+                    rg_schoolActivities.check(R.id.rb_CH06e_three);
+            }
+            else if (modalStudent.CH06d.equalsIgnoreCase(getString(R.string.str_CH06d_two)))
+                rg_schoolStatus.check(R.id.rb_CH06d_two);
+            else rg_schoolStatus.check(R.id.rb_CH06d_three);
+
+            if (modalStudent.CH06f.equalsIgnoreCase(getString(R.string.yes)))
+                rg_haveTextbooks.check(R.id.rb_CH06f_yes);
+            else rg_haveTextbooks.check(R.id.rb_CH06f_No);
+
+            if (modalStudent.CH06g.equalsIgnoreCase(getString(R.string.yes)))
+                rg_gradeRepeat.check(R.id.rb_CH06g_yes);
+            else rg_gradeRepeat.check(R.id.rb_CH06g_No);
+
+            if (modalStudent.CH10a.equalsIgnoreCase(getString(R.string.yes))) {
+                rg_helpChild.check(R.id.rb_CH10a_yes);
+                rl_CH10b.setVisibility(View.VISIBLE);
+            }
+            else rg_helpChild.check(R.id.rb_CH10a_No);
+
+        } else {
+            isStudCurrentlyEnrolled = false;
+            rg_isStudentEnrolled.check(R.id.rb_CH05_No);
+            ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+            if (modalStudent.CH07a.equalsIgnoreCase(getString(R.string.yes))) {
+                rg_isStudentEverEnrolled.check(R.id.rb_CH07a_yes);
+                ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
+                ll_dropoutFields.setVisibility(View.VISIBLE);
+                spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH07b));
+                spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH07c));
+                if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_one)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_one);
+                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_two)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_two);
+                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_three)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_three);
+                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_four)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_four);
+                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_five)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_five);
+                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_six)))
+                    rg_dropOutReason.check(R.id.rb_CH07d_six);
+                else rg_dropOutReason.check(R.id.rb_CH07d_seven);
+            } else {
+                ll_dropoutFields.setVisibility(View.GONE);
+                rg_isStudentEverEnrolled.check(R.id.rb_CH07a_No);
+            }
+        }
 
         if (modalStudent.CH08.equalsIgnoreCase(getString(R.string.yes)))
             rg_paidTution.check(R.id.rb_CH08_yes);
         else rg_paidTution.check(R.id.rb_CH08_No);
+
+        if (modalStudent.CH09.equalsIgnoreCase(getString(R.string.yes)))
+            rg_readMaterial.check(R.id.rb_CH09_yes);
+        else rg_readMaterial.check(R.id.rb_CH09_No);
+
+        if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_one)))
+            rg_oftenReads.check(R.id.rb_CH10c_one);
+        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_two)))
+            rg_oftenReads.check(R.id.rb_CH10c_two);
+        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_three)))
+            rg_oftenReads.check(R.id.rb_CH10c_three);
+        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_four)))
+            rg_oftenReads.check(R.id.rb_CH10c_four);
+        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_five)))
+            rg_oftenReads.check(R.id.rb_CH10c_five);
     }
 
     @ItemSelect(R.id.spn_CH03)
@@ -330,94 +402,106 @@ public class Fragment_AddStudent extends Fragment {
         getSpinnerValues();
         getRadioButtonValues();
 
-        if (!et_studentName.getText().toString().isEmpty()) {
-            if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                insertStudent();
-//                Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
-//                getFragmentManager().popBackStack();
-            } else
-                insertStudent();
+        if (!et_studentName.getText().toString().isEmpty() && spinner_age.getSelectedItemPosition()!=0
+                && spinner_gender.getSelectedItemPosition()!=0 && rb_CH04a!=null && rb_CH05 != null && rb_CH08 != null
+                && rb_CH09 != null && rb_CH10c != null) {
+            if (rb_CH04b == null) str_CH04b = "NA";
+            else str_CH04b = rb_CH04b.getText().toString();
+            insertStudent();
         } else {
-            Toast.makeText(getActivity(), "Enter Name First.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please fill all fields!", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void insertStudent() {
 
         if (isStudCurrentlyEnrolled) {
-            str_CH05a = standard;
-            str_CH05b = schoolType;
+            str_CH06a = standard;
+            str_CH06b = schoolType;
 
-            if (rb_CH05c == null || rb_CH05d == null || rb_CH05f == null || rb_CH07 == null
-                    || rb_CH08 == null || this.spinner_gender.getSelectedItemPosition()!=0
-                    || this.spinner_age.getSelectedItemPosition()!=0) {
+            if (rb_CH06c == null || rb_CH06d == null || rb_CH06f == null || rb_CH06g == null || rb_CH10a == null) {
                 Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH05c = rb_CH05c.getText().toString();
-                str_CH05d = rb_CH05d.getText().toString();
-                if (rb_CH05e == null) str_CH05e = "NA";
-                else str_CH05e = rb_CH05e.getText().toString();
-                str_CH05f = rb_CH05f.getText().toString();
+                str_CH06c = rb_CH06c.getText().toString();
+                str_CH06d = rb_CH06d.getText().toString();
+                if (rb_CH06e == null) str_CH06e = "NA";
+                else str_CH06e = rb_CH06e.getText().toString();
+                str_CH06f = rb_CH06f.getText().toString();
+                str_CH06g = rb_CH06g.getText().toString();
+                str_CH10a = rb_CH10a.getText().toString();
+                if(rb_CH10b==null) str_CH10b="NA";
+                else str_CH10b = rb_CH10b.getText().toString();
 
-                str_CH06a = "";
-                str_CH06b1 = "";
-                str_CH06b2 = "";
-                str_CH06b3 = "";
+                str_CH07a = "NA";
+                str_CH07b = "NA";
+                str_CH07c = "NA";
+                str_CH07d = "NA";
                 if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
                     studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                            rb_CH04.getText().toString(),
-                            str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                            str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                            rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                            rb_CH04a.getText().toString(), str_CH04b,
+                            rb_CH05.getText().toString(),
+                            str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
+                            str_CH07a, str_CH07b, str_CH07c, str_CH07d,
+                            rb_CH08.getText().toString(),rb_CH09.getText().toString(),
+                            str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
                             studId);
                     BackupDatabase.backup(getActivity());
-                    Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
                     getFragmentManager().popBackStack();
                 } else insertStud();
             }
         } else {
-            str_CH05a = "";
-            str_CH05b = "";
-            str_CH05c = "";
-            str_CH05d = "";
-            str_CH05e = "";
-            str_CH05f = "";
+            str_CH06a = "NA";
+            str_CH06b = "NA";
+            str_CH06c = "NA";
+            str_CH06d = "NA";
+            str_CH06e = "NA";
+            str_CH06f = "NA";
+            str_CH06g = "NA";
+            str_CH10a = "NA";
+            str_CH10b = "NA";
 
-            if (rb_CH06a == null || rb_CH07 == null || rb_CH08 == null) {
+            if (rb_CH07a == null) {
                 Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH06a = rb_CH06a.getText().toString();
-                if (str_CH06a.equalsIgnoreCase("yes")) {
-                    str_CH06b1 = dropoutYear;
-                    str_CH06b2 = dropoutStandard;
+                str_CH07a = rb_CH07a.getText().toString();
+                if (str_CH07a.equalsIgnoreCase("yes")) {
+                    str_CH07b = dropoutYear;
+                    str_CH07c = dropoutStandard;
 
-                    if (rb_CH06b3 == null) {
+                    if (rb_CH07d == null) {
                         Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
                     } else {
-                        str_CH06b3 = rb_CH06b3.getText().toString();
+                        str_CH07d = rb_CH07d.getText().toString();
                         if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
                             studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                                    rb_CH04.getText().toString(),
-                                    str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                                    str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                                    rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                                    rb_CH04a.getText().toString(), str_CH04b,
+                                    rb_CH05.getText().toString(),
+                                    str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
+                                    str_CH07a, str_CH07b, str_CH07c, str_CH07d,
+                                    rb_CH08.getText().toString(), rb_CH09.getText().toString(),
+                                    str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
                                     studId);
                             BackupDatabase.backup(getActivity());
-                            Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
                             getFragmentManager().popBackStack();
                         } else insertStud();
                     }
                 } else {
+                    str_CH07b="NA";
+                    str_CH07c="NA";
+                    str_CH07d="NA";
                     if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                        studentDao.updateStudent(et_studentName.getText().toString(), age,
-                                spinner_gender.getSelectedItem().toString(),
-                                rb_CH04.getText().toString(),
-                                str_CH05a, str_CH05b, str_CH05c, str_CH05d, str_CH05e, str_CH05f,
-                                str_CH06a, str_CH06b1, str_CH06b2, str_CH06b3,
-                                rb_CH07.getText().toString(), rb_CH08.getText().toString(),
+                        studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
+                                rb_CH04a.getText().toString(), str_CH04b,
+                                rb_CH05.getText().toString(),
+                                str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
+                                str_CH07a, str_CH07b, str_CH07c, str_CH07d,
+                                rb_CH08.getText().toString(), rb_CH09.getText().toString(),
+                                str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
                                 studId);
                         BackupDatabase.backup(getActivity());
-                        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
                     } else insertStud();
                 }
@@ -440,21 +524,27 @@ public class Fragment_AddStudent extends Fragment {
         Modal_Student modal_student = new Modal_Student();
         modal_student.setStudentId(sId);
         modal_student.setCH01(et_studentName.getText().toString());
-        modal_student.setCH02(spinner_gender.getSelectedItem().toString());
-        modal_student.setCH03(age);
-        modal_student.setCH04(rb_CH04.getText().toString());
-        modal_student.setCH05a(str_CH05a);
-        modal_student.setCH05b(str_CH05b);
-        modal_student.setCH05c(str_CH05c);
-        modal_student.setCH05d(str_CH05d);
-        modal_student.setCH05e(str_CH05e);
-        modal_student.setCH05f(str_CH05f);
+        modal_student.setCH02(age);
+        modal_student.setCH03(spinner_gender.getSelectedItem().toString());
+        modal_student.setCH04a(rb_CH04a.getText().toString());
+        modal_student.setCH04b(str_CH04b);
+        modal_student.setCH05(rb_CH05.getText().toString());
         modal_student.setCH06a(str_CH06a);
-        modal_student.setCH06b1(str_CH06b1);
-        modal_student.setCH06b2(str_CH06b2);
-        modal_student.setCH06b3(str_CH06b3);
-        modal_student.setCH07(rb_CH07.getText().toString());
+        modal_student.setCH06b(str_CH06b);
+        modal_student.setCH06c(str_CH06c);
+        modal_student.setCH06d(str_CH06d);
+        modal_student.setCH06e(str_CH06e);
+        modal_student.setCH06f(str_CH06f);
+        modal_student.setCH06g(str_CH06g);
+        modal_student.setCH07a(str_CH07a);
+        modal_student.setCH07b(str_CH07b);
+        modal_student.setCH07c(str_CH07c);
+        modal_student.setCH07d(str_CH07d);
         modal_student.setCH08(rb_CH08.getText().toString());
+        modal_student.setCH09(rb_CH09.getText().toString());
+        modal_student.setCH10a(str_CH10a);
+        modal_student.setCH10b(str_CH10b);
+        modal_student.setCH10c(rb_CH10c.getText().toString());
         modal_student.setSvrCode(surveyorCode);
         modal_student.setHouseholdId(householdID);
         modal_student.setCreatedOn(KIX_Utility.getCurrentDateTime());
@@ -493,25 +583,37 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     public void getRadioButtonValues() {
-        int selectedCH04 = rg_isStudentEnrolled.getCheckedRadioButtonId();
-        int selectedCH05c = rg_instructionLang.getCheckedRadioButtonId();
-        int selectedCH05d = rg_schoolStatus.getCheckedRadioButtonId();
-        int selectedCH05e = rg_schoolActivities.getCheckedRadioButtonId();
-        int selectedCH05f = rg_haveTextbooks.getCheckedRadioButtonId();
-        int selectedCH06a = rg_isStudentEverEnrolled.getCheckedRadioButtonId();
-        int selectedCH06b3 = rg_dropOutReason.getCheckedRadioButtonId();
-        int selectedCH07 = rg_everEnrolledInNursary.getCheckedRadioButtonId();
+        int selectedCH04a = rg_anyDisability.getCheckedRadioButtonId();
+        int selectedCH04b = rg_whichDisability.getCheckedRadioButtonId();
+        int selectedCH05 = rg_isStudentEnrolled.getCheckedRadioButtonId();
+        int selectedCH06c = rg_instructionLang.getCheckedRadioButtonId();
+        int selectedCH06d = rg_schoolStatus.getCheckedRadioButtonId();
+        int selectedCH06e = rg_schoolActivities.getCheckedRadioButtonId();
+        int selectedCH06f = rg_haveTextbooks.getCheckedRadioButtonId();
+        int selectedCH06g = rg_gradeRepeat.getCheckedRadioButtonId();
+        int selectedCH07a = rg_isStudentEverEnrolled.getCheckedRadioButtonId();
+        int selectedCH07d = rg_dropOutReason.getCheckedRadioButtonId();
         int selectedCH08 = rg_paidTution.getCheckedRadioButtonId();
+        int selectedCH09 = rg_readMaterial.getCheckedRadioButtonId();
+        int selectedCH10a = rg_helpChild.getCheckedRadioButtonId();
+        int selectedCH10b = rg_mostOften.getCheckedRadioButtonId();
+        int selectedCH10c = rg_oftenReads.getCheckedRadioButtonId();
 
-        rb_CH04 = getView().findViewById(selectedCH04);
-        rb_CH05c = getView().findViewById(selectedCH05c);
-        rb_CH05d = getView().findViewById(selectedCH05d);
-        rb_CH05e = getView().findViewById(selectedCH05e);
-        rb_CH05f = getView().findViewById(selectedCH05f);
-        rb_CH06a = getView().findViewById(selectedCH06a);
-        rb_CH06b3 = getView().findViewById(selectedCH06b3);
-        rb_CH07 = getView().findViewById(selectedCH07);
+        rb_CH04a = getView().findViewById(selectedCH04a);
+        rb_CH04b = getView().findViewById(selectedCH04b);
+        rb_CH05 = getView().findViewById(selectedCH05);
+        rb_CH06c = getView().findViewById(selectedCH06c);
+        rb_CH06d = getView().findViewById(selectedCH06d);
+        rb_CH06e = getView().findViewById(selectedCH06e);
+        rb_CH06f = getView().findViewById(selectedCH06f);
+        rb_CH06g = getView().findViewById(selectedCH06g);
+        rb_CH07a = getView().findViewById(selectedCH07a);
+        rb_CH07d = getView().findViewById(selectedCH07d);
         rb_CH08 = getView().findViewById(selectedCH08);
+        rb_CH09 = getView().findViewById(selectedCH09);
+        rb_CH10a = getView().findViewById(selectedCH10a);
+        rb_CH10b = getView().findViewById(selectedCH10b);
+        rb_CH10c = getView().findViewById(selectedCH10c);
 
     }
 

@@ -62,12 +62,11 @@
                     android:textSize="@dimen/_12sdp" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_HH06a_members"
+                    android:id="@+id/et_HH06a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
                     android:drawablePadding="@dimen/_5sdp"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:singleLine="true"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_11sdp" />

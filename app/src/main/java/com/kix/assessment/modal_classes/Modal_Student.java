@@ -13,21 +13,27 @@ public class Modal_Student implements Comparable, Parcelable {
     public int sId;
     public String studentId;
     public String CH01;//name
-    public String CH02;//sex
-    public String CH03;//age
-    public String CH04;//Is [child name] currently enrolled in any school or preschool?
-    public String CH05a;//Grade/Class (write 0 if child is enrolled in preschool/pre-primary)
-    public String CH05b;//School type (tick only one)
-    public String CH05c;//Is [test lang] the official medium of instruction in this school?
-    public String CH05d;//What is the current status of the school?
-    public String CH05e;//If the first option is chosen in CH05d, then ask What kind of activities are being conducted?
-    public String CH05f;//Does [child name] have textbooks for the current grade?
-    public String CH06a;//Was [child name] ever enrolled in school?
-    public String CH06b1;//Year of dropping out
-    public String CH06b2;//Last grade/class completed before dropping out
-    public String CH06b3;//What was the main reason [child name] dropped out?
-    public String CH07;//Was [child name] ever enrolled in a pre-primary/nursery class? (ask only if the child is currently not enrolled in pre-primary/nursery)
+    public String CH02;//age
+    public String CH03;//sex
+    public String CH04a;//Does the child have any known disability?
+    public String CH04b;//If yes in CH04a then, which disability? (select all that is applicable)
+    public String CH05;//Is [child name] currently enrolled in any school or preschool?
+    public String CH06a;//Grade/Class (write 0 if child is enrolled in preschool/pre-primary)
+    public String CH06b;//School type (tick only one)
+    public String CH06c;//Is [test lang] the official medium of instruction in this school?
+    public String CH06d;//What is the current status of the school?
+    public String CH06e;//If the first option is chosen in CH06d, then ask What kind of activities are being conducted?
+    public String CH06f;//Does [child name] have textbooks for the current grade?
+    public String CH06g;//Has the [child name] ever repeated a grade in school (ask only children currently enrolled in grade 1 and above)?
+    public String CH07a;//Was [child name] ever enrolled in school?
+    public String CH07b;//Year of dropping out
+    public String CH07c;//Last grade/class completed before dropping out
+    public String CH07d;//What was the main reason [child name] dropped out?
     public String CH08;//Does [child name] take any paid tuition class (coaching) currently?
+    public String CH09;//Has [child name] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or anyother place?
+    public String CH10a;//Does anyone at home help the child with their homework?
+    public String CH10b;//(If yes in CH10a then ask), who helps [child name] MOST often?
+    public String CH10c;//How often does someone is the household read or tell stories to [child name]?
     public String createdOn;
     public String svrCode;
     public String householdId;
@@ -40,19 +46,25 @@ public class Modal_Student implements Comparable, Parcelable {
         CH01 = in.readString();
         CH02 = in.readString();
         CH03 = in.readString();
-        CH04 = in.readString();
-        CH05a = in.readString();
-        CH05b = in.readString();
-        CH05c = in.readString();
-        CH05d = in.readString();
-        CH05e = in.readString();
-        CH05f = in.readString();
+        CH04a = in.readString();
+        CH04b = in.readString();
+        CH05 = in.readString();
         CH06a = in.readString();
-        CH06b1 = in.readString();
-        CH06b2 = in.readString();
-        CH06b3 = in.readString();
-        CH07 = in.readString();
+        CH06b = in.readString();
+        CH06c = in.readString();
+        CH06d = in.readString();
+        CH06e = in.readString();
+        CH06f = in.readString();
+        CH06g = in.readString();
+        CH07a = in.readString();
+        CH07b = in.readString();
+        CH07c = in.readString();
+        CH07d = in.readString();
         CH08 = in.readString();
+        CH09 = in.readString();
+        CH10a = in.readString();
+        CH10b = in.readString();
+        CH10c = in.readString();
         svrCode = in.readString();
         householdId = in.readString();
         createdOn = in.readString();
@@ -87,19 +99,25 @@ public class Modal_Student implements Comparable, Parcelable {
         dest.writeString(CH01);
         dest.writeString(CH02);
         dest.writeString(CH03);
-        dest.writeString(CH04);
-        dest.writeString(CH05a);
-        dest.writeString(CH05b);
-        dest.writeString(CH05c);
-        dest.writeString(CH05d);
-        dest.writeString(CH05e);
-        dest.writeString(CH05f);
+        dest.writeString(CH04a);
+        dest.writeString(CH04b);
+        dest.writeString(CH05);
         dest.writeString(CH06a);
-        dest.writeString(CH06b1);
-        dest.writeString(CH06b2);
-        dest.writeString(CH06b3);
-        dest.writeString(CH07);
+        dest.writeString(CH06b);
+        dest.writeString(CH06c);
+        dest.writeString(CH06d);
+        dest.writeString(CH06e);
+        dest.writeString(CH06f);
+        dest.writeString(CH06g);
+        dest.writeString(CH07a);
+        dest.writeString(CH07b);
+        dest.writeString(CH07c);
+        dest.writeString(CH07d);
         dest.writeString(CH08);
+        dest.writeString(CH09);
+        dest.writeString(CH10a);
+        dest.writeString(CH10b);
+        dest.writeString(CH10c);
         dest.writeString(createdOn);
         dest.writeString(svrCode);
         dest.writeString(householdId);
@@ -151,60 +169,28 @@ public class Modal_Student implements Comparable, Parcelable {
         this.CH03 = CH03;
     }
 
-    public String getCH04() {
-        return this.CH04;
+    public String getCH04a() {
+        return this.CH04a;
     }
 
-    public void setCH04(final String CH04) {
-        this.CH04 = CH04;
+    public void setCH04a(final String CH04a) {
+        this.CH04a = CH04a;
     }
 
-    public String getCH05a() {
-        return this.CH05a;
+    public String getCH04b() {
+        return this.CH04b;
     }
 
-    public void setCH05a(final String CH05a) {
-        this.CH05a = CH05a;
+    public void setCH04b(final String CH04b) {
+        this.CH04b = CH04b;
     }
 
-    public String getCH05b() {
-        return this.CH05b;
+    public String getCH05() {
+        return this.CH05;
     }
 
-    public void setCH05b(final String CH05b) {
-        this.CH05b = CH05b;
-    }
-
-    public String getCH05c() {
-        return this.CH05c;
-    }
-
-    public void setCH05c(final String CH05c) {
-        this.CH05c = CH05c;
-    }
-
-    public String getCH05d() {
-        return this.CH05d;
-    }
-
-    public void setCH05d(final String CH05d) {
-        this.CH05d = CH05d;
-    }
-
-    public String getCH05e() {
-        return this.CH05e;
-    }
-
-    public void setCH05e(final String CH05e) {
-        this.CH05e = CH05e;
-    }
-
-    public String getCH05f() {
-        return this.CH05f;
-    }
-
-    public void setCH05f(final String CH05f) {
-        this.CH05f = CH05f;
+    public void setCH05(final String CH05) {
+        this.CH05 = CH05;
     }
 
     public String getCH06a() {
@@ -215,36 +201,84 @@ public class Modal_Student implements Comparable, Parcelable {
         this.CH06a = CH06a;
     }
 
-    public String getCH06b1() {
-        return this.CH06b1;
+    public String getCH06b() {
+        return this.CH06b;
     }
 
-    public void setCH06b1(final String CH06b1) {
-        this.CH06b1 = CH06b1;
+    public void setCH06b(final String CH06b) {
+        this.CH06b = CH06b;
     }
 
-    public String getCH06b2() {
-        return this.CH06b2;
+    public String getCH06c() {
+        return this.CH06c;
     }
 
-    public void setCH06b2(final String CH06b2) {
-        this.CH06b2 = CH06b2;
+    public void setCH06c(final String CH06c) {
+        this.CH06c = CH06c;
     }
 
-    public String getCH06b3() {
-        return this.CH06b3;
+    public String getCH06d() {
+        return this.CH06d;
     }
 
-    public void setCH06b3(final String CH06b3) {
-        this.CH06b3 = CH06b3;
+    public void setCH06d(final String CH06d) {
+        this.CH06d = CH06d;
     }
 
-    public String getCH07() {
-        return this.CH07;
+    public String getCH06e() {
+        return this.CH06e;
     }
 
-    public void setCH07(final String CH07) {
-        this.CH07 = CH07;
+    public void setCH06e(final String CH06e) {
+        this.CH06e = CH06e;
+    }
+
+    public String getCH06f() {
+        return this.CH06f;
+    }
+
+    public void setCH06f(final String CH06f) {
+        this.CH06f = CH06f;
+    }
+
+    public String getCH06g() {
+        return this.CH06g;
+    }
+
+    public void setCH06g(final String CH06g) {
+        this.CH06g = CH06g;
+    }
+
+    public String getCH07a() {
+        return this.CH07a;
+    }
+
+    public void setCH07a(final String CH07a) {
+        this.CH07a = CH07a;
+    }
+
+    public String getCH07b() {
+        return this.CH07b;
+    }
+
+    public void setCH07b(final String CH07b) {
+        this.CH07b = CH07b;
+    }
+
+    public String getCH07c() {
+        return this.CH07c;
+    }
+
+    public void setCH07c(final String CH07c) {
+        this.CH07c = CH07c;
+    }
+
+    public String getCH07d() {
+        return this.CH07d;
+    }
+
+    public void setCH07d(final String CH07d) {
+        this.CH07d = CH07d;
     }
 
     public String getCH08() {
@@ -253,6 +287,38 @@ public class Modal_Student implements Comparable, Parcelable {
 
     public void setCH08(final String CH08) {
         this.CH08 = CH08;
+    }
+
+    public String getCH09() {
+        return this.CH09;
+    }
+
+    public void setCH09(final String CH09) {
+        this.CH09 = CH09;
+    }
+
+    public String getCH10a() {
+        return this.CH10a;
+    }
+
+    public void setCH10a(final String CH10a) {
+        this.CH10a = CH10a;
+    }
+
+    public String getCH10b() {
+        return this.CH10b;
+    }
+
+    public void setCH10b(final String CH10b) {
+        this.CH10b = CH10b;
+    }
+
+    public String getCH10c() {
+        return this.CH10c;
+    }
+
+    public void setCH10c(final String CH10c) {
+        this.CH10c = CH10c;
     }
 
     public String getCreatedOn() {

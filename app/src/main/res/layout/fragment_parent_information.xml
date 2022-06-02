@@ -161,7 +161,7 @@
                     android:id="@+id/lbl_PT01d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_PT01d"
+                    android:text="@string/str_PT0d"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_14sdp" />
 
@@ -383,7 +383,7 @@
                     android:id="@+id/lbl_PT02d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_PT02d"
+                    android:text="@string/str_PT0d"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_14sdp" />
 

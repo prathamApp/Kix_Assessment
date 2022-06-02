@@ -38,7 +38,7 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:id="@+id/rg_eslectPerson"
+            android:id="@+id/rg_selectPerson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
@@ -266,28 +266,97 @@
                     </RadioGroup>
                 </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/ll_PT01d"
+                <RelativeLayout
+                    android:id="@+id/rl_PT01d"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:background="@drawable/rounded_form_bg"
                     android:elevation="@dimen/_2sdp"
                     android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:visibility="gone">
 
-                    <Spinner
-                        android:id="@+id/spinner_mothersGrade"
+                    <TextView
+                        android:id="@+id/lbl_PT01d"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/colorAccent"
-                        android:drawSelectorOnTop="true"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_PT0d"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_PT01d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_PT01d"
                         android:gravity="center_vertical"
-                        android:popupBackground="@drawable/choose_level_bg"
-                        android:textColor="@color/colorText"/>
-                </LinearLayout>
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_PT01d_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_one"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_PT01d_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_two"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_PT01d_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_three"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                        <RadioButton
+                            android:id="@+id/rb_PT01d_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_four"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_PT01e"
@@ -586,28 +655,97 @@
                     </RadioGroup>
                 </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/ll_PT02d"
+                <RelativeLayout
+                    android:id="@+id/rl_PT02d"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_24sdp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:background="@drawable/rounded_form_bg"
                     android:elevation="@dimen/_2sdp"
                     android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:visibility="gone">
 
-                    <Spinner
-                        android:id="@+id/spinner_fathersGrade"
+                    <TextView
+                        android:id="@+id/lbl_PT02d"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/colorAccent"
-                        android:drawSelectorOnTop="true"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_PT0d"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_PT02d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_PT02d"
                         android:gravity="center_vertical"
-                        android:popupBackground="@drawable/choose_level_bg"
-                        android:textColor="@color/colorText" />
-                </LinearLayout>
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_PT02d_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_one"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_PT02d_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_two"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_PT02d_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_three"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                        <RadioButton
+                            android:id="@+id/rb_PT02d_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorSignBoard"
+                            android:text="@string/str_PT0d_four"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_PT02e"
