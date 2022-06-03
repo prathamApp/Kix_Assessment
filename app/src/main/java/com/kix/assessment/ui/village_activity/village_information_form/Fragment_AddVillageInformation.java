@@ -83,6 +83,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     RadioButton rb_V01, rb_V02, rb_V03, rb_V04, rb_V05, rb_V06a, rb_V07a;
 
     String str_v06b_schoolType = "", str_v07b_schoolType = "";
+    int selectedV01, selectedV02, selectedV03, selectedV04, selectedV05, selectedV06a, selectedV07a;
 
     public Fragment_AddVillageInformation() {
         // Required empty public constructor
@@ -92,38 +93,38 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     public void initialize() {
         this.surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "");
         this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
-
+        selectedV01 = selectedV02 = selectedV03 = selectedV04 = selectedV05 = selectedV06a = selectedV07a = 99;
         if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
             this.tv_title.setText("Edit Village Information");
 
             final Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);
 
-            if (modal_vif.getV01().equalsIgnoreCase(Kix_Constant.YES))
+            if (modal_vif.getV01().equalsIgnoreCase("1"))
                 this.rg_haveRoad.check(R.id.rb_V01_yes);
             else
                 this.rg_haveRoad.check(R.id.rb_V01_No);
 
-            if (modal_vif.getV02().equalsIgnoreCase(Kix_Constant.YES))
+            if (modal_vif.getV02().equalsIgnoreCase("1"))
                 this.rg_haveTransport.check(R.id.rb_V02_yes);
             else
                 this.rg_haveTransport.check(R.id.rb_V02_No);
 
-            if (modal_vif.getV03().equalsIgnoreCase(Kix_Constant.YES))
+            if (modal_vif.getV03().equalsIgnoreCase("1"))
                 this.rg_haveElectricity.check(R.id.rb_V03_yes);
             else
                 this.rg_haveElectricity.check(R.id.rb_V03_No);
 
-            if (modal_vif.getV04().equalsIgnoreCase(Kix_Constant.YES))
+            if (modal_vif.getV04().equalsIgnoreCase("1"))
                 this.rg_haveGovHosp.check(R.id.rb_V04_yes);
             else
                 this.rg_haveGovHosp.check(R.id.rb_V04_No);
 
-            if (modal_vif.getV05().equalsIgnoreCase(Kix_Constant.YES))
+            if (modal_vif.getV05().equalsIgnoreCase("1"))
                 this.rg_havePvtHosp.check(R.id.rb_V05_yes);
             else
                 this.rg_havePvtHosp.check(R.id.rb_V05_No);
 
-            if (modal_vif.getV06a().equalsIgnoreCase(Kix_Constant.YES)) {
+            if (modal_vif.getV06a().equalsIgnoreCase("1")) {
                 this.rg_havePrePrimSchool.check(R.id.rb_V06a_yes);
                 this.ll_V06b.setVisibility(View.VISIBLE);
 /*                String[] arrOfV06b = modal_vif.V06b.split(",");
@@ -146,7 +147,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
                 this.rg_havePrePrimSchool.check(R.id.rb_V06a_No);
             }
 
-            if (modal_vif.getV07a().equalsIgnoreCase(Kix_Constant.YES)) {
+            if (modal_vif.getV07a().equalsIgnoreCase("1")) {
                 this.rg_havePrimSchool.check(R.id.rb_V07a_yes);
                 this.ll_V07b.setVisibility(View.VISIBLE);
                 if (modal_vif.V07b.contains("1,"))
@@ -211,12 +212,14 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     public void saveVIF() {
         this.getRadioButtonValues();
         this.getCheckedBoxValues();
-        if (this.rb_V01 == null || this.rb_V02 == null || this.rb_V03 == null || this.rb_V04 == null || this.rb_V05 == null || this.rb_V06a == null || this.rb_V07a == null) {
+        if (this.selectedV01 == 99 || this.selectedV02 == 99 || this.selectedV03 == 99
+                || this.selectedV04 == 99 || this.selectedV05 == 99 || this.selectedV06a == 99
+                || this.selectedV07a == 99) {
             Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
-            if (this.rb_V06a.getText().toString().equalsIgnoreCase(Kix_Constant.YES) &&
-                    this.rb_V07a.getText().toString().equalsIgnoreCase(Kix_Constant.YES)) {
-                if (this.str_v06b_schoolType.equalsIgnoreCase("") || this.str_v07b_schoolType.equalsIgnoreCase("")) {
+            if (selectedV06a == 1 && selectedV07a == 1) {
+                if (this.str_v06b_schoolType.equalsIgnoreCase("")
+                        || this.str_v07b_schoolType.equalsIgnoreCase("")) {
                     Toast.makeText(this.getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
                 } else {
                     this.insertVIF();
@@ -231,12 +234,14 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     public void editVIF() {
         this.getRadioButtonValues();
         this.getCheckedBoxValues();
-        if (this.rb_V01 == null || this.rb_V02 == null || this.rb_V03 == null || this.rb_V04 == null || this.rb_V05 == null || this.rb_V06a == null || this.rb_V07a == null) {
+        if (this.selectedV01 == 99 || this.selectedV02 == 99 || this.selectedV03 == 99
+               || this.selectedV04 == 99 || this.selectedV05 == 99 || this.selectedV06a == 99
+               || this.selectedV07a == 99) {
             Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
-            if (this.rb_V06a.getText().toString().equalsIgnoreCase(Kix_Constant.YES) &&
-                    this.rb_V07a.getText().toString().equalsIgnoreCase(Kix_Constant.YES)) {
-                if (this.str_v06b_schoolType.equalsIgnoreCase("") || this.str_v07b_schoolType.equalsIgnoreCase("")) {
+            if (selectedV06a == 1 && selectedV07a == 1) {
+                if (this.str_v06b_schoolType.equalsIgnoreCase("")
+                        || this.str_v07b_schoolType.equalsIgnoreCase("")) {
                     Toast.makeText(this.getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
                 } else {
                     this.updateVIF();
@@ -248,13 +253,13 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     }
 
     public void getRadioButtonValues() {
-        final int selectedV01 = this.rg_haveRoad.getCheckedRadioButtonId();
-        final int selectedV02 = this.rg_haveTransport.getCheckedRadioButtonId();
-        final int selectedV03 = this.rg_haveElectricity.getCheckedRadioButtonId();
-        final int selectedV04 = this.rg_haveGovHosp.getCheckedRadioButtonId();
-        final int selectedV05 = this.rg_havePvtHosp.getCheckedRadioButtonId();
-        final int selectedV06a = this.rg_havePrePrimSchool.getCheckedRadioButtonId();
-        final int selectedV07a = this.rg_havePrimSchool.getCheckedRadioButtonId();
+/*        int selectedV01 = this.rg_haveRoad.getCheckedRadioButtonId();
+        int selectedV02 = this.rg_haveTransport.getCheckedRadioButtonId();
+        int selectedV03 = this.rg_haveElectricity.getCheckedRadioButtonId();
+        int selectedV04 = this.rg_haveGovHosp.getCheckedRadioButtonId();
+        int selectedV05 = this.rg_havePvtHosp.getCheckedRadioButtonId();
+        int selectedV06a = this.rg_havePrePrimSchool.getCheckedRadioButtonId();
+        int selectedV07a = this.rg_havePrimSchool.getCheckedRadioButtonId();
 
         this.rb_V01 = this.getView().findViewById(selectedV01);
         this.rb_V02 = this.getView().findViewById(selectedV02);
@@ -262,7 +267,51 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         this.rb_V04 = this.getView().findViewById(selectedV04);
         this.rb_V05 = this.getView().findViewById(selectedV05);
         this.rb_V06a = this.getView().findViewById(selectedV06a);
-        this.rb_V07a = this.getView().findViewById(selectedV07a);
+        this.rb_V07a = this.getView().findViewById(selectedV07a);*/
+
+        if (this.getView().findViewById(this.rg_haveRoad.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V01_yes))
+            selectedV01 = 1;
+        else if (this.getView().findViewById(this.rg_haveRoad.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V01_No))
+            selectedV01 = 0;
+        if (this.getView().findViewById(this.rg_haveTransport.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V02_yes))
+            selectedV02 = 1;
+        else if (this.getView().findViewById(this.rg_haveTransport.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V02_No))
+            selectedV02 = 0;
+        if (this.getView().findViewById(this.rg_haveElectricity.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V03_yes))
+            selectedV03 = 1;
+        else if (this.getView().findViewById(this.rg_haveElectricity.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V03_No))
+            selectedV03 = 0;
+        if (this.getView().findViewById(this.rg_haveGovHosp.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V04_yes))
+            selectedV04 = 1;
+        else if (this.getView().findViewById(this.rg_haveGovHosp.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V04_No))
+            selectedV04 = 0;
+        if (this.getView().findViewById(this.rg_havePvtHosp.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V05_yes))
+            selectedV05 = 1;
+        else if (this.getView().findViewById(this.rg_havePvtHosp.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V05_No))
+            selectedV05 = 0;
+        if (this.getView().findViewById(this.rg_havePrePrimSchool.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V06a_yes))
+            selectedV06a = 1;
+        else if (this.getView().findViewById(this.rg_havePrePrimSchool.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V06a_No))
+            selectedV06a = 0;
+        if (this.getView().findViewById(this.rg_havePrimSchool.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V07a_yes))
+            selectedV07a = 1;
+        else if (this.getView().findViewById(this.rg_havePrimSchool.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_V07a_No))
+            selectedV07a = 0;
+
     }
 
     public void getCheckedBoxValues() {
@@ -300,13 +349,13 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     public void insertVIF() {
         final Modal_VIF modal_vif = new Modal_VIF();
-        modal_vif.setV01(this.rb_V01.getText().toString());
-        modal_vif.setV02(this.rb_V02.getText().toString());
-        modal_vif.setV03(this.rb_V03.getText().toString());
-        modal_vif.setV04(this.rb_V04.getText().toString());
-        modal_vif.setV05(this.rb_V05.getText().toString());
-        modal_vif.setV06a(this.rb_V06a.getText().toString());
-        modal_vif.setV07a(this.rb_V07a.getText().toString());
+        modal_vif.setV01(""+ selectedV01);
+        modal_vif.setV02(""+ selectedV02);
+        modal_vif.setV03(""+ selectedV03);
+        modal_vif.setV04(""+ selectedV04);
+        modal_vif.setV05(""+ selectedV05);
+        modal_vif.setV06a(""+ selectedV06a);
+        modal_vif.setV07a(""+ selectedV07a);
         modal_vif.setV06b(this.str_v06b_schoolType);
         modal_vif.setV07b(this.str_v07b_schoolType);
         modal_vif.setVillageId(this.villageId);
@@ -322,14 +371,14 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     public void updateVIF() {
         villageInformationDao.updateVillage(
-                this.rb_V01.getText().toString(),
-                this.rb_V02.getText().toString(),
-                this.rb_V03.getText().toString(),
-                this.rb_V04.getText().toString(),
-                this.rb_V05.getText().toString(),
-                this.rb_V06a.getText().toString(),
+                ""+ selectedV01,
+                ""+ selectedV02,
+                ""+ selectedV03,
+                ""+ selectedV04,
+                ""+ selectedV05,
+                ""+ selectedV06a,
                 this.str_v06b_schoolType,
-                this.rb_V07a.getText().toString(),
+                ""+ selectedV07a,
                 this.str_v07b_schoolType,
                 this.villageId);
 

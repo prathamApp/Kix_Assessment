@@ -62,28 +62,62 @@ public class Fragment_VillageInformation extends Fragment {
         Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);
         String vName = "NA";
         vName = modalVillage.getVillageName();
-        if(modal_vif.getV01().equalsIgnoreCase("Yes")) this.tv_haveRoad.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_haveRoad.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV02().equalsIgnoreCase("Yes")) this.tv_haveTransport.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_haveTransport.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV03().equalsIgnoreCase("Yes")) this.tv_haveElectricity.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_haveElectricity.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV04().equalsIgnoreCase("Yes")) this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV05().equalsIgnoreCase("Yes")) this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV06a().equalsIgnoreCase("Yes")) this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV07a().equalsIgnoreCase("Yes")) this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
-        else this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV01().equalsIgnoreCase("1")) {
+            this.tv_haveRoad.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_haveRoad.setText(getString(R.string.yes));
+        } else{
+            this.tv_haveRoad.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_haveRoad.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV02().equalsIgnoreCase("1")){
+            this.tv_haveTransport.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_haveTransport.setText(getString(R.string.yes));
+        } else {
+            this.tv_haveTransport.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_haveTransport.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV03().equalsIgnoreCase("1")){
+            this.tv_haveElectricity.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_haveElectricity.setText(getString(R.string.yes));
+        } else{
+            this.tv_haveElectricity.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_haveElectricity.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV04().equalsIgnoreCase("1")){
+            this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_haveGovtHosp.setText(getString(R.string.yes));
+        } else{
+            this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_haveGovtHosp.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV05().equalsIgnoreCase("1")){
+            this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_havePvtHosp.setText(getString(R.string.yes));
+        } else{
+            this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_havePvtHosp.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV06a().equalsIgnoreCase("1")) {
+            this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_havePrePrimSchool.setText(getString(R.string.yes));
+        } else {
+            this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_havePrePrimSchool.setText(getString(R.string.no));
+        }
+        if(modal_vif.getV07a().equalsIgnoreCase("1")) {
+            this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
+            this.tv_havePrimSchool.setText(getString(R.string.yes));
+        } else {
+            this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
+            this.tv_havePrimSchool.setText(getString(R.string.no));
+        }
 
-        this.tv_haveRoad.setText(modal_vif.getV01());
-        this.tv_haveTransport.setText(modal_vif.getV02());
+/*        this.tv_haveTransport.setText(modal_vif.getV02());
         this.tv_haveElectricity.setText(modal_vif.getV03());
         this.tv_haveGovtHosp.setText(modal_vif.getV04());
         this.tv_havePvtHosp.setText(modal_vif.getV05());
         this.tv_havePrePrimSchool.setText(modal_vif.getV06a());
-        this.tv_havePrimSchool.setText(modal_vif.getV07a());
+        this.tv_havePrimSchool.setText(modal_vif.getV07a());*/
         String v06b_schoolType="";
         String v07b_schoolType="";
         if(modal_vif.getV06b().contains("1,"))
