@@ -38,7 +38,7 @@ public class Kix_Constant {
     public static final String HOUSEHOLD = "household";
     public static final String HIF = "HIF";
     public static final String PIF = "PIF";
-    public static final String VIF = "PIF";
+    public static final String VIF = "VIF";
     public static final String VILLAGE = "village";
     public static final String BOOKLET = "booklet";
     public static final String SUCCESSFULLYPUSHED = "successfully_pushed";
