@@ -1,6 +1,8 @@
 package com.kix.assessment.ui.attendance_activity.FragmentSelectStudent;
 
+import static com.kix.assessment.KIXApplication.parentInformationDao;
 import static com.kix.assessment.KIXApplication.scoreDao;
+import static com.kix.assessment.KIXApplication.studentDao;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -71,6 +73,9 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
         } else {
             holder.iv_studentCheck.setVisibility(View.INVISIBLE);
         }
+
+        boolean isPIFfilled = parentInformationDao.getPIF(modalStudnet.studentId);
+        if(isPIFfilled) holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
 
         holder.itemView.setOnClickListener(v -> {
             contractStudentList.itemSelected(holder.getAdapterPosition());

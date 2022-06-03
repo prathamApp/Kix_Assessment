@@ -180,7 +180,6 @@ public class Fragment_AddStudent extends Fragment {
                     ll_enrolledChildFields.setVisibility(View.VISIBLE);
                     ll_notEnrolledChildFields.setVisibility(View.GONE);
                     rl_CH10a.setVisibility(View.VISIBLE);
-                    rl_CH10b.setVisibility(View.VISIBLE);
                     btn_saveStudent.setVisibility(View.VISIBLE);
                     isStudCurrentlyEnrolled = true;
                     break;
@@ -222,6 +221,14 @@ public class Fragment_AddStudent extends Fragment {
             else {
                 rl_CH04b.setVisibility(View.GONE);
                 rg_whichDisability.clearCheck();
+            }
+        });
+
+        rg_helpChild.setOnCheckedChangeListener((group, checkedId) -> {
+            if(checkedId==R.id.rb_CH10a_yes) rl_CH10b.setVisibility(View.VISIBLE);
+            else {
+                rl_CH10b.setVisibility(View.GONE);
+                rg_mostOften.clearCheck();
             }
         });
 
@@ -329,8 +336,7 @@ public class Fragment_AddStudent extends Fragment {
             if (modalStudent.CH10a.equalsIgnoreCase(getString(R.string.yes))) {
                 rg_helpChild.check(R.id.rb_CH10a_yes);
                 rl_CH10b.setVisibility(View.VISIBLE);
-            }
-            else rg_helpChild.check(R.id.rb_CH10a_No);
+            } else rg_helpChild.check(R.id.rb_CH10a_No);
 
         } else {
             isStudCurrentlyEnrolled = false;

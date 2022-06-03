@@ -12,9 +12,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kix.assessment.R;
+import com.kix.assessment.dbclasses.dao.VillageInformationDao;
 import com.kix.assessment.modal_classes.Modal_Village;
 
 import java.util.List;
+
+import static com.kix.assessment.KIXApplication.villageInformationDao;
 
 public class VillageListAdapter extends RecyclerView.Adapter<VillageListAdapter.MyViewHolder>{
         private final List<Modal_Village> modalVillageList;
@@ -55,6 +58,9 @@ public class VillageListAdapter extends RecyclerView.Adapter<VillageListAdapter.
         public void onBindViewHolder(@NonNull final VillageListAdapter.MyViewHolder holder, final int position) {
             final Modal_Village modalVillage = this.modalVillageList.get(position);
             holder.tv_CardName.setText(modalVillage.getVillageName());
+
+            boolean isVIFfilled = villageInformationDao.getVIF(modalVillage.villageId);
+            if(isVIFfilled) holder.tv_CardInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
 
             holder.ll_card.setOnClickListener(v -> {
                 this.contractVillageList.itemSelected(holder.getAdapterPosition());

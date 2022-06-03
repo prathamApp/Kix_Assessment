@@ -29,4 +29,7 @@ public interface ParentInformationDao {
     void updateParent(String PT01a, String PT01b, String PT01c, String PT01d, String PT01e, String PT01f,
                       String PT02a, String PT02b, String PT02c, String PT02d, String PT02e, String PT02f,
                       String studentId);
+
+    @Query("select COUNT(*) from ParentInformation where studentId=:studId")
+    boolean getPIF(String studId);
 }
