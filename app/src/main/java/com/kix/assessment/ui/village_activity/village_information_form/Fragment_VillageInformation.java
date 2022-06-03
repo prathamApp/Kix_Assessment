@@ -4,12 +4,9 @@ import static com.kix.assessment.KIXApplication.villageDao;
 import static com.kix.assessment.KIXApplication.villageInformationDao;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.UiThread;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -60,38 +57,65 @@ public class Fragment_VillageInformation extends Fragment {
 
     @AfterViews
     public void initialize() {
-        this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
-        final Modal_Village modalVillage = villageDao.getVillageByVillId(this.villageId);
-        final Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(villageId);
+        villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+        Modal_Village modalVillage = villageDao.getVillageByVillId(villageId);
+        Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);
         String vName = "NA";
         vName = modalVillage.getVillageName();
-        if(modal_vif.getV01().equalsIgnoreCase("Yes")) tv_haveRoad.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_haveRoad.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV02().equalsIgnoreCase("Yes")) tv_haveTransport.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_haveTransport.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV03().equalsIgnoreCase("Yes")) tv_haveElectricity.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_haveElectricity.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV04().equalsIgnoreCase("Yes")) tv_haveGovtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_haveGovtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV05().equalsIgnoreCase("Yes")) tv_havePvtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_havePvtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV06a().equalsIgnoreCase("Yes")) tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
-        if(modal_vif.getV07a().equalsIgnoreCase("Yes")) tv_havePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
-        else tv_havePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV01().equalsIgnoreCase("Yes")) this.tv_haveRoad.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_haveRoad.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV02().equalsIgnoreCase("Yes")) this.tv_haveTransport.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_haveTransport.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV03().equalsIgnoreCase("Yes")) this.tv_haveElectricity.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_haveElectricity.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV04().equalsIgnoreCase("Yes")) this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_haveGovtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV05().equalsIgnoreCase("Yes")) this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_havePvtHosp.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV06a().equalsIgnoreCase("Yes")) this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_havePrePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
+        if(modal_vif.getV07a().equalsIgnoreCase("Yes")) this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounder_bg_green);
+        else this.tv_havePrimSchool.setBackgroundResource(R.drawable.rounded_bg_red);
 
-        tv_haveRoad.setText(modal_vif.getV01());
-        tv_haveTransport.setText(modal_vif.getV02());
-        tv_haveElectricity.setText(modal_vif.getV03());
-        tv_haveGovtHosp.setText(modal_vif.getV04());
-        tv_havePvtHosp.setText(modal_vif.getV05());
-        tv_havePrePrimSchool.setText(modal_vif.getV06a());
-        tv_havePrimSchool.setText(modal_vif.getV07a());
-        tv_v06b_schoolType.setText(modal_vif.getV06b());
-        tv_v07b_schoolType.setText(modal_vif.getV07b());
+        this.tv_haveRoad.setText(modal_vif.getV01());
+        this.tv_haveTransport.setText(modal_vif.getV02());
+        this.tv_haveElectricity.setText(modal_vif.getV03());
+        this.tv_haveGovtHosp.setText(modal_vif.getV04());
+        this.tv_havePvtHosp.setText(modal_vif.getV05());
+        this.tv_havePrePrimSchool.setText(modal_vif.getV06a());
+        this.tv_havePrimSchool.setText(modal_vif.getV07a());
+        String v06b_schoolType="";
+        String v07b_schoolType="";
+        if(modal_vif.getV06b().contains("1,"))
+            v06b_schoolType = v06b_schoolType+"> "+ this.getString(R.string.str_government_public);
+        if(modal_vif.getV06b().contains("2,")) {
+            if(modal_vif.getV06b().contains("1,"))
+               v06b_schoolType = v06b_schoolType + "\n> " + this.getString(R.string.str_private);
+            else
+               v06b_schoolType = v06b_schoolType + "> " + this.getString(R.string.str_private);
+        }if(modal_vif.getV06b().contains("3,")) {
+            if(modal_vif.getV06b().contains("1,") || modal_vif.getV06b().contains("2,"))
+                v06b_schoolType = v06b_schoolType + "\n> " + this.getString(R.string.str_other);
+            else
+                v06b_schoolType = v06b_schoolType + "> " + this.getString(R.string.str_other);
+        }
 
-
-
+        if(modal_vif.getV07b().contains("1,"))
+            v07b_schoolType = v07b_schoolType+"> "+ this.getString(R.string.str_government_public);
+        if(modal_vif.getV07b().contains("2,")) {
+            if(modal_vif.getV07b().contains("1,"))
+                v07b_schoolType = v07b_schoolType + "\n> " + this.getString(R.string.str_private);
+            else
+                v07b_schoolType = v07b_schoolType + "> " + this.getString(R.string.str_private);
+        }
+        if(modal_vif.getV07b().contains("3,")) {
+            if(modal_vif.getV07b().contains("1,") || modal_vif.getV07b().contains("2,"))
+                v07b_schoolType = v07b_schoolType + "\n> " + this.getString(R.string.str_other);
+            else
+                v07b_schoolType = v07b_schoolType + "> " + this.getString(R.string.str_other);
+        }
+        this.tv_v06b_schoolType.setText(v06b_schoolType);
+        this.tv_v07b_schoolType.setText(v07b_schoolType);
 /*
         if(!vName.equalsIgnoreCase("NA")){
             this.fab_Edit_VIF.setImageResource(R.drawable.ic_add_white_64dp);
@@ -106,16 +130,16 @@ public class Fragment_VillageInformation extends Fragment {
 
     @Override
     public void onResume() {
-        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         super.onResume();
     }
 
     @Click(R.id.fab_Edit_VIF)
     public void EditClicked() {
-        final Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.VILLAGE_ID, this.villageId);
+        Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.VILLAGE_ID, villageId);
         bundle.putString(Kix_Constant.EDIT_VILLAGE,Kix_Constant.EDIT_VILLAGE);
-        KIX_Utility.showFragment(this.getActivity(), new Fragment_AddVillageInformation_(), R.id.frag_frame,
+        KIX_Utility.showFragment(getActivity(), new Fragment_AddVillageInformation_(), R.id.frag_frame,
                 bundle, Fragment_AddVillageInformation.class.getSimpleName());
 
 /*

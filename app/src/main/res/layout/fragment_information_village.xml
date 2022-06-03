@@ -269,8 +269,8 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
                     android:textColor="@color/colorSignBoard"
-                    android:textStyle="italic|bold"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="italic|bold" />
             </RelativeLayout>
             <View style="@style/Divider"/>
 
@@ -319,8 +319,8 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="Government/Public, Private"
                     android:textColor="@color/colorSignBoard"
-                    android:textStyle="italic|bold"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="italic|bold" />
             </RelativeLayout>
 
             <View
