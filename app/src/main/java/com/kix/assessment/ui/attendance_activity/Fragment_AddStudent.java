@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -58,8 +59,14 @@ public class Fragment_AddStudent extends Fragment {
     Spinner spinner_gender;
     @ViewById(R.id.rg_CH04a)
     RadioGroup rg_anyDisability;
-    @ViewById(R.id.rg_CH04b)
-    RadioGroup rg_whichDisability;
+    @ViewById(R.id.cb_CH04b_op1)
+    CheckBox cb_CH04b_op1;
+    @ViewById(R.id.cb_CH04b_op2)
+    CheckBox cb_CH04b_op2;
+    @ViewById(R.id.cb_CH04b_op3)
+    CheckBox cb_CH04b_op3;
+    @ViewById(R.id.cb_CH04b_op4)
+    CheckBox cb_CH04b_op4;
     @ViewById(R.id.rg_CH05)
     RadioGroup rg_isStudentEnrolled;
     @ViewById(R.id.spn_CH06a)
@@ -121,7 +128,7 @@ public class Fragment_AddStudent extends Fragment {
     @ViewById(R.id.btn_saveStudent)
     Button btn_saveStudent;
 
-    String age, surveyorCode, householdID;
+    String age, gender, surveyorCode, householdID;
     String schoolType, dropoutYear, standard, dropoutStandard;
 
     public Dialog startExamDialog;
@@ -134,13 +141,17 @@ public class Fragment_AddStudent extends Fragment {
 
     String studId;
 
-    RadioButton rb_CH04a, rb_CH04b, rb_CH05, rb_CH06c, rb_CH06d, rb_CH06e, rb_CH06f, rb_CH06g, rb_CH07a, rb_CH07d, rb_CH08,
-            rb_CH09, rb_CH10a, rb_CH10b, rb_CH10c ;
+    RadioButton rb_CH04a, rb_CH05, rb_CH06c, rb_CH06d, rb_CH06e, rb_CH06f, rb_CH06g, rb_CH07a, rb_CH07d, rb_CH08,
+            rb_CH09, rb_CH10a, rb_CH10b, rb_CH10c;
 
     String str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g;
     String str_CH07a, str_CH07b, str_CH07c, str_CH07d;
-    String str_CH10a, str_CH10b;
-    String str_CH04b;
+    String str_CH08, str_CH09;
+    String str_CH10a, str_CH10b, str_CH10c;
+    String str_disabilityType="";
+
+    int selectedCH04a, selectedCH05, selectedCH06c, selectedCH06d, selectedCH06e, selectedCH06f, selectedCH06g, selectedCH07a,
+            selectedCH07d, selectedCH08, selectedCH09, selectedCH10a, selectedCH10b, selectedCH10c;
 
     public boolean isStudCurrentlyEnrolled;
 
@@ -166,6 +177,9 @@ public class Fragment_AddStudent extends Fragment {
         adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.spinner_item);
         spinner_class.setAdapter(adapterClass);
         spinner_dropout_class.setAdapter(adapterClass);
+
+        selectedCH04a = selectedCH05 = selectedCH06c = selectedCH06d = selectedCH06e = selectedCH06f = selectedCH06g = selectedCH07a=
+                selectedCH07d = selectedCH08 = selectedCH09 = selectedCH10a = selectedCH10b = selectedCH10c = 99;
 
         if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
             studId = getArguments().getString(STUDENT_ID);
@@ -220,7 +234,10 @@ public class Fragment_AddStudent extends Fragment {
             if(checkedId==R.id.rb_CH04a_yes) rl_CH04b.setVisibility(View.VISIBLE);
             else {
                 rl_CH04b.setVisibility(View.GONE);
-                rg_whichDisability.clearCheck();
+                cb_CH04b_op1.setChecked(false);
+                cb_CH04b_op2.setChecked(false);
+                cb_CH04b_op3.setChecked(false);
+                cb_CH04b_op4.setChecked(false);
             }
         });
 
@@ -274,31 +291,30 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     private void fetchChildDetails(Modal_Student modalStudent) {
-        tv_label.setText(getResources().getString(R.string.edit_child_info));
-        btn_saveStudent.setText("Update");
+        tv_label.setText(getString(R.string.update_child));
         btn_saveStudent.setVisibility(View.VISIBLE);
         et_studentName.setText(modalStudent.getCH01());
 
-        spinner_age.setSelection(adapterAge.getPosition("Age " + modalStudent.getCH02()));
-        spinner_gender.setSelection(adapterGender.getPosition(modalStudent.getCH03()));
+        spinner_age.setSelection(adapterAge.getPosition(getString(R.string.age) +" "+ modalStudent.getCH02()));
+        spinner_gender.setSelection(Integer.parseInt(modalStudent.getCH03()));
 
-        if(modalStudent.CH04a.equalsIgnoreCase(getString(R.string.yes))){
+        if(modalStudent.CH04a.equalsIgnoreCase("1")){
             rg_anyDisability.check(R.id.rb_CH04a_yes);
             rl_CH04b.setVisibility(View.VISIBLE);
 
-            if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op1)))
-                rg_whichDisability.check(R.id.rb_CH04b_op1);
-            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op2)))
-                rg_whichDisability.check(R.id.rb_CH04b_op2);
-            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op3)))
-                rg_whichDisability.check(R.id.rb_CH04b_op3);
-            else if(modalStudent.CH04b.equalsIgnoreCase(getString(R.string.str_CH04b_op4)))
-                rg_whichDisability.check(R.id.rb_CH04b_op4);
+            if(modalStudent.CH04b.contains("1,"))
+                cb_CH04b_op1.setChecked(true);
+            if(modalStudent.CH04b.contains("2,"))
+                cb_CH04b_op2.setChecked(true);
+            if(modalStudent.CH04b.contains("3,"))
+                cb_CH04b_op3.setChecked(true);
+            if(modalStudent.CH04b.contains("4,"))
+                cb_CH04b_op4.setChecked(true);
         } else {
             rg_anyDisability.check(R.id.rb_CH04a_No);
         }
 
-        if (modalStudent.CH05.equalsIgnoreCase(getString(R.string.yes))) {
+        if (modalStudent.CH05.equalsIgnoreCase("1")) {
             isStudCurrentlyEnrolled = true;
             rg_isStudentEnrolled.check(R.id.rb_CH05_yes);
             ll_enrolledChildFields.setVisibility(View.VISIBLE);
@@ -306,84 +322,102 @@ public class Fragment_AddStudent extends Fragment {
             spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH06a));
             spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH06b));
 
-            if (modalStudent.CH06c.equalsIgnoreCase(getString(R.string.yes)))
+            if (modalStudent.CH06c.equalsIgnoreCase("1"))
                 rg_instructionLang.check(R.id.rb_CH06c_yes);
             else rg_instructionLang.check(R.id.rb_CH06c_No);
 
-            if (modalStudent.CH06d.equalsIgnoreCase(getString(R.string.str_CH06d_one))){
+            if (modalStudent.CH06d.equalsIgnoreCase("1")){
                 rl_kindOfActivities.setVisibility(View.VISIBLE);
                 rg_schoolStatus.check(R.id.rb_CH06d_one);
 
-                if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_one)))
+                if(modalStudent.CH06e.equalsIgnoreCase("1"))
                     rg_schoolActivities.check(R.id.rb_CH06e_one);
-                else if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_two)))
+                else if(modalStudent.CH06e.equalsIgnoreCase("2"))
                     rg_schoolActivities.check(R.id.rb_CH06e_two);
-                else if(modalStudent.CH06e.equalsIgnoreCase(getString(R.string.str_CH06e_three)))
+                else if(modalStudent.CH06e.equalsIgnoreCase("3"))
                     rg_schoolActivities.check(R.id.rb_CH06e_three);
             }
-            else if (modalStudent.CH06d.equalsIgnoreCase(getString(R.string.str_CH06d_two)))
+            else if (modalStudent.CH06d.equalsIgnoreCase("2"))
                 rg_schoolStatus.check(R.id.rb_CH06d_two);
-            else rg_schoolStatus.check(R.id.rb_CH06d_three);
+            else if (modalStudent.CH06d.equalsIgnoreCase("3"))
+                rg_schoolStatus.check(R.id.rb_CH06d_three);
 
-            if (modalStudent.CH06f.equalsIgnoreCase(getString(R.string.yes)))
+            if (modalStudent.CH06f.equalsIgnoreCase("1"))
                 rg_haveTextbooks.check(R.id.rb_CH06f_yes);
             else rg_haveTextbooks.check(R.id.rb_CH06f_No);
 
-            if (modalStudent.CH06g.equalsIgnoreCase(getString(R.string.yes)))
+            if (modalStudent.CH06g.equalsIgnoreCase("1"))
                 rg_gradeRepeat.check(R.id.rb_CH06g_yes);
             else rg_gradeRepeat.check(R.id.rb_CH06g_No);
 
-            if (modalStudent.CH10a.equalsIgnoreCase(getString(R.string.yes))) {
+            if (modalStudent.CH10a.equalsIgnoreCase("1")) {
                 rg_helpChild.check(R.id.rb_CH10a_yes);
                 rl_CH10b.setVisibility(View.VISIBLE);
+
+                if(modalStudent.CH10b.equalsIgnoreCase("1"))
+                    rg_mostOften.check(R.id.rb_CH10b_one);
+                else if(modalStudent.CH10b.equalsIgnoreCase("2"))
+                    rg_mostOften.check(R.id.rb_CH10b_two);
+                else if(modalStudent.CH10b.equalsIgnoreCase("3"))
+                    rg_mostOften.check(R.id.rb_CH10b_three);
+                else if(modalStudent.CH10b.equalsIgnoreCase("4"))
+                    rg_mostOften.check(R.id.rb_CH10b_four);
+                else if(modalStudent.CH10b.equalsIgnoreCase("5"))
+                    rg_mostOften.check(R.id.rb_CH10b_five);
+                else if(modalStudent.CH10b.equalsIgnoreCase("6"))
+                    rg_mostOften.check(R.id.rb_CH10b_six);
+                else if(modalStudent.CH10b.equalsIgnoreCase("7"))
+                    rg_mostOften.check(R.id.rb_CH10b_seven);
+
             } else rg_helpChild.check(R.id.rb_CH10a_No);
 
         } else {
             isStudCurrentlyEnrolled = false;
             rg_isStudentEnrolled.check(R.id.rb_CH05_No);
             ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
-            if (modalStudent.CH07a.equalsIgnoreCase(getString(R.string.yes))) {
+            if (modalStudent.CH07a.equalsIgnoreCase("1")) {
                 rg_isStudentEverEnrolled.check(R.id.rb_CH07a_yes);
                 ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
                 ll_dropoutFields.setVisibility(View.VISIBLE);
                 spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH07b));
                 spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH07c));
-                if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_one)))
+                if (modalStudent.CH07d.equalsIgnoreCase("1"))
                     rg_dropOutReason.check(R.id.rb_CH07d_one);
-                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_two)))
+                else if (modalStudent.CH07d.equalsIgnoreCase("2"))
                     rg_dropOutReason.check(R.id.rb_CH07d_two);
-                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_three)))
+                else if (modalStudent.CH07d.equalsIgnoreCase("3"))
                     rg_dropOutReason.check(R.id.rb_CH07d_three);
-                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_four)))
+                else if (modalStudent.CH07d.equalsIgnoreCase("4"))
                     rg_dropOutReason.check(R.id.rb_CH07d_four);
-                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_five)))
+                else if (modalStudent.CH07d.equalsIgnoreCase("5"))
                     rg_dropOutReason.check(R.id.rb_CH07d_five);
-                else if (modalStudent.CH07d.equalsIgnoreCase(getString(R.string.str_reasonToDrop_six)))
+                else if (modalStudent.CH07d.equalsIgnoreCase("6"))
                     rg_dropOutReason.check(R.id.rb_CH07d_six);
-                else rg_dropOutReason.check(R.id.rb_CH07d_seven);
+                else if (modalStudent.CH07d.equalsIgnoreCase("7"))
+                    rg_dropOutReason.check(R.id.rb_CH07d_seven);
             } else {
                 ll_dropoutFields.setVisibility(View.GONE);
                 rg_isStudentEverEnrolled.check(R.id.rb_CH07a_No);
             }
         }
 
-        if (modalStudent.CH08.equalsIgnoreCase(getString(R.string.yes)))
+        if (modalStudent.CH08.equalsIgnoreCase("1"))
             rg_paidTution.check(R.id.rb_CH08_yes);
         else rg_paidTution.check(R.id.rb_CH08_No);
 
-        if (modalStudent.CH09.equalsIgnoreCase(getString(R.string.yes)))
+        if (modalStudent.CH09.equalsIgnoreCase("1"))
             rg_readMaterial.check(R.id.rb_CH09_yes);
         else rg_readMaterial.check(R.id.rb_CH09_No);
 
-        if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_one)))
+        if (modalStudent.CH10c.equalsIgnoreCase("1"))
             rg_oftenReads.check(R.id.rb_CH10c_one);
-        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_two)))
+        else if (modalStudent.CH10c.equalsIgnoreCase("2"))
             rg_oftenReads.check(R.id.rb_CH10c_two);
-        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_three)))
+        else if (modalStudent.CH10c.equalsIgnoreCase("3"))
             rg_oftenReads.check(R.id.rb_CH10c_three);
-        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_four)))
+        else if (modalStudent.CH10c.equalsIgnoreCase("4"))
             rg_oftenReads.check(R.id.rb_CH10c_four);
-        else if (modalStudent.CH10c.equalsIgnoreCase(getString(R.string.str_CH10c_five)))
+        else if (modalStudent.CH10c.equalsIgnoreCase("5"))
             rg_oftenReads.check(R.id.rb_CH10c_five);
     }
 
@@ -407,12 +441,11 @@ public class Fragment_AddStudent extends Fragment {
         getSelectedAge();
         getSpinnerValues();
         getRadioButtonValues();
+        getCheckedBoxValues();
 
         if (!et_studentName.getText().toString().isEmpty() && spinner_age.getSelectedItemPosition()!=0
-                && spinner_gender.getSelectedItemPosition()!=0 && rb_CH04a!=null && rb_CH05 != null && rb_CH08 != null
-                && rb_CH09 != null && rb_CH10c != null) {
-            if (rb_CH04b == null) str_CH04b = "NA";
-            else str_CH04b = rb_CH04b.getText().toString();
+                && spinner_gender.getSelectedItemPosition()!=0 && selectedCH04a!=99 && selectedCH05 != 99 && selectedCH08 != 99
+                && selectedCH09 != 99 && selectedCH10c != 99) {
             insertStudent();
         } else {
             Toast.makeText(getActivity(), "Please fill all fields!", Toast.LENGTH_SHORT).show();
@@ -425,10 +458,10 @@ public class Fragment_AddStudent extends Fragment {
             str_CH06a = standard;
             str_CH06b = schoolType;
 
-            if (rb_CH06c == null || rb_CH06d == null || rb_CH06f == null || rb_CH06g == null || rb_CH10a == null) {
+            if (selectedCH06c == 99 || selectedCH06d == 99 || selectedCH06f == 99 || selectedCH06g == 99 || selectedCH10a == 99) {
                 Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH06c = rb_CH06c.getText().toString();
+/*                str_CH06c = rb_CH06c.getText().toString();
                 str_CH06d = rb_CH06d.getText().toString();
                 if (rb_CH06e == null) str_CH06e = "NA";
                 else str_CH06e = rb_CH06e.getText().toString();
@@ -441,15 +474,18 @@ public class Fragment_AddStudent extends Fragment {
                 str_CH07a = "NA";
                 str_CH07b = "NA";
                 str_CH07c = "NA";
-                str_CH07d = "NA";
+                str_CH07d = "NA";*/
+                str_CH07b = "NA";
+                str_CH07c = "NA";
                 if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                    studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                            rb_CH04a.getText().toString(), str_CH04b,
-                            rb_CH05.getText().toString(),
-                            str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
-                            str_CH07a, str_CH07b, str_CH07c, str_CH07d,
-                            rb_CH08.getText().toString(),rb_CH09.getText().toString(),
-                            str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
+                    studentDao.updateStudent(et_studentName.getText().toString(), age, gender,
+                            ""+selectedCH04a, str_disabilityType,
+                            ""+selectedCH05,
+                            str_CH06a, str_CH06b, ""+selectedCH06c, ""+selectedCH06d, ""+selectedCH06e,
+                            ""+selectedCH06f, ""+selectedCH06g,
+                            ""+selectedCH07a, str_CH07b, str_CH07c, ""+selectedCH07d,
+                            ""+selectedCH08,""+selectedCH09,
+                            ""+selectedCH10a, ""+selectedCH10b, ""+selectedCH10c,
                             studId);
                     BackupDatabase.backup(getActivity());
                     Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
@@ -459,35 +495,34 @@ public class Fragment_AddStudent extends Fragment {
         } else {
             str_CH06a = "NA";
             str_CH06b = "NA";
-            str_CH06c = "NA";
+/*            str_CH06c = "NA";
             str_CH06d = "NA";
             str_CH06e = "NA";
             str_CH06f = "NA";
             str_CH06g = "NA";
             str_CH10a = "NA";
-            str_CH10b = "NA";
+            str_CH10b = "NA";*/
 
-            if (rb_CH07a == null) {
+            if (selectedCH07a == 99) {
                 Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
             } else {
-                str_CH07a = rb_CH07a.getText().toString();
-                if (str_CH07a.equalsIgnoreCase("yes")) {
+/*                str_CH07a = rb_CH07a.getText().toString();*/
+                if (selectedCH07a==1) {
                     str_CH07b = dropoutYear;
                     str_CH07c = dropoutStandard;
 
-                    if (rb_CH07d == null) {
+                    if (selectedCH07d == 99) {
                         Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
                     } else {
-                        str_CH07d = rb_CH07d.getText().toString();
+/*                        str_CH07d = rb_CH07d.getText().toString();*/
                         if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                            studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                                    rb_CH04a.getText().toString(), str_CH04b,
-                                    rb_CH05.getText().toString(),
-                                    str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
-                                    str_CH07a, str_CH07b, str_CH07c, str_CH07d,
-                                    rb_CH08.getText().toString(), rb_CH09.getText().toString(),
-                                    str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
-                                    studId);
+                            studentDao.updateStudent(et_studentName.getText().toString(), age, gender,
+                                    ""+selectedCH04a, str_disabilityType,
+                                    ""+selectedCH05, str_CH06a, str_CH06b, ""+selectedCH06c, ""+selectedCH06d,
+                                    ""+selectedCH06e, ""+selectedCH06f, ""+selectedCH06g,
+                                    ""+selectedCH07a, str_CH07b, str_CH07c, ""+selectedCH07d,
+                                    ""+selectedCH08, ""+selectedCH09, ""+selectedCH10a, ""+selectedCH10b,
+                                    ""+selectedCH10c, studId);
                             BackupDatabase.backup(getActivity());
                             Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
                             getFragmentManager().popBackStack();
@@ -496,16 +531,15 @@ public class Fragment_AddStudent extends Fragment {
                 } else {
                     str_CH07b="NA";
                     str_CH07c="NA";
-                    str_CH07d="NA";
+                    //str_CH07d="NA";
                     if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
-                        studentDao.updateStudent(et_studentName.getText().toString(), age, spinner_gender.getSelectedItem().toString(),
-                                rb_CH04a.getText().toString(), str_CH04b,
-                                rb_CH05.getText().toString(),
-                                str_CH06a, str_CH06b, str_CH06c, str_CH06d, str_CH06e, str_CH06f, str_CH06g,
-                                str_CH07a, str_CH07b, str_CH07c, str_CH07d,
-                                rb_CH08.getText().toString(), rb_CH09.getText().toString(),
-                                str_CH10a, str_CH10b, rb_CH10c.getText().toString(),
-                                studId);
+                        studentDao.updateStudent(et_studentName.getText().toString(), age, gender,
+                                ""+selectedCH04a, str_disabilityType,
+                                ""+selectedCH05, str_CH06a, str_CH06b, ""+selectedCH06c, ""+selectedCH06d,
+                                ""+selectedCH06e, ""+selectedCH06f, ""+selectedCH06g,
+                                ""+selectedCH07a, str_CH07b, str_CH07c, ""+selectedCH07d,
+                                ""+selectedCH08, ""+selectedCH09, ""+selectedCH10a, ""+selectedCH10b,
+                                ""+selectedCH10c, studId);
                         BackupDatabase.backup(getActivity());
                         Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
@@ -531,26 +565,26 @@ public class Fragment_AddStudent extends Fragment {
         modal_student.setStudentId(sId);
         modal_student.setCH01(et_studentName.getText().toString());
         modal_student.setCH02(age);
-        modal_student.setCH03(spinner_gender.getSelectedItem().toString());
-        modal_student.setCH04a(rb_CH04a.getText().toString());
-        modal_student.setCH04b(str_CH04b);
-        modal_student.setCH05(rb_CH05.getText().toString());
+        modal_student.setCH03(gender);
+        modal_student.setCH04a(""+selectedCH04a);
+        modal_student.setCH04b(str_disabilityType);
+        modal_student.setCH05(""+selectedCH05);
         modal_student.setCH06a(str_CH06a);
         modal_student.setCH06b(str_CH06b);
-        modal_student.setCH06c(str_CH06c);
-        modal_student.setCH06d(str_CH06d);
-        modal_student.setCH06e(str_CH06e);
-        modal_student.setCH06f(str_CH06f);
-        modal_student.setCH06g(str_CH06g);
-        modal_student.setCH07a(str_CH07a);
+        modal_student.setCH06c(""+selectedCH06c);
+        modal_student.setCH06d(""+selectedCH06d);
+        modal_student.setCH06e(""+selectedCH06e);
+        modal_student.setCH06f(""+selectedCH06f);
+        modal_student.setCH06g(""+selectedCH06g);
+        modal_student.setCH07a(""+selectedCH07a);
         modal_student.setCH07b(str_CH07b);
         modal_student.setCH07c(str_CH07c);
-        modal_student.setCH07d(str_CH07d);
-        modal_student.setCH08(rb_CH08.getText().toString());
-        modal_student.setCH09(rb_CH09.getText().toString());
-        modal_student.setCH10a(str_CH10a);
-        modal_student.setCH10b(str_CH10b);
-        modal_student.setCH10c(rb_CH10c.getText().toString());
+        modal_student.setCH07d(""+selectedCH07d);
+        modal_student.setCH08(""+selectedCH08);
+        modal_student.setCH09(""+selectedCH09);
+        modal_student.setCH10a(""+selectedCH10a);
+        modal_student.setCH10b(""+selectedCH10b);
+        modal_student.setCH10c(""+selectedCH10c);
         modal_student.setSvrCode(surveyorCode);
         modal_student.setHouseholdId(householdID);
         modal_student.setCreatedOn(KIX_Utility.getCurrentDateTime());
@@ -575,22 +609,47 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     private void getSpinnerValues() {
-        if (spinner_schoolType.getSelectedItemPosition() == 0) schoolType = "NA";
-        else schoolType = spinner_schoolType.getSelectedItem().toString();
+        switch (spinner_gender.getSelectedItemPosition()){
+            case 1 : gender = "1"; break;
+            case 2 : gender = "2"; break;
+        }
+
+        switch (spinner_schoolType.getSelectedItemPosition()){
+            case 0 : schoolType = "NA"; break;
+            case 1 : schoolType = "1"; break;
+            case 2 : schoolType = "2"; break;
+            case 3 : schoolType = "3"; break;
+            default:
+        }
 
         if (spinner_dropoutYear.getSelectedItemPosition() == 0) dropoutYear = "NA";
         else dropoutYear = spinner_dropoutYear.getSelectedItem().toString();
 
-        if (spinner_class.getSelectedItemPosition() == 0) standard = "NA";
-        else standard = spinner_class.getSelectedItem().toString();
+        switch (spinner_class.getSelectedItemPosition()){
+            case 0 : standard = "NA"; break;
+            case 1 : standard = "0"; break;
+            case 2 : standard = "1"; break;
+            case 3 : standard = "2"; break;
+            case 4 : standard = "3"; break;
+            case 5 : standard = "4"; break;
+            case 6 : standard = "5"; break;
+            default:
+        }
 
-        if (spinner_dropout_class.getSelectedItemPosition() == 0) dropoutStandard = "NA";
-        else dropoutStandard = spinner_dropout_class.getSelectedItem().toString();
+        switch (spinner_dropout_class.getSelectedItemPosition()){
+            case 0 : dropoutStandard = "NA"; break;
+            case 1 : dropoutStandard = "0"; break;
+            case 2 : dropoutStandard = "1"; break;
+            case 3 : dropoutStandard = "2"; break;
+            case 4 : dropoutStandard = "3"; break;
+            case 5 : dropoutStandard = "4"; break;
+            case 6 : dropoutStandard = "5"; break;
+            default:
+        }
     }
 
     public void getRadioButtonValues() {
-        int selectedCH04a = rg_anyDisability.getCheckedRadioButtonId();
-        int selectedCH04b = rg_whichDisability.getCheckedRadioButtonId();
+/*        int selectedCH04a = rg_anyDisability.getCheckedRadioButtonId();
         int selectedCH05 = rg_isStudentEnrolled.getCheckedRadioButtonId();
         int selectedCH06c = rg_instructionLang.getCheckedRadioButtonId();
         int selectedCH06d = rg_schoolStatus.getCheckedRadioButtonId();
@@ -603,10 +662,9 @@ public class Fragment_AddStudent extends Fragment {
         int selectedCH09 = rg_readMaterial.getCheckedRadioButtonId();
         int selectedCH10a = rg_helpChild.getCheckedRadioButtonId();
         int selectedCH10b = rg_mostOften.getCheckedRadioButtonId();
-        int selectedCH10c = rg_oftenReads.getCheckedRadioButtonId();
+        int selectedCH10c = rg_oftenReads.getCheckedRadioButtonId();*/
 
-        rb_CH04a = getView().findViewById(selectedCH04a);
-        rb_CH04b = getView().findViewById(selectedCH04b);
+/*        rb_CH04a = getView().findViewById(selectedCH04a);
         rb_CH05 = getView().findViewById(selectedCH05);
         rb_CH06c = getView().findViewById(selectedCH06c);
         rb_CH06d = getView().findViewById(selectedCH06d);
@@ -619,12 +677,159 @@ public class Fragment_AddStudent extends Fragment {
         rb_CH09 = getView().findViewById(selectedCH09);
         rb_CH10a = getView().findViewById(selectedCH10a);
         rb_CH10b = getView().findViewById(selectedCH10b);
-        rb_CH10c = getView().findViewById(selectedCH10c);
+        rb_CH10c = getView().findViewById(selectedCH10c);*/
+        if (this.getView().findViewById(this.rg_anyDisability.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH04a_yes))
+            selectedCH04a = 1;
+        else if (this.getView().findViewById(this.rg_anyDisability.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH04a_No))
+            selectedCH04a = 0;
+        if (this.getView().findViewById(this.rg_isStudentEnrolled.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH05_yes))
+            selectedCH05 = 1;
+        else if (this.getView().findViewById(this.rg_isStudentEnrolled.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH05_No))
+            selectedCH05 = 0;
+        if (this.getView().findViewById(this.rg_instructionLang.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06c_yes))
+            selectedCH06c = 1;
+        else if (this.getView().findViewById(this.rg_instructionLang.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06c_No))
+            selectedCH06c = 0;
+
+        if (this.getView().findViewById(this.rg_schoolStatus.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06d_one))
+            selectedCH06d = 1;
+        else if (this.getView().findViewById(this.rg_schoolStatus.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06d_two))
+            selectedCH06d = 2;
+        else if (this.getView().findViewById(this.rg_schoolStatus.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06d_three))
+            selectedCH06d = 3;
+        if (this.getView().findViewById(this.rg_schoolActivities.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06e_one))
+            selectedCH06e = 1;
+        else if (this.getView().findViewById(this.rg_schoolActivities.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06e_two))
+            selectedCH06e = 2;
+        else if (this.getView().findViewById(this.rg_schoolActivities.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06e_three))
+            selectedCH06e = 3;
+        if (this.getView().findViewById(this.rg_haveTextbooks.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06f_yes))
+            selectedCH06f = 1;
+        else if (this.getView().findViewById(this.rg_haveTextbooks.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06f_No))
+            selectedCH06f = 0;
+        if (this.getView().findViewById(this.rg_gradeRepeat.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06g_yes))
+            selectedCH06g = 1;
+        else if (this.getView().findViewById(this.rg_gradeRepeat.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH06g_No))
+            selectedCH06g = 0;
+
+        if (this.getView().findViewById(this.rg_isStudentEverEnrolled.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07a_yes))
+            selectedCH07a = 1;
+        else if (this.getView().findViewById(this.rg_isStudentEverEnrolled.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07a_No))
+            selectedCH07a = 0;
+        if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_one))
+            selectedCH07d = 1;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_two))
+            selectedCH07d = 2;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_three))
+            selectedCH07d = 3;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_four))
+            selectedCH07d = 4;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_five))
+            selectedCH07d = 5;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_six))
+            selectedCH07d = 6;
+        else if (this.getView().findViewById(this.rg_dropOutReason.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH07d_seven))
+            selectedCH07d = 7;
+
+        if (this.getView().findViewById(this.rg_paidTution.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH08_yes))
+            selectedCH08 = 1;
+        else if (this.getView().findViewById(this.rg_paidTution.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH08_No))
+            selectedCH08 = 0;
+        if (this.getView().findViewById(this.rg_readMaterial.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH09_yes))
+            selectedCH09 = 1;
+        else if (this.getView().findViewById(this.rg_readMaterial.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH09_No))
+            selectedCH09 = 0;
+
+        if (this.getView().findViewById(this.rg_helpChild.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10a_yes))
+            selectedCH10a = 1;
+        else if (this.getView().findViewById(this.rg_helpChild.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10a_No))
+            selectedCH10a = 0;
+        if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_one))
+            selectedCH10b = 1;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_two))
+            selectedCH10b = 2;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_three))
+            selectedCH10b = 3;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_four))
+            selectedCH10b = 4;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_five))
+            selectedCH10b = 5;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_six))
+            selectedCH10b = 6;
+        else if (this.getView().findViewById(this.rg_mostOften.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10b_seven))
+            selectedCH10b = 7;
+
+        if (this.getView().findViewById(this.rg_oftenReads.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10c_one))
+            selectedCH10c = 1;
+        else if (this.getView().findViewById(this.rg_oftenReads.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10c_two))
+            selectedCH10c = 2;
+        else if (this.getView().findViewById(this.rg_oftenReads.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10c_three))
+            selectedCH10c = 3;
+        else if (this.getView().findViewById(this.rg_oftenReads.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10c_four))
+            selectedCH10c = 4;
+        else if (this.getView().findViewById(this.rg_oftenReads.getCheckedRadioButtonId())
+                == this.getView().findViewById(R.id.rb_CH10c_five))
+            selectedCH10c = 5;
 
     }
 
+    public void getCheckedBoxValues() {
+        str_disabilityType="";
+        if (cb_CH04b_op1.isChecked())
+            str_disabilityType = str_disabilityType+"1,";
+        if (cb_CH04b_op2.isChecked())
+            str_disabilityType = str_disabilityType+"2,";
+        if (cb_CH04b_op3.isChecked())
+            str_disabilityType = str_disabilityType+"3,";
+        if (cb_CH04b_op4.isChecked())
+            str_disabilityType = str_disabilityType+"4,";
+    }
 
-    @UiThread
+
+
+        @UiThread
     public void startDialog(Modal_Student modal_student) {
         startExamDialog = null;
         startExamDialog = new Dialog(Objects.requireNonNull(getActivity()));

@@ -39,9 +39,9 @@ public interface HouseholdDao {
     @Query("update Household set sentFlag=1 where sentFlag=0")
     void updateSentFlag();
 
-    @Query("update Household set HH01=:househldNumber, HH02=:respondentName, HH03=:householdHead," +
+    @Query("update Household set HH00=:hH00, HH01=:househldNumber, HH02=:respondentName, HH03=:householdHead," +
             "HH05=:telephoneNum, HH04a=:haveChildren, HH04b=:noOfChildren, sentFlag=0" +
             " where householdId=:hId AND villageId=:villageId")
-    void updateHousehold(String househldNumber, String respondentName, String householdHead, String telephoneNum,
-                       String haveChildren, String noOfChildren, String hId, String villageId);
+    void updateHousehold(String hH00, String househldNumber, String respondentName, String householdHead, String telephoneNum,
+                         String haveChildren, String noOfChildren, String hId, String villageId);
 }

@@ -74,7 +74,7 @@ public class Fragment_AddVillage extends Fragment {
             this.EditState = this.EditDist = this.EditVil = 0;
             this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
             modalVillage = villageDao.getVillageByVillId(this.villageId);
-            this.tv_TitleLBL.setText("Edit Village");
+            this.tv_TitleLBL.setText(getString(R.string.update_village));
 /*            this.et_VillageName.setText(modalVillage.getVillageName());
             this.et_District.setText(modalVillage.getVillageDistrict());
             this.et_State.setText(modalVillage.getVillageState());*/

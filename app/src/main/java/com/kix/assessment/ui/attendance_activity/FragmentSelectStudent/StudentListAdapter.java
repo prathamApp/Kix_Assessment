@@ -72,10 +72,12 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
             holder.iv_studentCheck.setVisibility(View.VISIBLE);
         } else {
             holder.iv_studentCheck.setVisibility(View.INVISIBLE);
+            holder.studentCardView.setBackground(context.getDrawable(R.drawable.rounder_bg_white));
         }
 
         boolean isPIFfilled = parentInformationDao.getPIF(modalStudnet.studentId);
         if(isPIFfilled) holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
+        else holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_red));
 
         holder.itemView.setOnClickListener(v -> {
             contractStudentList.itemSelected(holder.getAdapterPosition());

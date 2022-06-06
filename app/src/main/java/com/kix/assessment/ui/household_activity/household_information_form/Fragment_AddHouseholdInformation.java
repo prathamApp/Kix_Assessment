@@ -112,11 +112,10 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
         householdId = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
-        btn_save.setText("Save");
 
         if(getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD)!=null){
-            btn_save.setText("Update");
-            tv_title.setText("Update Household Information");
+
+            tv_title.setText(getString(R.string.str_update_household_info));
             Modal_HIF modalHif = householdInformationDao.getHIFbyHouseholdId(householdId);
             et_members.setText(modalHif.HH06a);
             setRadioButtonValues(modalHif);

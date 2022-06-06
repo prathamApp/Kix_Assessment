@@ -95,7 +95,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
         selectedV01 = selectedV02 = selectedV03 = selectedV04 = selectedV05 = selectedV06a = selectedV07a = 99;
         if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.tv_title.setText("Edit Village Information");
+            this.tv_title.setText(getString(R.string.update_village_info));
 
             final Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);
 

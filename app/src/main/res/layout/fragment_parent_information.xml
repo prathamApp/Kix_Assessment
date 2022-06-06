@@ -100,7 +100,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_PT01b"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="roofing"
                     android:textColor="@color/light_green"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="italic" />
@@ -171,7 +170,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_PT01d"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="roofing"
                     android:textColor="@color/light_green"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="italic" />
@@ -242,7 +240,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_PT01f"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="roofing"
                     android:textColor="@color/light_green"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="italic" />

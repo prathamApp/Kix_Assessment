@@ -118,10 +118,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         hideSystemUI();
         super.onCreate(savedInstanceState);
-        Catcho.Builder(this)
+/*        Catcho.Builder(this)
                 .activity(CatchoTransparentActivity.class)
 //                .recipients("abc@gm.com")
-                .build();
+                .build();*/
         try {
             KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         } catch (Exception e) {

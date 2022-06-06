@@ -12,6 +12,17 @@ public class Modal_Household implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     public int hhId;
     public String householdId;
+    public static final Creator<Modal_Household> CREATOR = new Creator<Modal_Household>() {
+        @Override
+        public Modal_Household createFromParcel(final Parcel in) {
+            return new Modal_Household(in);
+        }
+
+        @Override
+        public Modal_Household[] newArray(final int size) {
+            return new Modal_Household[size];
+        }
+    };
     public String HH01;//Household number from the houselisting format
     public String HH02;//Name of the respondent
     public String HH03;//Name of the household head
@@ -22,134 +33,140 @@ public class Modal_Household implements Comparable, Parcelable {
     public String villageId;
     public String svrCode;
     public int sentFlag;
+    public String HH00;//Household number from the houselisting format
 
-    protected Modal_Household(Parcel in) {
-        hhId = in.readInt();
-        householdId = in.readString();
-        HH01 = in.readString();
-        HH02 = in.readString();
-        HH03 = in.readString();
-        HH04a = in.readString();
-        HH04b = in.readString();
-        HH05 = in.readString();
-        createdOn = in.readString();
-        villageId = in.readString();
-        svrCode = in.readString();
-        sentFlag = in.readInt();
+    protected Modal_Household(final Parcel in) {
+        this.hhId = in.readInt();
+        this.householdId = in.readString();
+        this.HH00 = in.readString();
+        this.HH01 = in.readString();
+        this.HH02 = in.readString();
+        this.HH03 = in.readString();
+        this.HH04a = in.readString();
+        this.HH04b = in.readString();
+        this.HH05 = in.readString();
+        this.createdOn = in.readString();
+        this.villageId = in.readString();
+        this.svrCode = in.readString();
+        this.sentFlag = in.readInt();
     }
-
-    public static final Creator<Modal_Household> CREATOR = new Creator<Modal_Household>() {
-        @Override
-        public Modal_Household createFromParcel(Parcel in) {
-            return new Modal_Household(in);
-        }
-
-        @Override
-        public Modal_Household[] newArray(int size) {
-            return new Modal_Household[size];
-        }
-    };
 
     public Modal_Household(){}
 
-    public int getHhId() {
-        return this.hhId;
+    public static Creator<Modal_Household> getCREATOR() {
+        return CREATOR;
     }
 
-    public void setHhId(final int hhId) {
+    public int getHhId() {
+        return hhId;
+    }
+
+    public void setHhId(int hhId) {
         this.hhId = hhId;
     }
 
     public String getHouseholdId() {
-        return this.householdId;
+        return householdId;
     }
 
-    public void setHouseholdId(final String householdId) {
+    public void setHouseholdId(String householdId) {
         this.householdId = householdId;
     }
 
-    public String getHH01() {
-        return this.HH01;
+    public String getHH00() {
+        return HH00;
     }
 
-    public void setHH01(final String HH01) {
+    public void setHH00(String HH00) {
+        this.HH00 = HH00;
+    }
+
+    public String getSvrCode() {
+        return svrCode;
+    }
+
+    public void setSvrCode(String svrCode) {
+        this.svrCode = svrCode;
+    }
+
+    public String getHH01() {
+        return HH01;
+    }
+
+    public void setHH01(String HH01) {
         this.HH01 = HH01;
     }
 
     public String getHH02() {
-        return this.HH02;
+        return HH02;
     }
 
-    public void setHH02(final String HH02) {
+    public void setHH02(String HH02) {
         this.HH02 = HH02;
     }
 
     public String getHH03() {
-        return this.HH03;
+        return HH03;
     }
 
-    public void setHH03(final String HH03) {
+    public void setHH03(String HH03) {
         this.HH03 = HH03;
     }
 
     public String getHH04a() {
-        return this.HH04a;
+        return HH04a;
     }
 
-    public void setHH04a(final String HH04a) {
+    public void setHH04a(String HH04a) {
         this.HH04a = HH04a;
     }
 
     public String getHH04b() {
-        return this.HH04b;
+        return HH04b;
     }
 
-    public void setHH04b(final String HH04b) {
+    public void setHH04b(String HH04b) {
         this.HH04b = HH04b;
     }
 
     public String getHH05() {
-        return this.HH05;
+        return HH05;
     }
 
-    public void setHH05(final String HH05) {
+    public void setHH05(String HH05) {
         this.HH05 = HH05;
     }
 
     public String getCreatedOn() {
-        return this.createdOn;
+        return createdOn;
     }
 
-    public void setCreatedOn(final String createdOn) {
+    public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
     }
 
     public String getVillageId() {
-        return this.villageId;
+        return villageId;
     }
 
-    public void setVillageId(final String villageId) {
+    public void setVillageId(String villageId) {
         this.villageId = villageId;
     }
 
     public String getsvrCode() {
-        return this.svrCode;
+        return svrCode;
     }
 
-    public void setsvrCode(final String svrCode) {
+    public void setsvrCode(String svrCode) {
         this.svrCode = svrCode;
     }
 
     public int getSentFlag() {
-        return this.sentFlag;
+        return sentFlag;
     }
 
-    public void setSentFlag(final int sentFlag) {
+    public void setSentFlag(int sentFlag) {
         this.sentFlag = sentFlag;
-    }
-
-    public static Creator<Modal_Household> getCREATOR() {
-        return Modal_Household.CREATOR;
     }
 
     @Override
@@ -158,23 +175,24 @@ public class Modal_Household implements Comparable, Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(hhId);
-        dest.writeString(householdId);
-        dest.writeString(HH01);
-        dest.writeString(HH02);
-        dest.writeString(HH03);
-        dest.writeString(HH04a);
-        dest.writeString(HH04b);
-        dest.writeString(HH05);
-        dest.writeString(createdOn);
-        dest.writeString(villageId);
-        dest.writeString(svrCode);
-        dest.writeInt(sentFlag);
+    public void writeToParcel(final Parcel dest, final int flags) {
+        dest.writeInt(this.hhId);
+        dest.writeString(this.householdId);
+        dest.writeString(this.HH00);
+        dest.writeString(this.HH01);
+        dest.writeString(this.HH02);
+        dest.writeString(this.HH03);
+        dest.writeString(this.HH04a);
+        dest.writeString(this.HH04b);
+        dest.writeString(this.HH05);
+        dest.writeString(this.createdOn);
+        dest.writeString(this.villageId);
+        dest.writeString(this.svrCode);
+        dest.writeInt(this.sentFlag);
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(final Object o) {
         return 0;
     }
 }

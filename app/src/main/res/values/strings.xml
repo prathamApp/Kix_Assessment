@@ -57,6 +57,7 @@
     </string-array>
 
     <string name="add_village_info">Add Village Information</string>
+    <string name="update_village_info">Update Village Information</string>
     <string name="str_village_info">Village Information</string>
     <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
     <string name="str_V02">Is there public transport facility available to the village?</string>
@@ -69,6 +70,7 @@
     <string name="str_V07b">Which type of school(s) in the village offers primary grades/classes?</string>
 
     <string name="str_add_household">Add Household</string>
+    <string name="update_household">Update Household</string>
     <string name="str_isSampledHH">Is the sampled household?</string>
     <string name="str_isSampledHH_one">Locked</string>
     <string name="str_isSampledHH_two">Not Responding</string>
@@ -81,6 +83,7 @@
 -->
 
     <string name="str_add_household_info">Add Household Information</string>
+    <string name="str_update_household_info">Update Household Information</string>
     <string name="str_household_info">Household Information</string>
     <string name="str_gnr_household_info">General information of surveyed household</string>
     <string name="str_HH06a">Number of members regularly living in the household</string>
@@ -127,13 +130,13 @@
     <string name="str_HH07q">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
     <string name="select_household">Select Household</string>
-    <string name="add_household">Add Household</string>
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
-    <string name="add_hh_info">Add Household Information</string>
 
 
+    <string name="add_child">Add Child</string>
+    <string name="update_child">Update Child</string>
     <string name="str_CH04a">Does the child have any known disability?</string>
-    <string name="str_CH04b">If yes in CH04a then, which disability? (select all that is applicable)</string>
+    <string name="str_CH04b">Which disability?</string>
     <string name="str_CH04b_op1">Visual</string>
     <string name="str_CH04b_op2">Hearing/Speech</string>
     <string name="str_CH04b_op3">Physical</string>
@@ -182,6 +185,7 @@
 
 
     <string name="add_parent_information">Add Parent Information</string>
+    <string name="update_parent_information">Update Parent Information</string>
     <string name="parent_information">Parent Information</string>
     <string name="mothers_details">Mother\'s Detail</string>
     <string name="fathers_details">Father\'s Detail</string>
@@ -219,12 +223,12 @@
     <string name="sign_in">Sign In</string>
     <string name="select_village">Select Village</string>
     <string name="add_village">Add Village</string>
+    <string name="update_village">Update Village</string>
     <string name="hint_village">Village <font color='#FF0000'>*</font></string>
     <string name="hint_district">District <font color='#FF0000'>*</font></string>
     <string name="hint_state">State <font color='#FF0000'>*</font></string>
     <string name="save">Save</string>
     <string name="select_child">Select Child</string>
-    <string name="add_child_information">Add Child Information</string>
     <string name="want_to_start_assessment">Do you want to Start Assessment?</string>
     <string name="goto_next_task">Do you want to goto the next task?</string>
     <string name="thank_you">Thank you</string>
@@ -247,6 +251,7 @@
     <string name="str_public">Public</string>
     <string name="str_private">Private</string>
     <string name="str_other">Other</string>
+    <string name="age">Age </string>
 
     <string-array name="country_list">
         <item>Select Country</item>
@@ -304,25 +309,25 @@
     </string-array>
 
     <string-array name="age">
-        <item>Age    </item>
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
+        <item>Age</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
     </string-array>
 
     <string-array name="ageFilter">
         <item>All Ages  </item>
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
     </string-array>
 
     <string-array name="student_class">

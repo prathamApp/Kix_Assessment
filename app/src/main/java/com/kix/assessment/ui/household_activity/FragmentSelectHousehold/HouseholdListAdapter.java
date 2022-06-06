@@ -52,9 +52,9 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
             boolean isHIFfilled = householdInformationDao.getHIF(modalHousehold.householdId);
             if(isHIFfilled) holder.tv_CardInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
 
-            if(modalHousehold.HH04a.equalsIgnoreCase(Kix_Constant.NO)){
+            if(modalHousehold.HH04a.equalsIgnoreCase("0")){
                 holder.ll_card.setBackground(context.getDrawable(R.drawable.rounder_bg_grey));
-            } else if(modalHousehold.HH04a.equalsIgnoreCase(Kix_Constant.YES)){
+            } else if(modalHousehold.HH04a.equalsIgnoreCase("1")){
                 if(modalHousehold.HH04b.isEmpty() || modalHousehold.HH04b.equalsIgnoreCase("0"))
                     holder.ll_card.setBackground(context.getDrawable(R.drawable.rounder_bg_grey));
             }
@@ -67,9 +67,9 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
         }*/
 
             holder.ll_card.setOnClickListener(v -> {
-                if(modalHousehold.HH04a.equalsIgnoreCase(Kix_Constant.NO)){
+                if(modalHousehold.HH04a.equalsIgnoreCase("0")){
                     Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
-                } else if(modalHousehold.HH04a.equalsIgnoreCase(Kix_Constant.YES)){
+                } else if(modalHousehold.HH04a.equalsIgnoreCase("1")){
                     if(modalHousehold.HH04b.isEmpty() || modalHousehold.HH04b.equalsIgnoreCase("0"))
                         Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
                     else {
