@@ -27,15 +27,15 @@ public class Modal_HIF implements Comparable, Parcelable {
     public String HH07f;//Toilet
     public String HH07g;//Atleast one member (other than the child's parents) who has completed high school diploma?
     public String HH07h;//Any reading material other than school textbooks and religious books
-    public String HH07i;//Computer
-    public String HH07j;//Television
-    public String HH07k;//Radio
-    public String HH07l;//Mobile phone
-    public String HH07m;//If yes in HH07l, is it a smartphone?
-    public String HH07n;//Motorised 4-wheeler?
-    public String HH07o;//Motorised 2-wheeler?
-    public String HH07p;//Bicycle?
-    public String HH07q;//Any other books or reading materials, like religious textbooks, newspapers magazines etc?
+    public String HH07i;//Any other books or reading materials, like religious textbooks, newspapers magazines etc?
+    public String HH07j;//Computer
+    public String HH07k;//Television
+    public String HH07l;//Radio
+    public String HH07m;//Mobile phone
+    public String HH07n;//If yes in HH07l, is it a smartphone?
+    public String HH07o;//Motorised 4-wheeler?
+    public String HH07p;//Motorised 2-wheeler?
+    public String HH07q;//Bicycle?
     public String householdId;
     public String villageId;
     public String createdOn;

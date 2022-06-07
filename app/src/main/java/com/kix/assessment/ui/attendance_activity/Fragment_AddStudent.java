@@ -319,8 +319,13 @@ public class Fragment_AddStudent extends Fragment {
             rg_isStudentEnrolled.check(R.id.rb_CH05_yes);
             ll_enrolledChildFields.setVisibility(View.VISIBLE);
             rl_CH10a.setVisibility(View.VISIBLE);
-            spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH06a));
-            spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH06b));
+
+            if(modalStudent.CH06a.equalsIgnoreCase("NA"))
+                spinner_class.setSelection(adapterClass.getPosition(modalStudent.CH06a));
+            else spinner_class.setSelection(Integer.parseInt(modalStudent.CH06a)+1);
+            if(modalStudent.CH06b.equalsIgnoreCase("NA"))
+                spinner_schoolType.setSelection(adapterSchoolType.getPosition(modalStudent.CH06b));
+            else spinner_schoolType.setSelection(Integer.parseInt(modalStudent.CH06b));
 
             if (modalStudent.CH06c.equalsIgnoreCase("1"))
                 rg_instructionLang.check(R.id.rb_CH06c_yes);
@@ -380,7 +385,9 @@ public class Fragment_AddStudent extends Fragment {
                 ll_notEnrolledChildFields.setVisibility(View.VISIBLE);
                 ll_dropoutFields.setVisibility(View.VISIBLE);
                 spinner_dropoutYear.setSelection(adapterDropYear.getPosition(modalStudent.CH07b));
-                spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH07c));
+                if(modalStudent.CH07c.equalsIgnoreCase("NA"))
+                    spinner_dropout_class.setSelection(adapterClass.getPosition(modalStudent.CH07c));
+                else spinner_dropout_class.setSelection(Integer.parseInt(modalStudent.CH07c)+1);
                 if (modalStudent.CH07d.equalsIgnoreCase("1"))
                     rg_dropOutReason.check(R.id.rb_CH07d_one);
                 else if (modalStudent.CH07d.equalsIgnoreCase("2"))

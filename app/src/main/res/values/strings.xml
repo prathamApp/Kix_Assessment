@@ -119,15 +119,15 @@
     <string name="str_HH07f">Toilet/Latrines?</string>
     <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate?</string>
     <string name="str_HH07h">Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
-    <string name="str_HH07i">Computer/laptop/tablet?</string>
-    <string name="str_HH07j">Television?</string>
-    <string name="str_HH07k">Radio?</string>
-    <string name="str_HH07l">Mobile phone?</string>
-    <string name="str_HH07m">Is it a smartphone?</string>
-    <string name="str_HH07n">Motorised 4-wheeler?</string>
-    <string name="str_HH07o">Motorised 2-wheeler?</string>
-    <string name="str_HH07p">Bicycle?</string>
-    <string name="str_HH07q">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
+    <string name="str_HH07i">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
+    <string name="str_HH07j">Computer/laptop/tablet?</string>
+    <string name="str_HH07k">Television?</string>
+    <string name="str_HH07l">Radio?</string>
+    <string name="str_HH07m">Mobile phone?</string>
+    <string name="str_HH07n">Is it a smartphone?</string>
+    <string name="str_HH07o">Motorised 4-wheeler?</string>
+    <string name="str_HH07p">Motorised 2-wheeler?</string>
+    <string name="str_HH07q">Bicycle?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
     <string name="select_household">Select Household</string>
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
