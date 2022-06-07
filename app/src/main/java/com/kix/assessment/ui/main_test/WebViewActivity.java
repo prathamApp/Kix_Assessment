@@ -114,10 +114,13 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
                 a+=1;
                 Log.d("booklet", "getBooklet: SIZE: " + myBookletList.size());
                 Log.d("booklet", "getBooklet: COUNT: " + a);
-                if (a >= myBookletList.size())
+                if (a >= myBookletList.size()) {
                     FastSave.getInstance().saveInt(Kix_Constant.BOOKLET_NO, 0);
-                else
+                    Collections.shuffle(myBookletList);
+                    FastSave.getInstance().saveString(Kix_Constant.SHUFFLED_BOOKLETS, myBookletList.toString());
+                } else
                     FastSave.getInstance().saveInt(Kix_Constant.BOOKLET_NO, a);
+                
                 String bName = myBookletList.get(FastSave.getInstance().getInt(Kix_Constant.BOOKLET_NO, 0));
                 return bName.trim();
             }
