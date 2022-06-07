@@ -523,7 +523,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/str_V07b"
-                        android:textColor="@color/lightGrey"
+                        android:textColor="@color/blue"
                         android:textStyle="italic"
                         android:layout_marginTop="@dimen/_10sdp"/>
 

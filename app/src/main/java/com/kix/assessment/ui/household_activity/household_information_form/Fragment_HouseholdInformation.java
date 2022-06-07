@@ -122,8 +122,10 @@ public class Fragment_HouseholdInformation extends Fragment {
 
         if(modalHif.getHH06c().equalsIgnoreCase("1")) {
             tv_howOften.setText(getString(R.string.str_always));
-        } else {
+        } else if (modalHif.getHH06c().equalsIgnoreCase("0")) {
             tv_howOften.setText(getString(R.string.str_sometimes));
+        } else if (modalHif.getHH06c().equalsIgnoreCase("99")) {
+            tv_howOften.setText("NA");
         }
 
         if(modalHif.getHH06d().equalsIgnoreCase("1")){

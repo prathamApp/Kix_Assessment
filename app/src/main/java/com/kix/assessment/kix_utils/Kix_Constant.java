@@ -6,6 +6,9 @@ public class Kix_Constant {
     public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
     public static final String PUSH_DB_API = "http://13.76.6.250:81/kix/pushdb";
 
+    public static final String BOOKLET_NO = "booklet_no";
+    public static final String SHUFFLED_BOOKLETS = "shuffled_booklets";
+    public static final String BOOKLET_LIST_FLG = "booklet_list_flg";
     public static final String IS_COUNTRY_SELECTED = "is_country_selected";
     public static final String assessment_Games = "assessment_Games";
     public static final String COUNTRY_NAME = "country_name";
