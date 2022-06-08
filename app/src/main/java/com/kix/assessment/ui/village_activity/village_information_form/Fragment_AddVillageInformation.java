@@ -91,51 +91,51 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     @AfterViews
     public void initialize() {
-        this.surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "");
-        this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
-        selectedV01 = selectedV02 = selectedV03 = selectedV04 = selectedV05 = selectedV06a = selectedV07a = 99;
-        if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.tv_title.setText(getString(R.string.update_village_info));
+        surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "");
+        villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+        this.selectedV01 = this.selectedV02 = this.selectedV03 = this.selectedV04 = this.selectedV05 = this.selectedV06a = this.selectedV07a = 99;
+        if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            tv_title.setText(this.getString(R.string.update_village_info));
 
-            final Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);
+            Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(villageId);
 
             if (modal_vif.getV01().equalsIgnoreCase("1"))
-                this.rg_haveRoad.check(R.id.rb_V01_yes);
+                rg_haveRoad.check(R.id.rb_V01_yes);
             else
-                this.rg_haveRoad.check(R.id.rb_V01_No);
+                rg_haveRoad.check(R.id.rb_V01_No);
 
             if (modal_vif.getV02().equalsIgnoreCase("1"))
-                this.rg_haveTransport.check(R.id.rb_V02_yes);
+                rg_haveTransport.check(R.id.rb_V02_yes);
             else
-                this.rg_haveTransport.check(R.id.rb_V02_No);
+                rg_haveTransport.check(R.id.rb_V02_No);
 
             if (modal_vif.getV03().equalsIgnoreCase("1"))
-                this.rg_haveElectricity.check(R.id.rb_V03_yes);
+                rg_haveElectricity.check(R.id.rb_V03_yes);
             else
-                this.rg_haveElectricity.check(R.id.rb_V03_No);
+                rg_haveElectricity.check(R.id.rb_V03_No);
 
             if (modal_vif.getV04().equalsIgnoreCase("1"))
-                this.rg_haveGovHosp.check(R.id.rb_V04_yes);
+                rg_haveGovHosp.check(R.id.rb_V04_yes);
             else
-                this.rg_haveGovHosp.check(R.id.rb_V04_No);
+                rg_haveGovHosp.check(R.id.rb_V04_No);
 
             if (modal_vif.getV05().equalsIgnoreCase("1"))
-                this.rg_havePvtHosp.check(R.id.rb_V05_yes);
+                rg_havePvtHosp.check(R.id.rb_V05_yes);
             else
-                this.rg_havePvtHosp.check(R.id.rb_V05_No);
+                rg_havePvtHosp.check(R.id.rb_V05_No);
 
             if (modal_vif.getV06a().equalsIgnoreCase("1")) {
-                this.rg_havePrePrimSchool.check(R.id.rb_V06a_yes);
-                this.ll_V06b.setVisibility(View.VISIBLE);
+                rg_havePrePrimSchool.check(R.id.rb_V06a_yes);
+                ll_V06b.setVisibility(View.VISIBLE);
 /*                String[] arrOfV06b = modal_vif.V06b.split(",");
                 for (int i=0;i<arrOfV06b.length;i++)
                     Log.d("TAG", "initialize: "+arrOfV06b[i]);*/
                 if (modal_vif.V06b.contains("1,"))
-                    this.cb_v06bGovtPub.setChecked(true);
+                    cb_v06bGovtPub.setChecked(true);
                 if (modal_vif.V06b.contains("2,"))
-                    this.cb_v06bPvt.setChecked(true);
+                    cb_v06bPvt.setChecked(true);
                 if (modal_vif.V06b.contains("3,"))
-                    this.cb_v06bOther.setChecked(true);
+                    cb_v06bOther.setChecked(true);
 
 /*                if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_government_public)))
                     cb_v06bGovtPub.setChecked(true);
@@ -144,18 +144,18 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
                 else if(modal_vif.V06b.equalsIgnoreCase(getString(R.string.str_other)))
                     cb_v06bOther.setChecked(true);*/
             } else {
-                this.rg_havePrePrimSchool.check(R.id.rb_V06a_No);
+                rg_havePrePrimSchool.check(R.id.rb_V06a_No);
             }
 
             if (modal_vif.getV07a().equalsIgnoreCase("1")) {
-                this.rg_havePrimSchool.check(R.id.rb_V07a_yes);
-                this.ll_V07b.setVisibility(View.VISIBLE);
+                rg_havePrimSchool.check(R.id.rb_V07a_yes);
+                ll_V07b.setVisibility(View.VISIBLE);
                 if (modal_vif.V07b.contains("1,"))
-                    this.cb_v07bGovtPub.setChecked(true);
+                    cb_v07bGovtPub.setChecked(true);
                 if (modal_vif.V07b.contains("2,"))
-                    this.cb_v07bPvt.setChecked(true);
+                    cb_v07bPvt.setChecked(true);
                 if (modal_vif.V07b.contains("3,"))
-                    this.cb_v07bOther.setChecked(true);
+                    cb_v07bOther.setChecked(true);
 
 /*                if (modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_government_public)))
                     cb_v07bGovtPub.setChecked(true);
@@ -164,90 +164,90 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
                 else if (modal_vif.V07b.equalsIgnoreCase(getString(R.string.str_other)))
                     cb_v07bOther.setChecked(true);*/
 
-            } else this.rg_havePrimSchool.check(R.id.rb_V07a_No);
+            } else rg_havePrimSchool.check(R.id.rb_V07a_No);
 
-            this.btn_saveVIF.setVisibility(View.GONE);
-            this.btn_editVIF.setVisibility(View.VISIBLE);
+            btn_saveVIF.setVisibility(View.GONE);
+            btn_editVIF.setVisibility(View.VISIBLE);
         }
 
-        this.rg_havePrePrimSchool.setOnCheckedChangeListener((group, checkedId) -> {
+        rg_havePrePrimSchool.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.rb_V06a_yes:
-                    this.ll_V06b.setVisibility(View.VISIBLE);
+                    ll_V06b.setVisibility(View.VISIBLE);
                     break;
 
                 case R.id.rb_V06a_No:
-                    this.ll_V06b.setVisibility(View.GONE);
-                    this.cb_v06bGovtPub.setChecked(false);
-                    this.cb_v06bOther.setChecked(false);
-                    this.cb_v06bPvt.setChecked(false);
+                    ll_V06b.setVisibility(View.GONE);
+                    cb_v06bGovtPub.setChecked(false);
+                    cb_v06bOther.setChecked(false);
+                    cb_v06bPvt.setChecked(false);
                     break;
             }
         });
 
-        this.rg_havePrimSchool.setOnCheckedChangeListener((group, checkedId) -> {
+        rg_havePrimSchool.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.rb_V07a_yes:
-                    this.ll_V07b.setVisibility(View.VISIBLE);
+                    ll_V07b.setVisibility(View.VISIBLE);
                     break;
 
                 case R.id.rb_V07a_No:
-                    this.ll_V07b.setVisibility(View.GONE);
-                    this.cb_v07bGovtPub.setChecked(false);
-                    this.cb_v07bOther.setChecked(false);
-                    this.cb_v07bPvt.setChecked(false);
+                    ll_V07b.setVisibility(View.GONE);
+                    cb_v07bGovtPub.setChecked(false);
+                    cb_v07bOther.setChecked(false);
+                    cb_v07bPvt.setChecked(false);
                     break;
             }
         });
 
-        this.cb_v06bGovtPub.setOnCheckedChangeListener(this);
-        this.cb_v06bOther.setOnCheckedChangeListener(this);
-        this.cb_v06bPvt.setOnCheckedChangeListener(this);
-        this.cb_v07bGovtPub.setOnCheckedChangeListener(this);
-        this.cb_v07bOther.setOnCheckedChangeListener(this);
-        this.cb_v07bPvt.setOnCheckedChangeListener(this);
+        cb_v06bGovtPub.setOnCheckedChangeListener(this);
+        cb_v06bOther.setOnCheckedChangeListener(this);
+        cb_v06bPvt.setOnCheckedChangeListener(this);
+        cb_v07bGovtPub.setOnCheckedChangeListener(this);
+        cb_v07bOther.setOnCheckedChangeListener(this);
+        cb_v07bPvt.setOnCheckedChangeListener(this);
     }
 
     @Click(R.id.btn_save)
     public void saveVIF() {
-        this.getRadioButtonValues();
-        this.getCheckedBoxValues();
-        if (this.selectedV01 == 99 || this.selectedV02 == 99 || this.selectedV03 == 99
-                || this.selectedV04 == 99 || this.selectedV05 == 99 || this.selectedV06a == 99
-                || this.selectedV07a == 99) {
-            Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+        getRadioButtonValues();
+        getCheckedBoxValues();
+        if (selectedV01 == 99 || selectedV02 == 99 || selectedV03 == 99
+                || selectedV04 == 99 || selectedV05 == 99 || selectedV06a == 99
+                || selectedV07a == 99) {
+            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
-            if (selectedV06a == 1 && selectedV07a == 1) {
-                if (this.str_v06b_schoolType.equalsIgnoreCase("")
-                        || this.str_v07b_schoolType.equalsIgnoreCase("")) {
-                    Toast.makeText(this.getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+            if (this.selectedV06a == 1 && this.selectedV07a == 1) {
+                if (str_v06b_schoolType.equalsIgnoreCase("")
+                        || str_v07b_schoolType.equalsIgnoreCase("")) {
+                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
                 } else {
-                    this.insertVIF();
+                    insertVIF();
                 }
             } else {
-                this.insertVIF();
+                insertVIF();
             }
         }
     }
 
     @Click(R.id.btn_edit)
     public void editVIF() {
-        this.getRadioButtonValues();
-        this.getCheckedBoxValues();
-        if (this.selectedV01 == 99 || this.selectedV02 == 99 || this.selectedV03 == 99
-               || this.selectedV04 == 99 || this.selectedV05 == 99 || this.selectedV06a == 99
-               || this.selectedV07a == 99) {
-            Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+        getRadioButtonValues();
+        getCheckedBoxValues();
+        if (selectedV01 == 99 || selectedV02 == 99 || selectedV03 == 99
+               || selectedV04 == 99 || selectedV05 == 99 || selectedV06a == 99
+               || selectedV07a == 99) {
+            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
-            if (selectedV06a == 1 && selectedV07a == 1) {
-                if (this.str_v06b_schoolType.equalsIgnoreCase("")
-                        || this.str_v07b_schoolType.equalsIgnoreCase("")) {
-                    Toast.makeText(this.getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+            if (this.selectedV06a == 1 && this.selectedV07a == 1) {
+                if (str_v06b_schoolType.equalsIgnoreCase("")
+                        || str_v07b_schoolType.equalsIgnoreCase("")) {
+                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
                 } else {
-                    this.updateVIF();
+                    updateVIF();
                 }
             } else {
-                this.updateVIF();
+                updateVIF();
             }
         }
     }
@@ -269,67 +269,67 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         this.rb_V06a = this.getView().findViewById(selectedV06a);
         this.rb_V07a = this.getView().findViewById(selectedV07a);*/
 
-        if (this.getView().findViewById(this.rg_haveRoad.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V01_yes))
-            selectedV01 = 1;
-        else if (this.getView().findViewById(this.rg_haveRoad.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V01_No))
-            selectedV01 = 0;
-        if (this.getView().findViewById(this.rg_haveTransport.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V02_yes))
-            selectedV02 = 1;
-        else if (this.getView().findViewById(this.rg_haveTransport.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V02_No))
-            selectedV02 = 0;
-        if (this.getView().findViewById(this.rg_haveElectricity.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V03_yes))
-            selectedV03 = 1;
-        else if (this.getView().findViewById(this.rg_haveElectricity.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V03_No))
-            selectedV03 = 0;
-        if (this.getView().findViewById(this.rg_haveGovHosp.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V04_yes))
-            selectedV04 = 1;
-        else if (this.getView().findViewById(this.rg_haveGovHosp.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V04_No))
-            selectedV04 = 0;
-        if (this.getView().findViewById(this.rg_havePvtHosp.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V05_yes))
-            selectedV05 = 1;
-        else if (this.getView().findViewById(this.rg_havePvtHosp.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V05_No))
-            selectedV05 = 0;
-        if (this.getView().findViewById(this.rg_havePrePrimSchool.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V06a_yes))
-            selectedV06a = 1;
-        else if (this.getView().findViewById(this.rg_havePrePrimSchool.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V06a_No))
-            selectedV06a = 0;
-        if (this.getView().findViewById(this.rg_havePrimSchool.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V07a_yes))
-            selectedV07a = 1;
-        else if (this.getView().findViewById(this.rg_havePrimSchool.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_V07a_No))
-            selectedV07a = 0;
+        if (getView().findViewById(rg_haveRoad.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V01_yes))
+            this.selectedV01 = 1;
+        else if (getView().findViewById(rg_haveRoad.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V01_No))
+            this.selectedV01 = 0;
+        if (getView().findViewById(rg_haveTransport.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V02_yes))
+            this.selectedV02 = 1;
+        else if (getView().findViewById(rg_haveTransport.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V02_No))
+            this.selectedV02 = 0;
+        if (getView().findViewById(rg_haveElectricity.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V03_yes))
+            this.selectedV03 = 1;
+        else if (getView().findViewById(rg_haveElectricity.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V03_No))
+            this.selectedV03 = 0;
+        if (getView().findViewById(rg_haveGovHosp.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V04_yes))
+            this.selectedV04 = 1;
+        else if (getView().findViewById(rg_haveGovHosp.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V04_No))
+            this.selectedV04 = 0;
+        if (getView().findViewById(rg_havePvtHosp.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V05_yes))
+            this.selectedV05 = 1;
+        else if (getView().findViewById(rg_havePvtHosp.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V05_No))
+            this.selectedV05 = 0;
+        if (getView().findViewById(rg_havePrePrimSchool.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V06a_yes))
+            this.selectedV06a = 1;
+        else if (getView().findViewById(rg_havePrePrimSchool.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V06a_No))
+            this.selectedV06a = 0;
+        if (getView().findViewById(rg_havePrimSchool.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V07a_yes))
+            this.selectedV07a = 1;
+        else if (getView().findViewById(rg_havePrimSchool.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_V07a_No))
+            this.selectedV07a = 0;
 
     }
 
     public void getCheckedBoxValues() {
-        this.str_v06b_schoolType = "";
-        if (this.cb_v06bGovtPub.isChecked())
-            this.str_v06b_schoolType = this.str_v06b_schoolType + "1,";
-        if (this.cb_v06bPvt.isChecked())
-            this.str_v06b_schoolType = this.str_v06b_schoolType + "2,";
-        if (this.cb_v06bOther.isChecked())
-            this.str_v06b_schoolType = this.str_v06b_schoolType + "3,";
+        str_v06b_schoolType = "";
+        if (cb_v06bGovtPub.isChecked())
+            str_v06b_schoolType = str_v06b_schoolType + "1,";
+        if (cb_v06bPvt.isChecked())
+            str_v06b_schoolType = str_v06b_schoolType + "2,";
+        if (cb_v06bOther.isChecked())
+            str_v06b_schoolType = str_v06b_schoolType + "3,";
 
-        this.str_v07b_schoolType = "";
-        if (this.cb_v07bGovtPub.isChecked())
-            this.str_v07b_schoolType = this.str_v07b_schoolType + "1,";
-        if (this.cb_v07bPvt.isChecked())
-            this.str_v07b_schoolType = this.str_v07b_schoolType + "2,";
-        if (this.cb_v07bOther.isChecked())
-            this.str_v07b_schoolType = this.str_v07b_schoolType + "3,";
+        str_v07b_schoolType = "";
+        if (cb_v07bGovtPub.isChecked())
+            str_v07b_schoolType = str_v07b_schoolType + "1,";
+        if (cb_v07bPvt.isChecked())
+            str_v07b_schoolType = str_v07b_schoolType + "2,";
+        if (cb_v07bOther.isChecked())
+            str_v07b_schoolType = str_v07b_schoolType + "3,";
 
 
 /*        if (cb_v06bGovtPub.isChecked())
@@ -348,48 +348,48 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     }
 
     public void insertVIF() {
-        final Modal_VIF modal_vif = new Modal_VIF();
-        modal_vif.setV01(""+ selectedV01);
-        modal_vif.setV02(""+ selectedV02);
-        modal_vif.setV03(""+ selectedV03);
-        modal_vif.setV04(""+ selectedV04);
-        modal_vif.setV05(""+ selectedV05);
-        modal_vif.setV06a(""+ selectedV06a);
-        modal_vif.setV07a(""+ selectedV07a);
-        modal_vif.setV06b(this.str_v06b_schoolType);
-        modal_vif.setV07b(this.str_v07b_schoolType);
-        modal_vif.setVillageId(this.villageId);
-        modal_vif.setSvrCode(this.surveyorCode);
-        modal_vif.setCreatedOn(KIX_Utility.getCurrentDateTime());
+        Modal_VIF modal_vif = new Modal_VIF();
+        modal_vif.setV01(""+ this.selectedV01);
+        modal_vif.setV02(""+ this.selectedV02);
+        modal_vif.setV03(""+ this.selectedV03);
+        modal_vif.setV04(""+ this.selectedV04);
+        modal_vif.setV05(""+ this.selectedV05);
+        modal_vif.setV06a(""+ this.selectedV06a);
+        modal_vif.setV07a(""+ this.selectedV07a);
+        modal_vif.setV06b(str_v06b_schoolType);
+        modal_vif.setV07b(str_v07b_schoolType);
+        modal_vif.setVillageId(villageId);
+        modal_vif.setSvrCode(surveyorCode);
+        modal_vif.setInfo_createdOn(KIX_Utility.getCurrentDateTime());
         modal_vif.setSentFlag(0);
 
         villageInformationDao.insertVillageInfo(modal_vif);
-        BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "VillageInformation Added Successfully!", Toast.LENGTH_SHORT).show();
-        this.getFragmentManager().popBackStack();
+        BackupDatabase.backup(getActivity());
+        Toast.makeText(getActivity(), "VillageInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        getFragmentManager().popBackStack();
     }
 
     public void updateVIF() {
         villageInformationDao.updateVillage(
-                ""+ selectedV01,
-                ""+ selectedV02,
-                ""+ selectedV03,
-                ""+ selectedV04,
-                ""+ selectedV05,
-                ""+ selectedV06a,
-                this.str_v06b_schoolType,
-                ""+ selectedV07a,
-                this.str_v07b_schoolType,
-                this.villageId);
+                ""+ this.selectedV01,
+                ""+ this.selectedV02,
+                ""+ this.selectedV03,
+                ""+ this.selectedV04,
+                ""+ this.selectedV05,
+                ""+ this.selectedV06a,
+                str_v06b_schoolType,
+                ""+ this.selectedV07a,
+                str_v07b_schoolType,
+                villageId);
 
-        BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "VillageInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
-        this.getFragmentManager().popBackStack();
+        BackupDatabase.backup(getActivity());
+        Toast.makeText(getActivity(), "VillageInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        getFragmentManager().popBackStack();
     }
 
     @Override
     public void onResume() {
-        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         super.onResume();
     }
 
@@ -399,7 +399,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
     }
 
     @Override
-    public void onCheckedChanged(final CompoundButton buttonView, final boolean isChecked) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
     }
 }

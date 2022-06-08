@@ -42,19 +42,7 @@
     <string name="surveyor_count">Surveyor Count : </string>
     <string name="edit_child_info">Edit Child Information</string>
 
-    <string-array name="spinner_booklet_list">
-        <item>Booklet 1</item>
-        <item>Booklet 2</item>
-        <item>Booklet 3</item>
-        <item>Booklet 4</item>
-    </string-array>
 
-    <string-array name="spinner_booklet_code_list">
-        <item>Booklet_1</item>
-        <item>Booklet_2</item>
-        <item>Booklet_3</item>
-        <item>Booklet_4</item>
-    </string-array>
 
     <string name="add_village_info">Add Village Information</string>
     <string name="update_village_info">Update Village Information</string>
@@ -76,12 +64,6 @@
     <string name="str_isSampledHH_two">Not Responding</string>
     <string name="str_isSampledHH_three">Open(to survey)</string>
     <string name="str_HH01">Household number from the house listing format <font color='#FF0000'>*</font></string>
-<!--
-    <string name="str_HH06">What language do you speak at home, most often with your children?</string>
-    <string name="str_HH06a">Same as test</string>
-    <string name="str_HH06b">Different from test</string>
--->
-
     <string name="str_add_household_info">Add Household Information</string>
     <string name="str_update_household_info">Update Household Information</string>
     <string name="str_household_info">Household Information</string>
@@ -131,8 +113,6 @@
     <string name="str_HH_have_lbl">Does this household have:</string>
     <string name="select_household">Select Household</string>
     <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
-
-
     <string name="add_child">Add Child</string>
     <string name="update_child">Update Child</string>
     <string name="str_CH04a">Does the child have any known disability?</string>
