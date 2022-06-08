@@ -1,24 +1,21 @@
 package com.kix.assessment.ui.household_activity.household_information_form;
 
+import static com.kix.assessment.KIXApplication.householdInformationDao;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.UiThread;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
-import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_HIF;
@@ -28,8 +25,6 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
-
-import static com.kix.assessment.KIXApplication.householdInformationDao;
 
 @EFragment(R.layout.fragment_add_information_household)
 public class Fragment_AddHouseholdInformation extends Fragment {
@@ -114,58 +109,58 @@ public class Fragment_AddHouseholdInformation extends Fragment {
     @AfterViews
     public void initialize() {
 
-        householdId = getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
-        villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+        this.householdId = this.getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
+        this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
 
-        selectedHH06b = selectedHH06c = selectedHH06d = selectedHH07a = selectedHH07b = selectedHH07c = selectedHH07d = selectedHH07e
-                = selectedHH07f = selectedHH07g = selectedHH07h = selectedHH07i = selectedHH07j = selectedHH07k = selectedHH07l = selectedHH07m
-                = selectedHH07n = selectedHH07o = selectedHH07p = selectedHH07q = 99;
+        this.selectedHH06b = this.selectedHH06c = this.selectedHH06d = this.selectedHH07a = this.selectedHH07b = this.selectedHH07c = this.selectedHH07d = this.selectedHH07e
+                = this.selectedHH07f = this.selectedHH07g = this.selectedHH07h = this.selectedHH07i = this.selectedHH07j = this.selectedHH07k = this.selectedHH07l = this.selectedHH07m
+                = this.selectedHH07n = this.selectedHH07o = this.selectedHH07p = this.selectedHH07q = 99;
 
-        if(getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD)!=null){
+        if(this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD)!=null){
 
-            tv_title.setText(getString(R.string.str_update_household_info));
-            Modal_HIF modalHif = householdInformationDao.getHIFbyHouseholdId(householdId);
-            et_members.setText(modalHif.HH06a);
-            setRadioButtonValues(modalHif);
+            this.tv_title.setText(this.getString(R.string.str_update_household_info));
+            final Modal_HIF modalHif = householdInformationDao.getHIFbyHouseholdId(this.householdId);
+            this.et_members.setText(modalHif.HH06a);
+            this.setRadioButtonValues(modalHif);
             if (modalHif.getHH06b().equalsIgnoreCase("1")) {
-                rl_howOften.setVisibility(View.VISIBLE);
+                this.rl_howOften.setVisibility(View.VISIBLE);
             }
 
         }
 
-        rg_lightSource.setOnCheckedChangeListener((group, checkedId) -> {
-                    if (checkedId == R.id.rb_HH07c_four) til_HH07c.setVisibility(View.VISIBLE);
+        this.rg_lightSource.setOnCheckedChangeListener((group, checkedId) -> {
+                    if (checkedId == R.id.rb_HH07c_four) this.til_HH07c.setVisibility(View.VISIBLE);
                     else {
-                        til_HH07c.setVisibility(View.GONE);
-                        et_HH07c_other.setText("");
+                        this.til_HH07c.setVisibility(View.GONE);
+                        this.et_HH07c_other.setText("");
                     }
                 }
         );
 
-        rg_waterSource.setOnCheckedChangeListener((group, checkedId) -> {
-                    if (checkedId == R.id.rb_HH07d_seven) til_HH07d.setVisibility(View.VISIBLE);
+        this.rg_waterSource.setOnCheckedChangeListener((group, checkedId) -> {
+                    if (checkedId == R.id.rb_HH07d_seven) this.til_HH07d.setVisibility(View.VISIBLE);
                     else {
-                        til_HH07d.setVisibility(View.GONE);
-                        et_HH07d_other.setText("");
+                        this.til_HH07d.setVisibility(View.GONE);
+                        this.et_HH07d_other.setText("");
                     }
                 }
         );
 
-        rg_mobile.setOnCheckedChangeListener((group, checkedId) -> {
+        this.rg_mobile.setOnCheckedChangeListener((group, checkedId) -> {
             if(checkedId == R.id.rb_HH07m_yes) {
-                rl_isItSmartphone.setVisibility(View.VISIBLE);
+                this.rl_isItSmartphone.setVisibility(View.VISIBLE);
             } else {
-                rl_isItSmartphone.setVisibility(View.GONE);
-                rg_isItSmartphone.clearCheck();
+                this.rl_isItSmartphone.setVisibility(View.GONE);
+                this.rg_isItSmartphone.clearCheck();
             }
         });
 
-        rg_speakEnglish.setOnCheckedChangeListener((group, checkedId) -> {
+        this.rg_speakEnglish.setOnCheckedChangeListener((group, checkedId) -> {
             if(checkedId == R.id.rb_HH06b_yes) {
-                rl_howOften.setVisibility(View.VISIBLE);
+                this.rl_howOften.setVisibility(View.VISIBLE);
             } else {
-                rl_howOften.setVisibility(View.GONE);
-                rg_engHowOften.clearCheck();
+                this.rl_howOften.setVisibility(View.GONE);
+                this.rg_engHowOften.clearCheck();
             }
         });
 
@@ -182,37 +177,37 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
     @Click(R.id.btn_save)
     public void saveHIF(){
-        getRadioButtonValues();
+        this.getRadioButtonValues();
 
-        if(selectedHH06b==99 || selectedHH06d==99 || selectedHH07a==99 || selectedHH07b==99 || selectedHH07c==99 || selectedHH07d==99 || selectedHH07e==99 ||
-        selectedHH07f==99 || selectedHH07g==99 || selectedHH07h==99 || selectedHH07i==99 || selectedHH07j==99 ||
-        selectedHH07k==99 ||selectedHH07l==99 || selectedHH07m==99 || selectedHH07o==99 || selectedHH07p==99 || selectedHH07q==99) {
-            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+        if(this.selectedHH06b ==99 || this.selectedHH06d ==99 || this.selectedHH07a ==99 || this.selectedHH07b ==99 || this.selectedHH07c ==99 || this.selectedHH07d ==99 || this.selectedHH07e ==99 ||
+                this.selectedHH07f ==99 || this.selectedHH07g ==99 || this.selectedHH07h ==99 || this.selectedHH07i ==99 || this.selectedHH07j ==99 ||
+                this.selectedHH07k ==99 || this.selectedHH07l ==99 || this.selectedHH07m ==99 || this.selectedHH07o ==99 || this.selectedHH07p ==99 || this.selectedHH07q ==99) {
+            Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
         } else {
-            if (getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
-                if (!et_HH07c_other.getText().toString().isEmpty())
-                    hh07c_other = et_HH07c_other.getText().toString();
-                if (!et_HH07d_other.getText().toString().isEmpty())
-                    hh07d_other = et_HH07d_other.getText().toString();
+            if (this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
+                if (!this.et_HH07c_other.getText().toString().isEmpty())
+                    this.hh07c_other = this.et_HH07c_other.getText().toString();
+                if (!this.et_HH07d_other.getText().toString().isEmpty())
+                    this.hh07d_other = this.et_HH07d_other.getText().toString();
 
-                if(selectedHH07m==1){
-                    if(selectedHH07n != 99) {
-                        updateHIF();
+                if(this.selectedHH07m ==1){
+                    if(this.selectedHH07n != 99) {
+                        this.updateHIF();
                     } else {
-                        Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    updateHIF();
+                    this.updateHIF();
                 }
             } else {
-                if(selectedHH07m==1){
-                    if(selectedHH07n != 99) {
-                        insertHIF();
+                if(this.selectedHH07m ==1){
+                    if(this.selectedHH07n != 99) {
+                        this.insertHIF();
                     } else {
-                        Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    insertHIF();
+                    this.insertHIF();
                 }
             }
         }
@@ -220,164 +215,164 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
     private void insertHIF() {
 
-        if(!et_HH07c_other.getText().toString().isEmpty()) hh07c_other = et_HH07c_other.getText().toString();
-        if(!et_HH07d_other.getText().toString().isEmpty()) hh07d_other = et_HH07d_other.getText().toString();
+        if(!this.et_HH07c_other.getText().toString().isEmpty()) this.hh07c_other = this.et_HH07c_other.getText().toString();
+        if(!this.et_HH07d_other.getText().toString().isEmpty()) this.hh07d_other = this.et_HH07d_other.getText().toString();
 
-        Modal_HIF modal_hif = new Modal_HIF();
-        modal_hif.setHH06a(et_members.getText().toString());
-        modal_hif.setHH06b(""+selectedHH06b);
-        modal_hif.setHH06c(""+selectedHH06c);
-        modal_hif.setHH06d(""+selectedHH06d);
-        modal_hif.setHH07a(""+selectedHH07a);
-        modal_hif.setHH07b(""+selectedHH07b);
-        modal_hif.setHH07c(""+selectedHH07c);
-        modal_hif.setHH07cOther(hh07c_other);
-        modal_hif.setHH07d(""+selectedHH07d);
-        modal_hif.setHH07dOther(hh07d_other);
-        modal_hif.setHH07e(""+selectedHH07e);
-        modal_hif.setHH07f(""+selectedHH07f);
-        modal_hif.setHH07g(""+selectedHH07g);
-        modal_hif.setHH07h(""+selectedHH07h);
-        modal_hif.setHH07i(""+selectedHH07i);
-        modal_hif.setHH07j(""+selectedHH07j);
-        modal_hif.setHH07k(""+selectedHH07k);
-        modal_hif.setHH07l(""+selectedHH07l);
-        modal_hif.setHH07m(""+selectedHH07m);
-        modal_hif.setHH07n(""+selectedHH07n);
-        modal_hif.setHH07o(""+selectedHH07o);
-        modal_hif.setHH07p(""+selectedHH07p);
-        modal_hif.setHH07q(""+selectedHH07q);
-        modal_hif.setCreatedOn(KIX_Utility.getCurrentDateTime());
-        modal_hif.setHouseholdId(householdId);
-        modal_hif.setVillageId(villageId);
+        final Modal_HIF modal_hif = new Modal_HIF();
+        modal_hif.setHH06a(this.et_members.getText().toString());
+        modal_hif.setHH06b(""+ this.selectedHH06b);
+        modal_hif.setHH06c(""+ this.selectedHH06c);
+        modal_hif.setHH06d(""+ this.selectedHH06d);
+        modal_hif.setHH07a(""+ this.selectedHH07a);
+        modal_hif.setHH07b(""+ this.selectedHH07b);
+        modal_hif.setHH07c(""+ this.selectedHH07c);
+        modal_hif.setHH07cOther(this.hh07c_other);
+        modal_hif.setHH07d(""+ this.selectedHH07d);
+        modal_hif.setHH07dOther(this.hh07d_other);
+        modal_hif.setHH07e(""+ this.selectedHH07e);
+        modal_hif.setHH07f(""+ this.selectedHH07f);
+        modal_hif.setHH07g(""+ this.selectedHH07g);
+        modal_hif.setHH07h(""+ this.selectedHH07h);
+        modal_hif.setHH07i(""+ this.selectedHH07i);
+        modal_hif.setHH07j(""+ this.selectedHH07j);
+        modal_hif.setHH07k(""+ this.selectedHH07k);
+        modal_hif.setHH07l(""+ this.selectedHH07l);
+        modal_hif.setHH07m(""+ this.selectedHH07m);
+        modal_hif.setHH07n(""+ this.selectedHH07n);
+        modal_hif.setHH07o(""+ this.selectedHH07o);
+        modal_hif.setHH07p(""+ this.selectedHH07p);
+        modal_hif.setHH07q(""+ this.selectedHH07q);
+        modal_hif.setInfo_createdOn(KIX_Utility.getCurrentDateTime());
+        modal_hif.setHouseholdId(this.householdId);
+        modal_hif.setVillageId(this.villageId);
         modal_hif.setSentFlag(0);
 
         householdInformationDao.insertHouseholdInfo(modal_hif);
-        BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "HouseholdInformation Added Successfully!", Toast.LENGTH_SHORT).show();
-        getFragmentManager().popBackStack();
+        BackupDatabase.backup(this.getActivity());
+        Toast.makeText(this.getActivity(), "HouseholdInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        this.getFragmentManager().popBackStack();
 
     }
 
     private void updateHIF() {
         householdInformationDao.updateHousehold(
-                et_members.getText().toString(),
-                ""+selectedHH06b,
-                ""+selectedHH06c,
-                ""+selectedHH06d,
-                ""+selectedHH07a,
-                ""+selectedHH07b,
-                ""+selectedHH07c,
-                et_HH07c_other.getText().toString(),
-                ""+selectedHH07d,
-                et_HH07d_other.getText().toString(),
-                ""+selectedHH07e,
-                ""+selectedHH07f,
-                ""+selectedHH07g,
-                ""+selectedHH07h,
-                ""+selectedHH07i,
-                ""+selectedHH07j,
-                ""+selectedHH07k,
-                ""+selectedHH07l,
-                ""+selectedHH07m,
-                ""+selectedHH07n,
-                ""+selectedHH07o,
-                ""+selectedHH07p,
-                ""+selectedHH07q,
-                householdId);
+                this.et_members.getText().toString(),
+                ""+ this.selectedHH06b,
+                ""+ this.selectedHH06c,
+                ""+ this.selectedHH06d,
+                ""+ this.selectedHH07a,
+                ""+ this.selectedHH07b,
+                ""+ this.selectedHH07c,
+                this.et_HH07c_other.getText().toString(),
+                ""+ this.selectedHH07d,
+                this.et_HH07d_other.getText().toString(),
+                ""+ this.selectedHH07e,
+                ""+ this.selectedHH07f,
+                ""+ this.selectedHH07g,
+                ""+ this.selectedHH07h,
+                ""+ this.selectedHH07i,
+                ""+ this.selectedHH07j,
+                ""+ this.selectedHH07k,
+                ""+ this.selectedHH07l,
+                ""+ this.selectedHH07m,
+                ""+ this.selectedHH07n,
+                ""+ this.selectedHH07o,
+                ""+ this.selectedHH07p,
+                ""+ this.selectedHH07q,
+                this.householdId);
 
-        BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "HouseholdInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
-        getFragmentManager().popBackStack();
+        BackupDatabase.backup(this.getActivity());
+        Toast.makeText(this.getActivity(), "HouseholdInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        this.getFragmentManager().popBackStack();
     }
 
-    private void setRadioButtonValues(Modal_HIF modalHif) {
+    private void setRadioButtonValues(final Modal_HIF modalHif) {
 
-        if(modalHif.HH06b.equalsIgnoreCase("1")) rg_speakEnglish.check(R.id.rb_HH06b_yes);
-        else rg_speakEnglish.check(R.id.rb_HH06b_No);
+        if(modalHif.HH06b.equalsIgnoreCase("1")) this.rg_speakEnglish.check(R.id.rb_HH06b_yes);
+        else this.rg_speakEnglish.check(R.id.rb_HH06b_No);
 
-        if(modalHif.HH06c.equalsIgnoreCase("1")) rg_engHowOften.check(R.id.rb_HH06c_yes);
-        else if (modalHif.HH06c.equalsIgnoreCase("0")) rg_engHowOften.check(R.id.rb_HH06c_No);
+        if(modalHif.HH06c.equalsIgnoreCase("1")) this.rg_engHowOften.check(R.id.rb_HH06c_yes);
+        else if (modalHif.HH06c.equalsIgnoreCase("0")) this.rg_engHowOften.check(R.id.rb_HH06c_No);
 
-        if(modalHif.HH06d.equalsIgnoreCase("1")) rg_anyOtherLang.check(R.id.rb_HH06d_yes);
-        else rg_anyOtherLang.check(R.id.rb_HH06d_No);
+        if(modalHif.HH06d.equalsIgnoreCase("1")) this.rg_anyOtherLang.check(R.id.rb_HH06d_yes);
+        else this.rg_anyOtherLang.check(R.id.rb_HH06d_No);
 
-        if(modalHif.getHH07a().equalsIgnoreCase("1")) rg_hhRoofing.check(R.id.rb_HH07a_one);
-        else if(modalHif.getHH07a().equalsIgnoreCase("2")) rg_hhRoofing.check(R.id.rb_HH07a_two);
-        else if(modalHif.getHH07a().equalsIgnoreCase("3")) rg_hhRoofing.check(R.id.rb_HH07a_three);
+        if(modalHif.getHH07a().equalsIgnoreCase("1")) this.rg_hhRoofing.check(R.id.rb_HH07a_one);
+        else if(modalHif.getHH07a().equalsIgnoreCase("2")) this.rg_hhRoofing.check(R.id.rb_HH07a_two);
+        else if(modalHif.getHH07a().equalsIgnoreCase("3")) this.rg_hhRoofing.check(R.id.rb_HH07a_three);
 
-        if(modalHif.getHH07b().equalsIgnoreCase("1")) rg_hhWall.check(R.id.rb_HH07b_one);
-        else if(modalHif.getHH07b().equalsIgnoreCase("2")) rg_hhWall.check(R.id.rb_HH07b_two);
-        else if(modalHif.getHH07b().equalsIgnoreCase("3")) rg_hhWall.check(R.id.rb_HH07b_three);
+        if(modalHif.getHH07b().equalsIgnoreCase("1")) this.rg_hhWall.check(R.id.rb_HH07b_one);
+        else if(modalHif.getHH07b().equalsIgnoreCase("2")) this.rg_hhWall.check(R.id.rb_HH07b_two);
+        else if(modalHif.getHH07b().equalsIgnoreCase("3")) this.rg_hhWall.check(R.id.rb_HH07b_three);
 
-        if(modalHif.getHH07c().equalsIgnoreCase("1")) rg_lightSource.check(R.id.rb_HH07c_one);
-        else if(modalHif.getHH07c().equalsIgnoreCase("2")) rg_lightSource.check(R.id.rb_HH07c_two);
-        else if(modalHif.getHH07c().equalsIgnoreCase("3")) rg_lightSource.check(R.id.rb_HH07c_three);
+        if(modalHif.getHH07c().equalsIgnoreCase("1")) this.rg_lightSource.check(R.id.rb_HH07c_one);
+        else if(modalHif.getHH07c().equalsIgnoreCase("2")) this.rg_lightSource.check(R.id.rb_HH07c_two);
+        else if(modalHif.getHH07c().equalsIgnoreCase("3")) this.rg_lightSource.check(R.id.rb_HH07c_three);
         else if(modalHif.getHH07c().equalsIgnoreCase("4")) {
-            rg_lightSource.check(R.id.rb_HH07c_four);
-            et_HH07c_other.setText(modalHif.HH07cOther);
-            til_HH07c.setVisibility(View.VISIBLE);
+            this.rg_lightSource.check(R.id.rb_HH07c_four);
+            this.et_HH07c_other.setText(modalHif.HH07cOther);
+            this.til_HH07c.setVisibility(View.VISIBLE);
         }
 
-        if(modalHif.getHH07d().equalsIgnoreCase("1")) rg_waterSource.check(R.id.rb_HH07d_one);
-        else if(modalHif.getHH07d().equalsIgnoreCase("2")) rg_waterSource.check(R.id.rb_HH07d_two);
-        else if(modalHif.getHH07d().equalsIgnoreCase("3")) rg_waterSource.check(R.id.rb_HH07d_three);
-        else if(modalHif.getHH07d().equalsIgnoreCase("4")) rg_waterSource.check(R.id.rb_HH07d_four);
-        else if(modalHif.getHH07d().equalsIgnoreCase("5")) rg_waterSource.check(R.id.rb_HH07d_five);
-        else if(modalHif.getHH07d().equalsIgnoreCase("6")) rg_waterSource.check(R.id.rb_HH07d_six);
+        if(modalHif.getHH07d().equalsIgnoreCase("1")) this.rg_waterSource.check(R.id.rb_HH07d_one);
+        else if(modalHif.getHH07d().equalsIgnoreCase("2")) this.rg_waterSource.check(R.id.rb_HH07d_two);
+        else if(modalHif.getHH07d().equalsIgnoreCase("3")) this.rg_waterSource.check(R.id.rb_HH07d_three);
+        else if(modalHif.getHH07d().equalsIgnoreCase("4")) this.rg_waterSource.check(R.id.rb_HH07d_four);
+        else if(modalHif.getHH07d().equalsIgnoreCase("5")) this.rg_waterSource.check(R.id.rb_HH07d_five);
+        else if(modalHif.getHH07d().equalsIgnoreCase("6")) this.rg_waterSource.check(R.id.rb_HH07d_six);
         else if(modalHif.getHH07d().equalsIgnoreCase("7")) {
-            rg_waterSource.check(R.id.rb_HH07d_seven);
-            et_HH07d_other.setText(modalHif.HH07dOther);
-            til_HH07d.setVisibility(View.VISIBLE);
+            this.rg_waterSource.check(R.id.rb_HH07d_seven);
+            this.et_HH07d_other.setText(modalHif.HH07dOther);
+            this.til_HH07d.setVisibility(View.VISIBLE);
         }
 
-        if(modalHif.HH07e.equalsIgnoreCase("1")) rg_electricity.check(R.id.rb_HH07e_yes);
-        else rg_electricity.check(R.id.rb_HH07e_No);
+        if(modalHif.HH07e.equalsIgnoreCase("1")) this.rg_electricity.check(R.id.rb_HH07e_yes);
+        else this.rg_electricity.check(R.id.rb_HH07e_No);
 
-        if(modalHif.HH07f.equalsIgnoreCase("1")) rg_toilet.check(R.id.rb_HH07f_yes);
-        else rg_toilet.check(R.id.rb_HH07f_No);
+        if(modalHif.HH07f.equalsIgnoreCase("1")) this.rg_toilet.check(R.id.rb_HH07f_yes);
+        else this.rg_toilet.check(R.id.rb_HH07f_No);
 
-        if(modalHif.HH07g.equalsIgnoreCase("1")) rg_memberCompletedDiploma.check(R.id.rb_HH07g_yes);
-        else rg_memberCompletedDiploma.check(R.id.rb_HH07g_No);
+        if(modalHif.HH07g.equalsIgnoreCase("1")) this.rg_memberCompletedDiploma.check(R.id.rb_HH07g_yes);
+        else this.rg_memberCompletedDiploma.check(R.id.rb_HH07g_No);
 
-        if(modalHif.HH07h.equalsIgnoreCase("1")) rg_readingMaterial.check(R.id.rb_HH07h_yes);
-        else rg_readingMaterial.check(R.id.rb_HH07h_No);
+        if(modalHif.HH07h.equalsIgnoreCase("1")) this.rg_readingMaterial.check(R.id.rb_HH07h_yes);
+        else this.rg_readingMaterial.check(R.id.rb_HH07h_No);
 
-        if(modalHif.HH07i.equalsIgnoreCase("1")) rg_otherBooks.check(R.id.rb_HH07i_yes);
-        else rg_otherBooks.check(R.id.rb_HH07i_No);
+        if(modalHif.HH07i.equalsIgnoreCase("1")) this.rg_otherBooks.check(R.id.rb_HH07i_yes);
+        else this.rg_otherBooks.check(R.id.rb_HH07i_No);
 
-        if(modalHif.HH07j.equalsIgnoreCase("1")) rg_computer.check(R.id.rb_HH07j_yes);
-        else rg_computer.check(R.id.rb_HH07j_No);
+        if(modalHif.HH07j.equalsIgnoreCase("1")) this.rg_computer.check(R.id.rb_HH07j_yes);
+        else this.rg_computer.check(R.id.rb_HH07j_No);
 
-        if(modalHif.HH07k.equalsIgnoreCase("1")) rg_television.check(R.id.rb_HH07k_yes);
-        else rg_television.check(R.id.rb_HH07k_No);
+        if(modalHif.HH07k.equalsIgnoreCase("1")) this.rg_television.check(R.id.rb_HH07k_yes);
+        else this.rg_television.check(R.id.rb_HH07k_No);
 
         if(modalHif.HH07l.equalsIgnoreCase("1")) {
-            rg_radio.check(R.id.rb_HH07l_yes);
+            this.rg_radio.check(R.id.rb_HH07l_yes);
         } else {
-            rg_radio.check(R.id.rb_HH07l_No);
+            this.rg_radio.check(R.id.rb_HH07l_No);
         }
 
         if(modalHif.HH07m.equalsIgnoreCase("1")) {
-            rg_mobile.check(R.id.rb_HH07m_yes);
-            rl_isItSmartphone.setVisibility(View.VISIBLE);
+            this.rg_mobile.check(R.id.rb_HH07m_yes);
+            this.rl_isItSmartphone.setVisibility(View.VISIBLE);
         }
         else {
-            rg_mobile.check(R.id.rb_HH07m_No);
-            rl_isItSmartphone.setVisibility(View.GONE);
+            this.rg_mobile.check(R.id.rb_HH07m_No);
+            this.rl_isItSmartphone.setVisibility(View.GONE);
         }
 
-        if(modalHif.HH07n.equalsIgnoreCase("1")) rg_isItSmartphone.check(R.id.rb_HH07n_yes);
-        else rg_isItSmartphone.check(R.id.rb_HH07n_No);
+        if(modalHif.HH07n.equalsIgnoreCase("1")) this.rg_isItSmartphone.check(R.id.rb_HH07n_yes);
+        else this.rg_isItSmartphone.check(R.id.rb_HH07n_No);
 
-        if(modalHif.HH07o.equalsIgnoreCase("1")) rg_fourWheeler.check(R.id.rb_HH07o_yes);
-        else rg_fourWheeler.check(R.id.rb_HH07o_No);
+        if(modalHif.HH07o.equalsIgnoreCase("1")) this.rg_fourWheeler.check(R.id.rb_HH07o_yes);
+        else this.rg_fourWheeler.check(R.id.rb_HH07o_No);
 
-        if(modalHif.HH07p.equalsIgnoreCase("1")) rg_twoWheeler.check(R.id.rb_HH07p_yes);
-        else rg_twoWheeler.check(R.id.rb_HH07p_No);
+        if(modalHif.HH07p.equalsIgnoreCase("1")) this.rg_twoWheeler.check(R.id.rb_HH07p_yes);
+        else this.rg_twoWheeler.check(R.id.rb_HH07p_No);
 
-        if(modalHif.HH07q.equalsIgnoreCase("1")) rg_bicycle.check(R.id.rb_HH07q_yes);
-        else rg_bicycle.check(R.id.rb_HH07q_No);
+        if(modalHif.HH07q.equalsIgnoreCase("1")) this.rg_bicycle.check(R.id.rb_HH07q_yes);
+        else this.rg_bicycle.check(R.id.rb_HH07q_No);
     }
 
     public void getRadioButtonValues(){
@@ -423,167 +418,167 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         rb_HH07p = getView().findViewById(selectedHH07p);
         rb_HH07q = getView().findViewById(selectedHH07q);*/
 
-        if (this.getView().findViewById(this.rg_speakEnglish.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06b_yes))
-            selectedHH06b = 1;
-        else if (this.getView().findViewById(this.rg_speakEnglish.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06b_No))
-            selectedHH06b = 0;
-        if (this.getView().findViewById(this.rg_engHowOften.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06c_yes))
-            selectedHH06c = 1;
-        else if (this.getView().findViewById(this.rg_engHowOften.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06c_No))
-            selectedHH06c = 0;
-        if (this.getView().findViewById(this.rg_anyOtherLang.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06d_yes))
-            selectedHH06d = 1;
-        else if (this.getView().findViewById(this.rg_anyOtherLang.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH06d_No))
-            selectedHH06d = 0;
-        if (this.getView().findViewById(this.rg_hhRoofing.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07a_one))
-            selectedHH07a = 1;
-        else if (this.getView().findViewById(this.rg_hhRoofing.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07a_two))
-            selectedHH07a = 2;
-        else if (this.getView().findViewById(this.rg_hhRoofing.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07a_three))
-            selectedHH07a = 3;
-        if (this.getView().findViewById(this.rg_hhWall.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07b_one))
-            selectedHH07b = 1;
-        else if (this.getView().findViewById(this.rg_hhWall.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07b_two))
-            selectedHH07b = 2;
-        else if (this.getView().findViewById(this.rg_hhWall.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07b_three))
-            selectedHH07b = 3;
-        if (this.getView().findViewById(this.rg_lightSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07c_one))
-            selectedHH07c = 1;
-        else if (this.getView().findViewById(this.rg_lightSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07c_two))
-            selectedHH07c = 2;
-        else if (this.getView().findViewById(this.rg_lightSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07c_three))
-            selectedHH07c = 3;
-        else if (this.getView().findViewById(this.rg_lightSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07c_four))
-            selectedHH07c = 4;
-        if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_one))
-            selectedHH07d = 1;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_two))
-            selectedHH07d = 2;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_three))
-            selectedHH07d = 3;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_four))
-            selectedHH07d = 4;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_five))
-            selectedHH07d = 5;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_six))
-            selectedHH07d = 6;
-        else if (this.getView().findViewById(this.rg_waterSource.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07d_seven))
-            selectedHH07d = 7;
-        if (this.getView().findViewById(this.rg_electricity.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07e_yes))
-            selectedHH07e = 1;
-        else if (this.getView().findViewById(this.rg_electricity.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07e_No))
-            selectedHH07e = 0;
+        if (getView().findViewById(rg_speakEnglish.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06b_yes))
+            this.selectedHH06b = 1;
+        else if (getView().findViewById(rg_speakEnglish.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06b_No))
+            this.selectedHH06b = 0;
+        if (getView().findViewById(rg_engHowOften.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06c_yes))
+            this.selectedHH06c = 1;
+        else if (getView().findViewById(rg_engHowOften.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06c_No))
+            this.selectedHH06c = 0;
+        if (getView().findViewById(rg_anyOtherLang.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06d_yes))
+            this.selectedHH06d = 1;
+        else if (getView().findViewById(rg_anyOtherLang.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH06d_No))
+            this.selectedHH06d = 0;
+        if (getView().findViewById(rg_hhRoofing.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07a_one))
+            this.selectedHH07a = 1;
+        else if (getView().findViewById(rg_hhRoofing.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07a_two))
+            this.selectedHH07a = 2;
+        else if (getView().findViewById(rg_hhRoofing.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07a_three))
+            this.selectedHH07a = 3;
+        if (getView().findViewById(rg_hhWall.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07b_one))
+            this.selectedHH07b = 1;
+        else if (getView().findViewById(rg_hhWall.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07b_two))
+            this.selectedHH07b = 2;
+        else if (getView().findViewById(rg_hhWall.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07b_three))
+            this.selectedHH07b = 3;
+        if (getView().findViewById(rg_lightSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07c_one))
+            this.selectedHH07c = 1;
+        else if (getView().findViewById(rg_lightSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07c_two))
+            this.selectedHH07c = 2;
+        else if (getView().findViewById(rg_lightSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07c_three))
+            this.selectedHH07c = 3;
+        else if (getView().findViewById(rg_lightSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07c_four))
+            this.selectedHH07c = 4;
+        if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_one))
+            this.selectedHH07d = 1;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_two))
+            this.selectedHH07d = 2;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_three))
+            this.selectedHH07d = 3;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_four))
+            this.selectedHH07d = 4;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_five))
+            this.selectedHH07d = 5;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_six))
+            this.selectedHH07d = 6;
+        else if (getView().findViewById(rg_waterSource.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07d_seven))
+            this.selectedHH07d = 7;
+        if (getView().findViewById(rg_electricity.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07e_yes))
+            this.selectedHH07e = 1;
+        else if (getView().findViewById(rg_electricity.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07e_No))
+            this.selectedHH07e = 0;
 
-        if (this.getView().findViewById(this.rg_toilet.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07f_yes))
-            selectedHH07f = 1;
-        else if (this.getView().findViewById(this.rg_toilet.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07f_No))
-            selectedHH07f = 0;
+        if (getView().findViewById(rg_toilet.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07f_yes))
+            this.selectedHH07f = 1;
+        else if (getView().findViewById(rg_toilet.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07f_No))
+            this.selectedHH07f = 0;
 
-        if (this.getView().findViewById(this.rg_memberCompletedDiploma.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07g_yes))
-            selectedHH07g = 1;
-        else if (this.getView().findViewById(this.rg_memberCompletedDiploma.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07g_No))
-            selectedHH07g = 0;
-        if (this.getView().findViewById(this.rg_readingMaterial.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07h_yes))
-            selectedHH07h = 1;
-        else if (this.getView().findViewById(this.rg_readingMaterial.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07h_No))
-            selectedHH07h = 0;
-        if (this.getView().findViewById(this.rg_otherBooks.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07i_yes))
-            selectedHH07i = 1;
-        else if (this.getView().findViewById(this.rg_otherBooks.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07i_No))
-            selectedHH07i = 0;
-        if (this.getView().findViewById(this.rg_computer.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07j_yes))
-            selectedHH07j = 1;
-        else if (this.getView().findViewById(this.rg_computer.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07j_No))
-            selectedHH07j = 0;
+        if (getView().findViewById(rg_memberCompletedDiploma.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07g_yes))
+            this.selectedHH07g = 1;
+        else if (getView().findViewById(rg_memberCompletedDiploma.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07g_No))
+            this.selectedHH07g = 0;
+        if (getView().findViewById(rg_readingMaterial.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07h_yes))
+            this.selectedHH07h = 1;
+        else if (getView().findViewById(rg_readingMaterial.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07h_No))
+            this.selectedHH07h = 0;
+        if (getView().findViewById(rg_otherBooks.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07i_yes))
+            this.selectedHH07i = 1;
+        else if (getView().findViewById(rg_otherBooks.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07i_No))
+            this.selectedHH07i = 0;
+        if (getView().findViewById(rg_computer.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07j_yes))
+            this.selectedHH07j = 1;
+        else if (getView().findViewById(rg_computer.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07j_No))
+            this.selectedHH07j = 0;
 
-        if (this.getView().findViewById(this.rg_television.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07k_yes))
-            selectedHH07k = 1;
-        else if (this.getView().findViewById(this.rg_television.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07k_No))
-            selectedHH07k = 0;
+        if (getView().findViewById(rg_television.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07k_yes))
+            this.selectedHH07k = 1;
+        else if (getView().findViewById(rg_television.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07k_No))
+            this.selectedHH07k = 0;
 
-        if (this.getView().findViewById(this.rg_radio.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07l_yes))
-            selectedHH07l = 1;
-        else if (this.getView().findViewById(this.rg_radio.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07l_No))
-            selectedHH07l = 0;
+        if (getView().findViewById(rg_radio.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07l_yes))
+            this.selectedHH07l = 1;
+        else if (getView().findViewById(rg_radio.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07l_No))
+            this.selectedHH07l = 0;
 
-        if (this.getView().findViewById(this.rg_mobile.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07m_yes))
-            selectedHH07m = 1;
-        else if (this.getView().findViewById(this.rg_mobile.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07m_No))
-            selectedHH07m = 0;
+        if (getView().findViewById(rg_mobile.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07m_yes))
+            this.selectedHH07m = 1;
+        else if (getView().findViewById(rg_mobile.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07m_No))
+            this.selectedHH07m = 0;
 
-        if (this.getView().findViewById(this.rg_isItSmartphone.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07n_yes))
-            selectedHH07n = 1;
-        else if (this.getView().findViewById(this.rg_isItSmartphone.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07n_No))
-            selectedHH07n = 0;
+        if (getView().findViewById(rg_isItSmartphone.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07n_yes))
+            this.selectedHH07n = 1;
+        else if (getView().findViewById(rg_isItSmartphone.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07n_No))
+            this.selectedHH07n = 0;
 
-        if (this.getView().findViewById(this.rg_fourWheeler.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07o_yes))
-            selectedHH07o = 1;
-        else if (this.getView().findViewById(this.rg_fourWheeler.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07o_No))
-            selectedHH07o = 0;
+        if (getView().findViewById(rg_fourWheeler.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07o_yes))
+            this.selectedHH07o = 1;
+        else if (getView().findViewById(rg_fourWheeler.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07o_No))
+            this.selectedHH07o = 0;
 
-        if (this.getView().findViewById(this.rg_twoWheeler.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07p_yes))
-            selectedHH07p = 1;
-        else if (this.getView().findViewById(this.rg_twoWheeler.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07p_No))
-            selectedHH07p = 0;
+        if (getView().findViewById(rg_twoWheeler.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07p_yes))
+            this.selectedHH07p = 1;
+        else if (getView().findViewById(rg_twoWheeler.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07p_No))
+            this.selectedHH07p = 0;
 
-        if (this.getView().findViewById(this.rg_bicycle.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07q_yes))
-            selectedHH07q = 1;
-        else if (this.getView().findViewById(this.rg_bicycle.getCheckedRadioButtonId())
-                == this.getView().findViewById(R.id.rb_HH07q_No))
-            selectedHH07q = 0;
+        if (getView().findViewById(rg_bicycle.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07q_yes))
+            this.selectedHH07q = 1;
+        else if (getView().findViewById(rg_bicycle.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_HH07q_No))
+            this.selectedHH07q = 0;
     }
 
     @Override
     public void onResume() {
-        KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+        KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
         super.onResume();
     }
 

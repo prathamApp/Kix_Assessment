@@ -69,158 +69,158 @@ public class Fragment_AddVillage extends Fragment {
 
     @AfterViews
     public void initialize() {
-        mContext = getActivity();
-        if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.EditState = this.EditDist = this.EditVil = 0;
-            this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
-            modalVillage = villageDao.getVillageByVillId(this.villageId);
-            this.tv_TitleLBL.setText(getString(R.string.update_village));
+        this.mContext = this.getActivity();
+        if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            EditState = EditDist = EditVil = 0;
+            villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
+            this.modalVillage = villageDao.getVillageByVillId(villageId);
+            tv_TitleLBL.setText(this.getString(R.string.update_village));
 /*            this.et_VillageName.setText(modalVillage.getVillageName());
             this.et_District.setText(modalVillage.getVillageDistrict());
             this.et_State.setText(modalVillage.getVillageState());*/
         } else {
-            this.EditState = 1;
-            this.EditDist = 1;
-            this.EditVil = 1;
+            EditState = 1;
+            EditDist = 1;
+            EditVil = 1;
         }
-        getStateList("state_lists", modalVillage);
-        this.surveyorCode = this.getArguments().getString(Kix_Constant.SURVEYOR_CODE);
+        this.getStateList("state_lists", this.modalVillage);
+        surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
     }
 
-    public void getStateList(String jsonName, Modal_Village modalVillage) {
-        JSONArray jsonArr = null;
+    public void getStateList(final String jsonName, final Modal_Village modalVillage) {
+        final JSONArray jsonArr = null;
         try {
             //InputStream is = new FileInputStream(ApplicationClass.pradigiPath + "/.FCA/"+FastSave.getInstance().getString(FC_Constants.LANGUAGE, FC_Constants.HINDI)+"/RC/" + jasonName);
-            InputStream is = mContext.getAssets().open("state_lists_jsons" + "/" + jsonName + ".json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
+            final InputStream is = this.mContext.getAssets().open("state_lists_jsons" + "/" + jsonName + ".json");
+            final int size = is.available();
+            final byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            String jsonStr = new String(buffer);
+            final String jsonStr = new String(buffer);
 //            jsonArr = new JSONArray(jsonStr);
-            Gson gson = new Gson();
-            Type type = new TypeToken<Modal_Location>() {
+            final Gson gson = new Gson();
+            final Type type = new TypeToken<Modal_Location>() {
             }.getType();
-            modal_location = gson.fromJson(jsonStr, type);
+            this.modal_location = gson.fromJson(jsonStr, type);
             //returnStoryNavigate = jsonObj.getJSONArray();
-            setStates(modalVillage);
-        } catch (Exception e) {
+            this.setStates(modalVillage);
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
 
     @UiThread
-    public void setStates(Modal_Village modalVillage) {
-        this.StatesEpos = 0;
-        this.DistEpos = 0;
-        this.VillEpos = 0;
-        String[] statesArray = new String[modal_location.getStateList().size()];
-        for (int i = 0; i < modal_location.getStateList().size(); i++) {
-            statesArray[i] = modal_location.getStateList().get(i).getStateName();
-            if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-                if (modal_location.getStateList().get(i).getStateName()
+    public void setStates(final Modal_Village modalVillage) {
+        StatesEpos = 0;
+        DistEpos = 0;
+        VillEpos = 0;
+        final String[] statesArray = new String[this.modal_location.getStateList().size()];
+        for (int i = 0; i < this.modal_location.getStateList().size(); i++) {
+            statesArray[i] = this.modal_location.getStateList().get(i).getStateName();
+            if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+                if (this.modal_location.getStateList().get(i).getStateName()
                         .equalsIgnoreCase(modalVillage.getVillageState())) {
-                    StatesEpos = i;
-                    for (int j = 0; j < modal_location.getStateList().get(this.StatesEpos).getDistrictList().size(); j++) {
-                        if (modal_location.getStateList().get(this.StatesEpos).getDistrictList().get(j).getDistrictName()
+                    this.StatesEpos = i;
+                    for (int j = 0; j < this.modal_location.getStateList().get(StatesEpos).getDistrictList().size(); j++) {
+                        if (this.modal_location.getStateList().get(StatesEpos).getDistrictList().get(j).getDistrictName()
                                 .equalsIgnoreCase(modalVillage.getVillageDistrict())) {
-                            this.DistEpos = j;
-                            for (int q = 0; q < modal_location.getStateList().get(this.StatesEpos)
-                                    .getDistrictList().get(this.DistEpos).getVillageList().size(); q++) {
-                                if (modal_location.getStateList().get(this.StatesEpos)
-                                        .getDistrictList().get(this.DistEpos).getVillageList().get(q).getVillageName()
+                            DistEpos = j;
+                            for (int q = 0; q < this.modal_location.getStateList().get(StatesEpos)
+                                    .getDistrictList().get(DistEpos).getVillageList().size(); q++) {
+                                if (this.modal_location.getStateList().get(StatesEpos)
+                                        .getDistrictList().get(DistEpos).getVillageList().get(q).getVillageName()
                                         .equalsIgnoreCase(modalVillage.getVillageName()))
-                                    VillEpos = q;
+                                    this.VillEpos = q;
                             }
                         }
                     }
                 }
             }
         }
-        adapterState = new ArrayAdapter(getActivity(), R.layout.spinner_item, statesArray);
-        spn_State.setAdapter(adapterState);
-        if (this.EditState < 1 && getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.EditState++;
-            statePos = StatesEpos;
-            spn_State.setSelection(statePos);
+        this.adapterState = new ArrayAdapter(this.getActivity(), R.layout.spinner_item, statesArray);
+        this.spn_State.setAdapter(this.adapterState);
+        if (EditState < 1 && this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            EditState++;
+            this.statePos = this.StatesEpos;
+            this.spn_State.setSelection(this.statePos);
         }
-        spn_State.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        this.spn_State.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                statePos = position;
-                stateName = modal_location.getStateList().get(statePos).getStateName();
-                setDistricts(statePos, modalVillage);
+            public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
+                Fragment_AddVillage.this.statePos = position;
+                Fragment_AddVillage.this.stateName = Fragment_AddVillage.this.modal_location.getStateList().get(Fragment_AddVillage.this.statePos).getStateName();
+                Fragment_AddVillage.this.setDistricts(Fragment_AddVillage.this.statePos, modalVillage);
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-    }
-
-    @UiThread
-    public void setDistricts(int statePos, Modal_Village modalVillage) {
-        String[] districtsArray = new String[modal_location.getStateList().get(statePos).getDistrictList().size()];
-        for (int i = 0; i < modal_location.getStateList().get(statePos).getDistrictList().size(); i++) {
-            districtsArray[i] = modal_location.getStateList().get(statePos).getDistrictList().get(i).getDistrictName();
-        }
-        adapterDistrict = new ArrayAdapter(getActivity(), R.layout.spinner_item, districtsArray);
-        spn_District.setAdapter(adapterDistrict);
-        if (this.EditDist < 1 && getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.EditDist++;
-            distPos = DistEpos;
-            spn_District.setSelection(distPos);
-        }
-        spn_District.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                distPos = position;
-                districtName = modal_location.getStateList().get(statePos)
-                        .getDistrictList().get(distPos).getDistrictName();
-                setVillages(distPos, modalVillage);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(final AdapterView<?> parent) {
 
             }
         });
     }
 
     @UiThread
-    public void setVillages(int distPoss, Modal_Village modalVillage) {
-        this.distPos = distPos;
-        String[] villageArray = new String[modal_location.getStateList().get(statePos)
-                .getDistrictList().get(distPos).getVillageList().size()];
-        for (int i = 0; i < modal_location.getStateList().get(statePos)
-                .getDistrictList().get(distPos).getVillageList().size(); i++) {
-            villageArray[i] = modal_location.getStateList().get(statePos)
-                    .getDistrictList().get(distPos).getVillageList().get(i).getVillageName();
+    public void setDistricts(final int statePos, final Modal_Village modalVillage) {
+        final String[] districtsArray = new String[this.modal_location.getStateList().get(statePos).getDistrictList().size()];
+        for (int i = 0; i < this.modal_location.getStateList().get(statePos).getDistrictList().size(); i++) {
+            districtsArray[i] = this.modal_location.getStateList().get(statePos).getDistrictList().get(i).getDistrictName();
         }
-        adapterVillage = new ArrayAdapter(getActivity(), R.layout.spinner_item, villageArray);
-        spn_Village.setAdapter(adapterVillage);
+        this.adapterDistrict = new ArrayAdapter(this.getActivity(), R.layout.spinner_item, districtsArray);
+        this.spn_District.setAdapter(this.adapterDistrict);
+        if (EditDist < 1 && this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            EditDist++;
+            this.distPos = this.DistEpos;
+            this.spn_District.setSelection(this.distPos);
+        }
+        this.spn_District.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
+                Fragment_AddVillage.this.distPos = position;
+                Fragment_AddVillage.this.districtName = Fragment_AddVillage.this.modal_location.getStateList().get(statePos)
+                        .getDistrictList().get(Fragment_AddVillage.this.distPos).getDistrictName();
+                Fragment_AddVillage.this.setVillages(Fragment_AddVillage.this.distPos, modalVillage);
+            }
 
-        if (this.EditVil < 1 && getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            this.EditVil++;
-            villPos = VillEpos;
+            @Override
+            public void onNothingSelected(final AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    @UiThread
+    public void setVillages(final int distPoss, final Modal_Village modalVillage) {
+        distPos = this.distPos;
+        final String[] villageArray = new String[this.modal_location.getStateList().get(this.statePos)
+                .getDistrictList().get(this.distPos).getVillageList().size()];
+        for (int i = 0; i < this.modal_location.getStateList().get(this.statePos)
+                .getDistrictList().get(this.distPos).getVillageList().size(); i++) {
+            villageArray[i] = this.modal_location.getStateList().get(this.statePos)
+                    .getDistrictList().get(this.distPos).getVillageList().get(i).getVillageName();
+        }
+        this.adapterVillage = new ArrayAdapter(this.getActivity(), R.layout.spinner_item, villageArray);
+        this.spn_Village.setAdapter(this.adapterVillage);
+
+        if (EditVil < 1 && this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            EditVil++;
+            this.villPos = this.VillEpos;
 //            villageBooklet = modal_location.getStateList().get(statePos)
 //                    .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
-            spn_Village.setSelection(villPos);
+            this.spn_Village.setSelection(this.villPos);
         }
 
-        spn_Village.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        this.spn_Village.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                villPos = position;
-                villageName = modal_location.getStateList().get(statePos)
-                        .getDistrictList().get(distPos).getVillageList().get(villPos).getVillageName();
+            public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
+                Fragment_AddVillage.this.villPos = position;
+                Fragment_AddVillage.this.villageName = Fragment_AddVillage.this.modal_location.getStateList().get(Fragment_AddVillage.this.statePos)
+                        .getDistrictList().get(Fragment_AddVillage.this.distPos).getVillageList().get(Fragment_AddVillage.this.villPos).getVillageName();
 //                villageBooklet = modal_location.getStateList().get(statePos)
 //                        .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(final AdapterView<?> parent) {
             }
 
         });
@@ -229,18 +229,18 @@ public class Fragment_AddVillage extends Fragment {
     @Click(R.id.btn_save)
     public void saveVillage() {
 
-        FastSave.getInstance().saveString(Kix_Constant.BOOKLET, villageBooklet);
+        FastSave.getInstance().saveString(Kix_Constant.BOOKLET, this.villageBooklet);
 
-        if (this.getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            villageDao.updateVillage(villageName,
-                    districtName,
-                    stateName,
-                    this.villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
-                    villageBooklet);
-            Toast.makeText(this.getActivity(), "Village Edited Successfully!", Toast.LENGTH_SHORT).show();
-            this.getFragmentManager().popBackStack();
+        if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            villageDao.updateVillage(this.villageName,
+                    this.districtName,
+                    this.stateName,
+                    villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
+                    this.villageBooklet);
+            Toast.makeText(getActivity(), "Village Edited Successfully!", Toast.LENGTH_SHORT).show();
+            getFragmentManager().popBackStack();
         } else
-            this.insertVillage();
+            insertVillage();
 /*
         if (!this.et_VillageName.getText().toString().isEmpty() && !this.et_District.getText().toString().isEmpty()
                 && !this.et_State.getText().toString().isEmpty()) {
@@ -259,24 +259,24 @@ public class Fragment_AddVillage extends Fragment {
     }
 
     private void insertVillage() {
-        final String villageID = KIX_Utility.getUUID().toString();
-        final Modal_Village modalVillage = new Modal_Village();
+        String villageID = KIX_Utility.getUUID().toString();
+        Modal_Village modalVillage = new Modal_Village();
         modalVillage.setVillageId("" + villageID);
-        modalVillage.setVillageName(villageName);
-        modalVillage.setVillageDistrict(districtName);
-        modalVillage.setVillageState(stateName);
-        modalVillage.setVillageDate("" + KIX_Utility.getCurrentDateTime());
-        modalVillage.setVillageBooklet(villageBooklet);
-        modalVillage.setSvrCode(this.surveyorCode);
+        modalVillage.setVillageName(this.villageName);
+        modalVillage.setVillageDistrict(this.districtName);
+        modalVillage.setVillageState(this.stateName);
+        modalVillage.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
+        modalVillage.setVillageBooklet(this.villageBooklet);
+        modalVillage.setSvrCode(surveyorCode);
         modalVillage.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"));
         modalVillage.setSentFlag(0);
         villageDao.insertVillage(modalVillage);
-        BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
-        final Intent intent = new Intent(this.getActivity(), Activity_Village_.class);
-        intent.putExtra(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
+        BackupDatabase.backup(getActivity());
+        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), Activity_Village_.class);
+        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.VILLAGE_ID, villageID);
-        this.startActivity(intent);
+        startActivity(intent);
 /*
         final String villageID = KIX_Utility.getUUID().toString();
         final Modal_Village modalVillage = new Modal_Village();
@@ -284,7 +284,7 @@ public class Fragment_AddVillage extends Fragment {
         modalVillage.setVillageName(this.et_VillageName.getText().toString());
         modalVillage.setVillageDistrict(this.et_District.getText().toString());
         modalVillage.setVillageState(this.et_State.getText().toString());
-        modalVillage.setVillageDate("" + KIX_Utility.getCurrentDateTime());
+        modalVillage.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
         modalVillage.setSvrCode(this.surveyorCode);
         modalVillage.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"));
         modalVillage.setSentFlag(0);

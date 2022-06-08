@@ -7,19 +7,15 @@
           "DistrictName": "MH_D1",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "MH_D1_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "MH_D1_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "MH_D1_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "MH_D1_V4"
             }
           ]
@@ -28,19 +24,15 @@
           "DistrictName": "MH_D2",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 5",
               "VillageName": "MH_D2_V1"
             },
             {
-              "ContentBooklet": "Booklet 6",
               "VillageName": "MH_D2_V2"
             },
             {
-              "ContentBooklet": "Booklet 7",
               "VillageName": "MH_D2_V3"
             },
             {
-              "ContentBooklet": "Booklet 8",
               "VillageName": "MH_D2_V4"
             }
           ]
@@ -49,19 +41,15 @@
           "DistrictName": "MH_D3",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "MH_D3_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "MH_D3_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "MH_D3_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "MH_D3_V4"
             }
           ]
@@ -75,19 +63,15 @@
           "DistrictName": "RJ_D1",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "RJ_D1_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "RJ_D1_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "RJ_D1_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "RJ_D1_V4"
             }
           ]
@@ -96,19 +80,15 @@
           "DistrictName": "RJ_D2",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "RJ_D2_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "RJ_D2_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "RJ_D2_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "RJ_D2_V4"
             }
           ]
@@ -117,19 +97,15 @@
           "DistrictName": "RJ_D3",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "RJ_D3_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "RJ_D3_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "RJ_D3_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "RJ_D3_V4"
             }
           ]
@@ -143,19 +119,15 @@
           "DistrictName": "GJ_D1",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "GJ_D1_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "GJ_D1_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "GJ_D1_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "GJ_D1_V4"
             }
           ]
@@ -164,19 +136,15 @@
           "DistrictName": "GJ_D2",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "GJ_D2_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "GJ_D2_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "GJ_D2_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "GJ_D2_V4"
             }
           ]
@@ -185,19 +153,15 @@
           "DistrictName": "GJ_D3",
           "VillageList": [
             {
-              "ContentBooklet": "Booklet 1",
               "VillageName": "GJ_D3_V1"
             },
             {
-              "ContentBooklet": "Booklet 2",
               "VillageName": "GJ_D3_V2"
             },
             {
-              "ContentBooklet": "Booklet 3",
               "VillageName": "GJ_D3_V3"
             },
             {
-              "ContentBooklet": "Booklet 4",
               "VillageName": "GJ_D3_V4"
             }
           ]

@@ -24,153 +24,152 @@ public class Modal_VIF implements Comparable, Parcelable {
     public String V07b;//If yes in V07a, which type of school(s) in the village offers primary grades/classes? (Tick all that apply)
     public String villageId;
     public String svrCode;
-    public String createdOn;
-    public int sentFlag;
-
-    protected Modal_VIF(final Parcel in) {
-        this.vif_Id = in.readInt();
-        this.V01 = in.readString();
-        this.V02 = in.readString();
-        this.V03 = in.readString();
-        this.V04 = in.readString();
-        this.V05 = in.readString();
-        this.V06a = in.readString();
-        this.V06b = in.readString();
-        this.V07a = in.readString();
-        this.V07b = in.readString();
-        this.villageId = in.readString();
-        this.svrCode = in.readString();
-        this.createdOn = in.readString();
-        this.sentFlag = in.readInt();
-    }
-
-    public static final Parcelable.Creator<Modal_VIF> CREATOR = new Parcelable.Creator<Modal_VIF>() {
+    public static final Creator<Modal_VIF> CREATOR = new Creator<Modal_VIF>() {
         @Override
-        public Modal_VIF createFromParcel(final Parcel in) {
+        public Modal_VIF createFromParcel(Parcel in) {
             return new Modal_VIF(in);
         }
 
         @Override
-        public Modal_VIF[] newArray(final int size) {
+        public Modal_VIF[] newArray(int size) {
             return new Modal_VIF[size];
         }
     };
+    public int sentFlag;
+    public String info_createdOn;
+
+    protected Modal_VIF(Parcel in) {
+        vif_Id = in.readInt();
+        V01 = in.readString();
+        V02 = in.readString();
+        V03 = in.readString();
+        V04 = in.readString();
+        V05 = in.readString();
+        V06a = in.readString();
+        V06b = in.readString();
+        V07a = in.readString();
+        V07b = in.readString();
+        villageId = in.readString();
+        svrCode = in.readString();
+        info_createdOn = in.readString();
+        sentFlag = in.readInt();
+    }
 
     public Modal_VIF() {
     }
 
-    @NonNull
-    public int getVif_Id() {
-        return vif_Id;
+    public static Creator<Modal_VIF> getCREATOR() {
+        return CREATOR;
     }
 
-    public void setVif_Id(@NonNull int vif_Id) {
+    @NonNull
+    public int getVif_Id() {
+        return this.vif_Id;
+    }
+
+    public void setVif_Id(@NonNull final int vif_Id) {
         this.vif_Id = vif_Id;
     }
 
     public String getV01() {
-        return V01;
+        return this.V01;
     }
 
-    public void setV01(String v01) {
-        V01 = v01;
+    public void setV01(final String v01) {
+        this.V01 = v01;
     }
 
     public String getV02() {
-        return V02;
+        return this.V02;
     }
 
-    public void setV02(String v02) {
-        V02 = v02;
+    public void setV02(final String v02) {
+        this.V02 = v02;
     }
 
     public String getV03() {
-        return V03;
+        return this.V03;
     }
 
-    public void setV03(String v03) {
-        V03 = v03;
+    public void setV03(final String v03) {
+        this.V03 = v03;
     }
 
     public String getV04() {
-        return V04;
+        return this.V04;
     }
 
-    public void setV04(String v04) {
-        V04 = v04;
+    public void setV04(final String v04) {
+        this.V04 = v04;
     }
 
     public String getV05() {
-        return V05;
+        return this.V05;
     }
 
-    public void setV05(String v05) {
-        V05 = v05;
+    public void setV05(final String v05) {
+        this.V05 = v05;
     }
 
     public String getV06a() {
-        return V06a;
+        return this.V06a;
     }
 
-    public void setV06a(String v06a) {
-        V06a = v06a;
+    public void setV06a(final String v06a) {
+        this.V06a = v06a;
     }
 
     public String getV06b() {
-        return V06b;
+        return this.V06b;
     }
 
-    public void setV06b(String v06b) {
-        V06b = v06b;
+    public void setV06b(final String v06b) {
+        this.V06b = v06b;
     }
 
     public String getV07a() {
-        return V07a;
+        return this.V07a;
     }
 
-    public void setV07a(String v07a) {
-        V07a = v07a;
+    public void setV07a(final String v07a) {
+        this.V07a = v07a;
     }
 
     public String getV07b() {
-        return V07b;
+        return this.V07b;
     }
 
-    public void setV07b(String v07b) {
-        V07b = v07b;
+    public void setV07b(final String v07b) {
+        this.V07b = v07b;
     }
 
     public String getVillageId() {
-        return villageId;
+        return this.villageId;
     }
 
-    public void setVillageId(String villageId) {
+    public void setVillageId(final String villageId) {
         this.villageId = villageId;
     }
 
     public String getSvrCode() {
-        return svrCode;
+        return this.svrCode;
     }
 
-    public void setSvrCode(String svrCode) {
+    public void setSvrCode(final String svrCode) {
         this.svrCode = svrCode;
     }
 
     public int getSentFlag() {
-        return sentFlag;
+        return this.sentFlag;
     }
 
-    public void setSentFlag(int sentFlag) {
+    public void setSentFlag(final int sentFlag) {
         this.sentFlag = sentFlag;
     }
 
-    public String getCreatedOn() { return this.createdOn; }
+    public String getInfo_createdOn() { return info_createdOn; }
 
-    public void setCreatedOn(final String createdOn) { this.createdOn = createdOn; }
-
-    public static Parcelable.Creator<Modal_VIF> getCREATOR() {
-        return Modal_VIF.CREATOR;
-    }
+    public void setInfo_createdOn(String info_createdOn) { this.info_createdOn = info_createdOn; }
 
     @Override
     public int describeContents() {
@@ -178,25 +177,25 @@ public class Modal_VIF implements Comparable, Parcelable {
     }
 
     @Override
-    public void writeToParcel(final Parcel dest, final int flags) {
-        dest.writeInt(this.vif_Id);
-        dest.writeString(this.V01);
-        dest.writeString(this.V02);
-        dest.writeString(this.V03);
-        dest.writeString(this.V04);
-        dest.writeString(this.V05);
-        dest.writeString(this.V06a);
-        dest.writeString(this.V06b);
-        dest.writeString(this.V07a);
-        dest.writeString(this.V07b);
-        dest.writeString(this.villageId);
-        dest.writeString(this.svrCode);
-        dest.writeString(this.createdOn);
-        dest.writeInt(this.sentFlag);
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(vif_Id);
+        dest.writeString(V01);
+        dest.writeString(V02);
+        dest.writeString(V03);
+        dest.writeString(V04);
+        dest.writeString(V05);
+        dest.writeString(V06a);
+        dest.writeString(V06b);
+        dest.writeString(V07a);
+        dest.writeString(V07b);
+        dest.writeString(villageId);
+        dest.writeString(svrCode);
+        dest.writeString(info_createdOn);
+        dest.writeInt(sentFlag);
     }
 
     @Override
-    public int compareTo(final Object o) {
+    public int compareTo(Object o) {
         return 0;
     }
 
