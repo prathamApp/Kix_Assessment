@@ -1,12 +1,19 @@
 package com.kix.assessment.ui.village_activity.FragmentSelectVillage;
 
+import static com.kix.assessment.KIXApplication.logDao;
 import static com.kix.assessment.KIXApplication.villageDao;
 import static com.kix.assessment.KIXApplication.villageInformationDao;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.Window;
 import android.view.animation.Animation;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.UiThread;
@@ -14,16 +21,25 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
+import com.kix.assessment.custom.BlurPopupDialog.BlurPopupWindow;
+import com.kix.assessment.custom.CustomLodingDialog;
 import com.kix.assessment.custom.flexbox.AlignItems;
 import com.kix.assessment.custom.flexbox.FlexDirection;
 import com.kix.assessment.custom.flexbox.FlexboxLayoutManager;
 import com.kix.assessment.custom.flexbox.JustifyContent;
+import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.EventMessage;
+import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_VIF;
 import com.kix.assessment.modal_classes.Modal_Village;
+import com.kix.assessment.services.KixSmartSync;
 import com.kix.assessment.services.shared_preferences.FastSave;
+import com.kix.assessment.ui.fragment_profile.Fragment_Profile;
+import com.kix.assessment.ui.fragment_profile.Fragment_Profile_;
 import com.kix.assessment.ui.household_activity.Activity_Household_;
 import com.kix.assessment.ui.village_activity.Fragment_AddVillage;
 import com.kix.assessment.ui.village_activity.Fragment_AddVillage_;
@@ -36,8 +52,12 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 @EFragment(R.layout.fragment_select_village)
 public class Fragment_SelectVillage extends Fragment implements ContractVillageList {
@@ -150,11 +170,11 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
 
     @Click(R.id.fab_profile)
     public void profile() {
-/*        Bundle bundle = new Bundle();
-        bundle.putString(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-        bundle.putString(Kix_Constant.HOUSEHOLD_ID, householdID);
-        KIX_Utility.showFragment(getActivity(), new Fragment_Profile_(), R.id.household_frame,
-                bundle, Fragment_Profile.class.getSimpleName());*/
+        final Bundle bundle = new Bundle();
+        bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
+//        bundle.putString(Kix_Constant.VILLAGE_ID, this.villageId);
+        KIX_Utility.showFragment(this.getActivity(), new Fragment_Profile_(), R.id.frag_frame,
+                bundle, Fragment_Profile.class.getSimpleName());
     }
 
     @Override
@@ -164,4 +184,133 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         villageListAdapter = null;
         rv_village = null;
     }
+
+
+    @Click(R.id.fab_sync)
+    public void sync() {
+        if (KIXApplication.wiseF.isDeviceConnectedToWifiNetwork() || KIXApplication.wiseF.isDeviceConnectedToMobileNetwork()) {
+            this.showLoadingDialog();
+            final Modal_Log log = new Modal_Log();
+            log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
+            log.setErrorType("Sync Data");
+            log.setExceptionMessage("");
+            log.setExceptionStackTrace("");
+            log.setMethodName("Add Student");
+            log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, "no_session"));
+            log.setDeviceId(KIX_Utility.getDeviceID());
+            logDao.insertLog(log);
+            KixSmartSync.pushUsageToServer(true);
+        } else {
+            Toast.makeText(this.getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    boolean loaderFlg;
+    private BlurPopupWindow pushDialog, pushStatusDialogue;
+    private TextView tv_dia_vil;
+    private TextView tv_dia_survey;
+    private TextView tv_dia_stud;
+    private TextView tv_dia_score;
+    private TextView tv_dialTitle;
+    private CustomLodingDialog myLoadingDialog;
+
+    @UiThread
+    public void showLoadingDialog() {
+        this.loaderFlg = true;
+        this.myLoadingDialog = new CustomLodingDialog(Objects.requireNonNull(this.getActivity()));
+        this.myLoadingDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.myLoadingDialog.setContentView(R.layout.dialog_loader);
+        Objects.requireNonNull(this.myLoadingDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        this.myLoadingDialog.setCancelable(false);
+        this.myLoadingDialog.setCanceledOnTouchOutside(false);
+        this.myLoadingDialog.show();
+    }
+
+    public void pushDialog(final String message, final String pushType) {
+        this.pushDialog = new BlurPopupWindow.Builder(this.getActivity())
+                .setContentView(R.layout.dialog_push_result)
+                .bindClickListener(v -> {
+                    this.pushStatsDialog();
+                    this.pushDialog.dismiss();
+                }, R.id.dia_btnOk)
+                .setGravity(Gravity.CENTER)
+                .setDismissOnTouchBackground(false)
+                .setDismissOnClickBack(true)
+                .setScaleRatio(0.2f)
+                .setBlurRadius(10)
+                .setTintColor(0x30000000)
+                .build();
+        this.tv_dialTitle = this.pushDialog.findViewById(R.id.dia_title);
+        this.tv_dialTitle.setText(""+message);
+        if (pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
+            this.tv_dialTitle.setTextColor(this.getResources().getColor(R.color.colorBtnGreenDark));
+        }else {
+            this.tv_dialTitle.setTextColor(this.getResources().getColor(R.color.colorRedDark));
+        }
+        this.pushDialog.show();
+    }
+
+    public void pushStatsDialog() {
+        this.pushStatusDialogue = new BlurPopupWindow.Builder(this.getActivity())
+                .setContentView(R.layout.dialog_push_stats)
+                .bindClickListener(v -> {
+                    this.pushStatusDialogue.dismiss();
+                }, R.id.dia_btnOk)
+                .setGravity(Gravity.CENTER)
+                .setDismissOnTouchBackground(false)
+                .setDismissOnClickBack(true)
+                .setScaleRatio(0.2f)
+                .setBlurRadius(10)
+                .setTintColor(0x30000000)
+                .build();
+        this.tv_dia_vil = this.pushStatusDialogue.findViewById(R.id.dia_vil);
+        this.tv_dia_survey = this.pushStatusDialogue.findViewById(R.id.dia_survey);
+        this.tv_dia_stud = this.pushStatusDialogue.findViewById(R.id.dia_stud);
+        this.tv_dia_score = this.pushStatusDialogue.findViewById(R.id.dia_score);
+
+        this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
+        this.tv_dia_stud.setText(this.getResources().getString(R.string.student_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
+        this.tv_dia_vil.setText(this.getResources().getString(R.string.village_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
+        this.tv_dia_survey.setText(this.getResources().getString(R.string.surveyor_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+
+        this.pushStatusDialogue.show();
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void DataPushedSuccessfully(final EventMessage msg) {
+        if (msg != null) {
+            if (msg.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
+                if (this.loaderFlg) {
+                    this.myLoadingDialog.dismiss();
+                    this.loaderFlg = false;
+                }
+                this.pushDialog(this.getResources().getString(R.string.push_success), Kix_Constant.SUCCESSFULLYPUSHED);
+                BackupDatabase.backup(this.getActivity());
+            } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.PUSHFAILED)) {
+                if (this.loaderFlg) {
+                    this.myLoadingDialog.dismiss();
+                    this.loaderFlg = false;
+                }
+                this.pushDialog(this.getResources().getString(R.string.push_fail),Kix_Constant.PUSHFAILED);
+            }
+        }
+    }
+
+        @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
 }

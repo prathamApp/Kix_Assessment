@@ -5,21 +5,19 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-public class Modal_VillageList implements Comparable, Parcelable {
+@Entity(tableName = "BookletTable")
+public class Modal_PushResponse implements Comparable, Parcelable {
 
-    public String VillageName;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    public String status;
+    public String msg;
 
 
-    public String getVillageName() {
-        return this.VillageName;
-    }
-
-    public void setVillageName(final String villageName) {
-        this.VillageName = villageName;
-    }
-
-    public Modal_VillageList() {
+    public Modal_PushResponse() {
         super();
     }
 
@@ -63,5 +61,22 @@ public class Modal_VillageList implements Comparable, Parcelable {
     @Override
     public int compareTo(Object o) {
         return 0;
+    }
+
+    @NonNull
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(@NonNull final String status) {
+        this.status = status;
+    }
+
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public void setMsg(final String msg) {
+        this.msg = msg;
     }
 }

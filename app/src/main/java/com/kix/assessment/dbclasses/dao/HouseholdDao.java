@@ -18,8 +18,10 @@ public interface HouseholdDao {
     @Query("SELECT * FROM Household WHERE householdId=:householdId AND villageId=:villageId")
     Modal_Household getHouseholdBySurveyorCode(String householdId, String villageId);
 
+    @Query("SELECT * FROM Household WHERE svrCode=:svrCode")
+    List<Modal_Household> getAllHHBySurveyorCode(String svrCode);
     @Query("SELECT * FROM Household WHERE svrCode=:svrCode AND villageId=:villageId")
-    List<Modal_Household> getAllHouseholdBySurveyorCode(String svrCode, String villageId);
+    List<Modal_Household> getAllHHBySurveyorCodeAndVilId(String svrCode, String villageId);
 
     @Query("SELECT * FROM Household WHERE svrCode=:svrCode AND villageId =:villageId ORDER BY householdId DESC")
     List<Modal_Household> getAllHouseholdBySurveyorCodeDescending(String svrCode, String villageId);

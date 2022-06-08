@@ -61,6 +61,7 @@ public class VillageListAdapter extends RecyclerView.Adapter<VillageListAdapter.
 
             boolean isVIFfilled = villageInformationDao.getVIF(modalVillage.villageId);
             if(isVIFfilled) holder.tv_CardInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
+            else holder.tv_CardInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_red));
 
             holder.ll_card.setOnClickListener(v -> {
                 this.contractVillageList.itemSelected(holder.getAdapterPosition());

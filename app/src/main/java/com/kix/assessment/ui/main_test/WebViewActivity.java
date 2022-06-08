@@ -120,7 +120,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
                     FastSave.getInstance().saveString(Kix_Constant.SHUFFLED_BOOKLETS, myBookletList.toString());
                 } else
                     FastSave.getInstance().saveInt(Kix_Constant.BOOKLET_NO, a);
-                
+
                 String bName = myBookletList.get(FastSave.getInstance().getInt(Kix_Constant.BOOKLET_NO, 0));
                 return bName.trim();
             }

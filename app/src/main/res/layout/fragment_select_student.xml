@@ -36,14 +36,4 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:src="@drawable/ic_add_white_64dp"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_sync"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="@color/orange"
-        android:src="@drawable/ic_sync_white_48dp" />
-
 </RelativeLayout>

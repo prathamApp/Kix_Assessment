@@ -32,6 +32,6 @@ public interface ContentDao {
             "FROM split WHERE contentBooklet!='' and contentCountry=:country " +
             "ORDER by contentBooklet ASC")
     List<String> getBooklets(String country);
-
+//    String[] getBooklets(String country);
 
 }

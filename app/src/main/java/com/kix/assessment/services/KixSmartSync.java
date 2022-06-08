@@ -32,6 +32,7 @@ import com.kix.assessment.modal_classes.Modal_HIF;
 import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_PIF;
+import com.kix.assessment.modal_classes.Modal_PushResponse;
 import com.kix.assessment.modal_classes.Modal_Session;
 import com.kix.assessment.modal_classes.Modal_Status;
 import com.kix.assessment.modal_classes.Modal_Student;
@@ -201,15 +202,17 @@ public class KixSmartSync { //extends AutoSync {
         Log.e("TAG", "pushDataToInternet: "+filepathstr);
         AndroidNetworking.upload(url)
                 .addHeaders("Content-Type", "file/zip")
-                .addMultipartFile("file", new File(filepathstr + ".zip"))
-                .addHeaders("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
+                .addMultipartFile("zip", new File(filepathstr + ".zip"))
+//                .addHeaders("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(final String response) {
                         Log.e("PushData", "DATA PUSH " + response);
-                        if (response.equalsIgnoreCase("Successfully pushed")) {
+                        Gson gson = new Gson();
+                        Modal_PushResponse pushResponse = gson.fromJson(response, Modal_PushResponse.class);
+                        if (pushResponse.status.equalsIgnoreCase("success")) {
 //                            new File(filepathstr + ".zip").delete();
                             KixSmartSync.setSentFlag();
                             final EventMessage msg = new EventMessage();

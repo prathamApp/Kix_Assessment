@@ -17,17 +17,17 @@
         android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/fab_profile"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
-        android:id="@+id/fab_profile"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/profile_background"
         android:elevation="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
-        android:background="@drawable/profile_background"
-        android:src="@drawable/kix_logo_r"/>
+        android:src="@drawable/kix_logo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_village"
@@ -39,13 +39,23 @@
         android:padding="@dimen/_5sdp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addVillage"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:id="@+id/fab_addVillage"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/ic_add_white_64dp"/>
+        android:src="@drawable/ic_add_white_64dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sync"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/orange"
+        android:src="@drawable/ic_sync_white_48dp" />
 
 </RelativeLayout>

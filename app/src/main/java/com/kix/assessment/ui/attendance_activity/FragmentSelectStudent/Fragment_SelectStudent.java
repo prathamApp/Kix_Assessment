@@ -318,26 +318,6 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         this.myLoadingDialog.show();
     }
 
-    @Click(R.id.fab_sync)
-    public void sync() {
-        if (KIXApplication.wiseF.isDeviceConnectedToWifiNetwork() || KIXApplication.wiseF.isDeviceConnectedToMobileNetwork()) {
-            this.showLoadingDialog();
-            final Modal_Log log = new Modal_Log();
-            log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
-            log.setErrorType("Sync Data");
-            log.setExceptionMessage("");
-            log.setExceptionStackTrace("");
-            log.setMethodName("Add Student");
-            log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID, "no_session"));
-            log.setDeviceId(KIX_Utility.getDeviceID());
-            logDao.insertLog(log);
-            KixSmartSync.pushUsageToServer(true);
-        } else {
-            Toast.makeText(this.getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-
     @Override
     public void onStart() {
         super.onStart();

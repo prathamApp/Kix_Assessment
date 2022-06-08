@@ -204,8 +204,8 @@ public class Fragment_AddVillage extends Fragment {
         if (this.EditVil < 1 && getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
             this.EditVil++;
             villPos = VillEpos;
-            villageBooklet = modal_location.getStateList().get(statePos)
-                    .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
+//            villageBooklet = modal_location.getStateList().get(statePos)
+//                    .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
             spn_Village.setSelection(villPos);
         }
 
@@ -215,8 +215,8 @@ public class Fragment_AddVillage extends Fragment {
                 villPos = position;
                 villageName = modal_location.getStateList().get(statePos)
                         .getDistrictList().get(distPos).getVillageList().get(villPos).getVillageName();
-                villageBooklet = modal_location.getStateList().get(statePos)
-                        .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
+//                villageBooklet = modal_location.getStateList().get(statePos)
+//                        .getDistrictList().get(distPos).getVillageList().get(villPos).getContentBooklet();
             }
 
             @Override

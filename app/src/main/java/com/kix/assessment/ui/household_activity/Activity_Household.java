@@ -33,7 +33,7 @@ public class Activity_Household extends BaseActivity {
         villageId = getIntent().getStringExtra(Kix_Constant.VILLAGE_ID);
         if(!this.surveyorCode.equalsIgnoreCase("NA")) {
             final Bundle bundle = new Bundle();
-            final ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCode(surveyorCode, villageId);
+            final ArrayList<Modal_Household> households = (ArrayList<Modal_Household>) householdDao.getAllHHBySurveyorCodeAndVilId(surveyorCode, villageId);
             bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
             bundle.putString(Kix_Constant.VILLAGE_ID,villageId);
             bundle.putParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST, households);

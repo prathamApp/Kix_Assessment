@@ -160,7 +160,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
                 bundle, Fragment_HouseholdInformation.class.getSimpleName());
     }
 
-    @Click(R.id.fab_profile)
+/*    @Click(R.id.fab_profile)
     public void profile() {
         final Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.SURVEYOR_CODE, this.surveyorCode);
@@ -168,7 +168,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
         bundle.putString(Kix_Constant.VILLAGE_ID, this.villageId);
         KIX_Utility.showFragment(this.getActivity(), new Fragment_Profile_(), R.id.household_frame,
                 bundle, Fragment_Profile.class.getSimpleName());
-    }
+    }*/
 
     @Override
     public void onDestroyView() {
