@@ -161,7 +161,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/hint_respondentName"
+                    android:text="@string/str_HH02"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Name of the household head"
+                    android:text="@string/str_HH03"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -222,7 +222,7 @@
                     android:id="@+id/til_HH05_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Telephone number of the household"
+                    android:text="@string/str_HH05"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -253,7 +253,7 @@
                     android:id="@+id/tv_HH04a_noOfChild"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Does the HH have children (living regularly) in the age group 4-10 years?"
+                    android:text="@string/str_HH04a"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -303,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_1sdp"
-                    android:hint="How many"
+                    android:hint="@string/str_HH04b"
                     android:textColorHint="#757575"
                     android:visibility="gone"
                     app:hintTextAppearance="@dimen/_10sdp">

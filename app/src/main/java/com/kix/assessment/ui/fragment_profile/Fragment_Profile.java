@@ -127,7 +127,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                     profileDetails.get(i).getStudentAge());
             detailsList.add(details);
         }
-        tv_AssessmentGivenCount.setText(getString(R.string.child_asses) + assGiven);
+        tv_AssessmentGivenCount.setText(getString(R.string.children_assessed) + assGiven);
     }
 
     @UiThread
@@ -156,7 +156,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         //get total no. of household
         List<Modal_Household> households = KIXApplication.householdDao.getAllHHBySurveyorCode(surveyorCode);
         tv_profileName.setText(getString(R.string.hi)+" "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
-        tv_TotStudCount.setText(getString(R.string.child_surveyd) + stud.size());
+        tv_TotStudCount.setText(getString(R.string.children_surveyed) + stud.size());
 /*        tv_studCount.setText("No. of Children : " + stud.size());
         tv_householdCount.setText("Total Villages : " + households.size());*/
         if (stud.size() == 0)
