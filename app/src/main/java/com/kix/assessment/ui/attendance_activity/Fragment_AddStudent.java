@@ -455,7 +455,7 @@ public class Fragment_AddStudent extends Fragment {
                 && selectedCH09 != 99 && selectedCH10c != 99) {
             insertStudent();
         } else {
-            Toast.makeText(getActivity(), "Please fill all fields!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.fill_all_fileds), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -466,7 +466,7 @@ public class Fragment_AddStudent extends Fragment {
             str_CH06b = schoolType;
 
             if (selectedCH06c == 99 || selectedCH06d == 99 || selectedCH06f == 99 || selectedCH06g == 99 || selectedCH10a == 99) {
-                Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
             } else {
 /*                str_CH06c = rb_CH06c.getText().toString();
                 str_CH06d = rb_CH06d.getText().toString();
@@ -495,7 +495,7 @@ public class Fragment_AddStudent extends Fragment {
                             ""+selectedCH10a, ""+selectedCH10b, ""+selectedCH10c,
                             studId);
                     BackupDatabase.backup(getActivity());
-                    Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
                     getFragmentManager().popBackStack();
                 } else insertStud();
             }
@@ -511,7 +511,7 @@ public class Fragment_AddStudent extends Fragment {
             str_CH10b = "NA";*/
 
             if (selectedCH07a == 99) {
-                Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
             } else {
 /*                str_CH07a = rb_CH07a.getText().toString();*/
                 if (selectedCH07a==1) {
@@ -519,7 +519,7 @@ public class Fragment_AddStudent extends Fragment {
                     str_CH07c = dropoutStandard;
 
                     if (selectedCH07d == 99) {
-                        Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                     } else {
 /*                        str_CH07d = rb_CH07d.getText().toString();*/
                         if (getArguments().getString(Kix_Constant.EDIT_STUDENT) != null) {
@@ -531,7 +531,7 @@ public class Fragment_AddStudent extends Fragment {
                                     ""+selectedCH08, ""+selectedCH09, ""+selectedCH10a, ""+selectedCH10b,
                                     ""+selectedCH10c, studId);
                             BackupDatabase.backup(getActivity());
-                            Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
                             getFragmentManager().popBackStack();
                         } else insertStud();
                     }
@@ -548,7 +548,7 @@ public class Fragment_AddStudent extends Fragment {
                                 ""+selectedCH08, ""+selectedCH09, ""+selectedCH10a, ""+selectedCH10b,
                                 ""+selectedCH10c, studId);
                         BackupDatabase.backup(getActivity());
-                        Toast.makeText(getActivity(), "Student Updated Successfully!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
                     } else insertStud();
                 }
@@ -559,10 +559,6 @@ public class Fragment_AddStudent extends Fragment {
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.HOUSEHOLD_ID, householdID);
         startActivity(intent);*/
-    }
-
-    private void updateStudent() {
-        Toast.makeText(getActivity(), "Student Edited Successfully!", Toast.LENGTH_SHORT).show();
     }
 
     public void insertStud() {
@@ -599,7 +595,7 @@ public class Fragment_AddStudent extends Fragment {
 
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Student Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.stud_Added_success), Toast.LENGTH_SHORT).show();
         startDialog(modal_student);
 
     }

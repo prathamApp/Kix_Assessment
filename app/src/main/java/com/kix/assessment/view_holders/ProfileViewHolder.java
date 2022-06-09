@@ -25,7 +25,7 @@ public class ProfileViewHolder extends RecyclerView.ViewHolder {
     public void setProfileView(Context context, Modal_ProfileDetails details, int position, int listSize)
     {
         studentName.setText(details.getStudentName());
-        householdName.setText(details.getHouseholdName());
+        householdName.setText(details.getRespondantName());
         examsGiven.setText(details.getExamsGiven());
         examsSynced.setText(details.getExamsSynced());
     }

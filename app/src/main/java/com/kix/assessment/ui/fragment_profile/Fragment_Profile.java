@@ -113,21 +113,21 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
         //recycler header values
         Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
-                "Village", "Assessments Given", "Assessment Synced", "");
+                "Household", "Assessments Given", "Assessment Synced", "");
         detailsList.add(details);
         if (profileDetails.size() == 0) {
-            Toast.makeText(getActivity(), "Assessment Not Given By Child", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.asmt_not_given), Toast.LENGTH_SHORT).show();
         }
         assGiven = 0;
         for (int i = 0; i < profileDetails.size(); i++) {
             if (profileDetails.get(i).getExamsGiven() != null)
                 assGiven++;
             details = new Modal_ProfileDetails(profileDetails.get(i).getStudentName(),
-                    profileDetails.get(i).getHouseholdName(), profileDetails.get(i).getExamsGiven(), "0",
+                    profileDetails.get(i).getRespondantName(), profileDetails.get(i).getExamsGiven(), "0",
                     profileDetails.get(i).getStudentAge());
             detailsList.add(details);
         }
-        tv_AssessmentGivenCount.setText("Children assessed: " + assGiven);
+        tv_AssessmentGivenCount.setText(getString(R.string.child_asses) + assGiven);
     }
 
     @UiThread
@@ -155,12 +155,12 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
         //get total no. of household
         List<Modal_Household> households = KIXApplication.householdDao.getAllHHBySurveyorCode(surveyorCode);
-        tv_profileName.setText("Hi, " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
-        tv_TotStudCount.setText("Children surveyed: " + stud.size());
+        tv_profileName.setText(getString(R.string.hi)+" "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
+        tv_TotStudCount.setText(getString(R.string.child_surveyd) + stud.size());
 /*        tv_studCount.setText("No. of Children : " + stud.size());
         tv_householdCount.setText("Total Villages : " + households.size());*/
         if (stud.size() == 0)
-            Toast.makeText(getActivity(), "No Children Found!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
         else
             profilePresenter.loadProfileData();
         //temp();
@@ -169,7 +169,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         ArrayAdapter adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.ageFilter, R.layout.support_simple_spinner_dropdown_item);
         spinner_ageFilter.setAdapter(adapterAge);
         villagesList = (ArrayList<String>) householdDao.getAllHouseholdNameBySurveyorCode(surveyorCode);
-        villagesList.add(0, getResources().getString(R.string.all_village));
+        villagesList.add(0, getResources().getString(R.string.all_houeholds));
         ArrayAdapter<String> adapterVillage = new ArrayAdapter<String>
                 (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, villagesList);
         spinner_villageFilter.setAdapter(adapterVillage);
@@ -192,7 +192,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             logDao.insertLog(log);
             KixSmartSync.pushUsageToServer(true);
         } else {
-            Toast.makeText(getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -224,7 +224,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             BackupDatabase.backup(getActivity());
             pushDataBaseZipToServer.startDataBasePush(context, true);
         } else {
-            Toast.makeText(getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -251,23 +251,23 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @SuppressLint("SetTextI18n")
     private void filter(String ageFilter, String villageFilter) {
         ArrayList<Modal_ProfileDetails> filteredList = new ArrayList();
-        if (ageSelected.equalsIgnoreCase(getResources().getString(R.string.all_age)) && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_village))) {
+        if (ageSelected.equalsIgnoreCase(getResources().getString(R.string.all_age)) && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
             filteredList.addAll(detailsList);
         } else {
             Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
-                    "Village", "Assessments Given", "Assessment Synced", "");
+                    "Household", "Assessments Given", "Assessment Synced", "");
             filteredList.add(details);
             for (Modal_ProfileDetails d : detailsList) {
                 if (ageFilter.equalsIgnoreCase(getResources().getString(R.string.all_age)) && !villageFilter.isEmpty()) {
-                    if (d.getHouseholdName().contains(villageFilter)) {
+                    if (d.getRespondantName().contains(villageFilter)) {
                         filteredList.add(d);
                     }
-                } else if (villageFilter.equalsIgnoreCase(getResources().getString(R.string.all_village)) && !ageFilter.isEmpty()) {
+                } else if (villageFilter.equalsIgnoreCase(getResources().getString(R.string.all_houeholds)) && !ageFilter.isEmpty()) {
                     if (d.getStudentAge().contains(ageFilter)) {
                         filteredList.add(d);
                     }
                 } else {
-                    if (d.getStudentAge().contains(ageFilter) && d.getHouseholdName().contains(villageFilter))
+                    if (d.getStudentAge().contains(ageFilter) && d.getRespondantName().contains(villageFilter))
                         filteredList.add(d);
                 }
             }
@@ -278,7 +278,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
 /*        if (!(studCount < 0))
             tv_studCount.setText("No. of Children : " + studCount);*/
         if (filteredList.size() == 1)
-            Toast.makeText(getActivity(), "No Match Found!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.no_match_found), Toast.LENGTH_SHORT).show();
     }
 
     @SuppressLint("SetTextI18n")
@@ -290,21 +290,21 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                     myLoadingDialog.dismiss();
                     loaderFlg = false;
                 }
-                pushDialog("Data Synced Successfully!!", Kix_Constant.SUCCESSFULLYPUSHED);
+                pushDialog(getString(R.string.data_sync_success), Kix_Constant.SUCCESSFULLYPUSHED);
                 BackupDatabase.backup(getActivity());
             } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.DBSUCCESSFULLYPUSHED)) {
                 if (loaderFlg) {
                     myLoadingDialog.dismiss();
                     loaderFlg = false;
                 }
-                pushDialog("DB Synced Successfully!!", Kix_Constant.DBSUCCESSFULLYPUSHED);
+                pushDialog(getString(R.string.db_sync_success), Kix_Constant.DBSUCCESSFULLYPUSHED);
                 BackupDatabase.backup(getActivity());
             } else if (msg.getMessage().equalsIgnoreCase(Kix_Constant.PUSHFAILED)) {
                 if (loaderFlg) {
                     myLoadingDialog.dismiss();
                     loaderFlg = false;
                 }
-                pushDialog("Sync Failed!!", Kix_Constant.PUSHFAILED);
+                pushDialog(getString(R.string.sync_fail), Kix_Constant.PUSHFAILED);
             }
         }
     }

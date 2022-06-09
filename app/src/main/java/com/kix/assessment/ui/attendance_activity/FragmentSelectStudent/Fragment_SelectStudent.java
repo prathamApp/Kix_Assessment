@@ -91,7 +91,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         this.students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCodeDescending(this.surveyorCode, this.householdID);
         if(this.students.size()==0){
-            Toast.makeText(this.getActivity(), "No Student Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
             final Animation anim = android.view.animation.AnimationUtils.loadAnimation(this.fab_addChild.getContext(),  R.anim.shake);
             anim.setDuration(200L);
             this.fab_addChild.startAnimation(anim);

@@ -237,7 +237,7 @@ public class Fragment_AddVillage extends Fragment {
                     this.stateName,
                     villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
                     this.villageBooklet);
-            Toast.makeText(getActivity(), "Village Edited Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.vill_Updated_success), Toast.LENGTH_SHORT).show();
             getFragmentManager().popBackStack();
         } else
             insertVillage();
@@ -272,7 +272,7 @@ public class Fragment_AddVillage extends Fragment {
         modalVillage.setSentFlag(0);
         villageDao.insertVillage(modalVillage);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.vill_added_success), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Village_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.VILLAGE_ID, villageID);

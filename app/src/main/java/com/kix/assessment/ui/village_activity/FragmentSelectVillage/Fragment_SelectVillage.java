@@ -86,7 +86,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         villageArrayList = (ArrayList<Modal_Village>) villageDao.getAllVillageBySurveyorCode(surveyorCode);
         if (villageArrayList.size() == 0) {
-            Toast.makeText(getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.no_village_found), Toast.LENGTH_SHORT).show();
             Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addVillage.getContext(), R.anim.shake);
             anim.setDuration(200L);
             fab_addVillage.startAnimation(anim);
@@ -201,7 +201,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
             logDao.insertLog(log);
             KixSmartSync.pushUsageToServer(true);
         } else {
-            Toast.makeText(this.getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
     }
 

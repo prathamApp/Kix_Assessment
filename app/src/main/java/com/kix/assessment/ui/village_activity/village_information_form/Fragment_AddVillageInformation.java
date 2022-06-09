@@ -215,12 +215,12 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         if (selectedV01 == 99 || selectedV02 == 99 || selectedV03 == 99
                 || selectedV04 == 99 || selectedV05 == 99 || selectedV06a == 99
                 || selectedV07a == 99) {
-            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
         } else {
             if (this.selectedV06a == 1 && this.selectedV07a == 1) {
                 if (str_v06b_schoolType.equalsIgnoreCase("")
                         || str_v07b_schoolType.equalsIgnoreCase("")) {
-                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), R.string.select_school_type, Toast.LENGTH_SHORT).show();
                 } else {
                     insertVIF();
                 }
@@ -237,12 +237,12 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
         if (selectedV01 == 99 || selectedV02 == 99 || selectedV03 == 99
                || selectedV04 == 99 || selectedV05 == 99 || selectedV06a == 99
                || selectedV07a == 99) {
-            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
         } else {
             if (this.selectedV06a == 1 && this.selectedV07a == 1) {
                 if (str_v06b_schoolType.equalsIgnoreCase("")
                         || str_v07b_schoolType.equalsIgnoreCase("")) {
-                    Toast.makeText(getActivity(), "Select School Type", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.select_school_type), Toast.LENGTH_SHORT).show();
                 } else {
                     updateVIF();
                 }
@@ -365,7 +365,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
         villageInformationDao.insertVillageInfo(modal_vif);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "VillageInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.vif_Added_success), Toast.LENGTH_SHORT).show();
         getFragmentManager().popBackStack();
     }
 
@@ -383,7 +383,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
                 villageId);
 
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "VillageInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.vif_Updated_success), Toast.LENGTH_SHORT).show();
         getFragmentManager().popBackStack();
     }
 

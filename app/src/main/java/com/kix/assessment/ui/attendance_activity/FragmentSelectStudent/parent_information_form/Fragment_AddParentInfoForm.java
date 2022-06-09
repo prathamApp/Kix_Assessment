@@ -237,7 +237,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 ll_selectPerson.setVisibility(View.GONE);
             }
         } else {
-            Toast.makeText(getActivity(), "Select Parent First.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.select_parent), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -249,7 +249,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
         if (getArguments().getString(EDIT_PARENT) != null) {
             if (selectedPT01c == 99 || selectedPT01e == 99 || selectedPT02c == 99 || selectedPT02e == 99 ||
                     et_motherName.getText().toString().isEmpty() || et_fatherName.getText().toString().isEmpty()) {
-                Toast.makeText(getActivity(), "All Fields are mandatory.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
             } else {
 /*                final String str_PT01f;
                 final String str_PT02f;
@@ -268,7 +268,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
         } else {
             if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_mother))) {
                 if (this.selectedPT01c == 99 || this.selectedPT01e == 99 || et_motherName.getText().toString().isEmpty()) {
-                    Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
 /*                    if(selectedPT01d == 99) mothersSchooling="NA";
                     else mothersSchooling=rb_PT01d.getText().toString();
@@ -279,7 +279,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
                                     ""+selectedPT01e, ""+selectedPT01f,
                                     "NA", "NA", "NA", "NA"*/);
                         } else {
-                            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
@@ -290,7 +290,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 //todo Add new field in PIF db selectedPerson
             } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_father))) {
                 if (this.selectedPT02c == 99 || this.selectedPT02e == 99 || et_fatherName.getText().toString().isEmpty()) {
-                    Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
 /*                    if(selectedPT02d == 99) fathersSchooling="NA";
                     else fathersSchooling=rb_PT02d.getText().toString();
@@ -300,7 +300,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
                             insertPIF(/*"NA", "NA", "NA", "NA",
                                     this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
                         } else {
-                            Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         insertPIF(/*"NA", "NA", "NA", "NA",
@@ -310,7 +310,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
             } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_both))) {
                 if (this.selectedPT01c == 99 || this.selectedPT01e == 99 || this.selectedPT02c == 99 || this.selectedPT02e == 99 ||
                         et_motherName.getText().toString().isEmpty() || et_fatherName.getText().toString().isEmpty()) {
-                    Toast.makeText(getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
 /*                    if(rb_PT01d == null) mothersSchooling="NA";
                     else mothersSchooling=rb_PT01d.getText().toString();
@@ -322,21 +322,21 @@ public class Fragment_AddParentInfoForm extends Fragment {
                             insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, ""+selectedPT01f,
                                     this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
                         } else {
-                            Toast.makeText(getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else if (this.selectedPT01e ==1) {
                         if (this.selectedPT01f != 99) {
                             insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, ""+selectedPT01f,
                                     this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, "99"*/);
                         } else {
-                            Toast.makeText(getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else if (this.selectedPT02e ==1) {
                         if (this.selectedPT02f != 99) {
                             insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
                                     this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
                         } else {
-                            Toast.makeText(getActivity(), "All fields are mandatory....", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
@@ -394,7 +394,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
         parentInformationDao.insertParentInfo(modalPif);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "ParentInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.pif_Added_success), Toast.LENGTH_SHORT).show();
         getFragmentManager().popBackStack();
     }
 
@@ -423,7 +423,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 studentId);
 
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "ParentInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.pif_Updated_success), Toast.LENGTH_SHORT).show();
         getFragmentManager().popBackStack();
     }
 

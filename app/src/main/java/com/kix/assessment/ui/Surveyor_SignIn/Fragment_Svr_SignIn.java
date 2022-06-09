@@ -75,7 +75,7 @@ public class Fragment_Svr_SignIn extends Fragment {
         if(!et_mobile.getText().toString().isEmpty() && !et_password.getText().toString().isEmpty()){
             Modal_Surveyor surveyorLogin = KixDatabase.getDatabaseInstance(getActivity()).getSurveyorDao().getSurveyorLogin(et_mobile.getText().toString(), et_password.getText().toString());
             if (surveyorLogin == null) {
-                Toast.makeText(getActivity(), "Invalid Mobile No. or Password.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), getString(R.string.invalid_mobno_pass), Toast.LENGTH_SHORT).show();
             } else {
 /*
                 Intent intent = new Intent(getActivity(), Activity_Household_.class);
@@ -99,7 +99,7 @@ public class Fragment_Svr_SignIn extends Fragment {
                 startActivity(intent);
             }
         } else {
-            Toast.makeText(getActivity(), "Please Enter Mobile No. and Password!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.enter_mobno_pass), Toast.LENGTH_SHORT).show();
         }
     }
 }

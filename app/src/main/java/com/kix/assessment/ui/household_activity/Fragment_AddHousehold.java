@@ -182,19 +182,19 @@ public class Fragment_AddHousehold extends Fragment {
                                 this.et_noOfChilds.getText().toString(),
                                 this.householdId,
                                 this.villageId);
-                        Toast.makeText(getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.hh_Updated_success), Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
                     } else {
                         this.insertHousehold();
                     }
                 } else {
-                    Toast.makeText(this.getActivity(), "Please select radio button fields.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.getActivity(), getString(R.string.select_radio_button), Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this.getActivity(), "Household Number and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.getActivity(), getString(R.string.hhName_mandatory), Toast.LENGTH_SHORT).show();
             }
         } else
-            Toast.makeText(this.getActivity(), "Please select atlest one field", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.select_atleast_one), Toast.LENGTH_SHORT).show();
     }
 
     /*    if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
@@ -251,7 +251,7 @@ public class Fragment_AddHousehold extends Fragment {
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.hh_Added_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
 /*        Intent intent = new Intent(getActivity(), Activity_Household_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);

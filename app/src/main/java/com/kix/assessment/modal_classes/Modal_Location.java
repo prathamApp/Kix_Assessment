@@ -9,7 +9,6 @@ public class Modal_Location implements Comparable, Parcelable {
 
     public List <Modal_StateList> StateList;
 
-
     public List<Modal_StateList> getStateList() {
         return StateList;
     }

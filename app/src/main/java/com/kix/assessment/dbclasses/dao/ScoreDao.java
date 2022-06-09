@@ -52,11 +52,13 @@ public interface ScoreDao {
     @Query("UPDATE Score SET sentFlag = 1 where sessionId = :s_id")
     int updateFlag(String s_id);
 
-    @Query("select Student.CH01 as StudentName, Student.CH02 as StudentAge, Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n" +
-            "INNER JOIN Student on Score.studentId = Student.studentId\n" +
+    @Query("select Student.CH01 as StudentName, Student.CH02 as StudentAge,\n" +
+            "Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Student\n" +
+            "LEFT JOIN score on student.studentId = Score.studentId\n" +
             "INNER JOIN Household on Household.householdId = Student.householdId\n" +
             "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n" +
-            "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studentId, Surveyor.svrName")
+            "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studentId ORDER BY Student.sId DESC")
+
     List<Modal_ProfileDetails> getProfileData(String svrCode);
 
     @Query("select studentId from Score where studentId=:studId")

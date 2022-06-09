@@ -182,7 +182,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
         if(this.selectedHH06b ==99 || this.selectedHH06d ==99 || this.selectedHH07a ==99 || this.selectedHH07b ==99 || this.selectedHH07c ==99 || this.selectedHH07d ==99 || this.selectedHH07e ==99 ||
                 this.selectedHH07f ==99 || this.selectedHH07g ==99 || this.selectedHH07h ==99 || this.selectedHH07i ==99 || this.selectedHH07j ==99 ||
                 this.selectedHH07k ==99 || this.selectedHH07l ==99 || this.selectedHH07m ==99 || this.selectedHH07o ==99 || this.selectedHH07p ==99 || this.selectedHH07q ==99) {
-            Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
         } else {
             if (this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
                 if (!this.et_HH07c_other.getText().toString().isEmpty())
@@ -194,7 +194,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
                     if(this.selectedHH07n != 99) {
                         this.updateHIF();
                     } else {
-                        Toast.makeText(this.getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), getString(R.string.all_fileds_mandatory),Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     this.updateHIF();
@@ -204,7 +204,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
                     if(this.selectedHH07n != 99) {
                         this.insertHIF();
                     } else {
-                        Toast.makeText(this.getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), getString(R.string.all_fileds_mandatory),Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     this.insertHIF();
@@ -249,7 +249,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
 
         householdInformationDao.insertHouseholdInfo(modal_hif);
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "HouseholdInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.hif_Added_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
 
     }
@@ -282,7 +282,7 @@ public class Fragment_AddHouseholdInformation extends Fragment {
                 this.householdId);
 
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "HouseholdInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.hif_Updated_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
     }
 

@@ -82,7 +82,7 @@ public class PushDataBaseZipToServer {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(context, "No Internet connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
     }
 

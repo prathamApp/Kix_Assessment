@@ -233,6 +233,42 @@
     <string name="str_private">Private</string>
     <string name="str_other">Other</string>
     <string name="age">Age </string>
+    <string name="no_student_found">No Student Found.</string>
+    <string name="no_village_found">No Village Found.</string>
+    <string name="no_household_found">No Household Found.</string>
+    <string name="check_internet">Please Check Internet Connection!</string>
+    <string name="invalid_mobno_pass">Invalid Mobile No. or Password.</string>
+    <string name="enter_mobno_pass">Please Enter Mobile No. and Password!</string>
+    <string name="select_radio_button">Please select radio button fields.</string>
+    <string name="select_atleast_one">Please select atleast one field.</string>
+    <string name="hhName_mandatory">Household Number and Respondent names are Mandatory!</string>
+    <string name="hh_Updated_success">Household Updated Successfully!</string>
+    <string name="hh_Added_success">Household Added Successfully!</string>
+    <string name="select_parent">Select Parent First.</string>
+    <string name="all_fileds_mandatory">All Fields are mandatory.</string>
+    <string name="fill_all_fileds">Please fill all fields!</string>
+    <string name="pif_Added_success">ParentInformation Added Successfully!</string>
+    <string name="pif_Updated_success">ParentInformation Updated Successfully!</string>
+    <string name="stud_Added_success">Student Added Successfully!</string>
+    <string name="stud_Updated_success">Student Updated Successfully!</string>
+    <string name="hif_Added_success">HouseholdInformation Added Successfully!</string>
+    <string name="hif_Updated_success">HouseholdInformation Updated Successfully!</string>
+    <string name="vif_Added_success">VillageInformation Added Successfully!</string>
+    <string name="vif_Updated_success">VillageInformation Updated Successfully!</string>
+    <string name="vill_Updated_success">Village Updated Successfully!</string>
+    <string name="vill_added_success">Village Added Successfully!</string>
+    <string name="select_school_type">Select School Type</string>
+
+    <!--profile-->
+    <string name="asmt_not_given">Assessment Not Given By Child</string>
+    <string name="child_asses">Children assessed: </string>
+    <string name="child_surveyd">Children surveyed:</string>
+    <string name="hi">Hi,</string>
+    <string name="no_match_found">No Match Found!</string>
+    <string name="data_sync_success">Data Synced Successfully!</string>
+    <string name="db_sync_success">DB Synced Successfully!</string>
+    <string name="sync_fail">Synced Failed!</string>
+
 
     <string-array name="country_list">
         <item>Select Country</item>
