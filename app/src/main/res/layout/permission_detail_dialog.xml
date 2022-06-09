@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_perm_heading"
-            android:text="@string/permissions"
+            android:text="permission"
             android:textColor="@color/black_20"
             android:textSize="@dimen/_15sdp" />
 

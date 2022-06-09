@@ -48,7 +48,7 @@
                 android:inputType="phone"
                 android:textColor="@color/colorText"
                 android:digits="0123456789"
-                android:maxLength="10"
+                android:maxLength="20"
                 android:drawableStart="@drawable/ic_phone_android_grey_24dp"
                 android:drawablePadding="@dimen/_5sdp"
                 android:text="9999999999"/>

@@ -103,7 +103,7 @@ public class Fragment_AddHousehold extends Fragment {
 
             this.ll_isSampledHH.setVisibility(View.VISIBLE);
 //            sv_householdDetail.setVisibility(View.VISIBLE);
-            this.tv_title.setText("Update Household");
+            this.tv_title.setText(getString(R.string.update_household));
             this.et_hhNumber.setText(this.modal_household.getHH01());
             this.et_respondentName.setText(this.modal_household.getHH02());
             this.et_houseHeadName.setText(this.modal_household.getHH03());

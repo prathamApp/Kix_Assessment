@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">ELANA</string>
 
-    <!--Permission Dialog Strings-->
-    <string name="permissions_head" translatable="false"><b>KIX uses the following permissions to enhance learning experience:</b></string>
+    <!--ENGLISH START ____________________________________________________________________-->
+<!--    <string name="app_name" translatable="false">ELANA</string>
+    &lt;!&ndash;Permission Dialog Strings&ndash;&gt;
+    <string name="permissions_head" translatable="false"><b>ELANA uses the following permissions to enhance learning experience:</b></string>
     <string name="permissions" translatable="false">
         <b><i>LOCATION:</i></b> Customize content for region\n<b><i>
-        <!--        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>-->
+        &lt;!&ndash;        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>&ndash;&gt;
         STORAGE:</i></b> To save the content and enable offline access\n<b><i>
-        <!--        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>-->
+        &lt;!&ndash;        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>&ndash;&gt;
         RECORD_AUDIO:</i></b> Using speech recognition for advanced \n reading exercises</string>
 
     <string name="Collecting_Data" translatable="false">Collecting Data</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
 
@@ -40,6 +41,7 @@
     <string name="student_count">Child Count : </string>
     <string name="village_count">Village Count : </string>
     <string name="surveyor_count">Surveyor Count : </string>*
+    <string name="household_count">Household Count : </string>*
     <string name="edit_child_info">Edit Child Information</string>
 
 
@@ -201,7 +203,6 @@
     <string name="str_PT01f_three">Non-agricultural work in a family/self owned enterprise</string>
     <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else</string>
 
-    <!--ENGLISH START ____________________________________________________________________-->
     <string name="sign_up">Sign Up</string>
     <string name="have_account_sign_in">Already Have Account? Sign In.</string>
     <string name="hint_svrName">Name <font color='#FF0000'>*</font></string>
@@ -268,7 +269,7 @@
     <string name="vill_added_success">Village Added Successfully!</string>
     <string name="select_school_type">Select School Type</string>
 
-    <!--profile-->
+    &lt;!&ndash;profile&ndash;&gt;
     <string name="asmt_not_given">Assessment Not Given By Child</string>
     <string name="hi">Hi,</string>
     <string name="no_match_found">No Match Found!</string>
@@ -462,7 +463,7 @@
         <item>HSC</item>
         <item>Graduate</item>
         <item>PostGraduate</item>
-    </string-array>
+    </string-array>-->
 
     <!--ENGLISH END ____________________________________________________________________-->
 
@@ -1189,127 +1190,595 @@
     <!--Tanzania-Kiswahili END ____________________________________________________________________-->
 
     <!--French-Senegal START ____________________________________________________________________-->
-    <!--<string name="hint_svrName">Nom</string>
+    <string name="app_name">ELANA</string>
+    <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
+    <string name="Collecting_Data">Collecte des données</string>
+    <string name="hello_blank_fragment">Bonjour, fragment vide</string>
+    <string name="push_success">Poussé avec succès !</string>
+    <string name="push_fail">La poussée a échoué !</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">Ok</string>
+    <string name="ok">Ok</string>
+    <string name="please_wait_pushing">Attendez s\'il vous plaît, en poussant les données...</string>
+    <string name="details">Détails</string>
+    <string name="goto_next">Aller au suivant</string>
+    <string name="cancel">annuler</string>
+    <string name="profile">Profil</string>
+    <string name="create_surveyor">Créer un compte de géomètre</string>
+    <string name="children_surveyed">Enfants enquêtés</string>
+    <string name="children_assessed">Enfants évalués</string>
+    <string name="child_name">Nom de l\'enfant</string>
+    <string name="village">Village</string>
+    <string name="assessment_given">Évaluation donnée</string>
+    <string name="assessments_synced">Les évaluations ont été synchronisées</string>
+    <string name="score_count">nombre de points</string>
+    <string name="student_count">nombre de points</string>
+    <string name="village_count">nombre de villages</string>
+    <string name="household_count">nombre de ménages</string>
+    <string name="surveyor_count">nombre de géomètres</string>
+    <string name="edit_child_info">Modifier les informations relatives à l\'enfant</string>
+    <string name="add_village_info">Ajouter des informations sur le village</string>
+    <string name="update_village_info">mettre à jour les informations sur le village</string>
+    <string name="str_village_info">informations sur le village</string>
+    <string name="str_V01">Y a-t-il une route goudronnée/&quot;tout temps&quot; menant au village ?</string>
+    <string name="str_V02">Le village est-il desservi par les transports publics ?</string>
+    <string name="str_V03">Le village a-t-il accès à une connexion au réseau électrique ?</string>
+    <string name="str_V04">Le village dispose-t-il d\'un centre de santé ou d\'un hôpital public ?</string>
+    <string name="str_V05">Le village dispose-t-il d\'une clinique privée ou d\'un hôpital privé ?</string>
+    <string name="str_V06a">Le village dispose-t-il d\'écoles préscolaires ou d\'écoles offrant des classes préscolaires ?</string>
+    <string name="str_V06b">quel(s) type(s) d\'école(s) du village offre(nt) des niveaux/classes préscolaires ?</string>
+    <string name="str_V07a">Le village dispose-t-il d\'écoles primaires ?</string>
+    <string name="str_V07b">quel(s) type(s) d\'école(s) dans le village offre(nt) des classes primaires ?</string>
+    <string name="str_add_household">ajouter un ménage</string>
+    <string name="update_household">mettre à jour un ménage</string>
+    <string name="str_isSampledHH">Le ménage de l\'échantillon est-il le même ?</string>
+    <string name="str_isSampledHH_one">Fermé à clé</string>
+    <string name="str_isSampledHH_two">Ne répondant pas</string>
+    <string name="str_isSampledHH_three">Ouvert (à l\'enquête)</string>
+    <string name="str_HH01">le numéro du ménage figurant sur la liste des logements</string>
+    <string name="str_HH02">Nom du répondant</string>
+    <string name="str_HH03">Nom du chef ménage</string>
+    <string name="str_HH04a">Y a-t-il des enfants agés de 4 à 10 ans (vivant régulièrement) dans le menage ?</string>
+    <string name="str_HH04b">Combien ?</string>
+    <string name="str_HH05">Numéro de téléphone/mobile du ménage (si disponible et prêt à partager)</string>
+    <string name="str_add_household_info">ajouter l\'information du ménage</string>
+    <string name="str_update_household_info">mettre à jour les informations d\'un ménage</string>
+    <string name="str_household_info">informations sur le ménage</string>
+    <string name="str_gnr_household_info">Informations générales sur le ménage enquêté</string>
+    <string name="str_HH06a">Nombre de membres vivant régulièrement dans le ménage</string>
+    <string name="str_HH06b">Parlez-vous français à la maison?</string>
+    <string name="str_HH06c">A quelle frequence parlez-vous cette langue dans la maison ?</string>
+    <string name="str_HH06d">Parlez-vous d\'autres langues dans la maison ?</string>
+    <string name="str_always">Toujours</string>
+    <string name="str_sometimes">Parfois</string>
+    <string name="str_HH_asset_info">Informationssur les actifs du ménage</string>
+    <string name="str_HH07a">Toiture ménage</string>
+    <string name="str_HH07a_one">Pas de toiture</string>
+    <string name="str_HH07a_two">Toiture finie</string>
+    <string name="str_HH07a_three">Toiture naturelle ou rudimentaire</string>
+    <string name="str_HH07b">Matériaux du mur (extérieur) du ménage</string>
+    <string name="str_HH07b_one">Pas de murs</string>
+    <string name="str_HH07b_two">Murs finis</string>
+    <string name="str_HH07b_three">Murs naturels ou rudimentaires</string>
+    <string name="str_HH07c">Quelle est la source d\'éclairage régulièrement utilisée dans le ménage</string>
+    <string name="str_HH07c_one">Electricité</string>
+    <string name="str_HH07c_two">Solaire</string>
+    <string name="str_HH07c_three">Paraffine</string>
+    <string name="str_HH07c_four">Autre</string>
+    <string name="str_HH07d">Quelle est la source d\'eau potable utilisée régulièrement dans le ménage</string>
+    <string name="str_HH07d_one">Eau courante</string>
+    <string name="str_HH07d_two">Pompe manuelle/puits tubulaire</string>
+    <string name="str_HH07d_three">Forage</string>
+    <string name="str_HH07d_four">Puits</string>
+    <string name="str_HH07d_five">Rivière/Ruisseau/Etang</string>
+    <string name="str_HH07d_six">Acheter de l\'eau</string>
+    <string name="str_HH07d_seven">Autre</string>
+    <string name="str_HH07e">Raccordement à l\'électricité ?</string>
+    <string name="str_HH07f">Toilettes/Latrines ?</string>
+    <string name="str_HH07g">Au moins un membre (autre que les parents de l\'enfant) qui a obtenu un diplôme d\'études secondaires ou qui détient un certificat d\'études secondaires ?</string>
+    <string name="str_HH07h">Y a-t-il du matériel de lecture comme des livres d\'histoires ou d\'autres livres pour enfants à la maison en plus des manuels scolaires ?</string>
+    <string name="str_HH07i">Y a-t-il à la maison des documents à lire qui ne sont pas destinés aux enfants, par exemple des manuels religieux, des journaux, des magazines, etc. ?</string>
+    <string name="str_HH07j">Ordinateur/portable/tablette ?</string>
+    <string name="str_HH07k">Télévision ?</string>
+    <string name="str_HH07l">Radio ?</string>
+    <string name="str_HH07m">Téléphone portabe ?</string>
+    <string name="str_HH07n">s\'agit-il d\'un smartphone ?</string>
+    <string name="str_HH07o">Un 4 roues motorisé ?</string>
+    <string name="str_HH07p">Un 2 roues motorisé ?</string>
+    <string name="str_HH07q">Bicyclette ?</string>
+    <string name="str_HH_have_lbl">Est-ce que ce ménage a :</string>
+    <string name="select_household">sélectionnez le ménage</string>
+    <string name="add_child">Ajouter un enfant</string>
+    <string name="update_child">mettre à jour l\'enfant</string>
+    <string name="str_CH04a">L\'enfant a-t-il un handicap connu ?</string>
+    <string name="str_CH04b">quel handicap ?</string>
+    <string name="str_CH04b_op1">Visuel</string>
+    <string name="str_CH04b_op2">Audition/parole</string>
+    <string name="str_CH04b_op3">Physique</string>
+    <string name="str_CH04b_op4">Cognitive</string>
+    <string name="str_CH05">Est-ce que [nom de l\'enfant] est actuellement inscrit(e) dans une école ou une école préscolaire ?</string>
+    <string name="str_CH06c">Est-ce que le français est le moyen d\'enseignement officiel dans cette école ?
+ (pour les enfants plus jeunes, vous pouvez peut-être vérifier leurs manuels scolaires/feuilles de travail/feuilles d\'activité pour confirmer).</string>
+    <string name="str_CH06d">Quel est le statut actuel de l\'école ?</string>
+    <string name="str_CH06d_one">L\'école est ouverte et des activités d\'enseignement et d\'apprentissage sont menées pour cette classe.</string>
+    <string name="str_CH06d_two">L\'école est ouverte mais aucune activité d\'enseignement et d\'apprentissage n\'est menée.</string>
+    <string name="str_CH06d_three">L\'école est fermée</string>
+    <string name="str_CH06e">Quel type d\'activités sont menées ?</string>
+    <string name="str_CH06e_one">En ligne/à distance uniquement (par appel téléphonique, zoom, WhatsApp, Google Meet, SMS, etc.)</string>
+    <string name="str_CH06e_two">Activités physiques/personnelles uniquement (l\'enfant va à l\'école pour suivre les cours)</string>
+    <string name="str_CH06e_three">Hybride (à la fois activités en ligne/à distance et en personne)</string>
+    <string name="str_CH06f">Est-ce que [nom de l\'enfant] a des manuels scolaires pour l\'année en cours ?</string>
+    <string name="str_CH06g">Est-ce que [nom de l\'enfant] a déjà redoublé une classe à l\'école?</string>
+    <string name="str_CH07a">Est-ce que [nom de l\'enfant] a déjà été inscrit à l\'école ?</string>
+    <string name="str_CH07d">Quelle est la principale raison pour laquelle [nom de l\'enfant] a abandonné ses études ?</string>
+    <string name="str_reasonToDrop_one">Ne pouvait plus payer les frais</string>
+    <string name="str_reasonToDrop_two">Fermeture de l\'école</string>
+    <string name="str_reasonToDrop_three">N\'a pas été promu et a donc été abandonné</string>
+    <string name="str_reasonToDrop_four">Aucune école disponible à proximité pour la classe supérieure</string>
+    <string name="str_reasonToDrop_five">Plus intéressé</string>
+    <string name="str_reasonToDrop_six">Autres</string>
+    <string name="str_reasonToDrop_seven">Ne sait pas</string>
+    <string name="str_CH08">Est-ce que [nom de l\'enfant] suit actuellement un cours payant (coaching) ?</string>
+    <string name="str_CH09">Est-ce que [nom de l\'enfant] a ramené à la maison des documents à lire (autres que des manuels scolaires) de la bibliothèque de l\'école ou d\'un autre endroit au cours des deux dernières semaines ?</string>
+    <string name="str_CH10a">Quelqu\'un à la maison aide-t-il l\'enfant à faire ses devoirs ?</string>
+    <string name="str_CH10b">qui aide [nom de l\'enfant] LE PLUS souvent ?</string>
+    <string name="str_CH10b_one">Père</string>
+    <string name="str_CH10b_two">Mère</string>
+    <string name="str_CH10b_three">Frère ou sœur aîné(e)</string>
+    <string name="str_CH10b_four">Oncle</string>
+    <string name="str_CH10b_five">Tante</string>
+    <string name="str_CH10b_six">Cousin</string>
+    <string name="str_CH10b_seven">Autres</string>
+    <string name="str_CH10c">À quelle fréquence quelqu\'un du foyer lit-il ou raconte-t-il des histoires à [nom de l\'enfant] ?</string>
+    <string name="str_CH10c_one">Jamais</string>
+    <string name="str_CH10c_two">Moins d\'une fois par semaine</string>
+    <string name="str_CH10c_three">1-2 jours par semaine</string>
+    <string name="str_CH10c_four">3-4 jours par semaine</string>
+    <string name="str_CH10c_five">5 à 7 jours par semaine</string>
+    <string name="additional_learning_sup">Soutien scolaire supplémentaire à la maison</string>
+    <string name="add_parent_information">Ajouter des informations sur les parents</string>
+    <string name="update_parent_information">Mise à jour des informations sur les parents</string>
+    <string name="parent_information">informations sur le parent</string>
+    <string name="mothers_details">Coordonnées de la mère</string>
+    <string name="fathers_details">Coordonnées du père</string>
+    <string name="hint_motherName">Nom de la mère</string>
+    <string name="hint_fatherName">Nom du père</string>
+    <string name="str_PT01b">Age de la mère</string>
+    <string name="str_PT02b">Age du père</string>
+    <string name="str_PT01d">jusqu\'à quel niveau de scolarité est-elle allée ?</string>
+    <string name="str_PT02d">jusqu\'à quel niveau de scolarité est-elle allée ?</string>
+    <string name="str_PT0d_one">Aucun (c\'est-à-dire qu\'il n\'a pas terminé le primaire)</string>
+    <string name="str_PT0d_two">Primaire</string>
+    <string name="str_PT0d_three">Secondaire</string>
+    <string name="str_PT0d_four">Au-delà du secondaire</string>
+    <string name="str_child_lives_with">L\'enfant habite avec</string>
+    <string name="str_mother">la mère</string>
+    <string name="str_father">le père</string>
+    <string name="str_both">les deux</string>
+    <string name="str_neither">ni l\'un ni l\'autre</string>
+    <string name="str_PT01c">La mère a-t-elle déjà fréquenté l\'école ?</string>
+    <string name="str_PT02c">Le père a-t-il déjà fréquenté l\'école?</string>
+    <string name="str_PT01e">La mère a-t-elle un travail/emploi générateur de revenus ?</string>
+    <string name="str_PT02e">Le père a-t-elle un travail/emploi générateur de revenus ?</string>
+    <string name="str_PT01f">quel type ?</string>
+    <string name="str_PT01f_one">Travail agricole ou connexe dans le cadre d\'une exploitation familiale/indépendante.</string>
+    <string name="str_PT01f_two">Les travaux agricoles ou connexes qui appartiennent à quelqu\'un d\'autre (y compris le gouvernement et les autres).</string>
+    <string name="str_PT01f_three">Travail non agricole dans une entreprise familiale/indépendante</string>
+    <string name="str_PT01f_four">Travail non agricole dans une entreprise appartenant à quelqu\'un d\'autre (y compris le gouvernement et autres).</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="have_account_sign_in">Vous avez déjà un compte ? Se connecter</string>
+    <string name="hint_svrName">Nom</string>
     <string name="hint_svrEmail">Courriel (facultatif)</string>
     <string name="hint_svrMobile">Numéro de portable</string>
-    <string name="have_account_sign_in">Vous avez déjà un compte ? Se connecter</string>
     <string name="hint_svrPassword">Mot de passe</string>
     <string name="sign_in">Se connecter</string>
     <string name="select_village">Sélectionner un village</string>
     <string name="add_village">Ajouter un village</string>
+    <string name="update_village">village d\'actualisation</string>
     <string name="hint_village">Village</string>
-    <string name="hint_district">District</string>
-    <string name="hint_state">État</string>
-    <string name="save">Enregistrer</string>
+    <string name="hint_district">Département</string>
+    <string name="hint_state">Région</string>
+    <string name="save">sauvegarder</string>
     <string name="select_child">Sélectionner un enfant</string>
-    <string name="add_child_information">Ajouter des informations sur lenfant</string>
-    <string name="want_to_start_assessment">Voulez-vous commencer lévaluation ?</string>
-    <string name="yes">Oui</string>
-    <string name="no">Non</string>
-    <string name="sign_up">Sinscrire</string>
+    <string name="want_to_start_assessment">Voulez-vous commencer l\'évaluation ?</string>
     <string name="goto_next_task">Voulez-vous passer à la tâche suivante ?</string>
     <string name="thank_you">Merci</string>
     <string name="test_submitted">Votre évaluation est soumise</string>
-    <string name="next_student">Élève suivant</string>
-    <string name="submit_assessment">Soumettre lévaluation</string>
-    <string name="select_country">Chagua nchi</string>
+    <string name="next_student">Elève suivant</string>
+    <string name="submit_assessment">Soumettez l\'évaluation</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="select_country">Sélectinner le pays</string>
     <string name="enrolled">Inscrit</string>
-    <string name="drop_out">Abandon scolaire</string>
-    <string name="never_enrolled">Jamais inscrit</string>
-    <string name="save_n_submit">Sauvegarder et soumettre lévaluation</string>
+    <string name="drop_out">Jamais inscrit</string>
+    <string name="never_enrolled">Abandon scolaire</string>
+    <string name="save_n_submit">Sauvegarder et soumettre l\'évaluation</string>
     <string name="you_want_to_exit">Vous êtes sûr de vouloir sortir ?</string>
-
-    <string name="all_age">All Âge</string>
-    <string name="all_village">All Village</string>
-
-    <string-array name="country_list">
-        <item>Chagua nchi</item>
-        <item>India</item>
-        <item>Pakistan</item>
-        <item>Mexico</item>
-        <item>Nepal</item>
-        <item>Bangladesh</item>
-        <item>Mali</item>
-        <item>Mozambique</item>
-        <item>Nicaragua</item>
-        <item>Tanzania</item>
-        <item>Senegal</item>
-    </string-array>
+    <string name="all_age">Tous les âges</string>
+    <string name="all_village">Tous les villages</string>
+    <string name="all_houeholds">Tous les ménages</string>
+    <string name="edit">Editer</string>
+    <string name="str_government_public">Gouvernement/Public</string>
+    <string name="str_private">Privée</string>
+    <string name="str_other">Autres</string>
+    <string name="age">âges</string>
 
     <string-array name="gender">
+        <item>sexe</item>
         <item>Homme</item>
         <item>Femme</item>
     </string-array>
 
     <string-array name="enrollment_status">
-        <item>Statut dinscription</item>
+        <item>Statut d\'inscription</item>
         <item>Inscrit</item>
         <item>Jamais inscrit</item>
         <item>Abandon scolaire</item>
     </string-array>
 
     <string-array name="school_type">
-        <item>Type décole</item>
-        <item>Etatique</item>
+        <item>Type d\'école</item>
+        <item>Gouvernement/Public</item>
         <item>Privée</item>
-        <item>Autre</item>
+        <item>Autres</item>
     </string-array>
 
     <string-array name="dropout_year_list">
-        <item>Année dabandon de lenfant ?</item>
-        <item>2015</item>
-        <item>2016</item>
-        <item>2017</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2020</item>
-        <item>2021</item>
-    </string-array>
-
-    <string-array name="age">
-        <item>Âge 4  </item>
-        <item>Âge 5  </item>
-        <item>Âge 6  </item>
-        <item>Âge 7  </item>
-        <item>Âge 8  </item>
-        <item>Âge 9  </item>
-        <item>Âge 10 </item>
-    </string-array>
-
-    <string-array name="ageFilter">
-        <item>All Âge</item>
-        <item>Âge 4  </item>
-        <item>Âge 5  </item>
-        <item>Âge 6  </item>
-        <item>Âge 7  </item>
-        <item>Âge 8  </item>
-        <item>Âge 9  </item>
-        <item>Âge 10 </item>
+        <item>année d\'abandon</item>
+        <item>2015.0</item>
+        <item>2016.0</item>
+        <item>2017.0</item>
+        <item>2018.0</item>
+        <item>2019.0</item>
+        <item>2020.0</item>
+        <item>2021.0</item>
     </string-array>
 
     <string-array name="student_dropoutclass">
-        <item>Niveau dans lequel lenfant a abandonné ?</item>
-        <item>Pre-primary</item>
+        <item>Dernière année/classe achevée avant l\'abandon scolaire</item>
+        <item>Pré-primaire</item>
         <item>Classe 1</item>
         <item>Classe 2</item>
         <item>Classe 3</item>
         <item>Classe 4</item>
         <item>Classe 5</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>âges</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
+    </string-array>
+
+    <string-array name="ageFilter">
+        <item>Tous les âges</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
     </string-array>
 
     <string-array name="student_class">
         <item>Classe</item>
-        <item>Pre-primary</item>
+        <item>Pré-primaire</item>
         <item>Classe 1</item>
         <item>Classe 2</item>
         <item>Classe 3</item>
         <item>Classe 4</item>
         <item>Classe 5</item>
-    </string-array>-->
+    </string-array>
+
+    <string-array name="parentAge">
+        <item>âges</item>
+        <item>Age 18</item>
+        <item>Age 19</item>
+        <item>Age 20</item>
+        <item>Age 21</item>
+        <item>Age 22</item>
+        <item>Age 23</item>
+        <item>Age 24</item>
+        <item>Age 25</item>
+        <item>Age 26</item>
+        <item>Age 27</item>
+        <item>Age 28</item>
+        <item>Age 29</item>
+        <item>Age 30</item>
+        <item>Age 31</item>
+        <item>Age 32</item>
+        <item>Age 33</item>
+        <item>Age 34</item>
+        <item>Age 35</item>
+        <item>Age 36</item>
+        <item>Age 37</item>
+        <item>Age 38</item>
+        <item>Age 39</item>
+        <item>Age 40</item>
+        <item>Age 41</item>
+        <item>Age 42</item>
+        <item>Age 43</item>
+        <item>Age 44</item>
+        <item>Age 45</item>
+        <item>Age 46</item>
+        <item>Age 47</item>
+        <item>Age 48</item>
+        <item>Age 49</item>
+        <item>Age 50</item>
+        <item>Age 51</item>
+        <item>Age 52</item>
+        <item>Age 53</item>
+        <item>Age 54</item>
+        <item>Age 55</item>
+        <item>Age 56</item>
+        <item>Age 57</item>
+        <item>Age 58</item>
+        <item>Age 59</item>
+        <item>Age 60</item>
+        <item>Age 61</item>
+        <item>Age 62</item>
+        <item>Age 63</item>
+        <item>Age 64</item>
+        <item>Age 65</item>
+        <item>Age 66</item>
+        <item>Age 67</item>
+        <item>Age 68</item>
+        <item>Age 69</item>
+        <item>Age 70</item>
+        <item>Age 71</item>
+        <item>Age 72</item>
+        <item>Age 73</item>
+        <item>Age 74</item>
+        <item>Age 75</item>
+        <item>Age 76</item>
+        <item>Age 77</item>
+        <item>Age 78</item>
+        <item>Age 79</item>
+        <item>Age 80</item>
+        <item>Age 81</item>
+        <item>Age 82</item>
+        <item>Age 83</item>
+        <item>Age 84</item>
+        <item>Age 85</item>
+        <item>Age 86</item>
+        <item>Age 87</item>
+        <item>Age 88</item>
+        <item>Age 89</item>
+        <item>Age 90</item>
+        <item>Age 91</item>
+        <item>Age 92</item>
+        <item>Age 93</item>
+        <item>Age 94</item>
+        <item>Age 95</item>
+        <item>Age 96</item>
+        <item>Age 97</item>
+        <item>Age 98</item>
+        <item>Age 99</item>
+        <item>Age 100</item>
+    </string-array>
+
+    <string-array name="None"/>
+    <string name="no_student_found">Aucun étudiant trouvé.</string>
+    <string name="no_village_found">Aucun village trouvé.</string>
+    <string name="no_household_found">Aucun ménage trouvé.</string>
+    <string name="check_internet">Veuillez vérifier la connexion Internet !</string>
+    <string name="invalid_mobno_pass">Numéro de mobile ou mot de passe invalide.</string>
+    <string name="enter_mobno_pass">Veuillez entrer le numéro de téléphone mobile et le mot de passe !</string>
+    <string name="select_radio_button">Veuillez sélectionner les champs à boutons radio.</string>
+    <string name="select_atleast_one">Veuillez sélectionner au moins un champ.</string>
+    <string name="hhName_mandatory">Le numéro du ménage et les noms des répondants sont obligatoires !</string>
+    <string name="hh_Updated_success">Ménage mis à jour avec succès !</string>
+    <string name="hh_Added_success">Ménage ajouté avec succès !</string>
+    <string name="select_parent">Sélectionnez d\'abord le parent.</string>
+    <string name="all_fileds_mandatory">Tous les champs sont obligatoires.</string>
+    <string name="fill_all_fileds">Veuillez remplir tous les champs !</string>
+    <string name="pif_Added_success">Informations sur les parents ajoutées avec succès !</string>
+    <string name="pif_Updated_success">Informations sur les parents mises à jour avec succès !</string>
+    <string name="stud_Added_success">Étudiant ajouté avec succès !</string>
+    <string name="stud_Updated_success">Étudiant mis à jour avec succès !</string>
+    <string name="hif_Added_success">Informations sur le ménage ajoutées avec succès !</string>
+    <string name="hif_Updated_success">HouseholdInformation mis à jour avec succès !</string>
+    <string name="vif_Added_success">VillageInformation a été ajouté avec succès !</string>
+    <string name="vif_Updated_success">VillageInformation mis à jour avec succès !</string>
+    <string name="vill_Updated_success">Village Updated Successfully !</string>
+    <string name="vill_added_success">Village ajouté avec succès !</string>
+    <string name="select_school_type">Sélectionnez le type d\'école</string>
+    <string name="asmt_not_given">Évaluation non donnée par l\'enfant</string>
+    <string name="hi">Bonjour,</string>
+    <string name="no_match_found">Aucune correspondance trouvée !</string>
+    <string name="data_sync_success">Les données ont été synchronisées avec succès !</string>
+    <string name="db_sync_success">DB Synchronisé avec succès !</string>
+    <string name="sync_fail">Synchronisation échouée !</string>
+    <string name="str_household">un ménage</string>
+
     <!--French-Senegal END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-    <!--    <string name="sign_up">Créer un compte</string>
+
+<!--
+    <string name="app_name">ELANA</string>
+    <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
+    <string name="Collecting_Data">Collecte des données</string>
+    <string name="hello_blank_fragment">Bonjour, fragment vide</string>
+    <string name="push_success">Poussé avec succès !</string>
+    <string name="push_fail">La poussée a échoué !</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">Ok</string>
+    <string name="ok">Ok</string>
+    <string name="please_wait_pushing">Attendez s\'il vous plaît, en poussant les données...</string>
+    <string name="details">Détails</string>
+    <string name="goto_next">Aller au suivant</string>
+    <string name="cancel">annuler</string>
+    <string name="profile">Profil</string>
+    <string name="create_surveyor">Créer un compte de géomètre</string>
+    <string name="children_surveyed">Enfants enquêtés</string>
+    <string name="children_assessed">Enfants évalués</string>
+    <string name="child_name">Nom de l\'enfant</string>
+    <string name="village">Village</string>
+    <string name="assessment_given">Évaluation donnée</string>
+    <string name="assessments_synced">Les évaluations ont été synchronisées</string>
+    <string name="score_count">nombre de points</string>
+    <string name="student_count">nombre de points</string>
+    <string name="village_count">nombre de villages</string>
+    <string name="household_count">nombre de ménages</string>
+    <string name="surveyor_count">nombre de géomètres</string>
+    <string name="edit_child_info">Modifier les informations relatives à l\'enfant</string>
+    <string name="add_village_info">Ajouter des informations sur le village</string>
+    <string name="update_village_info">mettre à jour les informations sur le village</string>
+    <string name="str_village_info">informations sur le village</string>
+    <string name="str_V01">Y a-t-il une route goudronnée/praticable à toutes les périodes de l\'année ?</string>
+    <string name="str_V02">Le village est-il desservi par les transports publics ?</string>
+    <string name="str_V03">Le village a-t-il accès à une connexion électrique ?</string>
+    <string name="str_V04">Le village dispose-t-il d\'une clinique de santé publique/d\'un hôpital ?</string>
+    <string name="str_V05">Le village dispose-t-il d\'une clinique privée ou d\'un hôpital privé ?</string>
+    <string name="str_V06a">Le village a-t-il des écoles préscolaires ou une école offrant des classes préscolaires ?</string>
+    <string name="str_V06b">quel(s) type(s) d\'école(s) dans le village propose des classes préscolaires ?</string>
+    <string name="str_V07a">Le village a-t-il des écoles offrant des classes primaires ?</string>
+    <string name="str_V07b">quel(s) type(s) d\'école(s) dans le village offre(nt) des classes primaires ?</string>
+    <string name="str_add_household">ajouter un ménage</string>
+    <string name="update_household">mettre à jour un ménage</string>
+    <string name="str_isSampledHH">Le ménage échantillonné est-il ?</string>
+    <string name="str_isSampledHH_one">Fermé à clé</string>
+    <string name="str_isSampledHH_two">Ne répond pas</string>
+    <string name="str_isSampledHH_three">Ouvert (faire le sondage)</string>
+    <string name="str_HH01">hameau/numéro de section</string>
+    <string name="str_HH02">Nom du répondant</string>
+    <string name="str_HH03">Nom du chef de ménage</string>
+    <string name="str_HH04a">Y a-t-il des enfants agés de 4 à 10 ans (vivant régulièrement) dans le menage ?</string>
+    <string name="str_HH04b">combien ?</string>
+    <string name="str_HH05">Numéro de téléphone/mobile du ménage (N\'écrivez que si disponible et prêt à partager)</string>
+    <string name="str_add_household_info">ajouter l\'information du ménage</string>
+    <string name="str_update_household_info">mettre à jour les informations d\'un ménage</string>
+    <string name="str_household_info">informations sur le ménage</string>
+    <string name="str_gnr_household_info">Informations générales sur le ménage enquêté</string>
+    <string name="str_HH06a">Nombre de membres vivant régulièrement dans le ménage</string>
+    <string name="str_HH06b">Parlez-vous français à la maison?</string>
+    <string name="str_HH06c">à quelle fréquence parlez-vous français à la maison ?</string>
+    <string name="str_HH06d">Parlez-vous une autre langue à la maison ?</string>
+    <string name="str_always">Toujours</string>
+    <string name="str_sometimes">Parfois</string>
+    <string name="str_HH_asset_info">Informationssur les actifs du ménage</string>
+    <string name="str_HH07a">Toiture HH</string>
+    <string name="str_HH07a_one">Pas de toiture</string>
+    <string name="str_HH07a_two">Toiture préfabriqué ou finie</string>
+    <string name="str_HH07a_three">Toiture naturelle ou rudimentaire</string>
+    <string name="str_HH07b">Matériau du mur HH (externe)</string>
+    <string name="str_HH07b_one">Pas de murs</string>
+    <string name="str_HH07b_two">Murs finis</string>
+    <string name="str_HH07b_three">Murs naturels ou rudimentaires</string>
+    <string name="str_HH07c">Quelle est la source d\'éclairage régulièrement utilisée dans le ménage</string>
+    <string name="str_HH07c_one">Electricité</string>
+    <string name="str_HH07c_two">Solaire</string>
+    <string name="str_HH07c_three">Paraffine</string>
+    <string name="str_HH07c_four">Autre</string>
+    <string name="str_HH07d">Quelle est la source d\'eau potable utilisée régulièrement dans le ménage</string>
+    <string name="str_HH07d_one">Eau courante</string>
+    <string name="str_HH07d_two">Pompe Motricite Humaine/Puits tubé</string>
+    <string name="str_HH07d_three">Forage</string>
+    <string name="str_HH07d_four">Puits</string>
+    <string name="str_HH07d_five">Rivière/Ruisseau/Etang</string>
+    <string name="str_HH07d_six">Acheter de l\'eau</string>
+    <string name="str_HH07d_seven">Autre</string>
+    <string name="str_HH07e">Branchement électrique ?</string>
+    <string name="str_HH07f">Toilettes/Latrines ?</string>
+    <string name="str_HH07g">Au moins un membre (autre que les parents de l\'enfant) qui a complété un diplôme d\'études secondaires/détient un certificat de fin d\'études secondaires ?</string>
+    <string name="str_HH07h">Y a-t-il du matériel de lecture comme des livres d\'histoires ou d\'autres livres pour enfants à la maison en plus des manuels scolaires ?</string>
+    <string name="str_HH07i">Existe-t-il des types de matériel de lecture à la maison qui ne sont pas destinés aux enfants, par exemple. Manuels religieux, journaux, magazines, etc. ?</string>
+    <string name="str_HH07j">Ordinateur/Portable/Tablette?</string>
+    <string name="str_HH07k">Télévision?</string>
+    <string name="str_HH07l">Radio?</string>
+    <string name="str_HH07m">Téléphone mobile?</string>
+    <string name="str_HH07n">(Si oui en HH07m), est-ce un smartphone ?</string>
+    <string name="str_HH07o">Véhicule?</string>
+    <string name="str_HH07p">Moto?</string>
+    <string name="str_HH07q">Vélo?</string>
+    <string name="str_HH_have_lbl">Est-ce que ce ménage a :</string>
+    <string name="select_household">sélectionnez le ménage</string>
+    <string name="add_child">Ajouter un enfant</string>
+    <string name="update_child">mettre à jour l\'enfant</string>
+    <string name="str_CH04a">L\'enfant a-t-il un handicap connu ?</string>
+    <string name="str_CH04b">quel handicap ?</string>
+    <string name="str_CH04b_op1">Visuel</string>
+    <string name="str_CH04b_op2">Audition/Discours</string>
+    <string name="str_CH04b_op3">Physique</string>
+    <string name="str_CH04b_op4">Cognitif</string>
+    <string name="str_CH05">Est-ce que [nom de l\'enfant] est actuellement inscrit(e) dans une école ou une école préscolaire?</string>
+    <string name="str_CH06c">Le français est-il la langue d\'enseignement officielle dans cette école ? (pour les plus jeunes, vous pouvez peut-être vérifier leurs manuels scolaires/feuilles de travail/fiches d\'activités pour confirmer)</string>
+    <string name="str_CH06d">Quel est le statut actuel de l\'école ?</string>
+    <string name="str_CH06d_one">L\'école est ouverte et des activités d\'enseignement-apprentissage sont en cours pour cette classe</string>
+    <string name="str_CH06d_two">L\'école est ouverte mais aucune activité d\'enseignement-apprentissage n\'est en cours</string>
+    <string name="str_CH06d_three">L\'école est fermée</string>
+    <string name="str_CH06e">Quel genre d\'activités sont menées?</string>
+    <string name="str_CH06e_one">En ligne/à distance uniquement (par appel téléphonique, zoom, WhatsApp, Google Meet, SMS, etc.)</string>
+    <string name="str_CH06e_two">Activités physiques/en personne uniquement (l\'enfant va à l\'école pour assister aux cours)</string>
+    <string name="str_CH06e_three">Hybride (activités en ligne/à distance et en personne</string>
+    <string name="str_CH06f">Est-ce que [nom de l\'enfant] a des manuels pour le niveau actuel ?</string>
+    <string name="str_CH06g">[nom de l\'enfant] a-t-il(elle) déjà redoublé une classe à l\'école?</string>
+    <string name="str_CH07a">Est-ce que [nom de l\'enfant] a déjà été inscrit(e) à l\'école ?</string>
+    <string name="str_CH07d">Quelle était la raison principale pour laquelle [nom de l\'enfant] a abandonné ?</string>
+    <string name="str_reasonToDrop_one">Impossible de payer les frais</string>
+    <string name="str_reasonToDrop_two">L\'école fermée</string>
+    <string name="str_reasonToDrop_three">N\'a pas été promu donc abandonné</string>
+    <string name="str_reasonToDrop_four">Aucune école disponible à proximité pour la prochaine année</string>
+    <string name="str_reasonToDrop_five">Plus intéressé</string>
+    <string name="str_reasonToDrop_six">Autre</string>
+    <string name="str_reasonToDrop_seven">Ne sait pas</string>
+    <string name="str_CH08">Est-ce que [nom de l\'enfant] suit actuellement un cours payant (coaching) ?</string>
+    <string name="str_CH09">Est-ce que [nom de l\'enfant] a apporté à la maison des matériels à lire (autres que des manuels scolaires) de la bibliothèque de l\'école ou d\'un autre endroit au cours des deux dernières semaines ?</string>
+    <string name="str_CH10a">Quelqu\'un à la maison aide-t-il l\'enfant à faire ses devoirs ?</string>
+    <string name="str_CH10b">qui aide [nom de l\'enfant] LE PLUS souvent ?</string>
+    <string name="str_CH10b_one">Père</string>
+    <string name="str_CH10b_two">Mère</string>
+    <string name="str_CH10b_three">Frère ainé</string>
+    <string name="str_CH10b_four">Oncle</string>
+    <string name="str_CH10b_five">Tantine</string>
+    <string name="str_CH10b_six">Cousine</string>
+    <string name="str_CH10b_seven">Autr</string>
+    <string name="str_CH10c">À quelle fréquence une personne du ménage lit-elle ou raconte-t-elle des histoires à [nom de l\'enfant] ?</string>
+    <string name="str_CH10c_one">Jamais</string>
+    <string name="str_CH10c_two">Moins d\'une fois par semaine</string>
+    <string name="str_CH10c_three">1-2 jours par semaine</string>
+    <string name="str_CH10c_four">3-4 jours par semaine</string>
+    <string name="str_CH10c_five">5 à 7 jours par semaine</string>
+    <string name="additional_learning_sup">Soutien scolaire supplémentaire à domicile</string>
+    <string name="add_parent_information">Ajouter des informations sur les parents</string>
+    <string name="update_parent_information">Mise à jour des informations sur les parents</string>
+    <string name="parent_information">informations sur le parent</string>
+    <string name="mothers_details">Coordonnées de la mère</string>
+    <string name="fathers_details">Coordonnées du père</string>
+    <string name="hint_motherName">Nom de la mère</string>
+    <string name="hint_fatherName">Nom du père</string>
+    <string name="str_PT01b">Age de la mère</string>
+    <string name="str_PT02b">Age du père</string>
+    <string name="str_PT01d">jusqu\'à quel niveau de scolarité a-t-elle terminé ?</string>
+    <string name="str_PT02d">jusqu\'à quel niveau de scolarité a-t-il terminé ?</string>
+    <string name="str_PT0d_one">Aucun (c\'est-à-dire n\'a pas terminé le primaire)</string>
+    <string name="str_PT0d_two">Primaire</string>
+    <string name="str_PT0d_three">Secondaire</string>
+    <string name="str_PT0d_four">Au-dela du secondaire</string>
+    <string name="str_child_lives_with">L\'enfant habite avec</string>
+    <string name="str_mother">la mère</string>
+    <string name="str_father">le père</string>
+    <string name="str_both">les deux</string>
+    <string name="str_neither">ni l\'un ni l\'autre</string>
+    <string name="str_PT01c">La mère a-t-elle déjà fréquenté l\'école ?</string>
+    <string name="str_PT02c">Le père a-t-il déjà fréquenté l\'école?</string>
+    <string name="str_PT01e">La mère a-t-elle un travail/emploi générateur de revenus ?</string>
+    <string name="str_PT02e">Le père a-t-il un travail/emploi générateur de revenus ?</string>
+    <string name="str_PT01f">quel type ?</string>
+    <string name="str_PT01f_one">Travail agricole ou connexe appartenant à la famille ou à son propre compte</string>
+    <string name="str_PT01f_two">Travail agricole ou connexe appartenant à quelqu\'un d\'autre (y compris le gouvernement et d\'autres)</string>
+    <string name="str_PT01f_three">Travail non agricole dans une entreprise familiale/indépendante</string>
+    <string name="str_PT01f_four">Travail non agricole dans une entreprise appartenant à quelqu\'un d\'autre (y compris le gouvernement et autres)</string>
+    <string name="sign_up">Créer un compte</string>
     <string name="have_account_sign_in">As-tu déjà un compte ? Se connecter</string>
     <string name="hint_svrName">Nom</string>
     <string name="hint_svrEmail">Email (Facultatif)</string>
@@ -1318,115 +1787,220 @@
     <string name="sign_in">Se connecter</string>
     <string name="select_village">Sélectionner un village</string>
     <string name="add_village">Ajouter un village</string>
+    <string name="update_village">village d\'actualisation</string>
     <string name="hint_village">Village</string>
     <string name="hint_district">Cercle</string>
     <string name="hint_state">Région</string>
-    <string name="save">Enregister</string>
+    <string name="save">sauvegarder</string>
     <string name="select_child">Sélectionner un enfant</string>
-    <string name="add_child_information">Ajouter un enfant</string>
-    <string name="want_to_start_assessment">Voulez-vous commencer lévaluation ?</string>
-    <string name="yes">Oui</string>
-    <string name="no">Non</string>
+    <string name="want_to_start_assessment">Voulez-vous commencer l\'évaluation ?</string>
     <string name="goto_next_task">Voulez-vous passer à la tâche suivante ?</string>
     <string name="thank_you">Merci</string>
     <string name="test_submitted">Votre évaluation est soumise</string>
     <string name="next_student">Elève suivant</string>
-    <string name="submit_assessment">Soumettez lévaluation</string>
+    <string name="submit_assessment">Soumettez l\'évaluation</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
     <string name="select_country">Sélectinner le pays</string>
     <string name="enrolled">Scolarisé</string>
-    <string name="drop_out">Abandon</string>
-    <string name="never_enrolled">Jamais scolarisé</string>
-    <string name="save_n_submit">Sauvegarder et soumettre lévaluation</string>
+    <string name="drop_out">Jamais scolarisé</string>
+    <string name="never_enrolled">Abandon</string>
+    <string name="save_n_submit">Sauvegarder et soumettre l\'évaluation</string>
     <string name="you_want_to_exit">Vous êtes sûr de vouloir sortir ?</string>
-
-    <string name="all_age">All Age</string>
-    <string name="all_village">All Village</string>
-
-
-    <string-array name="country_list">
-        <item>Sélectinner le pays</item>
-        <item>India</item>
-        <item>Pakistan</item>
-        <item>Mexico</item>
-        <item>Nepal</item>
-        <item>Bangladesh</item>
-        <item>Mali</item>
-        <item>Mozambique</item>
-        <item>Nicaragua</item>
-        <item>Tanzania</item>
-        <item>Senegal</item>
-    </string-array>
-
+    <string name="all_age">Tous les âges</string>
+    <string name="all_village">Tous les villages</string>
+    <string name="all_houeholds">Tous les ménages</string>
+    <string name="edit">Editer</string>
+    <string name="str_government_public">Gouvernement/Public</string>
+    <string name="str_private">Privé</string>
+    <string name="str_other">Autre</string>
+    <string name="age">âges</string>
     <string-array name="gender">
+        <item>sexe</item>
         <item>Garçon</item>
         <item>Féminin</item>
     </string-array>
-
     <string-array name="enrollment_status">
         <item>Statut scolaire</item>
         <item>Scolarisé</item>
         <item>Jamais scolarisé</item>
         <item>Abandon</item>
     </string-array>
-
     <string-array name="school_type">
-        <item>Type décole</item>
-        <item>Etatique</item>
-        <item>Privée</item>
+        <item>Type d\'école</item>
+        <item>Gouvernement/Public</item>
+        <item>Privé</item>
         <item>Autre</item>
     </string-array>
-
     <string-array name="dropout_year_list">
-        <item>Année au cours de laquelle lenfant a abandonné ses études ?</item>
-        <item>2015</item>
-        <item>2016</item>
-        <item>2017</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2020</item>
-        <item>2021</item>
+        <item>année d\'abandon</item>
+        <item>2015.0</item>
+        <item>2016.0</item>
+        <item>2017.0</item>
+        <item>2018.0</item>
+        <item>2019.0</item>
+        <item>2020.0</item>
+        <item>2021.0</item>
     </string-array>
-
-    <string-array name="age">
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
-    </string-array>
-
-    <string-array name="ageFilter">
-        <item>All Age</item>
-        <item>Age 4  </item>
-        <item>Age 5  </item>
-        <item>Age 6  </item>
-        <item>Age 7  </item>
-        <item>Age 8  </item>
-        <item>Age 9  </item>
-        <item>Age 10 </item>
-    </string-array>
-
     <string-array name="student_dropoutclass">
-        <item>Niveau dans lequel lenfant a abandonné ?</item>
-        <item>Pre-primary</item>
+        <item>Dernière année/classe complétée avant le décrochage</item>
+        <item>Pré-primaire</item>
         <item>Classe 1</item>
         <item>Classe 2</item>
         <item>Classe 3</item>
         <item>Classe 4</item>
         <item>Classe 5</item>
     </string-array>
-
+    <string-array name="age">
+        <item>âges</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>Tous les âges</item>
+        <item>Age 4</item>
+        <item>Age 5</item>
+        <item>Age 6</item>
+        <item>Age 7</item>
+        <item>Age 8</item>
+        <item>Age 9</item>
+        <item>Age 10</item>
+    </string-array>
     <string-array name="student_class">
         <item>Classe</item>
-        <item>Pre-primary</item>
+        <item>Pré-primaire</item>
         <item>Classe 1</item>
         <item>Classe 2</item>
         <item>Classe 3</item>
         <item>Classe 4</item>
         <item>Classe 5</item>
-    </string-array>-->
+    </string-array>
+    <string-array name="parentAge">
+        <item>âges</item>
+        <item>Age 18</item>
+        <item>Age 19</item>
+        <item>Age 20</item>
+        <item>Age 21</item>
+        <item>Age 22</item>
+        <item>Age 23</item>
+        <item>Age 24</item>
+        <item>Age 25</item>
+        <item>Age 26</item>
+        <item>Age 27</item>
+        <item>Age 28</item>
+        <item>Age 29</item>
+        <item>Age 30</item>
+        <item>Age 31</item>
+        <item>Age 32</item>
+        <item>Age 33</item>
+        <item>Age 34</item>
+        <item>Age 35</item>
+        <item>Age 36</item>
+        <item>Age 37</item>
+        <item>Age 38</item>
+        <item>Age 39</item>
+        <item>Age 40</item>
+        <item>Age 41</item>
+        <item>Age 42</item>
+        <item>Age 43</item>
+        <item>Age 44</item>
+        <item>Age 45</item>
+        <item>Age 46</item>
+        <item>Age 47</item>
+        <item>Age 48</item>
+        <item>Age 49</item>
+        <item>Age 50</item>
+        <item>Age 51</item>
+        <item>Age 52</item>
+        <item>Age 53</item>
+        <item>Age 54</item>
+        <item>Age 55</item>
+        <item>Age 56</item>
+        <item>Age 57</item>
+        <item>Age 58</item>
+        <item>Age 59</item>
+        <item>Age 60</item>
+        <item>Age 61</item>
+        <item>Age 62</item>
+        <item>Age 63</item>
+        <item>Age 64</item>
+        <item>Age 65</item>
+        <item>Age 66</item>
+        <item>Age 67</item>
+        <item>Age 68</item>
+        <item>Age 69</item>
+        <item>Age 70</item>
+        <item>Age 71</item>
+        <item>Age 72</item>
+        <item>Age 73</item>
+        <item>Age 74</item>
+        <item>Age 75</item>
+        <item>Age 76</item>
+        <item>Age 77</item>
+        <item>Age 78</item>
+        <item>Age 79</item>
+        <item>Age 80</item>
+        <item>Age 81</item>
+        <item>Age 82</item>
+        <item>Age 83</item>
+        <item>Age 84</item>
+        <item>Age 85</item>
+        <item>Age 86</item>
+        <item>Age 87</item>
+        <item>Age 88</item>
+        <item>Age 89</item>
+        <item>Age 90</item>
+        <item>Age 91</item>
+        <item>Age 92</item>
+        <item>Age 93</item>
+        <item>Age 94</item>
+        <item>Age 95</item>
+        <item>Age 96</item>
+        <item>Age 97</item>
+        <item>Age 98</item>
+        <item>Age 99</item>
+        <item>Age 100</item>
+    </string-array>
+    <string-array name="None"/>
+    <string name="no_student_found">Aucun étudiant trouvé.</string>
+    <string name="no_village_found">Aucun village trouvé.</string>
+    <string name="no_household_found">Aucun ménage trouvé.</string>
+    <string name="check_internet">Veuillez vérifier la connexion Internet !</string>
+    <string name="invalid_mobno_pass">Numéro de mobile ou mot de passe invalide.</string>
+    <string name="enter_mobno_pass">Veuillez entrer le numéro de téléphone mobile et le mot de passe !</string>
+    <string name="select_radio_button">Veuillez sélectionner les champs à boutons radio.</string>
+    <string name="select_atleast_one">Veuillez sélectionner au moins un champ.</string>
+    <string name="hhName_mandatory">Le numéro du ménage et les noms des répondants sont obligatoires !</string>
+    <string name="hh_Updated_success">Ménage mis à jour avec succès !</string>
+    <string name="hh_Added_success">Ménage ajouté avec succès !</string>
+    <string name="select_parent">Sélectionnez d\'abord le parent.</string>
+    <string name="all_fileds_mandatory">Tous les champs sont obligatoires.</string>
+    <string name="fill_all_fileds">Veuillez remplir tous les champs !</string>
+    <string name="pif_Added_success">Informations sur les parents ajoutées avec succès !</string>
+    <string name="pif_Updated_success">Informations sur les parents mises à jour avec succès !</string>
+    <string name="stud_Added_success">Étudiant ajouté avec succès !</string>
+    <string name="stud_Updated_success">Étudiant mis à jour avec succès !</string>
+    <string name="hif_Added_success">Informations sur le ménage ajoutées avec succès !</string>
+    <string name="hif_Updated_success">HouseholdInformation mis à jour avec succès !</string>
+    <string name="vif_Added_success">VillageInformation a été ajouté avec succès !</string>
+    <string name="vif_Updated_success">VillageInformation mis à jour avec succès !</string>
+    <string name="vill_Updated_success">Village Updated Successfully !</string>
+    <string name="vill_added_success">Village ajouté avec succès !</string>
+    <string name="select_school_type">Sélectionnez le type d\'école</string>
+    <string name="asmt_not_given">Évaluation non donnée par l\'enfant</string>
+    <string name="hi">Bonjour,</string>
+    <string name="no_match_found">Aucune correspondance trouvée !</string>
+    <string name="data_sync_success">Les données ont été synchronisées avec succès !</string>
+    <string name="db_sync_success">DB Synchronisé avec succès !</string>
+    <string name="sync_fail">Synchronisation échouée !</string>
+    <string name="str_household"></string>
+-->
+
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Bangla-Bengali START ____________________________________________________________________-->

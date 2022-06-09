@@ -15,6 +15,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
+import com.google.gson.Gson;
 import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.custom.CustomLodingDialog;
@@ -22,6 +23,7 @@ import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.EventMessage;
+import com.kix.assessment.modal_classes.Modal_PushResponse;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EBean;
@@ -158,8 +160,9 @@ public class PushDataBaseZipToServer {
                 Log.d("FC_RandomString", filePathStr + ".zip");
                 AndroidNetworking.upload(url[0])
                         .addHeaders("Content-Type", "file/zip")
-                        .addMultipartFile("file", new File(filePathStr + ".zip"))
-                        .addHeaders("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
+                        .addMultipartFile("zip", new File(filePathStr + ".zip"))
+//                        .addMultipartFile("file", new File(filePathStr + ".zip"))
+//                        .addHeaders("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyMjYzNzAyNX0.zwrt5F67Q7_WE2lrmr7_cWKzlDtWCyImmvHJGA6ynas")
                         .setPriority(Priority.HIGH)
                         .build()
                         .getAsString(new StringRequestListener() {
@@ -167,12 +170,22 @@ public class PushDataBaseZipToServer {
                             public void onResponse(String response) {
                                 Log.d("PushData", "DB ZIP PUSH " + response);
                                 new File(filePathStr + ".zip").delete();
+                                Gson gson = new Gson();
+                                Modal_PushResponse pushResponse = gson.fromJson(response, Modal_PushResponse.class);
+                                if (pushResponse.status.equalsIgnoreCase("success")) {
 //                                if (pushResponse.isSuccess()/*equalsIgnoreCase("success")*/) {
-                                Log.d("PushData", "DB ZIP PUSH SUCCESS");
-                                pushSuccessfull = true;
-                                EventMessage msg = new EventMessage();
-                                msg.setMessage(Kix_Constant.DBSUCCESSFULLYPUSHED);
-                                EventBus.getDefault().post(msg);
+                                    Log.d("PushData", "DB ZIP PUSH SUCCESS");
+                                    pushSuccessfull = true;
+                                    EventMessage msg = new EventMessage();
+                                    msg.setMessage(Kix_Constant.DBSUCCESSFULLYPUSHED);
+                                    EventBus.getDefault().post(msg);
+                                }else{
+                                    pushSuccessfull = false;
+                                    new File(filePathStr + ".zip").delete();
+                                    EventMessage msg = new EventMessage();
+                                    msg.setMessage(Kix_Constant.PUSHFAILED);
+                                    EventBus.getDefault().post(msg);
+                                }
                             }
 
                             @Override

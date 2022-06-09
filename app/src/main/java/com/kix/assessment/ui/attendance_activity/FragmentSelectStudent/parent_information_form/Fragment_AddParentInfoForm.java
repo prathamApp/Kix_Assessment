@@ -89,7 +89,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
     ArrayAdapter ageAdapter, gradeAdapter;
 
-    RadioButton rb_PT01c, rb_PT01d, rb_PT01e, rb_PT01f, rb_PT02c, rb_PT02d, rb_PT02e, rb_PT02f, rb_selectPerson;
+    RadioButton rb_selectPerson;
     String age, str_selectedPerson;// str_PT01c, str_PT01e, str_PT01f, str_PT02c, str_PT02e, str_PT02f;
 
     //public String mothersName, fathersName;
@@ -220,9 +220,9 @@ public class Fragment_AddParentInfoForm extends Fragment {
     public void enterDetails() {
         int selectedPerson = rg_selectPerson.getCheckedRadioButtonId();
         rb_selectPerson = getView().findViewById(selectedPerson);
-        str_selectedPerson = rb_selectPerson.getText().toString();
 
         if (rb_selectPerson != null) {
+            str_selectedPerson = rb_selectPerson.getText().toString();
             sv_pif.setVisibility(View.VISIBLE);
             btn_saveParent.setVisibility(View.VISIBLE);
             if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_mother))) {

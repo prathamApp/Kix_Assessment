@@ -112,15 +112,15 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @Override
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
         //recycler header values
-        Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
-                "Household", "Assessments Given", "Assessment Synced", "");
+        Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
+                getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "");
         detailsList.add(details);
         if (profileDetails.size() == 0) {
             Toast.makeText(getActivity(), getString(R.string.asmt_not_given), Toast.LENGTH_SHORT).show();
         }
         assGiven = 0;
         for (int i = 0; i < profileDetails.size(); i++) {
-            if (profileDetails.get(i).getExamsGiven() != null)
+            if (Integer.parseInt(profileDetails.get(i).getExamsGiven()) > 0)
                 assGiven++;
             details = new Modal_ProfileDetails(profileDetails.get(i).getStudentName(),
                     profileDetails.get(i).getRespondantName(), profileDetails.get(i).getExamsGiven(), "0",
@@ -143,7 +143,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             profileAdapter.notifyDataSetChanged();
         }
     }
-    private TextView tv_dia_score;
+    private TextView tv_dia_score, tv_dia_hhld;
     private CustomLodingDialog myLoadingDialog;
 
     @AfterViews
@@ -254,8 +254,8 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         if (ageSelected.equalsIgnoreCase(getResources().getString(R.string.all_age)) && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
             filteredList.addAll(detailsList);
         } else {
-            Modal_ProfileDetails details = new Modal_ProfileDetails("Child Name",
-                    "Household", "Assessments Given", "Assessment Synced", "");
+            Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
+                    getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "");
             filteredList.add(details);
             for (Modal_ProfileDetails d : detailsList) {
                 if (ageFilter.equalsIgnoreCase(getResources().getString(R.string.all_age)) && !villageFilter.isEmpty()) {
@@ -361,11 +361,18 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         tv_dia_survey = pushStatusDialogue.findViewById(R.id.dia_survey);
         tv_dia_stud = pushStatusDialogue.findViewById(R.id.dia_stud);
         tv_dia_score = pushStatusDialogue.findViewById(R.id.dia_score);
+        this.tv_dia_hhld = this.pushStatusDialogue.findViewById(R.id.dia_hhld);
 
-        tv_dia_score.setText("Score Count : " + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
-        tv_dia_stud.setText("Student Count : " + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
-        tv_dia_vil.setText("Village Count : " + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
-        tv_dia_survey.setText("Surveyor Count : " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+        this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
+        this.tv_dia_stud.setText(this.getResources().getString(R.string.student_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
+        this.tv_dia_vil.setText(this.getResources().getString(R.string.village_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
+        this.tv_dia_survey.setText(this.getResources().getString(R.string.surveyor_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+        this.tv_dia_hhld.setText(this.getResources().getString(R.string.household_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
 
         pushStatusDialogue.show();
     }
