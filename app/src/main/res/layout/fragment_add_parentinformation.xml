@@ -100,7 +100,7 @@
             android:layout_marginBottom="@dimen/_20sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_5sdp"
-            android:text="Enter Details"
+            android:text="@string/enter_details"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textAppearance="@dimen/_5sdp"

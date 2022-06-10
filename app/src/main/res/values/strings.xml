@@ -268,6 +268,12 @@
     <string name="vill_Updated_success">Village Updated Successfully!</string>
     <string name="vill_added_success">Village Added Successfully!</string>
     <string name="select_school_type">Select School Type</string>
+    <string name="error_mobile_no">Mobile No. must be less than 20 digit.</string>
+    <string name="error_email">Invalid Email! (Ex. abc@gmail.com)</string>
+    <string name="error_password">Minimum 3 characters required for password!</string>
+    <string name="profile_already">Profile is already saved..</string>
+    <string name="invaild_data">Invalid Data!</string>
+    <string name="enter_details">Enter Details</string>
 
     &lt;!&ndash;profile&ndash;&gt;
     <string name="asmt_not_given">Assessment Not Given By Child</string>
@@ -1190,6 +1196,7 @@
     <!--Tanzania-Kiswahili END ____________________________________________________________________-->
 
     <!--French-Senegal START ____________________________________________________________________-->
+
     <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
     <string name="Collecting_Data">Collecte des données</string>
@@ -1597,6 +1604,13 @@
     <string name="db_sync_success">DB Synchronisé avec succès !</string>
     <string name="sync_fail">Synchronisation échouée !</string>
     <string name="str_household">un ménage</string>
+    <string name="error_mobile_no">Le numéro de mobile doit être inférieur à 20 chiffres.</string>
+    <string name="error_email">Courriel invalide ! (Ex. abc@gmail.com)</string>
+    <string name="error_password">Minimum 3 caractères requis pour le mot de passe !</string>
+    <string name="profile_already">Le profil est déjà enregistré...</string>
+    <string name="invaild_data">Données non valides !</string>
+    <string name="enter_details">Entrez les détails</string>
+
 
     <!--French-Senegal END ____________________________________________________________________-->
 
@@ -1998,7 +2012,14 @@
     <string name="data_sync_success">Les données ont été synchronisées avec succès !</string>
     <string name="db_sync_success">DB Synchronisé avec succès !</string>
     <string name="sync_fail">Synchronisation échouée !</string>
-    <string name="str_household"></string>
+    <string name="str_household">le ménage</string>
+    <string name="error_mobile_no">Le numéro de mobile doit être inférieur à 20 chiffres.</string>
+    <string name="error_email">Courriel invalide ! (Ex. abc@gmail.com)</string>
+    <string name="error_password">Minimum 3 caractères requis pour le mot de passe !</string>
+    <string name="profile_already">Le profil est déjà enregistré...</string>
+    <string name="invaild_data">Données non valides !</string>
+    <string name="enter_details">Entrez les détails</string>
+
 -->
 
     <!--French-Mali END ____________________________________________________________________-->
