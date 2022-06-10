@@ -57,7 +57,7 @@ public class Fragment_Svr_SignIn extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(s.length()<20)
+                if(s.length()<8)
                     Fragment_Svr_SignIn.this.til_svrMobile.setError(getString(R.string.error_mobile_no));
                 else Fragment_Svr_SignIn.this.til_svrMobile.setError(null);
             }
@@ -72,8 +72,7 @@ public class Fragment_Svr_SignIn extends Fragment {
     @Click(R.id.btn_signIn)
     public void signIn(){
         FastSave.getInstance().saveString(Kix_Constant.SESSIONID, "NA");
-        if(!this.et_mobile.getText().toString().isEmpty() && !this.et_password.getText().toString().isEmpty()
-                && this.et_password.getText().toString().length()>=7 && this.et_password.getText().toString().length()<20 ){
+        if(!this.et_mobile.getText().toString().isEmpty() && !this.et_password.getText().toString().isEmpty()){
             final Modal_Surveyor surveyorLogin = KixDatabase.getDatabaseInstance(this.getActivity()).getSurveyorDao().getSurveyorLogin(this.et_mobile.getText().toString(), this.et_password.getText().toString());
             if (surveyorLogin == null) {
                 Toast.makeText(this.getActivity(), this.getString(R.string.invalid_mobno_pass), Toast.LENGTH_SHORT).show();
