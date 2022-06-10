@@ -153,7 +153,7 @@ public class Fragment_Svr_SignUp extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(s.length()<20)
+                if(s.length()<8)
                     Fragment_Svr_SignUp.this.til_svrMobile.setError(getString(R.string.error_mobile_no));
                 else Fragment_Svr_SignUp.this.til_svrMobile.setError(null);
             }

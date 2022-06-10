@@ -1824,6 +1824,8 @@
     <string name="str_private">Privé</string>
     <string name="str_other">Autre</string>
     <string name="age">âges</string>
+    <string name="years">ans</string>
+
     <string-array name="gender">
         <item>sexe</item>
         <item>Garçon</item>
@@ -1862,23 +1864,23 @@
     </string-array>
     <string-array name="age">
         <item>âges</item>
-        <item>âges 4</item>
-        <item>âges 5</item>
-        <item>âges 6</item>
-        <item>âges 7</item>
-        <item>âges 8</item>
-        <item>âges 9</item>
-        <item>âges 10</item>
+        <item> 4 ans</item>
+        <item> 5 ans</item>
+        <item> 6 ans</item>
+        <item> 7 ans</item>
+        <item> 8 ans</item>
+        <item> 9 ans</item>
+        <item>10 ans</item>
     </string-array>
     <string-array name="ageFilter">
         <item>Tous les âges</item>
-        <item>âges 4</item>
-        <item>âges 5</item>
-        <item>âges 6</item>
-        <item>âges 7</item>
-        <item>âges 8</item>
-        <item>âges 9</item>
-        <item>âges 10</item>
+        <item> 4 ans</item>
+        <item> 5 ans</item>
+        <item> 6 ans</item>
+        <item> 7 ans</item>
+        <item> 8 ans</item>
+        <item> 9 ans</item>
+        <item>10 ans</item>
     </string-array>
     <string-array name="student_class">
         <item>Classe</item>
@@ -1891,90 +1893,91 @@
     </string-array>
     <string-array name="parentAge">
         <item>âges</item>
-        <item>âges 18</item>
-        <item>âges 19</item>
-        <item>âges 20</item>
-        <item>âges 21</item>
-        <item>âges 22</item>
-        <item>âges 23</item>
-        <item>âges 24</item>
-        <item>âges 25</item>
-        <item>âges 26</item>
-        <item>âges 27</item>
-        <item>âges 28</item>
-        <item>âges 29</item>
-        <item>âges 30</item>
-        <item>âges 31</item>
-        <item>âges 32</item>
-        <item>âges 33</item>
-        <item>âges 34</item>
-        <item>âges 35</item>
-        <item>âges 36</item>
-        <item>âges 37</item>
-        <item>âges 38</item>
-        <item>âges 39</item>
-        <item>âges 40</item>
-        <item>âges 41</item>
-        <item>âges 42</item>
-        <item>âges 43</item>
-        <item>âges 44</item>
-        <item>âges 45</item>
-        <item>âges 46</item>
-        <item>âges 47</item>
-        <item>âges 48</item>
-        <item>âges 49</item>
-        <item>âges 50</item>
-        <item>âges 51</item>
-        <item>âges 52</item>
-        <item>âges 53</item>
-        <item>âges 54</item>
-        <item>âges 55</item>
-        <item>âges 56</item>
-        <item>âges 57</item>
-        <item>âges 58</item>
-        <item>âges 59</item>
-        <item>âges 60</item>
-        <item>âges 61</item>
-        <item>âges 62</item>
-        <item>âges 63</item>
-        <item>âges 64</item>
-        <item>âges 65</item>
-        <item>âges 66</item>
-        <item>âges 67</item>
-        <item>âges 68</item>
-        <item>âges 69</item>
-        <item>âges 70</item>
-        <item>âges 71</item>
-        <item>âges 72</item>
-        <item>âges 73</item>
-        <item>âges 74</item>
-        <item>âges 75</item>
-        <item>âges 76</item>
-        <item>âges 77</item>
-        <item>âges 78</item>
-        <item>âges 79</item>
-        <item>âges 80</item>
-        <item>âges 81</item>
-        <item>âges 82</item>
-        <item>âges 83</item>
-        <item>âges 84</item>
-        <item>âges 85</item>
-        <item>âges 86</item>
-        <item>âges 87</item>
-        <item>âges 88</item>
-        <item>âges 89</item>
-        <item>âges 90</item>
-        <item>âges 91</item>
-        <item>âges 92</item>
-        <item>âges 93</item>
-        <item>âges 94</item>
-        <item>âges 95</item>
-        <item>âges 96</item>
-        <item>âges 97</item>
-        <item>âges 98</item>
-        <item>âges 99</item>
-        <item>âges 100</item>
+        <item> 18 ans</item>
+        <item> 19 ans</item>
+        <item> 20 ans</item>
+        <item> 21 ans</item>
+        <item> 22 ans</item>
+        <item> 23 ans</item>
+        <item> 24 ans</item>
+        <item> 25 ans</item>
+        <item> 26 ans</item>
+        <item> 27 ans</item>
+        <item> 28 ans</item>
+        <item> 29 ans</item>
+        <item> 30 ans</item>
+        <item> 31 ans</item>
+        <item> 32 ans</item>
+        <item> 33 ans</item>
+        <item> 34 ans</item>
+        <item> 35 ans</item>
+        <item> 36 ans</item>
+        <item> 37 ans</item>
+        <item> 38 ans</item>
+        <item> 39 ans</item>
+        <item> 40 ans</item>
+        <item> 41 ans</item>
+        <item> 42 ans</item>
+        <item> 43 ans</item>
+        <item> 44 ans</item>
+        <item> 45 ans</item>
+        <item> 46 ans</item>
+        <item> 47 ans</item>
+        <item> 48 ans</item>
+        <item> 49 ans</item>
+        <item> 50 ans</item>
+        <item> 51 ans</item>
+        <item> 52 ans</item>
+        <item> 53 ans</item>
+        <item> 54 ans</item>
+        <item> 55 ans</item>
+        <item> 56 ans</item>
+        <item> 57 ans</item>
+        <item> 58 ans</item>
+        <item> 59 ans</item>
+        <item> 60 ans</item>
+        <item> 61 ans</item>
+        <item> 62 ans</item>
+        <item> 63 ans</item>
+        <item> 64 ans</item>
+        <item> 65 ans</item>
+        <item> 66 ans</item>
+        <item> 67 ans</item>
+        <item> 68 ans</item>
+        <item> 69 ans</item>
+        <item> 70 ans</item>
+        <item> 71 ans</item>
+        <item> 72 ans</item>
+        <item> 73 ans</item>
+        <item> 74 ans</item>
+        <item> 75 ans</item>
+        <item> 76 ans</item>
+        <item> 77 ans</item>
+        <item> 78 ans</item>
+        <item> 79 ans</item>
+        <item> 80 ans</item>
+        <item> 81 ans</item>
+        <item> 82 ans</item>
+        <item> 83 ans</item>
+        <item> 84 ans</item>
+        <item> 85 ans</item>
+        <item> 86 ans</item>
+        <item> 87 ans</item>
+        <item> 88 ans</item>
+        <item> 89 ans</item>
+        <item> 90 ans</item>
+        <item> 91 ans</item>
+        <item> 92 ans</item>
+        <item> 93 ans</item>
+        <item> 94 ans</item>
+        <item> 95 ans</item>
+        <item> 96 ans</item>
+        <item> 97 ans</item>
+        <item> 98 ans</item>
+        <item> 99 ans</item>
+        <item>100 ans</item>
     </string-array>
+
     <string-array name="None"/>
     <string name="no_student_found">Aucun étudiant trouvé.</string>
     <string name="no_village_found">Aucun village trouvé.</string>

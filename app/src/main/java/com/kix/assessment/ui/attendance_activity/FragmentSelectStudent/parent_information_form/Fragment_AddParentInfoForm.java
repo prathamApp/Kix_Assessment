@@ -162,7 +162,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
     private void fetchParentDetails(Modal_PIF modalPif) {
         et_motherName.setText(modalPif.PT01a);
-        spinner_mothersAge.setSelection(ageAdapter.getPosition(this.getString(R.string.age) +" "+ modalPif.PT01b));
+        spinner_mothersAge.setSelection(ageAdapter.getPosition(modalPif.PT01b +" "+ this.getString(R.string.years)));
         if (modalPif.PT01c.equalsIgnoreCase("1")) {
             rg_motherAttendSchool.check(R.id.rb_PT01c_yes);
             rl_motherSchooling.setVisibility(View.VISIBLE);
@@ -189,7 +189,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
         } else rg_motherIncome.check(R.id.rb_PT01e_No);
 
         et_fatherName.setText(modalPif.PT02a);
-        spinner_fathersAge.setSelection(ageAdapter.getPosition(this.getString(R.string.age) +" "+ modalPif.PT02b));
+        spinner_fathersAge.setSelection(ageAdapter.getPosition(modalPif.PT02b + " " + this.getString(R.string.years)));
         if (modalPif.PT02c.equalsIgnoreCase("1")) {
             rg_fatherAttendSchool.check(R.id.rb_PT02c_yes);
             rl_fatherSchooling.setVisibility(View.VISIBLE);
@@ -532,7 +532,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
     private String getSelectedAge(final String age1) {
         final String[] split_age = age1.split(" ");
         if (split_age.length > 1)
-            this.age = String.valueOf(Integer.parseInt(split_age[1]));
+            this.age = String.valueOf(Integer.parseInt(split_age[0]));
             //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, Integer.parseInt(split_age[1]));
         else
             this.age = "0";
