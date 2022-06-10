@@ -1196,8 +1196,7 @@
     <!--Tanzania-Kiswahili END ____________________________________________________________________-->
 
     <!--French-Senegal START ____________________________________________________________________-->
-
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="hello_blank_fragment">Bonjour, fragment vide</string>
@@ -1609,14 +1608,10 @@
     <string name="error_password">Minimum 3 caractères requis pour le mot de passe !</string>
     <string name="profile_already">Le profil est déjà enregistré...</string>
     <string name="invaild_data">Données non valides !</string>
-    <string name="enter_details">Entrez les détails</string>
-
-
+    <string name="enter_details">Entrez les détails</string>-->
     <!--French-Senegal END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-
-<!--
     <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
     <string name="Collecting_Data">Collecte des données</string>
@@ -1848,13 +1843,13 @@
     </string-array>
     <string-array name="dropout_year_list">
         <item>année d\'abandon</item>
-        <item>2015.0</item>
-        <item>2016.0</item>
-        <item>2017.0</item>
-        <item>2018.0</item>
-        <item>2019.0</item>
-        <item>2020.0</item>
-        <item>2021.0</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Dernière année/classe complétée avant le décrochage</item>
@@ -1867,23 +1862,23 @@
     </string-array>
     <string-array name="age">
         <item>âges</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item>âges 4</item>
+        <item>âges 5</item>
+        <item>âges 6</item>
+        <item>âges 7</item>
+        <item>âges 8</item>
+        <item>âges 9</item>
+        <item>âges 10</item>
     </string-array>
     <string-array name="ageFilter">
         <item>Tous les âges</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item>âges 4</item>
+        <item>âges 5</item>
+        <item>âges 6</item>
+        <item>âges 7</item>
+        <item>âges 8</item>
+        <item>âges 9</item>
+        <item>âges 10</item>
     </string-array>
     <string-array name="student_class">
         <item>Classe</item>
@@ -1896,89 +1891,89 @@
     </string-array>
     <string-array name="parentAge">
         <item>âges</item>
-        <item>Age 18</item>
-        <item>Age 19</item>
-        <item>Age 20</item>
-        <item>Age 21</item>
-        <item>Age 22</item>
-        <item>Age 23</item>
-        <item>Age 24</item>
-        <item>Age 25</item>
-        <item>Age 26</item>
-        <item>Age 27</item>
-        <item>Age 28</item>
-        <item>Age 29</item>
-        <item>Age 30</item>
-        <item>Age 31</item>
-        <item>Age 32</item>
-        <item>Age 33</item>
-        <item>Age 34</item>
-        <item>Age 35</item>
-        <item>Age 36</item>
-        <item>Age 37</item>
-        <item>Age 38</item>
-        <item>Age 39</item>
-        <item>Age 40</item>
-        <item>Age 41</item>
-        <item>Age 42</item>
-        <item>Age 43</item>
-        <item>Age 44</item>
-        <item>Age 45</item>
-        <item>Age 46</item>
-        <item>Age 47</item>
-        <item>Age 48</item>
-        <item>Age 49</item>
-        <item>Age 50</item>
-        <item>Age 51</item>
-        <item>Age 52</item>
-        <item>Age 53</item>
-        <item>Age 54</item>
-        <item>Age 55</item>
-        <item>Age 56</item>
-        <item>Age 57</item>
-        <item>Age 58</item>
-        <item>Age 59</item>
-        <item>Age 60</item>
-        <item>Age 61</item>
-        <item>Age 62</item>
-        <item>Age 63</item>
-        <item>Age 64</item>
-        <item>Age 65</item>
-        <item>Age 66</item>
-        <item>Age 67</item>
-        <item>Age 68</item>
-        <item>Age 69</item>
-        <item>Age 70</item>
-        <item>Age 71</item>
-        <item>Age 72</item>
-        <item>Age 73</item>
-        <item>Age 74</item>
-        <item>Age 75</item>
-        <item>Age 76</item>
-        <item>Age 77</item>
-        <item>Age 78</item>
-        <item>Age 79</item>
-        <item>Age 80</item>
-        <item>Age 81</item>
-        <item>Age 82</item>
-        <item>Age 83</item>
-        <item>Age 84</item>
-        <item>Age 85</item>
-        <item>Age 86</item>
-        <item>Age 87</item>
-        <item>Age 88</item>
-        <item>Age 89</item>
-        <item>Age 90</item>
-        <item>Age 91</item>
-        <item>Age 92</item>
-        <item>Age 93</item>
-        <item>Age 94</item>
-        <item>Age 95</item>
-        <item>Age 96</item>
-        <item>Age 97</item>
-        <item>Age 98</item>
-        <item>Age 99</item>
-        <item>Age 100</item>
+        <item>âges 18</item>
+        <item>âges 19</item>
+        <item>âges 20</item>
+        <item>âges 21</item>
+        <item>âges 22</item>
+        <item>âges 23</item>
+        <item>âges 24</item>
+        <item>âges 25</item>
+        <item>âges 26</item>
+        <item>âges 27</item>
+        <item>âges 28</item>
+        <item>âges 29</item>
+        <item>âges 30</item>
+        <item>âges 31</item>
+        <item>âges 32</item>
+        <item>âges 33</item>
+        <item>âges 34</item>
+        <item>âges 35</item>
+        <item>âges 36</item>
+        <item>âges 37</item>
+        <item>âges 38</item>
+        <item>âges 39</item>
+        <item>âges 40</item>
+        <item>âges 41</item>
+        <item>âges 42</item>
+        <item>âges 43</item>
+        <item>âges 44</item>
+        <item>âges 45</item>
+        <item>âges 46</item>
+        <item>âges 47</item>
+        <item>âges 48</item>
+        <item>âges 49</item>
+        <item>âges 50</item>
+        <item>âges 51</item>
+        <item>âges 52</item>
+        <item>âges 53</item>
+        <item>âges 54</item>
+        <item>âges 55</item>
+        <item>âges 56</item>
+        <item>âges 57</item>
+        <item>âges 58</item>
+        <item>âges 59</item>
+        <item>âges 60</item>
+        <item>âges 61</item>
+        <item>âges 62</item>
+        <item>âges 63</item>
+        <item>âges 64</item>
+        <item>âges 65</item>
+        <item>âges 66</item>
+        <item>âges 67</item>
+        <item>âges 68</item>
+        <item>âges 69</item>
+        <item>âges 70</item>
+        <item>âges 71</item>
+        <item>âges 72</item>
+        <item>âges 73</item>
+        <item>âges 74</item>
+        <item>âges 75</item>
+        <item>âges 76</item>
+        <item>âges 77</item>
+        <item>âges 78</item>
+        <item>âges 79</item>
+        <item>âges 80</item>
+        <item>âges 81</item>
+        <item>âges 82</item>
+        <item>âges 83</item>
+        <item>âges 84</item>
+        <item>âges 85</item>
+        <item>âges 86</item>
+        <item>âges 87</item>
+        <item>âges 88</item>
+        <item>âges 89</item>
+        <item>âges 90</item>
+        <item>âges 91</item>
+        <item>âges 92</item>
+        <item>âges 93</item>
+        <item>âges 94</item>
+        <item>âges 95</item>
+        <item>âges 96</item>
+        <item>âges 97</item>
+        <item>âges 98</item>
+        <item>âges 99</item>
+        <item>âges 100</item>
     </string-array>
     <string-array name="None"/>
     <string name="no_student_found">Aucun étudiant trouvé.</string>
@@ -2019,9 +2014,6 @@
     <string name="profile_already">Le profil est déjà enregistré...</string>
     <string name="invaild_data">Données non valides !</string>
     <string name="enter_details">Entrez les détails</string>
-
--->
-
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Bangla-Bengali START ____________________________________________________________________-->

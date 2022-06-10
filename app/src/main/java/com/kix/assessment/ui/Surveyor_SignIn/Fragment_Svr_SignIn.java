@@ -57,8 +57,8 @@ public class Fragment_Svr_SignIn extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(s.length()<10)
-                    Fragment_Svr_SignIn.this.til_svrMobile.setError("Mobile No. should be 10 digit.");
+                if(s.length()<20)
+                    Fragment_Svr_SignIn.this.til_svrMobile.setError(getString(R.string.error_mobile_no));
                 else Fragment_Svr_SignIn.this.til_svrMobile.setError(null);
             }
         });
