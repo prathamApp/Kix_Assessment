@@ -73,14 +73,14 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
             if (modalHousehold.HH04a.equalsIgnoreCase("1")) {
                 if(modalHousehold.getHH04b().isEmpty() || modalHousehold.getHH04b().equalsIgnoreCase("0")
                         || modalHousehold.getHH04b().equalsIgnoreCase("00")){
-                    Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
                 } else {
                     this.contractHouseholdList.itemSelected(position);
                     this.index = position;
                     this.notifyDataSetChanged();
                 }
             } else {
-                Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -92,11 +92,11 @@ public class HouseholdListAdapter extends RecyclerView.Adapter<HouseholdListAdap
             if (modalHousehold.HH04a.equalsIgnoreCase("1")) {
                 if(modalHousehold.getHH04b().isEmpty() || modalHousehold.getHH04b().equalsIgnoreCase("0")
                         || modalHousehold.getHH04b().equalsIgnoreCase("00")){
-                    Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, context.getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
                 } else {
                     this.contractHouseholdList.addHIF(position);                }
             } else {
-                Toast.makeText(context, "No Children Found!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
             }
         });
 

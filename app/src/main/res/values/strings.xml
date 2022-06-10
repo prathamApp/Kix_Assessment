@@ -31,8 +31,8 @@
     <string name="cancel">Cancel</string>
     <string name="profile">Profile</string>
     <string name="create_surveyor">Create Surveyor Account</string>
-    <string name="children_surveyed">Children surveyed: </string>
-    <string name="children_assessed">Children assessed: </string>
+    <string name="children_surveyed">Children surveyed :</string>
+    <string name="children_assessed">Children assessed :</string>
     <string name="child_name">Child Name</string>
     <string name="village">Village</string>
     <string name="assessment_given">Assessment Given</string>
@@ -1212,8 +1212,8 @@
     <string name="cancel">annuler</string>
     <string name="profile">Profil</string>
     <string name="create_surveyor">Créer un compte de géomètre</string>
-    <string name="children_surveyed">Enfants enquêtés</string>
-    <string name="children_assessed">Enfants évalués</string>
+    <string name="children_surveyed">Enfants enquêtés :</string>
+    <string name="children_assessed">Enfants évalués :</string>
     <string name="child_name">Nom de l\'enfant</string>
     <string name="village">Village</string>
     <string name="assessment_given">Évaluation donnée</string>
@@ -1628,8 +1628,8 @@
     <string name="cancel">annuler</string>
     <string name="profile">Profil</string>
     <string name="create_surveyor">Créer un compte de géomètre</string>
-    <string name="children_surveyed">Enfants enquêtés</string>
-    <string name="children_assessed">Enfants évalués</string>
+    <string name="children_surveyed">Enfants enquêtés :</string>
+    <string name="children_assessed">Enfants évalués :</string>
     <string name="child_name">Nom de l\'enfant</string>
     <string name="village">Village</string>
     <string name="assessment_given">Évaluation donnée</string>
@@ -1705,7 +1705,7 @@
     <string name="str_HH07k">Télévision?</string>
     <string name="str_HH07l">Radio?</string>
     <string name="str_HH07m">Téléphone mobile?</string>
-    <string name="str_HH07n">(Si oui en HH07m), est-ce un smartphone ?</string>
+    <string name="str_HH07n">est-ce un smartphone ?</string>
     <string name="str_HH07o">Véhicule?</string>
     <string name="str_HH07p">Moto?</string>
     <string name="str_HH07q">Vélo?</string>
