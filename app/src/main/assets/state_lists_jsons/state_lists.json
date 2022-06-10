@@ -1,168 +1,145 @@
 {
   "StateList": [
     {
-      "StateName": "Maharashtra",
+      "StateName": "SÉGOU",
       "DistrictList": [
         {
-          "DistrictName": "MH_D1",
+          "DistrictName": "SÉGOU",
           "VillageList": [
             {
-              "VillageName": "MH_D1_V1"
+              "VillageName": "BIA"
             },
             {
-              "VillageName": "MH_D1_V2"
+              "VillageName": "SAGABOUGOU"
             },
             {
-              "VillageName": "MH_D1_V3"
+              "VillageName": "BERTHELA"
             },
             {
-              "VillageName": "MH_D1_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "MH_D2",
-          "VillageList": [
-            {
-              "VillageName": "MH_D2_V1"
+              "VillageName": "DIAMBOUGOU"
             },
             {
-              "VillageName": "MH_D2_V2"
+              "VillageName": "GNATIA"
             },
             {
-              "VillageName": "MH_D2_V3"
+              "VillageName": "NOUMOUBOUGOU"
             },
             {
-              "VillageName": "MH_D2_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "MH_D3",
-          "VillageList": [
-            {
-              "VillageName": "MH_D3_V1"
+              "VillageName": "WOLONA"
             },
             {
-              "VillageName": "MH_D3_V2"
+              "VillageName": "WASSADIALA"
             },
             {
-              "VillageName": "MH_D3_V3"
+              "VillageName": "DONGOMA"
             },
             {
-              "VillageName": "MH_D3_V4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "StateName": "Rajasthan",
-      "DistrictList": [
-        {
-          "DistrictName": "RJ_D1",
-          "VillageList": [
-            {
-              "VillageName": "RJ_D1_V1"
+              "VillageName": "DOUGABOUGOU"
             },
             {
-              "VillageName": "RJ_D1_V2"
+              "VillageName": "DOUGABOUGOU KORONI"
             },
             {
-              "VillageName": "RJ_D1_V3"
+              "VillageName": "TEMOU"
             },
             {
-              "VillageName": "RJ_D1_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "RJ_D2",
-          "VillageList": [
-            {
-              "VillageName": "RJ_D2_V1"
+              "VillageName": "KOMINE"
             },
             {
-              "VillageName": "RJ_D2_V2"
+              "VillageName": "SOKE"
             },
             {
-              "VillageName": "RJ_D2_V3"
+              "VillageName": "FALA"
             },
             {
-              "VillageName": "RJ_D2_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "RJ_D3",
-          "VillageList": [
-            {
-              "VillageName": "RJ_D3_V1"
+              "VillageName": "MAMA-WERE"
             },
             {
-              "VillageName": "RJ_D3_V2"
+              "VillageName": "SONSOROUNA"
             },
             {
-              "VillageName": "RJ_D3_V3"
+              "VillageName": "WETTA"
             },
             {
-              "VillageName": "RJ_D3_V4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "StateName": "Gujarat",
-      "DistrictList": [
-        {
-          "DistrictName": "GJ_D1",
-          "VillageList": [
-            {
-              "VillageName": "GJ_D1_V1"
+              "VillageName": "NINGUA"
             },
             {
-              "VillageName": "GJ_D1_V2"
+              "VillageName": "SIRAKOUMOU"
             },
             {
-              "VillageName": "GJ_D1_V3"
+              "VillageName": "DIAKA"
             },
             {
-              "VillageName": "GJ_D1_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "GJ_D2",
-          "VillageList": [
-            {
-              "VillageName": "GJ_D2_V1"
+              "VillageName": "OUELENBOUGOU"
             },
             {
-              "VillageName": "GJ_D2_V2"
+              "VillageName": "SOROBA"
             },
             {
-              "VillageName": "GJ_D2_V3"
+              "VillageName": "DIAMARABOUGOU"
             },
             {
-              "VillageName": "GJ_D2_V4"
-            }
-          ]
-        },
-        {
-          "DistrictName": "GJ_D3",
-          "VillageList": [
-            {
-              "VillageName": "GJ_D3_V1"
+              "VillageName": "DIAMOUNA"
             },
             {
-              "VillageName": "GJ_D3_V2"
+              "VillageName": "FALABOUGOU"
             },
             {
-              "VillageName": "GJ_D3_V3"
+              "VillageName": "KOUNGOBOUGOU-WERE"
             },
             {
-              "VillageName": "GJ_D3_V4"
+              "VillageName": "M'PEBOUGOU-SOKALA"
+            },
+            {
+              "VillageName": "SARKALA SOKALA"
+            },
+            {
+              "VillageName": "TIONGONI"
+            },
+            {
+              "VillageName": "ZAMBOUGOU-ZOUMAIRA"
+            },
+            {
+              "VillageName": "BOUNDO-WORODJIRA"
+            },
+            {
+              "VillageName": "N'GAMAN"
+            },
+            {
+              "VillageName": "BANANKORO"
+            },
+            {
+              "VillageName": "DIALABOUGOU-WERE"
+            },
+            {
+              "VillageName": "NEREKORO"
+            },
+            {
+              "VillageName": "PELENGANA"
+            },
+            {
+              "VillageName": "DIAKOBOUGOU"
+            },
+            {
+              "VillageName": "SAKOIBA"
+            },
+            {
+              "VillageName": "N'GOYE \"N'GOIN\""
+            },
+            {
+              "VillageName": "SAMINE"
+            },
+            {
+              "VillageName": "BANANKORONI"
+            },
+            {
+              "VillageName": "SEKORO"
+            },
+            {
+              "VillageName": "GOINKOUNGO"
+            },
+            {
+              "VillageName": "TOGOU"
             }
           ]
         }
