@@ -364,15 +364,15 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         this.tv_dia_hhld = this.pushStatusDialogue.findViewById(R.id.dia_hhld);
 
         this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
-                + "" + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
+                + " " + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
         this.tv_dia_stud.setText(this.getResources().getString(R.string.student_count)
-                + "" + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
+                + " " + FastSave.getInstance().getString(Kix_Constant.STUDENT_COUNT, "0"));
         this.tv_dia_vil.setText(this.getResources().getString(R.string.village_count)
-                + "" + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
+                + " " + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
         this.tv_dia_survey.setText(this.getResources().getString(R.string.surveyor_count)
-                + "" + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+                + " " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
         this.tv_dia_hhld.setText(this.getResources().getString(R.string.household_count)
-                + "" + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
+                + " " + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
 
         pushStatusDialogue.show();
     }
