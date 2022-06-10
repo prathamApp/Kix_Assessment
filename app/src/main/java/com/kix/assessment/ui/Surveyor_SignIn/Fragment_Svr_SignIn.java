@@ -44,38 +44,39 @@ public class Fragment_Svr_SignIn extends Fragment {
 
     @AfterViews
     public void initialize(){
-        et_mobile.addTextChangedListener(new TextWatcher() {
+        this.et_mobile.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
 
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
 
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void afterTextChanged(final Editable s) {
                 if(s.length()<10)
-                    til_svrMobile.setError("Mobile No. should be 10 digit.");
-                else til_svrMobile.setError(null);
+                    Fragment_Svr_SignIn.this.til_svrMobile.setError("Mobile No. should be 10 digit.");
+                else Fragment_Svr_SignIn.this.til_svrMobile.setError(null);
             }
         });
     }
 
     @Click(R.id.rl_parentLayout)
     public void hideKeyboard(){
-        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(this.getActivity()));
     }
 
     @Click(R.id.btn_signIn)
     public void signIn(){
         FastSave.getInstance().saveString(Kix_Constant.SESSIONID, "NA");
-        if(!et_mobile.getText().toString().isEmpty() && !et_password.getText().toString().isEmpty()){
-            Modal_Surveyor surveyorLogin = KixDatabase.getDatabaseInstance(getActivity()).getSurveyorDao().getSurveyorLogin(et_mobile.getText().toString(), et_password.getText().toString());
+        if(!this.et_mobile.getText().toString().isEmpty() && !this.et_password.getText().toString().isEmpty()
+                && this.et_password.getText().toString().length()>=7 && this.et_password.getText().toString().length()<20 ){
+            final Modal_Surveyor surveyorLogin = KixDatabase.getDatabaseInstance(this.getActivity()).getSurveyorDao().getSurveyorLogin(this.et_mobile.getText().toString(), this.et_password.getText().toString());
             if (surveyorLogin == null) {
-                Toast.makeText(getActivity(), getString(R.string.invalid_mobno_pass), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.getActivity(), this.getString(R.string.invalid_mobno_pass), Toast.LENGTH_SHORT).show();
             } else {
 /*
                 Intent intent = new Intent(getActivity(), Activity_Household_.class);
@@ -88,18 +89,18 @@ public class Fragment_Svr_SignIn extends Fragment {
                 KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
                 startActivity(intent);
 */
-                Intent intent = new Intent(getActivity(), Activity_Village_.class);
+                final Intent intent = new Intent(this.getActivity(), Activity_Village_.class);
                 intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorLogin.getSvrCode());
 //                FastSave.getInstance().saveString(Kix_Constant.BOOKLET,surveyorLogin.getSvrBooklet());
                 FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_NAME,surveyorLogin.getSvrName());
                 FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_CODE,surveyorLogin.getSvrCode());
-                String selectedCountryName = KIX_Utility.getLanguageCode(surveyorLogin.getSvrCountry());
+                final String selectedCountryName = KIX_Utility.getLanguageCode(surveyorLogin.getSvrCountry());
                 FastSave.getInstance().saveString(Kix_Constant.COUNTRY_NAME, surveyorLogin.getSvrCountry());
-                KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-                startActivity(intent);
+                KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+                this.startActivity(intent);
             }
         } else {
-            Toast.makeText(getActivity(), getString(R.string.enter_mobno_pass), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), this.getString(R.string.enter_mobno_pass), Toast.LENGTH_SHORT).show();
         }
     }
 }
