@@ -223,7 +223,7 @@ public class Fragment_Svr_SignUp extends Fragment {
                                 KIX_Utility.showFragment(this.getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
                                         null, Fragment_Svr_SignIn.class.getSimpleName());
                             } catch (final Exception e){
-                                Toast.makeText(this.getActivity(), getString(R.string.invaild_data), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this.getActivity(), getString(R.string.invalid_data), Toast.LENGTH_SHORT).show();
                             }
                         }
                     } else {

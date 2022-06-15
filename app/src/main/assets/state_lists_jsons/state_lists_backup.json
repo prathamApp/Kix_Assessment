@@ -1,0 +1,637 @@
+/*French Senegal*/
+{
+  "StateList": [
+    {
+      "StateName": "Dakar",
+      "DistrictList": [
+        {
+          "DistrictName": "Dakar",
+          "VillageList": [
+            {
+              "VillageName": "UNITE IX"
+            },
+            {
+              "VillageName": "UNITE VII"
+            }
+          ]
+        },
+        {
+          "DistrictName": "GUEDIAWAYE",
+          "VillageList": [
+            {
+              "VillageName": "NIMZAT NDIOLOFENE"
+            },
+            {
+              "VillageName": "NIMZAT III"
+            },
+            {
+              "VillageName": "NDIAREME LIMOULAYE"
+            },
+            {
+              "VillageName": "FITH MITH"
+            },
+            {
+              "VillageName": "TAIBA"
+            },
+            {
+              "VillageName": "CITE ALIOU SOW"
+            },
+            {
+              "VillageName": "CITE DOUANES"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE II"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE IV"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE III"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE V"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE VI"
+            },
+            {
+              "VillageName": "TECHNOPOLE NIAYES"
+            },
+            {
+              "VillageName": "CITE FADIA"
+            }
+          ]
+        },
+        {
+          "DistrictName": "PIKINE",
+          "VillageList": [
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE V"
+            },
+            {
+              "VillageName": "PARCELLES ASSAINIES UNITE XVI"
+            },
+            {
+              "VillageName": "HAMDALAYE"
+            },
+            {
+              "VillageName": "DAROU MISSETTE NORD"
+            },
+            {
+              "VillageName": "NDIAYES NDIRANES"
+            },
+            {
+              "VillageName": "CITE MAME DIOR"
+            },
+            {
+              "VillageName": "CITE PEPINIERE"
+            },
+            {
+              "VillageName": "COLOBANE ARAFAT"
+            },
+            {
+              "VillageName": "DIACKSAW FASSI"
+            },
+            {
+              "VillageName": "MAKA COLOBANE II"
+            },
+            {
+              "VillageName": "CREDIT FONCIER"
+            },
+            {
+              "VillageName": "GRAND MBAO EXTENSION"
+            },
+            {
+              "VillageName": "CITE SERIGNE MANSOUR"
+            },
+            {
+              "VillageName": "CITE ALMAMY"
+            }
+          ]
+        },
+        {
+          "DistrictName": "RUFISQUE",
+          "VillageList": [
+            {
+              "VillageName": "NDALDALY"
+            },
+            {
+              "VillageName": "LAYENE"
+            },
+            {
+              "VillageName": "KOUNOUNE"
+            },
+            {
+              "VillageName": "KOUNOUNE EXTENSION"
+            },
+            {
+              "VillageName": "CITE COLOBANE"
+            },
+            {
+              "VillageName": "DIOKOUL LANSAR"
+            },
+            {
+              "VillageName": "THIOKHO"
+            },
+            {
+              "VillageName": "SANTHIABA NDIOBENE"
+            },
+            {
+              "VillageName": "SANTA YALLA I"
+            },
+            {
+              "VillageName": "DAROU RAKHMANE CENTRE"
+            },
+            {
+              "VillageName": "DANGOU NORD"
+            },
+            {
+              "VillageName": "KEUR SOUF"
+            },
+            {
+              "VillageName": "COLOBANE I BIS"
+            },
+            {
+              "VillageName": "DAROU KARIM"
+            },
+            {
+              "VillageName": "ARAFAT III"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+/*French Mali*/
+{
+  "StateList": [
+    {
+      "StateName": "SÉGOU",
+      "DistrictList": [
+        {
+          "DistrictName": "SÉGOU",
+          "VillageList": [
+            {
+              "VillageName": "BIA"
+            },
+            {
+              "VillageName": "SAGABOUGOU"
+            },
+            {
+              "VillageName": "BERTHELA"
+            },
+            {
+              "VillageName": "DIAMBOUGOU"
+            },
+            {
+              "VillageName": "GNATIA"
+            },
+            {
+              "VillageName": "NOUMOUBOUGOU"
+            },
+            {
+              "VillageName": "WOLONA"
+            },
+            {
+              "VillageName": "WASSADIALA"
+            },
+            {
+              "VillageName": "DONGOMA"
+            },
+            {
+              "VillageName": "DOUGABOUGOU"
+            },
+            {
+              "VillageName": "DOUGABOUGOU KORONI"
+            },
+            {
+              "VillageName": "TEMOU"
+            },
+            {
+              "VillageName": "KOMINE"
+            },
+            {
+              "VillageName": "SOKE"
+            },
+            {
+              "VillageName": "FALA"
+            },
+            {
+              "VillageName": "MAMA-WERE"
+            },
+            {
+              "VillageName": "SONSOROUNA"
+            },
+            {
+              "VillageName": "WETTA"
+            },
+            {
+              "VillageName": "NINGUA"
+            },
+            {
+              "VillageName": "SIRAKOUMOU"
+            },
+            {
+              "VillageName": "DIAKA"
+            },
+            {
+              "VillageName": "OUELENBOUGOU"
+            },
+            {
+              "VillageName": "SOROBA"
+            },
+            {
+              "VillageName": "DIAMARABOUGOU"
+            },
+            {
+              "VillageName": "DIAMOUNA"
+            },
+            {
+              "VillageName": "FALABOUGOU"
+            },
+            {
+              "VillageName": "KOUNGOBOUGOU-WERE"
+            },
+            {
+              "VillageName": "M'PEBOUGOU-SOKALA"
+            },
+            {
+              "VillageName": "SARKALA SOKALA"
+            },
+            {
+              "VillageName": "TIONGONI"
+            },
+            {
+              "VillageName": "ZAMBOUGOU-ZOUMAIRA"
+            },
+            {
+              "VillageName": "BOUNDO-WORODJIRA"
+            },
+            {
+              "VillageName": "N'GAMAN"
+            },
+            {
+              "VillageName": "BANANKORO"
+            },
+            {
+              "VillageName": "DIALABOUGOU-WERE"
+            },
+            {
+              "VillageName": "NEREKORO"
+            },
+            {
+              "VillageName": "PELENGANA"
+            },
+            {
+              "VillageName": "DIAKOBOUGOU"
+            },
+            {
+              "VillageName": "SAKOIBA"
+            },
+            {
+              "VillageName": "N'GOYE \"N'GOIN\""
+            },
+            {
+              "VillageName": "SAMINE"
+            },
+            {
+              "VillageName": "BANANKORONI"
+            },
+            {
+              "VillageName": "SEKORO"
+            },
+            {
+              "VillageName": "GOINKOUNGO"
+            },
+            {
+              "VillageName": "TOGOU"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+/*Bangladesh*/
+{
+  "StateList": [
+    {
+      "StateName": "Rangpur",
+      "DistrictList": [
+        {
+          "DistrictName": "Gaibandha",
+          "VillageList": [
+            {
+              "VillageName": "Paglar Char"
+            },
+            {
+              "VillageName": "Chaubhagia"
+            },
+            {
+              "VillageName": "Purba Katlamari"
+            },
+            {
+              "VillageName": "Dakshin Burail"
+            },
+            {
+              "VillageName": "Uria"
+            },
+            {
+              "VillageName": "Shimultari"
+            },
+            {
+              "VillageName": "Madhyam Kumudpur"
+            },
+            {
+              "VillageName": "Phalia"
+            },
+            {
+              "VillageName": "Nutangari"
+            },
+            {
+              "VillageName": "Uttar Gidari"
+            },
+            {
+              "VillageName": "Kholahati"
+            },
+            {
+              "VillageName": "Kuptala"
+            },
+            {
+              "VillageName": "Malibari"
+            },
+            {
+              "VillageName": "Chithalia Digar"
+            },
+            {
+              "VillageName": "Tindaha"
+            },
+            {
+              "VillageName": "Akhira Para"
+            },
+            {
+              "VillageName": "Ramnathpur"
+            },
+            {
+              "VillageName": "Chak Kochmari"
+            },
+            {
+              "VillageName": "Harirampur"
+            },
+            {
+              "VillageName": "Chand Para"
+            },
+            {
+              "VillageName": "Kamdia"
+            },
+            {
+              "VillageName": "Zagui Para"
+            },
+            {
+              "VillageName": "Ratanpur"
+            },
+            {
+              "VillageName": "Pantair"
+            },
+            {
+              "VillageName": "Patua"
+            },
+            {
+              "VillageName": "Chhota Abhirampur"
+            },
+            {
+              "VillageName": "Nilkantapur"
+            },
+            {
+              "VillageName": "Taraf Kamal"
+            },
+            {
+              "VillageName": "Khiribari"
+            },
+            {
+              "VillageName": "Kapasia"
+            },
+            {
+              "VillageName": "Dublagari"
+            },
+            {
+              "VillageName": "Nandisahar"
+            },
+            {
+              "VillageName": "Debipur"
+            },
+            {
+              "VillageName": "Ganak Para"
+            },
+            {
+              "VillageName": "Dayar Para"
+            },
+            {
+              "VillageName": "Kumargari"
+            },
+            {
+              "VillageName": "Purba Gopinathpur"
+            },
+            {
+              "VillageName": "Sakoa"
+            },
+            {
+              "VillageName": "Chinirpatal"
+            },
+            {
+              "VillageName": "Garamara C.P"
+            },
+            {
+              "VillageName": "Kamar Para"
+            },
+            {
+              "VillageName": "Ramnagar"
+            },
+            {
+              "VillageName": "Pakurtala"
+            },
+            {
+              "VillageName": "Sattakore"
+            },
+            {
+              "VillageName": "Khamar Dhanaruha"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+/* Nepali */
+{
+  "StateList": [
+    {
+      "StateName": "Surkhet",
+      "DistrictList": [
+        {
+          "DistrictName": "Simta RM",
+          "VillageList": [
+            {
+              "VillageName": "Lipe Chaur"
+            },
+            {
+              "VillageName": "Bajeda Aali"
+            },
+            {
+              "VillageName": "Paani Khola"
+            },
+            {
+              "VillageName": "Sima (Aali)"
+            },
+            {
+              "VillageName": "Ghoreti Rakam"
+            },
+            {
+              "VillageName": "Gajhauda, Rakam"
+            },
+            {
+              "VillageName": "Thigni"
+            },
+            {
+              "VillageName": "Jhyami Chaur, Rakam"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Chaukune RM",
+          "VillageList": [
+            {
+              "VillageName": "Sanneghari-1"
+            },
+            {
+              "VillageName": "Sanneghari-3"
+            },
+            {
+              "VillageName": "Jumlyahamul-1"
+            },
+            {
+              "VillageName": "Jumlyahamul-2"
+            },
+            {
+              "VillageName": "Bhattesera-1"
+            },
+            {
+              "VillageName": "Bhattesera-2"
+            },
+            {
+              "VillageName": "Bhattesera-3"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Panchapuri MP",
+          "VillageList": [
+            {
+              "VillageName": "Chaura"
+            },
+            {
+              "VillageName": "Lagam"
+            },
+            {
+              "VillageName": "Tokma"
+            },
+            {
+              "VillageName": "Murmuri"
+            },
+            {
+              "VillageName": "Babiyachaur"
+            },
+            {
+              "VillageName": "Babiyachaur"
+            },
+            {
+              "VillageName": "Latikanda"
+            },
+            {
+              "VillageName": "Bhabar"
+            },
+            {
+              "VillageName": "Babiyachaur"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Barahatal RM",
+          "VillageList": [
+            {
+              "VillageName": "Amalakhali"
+            },
+            {
+              "VillageName": "Racha"
+            },
+            {
+              "VillageName": "Rakseni"
+            },
+            {
+              "VillageName": "Salghari"
+            },
+            {
+              "VillageName": "Damare"
+            },
+            {
+              "VillageName": "Chepang"
+            },
+            {
+              "VillageName": "Badichaur"
+            },
+            {
+              "VillageName": "Syaule"
+            },
+            {
+              "VillageName": "Ikheni"
+            },
+            {
+              "VillageName": "Basantapur"
+            },
+            {
+              "VillageName": "Lamakhali"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Chingad RM",
+          "VillageList": [
+            {
+              "VillageName": "Matela"
+            },
+            {
+              "VillageName": "Tule"
+            },
+            {
+              "VillageName": "Slayan Gaira"
+            },
+            {
+              "VillageName": "Phakapani"
+            },
+            {
+              "VillageName": "Dhaula Chakha chaur"
+            },
+            {
+              "VillageName": "Awalching Satmul"
+            },
+            {
+              "VillageName": "Chadharke"
+            },
+            {
+              "VillageName": "Dharampokhara"
+            },
+            {
+              "VillageName": "Bhairavsthan Awalching"
+            },
+            {
+              "VillageName": "Pataldhuri Awalching"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

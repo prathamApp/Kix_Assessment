@@ -1,145 +1,165 @@
 {
   "StateList": [
     {
-      "StateName": "SÉGOU",
+      "StateName": "Surkhet",
       "DistrictList": [
         {
-          "DistrictName": "SÉGOU",
+          "DistrictName": "Simta RM",
           "VillageList": [
             {
-              "VillageName": "BIA"
+              "VillageName": "Lipe Chaur"
             },
             {
-              "VillageName": "SAGABOUGOU"
+              "VillageName": "Bajeda Aali"
             },
             {
-              "VillageName": "BERTHELA"
+              "VillageName": "Paani Khola"
             },
             {
-              "VillageName": "DIAMBOUGOU"
+              "VillageName": "Sima (Aali)"
             },
             {
-              "VillageName": "GNATIA"
+              "VillageName": "Ghoreti Rakam"
             },
             {
-              "VillageName": "NOUMOUBOUGOU"
+              "VillageName": "Gajhauda, Rakam"
             },
             {
-              "VillageName": "WOLONA"
+              "VillageName": "Thigni"
             },
             {
-              "VillageName": "WASSADIALA"
+              "VillageName": "Jhyami Chaur, Rakam"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Chaukune RM",
+          "VillageList": [
+            {
+              "VillageName": "Sanneghari-1"
             },
             {
-              "VillageName": "DONGOMA"
+              "VillageName": "Sanneghari-3"
             },
             {
-              "VillageName": "DOUGABOUGOU"
+              "VillageName": "Jumlyahamul-1"
             },
             {
-              "VillageName": "DOUGABOUGOU KORONI"
+              "VillageName": "Jumlyahamul-2"
             },
             {
-              "VillageName": "TEMOU"
+              "VillageName": "Bhattesera-1"
             },
             {
-              "VillageName": "KOMINE"
+              "VillageName": "Bhattesera-2"
             },
             {
-              "VillageName": "SOKE"
+              "VillageName": "Bhattesera-3"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Panchapuri MP",
+          "VillageList": [
+            {
+              "VillageName": "Chaura"
             },
             {
-              "VillageName": "FALA"
+              "VillageName": "Lagam"
             },
             {
-              "VillageName": "MAMA-WERE"
+              "VillageName": "Tokma"
             },
             {
-              "VillageName": "SONSOROUNA"
+              "VillageName": "Murmuri"
             },
             {
-              "VillageName": "WETTA"
+              "VillageName": "Babiyachaur"
             },
             {
-              "VillageName": "NINGUA"
+              "VillageName": "Babiyachaur"
             },
             {
-              "VillageName": "SIRAKOUMOU"
+              "VillageName": "Latikanda"
             },
             {
-              "VillageName": "DIAKA"
+              "VillageName": "Bhabar"
             },
             {
-              "VillageName": "OUELENBOUGOU"
+              "VillageName": "Babiyachaur"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Barahatal RM",
+          "VillageList": [
+            {
+              "VillageName": "Amalakhali"
             },
             {
-              "VillageName": "SOROBA"
+              "VillageName": "Racha"
             },
             {
-              "VillageName": "DIAMARABOUGOU"
+              "VillageName": "Rakseni"
             },
             {
-              "VillageName": "DIAMOUNA"
+              "VillageName": "Salghari"
             },
             {
-              "VillageName": "FALABOUGOU"
+              "VillageName": "Damare"
             },
             {
-              "VillageName": "KOUNGOBOUGOU-WERE"
+              "VillageName": "Chepang"
             },
             {
-              "VillageName": "M'PEBOUGOU-SOKALA"
+              "VillageName": "Badichaur"
             },
             {
-              "VillageName": "SARKALA SOKALA"
+              "VillageName": "Syaule"
             },
             {
-              "VillageName": "TIONGONI"
+              "VillageName": "Ikheni"
             },
             {
-              "VillageName": "ZAMBOUGOU-ZOUMAIRA"
+              "VillageName": "Basantapur"
             },
             {
-              "VillageName": "BOUNDO-WORODJIRA"
+              "VillageName": "Lamakhali"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Chingad RM",
+          "VillageList": [
+            {
+              "VillageName": "Matela"
             },
             {
-              "VillageName": "N'GAMAN"
+              "VillageName": "Tule"
             },
             {
-              "VillageName": "BANANKORO"
+              "VillageName": "Slayan Gaira"
             },
             {
-              "VillageName": "DIALABOUGOU-WERE"
+              "VillageName": "Phakapani"
             },
             {
-              "VillageName": "NEREKORO"
+              "VillageName": "Dhaula Chakha chaur"
             },
             {
-              "VillageName": "PELENGANA"
+              "VillageName": "Awalching Satmul"
             },
             {
-              "VillageName": "DIAKOBOUGOU"
+              "VillageName": "Chadharke"
             },
             {
-              "VillageName": "SAKOIBA"
+              "VillageName": "Dharampokhara"
             },
             {
-              "VillageName": "N'GOYE \"N'GOIN\""
+              "VillageName": "Bhairavsthan Awalching"
             },
             {
-              "VillageName": "SAMINE"
-            },
-            {
-              "VillageName": "BANANKORONI"
-            },
-            {
-              "VillageName": "SEKORO"
-            },
-            {
-              "VillageName": "GOINKOUNGO"
-            },
-            {
-              "VillageName": "TOGOU"
+              "VillageName": "Pataldhuri Awalching"
             }
           ]
         }

@@ -112,6 +112,18 @@ public class KIX_Utility {
         } else if (countryName.equalsIgnoreCase("Spanish-Mexico")) {
             country = "MX";
             code = "es";
+        } else if (countryName.equalsIgnoreCase("Bangla-Bangladesh")) {
+            country = "BD";
+            code = "bn";
+        }else if (countryName.equalsIgnoreCase("French-Senegal")) {
+            country = "SN";
+            code = "fr";
+        }else if (countryName.equalsIgnoreCase("French-Mali")) {
+            country = "ML";
+            code = "fr";
+        } else if (countryName.equalsIgnoreCase("Nepali-Nepal")) {
+            country = "NP";
+            code = "ne";
         } else {
             country = "IN";
             code = "en";

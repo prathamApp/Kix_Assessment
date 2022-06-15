@@ -2,19 +2,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-<!--    <string name="app_name" translatable="false">ELANA</string>
-    &lt;!&ndash;Permission Dialog Strings&ndash;&gt;
+<!--
+    <string name="app_name" translatable="false">ELANA</string>
     <string name="permissions_head" translatable="false"><b>ELANA uses the following permissions to enhance learning experience:</b></string>
     <string name="permissions" translatable="false">
         <b><i>LOCATION:</i></b> Customize content for region\n<b><i>
-        &lt;!&ndash;        CAMERA:</i></b> Interactive courses where learners can share assignments\n<b><i>&ndash;&gt;
         STORAGE:</i></b> To save the content and enable offline access\n<b><i>
-        &lt;!&ndash;        <font color="#FF3A41">STORAGE:</font></i></b> To save the content and enable offline access\n<b><i>&ndash;&gt;
         RECORD_AUDIO:</i></b> Using speech recognition for advanced \n reading exercises</string>
 
     <string name="Collecting_Data" translatable="false">Collecting Data</string>
-
-    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
 
@@ -74,6 +70,7 @@
     <string name="str_add_household_info">Add Household Information</string>
     <string name="str_update_household_info">Update Household Information</string>
     <string name="str_household_info">Household Information</string>
+    <string name="str_household">Household</string>
     <string name="str_gnr_household_info">General information of surveyed household</string>
     <string name="str_HH06a">Number of members regularly living in the household</string>
     <string name="str_HH06b">Do you speak English at home?</string>
@@ -272,8 +269,9 @@
     <string name="error_email">Invalid Email! (Ex. abc@gmail.com)</string>
     <string name="error_password">Minimum 3 characters required for password!</string>
     <string name="profile_already">Profile is already saved..</string>
-    <string name="invaild_data">Invalid Data!</string>
+    <string name="invalid_data">Invalid Data!</string>
     <string name="enter_details">Enter Details</string>
+    <string name="years">Years</string>
 
     &lt;!&ndash;profile&ndash;&gt;
     <string name="asmt_not_given">Assessment Not Given By Child</string>
@@ -341,24 +339,24 @@
 
     <string-array name="age">
         <item>Age</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item> 4 years</item>
+        <item> 5 years</item>
+        <item> 6 years</item>
+        <item> 7 years</item>
+        <item> 8 years</item>
+        <item> 9 years</item>
+        <item>10 years</item>
     </string-array>
 
     <string-array name="ageFilter">
         <item>All Ages  </item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item> 4 years</item>
+        <item> 5 years</item>
+        <item> 6 years</item>
+        <item> 7 years</item>
+        <item> 8 years</item>
+        <item> 9 years</item>
+        <item>10 years</item>
     </string-array>
 
     <string-array name="student_class">
@@ -373,89 +371,89 @@
 
     <string-array name="parentAge">
         <item>Age     </item>
-        <item>Age 18  </item>
-        <item>Age 19  </item>
-        <item>Age 20  </item>
-        <item>Age 21  </item>
-        <item>Age 22  </item>
-        <item>Age 23  </item>
-        <item>Age 24  </item>
-        <item>Age 25  </item>
-        <item>Age 26  </item>
-        <item>Age 27  </item>
-        <item>Age 28  </item>
-        <item>Age 29  </item>
-        <item>Age 30  </item>
-        <item>Age 31  </item>
-        <item>Age 32  </item>
-        <item>Age 33  </item>
-        <item>Age 34  </item>
-        <item>Age 35  </item>
-        <item>Age 36  </item>
-        <item>Age 37  </item>
-        <item>Age 38  </item>
-        <item>Age 39  </item>
-        <item>Age 40  </item>
-        <item>Age 41  </item>
-        <item>Age 42  </item>
-        <item>Age 43  </item>
-        <item>Age 44  </item>
-        <item>Age 45  </item>
-        <item>Age 46  </item>
-        <item>Age 47  </item>
-        <item>Age 48  </item>
-        <item>Age 49  </item>
-        <item>Age 50  </item>
-        <item>Age 51  </item>
-        <item>Age 52  </item>
-        <item>Age 53  </item>
-        <item>Age 54  </item>
-        <item>Age 55  </item>
-        <item>Age 56  </item>
-        <item>Age 57  </item>
-        <item>Age 58  </item>
-        <item>Age 59  </item>
-        <item>Age 60  </item>
-        <item>Age 61  </item>
-        <item>Age 62  </item>
-        <item>Age 63  </item>
-        <item>Age 64  </item>
-        <item>Age 65  </item>
-        <item>Age 66  </item>
-        <item>Age 67  </item>
-        <item>Age 68  </item>
-        <item>Age 69  </item>
-        <item>Age 70  </item>
-        <item>Age 71  </item>
-        <item>Age 72  </item>
-        <item>Age 73  </item>
-        <item>Age 74  </item>
-        <item>Age 75  </item>
-        <item>Age 76  </item>
-        <item>Age 77  </item>
-        <item>Age 78  </item>
-        <item>Age 79  </item>
-        <item>Age 80  </item>
-        <item>Age 81  </item>
-        <item>Age 82  </item>
-        <item>Age 83  </item>
-        <item>Age 84  </item>
-        <item>Age 85  </item>
-        <item>Age 86  </item>
-        <item>Age 87  </item>
-        <item>Age 88  </item>
-        <item>Age 89  </item>
-        <item>Age 90  </item>
-        <item>Age 91  </item>
-        <item>Age 92  </item>
-        <item>Age 93  </item>
-        <item>Age 94  </item>
-        <item>Age 95  </item>
-        <item>Age 96  </item>
-        <item>Age 97  </item>
-        <item>Age 98  </item>
-        <item>Age 99  </item>
-        <item>Age 100 </item>
+        <item> 18 years </item>
+        <item> 19 years </item>
+        <item> 20 years </item>
+        <item> 21 years </item>
+        <item> 22 years </item>
+        <item> 23 years </item>
+        <item> 24 years </item>
+        <item> 25 years </item>
+        <item> 26 years </item>
+        <item> 27 years </item>
+        <item> 28 years </item>
+        <item> 29 years </item>
+        <item> 30 years </item>
+        <item> 31 years </item>
+        <item> 32 years </item>
+        <item> 33 years </item>
+        <item> 34 years </item>
+        <item> 35 years </item>
+        <item> 36 years </item>
+        <item> 37 years </item>
+        <item> 38 years </item>
+        <item> 39 years </item>
+        <item> 40 years </item>
+        <item> 41 years </item>
+        <item> 42 years </item>
+        <item> 43 years </item>
+        <item> 44 years </item>
+        <item> 45 years </item>
+        <item> 46 years </item>
+        <item> 47 years </item>
+        <item> 48 years </item>
+        <item> 49 years </item>
+        <item> 50 years </item>
+        <item> 51 years </item>
+        <item> 52 years </item>
+        <item> 53 years </item>
+        <item> 54 years </item>
+        <item> 55 years </item>
+        <item> 56 years </item>
+        <item> 57 years </item>
+        <item> 58 years </item>
+        <item> 59 years </item>
+        <item> 60 years </item>
+        <item> 61 years </item>
+        <item> 62 years </item>
+        <item> 63 years </item>
+        <item> 64 years </item>
+        <item> 65 years </item>
+        <item> 66 years </item>
+        <item> 67 years </item>
+        <item> 68 years </item>
+        <item> 69 years </item>
+        <item> 70 years </item>
+        <item> 71 years </item>
+        <item> 72 years </item>
+        <item> 73 years </item>
+        <item> 74 years </item>
+        <item> 75 years </item>
+        <item> 76 years </item>
+        <item> 77 years </item>
+        <item> 78 years </item>
+        <item> 79 years </item>
+        <item> 80 years </item>
+        <item> 81 years </item>
+        <item> 82 years </item>
+        <item> 83 years </item>
+        <item> 84 years </item>
+        <item> 85 years </item>
+        <item> 86 years </item>
+        <item> 87 years </item>
+        <item> 88 years </item>
+        <item> 89 years </item>
+        <item> 90 years </item>
+        <item> 91 years </item>
+        <item> 92 years </item>
+        <item> 93 years </item>
+        <item> 94 years </item>
+        <item> 95 years </item>
+        <item> 96 years </item>
+        <item> 97 years </item>
+        <item> 98 years </item>
+        <item> 99 years </item>
+        <item>100 years</item>
     </string-array>
 
     <string-array name="parentGrade">
@@ -469,8 +467,8 @@
         <item>HSC</item>
         <item>Graduate</item>
         <item>PostGraduate</item>
-    </string-array>-->
-
+    </string-array>
+-->
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--PORTUGUESE (MOZAMBIQUE)  START ____________________________________________________________________-->
@@ -1409,6 +1407,7 @@
     <string name="str_private">Privée</string>
     <string name="str_other">Autres</string>
     <string name="age">âges</string>
+    <string name="years">ans</string>
 
     <string-array name="gender">
         <item>sexe</item>
@@ -1432,13 +1431,13 @@
 
     <string-array name="dropout_year_list">
         <item>année d\'abandon</item>
-        <item>2015.0</item>
-        <item>2016.0</item>
-        <item>2017.0</item>
-        <item>2018.0</item>
-        <item>2019.0</item>
-        <item>2020.0</item>
-        <item>2021.0</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
     </string-array>
 
     <string-array name="student_dropoutclass">
@@ -1453,24 +1452,24 @@
 
     <string-array name="age">
         <item>âges</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item> 4 ans </item>
+        <item> 5 ans </item>
+        <item> 6 ans </item>
+        <item> 7 ans </item>
+        <item> 8 ans </item>
+        <item> 9 ans </item>
+        <item>10 ans</item>
     </string-array>
 
     <string-array name="ageFilter">
         <item>Tous les âges</item>
-        <item>Age 4</item>
-        <item>Age 5</item>
-        <item>Age 6</item>
-        <item>Age 7</item>
-        <item>Age 8</item>
-        <item>Age 9</item>
-        <item>Age 10</item>
+        <item> 4 ans </item>
+        <item> 5 ans </item>
+        <item> 6 ans </item>
+        <item> 7 ans </item>
+        <item> 8 ans </item>
+        <item> 9 ans </item>
+        <item>10 ans</item>
     </string-array>
 
     <string-array name="student_class">
@@ -1485,89 +1484,89 @@
 
     <string-array name="parentAge">
         <item>âges</item>
-        <item>Age 18</item>
-        <item>Age 19</item>
-        <item>Age 20</item>
-        <item>Age 21</item>
-        <item>Age 22</item>
-        <item>Age 23</item>
-        <item>Age 24</item>
-        <item>Age 25</item>
-        <item>Age 26</item>
-        <item>Age 27</item>
-        <item>Age 28</item>
-        <item>Age 29</item>
-        <item>Age 30</item>
-        <item>Age 31</item>
-        <item>Age 32</item>
-        <item>Age 33</item>
-        <item>Age 34</item>
-        <item>Age 35</item>
-        <item>Age 36</item>
-        <item>Age 37</item>
-        <item>Age 38</item>
-        <item>Age 39</item>
-        <item>Age 40</item>
-        <item>Age 41</item>
-        <item>Age 42</item>
-        <item>Age 43</item>
-        <item>Age 44</item>
-        <item>Age 45</item>
-        <item>Age 46</item>
-        <item>Age 47</item>
-        <item>Age 48</item>
-        <item>Age 49</item>
-        <item>Age 50</item>
-        <item>Age 51</item>
-        <item>Age 52</item>
-        <item>Age 53</item>
-        <item>Age 54</item>
-        <item>Age 55</item>
-        <item>Age 56</item>
-        <item>Age 57</item>
-        <item>Age 58</item>
-        <item>Age 59</item>
-        <item>Age 60</item>
-        <item>Age 61</item>
-        <item>Age 62</item>
-        <item>Age 63</item>
-        <item>Age 64</item>
-        <item>Age 65</item>
-        <item>Age 66</item>
-        <item>Age 67</item>
-        <item>Age 68</item>
-        <item>Age 69</item>
-        <item>Age 70</item>
-        <item>Age 71</item>
-        <item>Age 72</item>
-        <item>Age 73</item>
-        <item>Age 74</item>
-        <item>Age 75</item>
-        <item>Age 76</item>
-        <item>Age 77</item>
-        <item>Age 78</item>
-        <item>Age 79</item>
-        <item>Age 80</item>
-        <item>Age 81</item>
-        <item>Age 82</item>
-        <item>Age 83</item>
-        <item>Age 84</item>
-        <item>Age 85</item>
-        <item>Age 86</item>
-        <item>Age 87</item>
-        <item>Age 88</item>
-        <item>Age 89</item>
-        <item>Age 90</item>
-        <item>Age 91</item>
-        <item>Age 92</item>
-        <item>Age 93</item>
-        <item>Age 94</item>
-        <item>Age 95</item>
-        <item>Age 96</item>
-        <item>Age 97</item>
-        <item>Age 98</item>
-        <item>Age 99</item>
-        <item>Age 100</item>
+        <item> 18 ans</item>
+        <item> 19 ans</item>
+        <item> 20 ans</item>
+        <item> 21 ans</item>
+        <item> 22 ans</item>
+        <item> 23 ans</item>
+        <item> 24 ans</item>
+        <item> 25 ans</item>
+        <item> 26 ans</item>
+        <item> 27 ans</item>
+        <item> 28 ans</item>
+        <item> 29 ans</item>
+        <item> 30 ans</item>
+        <item> 31 ans</item>
+        <item> 32 ans</item>
+        <item> 33 ans</item>
+        <item> 34 ans</item>
+        <item> 35 ans</item>
+        <item> 36 ans</item>
+        <item> 37 ans</item>
+        <item> 38 ans</item>
+        <item> 39 ans</item>
+        <item> 40 ans</item>
+        <item> 41 ans</item>
+        <item> 42 ans</item>
+        <item> 43 ans</item>
+        <item> 44 ans</item>
+        <item> 45 ans</item>
+        <item> 46 ans</item>
+        <item> 47 ans</item>
+        <item> 48 ans</item>
+        <item> 49 ans</item>
+        <item> 50 ans</item>
+        <item> 51 ans</item>
+        <item> 52 ans</item>
+        <item> 53 ans</item>
+        <item> 54 ans</item>
+        <item> 55 ans</item>
+        <item> 56 ans</item>
+        <item> 57 ans</item>
+        <item> 58 ans</item>
+        <item> 59 ans</item>
+        <item> 60 ans</item>
+        <item> 61 ans</item>
+        <item> 62 ans</item>
+        <item> 63 ans</item>
+        <item> 64 ans</item>
+        <item> 65 ans</item>
+        <item> 66 ans</item>
+        <item> 67 ans</item>
+        <item> 68 ans</item>
+        <item> 69 ans</item>
+        <item> 70 ans</item>
+        <item> 71 ans</item>
+        <item> 72 ans</item>
+        <item> 73 ans</item>
+        <item> 74 ans</item>
+        <item> 75 ans</item>
+        <item> 76 ans</item>
+        <item> 77 ans</item>
+        <item> 78 ans</item>
+        <item> 79 ans</item>
+        <item> 80 ans</item>
+        <item> 81 ans</item>
+        <item> 82 ans</item>
+        <item> 83 ans</item>
+        <item> 84 ans</item>
+        <item> 85 ans</item>
+        <item> 86 ans</item>
+        <item> 87 ans</item>
+        <item> 88 ans</item>
+        <item> 89 ans</item>
+        <item> 90 ans</item>
+        <item> 91 ans</item>
+        <item> 92 ans</item>
+        <item> 93 ans</item>
+        <item> 94 ans</item>
+        <item> 95 ans</item>
+        <item> 96 ans</item>
+        <item> 97 ans</item>
+        <item> 98 ans</item>
+        <item> 99 ans</item>
+        <item>100 ans</item>
     </string-array>
 
     <string-array name="None"/>
@@ -1607,12 +1606,12 @@
     <string name="error_email">Courriel invalide ! (Ex. abc@gmail.com)</string>
     <string name="error_password">Minimum 3 caractères requis pour le mot de passe !</string>
     <string name="profile_already">Le profil est déjà enregistré...</string>
-    <string name="invaild_data">Données non valides !</string>
+    <string name="invalid_data">Données non valides !</string>
     <string name="enter_details">Entrez les détails</string>-->
     <!--French-Senegal END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="hello_blank_fragment">Bonjour, fragment vide</string>
@@ -2015,250 +2014,826 @@
     <string name="error_email">Courriel invalide ! (Ex. abc@gmail.com)</string>
     <string name="error_password">Minimum 3 caractères requis pour le mot de passe !</string>
     <string name="profile_already">Le profil est déjà enregistré...</string>
-    <string name="invaild_data">Données non valides !</string>
-    <string name="enter_details">Entrez les détails</string>
+    <string name="invalid_data">Données non valides !</string>
+    <string name="enter_details">Entrez les détails</string>-->
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Bangla-Bengali START ____________________________________________________________________-->
-    <!--<string name="sign_up">সাইন আপ করুন</string>
-    <string name="have_account_sign_in">ইতিমধ্যে একাউন্ট আছে? তাহলে, সাইন-ইন করুন</string>
+<!--    <string name="app_name">ELANA</string>
+    <string name="permissions_head">ELANA অ্যাপের পূর্ণাঙ্গ ব্যবহারের জন্য নিম্নলিখিত বিষয়গুলির অনুমতি প্রয়োজনঃ  </string>
+    <string name="Collecting_Data">তথ্য সংগৃহীত হচ্ছে</string>
+    <string name="hello_blank_fragment">খালি অংশ</string>
+    <string name="push_success">সফলভাবে আপলোড হয়েছে!</string>
+    <string name="push_fail">আপলোড ব্যর্থ হয়েছে!</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">ওকে</string>
+    <string name="ok">ওকে</string>
+    <string name="please_wait_pushing">দয়া করে অপেক্ষা করুন, ডাটা আপলোড হচ্ছে…</string>
+    <string name="details">বিস্তারিত</string>
+    <string name="goto_next">পরবর্তীতে যান</string>
+    <string name="cancel">বাতিল করুন</string>
+    <string name="profile">প্রোফাইল</string>
+    <string name="create_surveyor">জরিপকারীর অ্যাকাউন্ট খুলুন</string>
+    <string name="children_surveyed">জরিপকৃত শিশুর সংখ্যাঃ</string>
+    <string name="children_assessed">মূল্যায়নকৃত শিশুর সংখাঃ</string>
+    <string name="child_name">শিশুর নাম</string>
+    <string name="village">গ্রাম</string>
+    <string name="assessment_given">প্রদত্ত মূল্যায়ন</string>
+    <string name="assessments_synced">মূল্যায়ন</string>
+    <string name="score_count">প্রাপ্ত নম্বরঃ</string>
+    <string name="student_count">শিশুর সংখ্যাঃ</string>
+    <string name="village_count">গ্রামের সংখ্যাঃ</string>
+    <string name="household_count">বাড়ির সংখ্যাঃ</string>
+    <string name="str_household">বাড়ির</string>
+    <string name="surveyor_count">জরিপকারীর সংখ্যাঃ</string>
+    <string name="edit_child_info">শিশুর তথ্য এডিট করুন</string>
+    <string name="add_village_info">গ্রামের তথ্য যোগ করুন</string>
+    <string name="update_village_info">গ্রামের তথ্য আপডেট করুন</string>
+    <string name="str_village_info">গ্রামের তথ্য</string>
+    <string name="str_V01">গ্রামে যাবার জন্য কি পিচ-ঢালা রাস্তা অথবা সব ধরনের আবহাওয়ায় চলাচলের জন্য রাস্তা আছে?</string>
+    <string name="str_V02">গ্রামে কি গণপরিবহনের সুবিধা আছে?</string>
+    <string name="str_V03">গ্রামে কি বিদ্যুৎ সংযোগ ব্যবস্থা আছে?</string>
+    <string name="str_V04">গ্রামে কি কোনো সরকারি ক্লিনিক/হাসপাতাল অথবা জনস্বাস্থ্য ক্লিনিক/হাসপাতাল আছে?</string>
+    <string name="str_V05">গ্রামে কি কোনো বেসরকারি স্বাস্থ্য ক্লিনিক/হাসপাতাল আছে?</string>
+    <string name="str_V06a">গ্রামে কি কোনো প্রাক-প্রাথমিক স্কুল আছে অথবা এমন কোনো স্কুল কি আছে যেখানে প্রাক-প্রাথমিক শ্রেণীর শিক্ষাদান করা হয়?</string>
+    <string name="str_V06b">গ্রামের কোন ধরনের স্কুল(গুলো) প্রাক-প্রাথমিক শ্রেণীর শিক্ষাদান করে?</string>
+    <string name="str_V07a">গ্রামে কি কোনো প্রাথমিক স্কুল আছে?</string>
+    <string name="str_V07b">গ্রামের কোন ধরনের স্কুলে প্রাথমিক শিক্ষা দেওয়া হয়?</string>
+    <string name="str_add_household">বাড়ি যোগ করুন</string>
+    <string name="update_household">বাড়ি আপডেট করুন</string>
+    <string name="str_isSampledHH">নমুনা পরিবারটি কি-</string>
+    <string name="str_isSampledHH_one">তালাবদ্ধ</string>
+    <string name="str_isSampledHH_two">সাড়া দেয় নি</string>
+    <string name="str_isSampledHH_three">অংশগ্রহণে ইচ্ছুক
+ (জরিপের জন্য)</string>
+    <string name="str_HH01">পাড়া / ভাগ/ অংশ সংখা</string>
+    <string name="str_HH02">উত্তরদাতার নাম</string>
+    <string name="str_HH03">পরিবার প্রধানের নাম</string>
+    <string name="str_HH04a">বাড়িতে কি ৪-১০ বছর বয়সী বাচ্চাদের (নিয়মিত বসবাস) আছে?</string>
+    <string name="str_HH04b">(HH05a তে হ্যাঁ হলে), কতজন?</string>
+    <string name="str_HH05">পরিবারের টেলিফোন/মোবাইল নম্বর
+ (যদি থাকে এবং প্রদান করতে ইচ্ছুক হলে লিখুন)</string>
+    <string name="str_add_household_info">বাড়ির তথ্য যোগ করুন</string>
+    <string name="str_update_household_info">বাড়ির তথ্য আপডেট করুন</string>
+    <string name="str_household_info">বাড়ির তথ্য</string>
+    <string name="str_gnr_household_info">জরিপকৃত বাড়ির সাধারণ তথ্যাদি</string>
+    <string name="str_HH06a">পরিবারে নিয়মিত বসবাসকারী সদস্যের সংখ্যা</string>
+    <string name="str_HH06b">আপনারা কি বাড়িতে বাংলা ভাষায় কথা বলেন?</string>
+    <string name="str_HH06c"> আপনারা বাড়িতে কত ঘন ঘন বাংলা ভাষায় কথা বলেন?</string>
+    <string name="str_HH06d">আপনারা কি বাড়িতে অন্য কোন ভাষাতেও কথা বলেন?</string>
+    <string name="str_always">সবসময়</string>
+    <string name="str_sometimes">কখনো কখনো</string>
+    <string name="str_HH_asset_info">পারিবারিক সম্পদের তথ্য</string>
+    <string name="str_HH07a">বাড়ির ছাদ</string>
+    <string name="str_HH07a_one">কোন ছাদ নেই</string>
+    <string name="str_HH07a_two">পাকা ছাদ</string>
+    <string name="str_HH07a_three">প্রাকৃতিক বা প্রাথমিক ছাদ</string>
+    <string name="str_HH07b">বাড়ির প্রাচীরের উপাদান</string>
+    <string name="str_HH07b_one">কোন দেয়াল নেই</string>
+    <string name="str_HH07b_two">পাকা দেয়াল</string>
+    <string name="str_HH07b_three">প্রাকৃতিক বা প্রাথমিক দেয়াল</string>
+    <string name="str_HH07c">গৃহস্থালিতে নিয়মিত ব্যবহৃত আলোর উৎস কী</string>
+    <string name="str_HH07c_one">বিদ্যুৎ</string>
+    <string name="str_HH07c_two">সৌর বিদ্যুৎ</string>
+    <string name="str_HH07c_three">মোমবাতি/হারিকেন/কুপি</string>
+    <string name="str_HH07c_four">অন্যান্য</string>
+    <string name="str_HH07d">বাড়ির নিয়মিত ব্যবহৃত খাবার পানির উৎস কী</string>
+    <string name="str_HH07d_one">নলের পানি</string>
+    <string name="str_HH07d_two">হাত-পাম্প/টিউবওয়েল</string>
+    <string name="str_HH07d_three">গভীর কূপ</string>
+    <string name="str_HH07d_four">কূপ</string>
+    <string name="str_HH07d_five">নদী/জলপ্রপাত/পুকুর/দীঘি</string>
+    <string name="str_HH07d_six">ক্রয়-কৃত পানি</string>
+    <string name="str_HH07d_seven">অন্যান্য</string>
+    <string name="str_HH07e">বিদ্যুৎ সংযোগ ?</string>
+    <string name="str_HH07f">গোসলখানা/শৌচাগার/  টয়লেট ?</string>
+    <string name="str_HH07g">কমপক্ষে একজন সদস্য (সন্তানের পিতামাতা ছাড়া) যিনি উচ্চ বিদ্যালয় ডিপ্লোমা সম্পন্ন করেছেন/উচ্চ বিদ্যালয় সমাপ্তির সনদপত্র লাভ করেছেন?</string>
+    <string name="str_HH07h">স্কুলের পাঠ্যবই ছাড়াও বাড়িতে কি গল্পের বই বা শিশুদের পড়ার বইয়ের মতো অন্যান্য কোনো উপকরণ আছে?</string>
+    <string name="str_HH07i">বাড়িতে কি কোনো ধরনের পড়ার উপকরণ আছে যা শিশুদের উদ্দেশে রাখা নয়, যেমনঃ ধর্মীয় পাঠ্যপুস্তক, সংবাদপত্র, ম্যাগাজিন ইত্যাদি?</string>
+    <string name="str_HH07j">কম্পিউটার/ল্যাপটপ/ট্যাবলেট ?</string>
+    <string name="str_HH07k">টেলিভিশন ?</string>
+    <string name="str_HH07l">রেডিও ?</string>
+    <string name="str_HH07m">মোবাইল ফোন ?</string>
+    <string name="str_HH07n">(যদি HH07m \'হ্যাঁ\' হয়), এটি কি একটি স্মার্টফোন?</string>
+    <string name="str_HH07o">মোটরচালিত চার-চাকার গাড়ি?</string>
+    <string name="str_HH07p">মোটরচালিত দুই-চাকার গাড়ি?</string>
+    <string name="str_HH07q">সাইকেল?</string>
+    <string name="str_HH_have_lbl">বাড়িতে কি</string>
+    <string name="select_household">বাড়ি নির্বাচন করুন</string>
+    <string name="add_child">শিশু যোগ করুন</string>
+    <string name="update_child">শিশু আপডেট করুন</string>
+    <string name="str_CH04a">শিশুর কি কোনো পরিচিত প্রতিবন্ধিতা আছে?</string>
+    <string name="str_CH04b">তবে সেটা কি?</string>
+    <string name="str_CH04b_op1">দৃষ্টি</string>
+    <string name="str_CH04b_op2">শ্রবণ/বাক</string>
+    <string name="str_CH04b_op3">শারীরিক</string>
+    <string name="str_CH04b_op4">বুদ্ধি</string>
+    <string name="str_CH05">[শিশুর নাম] কি বর্তমানে কোন স্কুল বা প্রি-স্কুলে নিবন্ধিত?</string>
+    <string name="str_CH06c">এই স্কুলে শিক্ষার প্রচলিত মাধ্যম কি বাংলা?
+ (ছোট বাচ্চাদের ক্ষেত্রে, আপনি নিশ্চিত করতে তাদের স্কুলের পাঠ্যপুস্তক/ওয়ার্কশীট/অ্যাক্টিভিটি শীট পরীক্ষা করতে পারেন)</string>
+    <string name="str_CH06d">স্কুলের বর্তমান অবস্থা কী?</string>
+    <string name="str_CH06d_one">স্কুল খোলা আছে এবং প্রতি শ্রেণীর জন্য শিক্ষণ-শেখানো কার্যক্রম পরিচালিত হচ্ছে</string>
+    <string name="str_CH06d_two">বিদ্যালয় খোলা থাকলেও শিক্ষণ-শেখানো কার্যক্রম পরিচালিত হচ্ছে না</string>
+    <string name="str_CH06d_three">স্কুল বন্ধ</string>
+    <string name="str_CH06e">কি ধরনের কার্যক্রম পরিচালিত হচ্ছে?</string>
+    <string name="str_CH06e_one">অনলাইন/শুধুমাত্র দূরবর্তী (ফোন কল, জুম, হোয়াটসঅ্যাপ, গুগল মিট, এসএমএস ইত্যাদির মাধ্যমে)</string>
+    <string name="str_CH06e_two">স্কুলে উপস্থিত থেকে/সামনাসামনি কার্যক্রম (শিশু ক্লাস করতে স্কুলে যায়)</string>
+    <string name="str_CH06e_three">হাইব্রিড (অনলাইন/দূরবর্তী এবং স্কুলে উপস্থিথ থেকে/সামনাসামনি উভয়ই</string>
+    <string name="str_CH06f">[শিশুর নাম]- এর কাছে কি বর্তমান শ্রেণির পাঠ্যপুস্তক আছে?</string>
+    <string name="str_CH06g">[শিশুর নাম] কি কখনও স্কুলে কোনো শ্রেণীতে একাধিকবার পড়েছে (শুধুমাত্র বর্তমানে প্রথম শ্রেণি এবং তার উপরে নিবন্ধিত শিশুদের জিজ্ঞাসা করুন)?</string>
+    <string name="str_CH07a">[শিশুর নাম] কি কখনো স্কুলে ভর্তি হয়েছিল?</string>
+    <string name="str_CH07d">[শিশুর নাম]-এর ঝরে পড়ার প্রধান কারণ কী ছিল?</string>
+    <string name="str_reasonToDrop_one">ফি বহন করতে পারেনি</string>
+    <string name="str_reasonToDrop_two">স্কুল বন্ধ হয়ে গিয়েছিল</string>
+    <string name="str_reasonToDrop_three">উত্তীর্ণ হয়নি তাই</string>
+    <string name="str_reasonToDrop_four">পরবর্তী শ্রেণীর জন্য কাছাকাছি কোনও স্কুল ছিলোনা</string>
+    <string name="str_reasonToDrop_five">আর আগ্রহ ছিলোনা</string>
+    <string name="str_reasonToDrop_six">অন্যান্য</string>
+    <string name="str_reasonToDrop_seven">জানা নেই</string>
+    <string name="str_CH08">[শিশুর নাম] কি বর্তমানে কোন বেতনভুক্ত টিউশন ক্লাস (কোচিং) করে?</string>
+    <string name="str_CH09">[শিশুর নাম] কি স্কুলের লাইব্রেরি বা অন্য কোনো জায়গা থেকে গত ২ সপ্তাহে পড়ার জন্য কোনো পাঠ্য উপকরণ (স্কুলের পাঠ্যপুস্তক ছাড়া) বাড়িতে নিয়ে এসেছে?</string>
+    <string name="str_CH10a">বাড়ির কেউ কি শিশুকে বাড়ির কাজে/হোম-ওয়ার্ক করতে সাহায্য করে?</string>
+    <string name="str_CH10b">[শিশুর নাম] কে সবচেয়ে বেশি কে সাহায্য করে?</string>
+    <string name="str_CH10b_one">বাবা</string>
+    <string name="str_CH10b_two">মা</string>
+    <string name="str_CH10b_three">বড় ভাই-বোন</string>
+    <string name="str_CH10b_four">চাচা/মামা</string>
+    <string name="str_CH10b_five">চাচি/মামী</string>
+    <string name="str_CH10b_six">চাচাতো ভাই-বোন</string>
+    <string name="str_CH10b_seven">অন্যান্য</string>
+    <string name="str_CH10c">[শিশুর নাম] কে কত সময় পর পর পরিবারের কেউ গল্প পড়ে বা বলে শোনায়?</string>
+    <string name="str_CH10c_one">কখনোই না</string>
+    <string name="str_CH10c_two">প্রতি সপ্তাহে একবারেরও কম</string>
+    <string name="str_CH10c_three">প্রতি সপ্তাহে ১-২ দিন</string>
+    <string name="str_CH10c_four">প্রতি সপ্তাহে ৩-৪ দিন</string>
+    <string name="str_CH10c_five">প্রতি সপ্তাহে ৫-৭ দিন</string>
+    <string name="additional_learning_sup">বাড়িতে বাড়তি শিক্ষণ সহায়তা</string>
+    <string name="add_parent_information">অভিভাবকের তথ্য যোগ করুন</string>
+    <string name="update_parent_information">অভিভাবকের তথ্য আপডেট করুন</string>
+    <string name="parent_information">অভিভাবকের তথ্য</string>
+    <string name="mothers_details">মায়ের বিস্তারিত তথ্য</string>
+    <string name="fathers_details">বাবার বিস্তারিত তথ্য</string>
+    <string name="hint_motherName">মায়ের নাম</string>
+    <string name="hint_fatherName">বাবার নাম</string>
+    <string name="str_PT01b">মায়ের বয়স</string>
+    <string name="str_PT02b">বাবার বয়স</string>
+    <string name="str_PT01d">তিনি স্কুলের কোন শ্রেণি পর্যন্ত পড়াশোনা করেছেন?</string>
+    <string name="str_PT02d">সে স্কুলের কোন শ্রেণি পর্যন্ত পড়াশোনা করেছেন?</string>
+    <string name="str_PT0d_one">কোনটিই নয় (অর্থাৎ, প্রাথমিক শেষ করেনি)</string>
+    <string name="str_PT0d_two">প্রাথমিক</string>
+    <string name="str_PT0d_three">মাধ্যমিক</string>
+    <string name="str_PT0d_four">মাধ্যমিকের বেশি</string>
+    <string name="str_child_lives_with">শিশু বসবাস করে</string>
+    <string name="str_mother">মা</string>
+    <string name="str_father">বাবা</string>
+    <string name="str_both">উভয়ই</string>
+    <string name="str_neither">কারো সাথেই না</string>
+    <string name="str_PT01c">মা কি কখনো স্কুলে পড়াশোনা করেছে?</string>
+    <string name="str_PT02c">বাবা কি কখনো স্কুলে গেছে?</string>
+    <string name="str_PT01e">উপার্জন হয়, এরকম কোনও কাজ/চাকরী কি মায়ের আছে?</string>
+    <string name="str_PT02e">উপার্জন হয়, এরকম কোনও কাজ/চাকরী কি বাবার আছে?</string>
+    <string name="str_PT01f">কোন ধরনের?</string>
+    <string name="str_PT01f_one">কৃষি বা কৃষি-সম্পর্কিত কাজ যা পরিবার/নিজের মালিকানাধীন</string>
+    <string name="str_PT01f_two">কৃষি বা কৃষি-সম্পর্কিত কাজ যা অন্য কারো মালিকানাধীন (সরকার এবং অন্যান্য)</string>
+    <string name="str_PT01f_three">পরিবারের মধ্যে অকৃষি কাজ/স্ব মালিকানাধীন উদ্যোগ</string>
+    <string name="str_PT01f_four">অন্য কারো মালিকানাধীন একটি প্রতিষ্ঠানে অকৃষি কাজ (সরকার এবং অন্যান্য)</string>
+    <string name="sign_up">সাইন আপ করুন</string>
+    <string name="have_account_sign_in">ইতিমধ্যে অ্যাকাউন্ট রয়েছে? সাইন ইন করুন।</string>
     <string name="hint_svrName">নাম</string>
-    <string name="hint_svrEmail">ইমেইল (অপশনাল)</string>
-    <string name="hint_svrMobile">মোবাইল নাম্বার</string>
+    <string name="hint_svrEmail">ইমেইল (অপশোনাল)</string>
+    <string name="hint_svrMobile">মোবাইল নম্বর</string>
     <string name="hint_svrPassword">পাসওয়ার্ড</string>
-    <string name="sign_in">সাইন-ইন করুন</string>
+    <string name="sign_in">সাইন ইন করুন</string>
     <string name="select_village">গ্রাম নির্বাচন করুন</string>
     <string name="add_village">গ্রাম যোগ করুন</string>
+    <string name="update_village">গ্রাম আপডেট করুন</string>
     <string name="hint_village">গ্রাম</string>
     <string name="hint_district">জেলা</string>
-    <string name="hint_state">বিভাগ</string>
+    <string name="hint_state">বিভাগের</string>
     <string name="save">সেইভ করুন</string>
     <string name="select_child">শিশু নির্বাচন করুন</string>
-    <string name="add_child_information">শিশুটির তথ্য যোগ করুন</string>
-    <string name="want_to_start_assessment">আপনি কি মূল্যায়ন শুরু করতে চান?</string>
+    <string name="want_to_start_assessment">আপনি কি মূল্যায়ন শুরু করতে চান?</string>
+    <string name="goto_next_task">আপনি কি পরবর্তী টাস্কে যেতে চান?</string>
+    <string name="thank_you">ধন্যবাদ</string>
+    <string name="test_submitted">আপনার মূল্যায়ন জমা হয়েছে।</string>
+    <string name="next_student">পরবর্তী শিশু</string>
+    <string name="submit_assessment">মূল্যায়ন জমা দিন</string>
     <string name="yes">হ্যাঁ</string>
     <string name="no">না</string>
-    <string name="goto_next_task">আপনি কি পরের টাস্কটিতে যেতে চান?</string>
-    <string name="thank_you">ধন্যবাদ</string>
-    <string name="test_submitted">আপনার মূল্যায়নটি জমা দেওয়া হয়েছে</string>
-    <string name="next_student">পরবর্তী শিশু</string>
-    <string name="submit_assessment">মূল্যায়নটি জমা দিন</string>
     <string name="select_country">দেশ নির্বাচন করুন</string>
     <string name="enrolled">ভর্তিকৃত</string>
-    <string name="drop_out">ড্রপআউট (ঝরে পড়া)</string>
-    <string name="never_enrolled">কখনো ভর্তি হয়নি</string>
-    <string name="save_n_submit">সংরক্ষণ করুন এবং মূল্যায়ন জমা দিন</string>
-    <string name="you_want_to_exit">আপনি প্রস্থান করতে চান?</string>
-
-    <string name="all_age">All বয়স</string>
-    <string name="all_village">All localidad</string>
-
-    <string-array name="country_list">
-        <item>দেশ নির্বাচন করুন</item>
-        <item>India</item>
-        <item>Pakistan</item>
-        <item>Mexico</item>
-        <item>Nepal</item>
-        <item>Bangladesh</item>
-        <item>Mali</item>
-        <item>Mozambique</item>
-        <item>Nicaragua</item>
-        <item>Tanzania</item>
-        <item>Senegal</item>
-    </string-array>
-
+    <string name="drop_out">ঝরে পড়া</string>
+    <string name="never_enrolled">কখনো ভর্তি হইনি</string>
+    <string name="save_n_submit">মূল্যায়ন সেইভ করুন এবং জমা দিন</string>
+    <string name="you_want_to_exit">আপনি কি নিশ্চিত যে, আপনি বের হয়ে যেতে চান?</string>
+    <string name="all_age">সব বয়স</string>
+    <string name="all_village">সব গ্রাম</string>
+    <string name="all_houeholds">সব বাড়ি</string>
+    <string name="edit">এডিট</string>
+    <string name="str_government_public">সরকারি/পাবলিক</string>
+    <string name="str_private">বেসরকারি</string>
+    <string name="str_other">অন্যান্য</string>
+    <string name="age">বয়স</string>
+    <string name="years">বছর</string>
     <string-array name="gender">
+        <item>জেন্ডার</item>
         <item>ছেলে</item>
         <item>মেয়ে</item>
     </string-array>
-
     <string-array name="enrollment_status">
-        <item>ভর্তি বিষয়ক তথ্য</item>
+        <item>স্কুলে শিশুর ভর্তির অবস্থা</item>
         <item>ভর্তিকৃত</item>
-        <item>কখনো ভর্তি হয়নি</item>
-        <item>ড্রপআউট (ঝরে পড়া)</item>
+        <item>কখনো ভর্তি হইনি</item>
+        <item>ঝরে পড়া</item>
     </string-array>
-
     <string-array name="school_type">
         <item>স্কুলের ধরন</item>
-        <item>সরকার</item>
+        <item>সরকারি/পাবলিক</item>
         <item>বেসরকারি</item>
         <item>অন্যান্য</item>
     </string-array>
-
     <string-array name="dropout_year_list">
-        <item>কোন সালে শিশুটির ড্রপআউট হয়েছে?</item>
-        <item>2015</item>
-        <item>2016</item>
-        <item>2017</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2020</item>
-        <item>2021</item>
+        <item>ঝরে পড়ার বছর</item>
+        <item>2015.0</item>
+        <item>2016.0</item>
+        <item>2017.0</item>
+        <item>2018.0</item>
+        <item>2019.0</item>
+        <item>2020.0</item>
+        <item>2021.0</item>
     </string-array>
-
-    <string-array name="age">
-        <item>বয়স 4  </item>
-        <item>বয়স 5  </item>
-        <item>বয়স 6  </item>
-        <item>বয়স 7  </item>
-        <item>বয়স 8  </item>
-        <item>বয়স 9  </item>
-        <item>বয়স 10 </item>
-    </string-array>
-
-    <string-array name="ageFilter">
-        <item>All বয়স</item>
-        <item>বয়স 4  </item>
-        <item>বয়স 5  </item>
-        <item>বয়স 6  </item>
-        <item>বয়স 7  </item>
-        <item>বয়স 8  </item>
-        <item>বয়স 9  </item>
-        <item>বয়স 10 </item>
-    </string-array>
-
     <string-array name="student_dropoutclass">
-        <item>কোন ক্লাসে শিশুটির ড্রপআউট হয়েছে?</item>
-        <item>Pre-primary</item>
-        <item>ক্লাস/গ্রেড 1</item>
-        <item>ক্লাস/গ্রেড 2</item>
-        <item>ক্লাস/গ্রেড 3</item>
-        <item>ক্লাস/গ্রেড 4</item>
-        <item>ক্লাস/গ্রেড 5</item>
+        <item>ঝরে পড়ার আগে শেষ শ্রেণি/ক্লাস</item>
+        <item>প্রাক-প্রাথমিক</item>
+        <item>১ম শ্রেণি</item>
+        <item>২য় শ্রেণি</item>
+        <item>৩য় শ্রেণি</item>
+        <item>৪র্থ শ্রেণি</item>
+        <item>৫ম শ্রেণি</item>
     </string-array>
-
+    <string-array name="age">
+        <item>বয়স</item>
+        <item>৪ বছর</item>
+        <item>৫ বছর</item>
+        <item>৬ বছর</item>
+        <item>৭ বছর</item>
+        <item>৮ বছর</item>
+        <item>৯ বছর</item>
+        <item>১০ বছর</item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>সব বয়স</item>
+        <item>৪ বছর</item>
+        <item>৫ বছর</item>
+        <item>৬ বছর</item>
+        <item>৭ বছর</item>
+        <item>৮ বছর</item>
+        <item>৯ বছর</item>
+        <item>১০ বছর</item>
+    </string-array>
     <string-array name="student_class">
-        <item>ক্লাস/গ্রেড</item>
-        <item>Pre-primary</item>
-        <item>ক্লাস/গ্রেড 1</item>
-        <item>ক্লাস/গ্রেড 2</item>
-        <item>ক্লাস/গ্রেড 3</item>
-        <item>ক্লাস/গ্রেড 4</item>
-        <item>ক্লাস/গ্রেড 5</item>
-    </string-array>-->
-    <!--Bangla-Bengali END ____________________________________________________________________-->
+        <item>শ্রেণি</item>
+        <item>প্রাক-প্রাথমিক</item>
+        <item>১ম শ্রেণি</item>
+        <item>২য় শ্রেণি</item>
+        <item>৩য় শ্রেণি</item>
+        <item>৪র্থ শ্রেণি</item>
+        <item>৫ম শ্রেণি</item>
+    </string-array>
+    <string-array name="parentAge">
+        <item>বয়স</item>
+        <item>১৮ বছর</item>
+        <item>১৯ বছর</item>
+        <item>২০ বছর</item>
+        <item>২১ বছর</item>
+        <item>২২ বছর</item>
+        <item>২৩ বছর</item>
+        <item>২৪ বছর</item>
+        <item>২৫ বছর</item>
+        <item>২৬ বছর</item>
+        <item>২৭ বছর</item>
+        <item>২৮ বছর</item>
+        <item>২৯ বছর</item>
+        <item>৩০ বছর</item>
+        <item>৩১ বছর</item>
+        <item>৩২ বছর</item>
+        <item>৩৩ বছর</item>
+        <item>৩৪ বছর</item>
+        <item>৩৫ বছর</item>
+        <item>৩৬ বছর</item>
+        <item>৩৭ বছর</item>
+        <item>৩৮ বছর</item>
+        <item>৩৯ বছর</item>
+        <item>৪০ বছর</item>
+        <item>৪১ বছর</item>
+        <item>৪২ বছর</item>
+        <item>৪৩ বছর</item>
+        <item>৪৪ বছর</item>
+        <item>৪৫ বছর</item>
+        <item>৪৬ বছর</item>
+        <item>৪৭ বছর</item>
+        <item>৪৮ বছর</item>
+        <item>৪৯ বছর</item>
+        <item>৫০ বছর</item>
+        <item>৫১ বছর</item>
+        <item>৫২ বছর</item>
+        <item>৫৩ বছর</item>
+        <item>৫৪ বছর</item>
+        <item>৫৫ বছর</item>
+        <item>৫৬ বছর</item>
+        <item>৫৭ বছর</item>
+        <item>৫৮ বছর</item>
+        <item>৫৯ বছর</item>
+        <item>৬০ বছর</item>
+        <item>৬১ বছর</item>
+        <item>৬২ বছর</item>
+        <item>৬৩ বছর</item>
+        <item>৬৪ বছর</item>
+        <item>৬৫ বছর</item>
+        <item>৬৬ বছর</item>
+        <item>৬৭ বছর</item>
+        <item>৬৮ বছর</item>
+        <item>৬৯ বছর</item>
+        <item>৭০ বছর</item>
+        <item>৭১ বছর</item>
+        <item>৭২ বছর</item>
+        <item>৭৩ বছর</item>
+        <item>৭৪ বছর</item>
+        <item>৭৫ বছর</item>
+        <item>৭৬ বছর</item>
+        <item>৭৭ বছর</item>
+        <item>৭৮ বছর</item>
+        <item>৭৯ বছর</item>
+        <item>৮০ বছর</item>
+        <item>৮১ বছর</item>
+        <item>৮২ বছর</item>
+        <item>৮৩ বছর</item>
+        <item>৮৪ বছর</item>
+        <item>৮৫ বছর</item>
+        <item>৮৬ বছর</item>
+        <item>৮৭ বছর</item>
+        <item>৮৮ বছর</item>
+        <item>৮৯ বছর</item>
+        <item>৯০ বছর</item>
+        <item>৯১ বছর</item>
+        <item>৯২ বছর</item>
+        <item>৯৩ বছর</item>
+        <item>৯৪ বছর</item>
+        <item>৯৫ বছর</item>
+        <item>৯৬ বছর</item>
+        <item>৯৭ বছর</item>
+        <item>৯৮ বছর</item>
+        <item>৯৯ বছর</item>
+        <item>১০০ বছর</item>
+    </string-array>
+    <string-array name="None"/>
+    <string name="no_student_found">কোনো শিশু পাওয়া যায়নি</string>
+    <string name="no_village_found">কোন গ্রাম পাওয়া যায়নি।</string>
+    <string name="no_household_found">কোন বাড়ি পাওয়া যায়নি।</string>
+    <string name="check_internet">দয়া করে ইন্টারনেট সংযোগ চেক করুন!</string>
+    <string name="invalid_mobno_pass">মোবাইল নম্বর অথবা পাসওয়ার্ড ঠিক নয়।</string>
+    <string name="enter_mobno_pass">দয়া করে, মোবাইল নম্বর এবং পাসওয়ার্ড দিন!</string>
+    <string name="select_radio_button">বৃত্তাকার অপশনগুলো থেকে শুধুমাত্র একটি নির্বাচন করুন।</string>
+    <string name="select_atleast_one">দয়া করে অন্তত একটি স্থান নির্বাচন করুন।</string>
+    <string name="hhName_mandatory">বাড়ির নম্বর এবং উত্তরদাতার নাম প্রদান বাধ্যতামূলক!</string>
+    <string name="hh_Updated_success">বাড়ি সফলভাবে আপডেট হয়েছে!</string>
+    <string name="hh_Added_success">বাড়ি সফলভাবে যোগ হয়েছে!</string>
+    <string name="select_parent">প্রথমে অভিভাবক নির্বাচন করুন।</string>
+    <string name="all_fileds_mandatory">সকল শূন্যস্থান পূরণ করা বাধ্যতামূলক।</string>
+    <string name="fill_all_fileds">দয়া করে সকল শূন্যস্থান পূরণ করুন!</string>
+    <string name="pif_Added_success">অভিভাবকের তথ্য সফলভাবে যোগ হয়েছে!</string>
+    <string name="pif_Updated_success">অভিভাবকের তথ্য সফলভাবে আপডেট হয়েছে!</string>
+    <string name="stud_Added_success">শিক্ষার্থীর তথ্য সফলভাবে যোগ হয়েছে!</string>
+    <string name="stud_Updated_success">শিক্ষার্থীর তথ্য সফলভাবে আপডেট হয়েছে!</string>
+    <string name="hif_Added_success">বাড়ির তথ্য সফলভাবে যোগ হয়েছে!</string>
+    <string name="hif_Updated_success">বাড়ির তথ্য সফলভাবে আপডেট হয়েছে!</string>
+    <string name="vif_Added_success">গ্রামের তথ্য সফলভাবে যোগ হয়েছে!</string>
+    <string name="vif_Updated_success">গ্রামের তথ্য সফলভাবে আপডেট হয়েছে!</string>
+    <string name="vill_Updated_success">গ্রাম সফলভাবে আপডেট হয়েছে!</string>
+    <string name="vill_added_success">গ্রাম সফলভাবে যোগ হয়েছে!</string>
+    <string name="select_school_type">বিদ্যালয়য়ের ধরণ নির্বাচন করুন</string>
+    <string name="asmt_not_given">শিশুর মূল্যায়ন জমা নেওয়া হইনি</string>
+    <string name="hi">হ্যালো,</string>
+    <string name="no_match_found">কোন মিল পাওয়া যায়নি!</string>
+    <string name="data_sync_success">ডাটা সফলভাবে আপলোড হয়েছে!</string>
+    <string name="db_sync_success">ডাটাবেস সফলভাবে আপলোড হয়েছে!</string>
+    <string name="sync_fail">আপলোড ব্যর্থ হয়েছে!</string>
+    <string name="error_mobile_no">মোবাইল নম্বর অবশ্যই ২০ ডিজিটের কম হতে হবে</string>
+    <string name="error_email">ইমেইল সঠিক নয়! (যেমনঃ abc@gmail.com)</string>
+    <string name="error_password">পাসওয়ার্ডের জন্য কমপক্ষে তিনটি ডিজিট দিন!</string>
+    <string name="profile_already">প্রোফাইল ইতিমধ্যে সেইভ করা আছে</string>
+    <string name="invalid_data">তথ্য সঠিক নয়!</string>
+    <string name="enter_details">বিস্তারিত তথ্য লিখুন</string>-->
+    <!--Bangla-bangali END ____________________________________________________________________-->
 
-    <!--Nepali-Nepal START ____________________________________________________________________-->
-    <!--<string name="sign_up">खाता खोल्नुहोस्</string>
-    <string name="have_account_sign_in">खाता पहिले नै खोलिसकेको छ? छ भने साइन इन गर्नुहोस्</string>
+    <!--NEPAL-Nepali END ____________________________________________________________________-->
+
+    <string name="app_name">ELANA</string>
+    <string name="permissions_head">ELANA सिकाईको अनुभव वृद्धि गर्न निम्न अनुमतिहरुको प्रयोग गर्छ</string>
+    <string name="Collecting_Data">डाटा संकलन</string>
+    <string name="hello_blank_fragment">नमस्ते तपाइले यो खाली छोड्नु भयो</string>
+    <string name="push_success">सफलतापुर्वक डाटा पुश भयो</string>
+    <string name="push_fail">डाटा पुश सफल भएन</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">ठिक छ</string>
+    <string name="ok">ठिक छ</string>
+    <string name="please_wait_pushing">कृपया पर्खनुहोस्, डाटा पुश हुँदैछ .....</string>
+    <string name="details">विवरणहरु</string>
+    <string name="goto_next">अर्कोमा जानुहोस्</string>
+    <string name="cancel">रद्द गर्नुहोस्</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="create_surveyor">सर्भेक्षणकर्ताको खाता खोल्नुहोस्</string>
+    <string name="children_surveyed">सर्भेक्षण गरिएका बालबालिकाहरु</string>
+    <string name="children_assessed">मापन गरिएका बालबालिकाहरु</string>
+    <string name="child_name">बालबालिकाको नाम</string>
+    <string name="village">गाउँ</string>
+    <string name="assessment_given">मापन दिइयो</string>
+    <string name="assessments_synced">मापन अध्यावधिक भयो</string>
+    <string name="score_count">जम्मा स्कोर :</string>
+    <string name="student_count">बालबालिकाको जम्मा संख्या :</string>
+    <string name="village_count">गाउँको जम्मा संख्या :</string>
+    <string name="household_count">घरपरिवारको जम्मा संख्या :</string>
+    <string name="surveyor_count">सर्भेक्षणकर्ताको जम्मा संख्या :</string>
+    <string name="edit_child_info">बालबालिकाहरुको जानकारी सच्याउनुहोस्</string>
+    <string name="add_village_info">गाउँको जानकारीहरु भर्नुहोस्</string>
+    <string name="update_village_info">गाउँको जानकारीहरु अपडेट गर्नुहोस्</string>
+    <string name="str_village_info">गाउँको जानकारी</string>
+    <string name="str_V01">गाउँसम्म हरेक मौसममा जाने बाटो /कालोपत्रे बाटो छ?</string>
+    <string name="str_V02">गाउँसम्म जानको लागि सशुल्क रुपमा सवारी साधन उपलब्ध हुन्छ?</string>
+    <string name="str_V03">गाउँमा विद्युत सेवा जडान गरिएको छ?</string>
+    <string name="str_V04">गाउँमा कुनै सरकारी वा सामुदायिक स्वास्थ्य चौकी वा कुनै अस्पताल छ ?</string>
+    <string name="str_V05">गाउँमा कुनै निजी स्वास्थ्य चौकी वा अस्पताल छ?</string>
+    <string name="str_V06a">गाउँमा पुर्व प्राथमिक शिक्षा प्रदान गर्ने कुनै विद्यालयहरु छन्?</string>
+    <string name="str_V06b">कुन प्रकारको विद्यालय(हरु)ले पुर्व प्राथमिक शिक्षा प्रदान गर्छ ?</string>
+    <string name="str_V07a">गाउँमा प्राथमिक शिक्षा प्रदान गर्ने कुनै विद्यालयहरु छन्?</string>
+    <string name="str_V07b">कुन प्रकारको विद्यालय (हरु)ले प्राथमिक शिक्षा प्रदान गर्छन ?</string>
+    <string name="str_add_household">घरपरिवार थप्नुहोस्</string>
+    <string name="update_household">घरपरिवार अपडेट गर्नुहोस्</string>
+    <string name="str_isSampledHH">छनोट गरिएको घरपरिवार</string>
+    <string name="str_isSampledHH_one">ढोकामा ताला लगाइएको</string>
+    <string name="str_isSampledHH_two">सर्भेक्षणमा सहभागी हुन नचाहने वा ढोका नखोलेको</string>
+    <string name="str_isSampledHH_three">सर्भेक्षणमा सहभागी हुन नचाहने वा ढोका नखोलेको</string>
+    <string name="str_HH01">बस्ती नम्बर</string>
+    <string name="str_HH02">उत्तरदाताको नाम</string>
+    <string name="str_HH03">घरमूलीको नाम</string>
+    <string name="str_HH04a">घर परिवारमा दैनिक रुपमा बसोबास गर्ने ४ देखि १० वर्ष उमेर समुहका बालबालिकाहरु छन्?</string>
+    <string name="str_HH04b">(यदि HH05a को उत्तरमा छन् भनेको छ भने कतिजना छन्?</string>
+    <string name="str_HH05">घरपरिवारमा उपलब्ध सम्पर्क नम्बर ( यदि सम्पर्क नम्बर उपलब्ध भएमा र उत्तरदाताले दिन चाहेमा मात्रै लेख्नुहोस् )</string>
+    <string name="str_add_household_info">घरपरिवारको जानकारी भर्नुहोस्</string>
+    <string name="str_update_household_info">घरपरिवारको जानकारी अपडेट गर्नुहोस्</string>
+    <string name="str_household_info">घरपरिवारको जानकारी</string>
+    <string name="str_gnr_household_info">सर्भेक्षण गरिएका घरपरिवारको सामान्य जानकारी</string>
+    <string name="str_HH06a">दैनिक रुपमा घरपरिवारमा बसोबास गर्ने सदस्यहरुको संख्या</string>
+    <string name="str_HH06b">तपाईहरु घरमा नेपाली भाषा बोल्नु हुन्छ?</string>
+    <string name="str_HH06c">घरमा नेपाली भाषा कत्तिको बोल्नुहुन्छ ?</string>
+    <string name="str_HH06d">घरमा नेपाली बाहेक अरु कुनै भाषा बोल्नुहुन्छ ?</string>
+    <string name="str_always">सधैं</string>
+    <string name="str_sometimes">कहिलेकाँहि</string>
+    <string name="str_HH_asset_info">घरायसी सामाग्रीहरुको जानकारी</string>
+    <string name="str_HH07a">घरको छानाको प्रकार</string>
+    <string name="str_HH07a_one">छाना नभएको</string>
+    <string name="str_HH07a_two">पक्कि छाना</string>
+    <string name="str_HH07a_three">कच्ची छाना</string>
+    <string name="str_HH07b">घरको वाल (बाह्य ) को प्रकार</string>
+    <string name="str_HH07b_one">वाल नभएको</string>
+    <string name="str_HH07b_two">पक्कि वाल</string>
+    <string name="str_HH07b_three">कच्ची वाल</string>
+    <string name="str_HH07c">घरमा बत्ती बाल्नको लागि मुख्य रुपमा प्रयोग हुने स्रोत के हो ?</string>
+    <string name="str_HH07c_one">विद्युत</string>
+    <string name="str_HH07c_two">सोलार</string>
+    <string name="str_HH07c_three">मैनबत्ती</string>
+    <string name="str_HH07c_four">अन्य</string>
+    <string name="str_HH07d">घरपरिवारमा खानेपानीको मुख्य स्रोत क हो ?</string>
+    <string name="str_HH07d_one">धारा/पाइपको पानी</string>
+    <string name="str_HH07d_two">हाते पम्प/ट्युबवेल</string>
+    <string name="str_HH07d_three">बोरिङ्ग गरेर निकालिएको पानी</string>
+    <string name="str_HH07d_four">इनार</string>
+    <string name="str_HH07d_five">खोला/पोखरी/ मूलको पानी</string>
+    <string name="str_HH07d_six">जारमा किनेको पानी</string>
+    <string name="str_HH07d_seven">अन्य</string>
+    <string name="str_HH07e">विद्युत जडान गरिएको छ ?</string>
+    <string name="str_HH07f">शौचालय ?</string>
+    <string name="str_HH07g">घरमा कम्तीमा पनि एकजनाले उच्च शिक्षा/डिप्लोमा हासिल गरेको कोहि छ (बालबालिकाको अभिभावक बाहेक) ?</string>
+    <string name="str_HH07h">के तपाईंको घरमा बालबालिकाहरुको पढाइका लागि विद्यालयको किताबहरु बाहेकका अन्य पाठ्य सामाग्रीहरु जस्तै कथा कविता वा अन्य कुनै पाठ्य सामाग्रीहरु छ ?</string>
+    <string name="str_HH07i">के तपाईंको घरमा बालबालिकाहरुका लागि नभएपनि अरुले पढ्ने खालका कुनै पाठ्य सामाग्रीहरु जस्तै धार्मिक ग्रन्थहरु, पत्रिका , म्यागजिन आदि छ ?</string>
+    <string name="str_HH07j">कम्प्युटर /ल्यापटप / ट्याब्लेट ?</string>
+    <string name="str_HH07k">टेलिभिजन ?</string>
+    <string name="str_HH07l">रेडियो ?</string>
+    <string name="str_HH07m">मोबाईल फोन छ ?</string>
+    <string name="str_HH07n">त्यो स्मार्टफोन हो ?</string>
+    <string name="str_HH07o">चार पांग्रे सवारीसाधन ?</string>
+    <string name="str_HH07p">दुइ पांग्रे सवारी साधन (मोटरसाईकल , स्कुटर ) ?</string>
+    <string name="str_HH07q">साईकल ?</string>
+    <string name="str_HH_have_lbl">के यो घरमा छ:</string>
+    <string name="select_household">घरपरिवार छान्नुहोस्</string>
+    <string name="add_child">बालबालिका थप्नुहोस्</string>
+    <string name="update_child">बालबालिकाहरु अपडेट गर्नुहोस्</string>
+    <string name="str_CH04a">बालबालिकामा कुनै किसिमको अपाङ्गता छ ?</string>
+    <string name="str_CH04b">कुन किसिमको अपाङ्गता ?</string>
+    <string name="str_CH04b_op1">दृष्टि</string>
+    <string name="str_CH04b_op2">सुनाई /बोलाई</string>
+    <string name="str_CH04b_op3">शारीरिक</string>
+    <string name="str_CH04b_op4">बौधिक</string>
+    <string name="str_CH05">के (बालबालिकाको नाम ) लाई हाल विद्यालयमा भर्ना गरिएको छ ?</string>
+    <string name="str_CH06c">के विद्यालयमा नेपाली भाषामा पढाई हुन्छ? (साना बालबालिकाहरुको किताब वा अन्य कुनै विद्यालयको कागज हेरेर यो कुरा पता लगाउन सक्नु हुन्छ )</string>
+    <string name="str_CH06d">हाल विद्यालयमा पढाई लेखाइको अवस्था के छ ?</string>
+    <string name="str_CH06d_one">विद्यालय खोलिएको छ र यो कक्षाको पढाई लेखाइ भईरहेको छ</string>
+    <string name="str_CH06d_two">विद्यालय खोलिएको छ तर पढाई लेखाईको क्रियाकलापहरु भने भईहेको छैन</string>
+    <string name="str_CH06d_three">विद्यालय बन्द छ</string>
+    <string name="str_CH06e">हाल कस्तो विधिबाट पढाई लेखाईका क्रियाकलापहरु संचालनमा छन् ?</string>
+    <string name="str_CH06e_one">अनलाईन /रिमोट मात्र (फोनकल , जुम , whatsapp/गुगल मिट , एसएमएस आदि )</string>
+    <string name="str_CH06e_two">बालबालिकाहरु भौतिक रूपमा विद्यालयमा नै गएर पढाई /लेखाई गरिरहेका छन्</string>
+    <string name="str_CH06e_three">दुवै ( अनलाईन र विद्यालय गएर )</string>
+    <string name="str_CH06f">के (बालबालिकाको नाम) संग हाल अध्ययनरत कक्षाको पाठ्य पुस्तकहरु छन् ?</string>
+    <string name="str_CH06g">के (बालबालिकाको नाम) ले कुनै कक्षा दोहोर्याएर पढेको छ? ( कक्षा १ वा सो भन्दा माथी अध्ययरत बालबालिकाहरुलाइ मात्र सोध्नुहोस् )</string>
+    <string name="str_CH07a">के (बालबालिकाको नाम) लाई कहिले विद्यालयमा भर्ना गरिएको थियो?</string>
+    <string name="str_CH07d">(बालबालिकाको नाम) ले विद्यालय जान छोड्नुको मुख्य कारण के हो ?</string>
+    <string name="str_reasonToDrop_one">शुल्क तिर्न नसकेर</string>
+    <string name="str_reasonToDrop_two">विद्यालय बन्द भएर</string>
+    <string name="str_reasonToDrop_three">माथिल्लो कक्षामा बढुवा नगरेको भएर</string>
+    <string name="str_reasonToDrop_four">अर्को कक्षाको लागि नजिकै विद्यालय नभएर</string>
+    <string name="str_reasonToDrop_five">जान मन नलागेर</string>
+    <string name="str_reasonToDrop_six">अन्य</string>
+    <string name="str_reasonToDrop_seven">थाहा छैन</string>
+    <string name="str_CH08">के (बालबालिकाको नाम )ले हाल सशुल्क टिउशन कक्षा पढ्छ?</string>
+    <string name="str_CH09">के (बालबालिकाको नाम ) ले पछिल्लो २ हप्तामा विद्यालयको पुस्तकालय वा अन्य ठाउँबाट पढ्ने कुनै सामाग्रीहरु घरमा ल्याएको छ?</string>
+    <string name="str_CH10a">घरमा बालबालिकालाई गृहकार्य गर्न कसैले सहयोग गर्नु हुन्छ ?</string>
+    <string name="str_CH10b">(यदि प्रश्न नं CH12a को उत्तरमा गर्छौँ छ भने ), धेरै जसो कसले सहयोग गर्नु हुन्छ ?</string>
+    <string name="str_CH10b_one">बुवा</string>
+    <string name="str_CH10b_two">आमा</string>
+    <string name="str_CH10b_three">दिदि /दाइ</string>
+    <string name="str_CH10b_four">काका</string>
+    <string name="str_CH10b_five">काका</string>
+    <string name="str_CH10b_six">काका/ठुलो बुवाको छोरा छोरी</string>
+    <string name="str_CH10b_seven">अरु</string>
+    <string name="str_CH10c">घरपरिवारमा (बालबालिकाको नाम) लाइ कत्तिको कथाहरु पढेर सुनाउने गर्नु भएको छ ?</string>
+    <string name="str_CH10c_one">कहिले जाँदैन</string>
+    <string name="str_CH10c_two">हप्ताको एकदिन भन्दा पनि कम</string>
+    <string name="str_CH10c_three">हप्ताको १-२ दिन</string>
+    <string name="str_CH10c_four">हप्ताको ३-४ दिन</string>
+    <string name="str_CH10c_five">हप्ताको ५-७ दिन</string>
+    <string name="additional_learning_sup">पढाईको लागि घरमा हुने अन्य सहयोग</string>
+    <string name="add_parent_information">अभिभावकको जानकारीहरु भर्नुहोस्</string>
+    <string name="update_parent_information">अभिभावकको जानकारीहरु अपडेट गर्नुहोस्</string>
+    <string name="parent_information">अभिभावकको जानकारी</string>
+    <string name="mothers_details">आमाको जानकारी</string>
+    <string name="fathers_details">बुवाको जानकारी</string>
+    <string name="hint_motherName">आमाको नाम</string>
+    <string name="hint_fatherName">बुवाको नाम</string>
+    <string name="str_PT01b">आमाको उमेर</string>
+    <string name="str_PT02b">बुवाको उमेर</string>
+    <string name="str_PT01d">कुन तह पुरा गर्नु भएको छ?</string>
+    <string name="str_PT02d">कुन तह पुरा गर्नु भएको छ?</string>
+    <string name="str_PT0d_one">प्राथमिक तह पुरा नगरेको</string>
+    <string name="str_PT0d_two">प्राथमिक तह</string>
+    <string name="str_PT0d_three">माध्यमिक</string>
+    <string name="str_PT0d_four">माध्यमिक भन्दा माथी</string>
+    <string name="str_child_lives_with">बालबालिका कोसँग बस्छन ?</string>
+    <string name="str_mother">आमासँग</string>
+    <string name="str_father">बुवासँग</string>
+    <string name="str_both">दुवै जनासँग</string>
+    <string name="str_neither">दुवै जनासँग बस्दैन</string>
+    <string name="str_PT01c">के आमाले पढ्नु भएको छ ?</string>
+    <string name="str_PT02c">के बुवाले पढ्नु भएको छ?</string>
+    <string name="str_PT01e">आमाले आयआर्जनको कुनै काम गर्नु हुन्छ?</string>
+    <string name="str_PT02e">बुवाले आयआर्जनको कुनै काम गर्नु हुन्छ?</string>
+    <string name="str_PT01f">कस्तो खालको काम गर्नु हुन्छ ?</string>
+    <string name="str_PT01f_one">आफ्नै वा परिवारको खेतबारीको काम</string>
+    <string name="str_PT01f_two">अरुको खेतबारीको काम (मेला)</string>
+    <string name="str_PT01f_three">खेती बाहेक परिवार वा आफ्नै व्यवसाय</string>
+    <string name="str_PT01f_four">जागिर ( सरकारी वा निजी )</string>
+    <string name="sign_up">साइन अप गर्नुहोस्</string>
+    <string name="have_account_sign_in">पहिले नै खाता खोलिसकेको छ? साइन इन गर्नुहोस् ।</string>
     <string name="hint_svrName">नाम</string>
-    <string name="hint_svrEmail">ईमेल (अनिवार्य होइन)</string>
+    <string name="hint_svrEmail">इमेल (अनिवार्य छैन)</string>
     <string name="hint_svrMobile">मोबाईल नं.</string>
     <string name="hint_svrPassword">पासवर्ड</string>
-    <string name="sign_in">साइन इन गर्नुहोस्</string>
+    <string name="sign_in">साइन इन</string>
     <string name="select_village">गाउँ छान्नुहोस्</string>
-    <string name="add_village">गाउँको नाम add गर्नुहोस्</string>
+    <string name="add_village">गाउँ थप्नुहोस्</string>
+    <string name="update_village">गाउँ अपडेट गर्नुहोस</string>
     <string name="hint_village">गाउँ</string>
     <string name="hint_district">जिल्ला</string>
     <string name="hint_state">प्रदेश</string>
-    <string name="save">सेभ गर्नुहोस्</string>
+    <string name="save">सेभ</string>
     <string name="select_child">बालबालिका छान्नुहोस्</string>
-    <string name="add_child_information">बालबालिकाको जानकारी भर्नुहोस्</string>
-    <string name="want_to_start_assessment">अब मापन सुरु गर्दा हुन्छ?</string>
-    <string name="yes">हुन्छ</string>
-    <string name="no">हुँदैन</string>
-    <string name="goto_next_task">अर्को कार्य सुरु गर्न चाहनु हुन्छ?</string>
+    <string name="want_to_start_assessment">के तपाइ मापन सुरु गर्न चाहनुहुन्छ ?</string>
+    <string name="goto_next_task">अर्को कार्यमा जना चाहनुहुन्छ?</string>
     <string name="thank_you">धन्यवाद</string>
-    <string name="test_submitted">तपाईको मापन सब्मिसन भयो</string>
-    <string name="next_student">अब अर्को बालबालिका</string>
-    <string name="submit_assessment">मापन सब्मिट गर्नुहोस्</string>
-    <string name="select_country">देशको नाम छान्नुहोस्</string>
+    <string name="test_submitted">तपाइको मापन सबमिट भयो</string>
+    <string name="next_student">अर्को बालबालिका</string>
+    <string name="submit_assessment">मापन सबमिट गर्नुहोस्</string>
+    <string name="yes">छ/छन्/हो</string>
+    <string name="no">छैन/छैनन् /होइन               </string>
+    <string name="select_country">देश छान्नुहोस्</string>
     <string name="enrolled">विद्यालय गईरहेको</string>
     <string name="drop_out">विद्यालय बिचमै छोडेको </string>
     <string name="never_enrolled">कहिले भर्ना नै नगरिएको </string>
-    <string name="save_n_submit">बचत गर्नुहोस् र मूल्याङ्कन पेश गर्नुहोस्</string>
-    <string name="you_want_to_exit">के तपाईं बाहिर निस्कन चाहनुहुन्छ?</string>
-
-    <string name="all_age">All उमेर</string>
-    <string name="all_village">All गाउँ</string>
-
-
-    <string-array name="country_list">
-        <item>देशको नाम छान्नुहोस्</item>
-        <item>India</item>
-        <item>Pakistan</item>
-        <item>Mexico</item>
-        <item>Nepal</item>
-        <item>Bangladesh</item>
-        <item>Mali</item>
-        <item>Mozambique</item>
-        <item>Nicaragua</item>
-        <item>Tanzania</item>
-        <item>Senegal</item>
-    </string-array>
-
+    <string name="save_n_submit">मापन सेभ गरेर सबमिट गर्नुहोस्</string>
+    <string name="you_want_to_exit">के तपाइ बाहिर निस्कन चाहनुहुन्छ ?</string>
+    <string name="all_age">सबै उमेर</string>
+    <string name="all_village">सबै गाउँहरु</string>
+    <string name="all_houeholds">सबै घरपरिवारहरु</string>
+    <string name="edit">सच्याउनुहोस् / edit गर्नुहोस्</string>
+    <string name="str_government_public">सरकारी</string>
+    <string name="str_private">निजी</string>
+    <string name="str_other">अन्य</string>
+    <string name="age">उमेर</string>
+    <string name="years">वर्ष</string>
+    <string name="str_household">घरपरिवार</string>
     <string-array name="gender">
+        <item>लिङ्ग</item>
         <item>पुरुष</item>
         <item>महिला</item>
     </string-array>
-
     <string-array name="enrollment_status">
         <item>विद्यालय भर्नाको अवस्था</item>
-        <item>विद्यालय गईरहेको</item>
-        <item>कहिले भर्ना नै नगरिएको</item>
-        <item>विद्यालय बिचमै छोडेको</item>
+        <item>भर्ना गरिएको</item>
+        <item>कहिले पनि भर्ना नगरेको</item>
+        <item>विद्यालय जान बिचमै छोडेको</item>
     </string-array>
-
     <string-array name="school_type">
         <item>विद्यालयको प्रकार</item>
         <item>सरकारी</item>
         <item>निजी</item>
         <item>अन्य</item>
     </string-array>
-
     <string-array name="dropout_year_list">
-        <item>कुन सालमा विद्यालय जान छोडेको?</item>
-        <item>2015</item>
-        <item>2016</item>
-        <item>2017</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2020</item>
-        <item>2021</item>
+        <item>विद्यालय जान छोडेको साल</item>
+        <item>2015.0</item>
+        <item>2016.0</item>
+        <item>2017.0</item>
+        <item>2018.0</item>
+        <item>2019.0</item>
+        <item>2020.0</item>
+        <item>2021.0</item>
     </string-array>
-
-    <string-array name="age">
-        <item>उमेर 4  </item>
-        <item>उमेर 5  </item>
-        <item>उमेर 6  </item>
-        <item>उमेर 7  </item>
-        <item>उमेर 8  </item>
-        <item>उमेर 9  </item>
-        <item>उमेर 10 </item>
-    </string-array>
-
-    <string-array name="ageFilter">
-        <item>All उमेर</item>
-        <item>उमेर 4  </item>
-        <item>उमेर 5  </item>
-        <item>उमेर 6  </item>
-        <item>उमेर 7  </item>
-        <item>उमेर 8  </item>
-        <item>उमेर 9  </item>
-        <item>उमेर 10 </item>
-    </string-array>
-
     <string-array name="student_dropoutclass">
-        <item>कति कक्षामा पढ्दा पढ्दै विद्यालय जान छोडेको?</item>
-        <item>Pre-primary</item>
-        <item>कक्षा 1</item>
-        <item>कक्षा 2</item>
-        <item>कक्षा 3</item>
-        <item>कक्षा 4</item>
-        <item>कक्षा 5</item>
+        <item>विद्यालय जान छोडेको अगाडी पुरा गरेको कक्षा</item>
+        <item>पुर्व प्राथमिक</item>
+        <item>कक्षा १</item>
+        <item>कक्षा २</item>
+        <item>कक्षा ३</item>
+        <item>कक्षा ४</item>
+        <item>कक्षा ५</item>
     </string-array>
-
+    <string-array name="age">
+        <item>उमेर</item>
+        <item>४ वर्ष</item>
+        <item>५ वर्ष</item>
+        <item>६ वर्ष</item>
+        <item>७ वर्ष</item>
+        <item>८ वर्ष</item>
+        <item>९ वर्ष</item>
+        <item>१० वर्ष</item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>सबै उमेर</item>
+        <item>४ वर्ष</item>
+        <item>५ वर्ष</item>
+        <item>६ वर्ष</item>
+        <item>७ वर्ष</item>
+        <item>८ वर्ष</item>
+        <item>९ वर्ष</item>
+        <item>१० वर्ष</item>
+    </string-array>
     <string-array name="student_class">
         <item>कक्षा</item>
-        <item>Pre-primary</item>
-        <item>कक्षा 1</item>
-        <item>कक्षा 2</item>
-        <item>कक्षा 3</item>
-        <item>कक्षा 4</item>
-        <item>कक्षा 5</item>
-    </string-array>-->
-    <!--Nepali-Nepal END ____________________________________________________________________-->
+        <item>पुर्व प्राथमिक</item>
+        <item>कक्षा १</item>
+        <item>कक्षा २</item>
+        <item>कक्षा ३</item>
+        <item>कक्षा ४</item>
+        <item>कक्षा ५</item>
+    </string-array>
+    <string-array name="parentAge">
+        <item>उमेर</item>
+        <item>१८ वर्ष</item>
+        <item>१९ वर्ष</item>
+        <item>२० वर्ष</item>
+        <item>२१ वर्ष</item>
+        <item>२२ वर्ष</item>
+        <item>२३ वर्ष</item>
+        <item>२४ वर्ष</item>
+        <item>२५ वर्ष</item>
+        <item>२६ वर्ष</item>
+        <item>२७ वर्ष</item>
+        <item>२८ वर्ष</item>
+        <item>२९ वर्ष</item>
+        <item>३० वर्ष</item>
+        <item>३१ वर्ष</item>
+        <item>३२ वर्ष</item>
+        <item>३३ वर्ष</item>
+        <item>३४ वर्ष</item>
+        <item>३५ वर्ष</item>
+        <item>३६ वर्ष</item>
+        <item>३७ वर्ष</item>
+        <item>३८ वर्ष</item>
+        <item>३९ वर्ष</item>
+        <item>४० वर्ष</item>
+        <item>४१ वर्ष</item>
+        <item>४२ वर्ष</item>
+        <item>४३ वर्ष</item>
+        <item>४४ वर्ष</item>
+        <item>४५ वर्ष</item>
+        <item>४६ वर्ष</item>
+        <item>४७ वर्ष</item>
+        <item>४८ वर्ष</item>
+        <item>४९ वर्ष</item>
+        <item>५० वर्ष</item>
+        <item>५१ वर्ष</item>
+        <item>५२ वर्ष</item>
+        <item>५३ वर्ष</item>
+        <item>५४ वर्ष</item>
+        <item>५५ वर्ष</item>
+        <item>५६ वर्ष</item>
+        <item>५७ वर्ष</item>
+        <item>५८ वर्ष</item>
+        <item>५९ वर्ष</item>
+        <item>६० वर्ष</item>
+        <item>६१ वर्ष</item>
+        <item>६२ वर्ष</item>
+        <item>६३ वर्ष</item>
+        <item>६४ वर्ष</item>
+        <item>६५ वर्ष</item>
+        <item>६६ वर्ष</item>
+        <item>६७ वर्ष</item>
+        <item>६८ वर्ष</item>
+        <item>६९ वर्ष</item>
+        <item>७० वर्ष</item>
+        <item>७१ वर्ष</item>
+        <item>७२ वर्ष</item>
+        <item>७३ वर्ष</item>
+        <item>७४ वर्ष</item>
+        <item>७५ वर्ष</item>
+        <item>७६ वर्ष</item>
+        <item>७७ वर्ष</item>
+        <item>७८ वर्ष</item>
+        <item>७९ वर्ष</item>
+        <item>८० वर्ष</item>
+        <item>८१ वर्ष</item>
+        <item>८२ वर्ष</item>
+        <item>८३ वर्ष</item>
+        <item>८४ वर्ष</item>
+        <item>८५ वर्ष</item>
+        <item>८६ वर्ष</item>
+        <item>८७ वर्ष</item>
+        <item>८८ वर्ष</item>
+        <item>८९ वर्ष</item>
+        <item>९० वर्ष</item>
+        <item>९१ वर्ष</item>
+        <item>९२ वर्ष</item>
+        <item>९३ वर्ष</item>
+        <item>९४ वर्ष</item>
+        <item>९५ वर्ष</item>
+        <item>९६ वर्ष</item>
+        <item>९७ वर्ष</item>
+        <item>९८ वर्ष</item>
+        <item>९९ वर्ष</item>
+        <item>१०० वर्ष</item>
+    </string-array>
+    <string-array name="None"/>
+    <string name="no_student_found">बच्चा भेटिएन</string>
+    <string name="no_village_found">गाउँ भेटिएन ।</string>
+    <string name="no_household_found">घरपरिवार भेटिएन ।</string>
+    <string name="check_internet">कृपया इन्टरनेट कनेक्सन चेक गर्नुहोस् !</string>
+    <string name="invalid_mobno_pass">मोबाईल नं. वा पासवर्ड मिलेन</string>
+    <string name="enter_mobno_pass">मोबाईल नं. र पासवर्ड राख्नुहोस् ।</string>
+    <string name="select_radio_button">कृपया रेडियो बटन छान्नुहोस् ।</string>
+    <string name="select_atleast_one">कृपया कुनै एउटा छान्नुहोस् ।</string>
+    <string name="hhName_mandatory">घरपरिवार नं. र उत्तरदाताको नाम अनिवार्य भर्नुपर्ने छ !</string>
+    <string name="hh_Updated_success">घरपरिवार सफलतापुर्वक अपडेट भयो !</string>
+    <string name="hh_Added_success">घरपरिवार सफलतापुर्वक थपियो !</string>
+    <string name="select_parent">पहिले अभिभावक छान्नुहोस् ।</string>
+    <string name="all_fileds_mandatory">सबै अनुवार्य रुपमा भर्नु पर्नेछ ।</string>
+    <string name="fill_all_fileds">कृपया सबै भर्नुहोस् !</string>
+    <string name="pif_Added_success">अभिभावकको जानकारी सफलतापुर्वक थप भयो !</string>
+    <string name="pif_Updated_success">अभिभावकको जानकारी सफलतापुर्वक अपडेट भयो !</string>
+    <string name="stud_Added_success">बच्चा सफलतापुर्वक थप भयो !</string>
+    <string name="stud_Updated_success">बच्चा सफलतापुर्वक अपडेट भयो !</string>
+    <string name="hif_Added_success">घरपरिवार सफलतापुर्वक थप भयो !</string>
+    <string name="hif_Updated_success">घरपरिवारको जानकारी सफलतापुर्वक अपडेट भयो !</string>
+    <string name="vif_Added_success">गाउँको जानकारी सफलतापुर्वक थप भयो !</string>
+    <string name="vif_Updated_success">गाउँको जानकारी सफलतापुर्वक अपडेट भयो !</string>
+    <string name="vill_Updated_success">गाउँ सफलतापुर्वक अपडेट भयो !</string>
+    <string name="vill_added_success">गाउँ सफलतापुर्वक थप भयो !</string>
+    <string name="select_school_type">विद्यालयको प्रकार छान्नुहोस्</string>
+    <string name="asmt_not_given">बालबालिकाले मापन गरेन</string>
+    <string name="hi">नमस्ते</string>
+    <string name="no_match_found">भेटिएन</string>
+    <string name="data_sync_success">डाटा सफलतापुर्वक अध्यावधिक भयो</string>
+    <string name="db_sync_success">डीबी सफलतापुर्वक अध्यावधिक भयो</string>
+    <string name="sync_fail">अध्यावधिक भएन !</string>
+    <string name="error_mobile_no">मोबाईल नं. २० ओटा संख्या भन्दा कम हुनु पर्छ !</string>
+    <string name="error_email">इमेल मिलेन ! (जस्तै abc@gmail.com)</string>
+    <string name="error_password">पासवर्डको लागि कम्तिमा पनि ३ ओटा अक्षरहरु आवश्यक हुन्छ !</string>
+    <string name="profile_already">प्रोफाइल पहिले नै सेभ भईसकेको छ ...</string>
+    <string name="invalid_data">डाटा मिलेन</string>
+    <string name="enter_details">जानकारीहरु भर्नुहोस्</string>
+    <!--NEPAL-Nepali END ____________________________________________________________________-->
+
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
     <!--
