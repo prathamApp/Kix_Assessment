@@ -36,8 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:text="@string/str_child_lives_with"
-            android:textAlignment="center"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -46,15 +46,15 @@
             android:id="@+id/rg_selectPerson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/rb_mother"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_mother"
@@ -66,7 +66,6 @@
                 android:id="@+id/rb_father"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_father"
@@ -78,7 +77,6 @@
                 android:id="@+id/rb_both"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_both"
@@ -90,7 +88,6 @@
                 android:id="@+id/rb_neither"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/red"
                 android:text="@string/str_neither"
