@@ -1,165 +1,145 @@
 {
   "StateList": [
     {
-      "StateName": "Surkhet",
+      "StateName": "Rangpur",
       "DistrictList": [
         {
-          "DistrictName": "Simta RM",
+          "DistrictName": "Gaibandha",
           "VillageList": [
             {
-              "VillageName": "Lipe Chaur"
+              "VillageName": "Paglar Char"
             },
             {
-              "VillageName": "Bajeda Aali"
+              "VillageName": "Chaubhagia"
             },
             {
-              "VillageName": "Paani Khola"
+              "VillageName": "Purba Katlamari"
             },
             {
-              "VillageName": "Sima (Aali)"
+              "VillageName": "Dakshin Burail"
             },
             {
-              "VillageName": "Ghoreti Rakam"
+              "VillageName": "Uria"
             },
             {
-              "VillageName": "Gajhauda, Rakam"
+              "VillageName": "Shimultari"
             },
             {
-              "VillageName": "Thigni"
+              "VillageName": "Madhyam Kumudpur"
             },
             {
-              "VillageName": "Jhyami Chaur, Rakam"
-            }
-          ]
-        },
-        {
-          "DistrictName": "Chaukune RM",
-          "VillageList": [
-            {
-              "VillageName": "Sanneghari-1"
+              "VillageName": "Phalia"
             },
             {
-              "VillageName": "Sanneghari-3"
+              "VillageName": "Nutangari"
             },
             {
-              "VillageName": "Jumlyahamul-1"
+              "VillageName": "Uttar Gidari"
             },
             {
-              "VillageName": "Jumlyahamul-2"
+              "VillageName": "Kholahati"
             },
             {
-              "VillageName": "Bhattesera-1"
+              "VillageName": "Kuptala"
             },
             {
-              "VillageName": "Bhattesera-2"
+              "VillageName": "Malibari"
             },
             {
-              "VillageName": "Bhattesera-3"
-            }
-          ]
-        },
-        {
-          "DistrictName": "Panchapuri MP",
-          "VillageList": [
-            {
-              "VillageName": "Chaura"
+              "VillageName": "Chithalia Digar"
             },
             {
-              "VillageName": "Lagam"
+              "VillageName": "Tindaha"
             },
             {
-              "VillageName": "Tokma"
+              "VillageName": "Akhira Para"
             },
             {
-              "VillageName": "Murmuri"
+              "VillageName": "Ramnathpur"
             },
             {
-              "VillageName": "Babiyachaur"
+              "VillageName": "Chak Kochmari"
             },
             {
-              "VillageName": "Babiyachaur"
+              "VillageName": "Harirampur"
             },
             {
-              "VillageName": "Latikanda"
+              "VillageName": "Chand Para"
             },
             {
-              "VillageName": "Bhabar"
+              "VillageName": "Kamdia"
             },
             {
-              "VillageName": "Babiyachaur"
-            }
-          ]
-        },
-        {
-          "DistrictName": "Barahatal RM",
-          "VillageList": [
-            {
-              "VillageName": "Amalakhali"
+              "VillageName": "Zagui Para"
             },
             {
-              "VillageName": "Racha"
+              "VillageName": "Ratanpur"
             },
             {
-              "VillageName": "Rakseni"
+              "VillageName": "Pantair"
             },
             {
-              "VillageName": "Salghari"
+              "VillageName": "Patua"
             },
             {
-              "VillageName": "Damare"
+              "VillageName": "Chhota Abhirampur"
             },
             {
-              "VillageName": "Chepang"
+              "VillageName": "Nilkantapur"
             },
             {
-              "VillageName": "Badichaur"
+              "VillageName": "Taraf Kamal"
             },
             {
-              "VillageName": "Syaule"
+              "VillageName": "Khiribari"
             },
             {
-              "VillageName": "Ikheni"
+              "VillageName": "Kapasia"
             },
             {
-              "VillageName": "Basantapur"
+              "VillageName": "Dublagari"
             },
             {
-              "VillageName": "Lamakhali"
-            }
-          ]
-        },
-        {
-          "DistrictName": "Chingad RM",
-          "VillageList": [
-            {
-              "VillageName": "Matela"
+              "VillageName": "Nandisahar"
             },
             {
-              "VillageName": "Tule"
+              "VillageName": "Debipur"
             },
             {
-              "VillageName": "Slayan Gaira"
+              "VillageName": "Ganak Para"
             },
             {
-              "VillageName": "Phakapani"
+              "VillageName": "Dayar Para"
             },
             {
-              "VillageName": "Dhaula Chakha chaur"
+              "VillageName": "Kumargari"
             },
             {
-              "VillageName": "Awalching Satmul"
+              "VillageName": "Purba Gopinathpur"
             },
             {
-              "VillageName": "Chadharke"
+              "VillageName": "Sakoa"
             },
             {
-              "VillageName": "Dharampokhara"
+              "VillageName": "Chinirpatal"
             },
             {
-              "VillageName": "Bhairavsthan Awalching"
+              "VillageName": "Garamara C.P"
             },
             {
-              "VillageName": "Pataldhuri Awalching"
+              "VillageName": "Kamar Para"
+            },
+            {
+              "VillageName": "Ramnagar"
+            },
+            {
+              "VillageName": "Pakurtala"
+            },
+            {
+              "VillageName": "Sattakore"
+            },
+            {
+              "VillageName": "Khamar Dhanaruha"
             }
           ]
         }

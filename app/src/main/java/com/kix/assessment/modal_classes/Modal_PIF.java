@@ -13,6 +13,7 @@ public class Modal_PIF implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     public int pifId;
+    public int PT00;//Child Lives with
     public String PT01a;//Mother's name
     public String PT01b;//Mother's age
     public String PT01c;//Has the mother ever attended school?
@@ -45,6 +46,7 @@ public class Modal_PIF implements Comparable, Parcelable {
 
     protected Modal_PIF(final Parcel in) {
         this.pifId = in.readInt();
+        this.PT00 = in.readInt();
         this.PT01a = in.readString();
         this.PT01b = in.readString();
         this.PT01c = in.readString();
@@ -80,6 +82,7 @@ public class Modal_PIF implements Comparable, Parcelable {
     @Override
     public void writeToParcel(final Parcel dest, final int flags) {
         dest.writeInt(this.pifId);
+        dest.writeInt(this.PT00);
         dest.writeString(this.PT01a);
         dest.writeString(this.PT01b);
         dest.writeString(this.PT01c);
@@ -109,6 +112,10 @@ public class Modal_PIF implements Comparable, Parcelable {
     public String getPT01a() {
         return PT01a;
     }
+
+    public int getPT00() { return this.PT00; }
+
+    public void setPT00(final int PT00) { this.PT00 = PT00; }
 
     public void setPT01a(String PT01a) {
         this.PT01a = PT01a;

@@ -96,7 +96,7 @@ public class Fragment_AddParentInfoForm extends Fragment {
     public String mothersAge, mothersSchooling, fathersAge, fathersSchooling;
     public String studentId, householdId;
 
-    int selectedPT01c, selectedPT01d, selectedPT01e, selectedPT01f, selectedPT02c, selectedPT02d, selectedPT02e, selectedPT02f;
+    int selectedPT00, selectedPT01c, selectedPT01d, selectedPT01e, selectedPT01f, selectedPT02c, selectedPT02d, selectedPT02e, selectedPT02f;
 
     public Fragment_AddParentInfoForm() {
         // Required empty public constructor
@@ -112,19 +112,81 @@ public class Fragment_AddParentInfoForm extends Fragment {
         spinner_mothersAge.setAdapter(ageAdapter);
         spinner_fathersAge.setAdapter(ageAdapter);
 
-        this.selectedPT01c = this.selectedPT01d = this.selectedPT01e = this.selectedPT01f = this.selectedPT02c = this.selectedPT02d = this.selectedPT02e = this.selectedPT02f = 99;
+        this.selectedPT00 = this.selectedPT01c = this.selectedPT01d = this.selectedPT01e = this.selectedPT01f = this.selectedPT02c = this.selectedPT02d = this.selectedPT02e = this.selectedPT02f = 99;
 
         if (getArguments().getString(EDIT_PARENT) != null) {
-            ll_selectPerson.setVisibility(View.GONE);
-            sv_pif.setVisibility(View.VISIBLE);
-            ll_motherInfo.setVisibility(View.VISIBLE);
-            ll_fatherInfo.setVisibility(View.VISIBLE);
             tv_label.setText(this.getString(R.string.update_parent_information));
             btn_saveParent.setVisibility(View.VISIBLE);
 
             Modal_PIF modalPif = parentInformationDao.getPIFbyStudentId(studentId);
+            switch (modalPif.PT00) {
+                case 1:
+                    ll_motherInfo.setVisibility(View.VISIBLE);
+                    ll_fatherInfo.setVisibility(View.GONE);
+                    break;
+                case 2:
+                    ll_motherInfo.setVisibility(View.GONE);
+                    ll_fatherInfo.setVisibility(View.VISIBLE);
+                    break;
+
+                case 3:
+                    ll_motherInfo.setVisibility(View.VISIBLE);
+                    ll_fatherInfo.setVisibility(View.VISIBLE);
+                    break;
+
+                case 4:
+                    ll_motherInfo.setVisibility(View.GONE);
+                    ll_fatherInfo.setVisibility(View.GONE);
+                    break;
+
+            }
             fetchParentDetails(modalPif);
         }
+
+        rg_selectPerson.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
+                case R.id.rb_mother:
+                    ll_motherInfo.setVisibility(View.VISIBLE);
+                    ll_fatherInfo.setVisibility(View.GONE);
+                    et_fatherName.setText("");
+                    spinner_fathersAge.setSelection(0);
+//                    rg_fatherAttendSchool.check(R.id.rb_PT02c_No);
+//                    rg_fatherIncome.check(R.id.rb_PT02e_No);
+                    rg_fatherAttendSchool.clearCheck();
+                    rg_fatherIncome.clearCheck();
+                    break;
+
+                case R.id.rb_father:
+                    ll_motherInfo.setVisibility(View.GONE);
+                    ll_fatherInfo.setVisibility(View.VISIBLE);
+                    et_motherName.setText("");
+                    spinner_mothersAge.setSelection(0);
+//                    rg_motherAttendSchool.check(R.id.rb_PT02c_No);
+//                    rg_motherIncome.check(R.id.rb_PT02e_No);
+                    rg_motherAttendSchool.clearCheck();
+                    rg_motherIncome.clearCheck();
+                    break;
+
+                case R.id.rb_both:
+                    ll_motherInfo.setVisibility(View.VISIBLE);
+                    ll_fatherInfo.setVisibility(View.VISIBLE);
+                    break;
+
+                case R.id.rb_neither:
+                    ll_motherInfo.setVisibility(View.GONE);
+                    ll_fatherInfo.setVisibility(View.GONE);
+                    et_fatherName.setText("NA");
+                    spinner_fathersAge.setSelection(0);
+                    rg_fatherAttendSchool.clearCheck();
+                    rg_fatherIncome.clearCheck();
+                    et_motherName.setText("NA");
+                    spinner_mothersAge.setSelection(0);
+                    rg_motherAttendSchool.clearCheck();
+                    rg_motherIncome.clearCheck();
+                    break;
+            }
+        });
+
 
         rg_motherAttendSchool.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.rb_PT01c_yes) rl_motherSchooling.setVisibility(View.VISIBLE);
@@ -161,8 +223,27 @@ public class Fragment_AddParentInfoForm extends Fragment {
     }
 
     private void fetchParentDetails(Modal_PIF modalPif) {
+        switch (modalPif.PT00) {
+            case 1:
+                rg_selectPerson.check(R.id.rb_mother);
+                break;
+            case 2:
+                rg_selectPerson.check(R.id.rb_father);
+                break;
+            case 3:
+                rg_selectPerson.check(R.id.rb_both);
+                break;
+            case 4:
+                rg_selectPerson.check(R.id.rb_neither);
+                break;
+        }
+
         et_motherName.setText(modalPif.PT01a);
-        spinner_mothersAge.setSelection(ageAdapter.getPosition(modalPif.PT01b +" "+ this.getString(R.string.years)));
+        if (modalPif.PT01b.equalsIgnoreCase("NA"))
+            spinner_mothersAge.setSelection(0);
+        else
+            spinner_mothersAge.setSelection(ageAdapter.getPosition(modalPif.PT01b + " " + this.getString(R.string.years)));
+
         if (modalPif.PT01c.equalsIgnoreCase("1")) {
             rg_motherAttendSchool.check(R.id.rb_PT01c_yes);
             rl_motherSchooling.setVisibility(View.VISIBLE);
@@ -189,7 +270,11 @@ public class Fragment_AddParentInfoForm extends Fragment {
         } else rg_motherIncome.check(R.id.rb_PT01e_No);
 
         et_fatherName.setText(modalPif.PT02a);
-        spinner_fathersAge.setSelection(ageAdapter.getPosition(modalPif.PT02b + " " + this.getString(R.string.years)));
+        if (modalPif.PT02b.equalsIgnoreCase("NA"))
+            spinner_fathersAge.setSelection(0);
+        else
+            spinner_fathersAge.setSelection(this.ageAdapter.getPosition(modalPif.PT02b + " " + this.getString(R.string.years)));
+
         if (modalPif.PT02c.equalsIgnoreCase("1")) {
             rg_fatherAttendSchool.check(R.id.rb_PT02c_yes);
             rl_fatherSchooling.setVisibility(View.VISIBLE);
@@ -216,177 +301,144 @@ public class Fragment_AddParentInfoForm extends Fragment {
         } else rg_fatherIncome.check(R.id.rb_PT02e_No);
     }
 
-    @Click(R.id.btn_enterDetails)
-    public void enterDetails() {
-        int selectedPerson = rg_selectPerson.getCheckedRadioButtonId();
-        rb_selectPerson = getView().findViewById(selectedPerson);
-
-        if (rb_selectPerson != null) {
-            str_selectedPerson = rb_selectPerson.getText().toString();
-            sv_pif.setVisibility(View.VISIBLE);
-            btn_saveParent.setVisibility(View.VISIBLE);
-            if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_mother))) {
-                ll_motherInfo.setVisibility(View.VISIBLE);
-                ll_selectPerson.setVisibility(View.GONE);
-            } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_father))) {
-                ll_fatherInfo.setVisibility(View.VISIBLE);
-                ll_selectPerson.setVisibility(View.GONE);
-            } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_both))) {
-                ll_motherInfo.setVisibility(View.VISIBLE);
-                ll_fatherInfo.setVisibility(View.VISIBLE);
-                ll_selectPerson.setVisibility(View.GONE);
-            }
-        } else {
-            Toast.makeText(getActivity(), getString(R.string.select_parent), Toast.LENGTH_SHORT).show();
-        }
-    }
-
     @Click(R.id.btn_saveParent)
     public void saveParent() {
         getRadioButtonValues();
         getSpinnerValues();
 
-        if (getArguments().getString(EDIT_PARENT) != null) {
-            if (selectedPT01c == 99 || selectedPT01e == 99 || selectedPT02c == 99 || selectedPT02e == 99 ||
-                    et_motherName.getText().toString().isEmpty() || et_fatherName.getText().toString().isEmpty()) {
-                Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
-            } else {
-/*                final String str_PT01f;
-                final String str_PT02f;
-                if(this.rb_PT01f == null) str_PT01f="NA";
-                else str_PT01f = this.rb_PT01f.getText().toString();
-                if(this.rb_PT02f == null) str_PT02f="NA";
-                else str_PT02f = this.rb_PT02f.getText().toString();
-                if(rb_PT01d == null) mothersSchooling="NA";
-                else mothersSchooling=rb_PT01d.getText().toString();
-                if(rb_PT02d == null) fathersSchooling="NA";
-                else fathersSchooling=rb_PT02d.getText().toString();*/
-
-                updatePIF(""+ this.selectedPT01c, ""+ this.selectedPT01e, ""+ this.selectedPT01f,
-                        ""+ this.selectedPT02c, ""+ this.selectedPT02e, ""+ this.selectedPT02f);
-            }
-        } else {
-            if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_mother))) {
+        if (selectedPT00 != 99) {
+            if (selectedPT00 == 1) {
                 if (this.selectedPT01c == 99 || this.selectedPT01e == 99 || et_motherName.getText().toString().isEmpty()) {
                     Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
-/*                    if(selectedPT01d == 99) mothersSchooling="NA";
-                    else mothersSchooling=rb_PT01d.getText().toString();
-                    fathersSchooling="NA";*/
-                    if (this.selectedPT01e ==1) {
+                    if (this.selectedPT01e == 1) {
                         if (this.selectedPT01f != 99) {
-                            insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c,
-                                    ""+selectedPT01e, ""+selectedPT01f,
-                                    "NA", "NA", "NA", "NA"*/);
+                            if (getArguments().getString(EDIT_PARENT) != null) {
+                                updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                        "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                            } else {
+                                insertPIF();
+                            }
                         } else {
                             Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
-                                "NA", "NA", "NA", "NA"*/);
+                        if (getArguments().getString(EDIT_PARENT) != null) {
+                            updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                    "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                        } else {
+                            insertPIF();
+                        }
                     }
                 }
 
                 //todo Add new field in PIF db selectedPerson
-            } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_father))) {
+            } else if (selectedPT00 == 2) {
                 if (this.selectedPT02c == 99 || this.selectedPT02e == 99 || et_fatherName.getText().toString().isEmpty()) {
                     Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
-/*                    if(selectedPT02d == 99) fathersSchooling="NA";
-                    else fathersSchooling=rb_PT02d.getText().toString();
-                    mothersSchooling="NA";*/
-                    if (this.selectedPT02e ==1) {
+                    if (this.selectedPT02e == 1) {
                         if (this.selectedPT02f != 99) {
-                            insertPIF(/*"NA", "NA", "NA", "NA",
-                                    this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
+                            if (getArguments().getString(EDIT_PARENT) != null) {
+                                updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                        "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                            } else {
+                                insertPIF();
+                            }
                         } else {
                             Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        insertPIF(/*"NA", "NA", "NA", "NA",
-                                this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, "NA"*/);
+                        if (getArguments().getString(EDIT_PARENT) != null) {
+                            updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                    "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                        } else {
+                            insertPIF();
+                        }
                     }
                 }
-            } else if (str_selectedPerson.equalsIgnoreCase(getString(R.string.str_both))) {
+            } else if (selectedPT00 == 3) {
                 if (this.selectedPT01c == 99 || this.selectedPT01e == 99 || this.selectedPT02c == 99 || this.selectedPT02e == 99 ||
                         et_motherName.getText().toString().isEmpty() || et_fatherName.getText().toString().isEmpty()) {
                     Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                 } else {
-/*                    if(rb_PT01d == null) mothersSchooling="NA";
-                    else mothersSchooling=rb_PT01d.getText().toString();
-                    if(rb_PT02d == null) fathersSchooling="NA";
-                    else fathersSchooling=rb_PT02d.getText().toString();*/
-
-                    if (this.selectedPT01e ==1 && this.selectedPT02e ==1) {
+                    if (this.selectedPT01e == 1 && this.selectedPT02e == 1) {
                         if (this.selectedPT01f != 99 && this.selectedPT02f != 99) {
-                            insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, ""+selectedPT01f,
-                                    this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
+                            if (getArguments().getString(EDIT_PARENT) != null) {
+                                updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                        "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                            } else {
+                                insertPIF();
+                            }
                         } else {
                             Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
-                    } else if (this.selectedPT01e ==1) {
+                    } else if (this.selectedPT01e == 1) {
                         if (this.selectedPT01f != 99) {
-                            insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, ""+selectedPT01f,
-                                    this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, "99"*/);
+                            if (getArguments().getString(EDIT_PARENT) != null) {
+                                updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                        "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                            } else {
+                                insertPIF();
+                            }
                         } else {
                             Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
-                    } else if (this.selectedPT02e ==1) {
+                    } else if (this.selectedPT02e == 1) {
                         if (this.selectedPT02f != 99) {
-                            insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
-                                    this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, ""+selectedPT02f*/);
+                            if (getArguments().getString(EDIT_PARENT) != null) {
+                                updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                        "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                            } else {
+                                insertPIF();
+                            }
                         } else {
                             Toast.makeText(getActivity(), getString(R.string.all_fileds_mandatory), Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        insertPIF(/*this.et_motherName.getText().toString(), ""+selectedPT01c, ""+selectedPT01e, "NA",
-                                this.et_fatherName.getText().toString(), ""+selectedPT02c, ""+selectedPT02e, "NA"*/);
+                        if (getArguments().getString(EDIT_PARENT) != null) {
+                            updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                                    "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                        } else {
+                            insertPIF();
+                        }
                     }
                 }
+            } else if (selectedPT00 == 4) {
+                if (getArguments().getString(EDIT_PARENT) != null) {
+                    updatePIF("" + this.selectedPT01c, "" + this.selectedPT01e, "" + this.selectedPT01f,
+                            "" + this.selectedPT02c, "" + this.selectedPT02e, "" + this.selectedPT02f);
+                } else {
+                    insertPIF();
+                }
             }
+        } else {
+            Toast.makeText(getActivity(), R.string.select_atleast_one, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void insertPIF(/*final String mothersName, final String str_PT01c, final String str_PT01e, final String str_PT01f,
-                           final String fathersName, final String str_PT02c, final String str_PT02e, final String str_PT02f*/) {
+    private void insertPIF() {
 
-/*        final Modal_PIF modalPif = new Modal_PIF();
-        modalPif.setPT01a(mothersName);
-        modalPif.setPT01b(this.mothersAge);
-        modalPif.setPT01c(str_PT01c);
-        modalPif.setPT01d(""+selectedPT01d);
-        modalPif.setPT01e(str_PT01e);
-        modalPif.setPT01f(str_PT01f);
-        modalPif.setPT02a(fathersName);
-        modalPif.setPT02b(this.fathersAge);
-        modalPif.setPT02c(str_PT02c);
-        modalPif.setPT02d(""+selectedPT02d);
-        modalPif.setPT02e(str_PT02e);
-        modalPif.setPT02f(str_PT02f);
-        modalPif.setStudentId(this.studentId);
-        modalPif.setHouseholdId(this.householdId);
-        modalPif.setCreatedOn(KIX_Utility.getCurrentDateTime());
-        modalPif.setSentFlag(0);*/
-
-        String motherName="NA", fatherName="NA";
-        if(!this.et_motherName.getText().toString().isEmpty())
+        String motherName = "NA", fatherName = "NA";
+        if (!this.et_motherName.getText().toString().isEmpty())
             motherName = this.et_motherName.getText().toString();
-        if(!this.et_fatherName.getText().toString().isEmpty())
+        if (!this.et_fatherName.getText().toString().isEmpty())
             fatherName = this.et_fatherName.getText().toString();
 
         Modal_PIF modalPif = new Modal_PIF();
+        modalPif.setPT00(selectedPT00);
         modalPif.setPT01a(motherName);
         modalPif.setPT01b(mothersAge);
-        modalPif.setPT01c(""+ this.selectedPT01c);
-        modalPif.setPT01d(""+ this.selectedPT01d);
-        modalPif.setPT01e(""+ this.selectedPT01e);
-        modalPif.setPT01f(""+ this.selectedPT01f);
+        modalPif.setPT01c("" + this.selectedPT01c);
+        modalPif.setPT01d("" + this.selectedPT01d);
+        modalPif.setPT01e("" + this.selectedPT01e);
+        modalPif.setPT01f("" + this.selectedPT01f);
         modalPif.setPT02a(fatherName);
         modalPif.setPT02b(this.fathersAge);
-        modalPif.setPT02c(""+ this.selectedPT02c);
-        modalPif.setPT02d(""+ this.selectedPT02d);
-        modalPif.setPT02e(""+ this.selectedPT02e);
-        modalPif.setPT02f(""+ this.selectedPT02f);
+        modalPif.setPT02c("" + this.selectedPT02c);
+        modalPif.setPT02d("" + this.selectedPT02d);
+        modalPif.setPT02e("" + this.selectedPT02e);
+        modalPif.setPT02f("" + this.selectedPT02f);
         modalPif.setStudentId(studentId);
         modalPif.setHouseholdId(householdId);
         modalPif.setInfo_createdOn(KIX_Utility.getCurrentDateTime());
@@ -401,23 +453,24 @@ public class Fragment_AddParentInfoForm extends Fragment {
     private void updatePIF(String str_PT01c, String str_PT01e, String str_PT01f,
                            String str_PT02c, String str_PT02e, String str_PT02f) {
 
-        String motherName="NA", fatherName="NA";
-        if(!this.et_motherName.getText().toString().isEmpty())
+        String motherName = "NA", fatherName = "NA";
+        if (!this.et_motherName.getText().toString().isEmpty())
             motherName = this.et_motherName.getText().toString();
-        if(!this.et_fatherName.getText().toString().isEmpty())
+        if (!this.et_fatherName.getText().toString().isEmpty())
             fatherName = this.et_fatherName.getText().toString();
 
         parentInformationDao.updateParent(
+                selectedPT00,
                 motherName,
                 mothersAge,
                 str_PT01c,
-                ""+ this.selectedPT01d,
+                "" + this.selectedPT01d,
                 str_PT01e,
                 str_PT01f,
                 fatherName,
                 fathersAge,
                 str_PT02c,
-                ""+ this.selectedPT02d,
+                "" + this.selectedPT02d,
                 str_PT02e,
                 str_PT02f,
                 studentId);
@@ -428,23 +481,19 @@ public class Fragment_AddParentInfoForm extends Fragment {
     }
 
     public void getRadioButtonValues() {
-/*        final int selectedPT01c = this.rg_motherAttendSchool.getCheckedRadioButtonId();
-        final int selectedPT01d = this.rg_mothersScooling.getCheckedRadioButtonId();
-        final int selectedPT01e = this.rg_motherIncome.getCheckedRadioButtonId();
-        final int selectedPT01f = this.rg_motherWork.getCheckedRadioButtonId();
-        final int selectedPT02c = this.rg_fatherAttendSchool.getCheckedRadioButtonId();
-        final int selectedPT02d = this.rg_fathersSchooling.getCheckedRadioButtonId();
-        final int selectedPT02e = this.rg_fatherIncome.getCheckedRadioButtonId();
-        final int selectedPT02f = this.rg_fatherWork.getCheckedRadioButtonId();*/
+        if (getView().findViewById(rg_selectPerson.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_mother))
+            this.selectedPT00 = 1;
+        else if (getView().findViewById(rg_selectPerson.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_father))
+            this.selectedPT00 = 2;
+        else if (getView().findViewById(rg_selectPerson.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_both))
+            this.selectedPT00 = 3;
+        else if (getView().findViewById(rg_selectPerson.getCheckedRadioButtonId())
+                == getView().findViewById(R.id.rb_neither))
+            this.selectedPT00 = 4;
 
-/*        this.rb_PT01c = this.getView().findViewById(selectedPT01c);
-        this.rb_PT01d = this.getView().findViewById(selectedPT01d);
-        this.rb_PT01e = this.getView().findViewById(selectedPT01e);
-        this.rb_PT01f = this.getView().findViewById(selectedPT01f);
-        this.rb_PT02c = this.getView().findViewById(selectedPT02c);
-        this.rb_PT02d = this.getView().findViewById(selectedPT02d);
-        this.rb_PT02e = this.getView().findViewById(selectedPT02e);
-        this.rb_PT02f = this.getView().findViewById(selectedPT02f);*/
         if (getView().findViewById(rg_motherAttendSchool.getCheckedRadioButtonId())
                 == getView().findViewById(R.id.rb_PT01c_yes))
             this.selectedPT01c = 1;
@@ -489,11 +538,11 @@ public class Fragment_AddParentInfoForm extends Fragment {
                 == getView().findViewById(R.id.rb_PT02c_No))
             this.selectedPT02c = 0;
         if (getView().findViewById(rg_fathersSchooling.getCheckedRadioButtonId())
-                == getView().findViewById(R.id.rb_PT01d_one))
-            this.selectedPT01d = 1;
+                == getView().findViewById(R.id.rb_PT02d_one))
+            this.selectedPT02d = 1;
         else if (getView().findViewById(rg_fathersSchooling.getCheckedRadioButtonId())
-                == getView().findViewById(R.id.rb_PT01d_two))
-            this.selectedPT01d = 2;
+                == getView().findViewById(R.id.rb_PT02d_two))
+            this.selectedPT02d = 2;
         else if (getView().findViewById(rg_fathersSchooling.getCheckedRadioButtonId())
                 == getView().findViewById(R.id.rb_PT02d_three))
             this.selectedPT02d = 3;
@@ -539,6 +588,4 @@ public class Fragment_AddParentInfoForm extends Fragment {
         //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, 0);
         return this.age;
     }
-
-//todo check pif
 }

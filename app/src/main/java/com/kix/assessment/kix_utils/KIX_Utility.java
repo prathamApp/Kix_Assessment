@@ -124,6 +124,9 @@ public class KIX_Utility {
         } else if (countryName.equalsIgnoreCase("Nepali-Nepal")) {
             country = "NP";
             code = "ne";
+        } else if (countryName.equalsIgnoreCase("English-Uganda")) {
+            country = "UG";
+            code = "en";
         } else {
             country = "IN";
             code = "en";
