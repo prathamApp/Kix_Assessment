@@ -2,7 +2,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-<!--
     <string name="app_name" translatable="false">ELANA</string>
     <string name="permissions_head" translatable="false"><b>ELANA uses the following permissions to enhance learning experience:</b></string>
     <string name="permissions" translatable="false">
@@ -271,9 +270,9 @@
     <string name="profile_already">Profile is already saved..</string>
     <string name="invalid_data">Invalid Data!</string>
     <string name="enter_details">Enter Details</string>
-    <string name="years">Years</string>
+    <string name="years">years</string>
 
-    &lt;!&ndash;profile&ndash;&gt;
+    <!--profile-->
     <string name="asmt_not_given">Assessment Not Given By Child</string>
     <string name="hi">Hi,</string>
     <string name="no_match_found">No Match Found!</string>
@@ -468,8 +467,9 @@
         <item>Graduate</item>
         <item>PostGraduate</item>
     </string-array>
--->
     <!--ENGLISH END ____________________________________________________________________-->
+
+
 
     <!--PORTUGUESE (MOZAMBIQUE)  START ____________________________________________________________________-->
     <!--
@@ -2427,9 +2427,11 @@
     <string name="enter_details">বিস্তারিত তথ্য লিখুন</string>-->
     <!--Bangla-bangali END ____________________________________________________________________-->
 
-    <!--NEPAL-Nepali END ____________________________________________________________________-->
 
-    <string name="app_name">ELANA</string>
+
+    <!--NEPAL-Nepali START ____________________________________________________________________-->
+
+<!--    <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA सिकाईको अनुभव वृद्धि गर्न निम्न अनुमतिहरुको प्रयोग गर्छ</string>
     <string name="Collecting_Data">डाटा संकलन</string>
     <string name="hello_blank_fragment">नमस्ते तपाइले यो खाली छोड्नु भयो</string>
@@ -2831,7 +2833,8 @@
     <string name="error_password">पासवर्डको लागि कम्तिमा पनि ३ ओटा अक्षरहरु आवश्यक हुन्छ !</string>
     <string name="profile_already">प्रोफाइल पहिले नै सेभ भईसकेको छ ...</string>
     <string name="invalid_data">डाटा मिलेन</string>
-    <string name="enter_details">जानकारीहरु भर्नुहोस्</string>
+    <string name="enter_details">जानकारीहरु भर्नुहोस्</string>-->
+
     <!--NEPAL-Nepali END ____________________________________________________________________-->
 
 
