@@ -32,6 +32,7 @@ import org.json.JSONArray;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.List;
 
 @EFragment(R.layout.fragment_add_village)
 public class Fragment_AddVillage extends Fragment {
@@ -53,6 +54,7 @@ public class Fragment_AddVillage extends Fragment {
     @ViewById(R.id.tv_TitleLBL)
     TextView tv_TitleLBL;
 
+    List <Modal_Location> modal_locationList;
     Modal_Location modal_location;
     String surveyorCode, villageId, selectedLanguageCode;
     String stateName, villageName, districtName, villageBooklet;
@@ -99,9 +101,13 @@ public class Fragment_AddVillage extends Fragment {
             final String jsonStr = new String(buffer);
 //            jsonArr = new JSONArray(jsonStr);
             final Gson gson = new Gson();
-            final Type type = new TypeToken<Modal_Location>() {
+            final Type type = new TypeToken<List<Modal_Location>>() {
             }.getType();
-            this.modal_location = gson.fromJson(jsonStr, type);
+            this.modal_locationList = gson.fromJson(jsonStr, type);
+            String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
+            for(int i =0 ; i<modal_locationList.size(); i++)
+                if(modal_locationList.get(i).getCountryName().equalsIgnoreCase(country))
+                    modal_location = modal_locationList.get(i);
             //returnStoryNavigate = jsonObj.getJSONArray();
             this.setStates(modalVillage);
         } catch (final Exception e) {

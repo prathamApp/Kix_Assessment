@@ -42,7 +42,7 @@ public class KIXApplication extends Application {
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
 //    public static String returnLang = "Spanish-Mexico";
-    public static final String appBuildDate = "08-Feb-22";
+    public static final String appBuildDate = "18-June-22";
 //    public static String returnLang = "urdu";
 //    public static String returnLang = "kiswahili";
 //    public static String returnLang = "Hindi-India";
@@ -78,9 +78,9 @@ public class KIXApplication extends Application {
         this.setKixPath();
         KIXApplication.wiseF = new WiseFy.Brains(this.getApplicationContext()).logging(true).getSmarts();
         this.okHttpClient = new OkHttpClient().newBuilder()
-                .connectTimeout(50, TimeUnit.SECONDS)
-                .readTimeout(50, TimeUnit.SECONDS)
-                .writeTimeout(50, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS)
+                .writeTimeout(60, TimeUnit.SECONDS)
                 .build();
         AndroidNetworking.initialize(this.getApplicationContext(), this.okHttpClient);
     }

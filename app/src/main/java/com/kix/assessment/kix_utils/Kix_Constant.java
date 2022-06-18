@@ -3,9 +3,9 @@ package com.kix.assessment.kix_utils;
 public class Kix_Constant {
 
 
-    public static final String PUSH_API = "http://3.6.40.184:8000/push/";
+    public static final String PUSH_API = "http://52.66.205.176:8000/push/";
 //    public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
-    public static final String PUSH_DB_API = " http://3.6.40.184:8000/push_db/";
+    public static final String PUSH_DB_API = " http://52.66.205.176:8000/push_db/";
 //    public static final String PUSH_DB_API = "http://13.76.6.250:81/kix/pushdb";
 
     public static final String BOOKLET_NAME = "booklet_name";

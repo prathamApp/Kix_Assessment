@@ -1,4 +1,4 @@
-/*French Senegal*/
+/*French-Senegal*/
 {
   "StateList": [
     {
@@ -163,7 +163,7 @@
     }
   ]
 }
-/*French Mali*/
+/*French-Mali*/
 {
   "StateList": [
     {
@@ -314,7 +314,7 @@
   ]
 }
 
-/*Bangladesh*/
+/*Bangla-Bangladesh*/
 {
   "StateList": [
     {
@@ -465,7 +465,7 @@
   ]
 }
 
-/* Nepali */
+/* Nepali-Nepal */
 {
   "StateList": [
     {
@@ -635,3 +635,251 @@
     }
   ]
 }
+
+/* Spanish-Mexico */
+{
+  "StateList": [
+    {
+      "StateName": "9",
+      "DistrictList": [
+        {
+          "DistrictName": "Acajete",
+          "VillageList": [
+            {
+              "VillageName": "Acajete"
+            },
+            {
+              "VillageName": "Mesa de la Yerba"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Ayahualulco",
+          "VillageList": [
+            {
+              "VillageName": "El Tepeyac"
+            },
+            {
+              "VillageName": "Apanteopan"
+            },
+            {
+              "VillageName": "San Isidro"
+            },
+            {
+              "VillageName": "San José Aguazuelas"
+            },
+            {
+              "VillageName": "Mazazontipan"
+            },
+            {
+              "VillageName": "Ocotepec"
+            },
+            {
+              "VillageName": "La Alameda Chica"
+            },
+            {
+              "VillageName": "Tlalconteno"
+            },
+            {
+              "VillageName": "El Triunfo"
+            },
+            {
+              "VillageName": "Calzontepec"
+            },
+            {
+              "VillageName": "Loma del Capulín"
+            },
+            {
+              "VillageName": "Xololoyan"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Coatepec",
+          "VillageList": [
+            {
+              "VillageName": "Colonia Plan de la Cruz"
+            },
+            {
+              "VillageName": "El Grande"
+            },
+            {
+              "VillageName": "La Orduña"
+            },
+            {
+              "VillageName": "Consolapan"
+            },
+            {
+              "VillageName": "Briones"
+            },
+            {
+              "VillageName": "La Laguna"
+            },
+            {
+              "VillageName": "Cinco Palos"
+            },
+            {
+              "VillageName": "Colonia Obrera (Las Puentes)"
+            },
+            {
+              "VillageName": "Benito Juárez"
+            },
+            {
+              "VillageName": "Las Lomas"
+            },
+            {
+              "VillageName": "La Isleta Grande"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Cosautlán de Carvajal",
+          "VillageList": [
+            {
+              "VillageName": "Limones"
+            },
+            {
+              "VillageName": "Xaliscuilo"
+            },
+            {
+              "VillageName": "La Lagunilla"
+            },
+            {
+              "VillageName": "La Gloria"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Ixhuacán de los Reyes",
+          "VillageList": [
+            {
+              "VillageName": "Tecpitla"
+            },
+            {
+              "VillageName": "Amatla"
+            },
+            {
+              "VillageName": "Barranca Nueva"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Jilotepec",
+          "VillageList": [
+            {
+              "VillageName": "Paso de San Juan"
+            },
+            {
+              "VillageName": "Las Lomas"
+            },
+            {
+              "VillageName": "Linderos"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Las Vigas de Ramírez",
+          "VillageList": [
+            {
+              "VillageName": "El Paisano"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Perote",
+          "VillageList": [
+            {
+              "VillageName": "El Conejo"
+            },
+            {
+              "VillageName": "Guadalupe Victoria"
+            },
+            {
+              "VillageName": "Xaltepec (San Isidro Xaltepec)"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Rafael Lucio",
+          "VillageList": [
+            {
+              "VillageName": "Piletas"
+            },
+            {
+              "VillageName": "El Barrial"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Teocelo",
+          "VillageList": [
+            {
+              "VillageName": "Texín"
+            },
+            {
+              "VillageName": "Monte Blanco"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Tlacolulan",
+          "VillageList": [
+            {
+              "VillageName": "Tlacolulan"
+            },
+            {
+              "VillageName": "Potrero de García"
+            },
+            {
+              "VillageName": "Ejido San José"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Tlalnelhuayocan",
+          "VillageList": [
+            {
+              "VillageName": "Colonia Ejidal (Ejido San Andrés)"
+            },
+            {
+              "VillageName": "Xocotla"
+            },
+            {
+              "VillageName": "Cañada Larga"
+            },
+            {
+              "VillageName": "Úrsulo Galván (Dos Trancas)"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Xico",
+          "VillageList": [
+            {
+              "VillageName": "Tonalaco"
+            },
+            {
+              "VillageName": "Tembladeras"
+            },
+            {
+              "VillageName": "Los Pocitos"
+            },
+            {
+              "VillageName": "Coauhtemecatla"
+            }
+          ]
+        },
+        {
+          "DistrictName": "Tatatila",
+          "VillageList": [
+            {
+              "VillageName": "San Antonio de Córdoba"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+/*Spanish-Nicaragua*/
