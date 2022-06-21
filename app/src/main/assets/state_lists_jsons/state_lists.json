@@ -18,34 +18,6 @@
                 "VillageName": "BOUSSIN"
               }
             ]
-          },
-          {
-            "DistrictName": "BOUSSIN",
-            "VillageList": [
-              {
-                "VillageName": "BIA"
-              },
-              {
-                "VillageName": "SAGABOUGOU"
-              },
-              {
-                "VillageName": "BOUSSIN"
-              }
-            ]
-          },
-          {
-            "DistrictName": "BOUSSIN",
-            "VillageList": [
-              {
-                "VillageName": "BIA"
-              },
-              {
-                "VillageName": "SAGABOUGOU"
-              },
-              {
-                "VillageName": "BOUSSIN"
-              }
-            ]
           }
         ]
       },
@@ -53,93 +25,39 @@
         "StateName": "CINZANA",
         "DistrictList": [
           {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "CINZANA",
-            "VillageList": []
+            "DistrictName": "CINZANA GARE",
+            "VillageList": [
+              {
+                "VillageName": "BERTHELA"
+              },
+              {
+                "VillageName": "DIAMBOUGOU"
+              },
+              {
+                "VillageName": "GNATIA"
+              },
+              {
+                "VillageName": "NOUMOUBOUGOU"
+              },
+              {
+                "VillageName": "WOLONA"
+              },
+              {
+                "VillageName": "WASSADIALA"
+              },
+              {
+                "VillageName": "GNANI WERE"
+              },
+              {
+                "VillageName": "ZANGOURABOUGOU"
+              }
+            ]
           }
         ]
       },
       {
         "StateName": "DOUGABOUGOU",
         "DistrictList": [
-          {
-            "DistrictName": "DOUGABOUGOU",
-            "VillageList": [
-              {
-                "VillageName": "DONGOMA"
-              },
-              {
-                "VillageName": "DOUGABOUGOU"
-              },
-              {
-                "VillageName": "DOUGABOUGOU KORONI"
-              },
-              {
-                "VillageName": "TEMOU"
-              }
-            ]
-          },
-          {
-            "DistrictName": "DOUGABOUGOU",
-            "VillageList": [
-              {
-                "VillageName": "DONGOMA"
-              },
-              {
-                "VillageName": "DOUGABOUGOU"
-              },
-              {
-                "VillageName": "DOUGABOUGOU KORONI"
-              },
-              {
-                "VillageName": "TEMOU"
-              }
-            ]
-          },
-          {
-            "DistrictName": "DOUGABOUGOU",
-            "VillageList": [
-              {
-                "VillageName": "DONGOMA"
-              },
-              {
-                "VillageName": "DOUGABOUGOU"
-              },
-              {
-                "VillageName": "DOUGABOUGOU KORONI"
-              },
-              {
-                "VillageName": "TEMOU"
-              }
-            ]
-          },
           {
             "DistrictName": "DOUGABOUGOU",
             "VillageList": [
@@ -163,12 +81,15 @@
         "StateName": "FARAKOU MASSA",
         "DistrictList": [
           {
-            "DistrictName": "FARAKOU MASSA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "FARAKOU MASSA",
-            "VillageList": []
+            "DistrictName": "KOMINE",
+            "VillageList": [
+              {
+                "VillageName": "KOMINE"
+              },
+              {
+                "VillageName": "SOKE"
+              }
+            ]
           }
         ]
       },
@@ -176,24 +97,24 @@
         "StateName": "FATINE",
         "DistrictList": [
           {
-            "DistrictName": "FATINE",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "FATINE",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "FATINE",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "FATINE",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "FATINE",
-            "VillageList": []
+            "DistrictName": "FATINE MARKA",
+            "VillageList": [
+              {
+                "VillageName": "FALA"
+              },
+              {
+                "VillageName": "MAMA-WERE"
+              },
+              {
+                "VillageName": "SONSOROUNA"
+              },
+              {
+                "VillageName": "WETTA"
+              },
+              {
+                "VillageName": "FATINE MARKA"
+              }
+            ]
           }
         ]
       },
@@ -201,73 +122,24 @@
         "StateName": "KAMIANDOUGOU",
         "DistrictList": [
           {
-            "DistrictName": "KAMIANDOUGOU",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "KAMIANDOUGOU",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "KAMIANDOUGOU",
-            "VillageList": []
+            "DistrictName": "NONONGO",
+            "VillageList": [
+              {
+                "VillageName": "NINGUA"
+              },
+              {
+                "VillageName": "SIRAKOUMOU"
+              },
+              {
+                "VillageName": "M'BALIBOUGOU"
+              }
+            ]
           }
         ]
       },
       {
         "StateName": "KONODIMINI",
         "DistrictList": [
-          {
-            "DistrictName": "KONODIMINI",
-            "VillageList": [
-              {
-                "VillageName": "DIAKA"
-              },
-              {
-                "VillageName": "OUELENBOUGOU"
-              },
-              {
-                "VillageName": "SOROBA"
-              },
-              {
-                "VillageName": "SIDY-WERE"
-              }
-            ]
-          },
-          {
-            "DistrictName": "KONODIMINI",
-            "VillageList": [
-              {
-                "VillageName": "DIAKA"
-              },
-              {
-                "VillageName": "OUELENBOUGOU"
-              },
-              {
-                "VillageName": "SOROBA"
-              },
-              {
-                "VillageName": "SIDY-WERE"
-              }
-            ]
-          },
-          {
-            "DistrictName": "KONODIMINI",
-            "VillageList": [
-              {
-                "VillageName": "DIAKA"
-              },
-              {
-                "VillageName": "OUELENBOUGOU"
-              },
-              {
-                "VillageName": "SOROBA"
-              },
-              {
-                "VillageName": "SIDY-WERE"
-              }
-            ]
-          },
           {
             "DistrictName": "KONODIMINI",
             "VillageList": [
@@ -291,36 +163,33 @@
         "StateName": "MARKALA",
         "DistrictList": [
           {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
-          },
-          {
-            "DistrictName": "MARKALA",
-            "VillageList": []
+            "DistrictName": "DIAMARABOUGOU",
+            "VillageList": [
+              {
+                "VillageName": "DIAMARABOUGOU"
+              },
+              {
+                "VillageName": "DIAMOUNA"
+              },
+              {
+                "VillageName": "FALABOUGOU"
+              },
+              {
+                "VillageName": "KOUNGOBOUGOU-WERE"
+              },
+              {
+                "VillageName": "M'PEBOUGOU-SOKALA"
+              },
+              {
+                "VillageName": "SARKALA SOKALA"
+              },
+              {
+                "VillageName": "TIONGONI"
+              },
+              {
+                "VillageName": "KOKE"
+              }
+            ]
           }
         ]
       },
@@ -340,34 +209,6 @@
       {
         "StateName": "N'GARA",
         "DistrictList": [
-          {
-            "DistrictName": "N'GARA",
-            "VillageList": [
-              {
-                "VillageName": "BOUNDO-WORODJIRA"
-              },
-              {
-                "VillageName": "N'GAMAN"
-              },
-              {
-                "VillageName": "DIADO"
-              }
-            ]
-          },
-          {
-            "DistrictName": "N'GARA",
-            "VillageList": [
-              {
-                "VillageName": "BOUNDO-WORODJIRA"
-              },
-              {
-                "VillageName": "N'GAMAN"
-              },
-              {
-                "VillageName": "DIADO"
-              }
-            ]
-          },
           {
             "DistrictName": "N'GARA",
             "VillageList": [
@@ -406,120 +247,12 @@
                 "VillageName": "PELENGANA-WERE"
               }
             ]
-          },
-          {
-            "DistrictName": "PELENGANA",
-            "VillageList": [
-              {
-                "VillageName": "BANANKORO"
-              },
-              {
-                "VillageName": "DIALABOUGOU-WERE"
-              },
-              {
-                "VillageName": "NEREKORO"
-              },
-              {
-                "VillageName": "PELENGANA"
-              },
-              {
-                "VillageName": "PELENGANA-WERE"
-              }
-            ]
-          },
-          {
-            "DistrictName": "PELENGANA",
-            "VillageList": [
-              {
-                "VillageName": "BANANKORO"
-              },
-              {
-                "VillageName": "DIALABOUGOU-WERE"
-              },
-              {
-                "VillageName": "NEREKORO"
-              },
-              {
-                "VillageName": "PELENGANA"
-              },
-              {
-                "VillageName": "PELENGANA-WERE"
-              }
-            ]
-          },
-          {
-            "DistrictName": "PELENGANA",
-            "VillageList": [
-              {
-                "VillageName": "BANANKORO"
-              },
-              {
-                "VillageName": "DIALABOUGOU-WERE"
-              },
-              {
-                "VillageName": "NEREKORO"
-              },
-              {
-                "VillageName": "PELENGANA"
-              },
-              {
-                "VillageName": "PELENGANA-WERE"
-              }
-            ]
-          },
-          {
-            "DistrictName": "PELENGANA",
-            "VillageList": [
-              {
-                "VillageName": "BANANKORO"
-              },
-              {
-                "VillageName": "DIALABOUGOU-WERE"
-              },
-              {
-                "VillageName": "NEREKORO"
-              },
-              {
-                "VillageName": "PELENGANA"
-              },
-              {
-                "VillageName": "PELENGANA-WERE"
-              }
-            ]
           }
         ]
       },
       {
         "StateName": "SAKOIBA",
         "DistrictList": [
-          {
-            "DistrictName": "SAKOIBA",
-            "VillageList": [
-              {
-                "VillageName": "DIAKOBOUGOU"
-              },
-              {
-                "VillageName": "SAKOIBA"
-              },
-              {
-                "VillageName": "N'GOYE \"N'GOIN\""
-              }
-            ]
-          },
-          {
-            "DistrictName": "SAKOIBA",
-            "VillageList": [
-              {
-                "VillageName": "DIAKOBOUGOU"
-              },
-              {
-                "VillageName": "SAKOIBA"
-              },
-              {
-                "VillageName": "N'GOYE \"N'GOIN\""
-              }
-            ]
-          },
           {
             "DistrictName": "SAKOIBA",
             "VillageList": [
@@ -549,17 +282,6 @@
                 "VillageName": "N'DJILA EST"
               }
             ]
-          },
-          {
-            "DistrictName": "SAMINE",
-            "VillageList": [
-              {
-                "VillageName": "SAMINE"
-              },
-              {
-                "VillageName": "N'DJILA EST"
-              }
-            ]
           }
         ]
       },
@@ -576,34 +298,12 @@
                 "VillageName": "SEKORO"
               }
             ]
-          },
-          {
-            "DistrictName": "SEBOUGOU",
-            "VillageList": [
-              {
-                "VillageName": "BANANKORONI"
-              },
-              {
-                "VillageName": "SEKORO"
-              }
-            ]
           }
         ]
       },
       {
         "StateName": "TOGOU",
         "DistrictList": [
-          {
-            "DistrictName": "TOGOU",
-            "VillageList": [
-              {
-                "VillageName": "GOINKOUNGO"
-              },
-              {
-                "VillageName": "TOGOU"
-              }
-            ]
-          },
           {
             "DistrictName": "TOGOU",
             "VillageList": [

@@ -882,8 +882,7 @@
 
 
     <!--French-Mali START ____________________________________________________________________-->
-<!--
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utilise les permissions suivantes pour améliorer l\'expérience d\'apprentissage :</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="hello_blank_fragment">Bonjour, fragment vide</string>
@@ -1285,13 +1284,12 @@
     <string name="invalid_data">Données non valides !</string>
     <string name="enter_details">Entrez les détails</string>
     <string name="str_household">Ménage</string>
-    <string name="years">ans</string>
--->
+    <string name="years">ans</string>-->
     <!--French-Mali END ____________________________________________________________________-->
 
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA utiliza los siguientes permisos para mejorar la experiencia de aprendizaje:</string>
     <string name="Collecting_Data">Recogida de datos</string>
     <string name="hello_blank_fragment">Hola fragmento en blanco</string>
@@ -1695,12 +1693,11 @@
     <string name="invalid_data">¡Datos no válidos!</string>
     <string name="enter_details">Introduzca los datos</string>
     <string name="str_household">Hogar</string>
-    <string name="years">años</string>
+    <string name="years">años</string>-->
     <!--Spanish-Mexico END ____________________________________________________________________-->
 
 
     <!-- NEPAL-Nepali START ____________________________________________________________________-->
-<!--
     <string name="app_name">ELANA</string>
     <string name="permissions_head">ELANA सिकाईको अनुभव वृद्धि गर्न निम्न अनुमतिहरुको प्रयोग गर्छ</string>
     <string name="Collecting_Data">डाटा संकलन</string>
@@ -2104,7 +2101,6 @@
     <string name="enter_details">जानकारीहरु भर्नुहोस्</string>
     <string name="str_household">घरपरिवार</string>
     <string name="years">वर्ष</string>
--->
     <!--NEPAL-Nepali END ____________________________________________________________________-->
 
 

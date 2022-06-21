@@ -37,15 +37,12 @@ import okhttp3.OkHttpClient;
 
 public class KIXApplication extends Application {
 
+    public static boolean isDomainWise = false;
     public static String contentSDPath="";
     public static String kixPath="";
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
-//    public static String returnLang = "Spanish-Mexico";
     public static final String appBuildDate = "18-June-22";
-//    public static String returnLang = "urdu";
-//    public static String returnLang = "kiswahili";
-//    public static String returnLang = "Hindi-India";
     public static boolean isSDCard;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);

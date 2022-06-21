@@ -1,5 +1,6 @@
 package com.kix.assessment.ui.main_test;
 
+import static com.kix.assessment.KIXApplication.isDomainWise;
 import static com.kix.assessment.KIXApplication.sessionDao;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
@@ -77,7 +78,11 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         queCnt = 0;
         try {
             String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
-            String bklet = this.getBooklet(country);
+            String bklet;
+            if (!isDomainWise)
+                bklet = this.getBooklet(country);
+            else
+                bklet = FastSave.getInstance().getString(Kix_Constant.BOOKLET, "Booklet 1");
 //            final String bklet = "" + FastSave.getInstance().getString(Kix_Constant.BOOKLET, "Booklet 1");
             Log.d("booklet", "Kix_Constant.BOOKLET: " + bklet);
             gameListList = KixDatabase.getDatabaseInstance(this).getContentDao().getContentByBookletCountry("%" + bklet + ",%", country);
