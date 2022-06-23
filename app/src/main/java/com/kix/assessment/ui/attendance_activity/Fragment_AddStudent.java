@@ -295,7 +295,8 @@ public class Fragment_AddStudent extends Fragment {
         btn_saveStudent.setVisibility(View.VISIBLE);
         et_studentName.setText(modalStudent.getCH01());
 
-        spinner_age.setSelection(adapterAge.getPosition(modalStudent.getCH02()+" "+getString(R.string.years)));
+//        spinner_age.setSelection(adapterAge.getPosition(modalStudent.getCH02()+" "+getString(R.string.years)));
+        spinner_age.setSelection(Integer.parseInt(modalStudent.getCH02())-3);
         spinner_gender.setSelection(Integer.parseInt(modalStudent.getCH03()));
 
         if(modalStudent.CH04a.equalsIgnoreCase("1")){
@@ -601,14 +602,14 @@ public class Fragment_AddStudent extends Fragment {
     }
 
     private void getSelectedAge() {
-        String age1 = spinner_age.getSelectedItem().toString();
+        int ageNo = spinner_age.getSelectedItemPosition()+3;
+        age = ""+ageNo;
+/*        String age1 = spinner_age.getSelectedItem().toString();
         String[] split_age = age1.split(" ");
         if (split_age.length > 1)
             age = String.valueOf(Integer.parseInt(split_age[0]));
-            //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, Integer.parseInt(split_age[1]));
         else
-            age = "0";
-        //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, 0);
+            age = "0";*/
     }
 
     private void getSpinnerValues() {

@@ -173,7 +173,9 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         ArrayAdapter<String> adapterVillage = new ArrayAdapter<String>
                 (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, villagesList);
         spinner_villageFilter.setAdapter(adapterVillage);
-        ageSelected = spinner_ageFilter.getSelectedItem().toString();
+        int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
+        ageSelected = ""+ageNo;
+//        ageSelected = spinner_ageFilter.getSelectedItem().toString();
         villageSelected = spinner_villageFilter.getSelectedItem().toString();
     }
 
@@ -235,7 +237,8 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             //filter(ageSelected,villageSelected);
             filter(ageSelected, villageSelected);
         } else {
-            ageSelected = spinner_ageFilter.getSelectedItem().toString();
+            int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
+            ageSelected = ""+ageNo;
             filter(ageSelected, villageSelected);
         }
 
@@ -251,7 +254,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @SuppressLint("SetTextI18n")
     private void filter(String ageFilter, String villageFilter) {
         ArrayList<Modal_ProfileDetails> filteredList = new ArrayList();
-        if (ageSelected.equalsIgnoreCase(getResources().getString(R.string.all_age)) && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
+        if (Integer.parseInt(ageSelected)<4 && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
             filteredList.addAll(detailsList);
         } else {
             Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
@@ -310,12 +313,14 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     }
 
     private void getSelectedAge() {
-        String age1 = spinner_ageFilter.getSelectedItem().toString();
+        int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
+        ageSelected = ""+ageNo;
+/*        String age1 = spinner_ageFilter.getSelectedItem().toString();
         String[] split_age = age1.split(" ");
         if (split_age.length > 1)
             ageSelected = String.valueOf(Integer.parseInt(split_age[1]));
         else
-            ageSelected = "0";
+            ageSelected = "0";*/
     }
 
     public void pushDialog(String message, String pushType) {

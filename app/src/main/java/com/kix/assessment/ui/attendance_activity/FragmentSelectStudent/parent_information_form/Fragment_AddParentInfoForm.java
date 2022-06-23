@@ -239,10 +239,15 @@ public class Fragment_AddParentInfoForm extends Fragment {
         }
 
         et_motherName.setText(modalPif.PT01a);
-        if (modalPif.PT01b.equalsIgnoreCase("NA"))
+        try {
+            if (modalPif.PT01b.equalsIgnoreCase("NA"))
+                spinner_mothersAge.setSelection(0);
+            else
+                spinner_mothersAge.setSelection(Integer.parseInt(modalPif.PT01b)-17);
+        } catch (NumberFormatException e) {
             spinner_mothersAge.setSelection(0);
-        else
-            spinner_mothersAge.setSelection(ageAdapter.getPosition(modalPif.PT01b + " " + this.getString(R.string.years)));
+            e.printStackTrace();
+        }
 
         if (modalPif.PT01c.equalsIgnoreCase("1")) {
             rg_motherAttendSchool.check(R.id.rb_PT01c_yes);
@@ -270,10 +275,15 @@ public class Fragment_AddParentInfoForm extends Fragment {
         } else rg_motherIncome.check(R.id.rb_PT01e_No);
 
         et_fatherName.setText(modalPif.PT02a);
-        if (modalPif.PT02b.equalsIgnoreCase("NA"))
+        try {
+            if (modalPif.PT02b.equalsIgnoreCase("NA"))
+                spinner_fathersAge.setSelection(0);
+            else
+                spinner_fathersAge.setSelection(Integer.parseInt(modalPif.PT02b)-17);
+        } catch (NumberFormatException e) {
             spinner_fathersAge.setSelection(0);
-        else
-            spinner_fathersAge.setSelection(this.ageAdapter.getPosition(modalPif.PT02b + " " + this.getString(R.string.years)));
+            e.printStackTrace();
+        }
 
         if (modalPif.PT02c.equalsIgnoreCase("1")) {
             rg_fatherAttendSchool.check(R.id.rb_PT02c_yes);
@@ -571,14 +581,23 @@ public class Fragment_AddParentInfoForm extends Fragment {
     }
 
     private void getSpinnerValues() {
-        if (spinner_mothersAge.getSelectedItemPosition() == 0) mothersAge = "NA";
+        int ageNo = spinner_mothersAge.getSelectedItemPosition()+17;
+        if (ageNo == 17)
+            mothersAge = "NA";
+        else mothersAge = ""+ageNo;
+
+        ageNo = spinner_fathersAge.getSelectedItemPosition()+17;
+        if (ageNo == 17)
+            fathersAge = "NA";
+        else fathersAge = ""+ageNo;
+
+/*        if (spinner_mothersAge.getSelectedItemPosition() == 0) mothersAge = "NA";
         else mothersAge = this.getSelectedAge(spinner_mothersAge.getSelectedItem().toString());
 
         if (spinner_fathersAge.getSelectedItemPosition() == 0) fathersAge = "NA";
-        else fathersAge = this.getSelectedAge(spinner_fathersAge.getSelectedItem().toString());
+        else fathersAge = this.getSelectedAge(spinner_fathersAge.getSelectedItem().toString());*/
     }
-
-    private String getSelectedAge(final String age1) {
+/*    private String getSelectedAge(final String age1) {
         final String[] split_age = age1.split(" ");
         if (split_age.length > 1)
             this.age = String.valueOf(Integer.parseInt(split_age[0]));
@@ -587,5 +606,5 @@ public class Fragment_AddParentInfoForm extends Fragment {
             this.age = "0";
         //FastSave.getInstance().saveInt(PD_Constant.STUDENT_PROFILE_AGE, 0);
         return this.age;
-    }
+    }*/
 }

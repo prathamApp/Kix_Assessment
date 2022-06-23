@@ -42,7 +42,7 @@ public class KIXApplication extends Application {
     public static String kixPath="";
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
-    public static final String appBuildDate = "18-June-22";
+    public static final String appBuildDate = "22-June-22";
     public static boolean isSDCard;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);

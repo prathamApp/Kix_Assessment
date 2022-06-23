@@ -3,7 +3,7 @@
     "CountryName": "French-Mali",
     "StateList": [
       {
-        "StateName": "BOUSSIN",
+        "StateName": "SEGOU",
         "DistrictList": [
           {
             "DistrictName": "BOUSSIN",
@@ -18,14 +18,9 @@
                 "VillageName": "BOUSSIN"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "CINZANA",
-        "DistrictList": [
+          },
           {
-            "DistrictName": "CINZANA GARE",
+            "DistrictName": "CINZANA",
             "VillageList": [
               {
                 "VillageName": "BERTHELA"
@@ -52,12 +47,7 @@
                 "VillageName": "ZANGOURABOUGOU"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "DOUGABOUGOU",
-        "DistrictList": [
+          },
           {
             "DistrictName": "DOUGABOUGOU",
             "VillageList": [
@@ -74,14 +64,9 @@
                 "VillageName": "TEMOU"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "FARAKOU MASSA",
-        "DistrictList": [
+          },
           {
-            "DistrictName": "KOMINE",
+            "DistrictName": "FARAKOU MASSA",
             "VillageList": [
               {
                 "VillageName": "KOMINE"
@@ -90,14 +75,9 @@
                 "VillageName": "SOKE"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "FATINE",
-        "DistrictList": [
+          },
           {
-            "DistrictName": "FATINE MARKA",
+            "DistrictName": "FATINE",
             "VillageList": [
               {
                 "VillageName": "FALA"
@@ -115,14 +95,9 @@
                 "VillageName": "FATINE MARKA"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "KAMIANDOUGOU",
-        "DistrictList": [
+          },
           {
-            "DistrictName": "NONONGO",
+            "DistrictName": "KAMIANDOUGOU",
             "VillageList": [
               {
                 "VillageName": "NINGUA"
@@ -134,12 +109,7 @@
                 "VillageName": "M'BALIBOUGOU"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "KONODIMINI",
-        "DistrictList": [
+          },
           {
             "DistrictName": "KONODIMINI",
             "VillageList": [
@@ -156,14 +126,9 @@
                 "VillageName": "SIDY-WERE"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "MARKALA",
-        "DistrictList": [
+          },
           {
-            "DistrictName": "DIAMARABOUGOU",
+            "DistrictName": "MARKALA",
             "VillageList": [
               {
                 "VillageName": "DIAMARABOUGOU"
@@ -190,12 +155,7 @@
                 "VillageName": "KOKE"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "MASSALA",
-        "DistrictList": [
+          },
           {
             "DistrictName": "MASSALA",
             "VillageList": [
@@ -203,12 +163,7 @@
                 "VillageName": "ZAMBOUGOU-ZOUMAIRA"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "N'GARA",
-        "DistrictList": [
+          },
           {
             "DistrictName": "N'GARA",
             "VillageList": [
@@ -222,12 +177,7 @@
                 "VillageName": "DIADO"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "PELENGANA",
-        "DistrictList": [
+          },
           {
             "DistrictName": "PELENGANA",
             "VillageList": [
@@ -247,12 +197,7 @@
                 "VillageName": "PELENGANA-WERE"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "SAKOIBA",
-        "DistrictList": [
+          },
           {
             "DistrictName": "SAKOIBA",
             "VillageList": [
@@ -266,12 +211,7 @@
                 "VillageName": "N'GOYE \"N'GOIN\""
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "SAMINE",
-        "DistrictList": [
+          },
           {
             "DistrictName": "SAMINE",
             "VillageList": [
@@ -282,12 +222,7 @@
                 "VillageName": "N'DJILA EST"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "SEBOUGOU",
-        "DistrictList": [
+          },
           {
             "DistrictName": "SEBOUGOU",
             "VillageList": [
@@ -298,12 +233,7 @@
                 "VillageName": "SEKORO"
               }
             ]
-          }
-        ]
-      },
-      {
-        "StateName": "TOGOU",
-        "DistrictList": [
+          },
           {
             "DistrictName": "TOGOU",
             "VillageList": [
@@ -1360,6 +1290,486 @@
               },
               {
                 "VillageName": "NAKIBANGA B"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CountryName": "Urdu-Pakistan",
+    "StateList": [
+      {
+        "StateName": "PUNJAB",
+        "DistrictList": [
+          {
+            "DistrictName": "BAHAWALPUR",
+            "VillageList": [
+              {
+                "VillageName": "MEHRAB WALA"
+              },
+              {
+                "VillageName": "JHANGRA SHARQI"
+              },
+              {
+                "VillageName": "WAHI MOCHIAN"
+              },
+              {
+                "VillageName": "RAMZAN JOIYA"
+              },
+              {
+                "VillageName": "WAHI QADIR DINNA"
+              },
+              {
+                "VillageName": "SADIQ ABAD"
+              },
+              {
+                "VillageName": "BUN WALA"
+              },
+              {
+                "VillageName": "SHAKRANI"
+              },
+              {
+                "VillageName": "KOTLA SHEIKHAN"
+              },
+              {
+                "VillageName": "DERA BAKHA"
+              },
+              {
+                "VillageName": "CHAK NO 013/BC"
+              },
+              {
+                "VillageName": "CHAK NO 036/B C"
+              },
+              {
+                "VillageName": "JALAL ABAD"
+              },
+              {
+                "VillageName": "WARHILAN"
+              },
+              {
+                "VillageName": "POSTI"
+              },
+              {
+                "VillageName": "KHANPUR NAURANGA"
+              },
+              {
+                "VillageName": "WAHI HUSSAIN"
+              },
+              {
+                "VillageName": "WAHI SHAH MUHAMMAD"
+              },
+              {
+                "VillageName": "BEDANA GHARBI"
+              },
+              {
+                "VillageName": "CHAK NO 161/MURAD"
+              },
+              {
+                "VillageName": "CHAK NO 087/FATEH"
+              },
+              {
+                "VillageName": "CHAK NO 065/FATEH"
+              },
+              {
+                "VillageName": "LUDDAN"
+              },
+              {
+                "VillageName": "CHAK NO 081/FATEH"
+              },
+              {
+                "VillageName": "BHORA HATTA"
+              },
+              {
+                "VillageName": "GOTH KAMAL"
+              },
+              {
+                "VillageName": "ARA BUDHU"
+              },
+              {
+                "VillageName": "GOTH ALI"
+              },
+              {
+                "VillageName": "KARAM PUR"
+              },
+              {
+                "VillageName": "82-A/DB"
+              },
+              {
+                "VillageName": "KOTLA SULTAN AHMAD"
+              },
+              {
+                "VillageName": "CHAK NO 002/D N B"
+              },
+              {
+                "VillageName": "JUGAIT PEER"
+              },
+              {
+                "VillageName": "CHAK NO 014/D N B"
+              },
+              {
+                "VillageName": "CHAK NO 110/D N B"
+              },
+              {
+                "VillageName": "135/D.B"
+              },
+              {
+                "VillageName": "CHAK NO 047/D B"
+              },
+              {
+                "VillageName": "KHAIR PUR JADID"
+              },
+              {
+                "VillageName": "NUNARI"
+              },
+              {
+                "VillageName": "HAMID PUR KALAN"
+              },
+              {
+                "VillageName": "CHAK NO 045/D N B"
+              },
+              {
+                "VillageName": "CHAK NO 108/D B"
+              },
+              {
+                "VillageName": "CHAK NO 140/D B"
+              },
+              {
+                "VillageName": "CHAK NO 091/D B"
+              },
+              {
+                "VillageName": "JAHAN PUR"
+              },
+              {
+                "VillageName": "QADIR PUR"
+              },
+              {
+                "VillageName": "RATAR NEHARAN WALI"
+              },
+              {
+                "VillageName": "UTERA"
+              },
+              {
+                "VillageName": "KHAIRO GHAZI KHANANA"
+              },
+              {
+                "VillageName": "AQIL PUR"
+              },
+              {
+                "VillageName": "NOOR SEYAL"
+              },
+              {
+                "VillageName": "GHAUS PUR"
+              },
+              {
+                "VillageName": "HYDER PUR"
+              },
+              {
+                "VillageName": "WAHI BHAWAL SHAH"
+              },
+              {
+                "VillageName": "SOJHLA TANWARI"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CountryName": "Kiswahili-Tanzania",
+    "StateList": [
+      {
+        "StateName": "Moshi",
+        "DistrictList": [
+          {
+            "DistrictName": "Kindi",
+            "VillageList": [
+              {
+                "VillageName": "Katanini"
+              },
+              {
+                "VillageName": "Kinamiri"
+              },
+              {
+                "VillageName": "Katanini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mwika kaskazini",
+            "VillageList": [
+              {
+                "VillageName": "Komongoro"
+              },
+              {
+                "VillageName": "Maring'a kati"
+              },
+              {
+                "VillageName": "Mrimbo kati"
+              },
+              {
+                "VillageName": "Komolo"
+              },
+              {
+                "VillageName": "Sembeti"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kirua vunjo mashariki",
+            "VillageList": [
+              {
+                "VillageName": "Lasso"
+              },
+              {
+                "VillageName": "Nganjoni juu"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kibosho mashariki",
+            "VillageList": [
+              {
+                "VillageName": "Mweka juu"
+              },
+              {
+                "VillageName": "Singa kati"
+              },
+              {
+                "VillageName": "Kifuweni"
+              },
+              {
+                "VillageName": "Singa juu"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Marangu mashariki",
+            "VillageList": [
+              {
+                "VillageName": "Mori B"
+              },
+              {
+                "VillageName": "Mrokora"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Uru mashariki",
+            "VillageList": [
+              {
+                "VillageName": "Kitowo juu"
+              },
+              {
+                "VillageName": "Kitirini juu"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Marangu magharibi",
+            "VillageList": [
+              {
+                "VillageName": "Mtemboni"
+              },
+              {
+                "VillageName": "Karisia"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mamba kaskazini",
+            "VillageList": [
+              {
+                "VillageName": "Mboni"
+              },
+              {
+                "VillageName": "Masia"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kilema kusini",
+            "VillageList": [
+              {
+                "VillageName": "Masaera kusini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Makuyuni",
+            "VillageList": [
+              {
+                "VillageName": "Saghana shuleni"
+              },
+              {
+                "VillageName": "Kwamtenga"
+              },
+              {
+                "VillageName": "Nyawenda"
+              },
+              {
+                "VillageName": "Msufini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mabogini",
+            "VillageList": [
+              {
+                "VillageName": "Majengo"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mamba kusini",
+            "VillageList": [
+              {
+                "VillageName": "Kusini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kiruavunjo kusini",
+            "VillageList": [
+              {
+                "VillageName": "Barabara chini"
+              },
+              {
+                "VillageName": "Tella chini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mbokomu",
+            "VillageList": [
+              {
+                "VillageName": "Kimamboni"
+              },
+              {
+                "VillageName": "Bamboo"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kahe",
+            "VillageList": [
+              {
+                "VillageName": "Kiaya & Kimala relini"
+              },
+              {
+                "VillageName": "Reli A"
+              },
+              {
+                "VillageName": "Mwisho wa shamba"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Okaoni",
+            "VillageList": [
+              {
+                "VillageName": "Sindammari"
+              },
+              {
+                "VillageName": "Nkonyaku"
+              },
+              {
+                "VillageName": "Sisa & Kinangolo"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kirua vunjo Magharibi",
+            "VillageList": [
+              {
+                "VillageName": "Kosaa"
+              },
+              {
+                "VillageName": "Chaki madukani"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kilema kaskazini",
+            "VillageList": [
+              {
+                "VillageName": "Kirumuni"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kibosho Magharibi",
+            "VillageList": [
+              {
+                "VillageName": "Makashu"
+              },
+              {
+                "VillageName": "Telengo"
+              },
+              {
+                "VillageName": "Kichare"
+              },
+              {
+                "VillageName": "Mapinduzi"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Mwika kusini",
+            "VillageList": [
+              {
+                "VillageName": "Karoro"
+              },
+              {
+                "VillageName": "Kimangaro"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Uru kusini",
+            "VillageList": [
+              {
+                "VillageName": "Mrukuti"
+              },
+              {
+                "VillageName": "Kariwa kaskazini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Old moshi magharibi",
+            "VillageList": [
+              {
+                "VillageName": "Kirembeni"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kirima",
+            "VillageList": [
+              {
+                "VillageName": "Isiye kusini"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Arusha chini",
+            "VillageList": [
+              {
+                "VillageName": "Kirungu"
+              },
+              {
+                "VillageName": "Kambi No. 3 & Mtoni"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Kahe mashariki",
+            "VillageList": [
+              {
+                "VillageName": "Kambini & Kitivo"
               }
             ]
           }
