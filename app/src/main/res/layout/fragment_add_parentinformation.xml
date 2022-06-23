@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/str_child_lives_with"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_12sdp"

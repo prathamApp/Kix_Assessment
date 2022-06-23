@@ -60,6 +60,8 @@ public final class Fragment_AddVillage_
         spn_Village = null;
         spn_District = null;
         spn_State = null;
+        spn_Booklet = null;
+        ll_booklet = null;
         tv_TitleLBL = null;
     }
 
@@ -92,6 +94,8 @@ public final class Fragment_AddVillage_
         this.spn_Village = hasViews.internalFindViewById(R.id.spn_Village);
         this.spn_District = hasViews.internalFindViewById(R.id.spn_District);
         this.spn_State = hasViews.internalFindViewById(R.id.spn_State);
+        this.spn_Booklet = hasViews.internalFindViewById(R.id.spn_Booklet);
+        this.ll_booklet = hasViews.internalFindViewById(R.id.ll_booklet);
         this.tv_TitleLBL = hasViews.internalFindViewById(R.id.tv_TitleLBL);
         View view_btn_save = hasViews.internalFindViewById(R.id.btn_save);
 
