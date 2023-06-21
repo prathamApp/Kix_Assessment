@@ -42,7 +42,7 @@ public class KIXApplication extends Application {
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
 //    public static String returnLang = "Spanish-Mexico";
-    public static final String appBuildDate = "08-Feb-22";
+    public static final String appBuildDate = "21-June-23";
 //    public static String returnLang = "urdu";
 //    public static String returnLang = "kiswahili";
 //    public static String returnLang = "Hindi-India";
