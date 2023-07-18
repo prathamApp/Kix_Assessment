@@ -195,11 +195,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_HH07a"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="roofing"
-                    android:textColor="@color/colorSignBoard"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="italic|bold" />
+                    android:background="@drawable/rounder_bg_green"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="@string/yes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -228,11 +235,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_HH07b"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="No roofing"
-                    android:textColor="@color/colorSignBoard"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="italic|bold" />
+                    android:background="@drawable/rounder_bg_green"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="@string/yes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
 
             </RelativeLayout>
 
@@ -282,23 +297,30 @@
                 android:paddingEnd="@dimen/_10sdp">
 
                 <TextView
-                    android:id="@+id/lbl_HH07d"
+                    android:id="@+id/lbl_HH07d1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HH07d"
+                    android:text="@string/str_HH07d.1"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
                 <TextView
-                    android:id="@+id/tv_HH07d_val"
+                    android:id="@+id/tv_HH07d1_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lbl_HH07d"
+                    android:layout_below="@+id/lbl_HH07d1"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="No roofing"
-                    android:textColor="@color/colorSignBoard"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="italic|bold" />
+                    android:background="@drawable/rounder_bg_green"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="@string/yes"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -315,18 +337,18 @@
                 android:paddingEnd="@dimen/_10sdp">
 
                 <TextView
-                    android:id="@+id/lbl_HH07e"
+                    android:id="@+id/lbl_HH07d2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HH07e"
+                    android:text="@string/str_HH07d.2"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
                 <TextView
-                    android:id="@+id/tv_HH07e_val"
+                    android:id="@+id/tv_HH07d2_val"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lbl_HH07e"
+                    android:layout_below="@+id/lbl_HH07d2"
                     android:layout_alignParentEnd="true"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/rounder_bg_green"
@@ -578,6 +600,7 @@
 
             <View style="@style/Divider" />
 
+<!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -616,6 +639,7 @@
             </RelativeLayout>
 
             <View style="@style/Divider" />
+-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -754,21 +778,14 @@
 
                 <TextView
                     android:id="@+id/tv_HH07p_val"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_HH07p"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:background="@drawable/rounder_bg_green"
-                    android:gravity="center_vertical"
-                    android:paddingStart="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_1sdp"
-                    android:paddingEnd="@dimen/_10sdp"
-                    android:paddingBottom="@dimen/_1sdp"
-                    android:text="Yes"
-                    android:textColor="@color/white"
+                    android:text="2wheeler"
+                    android:textColor="@color/colorSignBoard"
                     android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic|bold" />
             </RelativeLayout>
 
             <View style="@style/Divider" />

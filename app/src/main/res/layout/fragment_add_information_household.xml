@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     android:focusable="true">
 
@@ -31,15 +31,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/str_gnr_household_info"
-                android:textSize="@dimen/_14sdp"
-                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/colorAccentDark"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
-                android:background="@color/colorAccentDark"
-                android:layout_marginTop="@dimen/_18sdp"/>
+                android:text="@string/str_gnr_household_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_always"
+                        android:text="@string/str_sometimes"
                         android:textColor="@color/colorSignBoard"
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
@@ -190,7 +190,7 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/red"
-                        android:text="@string/str_sometimes"
+                        android:text="@string/str_always"
                         android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
@@ -209,7 +209,8 @@
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_5sdp">
+                android:paddingBottom="@dimen/_5sdp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/lbl_HH06d"
@@ -262,22 +263,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/str_HH_asset_info"
-                android:textSize="@dimen/_14sdp"
-                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/colorAccentDark"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
-                android:background="@color/colorAccentDark"
-                android:layout_marginTop="@dimen/_18sdp"/>
+                android:text="@string/str_HH_asset_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:id="@+id/rl_HH07a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/rounded_form_bg"
                 android:elevation="@dimen/_2sdp"
@@ -303,7 +304,7 @@
                     android:orientation="vertical">
 
                     <RadioButton
-                        android:id="@+id/rb_HH07a_one"
+                        android:id="@+id/rb_HH07a_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -312,13 +313,13 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07a_one"
-                        android:textColor="@color/light_black" />
+                        android:textStyle="bold" />
 
                     <RadioButton
-                        android:id="@+id/rb_HH07a_two"
+                        android:id="@+id/rb_HH07a_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -326,26 +327,56 @@
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
+                        android:buttonTint="@color/red"
+                        android:text="@string/no"
+                        android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07a_two"
-                        android:textColor="@color/light_black" />
+                        android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07a_three"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07a_three"
-                        android:textColor="@color/light_black" />
+                    <!--                    <RadioButton
+                                            android:id="@+id/rb_HH07a_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold"
+                                            android:text="@string/str_HH07a_one"
+                                            android:textColor="@color/light_black" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07a_two"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold"
+                                            android:text="@string/str_HH07a_two"
+                                            android:textColor="@color/light_black" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07a_three"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold"
+                                            android:text="@string/str_HH07a_three"
+                                            android:textColor="@color/light_black" />-->
                 </RadioGroup>
             </RelativeLayout>
 
@@ -380,7 +411,7 @@
                     android:orientation="vertical">
 
                     <RadioButton
-                        android:id="@+id/rb_HH07b_one"
+                        android:id="@+id/rb_HH07b_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -389,13 +420,13 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07b_one"
-                        android:textColor="@color/light_black" />
+                        android:textStyle="bold" />
 
                     <RadioButton
-                        android:id="@+id/rb_HH07b_two"
+                        android:id="@+id/rb_HH07b_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -403,26 +434,58 @@
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
+                        android:buttonTint="@color/red"
+                        android:text="@string/no"
+                        android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07b_two"
-                        android:textColor="@color/light_black" />
+                        android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07b_three"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:text="@string/str_HH07b_three"
-                        android:textColor="@color/light_black" />
+                    <!--
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07b_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07b_one"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07b_two"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07b_two"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07b_three"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07b_three"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+                    -->
                 </RadioGroup>
             </RelativeLayout>
 
@@ -466,10 +529,10 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
                         android:text="@string/str_HH07c_one"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07c_two"
@@ -481,10 +544,10 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
                         android:text="@string/str_HH07c_two"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/rb_HH07c_three"
@@ -496,12 +559,12 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
                         android:text="@string/str_HH07c_three"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
 
-                    <RadioButton
+<!--                    <RadioButton
                         android:id="@+id/rb_HH07c_four"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -511,28 +574,28 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
                         android:text="@string/str_HH07c_four"
-                        android:textColor="@color/light_black" />
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />-->
                 </RadioGroup>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_HH07c"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_HH07c"
                     android:hint="Specify"
-                    android:visibility="gone"
                     android:textColorHint="#757575"
-                    android:layout_below="@+id/rg_HH07c">
+                    android:visibility="gone">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_HH07c_other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="@color/colorText" />
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_11sdp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </RelativeLayout>
 
@@ -551,23 +614,23 @@
                 android:paddingBottom="@dimen/_5sdp">
 
                 <TextView
-                    android:id="@+id/lbl_HH07d"
+                    android:id="@+id/lbl_HH07d.1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HH07d"
+                    android:text="@string/str_HH07d.1"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
-                    android:id="@+id/rg_HH07d"
+                    android:id="@+id/rg_HH07d.1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lbl_HH07d"
+                    android:layout_below="@+id/lbl_HH07d.1"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <RadioButton
-                        android:id="@+id/rb_HH07d_one"
+                        android:id="@+id/rb_HH07d_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -576,13 +639,13 @@
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
                         android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_one"
-                        android:textColor="@color/light_black"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorSignBoard"
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
 
                     <RadioButton
-                        android:id="@+id/rb_HH07d_two"
+                        android:id="@+id/rb_HH07d_No"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_5sdp"
@@ -590,123 +653,140 @@
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_marginBottom="@dimen/_1sdp"
                         android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_two"
-                        android:textColor="@color/light_black"
+                        android:buttonTint="@color/red"
+                        android:text="@string/no"
+                        android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07d_three"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_three"
-                        android:textColor="@color/light_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07d_four"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_four"
-                        android:textColor="@color/light_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold" />
+                    <!--                     <RadioButton
+                                            android:id="@+id/rb_HH07d_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_one"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07d_five"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_five"
-                        android:textColor="@color/light_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold" />
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07d_two"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_two"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07d_six"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_six"
-                        android:textColor="@color/light_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold" />
+                                       <RadioButton
+                                            android:id="@+id/rb_HH07d_three"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_three"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
 
-                    <RadioButton
-                        android:id="@+id/rb_HH07d_seven"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_1sdp"
-                        android:layout_weight="1"
-                        android:buttonTint="@color/colorSignBoard"
-                        android:text="@string/str_HH07d_seven"
-                        android:textColor="@color/light_black"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold" />
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07d_four"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_four"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07d_five"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_five"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07d_six"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_six"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />
+
+                                        <RadioButton
+                                            android:id="@+id/rb_HH07d_seven"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:layout_weight="1"
+                                            android:buttonTint="@color/colorSignBoard"
+                                            android:text="@string/str_HH07d_seven"
+                                            android:textColor="@color/light_black"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:textStyle="bold" />-->
                 </RadioGroup>
 
-                <com.google.android.material.textfield.TextInputLayout
+<!--                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_HH07d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_HH07d"
                     android:hint="Specify"
-                    android:visibility="gone"
                     android:textColorHint="#757575"
-                    android:layout_below="@+id/rg_HH07d">
+                    android:visibility="gone">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_HH07d_other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="@color/colorText" />
-                </com.google.android.material.textfield.TextInputLayout>
-
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>-->
             </RelativeLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/str_HH_have_lbl"
-                android:textSize="@dimen/_14sdp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:background="@color/colorAccentDark"
-                android:layout_marginTop="@dimen/_18sdp"/>
-
             <RelativeLayout
-                android:id="@+id/rl_HH07e"
+                android:id="@+id/rl_HH07d.2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -717,21 +797,22 @@
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_5sdp">
+                android:paddingBottom="@dimen/_5sdp"
+                android:visibility="gone">
 
                 <TextView
-                    android:id="@+id/lbl_HH07e"
+                    android:id="@+id/lbl_HH07d.2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HH07e"
+                    android:text="@string/str_HH07d.2"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
                 <RadioGroup
-                    android:id="@+id/rg_HH07e"
+                    android:id="@+id/rg_HH07d.2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lbl_HH07e"
+                    android:layout_below="@+id/lbl_HH07d.2"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -766,6 +847,19 @@
                         android:textStyle="bold" />
                 </RadioGroup>
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/colorAccentDark"
+                android:gravity="center"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/str_HH_have_lbl"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:id="@+id/rl_HH07f"
@@ -1148,6 +1242,7 @@
 
             </RelativeLayout>
 
+<!--
             <RelativeLayout
                 android:id="@+id/rl_HH07l"
                 android:layout_width="match_parent"
@@ -1166,7 +1261,7 @@
                     android:id="@+id/lbl_HH07l"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HH07l"
+                    android:text="string/str_HH07l"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -1211,6 +1306,7 @@
                 </RadioGroup>
 
             </RelativeLayout>
+-->
 
             <RelativeLayout
                 android:id="@+id/rl_HH07m"
@@ -1400,7 +1496,6 @@
                         android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
-
                 </RadioGroup>
 
             </RelativeLayout>
@@ -1417,7 +1512,8 @@
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_5sdp">
+                android:paddingBottom="@dimen/_5sdp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/lbl_HH07p"
@@ -1427,6 +1523,31 @@
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
+                <CheckBox
+                    android:id="@+id/ch1_HH07p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_HH07p_one"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_below="@id/lbl_HH07p"/>
+
+                <CheckBox
+                    android:id="@+id/ch2_HH07p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_HH07p_two"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_below="@id/ch1_HH07p"/>
+
+                <CheckBox
+                    android:id="@+id/ch3_HH07p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_HH07p_three"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_below="@id/ch2_HH07p"/>
+
+<!--
                 <RadioGroup
                     android:id="@+id/rg_HH07p"
                     android:layout_width="match_parent"
@@ -1466,6 +1587,7 @@
                         android:textStyle="bold" />
 
                 </RadioGroup>
+-->
 
             </RelativeLayout>
 

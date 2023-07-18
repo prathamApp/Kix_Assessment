@@ -166,9 +166,9 @@ public class Fragment_AddHousehold extends Fragment {
                     if (this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
                         final String hh_name;
                         if (this.str_HHOO == 1)
-                            hh_name = this.getString(R.string.str_isSampledHH_one);
+                            hh_name = this.getString(R.string.str_HH00_one);
                         else if (this.str_HHOO == 2)
-                            hh_name = this.getString(R.string.str_isSampledHH_two);
+                            hh_name = this.getString(R.string.str_HH00_two);
                         else
                             hh_name = this.et_respondentName.getText().toString();
 
@@ -229,9 +229,9 @@ public class Fragment_AddHousehold extends Fragment {
             str_haveChildren = rb_HH04a.getText().toString();*/
         final String hh_name;
         if (this.str_HHOO == 1)
-            hh_name = this.getString(R.string.str_isSampledHH_one);
+            hh_name = this.getString(R.string.str_HH00_one);
         else if (this.str_HHOO == 2)
-            hh_name = this.getString(R.string.str_isSampledHH_two);
+            hh_name = this.getString(R.string.str_HH00_two);
         else
             hh_name = this.et_respondentName.getText().toString();
 

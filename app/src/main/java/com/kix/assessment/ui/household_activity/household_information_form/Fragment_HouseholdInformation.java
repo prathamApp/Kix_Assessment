@@ -4,6 +4,7 @@ import static com.kix.assessment.KIXApplication.householdDao;
 import static com.kix.assessment.KIXApplication.householdInformationDao;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,6 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_information_household)
 public class Fragment_HouseholdInformation extends Fragment {
 
-
     @ViewById(R.id.tv_HH06a_val)
     TextView tv_members;
     @ViewById(R.id.tv_HH06b_val)
@@ -42,10 +42,10 @@ public class Fragment_HouseholdInformation extends Fragment {
     TextView tv_wall;
     @ViewById(R.id.tv_HH07c_val)
     TextView tv_lightSource;
-    @ViewById(R.id.tv_HH07d_val)
+    @ViewById(R.id.tv_HH07d1_val)
     TextView tv_waterSource;
-    @ViewById(R.id.tv_HH07e_val)
-    TextView tv_electricity;
+    @ViewById(R.id.tv_HH07d2_val)
+    TextView tv_payForWater;
     @ViewById(R.id.tv_HH07f_val)
     TextView tv_toilet;
     @ViewById(R.id.tv_HH07g_val)
@@ -58,16 +58,18 @@ public class Fragment_HouseholdInformation extends Fragment {
     TextView tv_computer;
     @ViewById(R.id.tv_HH07k_val)
     TextView tv_television;
-    @ViewById(R.id.tv_HH07l_val)
-    TextView tv_radio;
+    /*    @ViewById(R.id.tv_HH07l_val)
+        TextView tv_radio;*/
     @ViewById(R.id.tv_HH07m_val)
     TextView tv_mobile;
     @ViewById(R.id.tv_HH07n_val)
     TextView tv_isItSmartphone;
     @ViewById(R.id.tv_HH07o_val)
-    TextView tv_fourWheeler;
+    TextView tv_haveMotorVehicle;
+
     @ViewById(R.id.tv_HH07p_val)
-    TextView tv_twoWheeler;
+    TextView tv_noOfWheels;
+
     @ViewById(R.id.tv_HH07q_val)
     TextView tv_bicycle;
 
@@ -76,7 +78,7 @@ public class Fragment_HouseholdInformation extends Fragment {
     @ViewById(R.id.fab_Edit_VIF)
     FloatingActionButton fab_Edit_VIF;
 
-    String householdId, addMode="";
+    String householdId, addMode = "";
 
     public Fragment_HouseholdInformation() {
         // Required empty public constructor
@@ -98,7 +100,7 @@ public class Fragment_HouseholdInformation extends Fragment {
         else tv_lightSource.setText(modalHif.HH07c);
         if(modalHif.HH07d.equalsIgnoreCase(getString(R.string.str_HH07d_seven))) tv_waterSource.setText(modalHif.HH07dOther);
         else tv_waterSource.setText(modalHif.HH07d);
-        tv_electricity.setText(modalHif.HH07e);
+        tv_payForWater.setText(modalHif.HH07e);
         tv_toilet.setText(modalHif.HH07f);
         tv_memberCompletedDiploma.setText(modalHif.HH07g);
         tv_readingMaterial.setText(modalHif.HH07h);
@@ -108,11 +110,11 @@ public class Fragment_HouseholdInformation extends Fragment {
         tv_radio.setText(modalHif.HH07k);
         tv_mobile.setText(modalHif.HH07l);
         tv_isItSmartphone.setText(modalHif.HH07m);
-        tv_fourWheeler.setText(modalHif.HH07n);
+        tv_haveMotorVehicle.setText(modalHif.HH07n);
         tv_twoWheeler.setText(modalHif.HH07o);
         tv_bicycle.setText(modalHif.HH07p);*/
 
-        if(modalHif.getHH06b().equalsIgnoreCase("1")) {
+        if (modalHif.getHH06b().equalsIgnoreCase("1")) {
             tv_speakEnglish.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_speakEnglish.setText(getString(R.string.yes));
         } else {
@@ -120,52 +122,62 @@ public class Fragment_HouseholdInformation extends Fragment {
             tv_speakEnglish.setText(getString(R.string.no));
         }
 
-        if(modalHif.getHH06c().equalsIgnoreCase("1")) {
-            tv_howOften.setText(getString(R.string.str_always));
-        } else if (modalHif.getHH06c().equalsIgnoreCase("0")) {
+        if (modalHif.getHH06c().equalsIgnoreCase("1")) {
             tv_howOften.setText(getString(R.string.str_sometimes));
+        } else if (modalHif.getHH06c().equalsIgnoreCase("0")) {
+            tv_howOften.setText(getString(R.string.str_always));
         } else if (modalHif.getHH06c().equalsIgnoreCase("99")) {
             tv_howOften.setText("NA");
         }
 
-        if(modalHif.getHH06d().equalsIgnoreCase("1")){
+        if (modalHif.getHH06d().equalsIgnoreCase("1")) {
             tv_otherLang.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_otherLang.setText(getString(R.string.yes));
-        } else{
+        } else if (modalHif.getHH06d().equalsIgnoreCase("0")) {
             tv_otherLang.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_otherLang.setText(getString(R.string.no));
+        } else {
+            tv_otherLang.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_otherLang.setText("NA");
         }
 
-        if(modalHif.getHH07a().equalsIgnoreCase("1")){
-            tv_roof.setText(getString(R.string.str_HH07a_one));
-        } else if(modalHif.getHH07a().equalsIgnoreCase("2")){
-            tv_roof.setText(getString(R.string.str_HH07a_two));
-        } else if(modalHif.getHH07a().equalsIgnoreCase("3")){
+        if (modalHif.getHH07a().equalsIgnoreCase("1")) {
+            tv_roof.setBackgroundResource(R.drawable.rounder_bg_green);
+            tv_roof.setText(getString(R.string.yes));
+        } else {
+            tv_roof.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_roof.setText(getString(R.string.no));
+        } /*else if(modalHif.getHH07a().equalsIgnoreCase("3")){
             tv_roof.setText(getString(R.string.str_HH07a_three));
-        }
+        }*/
 
-        if(modalHif.getHH07b().equalsIgnoreCase("1")){
-            tv_wall.setText(getString(R.string.str_HH07b_one));
-        } else if(modalHif.getHH07b().equalsIgnoreCase("2")){
-            tv_wall.setText(getString(R.string.str_HH07b_two));
-        } else if(modalHif.getHH07b().equalsIgnoreCase("3")){
+        if (modalHif.getHH07b().equalsIgnoreCase("1")) {
+            tv_wall.setBackgroundResource(R.drawable.rounder_bg_green);
+            tv_wall.setText(getString(R.string.yes));
+        } else {
+            tv_wall.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_wall.setText(getString(R.string.no));
+        } /*else if(modalHif.getHH07b().equalsIgnoreCase("3")){
             tv_wall.setText(getString(R.string.str_HH07b_three));
-        }
+        }*/
 
-        if(modalHif.getHH07c().equalsIgnoreCase("1")){
+        if (modalHif.getHH07c().equalsIgnoreCase("1")) {
             tv_lightSource.setText(getString(R.string.str_HH07c_one));
-        } else if(modalHif.getHH07c().equalsIgnoreCase("2")){
+        } else if (modalHif.getHH07c().equalsIgnoreCase("2")) {
             tv_lightSource.setText(getString(R.string.str_HH07c_two));
-        } else if(modalHif.getHH07c().equalsIgnoreCase("3")){
+        } else if (modalHif.getHH07c().equalsIgnoreCase("3")) {
             tv_lightSource.setText(getString(R.string.str_HH07c_three));
-        } else if(modalHif.getHH07c().equalsIgnoreCase("4")){
+        } else if (modalHif.getHH07c().equalsIgnoreCase("4")) {
             tv_lightSource.setText(modalHif.HH07cOther);
         }
 
-        if(modalHif.getHH07d().equalsIgnoreCase("1")){
-            tv_waterSource.setText(getString(R.string.str_HH07d_one));
-        } else if(modalHif.getHH07d().equalsIgnoreCase("2")){
-            tv_waterSource.setText(getString(R.string.str_HH07d_two));
+        if (modalHif.getHH07d1().equalsIgnoreCase("1")) {
+            tv_waterSource.setBackgroundResource(R.drawable.rounder_bg_green);
+            tv_waterSource.setText(getString(R.string.yes));
+        } else {
+            tv_waterSource.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_waterSource.setText(getString(R.string.no));
+/*
         } else if(modalHif.getHH07d().equalsIgnoreCase("3")){
             tv_waterSource.setText(getString(R.string.str_HH07d_three));
         } else if(modalHif.getHH07d().equalsIgnoreCase("4")){
@@ -176,57 +188,62 @@ public class Fragment_HouseholdInformation extends Fragment {
             tv_waterSource.setText(getString(R.string.str_HH07d_six));
         } else if(modalHif.getHH07d().equalsIgnoreCase("7")){
             tv_waterSource.setText(modalHif.HH07dOther);
+*/
         }
 
-        if(modalHif.getHH07e().equalsIgnoreCase("1")){
-            tv_electricity.setBackgroundResource(R.drawable.rounder_bg_green);
-            tv_electricity.setText(getString(R.string.yes));
-        } else{
-            tv_electricity.setBackgroundResource(R.drawable.rounded_bg_red);
-            tv_electricity.setText(getString(R.string.no));
+        if (modalHif.getHH07d2().equalsIgnoreCase("1")) {
+            tv_payForWater.setBackgroundResource(R.drawable.rounder_bg_green);
+            tv_payForWater.setText(getString(R.string.yes));
+        } else if (modalHif.getHH07d2().equalsIgnoreCase("0")) {
+            tv_payForWater.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_payForWater.setText(getString(R.string.no));
+        } else {
+            tv_payForWater.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_payForWater.setText("NA");
         }
-        if(modalHif.getHH07f().equalsIgnoreCase("1")){
+        if (modalHif.getHH07f().equalsIgnoreCase("1")) {
             tv_toilet.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_toilet.setText(getString(R.string.yes));
-        } else{
+        } else {
             tv_toilet.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_toilet.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07g().equalsIgnoreCase("1")){
+        if (modalHif.getHH07g().equalsIgnoreCase("1")) {
             tv_memberCompletedDiploma.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_memberCompletedDiploma.setText(getString(R.string.yes));
-        } else{
+        } else {
             tv_memberCompletedDiploma.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_memberCompletedDiploma.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07h().equalsIgnoreCase("1")){
+        if (modalHif.getHH07h().equalsIgnoreCase("1")) {
             tv_readingMaterial.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_readingMaterial.setText(getString(R.string.yes));
-        } else{
+        } else {
             tv_readingMaterial.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_readingMaterial.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07i().equalsIgnoreCase("1")){
+        if (modalHif.getHH07i().equalsIgnoreCase("1")) {
             tv_otherBook.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_otherBook.setText(getString(R.string.yes));
-        } else{
+        } else {
             tv_otherBook.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_otherBook.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07j().equalsIgnoreCase("1")){
+        if (modalHif.getHH07j().equalsIgnoreCase("1")) {
             tv_computer.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_computer.setText(getString(R.string.yes));
         } else {
             tv_computer.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_computer.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07k().equalsIgnoreCase("1")) {
+        if (modalHif.getHH07k().equalsIgnoreCase("1")) {
             tv_television.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_television.setText(getString(R.string.yes));
         } else {
             tv_television.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_television.setText(getString(R.string.no));
         }
+/*
         if(modalHif.getHH07l().equalsIgnoreCase("1")) {
             tv_radio.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_radio.setText(getString(R.string.yes));
@@ -234,41 +251,54 @@ public class Fragment_HouseholdInformation extends Fragment {
             tv_radio.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_radio.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07m().equalsIgnoreCase("1")) {
+*/
+        if (modalHif.getHH07m().equalsIgnoreCase("1")) {
             tv_mobile.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_mobile.setText(getString(R.string.yes));
         } else {
             tv_mobile.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_mobile.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07n().equalsIgnoreCase("1")) {
+        if (modalHif.getHH07n().equalsIgnoreCase("1")) {
             tv_isItSmartphone.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_isItSmartphone.setText(getString(R.string.yes));
-        }
-        else {
+        } else {
             tv_isItSmartphone.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_isItSmartphone.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07o().equalsIgnoreCase("1")) {
-            tv_fourWheeler.setBackgroundResource(R.drawable.rounder_bg_green);
-            tv_fourWheeler.setText(getString(R.string.yes));
+        if (modalHif.getHH07o().equalsIgnoreCase("1")) {
+            tv_haveMotorVehicle.setBackgroundResource(R.drawable.rounder_bg_green);
+            tv_haveMotorVehicle.setText(getString(R.string.yes));
         } else {
-            tv_fourWheeler.setBackgroundResource(R.drawable.rounded_bg_red);
-            tv_fourWheeler.setText(getString(R.string.no));
+            tv_haveMotorVehicle.setBackgroundResource(R.drawable.rounded_bg_red);
+            tv_haveMotorVehicle.setText(getString(R.string.no));
         }
-        if(modalHif.getHH07p().equalsIgnoreCase("1")) {
-            tv_twoWheeler.setBackgroundResource(R.drawable.rounder_bg_green);
-            tv_twoWheeler.setText(getString(R.string.yes));
-        } else {
-            tv_twoWheeler.setBackgroundResource(R.drawable.rounded_bg_red);
-            tv_twoWheeler.setText(getString(R.string.no));
-        }
-        if(modalHif.getHH07q().equalsIgnoreCase("1")) {
+        if (modalHif.getHH07q().equalsIgnoreCase("1")) {
             tv_bicycle.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_bicycle.setText(getString(R.string.yes));
         } else {
             tv_bicycle.setBackgroundResource(R.drawable.rounded_bg_red);
             tv_bicycle.setText(getString(R.string.no));
+        }
+
+        String hh0q_noOfWheels = "";
+        if(modalHif.getHH07p().isEmpty()) tv_noOfWheels.setText("NA");
+        else {
+            if (modalHif.getHH07p().contains("1,"))
+                hh0q_noOfWheels = hh0q_noOfWheels + "> " + this.getString(R.string.str_fourWheeler);
+            if (modalHif.getHH07p().contains("2,")) {
+                if (modalHif.getHH07p().contains("1,"))
+                    hh0q_noOfWheels = hh0q_noOfWheels + "\n> " + this.getString(R.string.str_threeWheeler);
+                else
+                    hh0q_noOfWheels = hh0q_noOfWheels + "> " + this.getString(R.string.str_threeWheeler);
+            }
+            if (modalHif.getHH07p().contains("3,")) {
+                if (modalHif.getHH07p().contains("1,") || modalHif.getHH07p().contains("2,"))
+                    hh0q_noOfWheels = hh0q_noOfWheels + "\n> " + this.getString(R.string.str_twoWheeler);
+                else
+                    hh0q_noOfWheels = hh0q_noOfWheels + "> " + this.getString(R.string.str_twoWheeler);
+            }
+            tv_noOfWheels.setText(hh0q_noOfWheels);
         }
     }
 
@@ -282,7 +312,7 @@ public class Fragment_HouseholdInformation extends Fragment {
     public void EditClicked() {
         Bundle bundle = new Bundle();
         bundle.putString(Kix_Constant.HOUSEHOLD_ID, householdId);
-        bundle.putString(Kix_Constant.EDIT_HOUSEHOLD,Kix_Constant.EDIT_HOUSEHOLD);
+        bundle.putString(Kix_Constant.EDIT_HOUSEHOLD, Kix_Constant.EDIT_HOUSEHOLD);
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddHouseholdInformation_(), R.id.household_frame,
                 bundle, Fragment_AddHouseholdInformation.class.getSimpleName());
 

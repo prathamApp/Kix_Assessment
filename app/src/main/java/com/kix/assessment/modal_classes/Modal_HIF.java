@@ -21,20 +21,18 @@ public class Modal_HIF implements Comparable, Parcelable {
     public String HH07b;//HH wall (external) material (tick only one)
     public String HH07c;//What is the source of lighting regularly used in the household (tick only one)
     public String HH07cOther;//
-    public String HH07d;//What is the source of drinking water used regularly in the HH (tick only one)
-    public String HH07dOther;
-    public String HH07e;//Electricity connection (to be marked 'yes' if HH06c is 'Electricity')
+    public String HH07d1;//Does the household have a regular source of drinking water within the compound (the source can be inside the house or outside, but only the members of the household exclusively use it)
+    public String HH07d2;//(If yes in HH07d.1), do you pay to access/use this source of water?
     public String HH07f;//Toilet
     public String HH07g;//Atleast one member (other than the child's parents) who has completed high school diploma?
     public String HH07h;//Any reading material other than school textbooks and religious books
     public String HH07i;//Any other books or reading materials, like religious textbooks, newspapers magazines etc?
     public String HH07j;//Computer
     public String HH07k;//Television
-    public String HH07l;//Radio
     public String HH07m;//Mobile phone
     public String HH07n;//If yes in HH07l, is it a smartphone?
-    public String HH07o;//Motorised 4-wheeler?
-    public String HH07p;//Motorised 2-wheeler?
+    public String HH07o;//Motorised vehicle?
+    public String HH07p;//if yes in HH07o, How many wheels does it have? (select all that applies)
     public String HH07q;//Bicycle?
     public String householdId;
     public String villageId;
@@ -62,16 +60,14 @@ public class Modal_HIF implements Comparable, Parcelable {
         this.HH07b = in.readString();
         this.HH07c = in.readString();
         this.HH07cOther = in.readString();
-        this.HH07d = in.readString();
-        this.HH07dOther = in.readString();
-        this.HH07e = in.readString();
+        this.HH07d1 = in.readString();
+        this.HH07d2 = in.readString();
         this.HH07f = in.readString();
         this.HH07g = in.readString();
         this.HH07h = in.readString();
         this.HH07i = in.readString();
         this.HH07j = in.readString();
         this.HH07k = in.readString();
-        this.HH07l = in.readString();
         this.HH07m = in.readString();
         this.HH07n = in.readString();
         this.HH07o = in.readString();
@@ -154,20 +150,20 @@ public class Modal_HIF implements Comparable, Parcelable {
         this.HH07c = HH07c;
     }
 
-    public String getHH07d() {
-        return HH07d;
+    public String getHH07d1() {
+        return HH07d1;
     }
 
-    public void setHH07d(String HH07d) {
-        this.HH07d = HH07d;
+    public void setHH07d1(String HH07d1) {
+        this.HH07d1 = HH07d1;
     }
 
-    public String getHH07e() {
-        return HH07e;
+    public String getHH07d2() {
+        return HH07d2;
     }
 
-    public void setHH07e(String HH07e) {
-        this.HH07e = HH07e;
+    public void setHH07d2(String HH07d2) {
+        this.HH07d2 = HH07d2;
     }
 
     public String getHH07f() {
@@ -216,14 +212,6 @@ public class Modal_HIF implements Comparable, Parcelable {
 
     public void setHH07k(String HH07k) {
         this.HH07k = HH07k;
-    }
-
-    public String getHH07l() {
-        return HH07l;
-    }
-
-    public void setHH07l(String HH07l) {
-        this.HH07l = HH07l;
     }
 
     public String getHH07m() {
@@ -290,10 +278,6 @@ public class Modal_HIF implements Comparable, Parcelable {
 
     public void setHH07cOther(String HH07cOther) { this.HH07cOther = HH07cOther; }
 
-    public String getHH07dOther() { return HH07dOther; }
-
-    public void setHH07dOther(String HH07dOther) { this.HH07dOther = HH07dOther; }
-
     public int getSentFlag() {
         return sentFlag;
     }
@@ -318,16 +302,14 @@ public class Modal_HIF implements Comparable, Parcelable {
         dest.writeString(this.HH07b);
         dest.writeString(this.HH07c);
         dest.writeString(this.HH07cOther);
-        dest.writeString(this.HH07d);
-        dest.writeString(this.HH07dOther);
-        dest.writeString(this.HH07e);
+        dest.writeString(this.HH07d1);
+        dest.writeString(this.HH07d2);
         dest.writeString(this.HH07f);
         dest.writeString(this.HH07g);
         dest.writeString(this.HH07h);
         dest.writeString(this.HH07i);
         dest.writeString(this.HH07j);
         dest.writeString(this.HH07k);
-        dest.writeString(this.HH07l);
         dest.writeString(this.HH07m);
         dest.writeString(this.HH07n);
         dest.writeString(this.HH07o);

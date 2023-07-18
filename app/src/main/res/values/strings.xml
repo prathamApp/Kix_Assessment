@@ -16,7 +16,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
-
+    <!--English Start-->
     <string name="push_success">Pushed Successfully!!</string>
     <string name="push_fail">Push Failed!!</string>
     <string name="kix_assessment">ELANA</string>
@@ -43,27 +43,35 @@
     <string name="edit_child_info">Edit Child Information</string>
 
 
-
+    <!--Village CQ-->
     <string name="add_village_info">Add Village Information</string>
     <string name="update_village_info">Update Village Information</string>
     <string name="str_village_info">Village Information</string>
-    <string name="str_V01">Is there tarmac/all weather road leading to the village?</string>
-    <string name="str_V02">Is there public transport facility available to the village?</string>
-    <string name="str_V03">Does the village have access to electricity connection?</string>
-    <string name="str_V04">Does the village have any government/public health clinic/hospital?</string>
-    <string name="str_V05">Does the village have any private health clinic/hospital?</string>
-    <string name="str_V06a">Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
-    <string name="str_V06b">Which type of school(s) in the village offers pre-primary grades/classes?</string>
-    <string name="str_V07a">Does the village have any schools offering primary grades/classes?</string>
-    <string name="str_V07b">Which type of school(s) in the village offers primary grades/classes?</string>
+    <string name="str_V01">Is there tarmac/all weather road leading to the village/EA?</string>
+    <string name="str_V02">Is there public transport available to the village/EA?</string>
+    <string name="str_V03">Does the village/EA have access to electricity connection?</string>
+    <string name="str_V04">Does the village/EA have any government health center/hospital?</string>
+    <string name="str_V05">Does the village/EA have any private health clinic/hospital?</string>
+    <string name="str_V06a">Does the village/EA have any pre-primary schools or any school offering pre-primary grades/classes?</string>
+    <string name="str_V06b">Which type of school(s) in the village/EA offers pre-primary grades/classes?</string>
+    <string name="str_V07a">Does the village/EA have any schools offering primary grades/classes?</string>
+    <string name="str_V07b">Which type of school(s) in the village/EA offers primary grades/classes?</string>
+    <!---END of Village CQ-->
 
+    <!--Household CQ-->
     <string name="str_add_household">Add Household</string>
     <string name="update_household">Update Household</string>
-    <string name="str_isSampledHH">Is the sampled household?</string>
-    <string name="str_isSampledHH_one">Locked</string>
-    <string name="str_isSampledHH_two">Not Responding</string>
-    <string name="str_isSampledHH_three">Open(to survey)</string>
-    <string name="str_HH01">Household number from the house listing format <font color='#FF0000'>*</font></string>
+    <string name="select_household">Select Household</string>
+    <string name="str_HH00">Is the sampled household?</string>
+    <string name="str_HH00_one">Locked</string>
+    <string name="str_HH00_two">Not Responding</string>
+    <string name="str_HH00_three">Open(to survey)</string>
+    <string name="str_HH01">Household number from the house listing format/Hamlet number <font color='#FF0000'>*</font></string>
+    <string name="str_HHO2">Name of the respondent <font color='#FF0000'>*</font></string>
+    <string name="str_HHO3">Name of the household head </string>
+    <string name="str_HHO4a">Does the HH have children (living regularly) in the age group 4-10 years?</string>
+    <string name="str_HHO4b">How many?</string>
+    <string name="str_HHO5">Telephone/Mobile number of the household (write only if available and willing to share)</string>
     <string name="str_add_household_info">Add Household Information</string>
     <string name="str_update_household_info">Update Household Information</string>
     <string name="str_household_info">Household Information</string>
@@ -74,47 +82,38 @@
     <string name="str_HH06d">Do you speak any other language at home?</string>
     <string name="str_always">Always</string>
     <string name="str_sometimes">Sometimes</string>
-    <string name="str_HH_asset_info">Household Asset information</string>
 
-    <string name="str_HH07a">Household roofing</string>
-    <string name="str_HH07a_one">No roofing</string>
-    <string name="str_HH07a_two">Finished roofing</string>
-    <string name="str_HH07a_three">Natural or rudimentary roofing</string>
-    <string name="str_HH07b">Household wall (external) material</string>
-    <string name="str_HH07b_one">No walls</string>
-    <string name="str_HH07b_two">Finished walls</string>
-    <string name="str_HH07b_three">Natural or rudimentary walls</string>
+    <string name="str_HH_asset_info">Household Asset information</string>
+    <string name="str_HH07a">Does the household have finished roofing?</string>
+    <string name="str_HH07b">Does the household have finished walls?</string>
     <string name="str_HH07c">What is the source of lighting regularly used in the household</string>
     <string name="str_HH07c_one">Electricity</string>
     <string name="str_HH07c_two">Solar</string>
-    <string name="str_HH07c_three">Paraffin</string>
-    <string name="str_HH07c_four">Other</string>
-    <string name="str_HH07d">What is the source of drinking water used regularly in the household</string>
-    <string name="str_HH07d_one">Piped water</string>
-    <string name="str_HH07d_two">Handpump/tubewell</string>
-    <string name="str_HH07d_three">Borehole</string>
-    <string name="str_HH07d_four">Well</string>
-    <string name="str_HH07d_five">River/Stream/pond</string>
-    <string name="str_HH07d_six">Buy water</string>
-    <string name="str_HH07d_seven">Other</string>
-    <string name="str_HH07e">Electricity connection?</string>
-    <string name="str_HH07f">Toilet/Latrines?</string>
-    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate?</string>
+    <string name="str_HH07c_three">Other</string>
+    <string name="str_HH07d.1">Does the household have a regular source of drinking water within the compound?(the source can be inside the house or outside, but only the members of the household exclusively use it)</string>
+    <string name="str_HH07d.2">Do you pay to access/use this source of water?</string>
+    <string name="str_HH07f">At least one toilet/latrine that is exclusively used by the members of the household?</string>
+    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate/ high school diploma/hold a high school completion certificate?</string>
     <string name="str_HH07h">Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
     <string name="str_HH07i">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
     <string name="str_HH07j">Computer/laptop/tablet?</string>
     <string name="str_HH07k">Television?</string>
-    <string name="str_HH07l">Radio?</string>
     <string name="str_HH07m">Mobile phone?</string>
     <string name="str_HH07n">Is it a smartphone?</string>
-    <string name="str_HH07o">Motorised 4-wheeler?</string>
-    <string name="str_HH07p">Motorised 2-wheeler?</string>
+    <string name="str_HH07o">Motorised vehicle?</string>
+    <string name="str_HH07p">How many wheels does it have?</string>
+    <string name="str_HH07p_one">4-Wheeler</string>
+    <string name="str_HH07p_two">3-Wheeler</string>
+    <string name="str_HH07p_three">2-Wheeler</string>
     <string name="str_HH07q">Bicycle?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
-    <string name="select_household">Select Household</string>
-    <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
+    <!--- END of Household CQ-->
+
+    <!--Child CQ-->
     <string name="add_child">Add Child</string>
     <string name="update_child">Update Child</string>
+    <string name="select_child">Select Child</string>
+    <string name="str_CH01">Name <font color='#FF0000'>*</font></string>
     <string name="str_CH04a">Does the child have any known disability?</string>
     <string name="str_CH04b">Which disability?</string>
     <string name="str_CH04b_op1">Visual</string>
@@ -194,6 +193,7 @@
     <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else</string>
 
     <!--ENGLISH START ____________________________________________________________________-->
+
     <string name="sign_up">Sign Up</string>
     <string name="have_account_sign_in">Already Have Account? Sign In.</string>
     <string name="hint_svrName">Name <font color='#FF0000'>*</font></string>
@@ -208,7 +208,6 @@
     <string name="hint_district">District <font color='#FF0000'>*</font></string>
     <string name="hint_state">State <font color='#FF0000'>*</font></string>
     <string name="save">Save</string>
-    <string name="select_child">Select Child</string>
     <string name="want_to_start_assessment">Do you want to Start Assessment?</string>
     <string name="goto_next_task">Do you want to goto the next task?</string>
     <string name="thank_you">Thank you</string>
@@ -231,6 +230,9 @@
     <string name="str_government_public">Government/Public</string>
     <string name="str_public">Public</string>
     <string name="str_private">Private</string>
+    <string name="str_twoWheeler">2-Wheeler</string>
+    <string name="str_threeWheeler">3-Wheeler</string>
+    <string name="str_fourWheeler">4-Wheeler</string>
     <string name="str_other">Other</string>
     <string name="age">Age </string>
 
@@ -545,7 +547,106 @@
     <!--PORTUGUESE (MOZAMBIQUE) END ____________________________________________________________________-->
 
     <!--Hindi START ____________________________________________________________________-->
-    <!--
+<!--
+
+    &lt;!&ndash;General Labels&ndash;&gt;
+    <string name="push_success">भेजने में सफल</string>
+    <string name="push_fail">भेजने में विफल</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">ठीक है</string>
+    <string name="ok">ठीक है</string>
+    <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">कृपया प्रतीक्षा करें, डाटा आगे भेजा जा रहा है</string>
+    <string name="check_wifi_connected_kolibri">Check your wifi is connected to Pratham Kolibri !</string>
+    <string name="details">विवरण</string>
+    <string name="goto_next">अगले पर जाएँ</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="create_surveyor">सर्वेक्षक का खाता बनाएँ</string>
+    <string name="children_surveyed">सर्वेक्षित बच्चे: </string>
+    <string name="children_assessed">मूल्यांकन  किये गए बच्चे: </string>
+    <string name="child_name">बच्चे का नाम</string>
+    <string name="village">गाँव</string>
+    <string name="assessment_given">मूल्यांकन हो गया</string>
+    <string name="assessments_synced">मूल्यांकन सिंक्रनाइज़ हो गया</string>
+    <string name="score_count">कुल स्कोर : </string>
+    <string name="student_count">कुल बच्चे : </string>
+    <string name="village_count">कुल गाँव : </string>
+    <string name="household_count">कुल घर: </string>
+    <string name="surveyor_count">कुल सर्वेक्षक: </string>
+    <string name="edit_child_info">बच्चों की जानकारी को अपडेट करें</string>
+    &lt;!&ndash;General Label End&ndash;&gt;
+
+    <string name="add_village_info">गाँव की जानकारी भरें</string>
+    <string name="update_village_info">गाँव की जानकारी को अपडेट करें</string>
+    <string name="str_village_info">गाँव की जानकारी</string>
+    <string name="str_V01">क्या गाँव तक जाने के लिए पक्की सड़क है?</string>
+    <string name="str_V02">क्या गाँव में जाने के लिए सार्वजनिक परिवहन के साधन उपलब्ध है?</string>
+    <string name="str_V03">क्या गाँव में बिजली का कनेक्शन है?</string>
+    <string name="str_V04">क्या गाँव में सरकारी स्वास्थ्य केंद्र/अस्पताल है?</string>
+    <string name="str_V05">क्या गाँव में निजी स्वास्थ्य केंद्र/अस्पताल है?</string>
+    <string name="str_V06a">क्या गाँव में कोई पूर्व-प्राथमिक विद्यालय या किसी विद्यालय में पूर्व-प्राथमिक कक्षाएँ है?</string>
+    <string name="str_V06b">गाँव के किस प्रकार के विद्यालय में पूर्व-प्राथमिक कक्षाएँ है?</string>
+    <string name="str_V07a">क्या गाँव में कोई प्राथमिक विद्यालय या किसी विद्यालय में प्राथमिक कक्षाएँ है?</string>
+    <string name="str_V07b">गाँव के किस प्रकार के विद्यालय में प्राथमिक कक्षाएँ है?</string>
+
+    <string name="str_add_household">नया घर जोडें</string>
+    <string name="update_household">घर को अपडेट करें</string>
+    <string name="str_isSampledHH">चयनित घर?</string>
+    <string name="str_isSampledHH_one">बंद/ताला लगा है</string>
+    <string name="str_isSampledHH_two">कोई प्रतिक्रया नहीं</string>
+    <string name="str_isSampledHH_three">सर्वेक्षण के लिए उपलब्ध</string>
+    <string name="str_HH01">हिस्सा/मुहल्ले का नंबर <font color='#FF0000'>*</font></string>
+    <string name="str_HH02">उत्तरदाता का नाम<font color='#FF0000'>*</font></string>
+    <string name="str_HHO3">घर के मुख्या का नाम </string>
+    <string name="str_HHO4a">क्या इस घर में 4-10 आयुवर्ग के बच्चे नियमित रूप से रहते हैं?</string>
+    <string name="str_HHO4b">कितने बच्चे रहते हैं?</string>
+    <string name="str_HHO5">घर का फोन/मोबाईल नंबर (तभी लिखें यदि उपलब्ध हो और उत्तरदाता को नंबर बताने में कोई समस्या न हो)</string>
+
+    <string name="str_add_household_info">घर की जानकारी भरें</string>
+    <string name="str_update_household_info">घर की जानकारी को अपडेट करें</string>
+    <string name="str_household_info">घर की जानकारी</string>
+    <string name="str_gnr_household_info">सर्वेक्षित घर की सामान्य जानकारी</string>
+    <string name="str_HH06a">घर में नियमित रूप से रहेने वाले सदस्यों की कुल संख्या</string>
+    <string name="str_HH06b">क्या घर में हिंदी बोली जाती है?</string>
+    <string name="str_HH06c">घर में कितनी बार हिन्दी में बात की जाती है?</string>
+    <string name="str_HH06d">क्या घर में कोई और भी भाषा बोली जाती है?</string>
+    <string name="str_always">हमेशा</string>
+    <string name="str_sometimes">कभी-कभी</string>
+    <string name="str_HH_asset_info">Household Asset information</string>
+
+    <string name="str_HH07a">क्या घर की छत्त पक्की है?</string>
+&lt;!&ndash;    <string name="str_HH07a_one">No roofing</string>
+    <string name="str_HH07a_two">Finished roofing</string>
+    <string name="str_HH07a_three">Natural or rudimentary roofing</string>&ndash;&gt;
+    <string name="str_HH07b">क्या घर की दीवारें पक्की हैं?</string>
+&lt;!&ndash;    <string name="str_HH07b_one">No walls</string>
+    <string name="str_HH07b_two">Finished walls</string>
+    <string name="str_HH07b_three">Natural or rudimentary walls</string>&ndash;&gt;
+    <string name="str_HH07c">What is the source of lighting regularly used in the household</string>
+    <string name="str_HH07c_one">Electricity</string>
+    <string name="str_HH07c_two">Solar</string>
+    <string name="str_HH07c_three">Other</string>
+    <string name="str_HH07d">क्या घर के परिसर के अन्दर पीने के पानी का कोई नियमित स्रोत है?</string>
+    <string name="str_HH07e">क्या आप पानी के इस स्रोत का उपयोग करने के लिए  भुगतान करते हैं?</string>
+    <string name="str_HH07f">कम से कम एक शौचालय है, जो केवल घर के सदस्य ही उपयोग करते हो?</string>
+    <string name="str_HH07g">Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate?</string>
+    <string name="str_HH07h">Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
+    <string name="str_HH07i">Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
+    <string name="str_HH07j">Computer/laptop/tablet?</string>
+    <string name="str_HH07k">Television?</string>
+    <string name="str_HH07m">Mobile phone?</string>
+    <string name="str_HH07n">Is it a smartphone?</string>
+    <string name="str_HH07o">मोटर चालित वाहन है?</string>
+    <string name="str_HH07p">उनमें कितने पहिये हैं?</string>
+    <string name="str_HH07p_one">चार पहिया</string>
+    <string name="str_HH07p_two">तीन पहिया</string>
+    <string name="str_HH07p_three">दो पहिया</string>
+    <string name="str_HH07q">साईकिल है?</string>
+    <string name="str_HH_have_lbl">क्या घर में :</string>
+    <string name="select_household">घर को चुनें</string>
+    <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
+
     <string name="sign_up">साइन अप</string>
     <string name="have_account_sign_in">पहले से अकाउंट है? साइन इन</string>
     <string name="hint_svrName">नाम <font color='#FF0000'>*</font></string>
@@ -555,6 +656,7 @@
     <string name="sign_in">साइन इन</string>
     <string name="select_village">गाँव चुनें</string>
     <string name="add_village">गाँव का नाम ऐड करें</string>
+    <string name="update_village">Update Village</string>
     <string name="hint_village">गाँव <font color='#FF0000'>*</font></string>
     <string name="hint_district">जिला <font color='#FF0000'>*</font></string>
     <string name="hint_state">राज्य <font color='#FF0000'>*</font></string>
@@ -577,6 +679,13 @@
     <string name="you_want_to_exit">क्या आप निश्चित हैं आपको निकास करना है?</string>
     <string name="all_age">All आयु</string>
     <string name="all_village">All गाँव</string>
+    <string name="str_government">Government</string>
+    <string name="str_government_public">Government/Public</string>
+    <string name="str_public">Public</string>
+    <string name="str_private">Private</string>
+    <string name="str_other">Other</string>
+    <string name="age">Age </string>
+
 
     <string-array name="country_list">
         <item>Select Country</item>
@@ -662,7 +771,95 @@
         <item>कक्षा 4</item>
         <item>कक्षा 5</item>
     </string-array>
+
+    <string-array name="parentAge">
+        <item>Age     </item>
+        <item>Age 18  </item>
+        <item>Age 19  </item>
+        <item>Age 20  </item>
+        <item>Age 21  </item>
+        <item>Age 22  </item>
+        <item>Age 23  </item>
+        <item>Age 24  </item>
+        <item>Age 25  </item>
+        <item>Age 26  </item>
+        <item>Age 27  </item>
+        <item>Age 28  </item>
+        <item>Age 29  </item>
+        <item>Age 30  </item>
+        <item>Age 31  </item>
+        <item>Age 32  </item>
+        <item>Age 33  </item>
+        <item>Age 34  </item>
+        <item>Age 35  </item>
+        <item>Age 36  </item>
+        <item>Age 37  </item>
+        <item>Age 38  </item>
+        <item>Age 39  </item>
+        <item>Age 40  </item>
+        <item>Age 41  </item>
+        <item>Age 42  </item>
+        <item>Age 43  </item>
+        <item>Age 44  </item>
+        <item>Age 45  </item>
+        <item>Age 46  </item>
+        <item>Age 47  </item>
+        <item>Age 48  </item>
+        <item>Age 49  </item>
+        <item>Age 50  </item>
+        <item>Age 51  </item>
+        <item>Age 52  </item>
+        <item>Age 53  </item>
+        <item>Age 54  </item>
+        <item>Age 55  </item>
+        <item>Age 56  </item>
+        <item>Age 57  </item>
+        <item>Age 58  </item>
+        <item>Age 59  </item>
+        <item>Age 60  </item>
+        <item>Age 61  </item>
+        <item>Age 62  </item>
+        <item>Age 63  </item>
+        <item>Age 64  </item>
+        <item>Age 65  </item>
+        <item>Age 66  </item>
+        <item>Age 67  </item>
+        <item>Age 68  </item>
+        <item>Age 69  </item>
+        <item>Age 70  </item>
+        <item>Age 71  </item>
+        <item>Age 72  </item>
+        <item>Age 73  </item>
+        <item>Age 74  </item>
+        <item>Age 75  </item>
+        <item>Age 76  </item>
+        <item>Age 77  </item>
+        <item>Age 78  </item>
+        <item>Age 79  </item>
+        <item>Age 80  </item>
+        <item>Age 81  </item>
+        <item>Age 82  </item>
+        <item>Age 83  </item>
+        <item>Age 84  </item>
+        <item>Age 85  </item>
+        <item>Age 86  </item>
+        <item>Age 87  </item>
+        <item>Age 88  </item>
+        <item>Age 89  </item>
+        <item>Age 90  </item>
+        <item>Age 91  </item>
+        <item>Age 92  </item>
+        <item>Age 93  </item>
+        <item>Age 94  </item>
+        <item>Age 95  </item>
+        <item>Age 96  </item>
+        <item>Age 97  </item>
+        <item>Age 98  </item>
+        <item>Age 99  </item>
+        <item>Age 100 </item>
+    </string-array>
 -->
+
     <!--HINDI END ____________________________________________________________________-->
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
