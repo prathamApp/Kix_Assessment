@@ -1,12 +1,16 @@
 package com.kix.assessment.ui.village_activity;
 
+import static com.kix.assessment.KIXApplication.contentDao;
+import static com.kix.assessment.KIXApplication.isDomainWise;
 import static com.kix.assessment.KIXApplication.villageDao;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,11 +19,13 @@ import androidx.fragment.app.Fragment;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
 import com.kix.assessment.modal_classes.Modal_Location;
+import com.kix.assessment.modal_classes.Modal_Sort_Booklet;
 import com.kix.assessment.modal_classes.Modal_Village;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -32,6 +38,10 @@ import org.json.JSONArray;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 
 @EFragment(R.layout.fragment_add_village)
 public class Fragment_AddVillage extends Fragment {
@@ -42,6 +52,10 @@ public class Fragment_AddVillage extends Fragment {
     Spinner spn_District;
     @ViewById(R.id.spn_State)
     Spinner spn_State;
+    @ViewById(R.id.spn_Booklet)
+    Spinner spn_Booklet;
+    @ViewById(R.id.ll_booklet)
+    LinearLayout ll_booklet;
     /*
         @ViewById(R.id.et_VillageName)
         TextInputEditText et_VillageName;
@@ -53,14 +67,15 @@ public class Fragment_AddVillage extends Fragment {
     @ViewById(R.id.tv_TitleLBL)
     TextView tv_TitleLBL;
 
+    List <Modal_Location> modal_locationList;
     Modal_Location modal_location;
     String surveyorCode, villageId, selectedLanguageCode;
-    String stateName, villageName, districtName, villageBooklet;
+    String stateName, villageName, districtName, villageBooklet = "NA";
     ArrayAdapter adapterCountry;
     ArrayAdapter adapterVillage, adapterDistrict, adapterState;
     Modal_Village modalVillage;
     Context mContext;
-    int statePos, distPos, villPos, EditState, EditDist, EditVil;
+    int statePos, distPos, villPos, EditState, EditDist, EditVil, EditBooklet;
 
     public Fragment_AddVillage() {
         // Required empty public constructor
@@ -75,14 +90,17 @@ public class Fragment_AddVillage extends Fragment {
             villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
             this.modalVillage = villageDao.getVillageByVillId(villageId);
             tv_TitleLBL.setText(this.getString(R.string.update_village));
-/*            this.et_VillageName.setText(modalVillage.getVillageName());
-            this.et_District.setText(modalVillage.getVillageDistrict());
-            this.et_State.setText(modalVillage.getVillageState());*/
         } else {
             EditState = 1;
             EditDist = 1;
             EditVil = 1;
+            EditBooklet = 1;
         }
+        if(isDomainWise) {
+            ll_booklet.setVisibility(View.VISIBLE);
+            setBooklets();
+        }else
+            ll_booklet.setVisibility(View.GONE);
         this.getStateList("state_lists", this.modalVillage);
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
     }
@@ -99,14 +117,66 @@ public class Fragment_AddVillage extends Fragment {
             final String jsonStr = new String(buffer);
 //            jsonArr = new JSONArray(jsonStr);
             final Gson gson = new Gson();
-            final Type type = new TypeToken<Modal_Location>() {
+            final Type type = new TypeToken<List<Modal_Location>>() {
             }.getType();
-            this.modal_location = gson.fromJson(jsonStr, type);
+            this.modal_locationList = gson.fromJson(jsonStr, type);
+            String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
+            for(int i =0 ; i<modal_locationList.size(); i++)
+                if(modal_locationList.get(i).getCountryName().equalsIgnoreCase(country))
+                    modal_location = modal_locationList.get(i);
             //returnStoryNavigate = jsonObj.getJSONArray();
             this.setStates(modalVillage);
         } catch (final Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    ArrayList<String> booklet = new ArrayList<>();
+    List<Modal_Sort_Booklet> modal_sort_bookletList = new ArrayList<>();
+    ArrayAdapter<String> spinnerArrayAdapter;
+    public void setBooklets() {
+/*        String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
+        final List<String> listBooklet = KIXApplication.contentDao.getBooklets(country);
+        Log.d("booklet", "\n\nList SIZE: " + listBooklet.size());
+        final String strBooklet = listBooklet.toString();
+        Log.d("booklet", "\n\nbookletString: " + strBooklet);*/
+
+        String mySelectedCountry = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
+        booklet = new ArrayList<>();
+        booklet = (ArrayList<String>) contentDao.getBooklets(mySelectedCountry);
+        Modal_Sort_Booklet modal_sort_booklet;
+        for (int i = 0; i < booklet.size(); i++) {
+            String[] separated = booklet.get(i).split(" ");
+            modal_sort_booklet = new Modal_Sort_Booklet();
+            modal_sort_booklet.setBooklet_Name(booklet.get(i));
+            modal_sort_booklet.setBooklet_No(Integer.parseInt(separated[1]));
+            modal_sort_bookletList.add(modal_sort_booklet);
+        }
+
+        Collections.sort(modal_sort_bookletList, (o1, o2) -> o1.getBooklet_No() - o2.getBooklet_No());
+        booklet = new ArrayList<>();
+
+        for (int j = 0; j < modal_sort_bookletList.size(); j++)
+            booklet.add(modal_sort_bookletList.get(j).booklet_Name);
+        if (spinnerArrayAdapter == null) {
+            spinnerArrayAdapter = new ArrayAdapter<String>
+                    (Objects.requireNonNull(getActivity()), R.layout.spinner_item, booklet);
+            spn_Booklet.setAdapter(spinnerArrayAdapter);
+        } else {
+            spinnerArrayAdapter.notifyDataSetChanged();
+        }
+        int bkltPos = 0;
+        if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
+            for(int x=0; x<booklet.size(); x++) {
+                if (booklet.get(x).equalsIgnoreCase(modalVillage.getVillageBooklet())) {
+                    bkltPos = x;
+                    break;
+                }
+            }
+            spn_Booklet.setSelection(bkltPos);
+        }
+
     }
 
     @UiThread
@@ -229,6 +299,10 @@ public class Fragment_AddVillage extends Fragment {
     @Click(R.id.btn_save)
     public void saveVillage() {
 
+        if(isDomainWise)
+            this.villageBooklet = spn_Booklet.getSelectedItem().toString();
+        else
+            this.villageBooklet="";
         FastSave.getInstance().saveString(Kix_Constant.BOOKLET, this.villageBooklet);
 
         if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
@@ -237,7 +311,7 @@ public class Fragment_AddVillage extends Fragment {
                     this.stateName,
                     villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
                     this.villageBooklet);
-            Toast.makeText(getActivity(), "Village Edited Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.vill_Updated_success), Toast.LENGTH_SHORT).show();
             getFragmentManager().popBackStack();
         } else
             insertVillage();
@@ -259,6 +333,8 @@ public class Fragment_AddVillage extends Fragment {
     }
 
     private void insertVillage() {
+        if(!isDomainWise)
+            this.villageBooklet = "";
         String villageID = KIX_Utility.getUUID().toString();
         Modal_Village modalVillage = new Modal_Village();
         modalVillage.setVillageId("" + villageID);
@@ -272,7 +348,7 @@ public class Fragment_AddVillage extends Fragment {
         modalVillage.setSentFlag(0);
         villageDao.insertVillage(modalVillage);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), "Village Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.vill_added_success), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), Activity_Village_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
         intent.putExtra(Kix_Constant.VILLAGE_ID, villageID);

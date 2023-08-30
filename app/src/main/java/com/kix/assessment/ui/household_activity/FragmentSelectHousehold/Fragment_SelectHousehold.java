@@ -73,7 +73,7 @@ public class Fragment_SelectHousehold extends Fragment implements ContractHouseh
 //        households = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.HOUSEHOLD_LIST) : null;
         this.households = (ArrayList<Modal_Household>) householdDao.getAllHouseholdBySurveyorCodeDescending(surveyorCode, villageId);
         if (this.households.size() == 0) {
-            Toast.makeText(this.getActivity(), "No Household Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.no_household_found), Toast.LENGTH_SHORT).show();
             final Animation anim = android.view.animation.AnimationUtils.loadAnimation(this.fab_addVillage.getContext(), R.anim.shake);
             anim.setDuration(200L);
             this.fab_addVillage.startAnimation(anim);

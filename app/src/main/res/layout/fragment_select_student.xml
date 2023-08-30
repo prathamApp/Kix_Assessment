@@ -27,13 +27,13 @@
         android:layout_marginBottom="@dimen/_50sdp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addChild"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:id="@+id/fab_addChild"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:src="@drawable/ic_add_white_64dp"/>
+        android:src="@drawable/ic_add_white_64dp" />
 
 </RelativeLayout>

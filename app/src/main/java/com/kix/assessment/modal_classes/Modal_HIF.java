@@ -17,17 +17,17 @@ public class Modal_HIF implements Comparable, Parcelable {
     public String HH06b;//Do you speak English at home?
     public String HH06c;//(If yes in HH06a), how often do you speak English at home?
     public String HH06d;//Do you speak any other language at home? (ask this irrespective of the responses in HH06a and HH06b)
-    public String HH07a;//HH roofing (tick only one)
-    public String HH07b;//HH wall (external) material (tick only one)
+    public String HH07a;//Does the household have finished roofing?
+    public String HH07b;//Does the household have finished walls?
     public String HH07c;//What is the source of lighting regularly used in the household (tick only one)
     public String HH07cOther;//
     public String HH07d1;//Does the household have a regular source of drinking water within the compound (the source can be inside the house or outside, but only the members of the household exclusively use it)
     public String HH07d2;//(If yes in HH07d.1), do you pay to access/use this source of water?
-    public String HH07f;//Toilet
+    public String HH07f;//At least one toilet/latrine that is exclusively used by the members of the household?
     public String HH07g;//Atleast one member (other than the child's parents) who has completed high school diploma?
-    public String HH07h;//Any reading material other than school textbooks and religious books
+    public String HH07h;//Any children's books, or other suitable reading materials for children, like story books besides the school textbooks?
     public String HH07i;//Any other books or reading materials, like religious textbooks, newspapers magazines etc?
-    public String HH07j;//Computer
+    public String HH07j;//Computer/laptop/tablet?
     public String HH07k;//Television
     public String HH07m;//Mobile phone
     public String HH07n;//If yes in HH07l, is it a smartphone?

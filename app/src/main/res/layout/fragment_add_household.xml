@@ -39,7 +39,7 @@
             android:id="@+id/tv_isSampledHH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/str_HH00"
+            android:text="@string/str_isSampledHH"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_12sdp" />
 
@@ -61,7 +61,7 @@
                 android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/red"
-                android:text="@string/str_HH00_one"
+                android:text="@string/str_isSampledHH_one"
                 android:textAllCaps="true"
                 android:textColor="@color/red"
                 android:textSize="@dimen/_10sdp"
@@ -77,7 +77,7 @@
                 android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/red"
-                android:text="@string/str_HH00_two"
+                android:text="@string/str_isSampledHH_two"
                 android:textAllCaps="true"
                 android:textColor="@color/red"
                 android:textSize="@dimen/_10sdp"
@@ -93,7 +93,7 @@
                 android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
-                android:text="@string/str_HH00_three"
+                android:text="@string/str_isSampledHH_three"
                 android:textAllCaps="true"
                 android:textColor="@color/colorSignBoard"
                 android:textSize="@dimen/_10sdp"
@@ -161,7 +161,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HHO2"
+                    android:text="@string/str_HH02"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HHO3"
+                    android:text="@string/str_HH03"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -222,7 +222,7 @@
                     android:id="@+id/til_HH05_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HHO5"
+                    android:text="@string/str_HH05"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -253,7 +253,7 @@
                     android:id="@+id/tv_HH04a_noOfChild"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_HHO4a"
+                    android:text="@string/str_HH04a"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -303,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_1sdp"
-                    android:hint="@string/str_HHO4b"
+                    android:hint="@string/str_HH04b"
                     android:textColorHint="#757575"
                     android:visibility="gone"
                     app:hintTextAppearance="@dimen/_10sdp">

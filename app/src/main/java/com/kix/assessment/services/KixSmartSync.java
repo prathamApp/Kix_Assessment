@@ -157,9 +157,9 @@ public class KixSmartSync { //extends AutoSync {
             FastSave.getInstance().saveString(Kix_Constant.STUDENT_COUNT, ""+studentArray.length());
             FastSave.getInstance().saveString(Kix_Constant.VILLAGE_COUNT, ""+villageArray.length());
             FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_COUNT, ""+surveyorArray.length());
-            FastSave.getInstance().saveString(Kix_Constant.HOUSEHOLD_COUNT, ""+surveyorArray.length());
+            FastSave.getInstance().saveString(Kix_Constant.HOUSEHOLD_COUNT, ""+householdArray.length());
 
-            Log.e("KIX : ", String.valueOf(rootJson));
+            Log.e("KIX push JSON: ", String.valueOf(rootJson));
             KixSmartSync.pushDataToServer(rootJson, KixSmartSync.courseCount);
 
         } catch (final Exception e) {
@@ -213,7 +213,7 @@ public class KixSmartSync { //extends AutoSync {
                         Gson gson = new Gson();
                         Modal_PushResponse pushResponse = gson.fromJson(response, Modal_PushResponse.class);
                         if (pushResponse.status.equalsIgnoreCase("success")) {
-//                            new File(filepathstr + ".zip").delete();
+                            new File(filepathstr + ".zip").delete();
                             KixSmartSync.setSentFlag();
                             final EventMessage msg = new EventMessage();
                             msg.setMessage(Kix_Constant.SUCCESSFULLYPUSHED);
@@ -221,7 +221,7 @@ public class KixSmartSync { //extends AutoSync {
                             EventBus.getDefault().post(msg);
                         } else {
                             Log.e("PushData", "onResponse Failed :  " + response);
-//                            new File(filepathstr + ".zip").delete();
+                            new File(filepathstr + ".zip").delete();
                             final EventMessage msg = new EventMessage();
                             msg.setMessage(Kix_Constant.PUSHFAILED);
                             EventBus.getDefault().post(msg);
@@ -231,7 +231,7 @@ public class KixSmartSync { //extends AutoSync {
                     @Override
                     public void onError(final ANError anError) {
                         //Fail - Show dialog with failure message.
-//                        new File(filepathstr + ".zip").delete();
+                        new File(filepathstr + ".zip").delete();
                         final EventMessage msg = new EventMessage();
                         msg.setMessage(Kix_Constant.PUSHFAILED);
                         EventBus.getDefault().post(msg);

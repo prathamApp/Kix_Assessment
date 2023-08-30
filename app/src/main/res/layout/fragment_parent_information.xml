@@ -84,7 +84,8 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
-                android:paddingEnd="@dimen/_10sdp">
+                android:paddingEnd="@dimen/_10sdp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/lbl_PT01b"
@@ -160,7 +161,7 @@
                     android:id="@+id/lbl_PT01d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_PT0d"
+                    android:text="@string/str_PT01d"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_14sdp" />
 
@@ -303,7 +304,8 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingTop="@dimen/_5sdp"
-                android:paddingEnd="@dimen/_10sdp">
+                android:paddingEnd="@dimen/_10sdp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/lbl_PT02b"
@@ -380,7 +382,7 @@
                     android:id="@+id/lbl_PT02d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_PT0d"
+                    android:text="@string/str_PT02d"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_14sdp" />
 

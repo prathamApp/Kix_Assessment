@@ -35,7 +35,7 @@
             android:layout_marginEnd="@dimen/_20sdp"
             android:orientation="vertical"
             android:paddingTop="@dimen/_5sdp"
-            android:paddingBottom="@dimen/_5sdp">
+            android:paddingBottom="@dimen/_2sdp">
             <!--            android:background="@drawable/rounded_form_bg"-->
 
             <TextView
@@ -78,13 +78,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:orientation="vertical"
             android:paddingStart="@dimen/_15sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_5sdp">
+            android:paddingBottom="@dimen/_2sdp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -120,13 +120,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:orientation="vertical"
             android:paddingStart="@dimen/_15sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:paddingBottom="@dimen/_5sdp">
+            android:paddingBottom="@dimen/_2sdp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -146,14 +146,39 @@
                 android:popupBackground="@drawable/choose_level_bg"
                 android:textColor="@color/colorText" />
 
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                android:id="@+id/et_VillageName"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:drawablePadding="@dimen/_5sdp"-->
-            <!--                android:imeOptions="actionNext|flagNoExtractUi"-->
-            <!--                android:inputType="text"-->
-            <!--                android:singleLine="true"-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_booklet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Booklet"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_12sdp" />
+
+            <Spinner
+                android:id="@+id/spn_Booklet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/gradient_spinner"
+                android:gravity="center_vertical"
+                android:popupBackground="@drawable/choose_level_bg"
+                android:textColor="@color/colorText" />
 
         </LinearLayout>
 

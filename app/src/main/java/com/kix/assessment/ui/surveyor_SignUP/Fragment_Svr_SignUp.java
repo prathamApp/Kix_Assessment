@@ -153,8 +153,8 @@ public class Fragment_Svr_SignUp extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(s.length()<10)
-                    Fragment_Svr_SignUp.this.til_svrMobile.setError("Mobile No. should be 10 digit.");
+                if(s.length()<8)
+                    Fragment_Svr_SignUp.this.til_svrMobile.setError(getString(R.string.error_mobile_no));
                 else Fragment_Svr_SignUp.this.til_svrMobile.setError(null);
             }
         });
@@ -168,7 +168,7 @@ public class Fragment_Svr_SignUp extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(!Fragment_Svr_SignUp.isValidEmail(s.toString())) Fragment_Svr_SignUp.this.til_svrEmail.setError("Invalid Email! (Ex. abc@gmail.com)");
+                if(!Fragment_Svr_SignUp.isValidEmail(s.toString())) Fragment_Svr_SignUp.this.til_svrEmail.setError(getString(R.string.error_email));
                 else Fragment_Svr_SignUp.this.til_svrEmail.setError(null);
             }
         });
@@ -182,7 +182,7 @@ public class Fragment_Svr_SignUp extends Fragment {
 
             @Override
             public void afterTextChanged(final Editable s) {
-                if(s.length()<3) Fragment_Svr_SignUp.this.til_svrPassword.setError("Minimum 3 characters required!");
+                if(s.length()<3) Fragment_Svr_SignUp.this.til_svrPassword.setError(getString(R.string.error_password));
                 else Fragment_Svr_SignUp.this.til_svrPassword.setError(null);
             }
         });
@@ -198,11 +198,11 @@ public class Fragment_Svr_SignUp extends Fragment {
         if (!this.tie_svrName.getText().toString().isEmpty() && !this.tie_svrMobile.getText().toString().isEmpty()
                 && !this.tie_svrPassword.getText().toString().isEmpty() && this.countryPos !=0) {
             if(Fragment_Svr_SignUp.isValidEmail(this.tie_svrEmail.getText().toString())) {
-                if(this.tie_svrMobile.getText().toString().length()==10) {
+                if(tie_svrMobile.getText().toString().length()>=7 && tie_svrMobile.getText().toString().length()<=20) {
                     if(this.tie_svrPassword.getText().toString().length()>=3) {
                         final Modal_Surveyor surveyor = KixDatabase.getDatabaseInstance(this.getActivity()).getSurveyorDao().getSurveyorByMobile(this.tie_svrMobile.getText().toString());
                         if (surveyor != null) {
-                            Toast.makeText(this.getActivity(), "Profile is already saved..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this.getActivity(), getString(R.string.profile_already), Toast.LENGTH_SHORT).show();
                         } else {
                             try {
                                 final Modal_Surveyor modal_surveyor = new Modal_Surveyor();
@@ -223,21 +223,21 @@ public class Fragment_Svr_SignUp extends Fragment {
                                 KIX_Utility.showFragment(this.getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
                                         null, Fragment_Svr_SignIn.class.getSimpleName());
                             } catch (final Exception e){
-                                Toast.makeText(this.getActivity(), "Invalid Data!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this.getActivity(), getString(R.string.invalid_data), Toast.LENGTH_SHORT).show();
                             }
                         }
                     } else {
-                        Toast.makeText(this.getActivity(), "Minimum 3 characters required for Password!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), getString(R.string.error_password), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(this.getActivity(), "Invalid Mobile No.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.getActivity(), getString(R.string.error_mobile_no), Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this.getActivity(), "Invalid Email Id!", Toast.LENGTH_SHORT).show();
-                this.til_svrEmail.setError("Invalid Email! (Ex. abc@gmail.com)");
+                Toast.makeText(this.getActivity(), getString(R.string.error_email), Toast.LENGTH_SHORT).show();
+                this.til_svrEmail.setError(getString(R.string.error_email));
             }
         } else {
-            Toast.makeText(this.getActivity(), "All Fields Are Mandatory!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.all_fields_mandatory), Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -70,13 +70,17 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
         if (examGivenByStud != null) {
             holder.studentCardView.setBackground(context.getDrawable(R.drawable.rounded_bg_green));
             holder.iv_studentCheck.setVisibility(View.VISIBLE);
+            holder.iv_studentEdit.setImageResource(R.drawable.ic_edit_white_24dp);
+            holder.tv_studName.setTextColor(context.getResources().getColor(R.color.white));
         } else {
             holder.iv_studentCheck.setVisibility(View.INVISIBLE);
             holder.studentCardView.setBackground(context.getDrawable(R.drawable.rounder_bg_white));
+            holder.iv_studentEdit.setImageResource(R.drawable.ic_edit_black_24dp);
+            holder.tv_studName.setTextColor(context.getResources().getColor(R.color.colorText));
         }
 
-        boolean isPIFfilled = parentInformationDao.getPIF(modalStudnet.studentId);
-        if(isPIFfilled) holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
+        Modal_Student isPIFfilled = studentDao.getStudentByStudId(modalStudnet.studentId);
+        if(!isPIFfilled.parentId.isEmpty()) holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_green_rightcurve));
         else holder.tv_parentInfo.setBackground(context.getDrawable(R.drawable.rounder_bg_red));
 
         holder.itemView.setOnClickListener(v -> {

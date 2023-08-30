@@ -13,19 +13,20 @@ public class Modal_PIF implements Comparable, Parcelable {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     public int pifId;
+    public String parentId;
+    public int PT00;
     public String PT01a;//Mother's name
-    public String PT01b;//Mother's age
+//    public String PT01b;//Mother's age
     public String PT01c;//Has the mother ever attended school?
     public String PT01d;//If yes in PT01c, upto what grade has she completed schooling?
     public String PT01e;//Does the mother have an income generating work/job?
     public String PT01f;//If yes in PT01e then, what kind?
     public String PT02a;//Father's name
-    public String PT02b;//father's age
+//    public String PT02b;//father's age
     public String PT02c;//Has the father ever attended school?
     public String PT02d;//If yes in PT02c, upto what grade has he completed schooling?
     public String PT02e;//Does the father have an income generating work/job?
     public String PT02f;//If yes in PT02e then, what kind?
-    public String studentId;
     public String householdId;
     public static final Parcelable.Creator<Modal_PIF> CREATOR = new Parcelable.Creator<Modal_PIF>() {
         @Override
@@ -45,19 +46,20 @@ public class Modal_PIF implements Comparable, Parcelable {
 
     protected Modal_PIF(final Parcel in) {
         this.pifId = in.readInt();
+        this.parentId = in.readString();
+        this.PT00 = in.readInt();
         this.PT01a = in.readString();
-        this.PT01b = in.readString();
+//        this.PT01b = in.readString();
         this.PT01c = in.readString();
         this.PT01d = in.readString();
         this.PT01e = in.readString();
         this.PT01f = in.readString();
         this.PT02a = in.readString();
-        this.PT02b = in.readString();
+//        this.PT02b = in.readString();
         this.PT02c = in.readString();
         this.PT02d = in.readString();
         this.PT02e = in.readString();
         this.PT02f = in.readString();
-        this.studentId = in.readString();
         this.householdId = in.readString();
         this.info_createdOn = in.readString();
         this.sentFlag = in.readInt();
@@ -80,19 +82,20 @@ public class Modal_PIF implements Comparable, Parcelable {
     @Override
     public void writeToParcel(final Parcel dest, final int flags) {
         dest.writeInt(this.pifId);
+        dest.writeString(this.parentId);
+        dest.writeInt(this.PT00);
         dest.writeString(this.PT01a);
-        dest.writeString(this.PT01b);
+//        dest.writeString(this.PT01b);
         dest.writeString(this.PT01c);
         dest.writeString(this.PT01d);
         dest.writeString(this.PT01e);
         dest.writeString(this.PT01f);
         dest.writeString(this.PT02a);
-        dest.writeString(this.PT02b);
+//        dest.writeString(this.PT02b);
         dest.writeString(this.PT02c);
         dest.writeString(this.PT02d);
         dest.writeString(this.PT02e);
         dest.writeString(this.PT02f);
-        dest.writeString(this.studentId);
         dest.writeString(this.householdId);
         dest.writeString(this.info_createdOn);
         dest.writeInt(this.sentFlag);
@@ -106,21 +109,33 @@ public class Modal_PIF implements Comparable, Parcelable {
         this.pifId = pifId;
     }
 
+    public String getParentId() {
+        return this.parentId;
+    }
+
+    public void setParentId(final String parentId) {
+        this.parentId = parentId;
+    }
+
     public String getPT01a() {
         return PT01a;
     }
+
+    public int getPT00() { return this.PT00; }
+
+    public void setPT00(final int PT00) { this.PT00 = PT00; }
 
     public void setPT01a(String PT01a) {
         this.PT01a = PT01a;
     }
 
-    public String getPT01b() {
+/*    public String getPT01b() {
         return PT01b;
     }
 
     public void setPT01b(String PT01b) {
         this.PT01b = PT01b;
-    }
+    }*/
 
     public String getPT01c() {
         return PT01c;
@@ -162,13 +177,13 @@ public class Modal_PIF implements Comparable, Parcelable {
         this.PT02a = PT02a;
     }
 
-    public String getPT02b() {
+/*    public String getPT02b() {
         return PT02b;
     }
 
     public void setPT02b(String PT02b) {
         this.PT02b = PT02b;
-    }
+    }*/
 
     public String getPT02c() {
         return PT02c;
@@ -200,14 +215,6 @@ public class Modal_PIF implements Comparable, Parcelable {
 
     public void setPT02f(String PT02f) {
         this.PT02f = PT02f;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
     }
 
     public String getHouseholdId() {

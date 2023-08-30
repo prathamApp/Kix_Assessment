@@ -78,7 +78,7 @@ public class Fragment_HouseholdInformation extends Fragment {
     @ViewById(R.id.fab_Edit_VIF)
     FloatingActionButton fab_Edit_VIF;
 
-    String householdId, addMode = "";
+    String householdId, addMode="";
 
     public Fragment_HouseholdInformation() {
         // Required empty public constructor
@@ -114,7 +114,7 @@ public class Fragment_HouseholdInformation extends Fragment {
         tv_twoWheeler.setText(modalHif.HH07o);
         tv_bicycle.setText(modalHif.HH07p);*/
 
-        if (modalHif.getHH06b().equalsIgnoreCase("1")) {
+        if(modalHif.getHH06b().equalsIgnoreCase("1")) {
             tv_speakEnglish.setBackgroundResource(R.drawable.rounder_bg_green);
             tv_speakEnglish.setText(getString(R.string.yes));
         } else {

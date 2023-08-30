@@ -24,39 +24,42 @@
     <LinearLayout
         android:id="@+id/ll_selectPerson"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="visible">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/rounded_form_bg"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Child lives with"
-            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/str_child_lives_with"
             android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
 
         <RadioGroup
             android:id="@+id/rg_selectPerson"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/rb_mother"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_mother"
-                android:textColor="@color/colorText"
+                android:textColor="@color/colorSignBoard"
                 android:textSize="@dimen/_11sdp"
                 android:textStyle="bold" />
 
@@ -64,14 +67,10 @@
                 android:id="@+id/rb_father"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_father"
-                android:textColor="@color/colorText"
+                android:textColor="@color/colorSignBoard"
                 android:textSize="@dimen/_11sdp"
                 android:textStyle="bold" />
 
@@ -79,14 +78,21 @@
                 android:id="@+id/rb_both"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_1sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorSignBoard"
                 android:text="@string/str_both"
-                android:textColor="@color/colorText"
+                android:textColor="@color/colorSignBoard"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_neither"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="@string/str_neither"
+                android:textColor="@color/red"
                 android:textSize="@dimen/_11sdp"
                 android:textStyle="bold" />
         </RadioGroup>
@@ -96,16 +102,17 @@
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_5sdp"
-            android:text="Enter Details"
+            android:text="@string/enter_details"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textAppearance="@dimen/_5sdp"
             android:textColor="@color/white"
             android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
             app:cornerRadius="@dimen/_20sdp" />
 
     </LinearLayout>
@@ -115,9 +122,9 @@
         android:id="@+id/sv_pif"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tv_label"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:visibility="gone">
+        android:layout_below="@+id/ll_selectPerson"
+        android:layout_above="@+id/btn_saveParent"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -182,6 +189,7 @@
                         android:textColor="@color/colorText" />
                 </LinearLayout>
 
+<!--
                 <LinearLayout
                     android:id="@+id/ll_PT01b"
                     android:layout_width="match_parent"
@@ -203,6 +211,7 @@
                         android:popupBackground="@drawable/choose_level_bg"
                         android:textColor="@color/colorText" />
                 </LinearLayout>
+-->
 
                 <RelativeLayout
                     android:id="@+id/rl_PT01c"
@@ -285,7 +294,7 @@
                         android:id="@+id/lbl_PT01d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/str_PT0d"
+                        android:text="@string/str_PT01d"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/_12sdp" />
 
@@ -568,9 +577,11 @@
                         android:imeOptions="actionNext|flagNoExtractUi"
                         android:inputType="text"
                         android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="@color/colorText" />
                 </LinearLayout>
 
+<!--
                 <LinearLayout
                     android:id="@+id/ll_PT02b"
                     android:layout_width="match_parent"
@@ -592,6 +603,7 @@
                         android:popupBackground="@drawable/choose_level_bg"
                         android:textColor="@color/colorText" />
                 </LinearLayout>
+-->
 
                 <RelativeLayout
                     android:id="@+id/rl_PT02c"
@@ -674,7 +686,7 @@
                         android:id="@+id/lbl_PT02d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/str_PT0d"
+                        android:text="@string/str_PT02d"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/_12sdp" />
 
@@ -902,26 +914,24 @@
                     </RadioGroup>
                 </RelativeLayout>
             </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_saveParent"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:text="@string/save"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textAppearance="@dimen/_5sdp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_10sdp"
-                app:cornerRadius="@dimen/_20sdp"
-                android:visibility="gone"/>
-
         </LinearLayout>
     </ScrollView>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_saveParent"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/save"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:cornerRadius="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

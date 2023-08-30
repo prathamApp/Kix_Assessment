@@ -103,7 +103,7 @@ public class Fragment_AddHousehold extends Fragment {
 
             this.ll_isSampledHH.setVisibility(View.VISIBLE);
 //            sv_householdDetail.setVisibility(View.VISIBLE);
-            this.tv_title.setText("Update Household");
+            this.tv_title.setText(getString(R.string.update_household));
             this.et_hhNumber.setText(this.modal_household.getHH01());
             this.et_respondentName.setText(this.modal_household.getHH02());
             this.et_houseHeadName.setText(this.modal_household.getHH03());
@@ -166,9 +166,9 @@ public class Fragment_AddHousehold extends Fragment {
                     if (this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
                         final String hh_name;
                         if (this.str_HHOO == 1)
-                            hh_name = this.getString(R.string.str_HH00_one);
+                            hh_name = this.getString(R.string.str_isSampledHH_one);
                         else if (this.str_HHOO == 2)
-                            hh_name = this.getString(R.string.str_HH00_two);
+                            hh_name = this.getString(R.string.str_isSampledHH_two);
                         else
                             hh_name = this.et_respondentName.getText().toString();
 
@@ -182,19 +182,19 @@ public class Fragment_AddHousehold extends Fragment {
                                 this.et_noOfChilds.getText().toString(),
                                 this.householdId,
                                 this.villageId);
-                        Toast.makeText(getActivity(), "Household Edited Successfully!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.hh_Updated_success), Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
                     } else {
                         this.insertHousehold();
                     }
                 } else {
-                    Toast.makeText(this.getActivity(), "Please select radio button fields.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.getActivity(), getString(R.string.select_radio_button), Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this.getActivity(), "Household Number and Respondent names are Mandatory!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.getActivity(), getString(R.string.hhName_mandatory), Toast.LENGTH_SHORT).show();
             }
         } else
-            Toast.makeText(this.getActivity(), "Please select atlest one field", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.select_atleast_one), Toast.LENGTH_SHORT).show();
     }
 
     /*    if (!et_houseHoldName.getText().toString().isEmpty() && !et_houseHoldDistrict.getText().toString().isEmpty()
@@ -229,9 +229,9 @@ public class Fragment_AddHousehold extends Fragment {
             str_haveChildren = rb_HH04a.getText().toString();*/
         final String hh_name;
         if (this.str_HHOO == 1)
-            hh_name = this.getString(R.string.str_HH00_one);
+            hh_name = this.getString(R.string.str_isSampledHH_one);
         else if (this.str_HHOO == 2)
-            hh_name = this.getString(R.string.str_HH00_two);
+            hh_name = this.getString(R.string.str_isSampledHH_two);
         else
             hh_name = this.et_respondentName.getText().toString();
 
@@ -251,7 +251,7 @@ public class Fragment_AddHousehold extends Fragment {
         modal_household.setSentFlag(0);
         householdDao.insertHousehold(modal_household);
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "Household Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.hh_Added_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
 /*        Intent intent = new Intent(getActivity(), Activity_Household_.class);
         intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);

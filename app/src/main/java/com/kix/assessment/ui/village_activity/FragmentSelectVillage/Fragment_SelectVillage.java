@@ -86,7 +86,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
         villageArrayList = (ArrayList<Modal_Village>) villageDao.getAllVillageBySurveyorCode(surveyorCode);
         if (villageArrayList.size() == 0) {
-            Toast.makeText(getActivity(), "No Village Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.no_village_found), Toast.LENGTH_SHORT).show();
             Animation anim = android.view.animation.AnimationUtils.loadAnimation(fab_addVillage.getContext(), R.anim.shake);
             anim.setDuration(200L);
             fab_addVillage.startAnimation(anim);
@@ -201,7 +201,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
             logDao.insertLog(log);
             KixSmartSync.pushUsageToServer(true);
         } else {
-            Toast.makeText(this.getActivity(), "Please Check Internet Connection!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -212,6 +212,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
     private TextView tv_dia_stud;
     private TextView tv_dia_score;
     private TextView tv_dialTitle;
+    private TextView tv_dia_hhld;
     private CustomLodingDialog myLoadingDialog;
 
     @UiThread
@@ -267,6 +268,7 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         this.tv_dia_survey = this.pushStatusDialogue.findViewById(R.id.dia_survey);
         this.tv_dia_stud = this.pushStatusDialogue.findViewById(R.id.dia_stud);
         this.tv_dia_score = this.pushStatusDialogue.findViewById(R.id.dia_score);
+        this.tv_dia_hhld = this.pushStatusDialogue.findViewById(R.id.dia_hhld);
 
         this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
                 + "" + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
@@ -276,6 +278,8 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
                 + "" + FastSave.getInstance().getString(Kix_Constant.VILLAGE_COUNT, "0"));
         this.tv_dia_survey.setText(this.getResources().getString(R.string.surveyor_count)
                 + "" + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
+        this.tv_dia_hhld.setText(this.getResources().getString(R.string.household_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
 
         this.pushStatusDialogue.show();
     }

@@ -3,9 +3,10 @@ package com.kix.assessment.kix_utils;
 public class Kix_Constant {
 
 
-    public static final String PUSH_API = "http://3.6.40.184:8000/push/";
+    public static final String PUSH_API = "http://52.66.205.176:8000/push/";
 //    public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
-    public static final String PUSH_DB_API = "http://13.76.6.250:81/kix/pushdb";
+    public static final String PUSH_DB_API = " http://52.66.205.176:8000/push_db/";
+//    public static final String PUSH_DB_API = "http://13.76.6.250:81/kix/pushdb";
 
     public static final String BOOKLET_NAME = "booklet_name";
     public static final String BOOKLET_NO = "booklet_no";
@@ -21,6 +22,7 @@ public class Kix_Constant {
     public static final String STUDENT_LIST = "Student_List";
     public static final String STUDENT_NAME = "Student_Name";
     public static final String STUDENT_ID = "student_id";
+    public static final String PARENT_ID = "parent_id";
     public static final String HOUSEHOLD_LIST = "Household_List";
     public static final String VILLAGE_LIST = "Village_List";
     public static final String HOUSEHOLD_ID = "Household_Id";

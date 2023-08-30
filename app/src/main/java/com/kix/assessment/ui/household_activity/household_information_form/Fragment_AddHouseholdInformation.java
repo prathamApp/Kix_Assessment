@@ -222,7 +222,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
         if(this.selectedHH06b ==99 || this.selectedHH07a ==99 || this.selectedHH07b ==99 || this.selectedHH07c ==99 || this.selectedHH07d1 ==99 ||
                 this.selectedHH07f ==99 || this.selectedHH07g ==99 || this.selectedHH07h ==99 || this.selectedHH07i ==99 || this.selectedHH07j ==99 ||
                 this.selectedHH07k ==99 || this.selectedHH07m ==99 || this.selectedHH07o ==99 || this.selectedHH07q ==99) {
-            Toast.makeText(this.getActivity(), "All fields are mandatory.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.all_fields_mandatory), Toast.LENGTH_SHORT).show();
         } else {
             if (this.getArguments().getString(Kix_Constant.EDIT_HOUSEHOLD) != null) {
                 if (!this.et_HH07c_other.getText().toString().isEmpty())
@@ -236,7 +236,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
                     if(this.selectedHH07n != 99) {
                         this.updateHIF();
                     } else {
-                        Toast.makeText(this.getActivity(), "All fields are mandatory..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), getString(R.string.all_fields_mandatory),Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     this.updateHIF();
@@ -246,7 +246,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
                     if(this.selectedHH07n != 99) {
                         this.insertHIF();
                     } else {
-                        Toast.makeText(this.getActivity(), "All fields are mandatory...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.getActivity(), getString(R.string.all_fields_mandatory),Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     this.insertHIF();
@@ -289,7 +289,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
 
         householdInformationDao.insertHouseholdInfo(modal_hif);
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "HouseholdInformation Added Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.householdinfo_added_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
 
     }
@@ -320,7 +320,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
                 this.householdId);
 
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), "HouseholdInformation Edited Successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.hif_Updated_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
     }
 
@@ -399,6 +399,13 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
         if(modalHif.HH07o.equalsIgnoreCase("1")) {
             this.rg_motorVehicle.check(R.id.rb_HH07o_yes);
             this.rl_noOfWheels.setVisibility(View.VISIBLE);
+
+            if(modalHif.HH07p.contains("1,"))
+                cb_HH07pFourWheel.setChecked(true);
+            if(modalHif.HH07p.contains("2,"))
+                cb_HH07pThreeWheel.setChecked(true);
+            if(modalHif.HH07p.contains("3,"))
+                cb_HH07pTwoWheel.setChecked(true);
         }
         else{
             this.rg_motorVehicle.check(R.id.rb_HH07o_No);

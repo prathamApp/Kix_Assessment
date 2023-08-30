@@ -6,6 +6,7 @@ import static com.kix.assessment.KIXApplication.parentInformationDao;
 import static com.kix.assessment.KIXApplication.sessionDao;
 import static com.kix.assessment.KIXApplication.studentDao;
 import static com.kix.assessment.kix_utils.Kix_Constant.HOUSEHOLD_ID;
+import static com.kix.assessment.kix_utils.Kix_Constant.PARENT_ID;
 import static com.kix.assessment.kix_utils.Kix_Constant.STUDENT_ID;
 
 import android.annotation.SuppressLint;
@@ -15,8 +16,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,6 +66,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @EFragment(R.layout.fragment_select_student)
@@ -80,6 +86,14 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
     Modal_Student add_student = new Modal_Student();
 
     private StudentListAdapter studentListAdapter;
+    boolean loaderFlg;
+    private BlurPopupWindow pushDialog, pushStatusDialogue;
+    private TextView tv_dia_vil;
+    private TextView tv_dia_survey;
+
+    public BlurPopupWindow ml_StatusConfDlg;
+    String parentName = "";
+    String selectedParentId="";
 
     public Fragment_SelectStudent() {/*Required constructor*/}
 
@@ -91,7 +105,7 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         //students = getArguments() != null ? getArguments().getParcelableArrayList(Kix_Constant.STUDENT_LIST) : null;
         this.students = (ArrayList<Modal_Student>) studentDao.getAllStudentsBySurveyorCodeDescending(this.surveyorCode, this.householdID);
         if(this.students.size()==0){
-            Toast.makeText(this.getActivity(), "No Student Found.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
             final Animation anim = android.view.animation.AnimationUtils.loadAnimation(this.fab_addChild.getContext(),  R.anim.shake);
             anim.setDuration(200L);
             this.fab_addChild.startAnimation(anim);
@@ -128,11 +142,6 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
         KIX_Utility.showFragment(this.getActivity(), new Fragment_AddStudent_(), R.id.attendance_frame,
                     bundle, Fragment_AddStudent.class.getSimpleName());
     }
-
-    boolean loaderFlg;
-    private BlurPopupWindow pushDialog, pushStatusDialogue;
-    private TextView tv_dia_vil;
-    private TextView tv_dia_survey;
 
     @Override
     public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
@@ -188,18 +197,84 @@ public class Fragment_SelectStudent extends Fragment implements ContractStudentL
 
     @Override
     public void addPIF(int position) {
-        final Modal_Student modal_student = this.studentListAdapter.getitem(position);
-        final Bundle bundle = new Bundle();
-        bundle.putString(STUDENT_ID, modal_student.getStudentId());
-        bundle.putString(HOUSEHOLD_ID, modal_student.getHouseholdId());
+        ListView parentListView;
+        ArrayList<Modal_PIF> parentList;
+        ArrayAdapter adapter;
 
-        Modal_PIF modalPif = parentInformationDao.getPIFbyStudentId(modal_student.getStudentId());
-        if(modalPif!=null)
+        final Modal_Student modal_student = this.studentListAdapter.getitem(position);
+        String parentId = modal_student.parentId;
+        final Bundle addNewPI = new Bundle();
+        addNewPI.putString(STUDENT_ID, modal_student.studentId);
+        addNewPI.putString(HOUSEHOLD_ID, modal_student.householdId);
+
+        if(parentId.isEmpty()) {
+            List<Modal_PIF> modal_pif = parentInformationDao.getParentFromHousehold(householdID);
+            if (!modal_pif.isEmpty()) {
+                ml_StatusConfDlg = new BlurPopupWindow.Builder(getActivity())
+                        .setContentView(R.layout.dialog_child_belongsto)
+                        .bindClickListener(v -> {
+                            if (!selectedParentId.isEmpty()) {
+                                studentDao.addParentId(selectedParentId,modal_student.studentId);
+                                BackupDatabase.backup(getActivity());
+                                Toast.makeText(getActivity(), getString(R.string.pif_Added_success), Toast.LENGTH_SHORT).show();
+                                students.get(position).setParentId(selectedParentId);
+//                                this.studentListAdapter.getitem(position).setParentId(parentId);
+                                this.studentListAdapter.notifyDataSetChanged();
+                                selectedParentId="";
+                            } else
+                                Toast.makeText(getActivity(), getString(R.string.select_parent_first), Toast.LENGTH_SHORT).show();
+                            ml_StatusConfDlg.dismiss();
+                        }, R.id.tv_savePIF)
+                        .bindClickListener(v -> {
+                            ml_StatusConfDlg.dismiss();
+                            KIX_Utility.showFragment(this.getActivity(), new Fragment_AddParentInfoForm_(), R.id.attendance_frame,
+                                    addNewPI, Fragment_AddParentInfoForm.class.getSimpleName());
+                        }, R.id.tv_addNewPIF)
+                        .setGravity(Gravity.CENTER)
+                        .setDismissOnTouchBackground(false)
+                        .setDismissOnClickBack(true)
+                        .setScaleRatio(0.2f)
+                        .setBlurRadius(10)
+                        .setTintColor(0x30000000)
+                        .build();
+                ml_StatusConfDlg.show();
+
+                parentListView = ml_StatusConfDlg.findViewById(R.id.lv_parents);
+                parentList = (ArrayList<Modal_PIF>) parentInformationDao.getParentFromHousehold(householdID);
+                List<String> parentNames = new ArrayList<>();
+                for (Modal_PIF modal_pif1 : parentList) {
+                    if (modal_pif1.PT01a.equalsIgnoreCase("NA")) {
+                        parentName = modal_pif1.PT02a;
+                        parentNames.add(parentName);
+                    } else if (modal_pif1.PT02a.equalsIgnoreCase("NA")) {
+                        parentName = modal_pif1.PT01a;
+                        parentNames.add(parentName);
+                    } else {
+                        parentName = modal_pif1.PT01a + " & " + modal_pif1.PT02a;
+                        parentNames.add(parentName);
+                    }
+                }
+                parentListView.setChoiceMode(parentListView.CHOICE_MODE_SINGLE);
+
+                adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_single_choice, parentNames);
+                parentListView.setAdapter(adapter);
+
+                parentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        selectedParentId = parentList.get(i).parentId;
+                    }
+                });
+            } else {
+                KIX_Utility.showFragment(this.getActivity(), new Fragment_AddParentInfoForm_(), R.id.attendance_frame,
+                        addNewPI, Fragment_AddParentInfoForm.class.getSimpleName());
+            }
+        } else {
+            Bundle parentID = new Bundle();
+            parentID.putString(PARENT_ID, parentId);
             KIX_Utility.showFragment(this.getActivity(), new Fragment_ParentInformation_(), R.id.attendance_frame,
-                bundle, Fragment_ParentInformation.class.getSimpleName());
-        else
-            KIX_Utility.showFragment(this.getActivity(), new Fragment_AddParentInfoForm_(), R.id.attendance_frame,
-                    bundle, Fragment_AddParentInfoForm.class.getSimpleName());
+                   parentID , Fragment_ParentInformation.class.getSimpleName());
+        }
     }
 
     private void markAttendance(final Modal_Student stud) {
