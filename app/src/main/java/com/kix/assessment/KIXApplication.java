@@ -37,12 +37,12 @@ import okhttp3.OkHttpClient;
 
 public class KIXApplication extends Application {
 
-    public static boolean isDomainWise = false;
+    public static final String appBuildDate = "31-Aug-2023";
     public static String contentSDPath="";
     public static String kixPath="";
     OkHttpClient okHttpClient;
     public static WiseFy wiseF;
-    public static final String appBuildDate = "30-Aug-2023";
+    public static boolean isDomainWise;
     public static boolean isSDCard;
     public static KIXApplication kixApplication;
     private static final DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH);
@@ -63,66 +63,66 @@ public class KIXApplication extends Application {
     public static AbandonedScoreDao abandonedScoreDao;
     public static StatusDao statusDao;
 
+    public static KIXApplication getInstance() {
+        return kixApplication;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
-        FastSave.init(this.getApplicationContext());
+        FastSave.init(getApplicationContext());
         Fresco.initialize(this);
-        if (KIXApplication.kixApplication == null) {
-            KIXApplication.kixApplication = this;
+        if (kixApplication == null) {
+            kixApplication = this;
         }
-        this.initializeDatabaseDaos();
-        this.setKixPath();
-        KIXApplication.wiseF = new WiseFy.Brains(this.getApplicationContext()).logging(true).getSmarts();
-        this.okHttpClient = new OkHttpClient().newBuilder()
+        initializeDatabaseDaos();
+        setKixPath();
+        wiseF = new WiseFy.Brains(getApplicationContext()).logging(true).getSmarts();
+        okHttpClient = new OkHttpClient().newBuilder()
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)
                 .build();
-        AndroidNetworking.initialize(this.getApplicationContext(), this.okHttpClient);
-    }
-
-    @Override
-    protected void attachBaseContext(final Context base) {
-        super.attachBaseContext(base);
+        AndroidNetworking.initialize(getApplicationContext(), okHttpClient);
     }
 
     public static UUID getUniqueID() {
         return UUID.randomUUID();
     }
 
-    public static KIXApplication getInstance() {
-        return KIXApplication.kixApplication;
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
     }
 
     private void initializeDatabaseDaos() {
-        final KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
-        KIXApplication.studentDao = kixDatabase.getStudentDao();
-        KIXApplication.parentInformationDao = kixDatabase.getParentInformationDao();
-        KIXApplication.surveyorDao = kixDatabase.getSurveyorDao();
-        KIXApplication.householdDao = kixDatabase.getHouseholdDao();
-        KIXApplication.householdInformationDao = kixDatabase.getHouseholdInformationDao();
-        KIXApplication.villageDao = kixDatabase.getVillageDao();
-        KIXApplication.villageInformationDao = kixDatabase.getVillageInformationDao();
-        KIXApplication.contentDao = kixDatabase.getContentDao();
-        KIXApplication.logDao = kixDatabase.getLogDao();
-        KIXApplication.attendanceDao = kixDatabase.getAttendanceDao();
-        KIXApplication.sessionDao = kixDatabase.getSessionDao();
-        KIXApplication.scoreDao = kixDatabase.getScoreDao();
-        KIXApplication.abandonedScoreDao = kixDatabase.getAbandonedScoreDao();
-        KIXApplication.statusDao = kixDatabase.getStatusDao();
+        KixDatabase kixDatabase = KixDatabase.getDatabaseInstance(this);
+        studentDao = kixDatabase.getStudentDao();
+        parentInformationDao = kixDatabase.getParentInformationDao();
+        surveyorDao = kixDatabase.getSurveyorDao();
+        householdDao = kixDatabase.getHouseholdDao();
+        householdInformationDao = kixDatabase.getHouseholdInformationDao();
+        villageDao = kixDatabase.getVillageDao();
+        villageInformationDao = kixDatabase.getVillageInformationDao();
+        contentDao = kixDatabase.getContentDao();
+        logDao = kixDatabase.getLogDao();
+        attendanceDao = kixDatabase.getAttendanceDao();
+        sessionDao = kixDatabase.getSessionDao();
+        scoreDao = kixDatabase.getScoreDao();
+        abandonedScoreDao = kixDatabase.getAbandonedScoreDao();
+        statusDao = kixDatabase.getStatusDao();
         /*if (!FastSave.getInstance().getBoolean(PD_Constant.BACKUP_DB_COPIED, false))
             new ReadBackupDb().execute();*/
     }
 
     public void setKixPath() {
         try {
-            KIXApplication.kixPath = KIX_Utility.getInternalPath(this);
-            final File f = new File(KIXApplication.kixPath);
+            kixPath = KIX_Utility.getInternalPath(this);
+            File f = new File(kixPath);
             if (!f.exists()) f.mkdirs();
-            final File nmFile = new File(KIXApplication.kixPath, ".nomedia");
+            File nmFile = new File(kixPath, ".nomedia");
             if (!nmFile.exists()) nmFile.createNewFile();
-        } catch (final IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
