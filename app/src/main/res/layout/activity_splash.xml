@@ -78,9 +78,10 @@
     </RelativeLayout>
     
     <TextView
+        android:id="@+id/app_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="v-1.0.5 (English-Uganda App) | 07-11-2023"
+        android:text=""
         android:textSize="@dimen/_6sdp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
