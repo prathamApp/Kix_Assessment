@@ -19,20 +19,26 @@ public class Score implements Serializable {
     private String studentId;
     @ColumnInfo(name = "deviceId")
     private String deviceId;
-    @ColumnInfo(name = "resourceId")
-    private String resourceId;
-    @ColumnInfo(name = "scoredMarks")
-    private String scoredMarks;
     @ColumnInfo(name = "startDateTime")
     private String startDateTime;
-    @ColumnInfo(name = "endDateTime")
-    private String endDateTime;
+    @ColumnInfo(name = "resourceId")
+    private String resourceId;
+    @ColumnInfo(name = "gameType")
+    private String gameType;
+    @ColumnInfo(name = "scoredMarks")
+    private String scoredMarks;
     @ColumnInfo(name = "label")
     private String label;
-    @ColumnInfo(name = "svrCode")
-    private String svrCode;
     @ColumnInfo(name = "bookletNo")
     private String bookletNo;
+    @ColumnInfo(name = "level")
+    private String level;
+    @ColumnInfo(name = "stage")
+    private int stage;
+    @ColumnInfo(name = "endDateTime")
+    private String endDateTime;
+    @ColumnInfo(name = "svrCode")
+    private String svrCode;
     @ColumnInfo(name = "countryName")
     private String countryName;
     @ColumnInfo(name = "sentFlag")
@@ -46,13 +52,16 @@ public class Score implements Serializable {
                 ", SessionID='" + sessionId + '\'' +
                 ", StudentID='" + studentId + '\'' +
                 ", DeviceId='" + deviceId + '\'' +
-                ", ResourceID='" + resourceId + '\'' +
-                ", ScoredMarks=" + scoredMarks +
                 ", StartDateTime='" + startDateTime + '\'' +
-                ", EndDateTime='" + endDateTime + '\'' +
-                ", svrCode='" + svrCode + '\'' +
+                ", ResourceID='" + resourceId + '\'' +
+                ", gameType='" + gameType + '\'' +
+                ", ScoredMarks=" + scoredMarks +
                 ", bookletNo='" + bookletNo + '\'' +
+                ", level='" + level + '\'' +
+                ", stage='" + stage + '\'' +
+                ", svrCode='" + svrCode + '\'' +
                 ", countryName='" + countryName+ '\'' +
+                ", EndDateTime='" + endDateTime + '\'' +
                 '}';
     }
 
@@ -160,4 +169,29 @@ public class Score implements Serializable {
     public void setCountryName(String countryName) {
         this.countryName = countryName;
     }
+
+    public String getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(final String level) {
+        this.level = level;
+    }
+
+    public int getStage() {
+        return this.stage;
+    }
+
+    public void setStage(final int stage) {
+        this.stage = stage;
+    }
+
+    public String getGameType() {
+        return this.gameType;
+    }
+
+    public void setGameType(final String gameType) {
+        this.gameType = gameType;
+    }
 }
+

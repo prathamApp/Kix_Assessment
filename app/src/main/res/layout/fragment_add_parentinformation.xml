@@ -154,6 +154,17 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@color/colorAccentDark"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mothers_instruction"
+                    android:textColor="@color/blue"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp" />
+
                 <LinearLayout
                     android:id="@+id/ll_PT01a"
                     android:layout_width="match_parent"
@@ -546,6 +557,17 @@
                     android:textSize="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fathers_instruction"
+                    android:textColor="@color/blue"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp" />
+
                 <LinearLayout
                     android:id="@+id/ll_PT02a"
                     android:layout_width="match_parent"
@@ -840,7 +862,7 @@
                         android:id="@+id/lbl_PT02f"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/str_PT01f"
+                        android:text="@string/str_PT02f"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/_12sdp" />
 

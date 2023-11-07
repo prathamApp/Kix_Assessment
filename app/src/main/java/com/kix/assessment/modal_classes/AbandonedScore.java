@@ -21,6 +21,8 @@ public class AbandonedScore implements Serializable {
     private String deviceId;
     @ColumnInfo(name = "resourceId")
     private String resourceId;
+    @ColumnInfo(name = "gameType")
+    private String gameType;
     @ColumnInfo(name = "scoredMarks")
     private String scoredMarks;
     @ColumnInfo(name = "startDateTime")
@@ -37,9 +39,12 @@ public class AbandonedScore implements Serializable {
     private String reason;
     @ColumnInfo(name = "countryName")
     private String countryName;
+    @ColumnInfo(name = "level")
+    private String level;
+    @ColumnInfo(name = "stage")
+    private int stage;
     @ColumnInfo(name = "sentFlag")
     private int sentFlag;
-
 
     @Override
     public String toString() {
@@ -49,12 +54,15 @@ public class AbandonedScore implements Serializable {
                 ", StudentID='" + studentId + '\'' +
                 ", DeviceId='" + deviceId + '\'' +
                 ", ResourceID='" + resourceId + '\'' +
+                ", gameType='" + gameType + '\'' +
                 ", ScoredMarks=" + scoredMarks +
                 ", StartDateTime='" + startDateTime + '\'' +
                 ", EndDateTime='" + endDateTime + '\'' +
                 ", svrCode='" + svrCode + '\'' +
                 ", bookletNo='" + bookletNo + '\'' +
                 ", reason='" + reason + '\'' +
+                ", level='" + level + '\'' +
+                ", stage='" + stage + '\'' +
                 ", countryName='" + countryName + '\'' +
                 '}';
     }
@@ -170,5 +178,28 @@ public class AbandonedScore implements Serializable {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(final String level) {
+        this.level = level;
+    }
+
+    public int getStage() {
+        return this.stage;
+    }
+
+    public void setStage(final int stage) {
+        this.stage = stage;
+    }
+
+    public String getGameType() {
+        return this.gameType;
+    }
+
+    public void setGameType(final String gameType) {
+        this.gameType = gameType;
     }
 }

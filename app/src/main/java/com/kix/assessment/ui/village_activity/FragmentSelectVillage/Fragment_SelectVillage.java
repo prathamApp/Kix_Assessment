@@ -75,6 +75,20 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
 
     private VillageListAdapter villageListAdapter;
 
+    boolean loaderFlg;
+    private BlurPopupWindow pushDialog, pushStatusDialogue;
+    private TextView tv_dia_vil;
+    private TextView tv_dia_survey;
+    private TextView tv_dia_stud;
+    private TextView tv_dia_score;
+    private TextView tv_dialTitle;
+    private TextView tv_dia_hhld;
+    private TextView tv_dia_vif;
+    private TextView tv_dia_hif;
+    private TextView tv_dia_pif;
+    private CustomLodingDialog myLoadingDialog;
+
+
     public Fragment_SelectVillage() {
         // Required empty public constructor
     }
@@ -205,16 +219,6 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         }
     }
 
-    boolean loaderFlg;
-    private BlurPopupWindow pushDialog, pushStatusDialogue;
-    private TextView tv_dia_vil;
-    private TextView tv_dia_survey;
-    private TextView tv_dia_stud;
-    private TextView tv_dia_score;
-    private TextView tv_dialTitle;
-    private TextView tv_dia_hhld;
-    private CustomLodingDialog myLoadingDialog;
-
     @UiThread
     public void showLoadingDialog() {
         this.loaderFlg = true;
@@ -269,6 +273,9 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         this.tv_dia_stud = this.pushStatusDialogue.findViewById(R.id.dia_stud);
         this.tv_dia_score = this.pushStatusDialogue.findViewById(R.id.dia_score);
         this.tv_dia_hhld = this.pushStatusDialogue.findViewById(R.id.dia_hhld);
+        this.tv_dia_vif = this.pushStatusDialogue.findViewById(R.id.dia_vif);
+        this.tv_dia_hif = this.pushStatusDialogue.findViewById(R.id.dia_hif);
+        this.tv_dia_pif = this.pushStatusDialogue.findViewById(R.id.dia_pif);
 
         this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
                 + "" + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
@@ -280,6 +287,12 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
                 + "" + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
         this.tv_dia_hhld.setText(this.getResources().getString(R.string.household_count)
                 + "" + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
+        this.tv_dia_vif.setText(this.getResources().getString(R.string.vif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.VIF_COUNT, "0"));
+        this.tv_dia_hif.setText(this.getResources().getString(R.string.hif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.HIF_COUNT, "0"));
+        this.tv_dia_pif.setText(this.getResources().getString(R.string.pif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.PIF_COUNT, "0"));
 
         this.pushStatusDialogue.show();
     }

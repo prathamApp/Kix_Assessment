@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/kix_assessment"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/_20sdp"
@@ -76,5 +76,15 @@
             app:strokeColor="@color/colorBtnGreenDark"
             app:strokeWidth="1dp" />
     </RelativeLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v-1.0.5 (English-Uganda App) | 07-11-2023"
+        android:textSize="@dimen/_6sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_3sdp"/>
 
 </RelativeLayout>

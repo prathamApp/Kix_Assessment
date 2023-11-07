@@ -10,9 +10,11 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.text.Editable;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextWatcher;
 import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
@@ -171,7 +173,7 @@ public class Fragment_AddStudent extends Fragment {
     Button dlg_yes, dlg_no;
 
     ArrayAdapter adapterAge, adapterGender, adapterEnrollStatus,
-            adapterClass, adapterSchoolType, adapterDropYear;
+            adapterClass, adapterDropoutClass, adapterSchoolType, adapterDropYear;
 
     Modal_Student modalStudent;
 
@@ -214,7 +216,8 @@ public class Fragment_AddStudent extends Fragment {
         spinner_dropoutYear.setAdapter(adapterDropYear);
         adapterClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_class, R.layout.spinner_item);
         spinner_class.setAdapter(adapterClass);
-        spinner_dropout_class.setAdapter(adapterClass);
+        adapterDropoutClass = ArrayAdapter.createFromResource(getActivity(), R.array.student_dropoutclass, R.layout.spinner_item);
+        spinner_dropout_class.setAdapter(adapterDropoutClass);
 
         selectedCH04a = selectedCH05 = selectedCH06c = selectedCH06f = selectedCH06g = selectedCH07a =
                 selectedCH07d = selectedCH09a = selectedCH09b = selectedCH08a = selectedCH08b = selectedCH09c = 99;
@@ -328,7 +331,7 @@ public class Fragment_AddStudent extends Fragment {
             }
         });*/
 
-        spinner_age.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+/*        spinner_age.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 et_studentName.clearFocus();
@@ -348,16 +351,34 @@ public class Fragment_AddStudent extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
-        });
+        });*/
 
-        et_studentName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+/*        et_studentName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     addChildNameToQuestion();
-                }/* else {
+                }*//* else {
                     Toast.makeText(getActivity(), "Lost the focus", Toast.LENGTH_LONG).show();
-                }*/
+                }*//*
+            }
+        });*/
+
+        et_studentName.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                    addChildNameToQuestion();
             }
         });
     }
@@ -372,6 +393,7 @@ public class Fragment_AddStudent extends Fragment {
         final SpannableStringBuilder sb7 = new SpannableStringBuilder(getString(R.string.str_CH09b).replace("[###]",et_studentName.getText()));
         final SpannableStringBuilder sb8 = new SpannableStringBuilder(getString(R.string.str_CH09c).replace("[###]",et_studentName.getText()));
         final SpannableStringBuilder sb9 = new SpannableStringBuilder(getString(R.string.str_CH04a).replace("[###]",et_studentName.getText()));
+        final SpannableStringBuilder sb10 = new SpannableStringBuilder(getString(R.string.str_CH07d).replace("[###]",et_studentName.getText()));
         final StyleSpan bss = new StyleSpan(android.graphics.Typeface.BOLD);
 
         sb1.setSpan(bss, 0, 5, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
@@ -383,6 +405,7 @@ public class Fragment_AddStudent extends Fragment {
         sb7.setSpan(bss, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         sb8.setSpan(bss, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         sb9.setSpan(bss, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        sb10.setSpan(bss, 0, 6, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         //tv_CHO5.setText(Html.fromHtml(getString(R.string.str_CH05).replace("[###]",et_studentName.getText())));
         tv_CHO4a.setText(sb9);
         tv_CHO5.setText(sb1);
@@ -394,6 +417,7 @@ public class Fragment_AddStudent extends Fragment {
         tv_CHO9a.setText(sb6);
         tv_CHO9b.setText(sb7);
         tv_CHO9c.setText(sb8);
+        tv_CHO7d.setText(sb10);
     }
 
     private void fetchChildDetails(Modal_Student modalStudent) {
@@ -597,7 +621,7 @@ public class Fragment_AddStudent extends Fragment {
                             "" + selectedCH08a, "" + selectedCH08b, "" + selectedCH09c,
                             studId);
                     BackupDatabase.backup(getActivity());
-                    Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.child_update_success), Toast.LENGTH_SHORT).show();
                     getFragmentManager().popBackStack();
                 } else insertStud();
             }
@@ -636,7 +660,7 @@ public class Fragment_AddStudent extends Fragment {
                                     "" + selectedCH09a, "" + selectedCH09b, "" + selectedCH08a, "" + selectedCH08b,
                                     "" + selectedCH09c, studId);
                             BackupDatabase.backup(getActivity());
-                            Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.child_update_success), Toast.LENGTH_SHORT).show();
                             getFragmentManager().popBackStack();
                         } else insertStud();
                     }
@@ -653,7 +677,7 @@ public class Fragment_AddStudent extends Fragment {
                                 "" + selectedCH09a, "" + selectedCH09b, "" + selectedCH08a, "" + selectedCH08b,
                                 "" + selectedCH09c, studId);
                         BackupDatabase.backup(getActivity());
-                        Toast.makeText(getActivity(), getString(R.string.stud_Updated_success), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.child_update_success), Toast.LENGTH_SHORT).show();
                         getFragmentManager().popBackStack();
                     } else insertStud();
                 }
@@ -699,7 +723,7 @@ public class Fragment_AddStudent extends Fragment {
 
         studentDao.insertStudent(modal_student);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), getString(R.string.stud_Added_success), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.child_add_success), Toast.LENGTH_SHORT).show();
         startDialog(modal_student);
 
     }

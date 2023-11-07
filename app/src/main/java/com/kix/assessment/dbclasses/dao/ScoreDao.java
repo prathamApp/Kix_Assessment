@@ -52,7 +52,7 @@ public interface ScoreDao {
     @Query("UPDATE Score SET sentFlag = 1 where sessionId = :s_id")
     int updateFlag(String s_id);
 
-    @Query("select Student.CH01 as StudentName, Student.CH02 as StudentAge,\n" +
+    @Query("select Student.CH01 as StudentName, Student.CH03 as StudentAge,\n" +
             "Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Student\n" +
             "LEFT JOIN score on student.studentId = Score.studentId\n" +
             "INNER JOIN Household on Household.householdId = Student.householdId\n" +

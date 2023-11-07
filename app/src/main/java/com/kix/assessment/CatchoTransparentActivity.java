@@ -42,6 +42,7 @@ public class CatchoTransparentActivity extends AppCompatActivity {
                     AbandonedScore abandonedScore = new AbandonedScore();
                     abandonedScore.setDeviceId(scoresList.get(i).getDeviceId());
                     abandonedScore.setResourceId(scoresList.get(i).getResourceId());
+                    abandonedScore.setGameType(scoresList.get(i).getGameType());
                     abandonedScore.setScoredMarks(scoresList.get(i).getScoredMarks());
                     abandonedScore.setSessionId(scoresList.get(i).getSessionId());
                     abandonedScore.setStudentId(scoresList.get(i).getStudentId());
@@ -51,6 +52,8 @@ public class CatchoTransparentActivity extends AppCompatActivity {
                     abandonedScore.setSvrCode(scoresList.get(i).getSvrCode());
                     abandonedScore.setSentFlag(scoresList.get(i).getSentFlag());
                     abandonedScore.setBookletNo(scoresList.get(i).getBookletNo());
+                    abandonedScore.setStage(scoresList.get(i).getStage());
+                    abandonedScore.setLevel(scoresList.get(i).getLevel());
                     abandonedScore.setCountryName(scoresList.get(i).getCountryName());
                     abandonedScore.setReason("App Crash");
                     abandonedScoreList.add(abandonedScore);

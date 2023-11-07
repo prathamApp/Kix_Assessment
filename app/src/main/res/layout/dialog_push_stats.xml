@@ -22,7 +22,7 @@
             android:layout_marginVertical="@dimen/_10sdp"
             android:gravity="center"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="details"
+            android:text="@string/sync_details"
             android:textColor="@color/colorBtnGreenDark"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold" />
@@ -53,14 +53,14 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/dia_survey"
+            android:id="@+id/dia_pif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dia_stud"
             android:layout_marginTop="@dimen/_3sdp"
             android:gravity="center"
             android:paddingHorizontal="@dimen/_7sdp"
-            android:text="@string/push_success"
+            android:text="pif"
             android:textColor="@color/colorText"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -69,7 +69,7 @@
             android:id="@+id/dia_vil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dia_survey"
+            android:layout_below="@+id/dia_pif"
             android:layout_marginTop="@dimen/_3sdp"
             android:gravity="center"
             android:paddingHorizontal="@dimen/_7sdp"
@@ -79,10 +79,50 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/dia_hhld"
+            android:id="@+id/dia_vif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dia_vil"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="vif"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/dia_hhld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dia_vif"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/push_success"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dia_hif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dia_hhld"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/push_success"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dia_survey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dia_hif"
             android:layout_marginTop="@dimen/_3sdp"
             android:gravity="center"
             android:paddingHorizontal="@dimen/_7sdp"
@@ -95,7 +135,7 @@
             android:id="@+id/ll_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dia_hhld"
+            android:layout_below="@+id/dia_survey"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
@@ -120,5 +160,4 @@
 
         </LinearLayout>
     </RelativeLayout>
-
 </RelativeLayout>

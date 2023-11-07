@@ -320,7 +320,7 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
                 this.householdId);
 
         BackupDatabase.backup(this.getActivity());
-        Toast.makeText(this.getActivity(), getString(R.string.hif_Updated_success), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getActivity(), getString(R.string.householdinfo_updated_success), Toast.LENGTH_SHORT).show();
         this.getFragmentManager().popBackStack();
     }
 

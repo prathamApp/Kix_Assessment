@@ -49,7 +49,7 @@ public interface StudentDao {
                        String studDropoutYear, String studDropoutGrade, String dropoutReason, String paidTution, String readMaterial,
                        String helpChild, String mostOften, String oftenRead, String sId);
 
-    @Query("update Student set parentId=:parentId where studentId=:sId")
+    @Query("update Student set parentId=:parentId, sentFlag=0 where studentId=:sId")
     void addParentId(String parentId, String sId);
 
     @Query("SELECT * FROM Student WHERE parentId=:parId")

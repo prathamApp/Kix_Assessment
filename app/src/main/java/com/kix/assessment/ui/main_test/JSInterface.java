@@ -1,6 +1,9 @@
 package com.kix.assessment.ui.main_test;
 
 import static com.kix.assessment.ui.main_test.WebViewActivity.gameListList;
+import static com.kix.assessment.ui.main_test.WebViewActivity.isLanguage;
+import static com.kix.assessment.ui.main_test.WebViewActivity.modelLangGameList;
+import static com.kix.assessment.ui.main_test.WebViewActivity.modelMathsGameList;
 import static com.kix.assessment.ui.main_test.WebViewActivity.queCnt;
 
 import android.annotation.SuppressLint;
@@ -42,8 +45,13 @@ public class JSInterface {
     @SuppressLint("StaticFieldLeak")
     @JavascriptInterface
     public String getGameID(){
-        Log.d("GAME CODE", "POS : "+ queCnt+"     GAME CODE : "+gameListList.get(queCnt).getContentCode());
-        return gameListList.get(queCnt).getContentCode();
+        if(isLanguage){
+            Log.d("GAME CODE", "POS : "+ queCnt+"Lang_Game_CODE : "+modelLangGameList.get(queCnt).getGamename());
+            return modelLangGameList.get(queCnt).getGamename();
+        } else {
+            Log.d("GAME CODE", "POS : " + queCnt + "Math_Game_CODE : " + modelMathsGameList.get(queCnt).getGamename());
+            return modelMathsGameList.get(queCnt).getGamename();
+        }
     }
 
     @SuppressLint("StaticFieldLeak")

@@ -3,26 +3,14 @@
 
     <!--ENGLISH START ____________________________________________________________________-->
     <string name="app_name" translatable="false">ELANA</string>
-    <string name="permissions_head" translatable="false"><b>ELANA uses the following permissions to enhance learning experience:</b></string>
-    <string name="permissions" translatable="false">
-        <b><i>LOCATION:</i></b> Customize content for region\n<b><i>
-        STORAGE:</i></b> To save the content and enable offline access\n<b><i>
-        RECORD_AUDIO:</i></b> Using speech recognition for advanced \n reading exercises</string>
-
     <string name="Collecting_Data" translatable="false">Collecting Data</string>
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-
-
-    <string name="push_success">Pushed Successfully!!</string>
-    <string name="push_fail">Push Failed!!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="push_success">Pushed Successfully!</string>
+    <string name="push_fail">Push Failed!</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
-    <string name="Okay">Okay</string>
     <string name="ok">Ok</string>
-    <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">Please wait, pushing Data...</string>
-    <string name="check_wifi_connected_kolibri">Check your wifi is connected to Pratham Kolibri !</string>
+    <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">Please wait, pushing data...</string>
     <string name="details">Details</string>
-    <string name="goto_next">Goto Next</string>
+    <string name="goto_next">Go to Next</string>
     <string name="cancel">Cancel</string>
     <string name="profile">Profile</string>
     <string name="create_surveyor">Create Surveyor Account</string>
@@ -37,7 +25,10 @@
     <string name="village_count">Village Count : </string>
     <string name="surveyor_count">Surveyor Count : </string>
     <string name="household_count">Household Count : </string>
-
+    <string name="hif_count">HIF Count : </string>
+    <string name="vif_count">VIF Count : </string>
+    <string name="pif_count">PIF Count : </string>
+    <string name="sync_details">Sync Details</string>
     <string name="edit_child_info">Edit Child Information</string>
 
 
@@ -45,17 +36,17 @@
     <string name="add_village_info">Add Village Information</string>
     <string name="update_village_info">Update Village Information</string>
     <string name="str_village_info">Village Information</string>
-    <string name="str_V01"><b>V01.</b> Is there tarmac/all weather road leading to the village/EA?</string>
-    <string name="str_V02"><b>V02.</b> Is there public transport available to the village/EA?</string>
-    <string name="str_V03"><b>V03.</b> Does the village/EA have access to electricity connection?</string>
-    <string name="str_V04"><b>V04.</b> Does the village/EA have any government health center/hospital?</string>
-    <string name="str_V05"><b>V05.</b> Does the village/EA have any private health clinic/hospital?</string>
-    <string name="str_V06a"><b>V06a.</b> Does the village/EA have any pre-primary schools or any school offering pre-primary grades/classes?</string>
-    <string name="str_V06b"><b>V06b.</b> Which type of school(s) in the village/EA offers pre-primary grades/classes?</string>
-    <string name="str_V07a"><b>V07a.</b> Does the village/EA have any schools offering primary grades/classes?</string>
-    <string name="str_V07b"><b>V07b.</b> Which type of school(s) in the village/EA offers primary grades/classes?</string>
-    <string name="villinfo_Updated_success">VillageInformation Updated Successfully!</string>
-    <string name="villinfo_added_success">VillageInformation Added Successfully!</string>
+    <string name="str_V01"><b>V01.</b> Is there tarmac/all weather road leading to the village?</string>
+    <string name="str_V02"><b>V02.</b> Is there public transport available to the village?</string>
+    <string name="str_V03"><b>V03.</b> Does the village have access to electricity connection?</string>
+    <string name="str_V04"><b>V04.</b> Does the village have any government health center/hospital?</string>
+    <string name="str_V05"><b>V05.</b> Does the village have any private health clinic/hospital?</string>
+    <string name="str_V06a"><b>V06a.</b> Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
+    <string name="str_V06b"><b>V06b.</b> Which type of school(s) in the village offers pre-primary grades/classes?(Tick all that apply)</string>
+    <string name="str_V07a"><b>V07a.</b> Does the village have any schools offering primary grades/classes?</string>
+    <string name="str_V07b"><b>V07b.</b> Which type of school(s) in the village offers primary grades/classes?(Tick all that apply)</string>
+    <string name="villinfo_Updated_success">Village Information Updated Successfully!</string>
+    <string name="villinfo_added_success">Village Information Added Successfully!</string>
     <!---END of Village CQ-->
 
     <!--Household CQ-->
@@ -65,10 +56,10 @@
     <string name="str_isSampledHH_one">Locked</string>
     <string name="str_isSampledHH_two">Not Responding</string>
     <string name="str_isSampledHH_three">Open(to survey)</string>
-    <string name="str_HH01"><b>HHO1.</b> Household number from the house listing format <font color='#FF0000'>*</font></string>
+    <string name="str_HH01"><b>HHO1.</b> Household number from the house listing format/Hamlet number <font color='#FF0000'>*</font></string>
     <string name="str_HH02"><b>HHO2.</b> Name of the respondent<font color='#FF0000'>*</font></string>
     <string name="str_HH03"><b>HHO3.</b> Name of the household head</string>
-    <string name="str_HH04a"><b>HHO4a.</b> Does the HH have children (living regularly) in the age group 4-10 years?</string>
+    <string name="str_HH04a"><b>HHO4a.</b> Does the household have children (living regularly) in the age group 4-10 years?</string>
     <string name="str_HH04b"><b>HHO4b.</b> How many?</string>
     <string name="str_HH05"><b>HHO5.</b> Telephone/Mobile number of the household (write only if available and willing to share)</string>
     <string name="str_add_household_info">Add Household Information</string>
@@ -85,14 +76,14 @@
     <string name="str_HH_asset_info">Household Asset information</string>
     <string name="str_HH07a"><b>HHO7a.</b> Does the household have finished roofing?</string>
     <string name="str_HH07b"><b>HHO7b.</b> Does the household have finished walls?</string>
-    <string name="str_HH07c"><b>HHO7c.</b> What is the source of lighting regularly used in the household</string>
+    <string name="str_HH07c"><b>HHO7c.</b> What is the source of lighting regularly used in the household?</string>
     <string name="str_HH07c_one">Electricity</string>
     <string name="str_HH07c_two">Solar</string>
     <string name="str_HH07c_three">Other</string>
     <string name="str_HH07d.1"><b>HHO7d1.</b> Does the household have a regular source of drinking water within the compound?(the source can be inside the house or outside, but only the members of the household exclusively use it)</string>
     <string name="str_HH07d.2"><b>HHO7d2.</b> Do you pay to access/use this source of water?</string>
     <string name="str_HH07f"><b>HHO7f.</b> At least one toilet/latrine that is exclusively used by the members of the household?</string>
-    <string name="str_HH07g"><b>HHO7g.</b> Atleast one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate/ high school diploma/hold a high school completion certificate?</string>
+    <string name="str_HH07g"><b>HHO7g.</b> At least one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate/ high school diploma/hold a high school completion certificate?</string>
     <string name="str_HH07h"><b>HHO7h.</b> Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
     <string name="str_HH07i"><b>HHO7i.</b> Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
     <string name="str_HH07j"><b>HHO7j.</b> Computer/laptop/tablet?</string>
@@ -106,10 +97,9 @@
     <string name="str_HH07p_three">2-Wheeler</string>
     <string name="str_HH07q"><b>HHO7q.</b> Bicycle?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
-    <string name="householdinfo_added_success">HouseholdInformation Added Successfully!</string>
-    <string name="householdinfo_updated_success">HouseholdInformation Updated Successfully!</string>
+    <string name="householdinfo_added_success">Household Information Added Successfully!</string>
+    <string name="householdinfo_updated_success">Household Information Updated Successfully!</string>
     <string name="select_household">Select Household</string>
-    <string name="hint_respondentName">Respondent Name <font color='#FF0000'>*</font></string>
     <!--- END of Household CQ-->
 
     <!--Child CQ-->
@@ -124,16 +114,8 @@
     <string name="str_CH04b_op4">Cognitive</string>
 
     <string name="str_CH05"><b>CHO5.</b> Is [###] currently enrolled in any school or preschool?</string>
-    <string name="str_CH06c"><b>CHO6c.</b> Is [test lang] the official medium of instruction in this school?
+    <string name="str_CH06c"><b>CHO6c.</b> Is English the official medium of instruction in this school?
         (for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
-<!--    <string name="str_CH06d">What is the current status of the school?</string>
-    <string name="str_CH06d_one">School is open and teaching-learning activities are being conducted for this class</string>
-    <string name="str_CH06d_two">School is open but no teaching-learning activities are being conducted</string>
-    <string name="str_CH06d_three">School is closed</string>
-    <string name="str_CH06e">What kind of activities are being conducted?	</string>
-    <string name="str_CH06e_one">Online/Remote only (via zoom, WhatsApp, Google Meet, SMS etc.)</string>
-    <string name="str_CH06e_two">Physical/in-person activities only (child goes to school to attend classes)</string>
-    <string name="str_CH06e_three">Hybrid (both online/remote and in-person activities</string>-->
     <string name="str_CH06f"><b>CHO6f.</b> Does [###] have textbooks for the current grade?</string>
     <string name="str_CH06g"><b>CHO6g.</b> Has the [###] ever repeated a grade in school?</string>
     <string name="str_CH07a"><b>CHO7a.</b> Was [###] ever enrolled in school?</string>
@@ -145,27 +127,25 @@
     <string name="str_reasonToDrop_five">Not interested anymore</string>
     <string name="str_reasonToDrop_six">Other</string>
     <string name="str_reasonToDrop_seven">Don\'t know</string>
-    <string name="str_CH09a"><b>CHO9a.</b> Does [###] take any paid tuition class (coaching) currently?</string>
-    <string name="str_CH09b"><b>CHO9b.</b> Has [###] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or anyother place?</string>
+    <string name="str_CH09a"><b>CHO9a.</b> Does [###] currently take any paid tuition class (coaching)?</string>
+    <string name="str_CH09b"><b>CHO9b.</b> Has [###] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or any other place?</string>
     <string name="str_CH08a"><b>CHO8a.</b> Does anyone at home help the child with their homework?</string>
     <string name="str_CH08b"><b>CHO8b.</b> Who helps [###] MOST often?</string>
     <string name="str_CH08b_one">Father</string>
     <string name="str_CH08b_two">Mother</string>
     <string name="str_CH08b_three">Sibling</string>
     <string name="str_CH08b_four">Other</string>
-    <string name="str_CH09c"><b>CHO9c.</b> How often does someone is the household read or tell stories to [###]?</string>
+    <string name="str_CH09c"><b>CHO9c.</b> How often does someone in the household read or tell stories to [###]?</string>
     <string name="str_CH09c_one">Never</string>
     <string name="str_CH09c_two">Less than once a week</string>
     <string name="str_CH09c_three">1-2 days per week</string>
     <string name="str_CH09c_four">3-4 days per week</string>
     <string name="str_CH09c_five">5-7 days per week</string>
-    <string name="additional_learning_sup">Additional learning support at beyond school </string>
+    <string name="additional_learning_sup">Additional learning support beyond school </string>
     <string name="child_update_success">Child Updated Successfully!</string>
     <string name="child_add_success">Child Added Successfully!</string>
     <string name="no_child_found">"No Child Found."</string>
-
     <!--- END of Child CQ-->
-
 
     <!--- Parent CQ-->
     <string name="add_parent_information">Add Parent Information</string>
@@ -173,6 +153,8 @@
     <string name="parent_information">Parent Information</string>
     <string name="mothers_details">Mother\'s Detail</string>
     <string name="fathers_details">Father\'s Detail</string>
+    <string name="mothers_instruction">(if mother is not alive or doesn’t live in the household, then leave PT01a to PT01f blank; however if the child lives with their step-mother, then consider her as the mother and fill PT01a to PT01f with her details)</string>
+    <string name="fathers_instruction">(if father is not alive or doesn’t live in the household, then leave PT02a to PT02f blank; however is the child lives with their step-father, then consider his as the father and fill PT02a to PT02f with her details)</string>
     <string name="hint_motherName"><b>PTO1a.</b> Mother\'s Name <font color='#FF0000'>*</font></string>
     <string name="hint_fatherName"><b>PTO2a.</b> Father\'s Name <font color='#FF0000'>*</font></string>
     <string name="str_motherName"><b>PTO1a.</b> Mother\'s Name </string>
@@ -180,8 +162,8 @@
     <string name="str_PT01b"><b>PTO1b.</b> Mother\'s Age</string>
     <string name="str_PT02b"><b>PTO2b.</b> Father\'s Age</string>
     <string name="str_PT01d"><b>PTO1d.</b> Upto what level of schooling has she completed?</string>
-    <string name="str_PT02d"><b>PTO2d.</b> Upto what level of schooling has she completed?</string>
-    <string name="str_PT0d_one">None</string>
+    <string name="str_PT02d"><b>PTO2d.</b> Upto what level of schooling has he completed?</string>
+    <string name="str_PT0d_one">None (i.e. has not completed Primary)</string>
     <string name="str_PT0d_two">Primary</string>
     <string name="str_PT0d_three">Secondary</string>
     <string name="str_PT0d_four">Beyond Secondary</string>
@@ -197,11 +179,10 @@
     <string name="str_PT01f"><b>PTO1f.</b> What kind?</string>
     <string name="str_PT02f"><b>PTO2f.</b> What kind?</string>
     <string name="str_PT01f_one">Agricultural or related work that is family/self owned</string>
-    <string name="str_PT01f_two">Agricultural or related work that is owned by someone else</string>
+    <string name="str_PT01f_two">Agricultural or related work that is owned by someone else (includes government and others)</string>
     <string name="str_PT01f_three">Non-agricultural work in a family/self owned enterprise</string>
-    <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else</string>
+    <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else (includes government and others)</string>
     <string name="select_parent_first">Select parent first.</string>
-
     <!--- END of Parent CQ-->
 
     <string name="sign_up">Sign Up</string>
@@ -228,10 +209,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="select_country">Select Country</string>
-    <string name="enrolled">Enrolled</string>
-    <string name="drop_out">Drop Out</string>
-    <string name="never_enrolled">Never Enrolled</string>
-    <string name="save_n_submit">   Save and Submit Assessment</string>
+    <string name="save_n_submit">Save and Submit Assessment</string>
     <string name="you_want_to_exit">Are you sure you want to exit?</string>
     <string name="all_age">All Ages</string>
     <string name="all_village">All Villages</string>
@@ -247,28 +225,22 @@
     <string name="str_other">Other</string>
     <string name="age">Age </string>
 
-    <string name="no_student_found">No Student Found.</string>
+    <string name="no_student_found">No Children Found.</string>
     <string name="no_village_found">No Village Found.</string>
     <string name="no_household_found">No Household Found.</string>
     <string name="check_internet">Please Check Internet Connection!</string>
     <string name="invalid_mobno_pass">Invalid Mobile No. or Password.</string>
     <string name="enter_mobno_pass">Please Enter Mobile No. and Password!</string>
     <string name="select_radio_button">Please select radio button fields.</string>
-    <string name="select_atleast_one">Please select atleast one field.</string>
+    <string name="select_atleast_one">Please select at least one field.</string>
     <string name="hhName_mandatory">Household Number and Respondent names are Mandatory!</string>
     <string name="hh_Updated_success">Household Updated Successfully!</string>
     <string name="hh_Added_success">Household Added Successfully!</string>
     <string name="select_parent">Select Parent First.</string>
     <string name="all_fields_mandatory">All Fields are mandatory.</string>
     <string name="fill_all_fileds">Please fill all fields!</string>
-    <string name="pif_Added_success">ParentInformation Added Successfully!</string>
-    <string name="pif_Updated_success">ParentInformation Updated Successfully!</string>
-    <string name="stud_Added_success">Student Added Successfully!</string>
-    <string name="stud_Updated_success">Student Updated Successfully!</string>
-    <string name="hif_Added_success">HouseholdInformation Added Successfully!</string>
-    <string name="hif_Updated_success">HouseholdInformation Updated Successfully!</string>
-    <string name="vif_Added_success">VillageInformation Added Successfully!</string>
-    <string name="vif_Updated_success">VillageInformation Updated Successfully!</string>
+    <string name="pif_Added_success">Parent Information Added Successfully!</string>
+    <string name="pif_Updated_success">Parent Information Updated Successfully!</string>
     <string name="vill_Updated_success">Village Updated Successfully!</string>
     <string name="vill_added_success">Village Added Successfully!</string>
     <string name="select_school_type">Select School Type</string>
@@ -308,18 +280,11 @@
         <item>Female</item>
     </string-array>
 
-    <string-array name="enrollment_status">
-        <item>Enrollment Status</item>
-        <item>Enrolled</item>
-        <item>Never Enrolled</item>
-        <item>Drop Out</item>
-    </string-array>
-
     <string-array name="school_type">
         <item>School Type</item>
         <item>Government/Public</item>
         <item>Private</item>
-        <item>Other</item>
+        <item>Other (includes religious schools like madarasas, NGO operated schools and informal facilities)</item>
     </string-array>
 
     <string-array name="dropout_year_list">
@@ -367,7 +332,7 @@
     </string-array>
 
     <string-array name="student_class">
-        <item>Class</item>
+        <item>Grade/Class</item>
         <item>Pre-primary</item>
         <item>Class 1</item>
         <item>Class 2</item>
@@ -377,106 +342,8 @@
         <item>Class 6</item>
     </string-array>
 
-<!--    <string-array name="parentAge">
-        <item>Age     </item>
-        <item> 18 years </item>
-        <item> 19 years </item>
-        <item> 20 years </item>
-        <item> 21 years </item>
-        <item> 22 years </item>
-        <item> 23 years </item>
-        <item> 24 years </item>
-        <item> 25 years </item>
-        <item> 26 years </item>
-        <item> 27 years </item>
-        <item> 28 years </item>
-        <item> 29 years </item>
-        <item> 30 years </item>
-        <item> 31 years </item>
-        <item> 32 years </item>
-        <item> 33 years </item>
-        <item> 34 years </item>
-        <item> 35 years </item>
-        <item> 36 years </item>
-        <item> 37 years </item>
-        <item> 38 years </item>
-        <item> 39 years </item>
-        <item> 40 years </item>
-        <item> 41 years </item>
-        <item> 42 years </item>
-        <item> 43 years </item>
-        <item> 44 years </item>
-        <item> 45 years </item>
-        <item> 46 years </item>
-        <item> 47 years </item>
-        <item> 48 years </item>
-        <item> 49 years </item>
-        <item> 50 years </item>
-        <item> 51 years </item>
-        <item> 52 years </item>
-        <item> 53 years </item>
-        <item> 54 years </item>
-        <item> 55 years </item>
-        <item> 56 years </item>
-        <item> 57 years </item>
-        <item> 58 years </item>
-        <item> 59 years </item>
-        <item> 60 years </item>
-        <item> 61 years </item>
-        <item> 62 years </item>
-        <item> 63 years </item>
-        <item> 64 years </item>
-        <item> 65 years </item>
-        <item> 66 years </item>
-        <item> 67 years </item>
-        <item> 68 years </item>
-        <item> 69 years </item>
-        <item> 70 years </item>
-        <item> 71 years </item>
-        <item> 72 years </item>
-        <item> 73 years </item>
-        <item> 74 years </item>
-        <item> 75 years </item>
-        <item> 76 years </item>
-        <item> 77 years </item>
-        <item> 78 years </item>
-        <item> 79 years </item>
-        <item> 80 years </item>
-        <item> 81 years </item>
-        <item> 82 years </item>
-        <item> 83 years </item>
-        <item> 84 years </item>
-        <item> 85 years </item>
-        <item> 86 years </item>
-        <item> 87 years </item>
-        <item> 88 years </item>
-        <item> 89 years </item>
-        <item> 90 years </item>
-        <item> 91 years </item>
-        <item> 92 years </item>
-        <item> 93 years </item>
-        <item> 94 years </item>
-        <item> 95 years </item>
-        <item> 96 years </item>
-        <item> 97 years </item>
-        <item> 98 years </item>
-        <item> 99 years </item>
-        <item>100 years</item>
-    </string-array>-->
-
-<!--    <string-array name="parentGrade">
-        <item>Class</item>
-        <item>Class 5</item>
-        <item>Class 6</item>
-        <item>Class 7</item>
-        <item>Class 8</item>
-        <item>Class 9</item>
-        <item>SSC</item>
-        <item>HSC</item>
-        <item>Graduate</item>
-        <item>PostGraduate</item>
-    </string-array>-->
     <!--ENGLISH END ____________________________________________________________________-->
+
 
     <!--PORTUGUESE (MOZAMBIQUE)  START ____________________________________________________________________-->
     <!--

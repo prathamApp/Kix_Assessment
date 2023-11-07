@@ -122,7 +122,7 @@ public class Fragment_AddVillage extends Fragment {
             this.modal_locationList = gson.fromJson(jsonStr, type);
             String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
             for(int i =0 ; i<modal_locationList.size(); i++)
-                if(modal_locationList.get(i).getCountryName().equalsIgnoreCase(country))
+                if(modal_locationList.get(i).getCountryLanguage().equalsIgnoreCase(country))
                     modal_location = modal_locationList.get(i);
             //returnStoryNavigate = jsonObj.getJSONArray();
             this.setStates(modalVillage);

@@ -138,6 +138,9 @@ public class KixSmartSync { //extends AutoSync {
             metadataJson.put(Kix_Constant.VILLAGE_COUNT, villageArray.length());
             metadataJson.put(Kix_Constant.SURVEYOR_COUNT, surveyorArray.length());
             metadataJson.put(Kix_Constant.HOUSEHOLD_COUNT, householdArray.length());
+            metadataJson.put(Kix_Constant.HIF_COUNT, HIFArray.length());
+            metadataJson.put(Kix_Constant.VIF_COUNT, VIFArray.length());
+            metadataJson.put(Kix_Constant.PIF_COUNT, PIFArray.length());
 
             rootJson.put(Kix_Constant.METADATA, metadataJson);
             rootJson.put(Kix_Constant.ABANDONEDSCORE, abandonedScoreArray);
@@ -158,6 +161,9 @@ public class KixSmartSync { //extends AutoSync {
             FastSave.getInstance().saveString(Kix_Constant.VILLAGE_COUNT, ""+villageArray.length());
             FastSave.getInstance().saveString(Kix_Constant.SURVEYOR_COUNT, ""+surveyorArray.length());
             FastSave.getInstance().saveString(Kix_Constant.HOUSEHOLD_COUNT, ""+householdArray.length());
+            FastSave.getInstance().saveString(Kix_Constant.VIF_COUNT, ""+VIFArray.length());
+            FastSave.getInstance().saveString(Kix_Constant.HIF_COUNT, ""+HIFArray.length());
+            FastSave.getInstance().saveString(Kix_Constant.PIF_COUNT, ""+PIFArray.length());
 
             Log.e("KIX push JSON: ", String.valueOf(rootJson));
             KixSmartSync.pushDataToServer(rootJson, KixSmartSync.courseCount);

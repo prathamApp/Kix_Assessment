@@ -365,7 +365,7 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
         villageInformationDao.insertVillageInfo(modal_vif);
         BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), getString(R.string.vif_Added_success), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), getString(R.string.villinfo_added_success), Toast.LENGTH_SHORT).show();
         getFragmentManager().popBackStack();
     }
 

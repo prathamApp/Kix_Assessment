@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="@string/permissions_head"
             android:textColor="@color/red"
             android:textSize="@dimen/_16sdp" />
 
@@ -28,7 +27,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_perm_heading"
-            android:text="@string/permissions"
             android:textColor="@color/black_20"
             android:textSize="@dimen/_15sdp" />
 
@@ -48,7 +46,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/i1"
             android:elevation="@dimen/_8sdp"
-            android:text="@string/Okay"
+            android:text="@string/ok"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>

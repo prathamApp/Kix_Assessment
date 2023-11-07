@@ -71,9 +71,11 @@ public class SplashActivity extends BaseActivity implements SplashContract.Splas
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 == PackageManager.PERMISSION_GRANTED) {
             KIX_Utility.getSdCardPath(this);
+/*
             if (!FastSave.getInstance().getBoolean(Kix_Constant.DATA_COPIED, false))
                 this.splashPresenter.addDataToDB();
             else
+*/
                 KIX_Utility.showFragment(this, new Fragment_Svr_SignUp_(), R.id.splash_frame,
                     null, Fragment_Svr_SignUp.class.getSimpleName());
         } else {

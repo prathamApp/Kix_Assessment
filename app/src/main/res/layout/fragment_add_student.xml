@@ -328,7 +328,8 @@
                         android:drawSelectorOnTop="true"
                         android:gravity="center_vertical"
                         android:popupBackground="@drawable/choose_level_bg"
-                        android:textColor="@color/colorText" />
+                        android:textColor="@color/colorText"
+                        android:spinnerMode="dialog" />
                 </LinearLayout>
 
                 <RelativeLayout

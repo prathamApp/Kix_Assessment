@@ -1,11 +1,11 @@
 package com.kix.assessment.ui.surveyor_SignUP;
 
-import static com.kix.assessment.KIXApplication.contentDao;
 import static com.kix.assessment.KIXApplication.surveyorDao;
 
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,10 +17,13 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.KixDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
+import com.kix.assessment.modal_classes.MSAT.Model_Country;
 import com.kix.assessment.modal_classes.Modal_Sort_Booklet;
 import com.kix.assessment.modal_classes.Modal_Surveyor;
 import com.kix.assessment.services.shared_preferences.FastSave;
@@ -32,7 +35,9 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -121,7 +126,22 @@ public class Fragment_Svr_SignUp extends Fragment {
 
         this.countryList = new ArrayList<>();
         this.countryList.add(this.getResources().getString(R.string.select_country));
-        this.countryList.addAll(contentDao.getCountryList());
+        //this.countryList.addAll(contentDao.getCountryList());
+
+        try {
+            Model_Country countryName;
+            String jsonStr = KIX_Utility.getDataJsonAsString(getActivity());
+            Gson gson = new Gson();
+            Type type = new TypeToken<Model_Country>() {
+            }.getType();
+
+            countryName = gson.fromJson(jsonStr, type);
+            countryList.addAll(Collections.singleton(countryName.getCountry()));
+            Log.e("CountryName : ", countryList.toString());
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         this.adapterCountry = new ArrayAdapter<String>(this.getActivity(),R.layout.support_simple_spinner_dropdown_item, this.countryList);
         this.spinner_country.setAdapter(this.adapterCountry);

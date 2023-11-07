@@ -11,6 +11,7 @@ import java.util.List;
 public class Modal_Location implements Comparable, Parcelable {
 
     public String CountryName;
+    public String Language;
     public List <Modal_StateList> StateList;
 
     public String getCountryName() {
@@ -19,6 +20,14 @@ public class Modal_Location implements Comparable, Parcelable {
 
     public void setCountryName(final String countryName) {
         this.CountryName = countryName;
+    }
+
+    public String getCountryLanguage() {
+        return this.Language;
+    }
+
+    public void setCountryLanguage(final String Language) {
+        this.Language = Language;
     }
 
     public List<Modal_StateList> getStateList() {

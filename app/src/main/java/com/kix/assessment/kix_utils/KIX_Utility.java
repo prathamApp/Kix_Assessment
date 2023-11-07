@@ -2,6 +2,8 @@ package com.kix.assessment.kix_utils;
 
 import static android.content.Context.ACTIVITY_SERVICE;
 
+import static com.kix.assessment.KIXApplication.contentSDPath;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -31,9 +33,11 @@ import com.kix.assessment.ui.village_activity.Activity_Village;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -434,5 +438,29 @@ public class KIX_Utility {
             }
         }
         return list;
+    }
+
+    /** This function is used to convert JSON data into String.*/
+    public static String getDataJsonAsString(Context context){
+        String jsonStr = "";
+        try {
+            InputStream is;
+            if (KIXApplication.isSDCard) {
+                is = new FileInputStream(contentSDPath + "/.KIX/msat_data.json");
+            } else {
+                is = context.getAssets().open(Kix_Constant.assessment_Games + "/msat_data.json");
+            }
+
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            jsonStr = new String(buffer);
+            //Log.e("JSONString : ", jsonStr);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return jsonStr;
     }
 }

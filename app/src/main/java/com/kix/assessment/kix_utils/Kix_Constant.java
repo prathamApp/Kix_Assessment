@@ -3,9 +3,9 @@ package com.kix.assessment.kix_utils;
 public class Kix_Constant {
 
 
-    public static final String PUSH_API = "http://52.66.205.176:8000/push/";
+    public static final String PUSH_API = "https://kix.pradigi.org/push/";
 //    public static final String PUSH_API = "http://13.76.6.250:81/kix/upload";
-    public static final String PUSH_DB_API = " http://52.66.205.176:8000/push_db/";
+    public static final String PUSH_DB_API = "https://kix.pradigi.org/push_db/";
 //    public static final String PUSH_DB_API = "http://13.76.6.250:81/kix/pushdb";
 
     public static final String BOOKLET_NAME = "booklet_name";
@@ -68,6 +68,9 @@ public class Kix_Constant {
     public static final String VILLAGE_COUNT = "villageCount";
     public static final String HOUSEHOLD_COUNT = "householdCount";
     public static final String SURVEYOR_COUNT = "surveyorCount";
+    public static final String PIF_COUNT = "pifCount";
+    public static final String VIF_COUNT = "vifCount";
+    public static final String HIF_COUNT = "hifCount";
 
     public static final String YES = "Yes";
     public static final String NO = "No";

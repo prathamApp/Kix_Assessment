@@ -52,9 +52,9 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
 
             InputStream is;
             if (KIXApplication.isSDCard) {
-                is = new FileInputStream(contentSDPath + "/.KIX/Data.json");
+                is = new FileInputStream(contentSDPath + "/.KIX/msat_data.json");
             } else {
-                is = mContext.getAssets().open(Kix_Constant.assessment_Games + "/Data.json");
+                is = mContext.getAssets().open(Kix_Constant.assessment_Games + "/msat_data.json");
             }
 
             int size = is.available();
@@ -114,7 +114,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         }
         if (statusDao.getKey("apkType") == null) {
             statusObj.statusKey = "apkType";
-            statusObj.value = "KIX App";
+            statusObj.value = "KIX FT3 MSAT App";
             statusDao.insert(statusObj);
         }
         if (statusDao.getKey("appName") == null) {

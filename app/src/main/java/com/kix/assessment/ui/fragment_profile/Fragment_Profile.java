@@ -100,11 +100,17 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     private BlurPopupWindow pushDialog, pushStatusDialogue;
     private TextView tv_dia_vil;
     private TextView tv_dia_survey;
+    private TextView tv_dia_stud;
+    private TextView tv_dia_vif;
+    private TextView tv_dia_hif;
+    private TextView tv_dia_pif;
+    private TextView tv_dia_score, tv_dia_hhld;
+    private CustomLodingDialog myLoadingDialog;
+
 
     public Fragment_Profile() {
         // Required empty public constructor
     }
-    private TextView tv_dia_stud;
 
     int assGiven = 0;
 
@@ -143,8 +149,6 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             profileAdapter.notifyDataSetChanged();
         }
     }
-    private TextView tv_dia_score, tv_dia_hhld;
-    private CustomLodingDialog myLoadingDialog;
 
     @AfterViews
     public void initialize() {
@@ -261,7 +265,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                     getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "");
             filteredList.add(details);
             for (Modal_ProfileDetails d : detailsList) {
-                if (ageFilter.equalsIgnoreCase(getResources().getString(R.string.all_age)) && !villageFilter.isEmpty()) {
+                if (Integer.parseInt(ageSelected)<4 && !villageFilter.isEmpty()) {
                     if (d.getRespondantName().contains(villageFilter)) {
                         filteredList.add(d);
                     }
@@ -367,6 +371,9 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         tv_dia_stud = pushStatusDialogue.findViewById(R.id.dia_stud);
         tv_dia_score = pushStatusDialogue.findViewById(R.id.dia_score);
         this.tv_dia_hhld = this.pushStatusDialogue.findViewById(R.id.dia_hhld);
+        this.tv_dia_vif = this.pushStatusDialogue.findViewById(R.id.dia_vif);
+        this.tv_dia_hif = this.pushStatusDialogue.findViewById(R.id.dia_hif);
+        this.tv_dia_pif = this.pushStatusDialogue.findViewById(R.id.dia_pif);
 
         this.tv_dia_score.setText(this.getResources().getString(R.string.score_count)
                 + " " + FastSave.getInstance().getString(Kix_Constant.SCORE_COUNT, "0"));
@@ -378,6 +385,12 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                 + " " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_COUNT, "0"));
         this.tv_dia_hhld.setText(this.getResources().getString(R.string.household_count)
                 + " " + FastSave.getInstance().getString(Kix_Constant.HOUSEHOLD_COUNT, "0"));
+        this.tv_dia_vif.setText(this.getResources().getString(R.string.vif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.VIF_COUNT, "0"));
+        this.tv_dia_hif.setText(this.getResources().getString(R.string.hif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.HIF_COUNT, "0"));
+        this.tv_dia_pif.setText(this.getResources().getString(R.string.pif_count)
+                + "" + FastSave.getInstance().getString(Kix_Constant.PIF_COUNT, "0"));
 
         pushStatusDialogue.show();
     }
