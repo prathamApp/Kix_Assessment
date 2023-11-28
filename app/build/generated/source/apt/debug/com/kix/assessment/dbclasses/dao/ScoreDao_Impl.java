@@ -38,7 +38,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__insertionAdapterOfScore = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`startDateTime`,`resourceId`,`gameType`,`scoredMarks`,`label`,`bookletNo`,`level`,`stage`,`endDateTime`,`svrCode`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -59,53 +59,64 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceId() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceId());
+          stmt.bindString(5, value.getStartDateTime());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getResourceId());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getGameType());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getScoredMarks());
         }
         if (value.getLabel() == null) {
           stmt.bindNull(9);
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getBookletNo());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getLevel() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getLevel());
+        }
+        stmt.bindLong(12, value.getStage());
+        if (value.getEndDateTime() == null) {
+          stmt.bindNull(13);
+        } else {
+          stmt.bindString(13, value.getEndDateTime());
+        }
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getSvrCode());
         }
         if (value.getCountryName() == null) {
-          stmt.bindNull(12);
+          stmt.bindNull(15);
         } else {
-          stmt.bindString(12, value.getCountryName());
+          stmt.bindString(15, value.getCountryName());
         }
-        stmt.bindLong(13, value.getSentFlag());
+        stmt.bindLong(16, value.getSentFlag());
       }
     };
     this.__insertionAdapterOfScore_1 = new EntityInsertionAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Score`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`startDateTime`,`resourceId`,`gameType`,`scoredMarks`,`label`,`bookletNo`,`level`,`stage`,`endDateTime`,`svrCode`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -126,47 +137,58 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceId() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceId());
+          stmt.bindString(5, value.getStartDateTime());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getResourceId());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getGameType());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getScoredMarks());
         }
         if (value.getLabel() == null) {
           stmt.bindNull(9);
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getBookletNo());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getLevel() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getLevel());
+        }
+        stmt.bindLong(12, value.getStage());
+        if (value.getEndDateTime() == null) {
+          stmt.bindNull(13);
+        } else {
+          stmt.bindString(13, value.getEndDateTime());
+        }
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getSvrCode());
         }
         if (value.getCountryName() == null) {
-          stmt.bindNull(12);
+          stmt.bindNull(15);
         } else {
-          stmt.bindString(12, value.getCountryName());
+          stmt.bindString(15, value.getCountryName());
         }
-        stmt.bindLong(13, value.getSentFlag());
+        stmt.bindLong(16, value.getSentFlag());
       }
     };
     this.__deletionAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
@@ -183,7 +205,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     this.__updateAdapterOfScore = new EntityDeletionOrUpdateAdapter<Score>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Score` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`svrCode` = ?,`bookletNo` = ?,`countryName` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
+        return "UPDATE OR ABORT `Score` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`startDateTime` = ?,`resourceId` = ?,`gameType` = ?,`scoredMarks` = ?,`label` = ?,`bookletNo` = ?,`level` = ?,`stage` = ?,`endDateTime` = ?,`svrCode` = ?,`countryName` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
       }
 
       @Override
@@ -204,48 +226,59 @@ public final class ScoreDao_Impl implements ScoreDao {
         } else {
           stmt.bindString(4, value.getDeviceId());
         }
-        if (value.getResourceId() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getResourceId());
+          stmt.bindString(5, value.getStartDateTime());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getResourceId() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getResourceId());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getGameType());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getScoredMarks());
         }
         if (value.getLabel() == null) {
           stmt.bindNull(9);
         } else {
           stmt.bindString(9, value.getLabel());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getBookletNo());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getLevel() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getLevel());
+        }
+        stmt.bindLong(12, value.getStage());
+        if (value.getEndDateTime() == null) {
+          stmt.bindNull(13);
+        } else {
+          stmt.bindString(13, value.getEndDateTime());
+        }
+        if (value.getSvrCode() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getSvrCode());
         }
         if (value.getCountryName() == null) {
-          stmt.bindNull(12);
+          stmt.bindNull(15);
         } else {
-          stmt.bindString(12, value.getCountryName());
+          stmt.bindString(15, value.getCountryName());
         }
-        stmt.bindLong(13, value.getSentFlag());
-        stmt.bindLong(14, value.getScoreId());
+        stmt.bindLong(16, value.getSentFlag());
+        stmt.bindLong(17, value.getScoreId());
       }
     };
     this.__preparedStmtOfDeleteAllScores = new SharedSQLiteStatement(__db) {
@@ -396,13 +429,16 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
@@ -421,27 +457,36 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpDeviceId;
         _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         _item.setDeviceId(_tmpDeviceId);
-        final String _tmpResourceId;
-        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
-        _item.setResourceId(_tmpResourceId);
-        final String _tmpScoredMarks;
-        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
-        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpStartDateTime;
         _tmpStartDateTime = _cursor.getString(_cursorIndexOfStartDateTime);
         _item.setStartDateTime(_tmpStartDateTime);
-        final String _tmpEndDateTime;
-        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
-        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
+        final String _tmpScoredMarks;
+        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
+        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
-        final String _tmpSvrCode;
-        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
-        _item.setSvrCode(_tmpSvrCode);
         final String _tmpBookletNo;
         _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
         _item.setBookletNo(_tmpBookletNo);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
+        final String _tmpEndDateTime;
+        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
+        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
@@ -486,13 +531,16 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
@@ -511,27 +559,36 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpDeviceId;
         _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         _item.setDeviceId(_tmpDeviceId);
-        final String _tmpResourceId;
-        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
-        _item.setResourceId(_tmpResourceId);
-        final String _tmpScoredMarks;
-        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
-        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpStartDateTime;
         _tmpStartDateTime = _cursor.getString(_cursorIndexOfStartDateTime);
         _item.setStartDateTime(_tmpStartDateTime);
-        final String _tmpEndDateTime;
-        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
-        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
+        final String _tmpScoredMarks;
+        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
+        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
-        final String _tmpSvrCode;
-        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
-        _item.setSvrCode(_tmpSvrCode);
         final String _tmpBookletNo;
         _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
         _item.setBookletNo(_tmpBookletNo);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
+        final String _tmpEndDateTime;
+        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
+        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
@@ -557,13 +614,16 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
@@ -582,27 +642,36 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpDeviceId;
         _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         _item.setDeviceId(_tmpDeviceId);
-        final String _tmpResourceId;
-        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
-        _item.setResourceId(_tmpResourceId);
-        final String _tmpScoredMarks;
-        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
-        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpStartDateTime;
         _tmpStartDateTime = _cursor.getString(_cursorIndexOfStartDateTime);
         _item.setStartDateTime(_tmpStartDateTime);
-        final String _tmpEndDateTime;
-        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
-        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
+        final String _tmpScoredMarks;
+        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
+        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
-        final String _tmpSvrCode;
-        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
-        _item.setSvrCode(_tmpSvrCode);
         final String _tmpBookletNo;
         _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
         _item.setBookletNo(_tmpBookletNo);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
+        final String _tmpEndDateTime;
+        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
+        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
@@ -634,13 +703,16 @@ public final class ScoreDao_Impl implements ScoreDao {
       final int _cursorIndexOfSessionId = _cursor.getColumnIndexOrThrow("sessionId");
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
-      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
-      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
-      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
+      final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfLabel = _cursor.getColumnIndexOrThrow("label");
-      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
+      final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
+      final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<Score> _result = new ArrayList<Score>(_cursor.getCount());
@@ -659,27 +731,36 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpDeviceId;
         _tmpDeviceId = _cursor.getString(_cursorIndexOfDeviceId);
         _item.setDeviceId(_tmpDeviceId);
-        final String _tmpResourceId;
-        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
-        _item.setResourceId(_tmpResourceId);
-        final String _tmpScoredMarks;
-        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
-        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpStartDateTime;
         _tmpStartDateTime = _cursor.getString(_cursorIndexOfStartDateTime);
         _item.setStartDateTime(_tmpStartDateTime);
-        final String _tmpEndDateTime;
-        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
-        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpResourceId;
+        _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
+        _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
+        final String _tmpScoredMarks;
+        _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
+        _item.setScoredMarks(_tmpScoredMarks);
         final String _tmpLabel;
         _tmpLabel = _cursor.getString(_cursorIndexOfLabel);
         _item.setLabel(_tmpLabel);
-        final String _tmpSvrCode;
-        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
-        _item.setSvrCode(_tmpSvrCode);
         final String _tmpBookletNo;
         _tmpBookletNo = _cursor.getString(_cursorIndexOfBookletNo);
         _item.setBookletNo(_tmpBookletNo);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
+        final String _tmpEndDateTime;
+        _tmpEndDateTime = _cursor.getString(_cursorIndexOfEndDateTime);
+        _item.setEndDateTime(_tmpEndDateTime);
+        final String _tmpSvrCode;
+        _tmpSvrCode = _cursor.getString(_cursorIndexOfSvrCode);
+        _item.setSvrCode(_tmpSvrCode);
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
@@ -697,11 +778,12 @@ public final class ScoreDao_Impl implements ScoreDao {
 
   @Override
   public List<Modal_ProfileDetails> getProfileData(String svrCode) {
-    final String _sql = "select Student.CH01 as StudentName, Student.CH02 as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Score\n"
-            + "INNER JOIN Student on Score.studentId = Student.studentId\n"
+    final String _sql = "select Student.CH01 as StudentName, Student.CH03 as StudentAge,\n"
+            + "Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Student\n"
+            + "LEFT JOIN score on student.studentId = Score.studentId\n"
             + "INNER JOIN Household on Household.householdId = Student.householdId\n"
             + "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n"
-            + "WHERE Surveyor.svrCode=? GROUP by Student.studentId, Surveyor.svrName";
+            + "WHERE Surveyor.svrCode=? GROUP by Student.studentId ORDER BY Student.sId DESC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (svrCode == null) {
@@ -713,7 +795,7 @@ public final class ScoreDao_Impl implements ScoreDao {
     try {
       final int _cursorIndexOfStudentName = _cursor.getColumnIndexOrThrow("StudentName");
       final int _cursorIndexOfStudentAge = _cursor.getColumnIndexOrThrow("StudentAge");
-      final int _cursorIndexOfHouseholdName = _cursor.getColumnIndexOrThrow("HouseholdName");
+      final int _cursorIndexOfRespondantName = _cursor.getColumnIndexOrThrow("RespondantName");
       final int _cursorIndexOfExamsGiven = _cursor.getColumnIndexOrThrow("ExamsGiven");
       final List<Modal_ProfileDetails> _result = new ArrayList<Modal_ProfileDetails>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -725,9 +807,9 @@ public final class ScoreDao_Impl implements ScoreDao {
         final String _tmpStudentAge;
         _tmpStudentAge = _cursor.getString(_cursorIndexOfStudentAge);
         _item.setStudentAge(_tmpStudentAge);
-        final String _tmpHouseholdName;
-        _tmpHouseholdName = _cursor.getString(_cursorIndexOfHouseholdName);
-        _item.setHouseholdName(_tmpHouseholdName);
+        final String _tmpRespondantName;
+        _tmpRespondantName = _cursor.getString(_cursorIndexOfRespondantName);
+        _item.setRespondantName(_tmpRespondantName);
         final String _tmpExamsGiven;
         _tmpExamsGiven = _cursor.getString(_cursorIndexOfExamsGiven);
         _item.setExamsGiven(_tmpExamsGiven);

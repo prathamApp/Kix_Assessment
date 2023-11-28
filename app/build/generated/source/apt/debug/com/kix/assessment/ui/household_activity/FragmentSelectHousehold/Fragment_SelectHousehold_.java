@@ -87,24 +87,12 @@ public final class Fragment_SelectHousehold_
     public void onViewChanged(HasViews hasViews) {
         this.rv_houseHold = hasViews.internalFindViewById(R.id.rv_houseHold);
         this.fab_addVillage = hasViews.internalFindViewById(R.id.fab_addVillage);
-        View view_fab_profile = hasViews.internalFindViewById(R.id.fab_profile);
-
         if (this.fab_addVillage!= null) {
             this.fab_addVillage.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
                     Fragment_SelectHousehold_.this.addHousehold();
-                }
-            }
-            );
-        }
-        if (view_fab_profile!= null) {
-            view_fab_profile.setOnClickListener(new OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    Fragment_SelectHousehold_.this.profile();
                 }
             }
             );

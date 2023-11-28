@@ -55,21 +55,25 @@ public final class Fragment_HouseholdInformation_
     public void onDestroyView() {
         super.onDestroyView();
         contentView_ = null;
+        tv_members = null;
+        tv_speakEnglish = null;
+        tv_howOften = null;
+        tv_otherLang = null;
         tv_roof = null;
         tv_wall = null;
         tv_lightSource = null;
         tv_waterSource = null;
-        tv_electricity = null;
+        tv_payForWater = null;
         tv_toilet = null;
         tv_memberCompletedDiploma = null;
         tv_readingMaterial = null;
+        tv_otherBook = null;
         tv_computer = null;
         tv_television = null;
-        tv_radio = null;
         tv_mobile = null;
         tv_isItSmartphone = null;
-        tv_fourWheeler = null;
-        tv_twoWheeler = null;
+        tv_haveMotorVehicle = null;
+        tv_noOfWheels = null;
         tv_bicycle = null;
         scroll_View = null;
         fab_Edit_VIF = null;
@@ -101,22 +105,26 @@ public final class Fragment_HouseholdInformation_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        this.tv_members = hasViews.internalFindViewById(R.id.tv_HH06a_val);
+        this.tv_speakEnglish = hasViews.internalFindViewById(R.id.tv_HH06b_val);
+        this.tv_howOften = hasViews.internalFindViewById(R.id.tv_HH06c_val);
+        this.tv_otherLang = hasViews.internalFindViewById(R.id.tv_HH06d_val);
         this.tv_roof = hasViews.internalFindViewById(R.id.tv_HH07a_val);
         this.tv_wall = hasViews.internalFindViewById(R.id.tv_HH07b_val);
         this.tv_lightSource = hasViews.internalFindViewById(R.id.tv_HH07c_val);
-        this.tv_waterSource = hasViews.internalFindViewById(R.id.tv_HH07d_val);
-        this.tv_electricity = hasViews.internalFindViewById(R.id.tv_HH07e_val);
+        this.tv_waterSource = hasViews.internalFindViewById(R.id.tv_HH07d1_val);
+        this.tv_payForWater = hasViews.internalFindViewById(R.id.tv_HH07d2_val);
         this.tv_toilet = hasViews.internalFindViewById(R.id.tv_HH07f_val);
         this.tv_memberCompletedDiploma = hasViews.internalFindViewById(R.id.tv_HH07g_val);
         this.tv_readingMaterial = hasViews.internalFindViewById(R.id.tv_HH07h_val);
-        this.tv_computer = hasViews.internalFindViewById(R.id.tv_HH07i_val);
-        this.tv_television = hasViews.internalFindViewById(R.id.tv_HH07j_val);
-        this.tv_radio = hasViews.internalFindViewById(R.id.tv_HH07k_val);
-        this.tv_mobile = hasViews.internalFindViewById(R.id.tv_HH07l_val);
-        this.tv_isItSmartphone = hasViews.internalFindViewById(R.id.tv_HH07m_val);
-        this.tv_fourWheeler = hasViews.internalFindViewById(R.id.tv_HH07n_val);
-        this.tv_twoWheeler = hasViews.internalFindViewById(R.id.tv_HH07o_val);
-        this.tv_bicycle = hasViews.internalFindViewById(R.id.tv_HH07p_val);
+        this.tv_otherBook = hasViews.internalFindViewById(R.id.tv_HH07i_val);
+        this.tv_computer = hasViews.internalFindViewById(R.id.tv_HH07j_val);
+        this.tv_television = hasViews.internalFindViewById(R.id.tv_HH07k_val);
+        this.tv_mobile = hasViews.internalFindViewById(R.id.tv_HH07m_val);
+        this.tv_isItSmartphone = hasViews.internalFindViewById(R.id.tv_HH07n_val);
+        this.tv_haveMotorVehicle = hasViews.internalFindViewById(R.id.tv_HH07o_val);
+        this.tv_noOfWheels = hasViews.internalFindViewById(R.id.tv_HH07p_val);
+        this.tv_bicycle = hasViews.internalFindViewById(R.id.tv_HH07q_val);
         this.scroll_View = hasViews.internalFindViewById(R.id.scroll_View);
         this.fab_Edit_VIF = hasViews.internalFindViewById(R.id.fab_Edit_VIF);
         View view_fab_Edit_HIF = hasViews.internalFindViewById(R.id.fab_Edit_HIF);

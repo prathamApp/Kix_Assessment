@@ -38,7 +38,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
     this.__insertionAdapterOfAbandonedScore = new EntityInsertionAdapter<AbandonedScore>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `AbandonedScore`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`reason`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `AbandonedScore`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`gameType`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`reason`,`countryName`,`level`,`stage`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -64,53 +64,64 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         } else {
           stmt.bindString(5, value.getResourceId());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getGameType());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getScoredMarks());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getStartDateTime());
         }
-        if (value.getLabel() == null) {
+        if (value.getEndDateTime() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getLabel());
+          stmt.bindString(9, value.getEndDateTime());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getLabel() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getLabel());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getSvrCode() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getSvrCode());
         }
-        if (value.getReason() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(12);
         } else {
-          stmt.bindString(12, value.getReason());
+          stmt.bindString(12, value.getBookletNo());
         }
-        if (value.getCountryName() == null) {
+        if (value.getReason() == null) {
           stmt.bindNull(13);
         } else {
-          stmt.bindString(13, value.getCountryName());
+          stmt.bindString(13, value.getReason());
         }
-        stmt.bindLong(14, value.getSentFlag());
+        if (value.getCountryName() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getCountryName());
+        }
+        if (value.getLevel() == null) {
+          stmt.bindNull(15);
+        } else {
+          stmt.bindString(15, value.getLevel());
+        }
+        stmt.bindLong(16, value.getStage());
+        stmt.bindLong(17, value.getSentFlag());
       }
     };
     this.__insertionAdapterOfAbandonedScore_1 = new EntityInsertionAdapter<AbandonedScore>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `AbandonedScore`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`reason`,`countryName`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `AbandonedScore`(`scoreId`,`sessionId`,`studentId`,`deviceId`,`resourceId`,`gameType`,`scoredMarks`,`startDateTime`,`endDateTime`,`label`,`svrCode`,`bookletNo`,`reason`,`countryName`,`level`,`stage`,`sentFlag`) VALUES (nullif(?, 0),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -136,47 +147,58 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         } else {
           stmt.bindString(5, value.getResourceId());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getGameType());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getScoredMarks());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getStartDateTime());
         }
-        if (value.getLabel() == null) {
+        if (value.getEndDateTime() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getLabel());
+          stmt.bindString(9, value.getEndDateTime());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getLabel() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getLabel());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getSvrCode() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getSvrCode());
         }
-        if (value.getReason() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(12);
         } else {
-          stmt.bindString(12, value.getReason());
+          stmt.bindString(12, value.getBookletNo());
         }
-        if (value.getCountryName() == null) {
+        if (value.getReason() == null) {
           stmt.bindNull(13);
         } else {
-          stmt.bindString(13, value.getCountryName());
+          stmt.bindString(13, value.getReason());
         }
-        stmt.bindLong(14, value.getSentFlag());
+        if (value.getCountryName() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getCountryName());
+        }
+        if (value.getLevel() == null) {
+          stmt.bindNull(15);
+        } else {
+          stmt.bindString(15, value.getLevel());
+        }
+        stmt.bindLong(16, value.getStage());
+        stmt.bindLong(17, value.getSentFlag());
       }
     };
     this.__deletionAdapterOfAbandonedScore = new EntityDeletionOrUpdateAdapter<AbandonedScore>(__db) {
@@ -193,7 +215,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
     this.__updateAdapterOfAbandonedScore = new EntityDeletionOrUpdateAdapter<AbandonedScore>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `AbandonedScore` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`svrCode` = ?,`bookletNo` = ?,`reason` = ?,`countryName` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
+        return "UPDATE OR ABORT `AbandonedScore` SET `scoreId` = ?,`sessionId` = ?,`studentId` = ?,`deviceId` = ?,`resourceId` = ?,`gameType` = ?,`scoredMarks` = ?,`startDateTime` = ?,`endDateTime` = ?,`label` = ?,`svrCode` = ?,`bookletNo` = ?,`reason` = ?,`countryName` = ?,`level` = ?,`stage` = ?,`sentFlag` = ? WHERE `scoreId` = ?";
       }
 
       @Override
@@ -219,48 +241,59 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         } else {
           stmt.bindString(5, value.getResourceId());
         }
-        if (value.getScoredMarks() == null) {
+        if (value.getGameType() == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.getScoredMarks());
+          stmt.bindString(6, value.getGameType());
         }
-        if (value.getStartDateTime() == null) {
+        if (value.getScoredMarks() == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getStartDateTime());
+          stmt.bindString(7, value.getScoredMarks());
         }
-        if (value.getEndDateTime() == null) {
+        if (value.getStartDateTime() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getEndDateTime());
+          stmt.bindString(8, value.getStartDateTime());
         }
-        if (value.getLabel() == null) {
+        if (value.getEndDateTime() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindString(9, value.getLabel());
+          stmt.bindString(9, value.getEndDateTime());
         }
-        if (value.getSvrCode() == null) {
+        if (value.getLabel() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindString(10, value.getSvrCode());
+          stmt.bindString(10, value.getLabel());
         }
-        if (value.getBookletNo() == null) {
+        if (value.getSvrCode() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindString(11, value.getBookletNo());
+          stmt.bindString(11, value.getSvrCode());
         }
-        if (value.getReason() == null) {
+        if (value.getBookletNo() == null) {
           stmt.bindNull(12);
         } else {
-          stmt.bindString(12, value.getReason());
+          stmt.bindString(12, value.getBookletNo());
         }
-        if (value.getCountryName() == null) {
+        if (value.getReason() == null) {
           stmt.bindNull(13);
         } else {
-          stmt.bindString(13, value.getCountryName());
+          stmt.bindString(13, value.getReason());
         }
-        stmt.bindLong(14, value.getSentFlag());
-        stmt.bindLong(15, value.getScoreId());
+        if (value.getCountryName() == null) {
+          stmt.bindNull(14);
+        } else {
+          stmt.bindString(14, value.getCountryName());
+        }
+        if (value.getLevel() == null) {
+          stmt.bindNull(15);
+        } else {
+          stmt.bindString(15, value.getLevel());
+        }
+        stmt.bindLong(16, value.getStage());
+        stmt.bindLong(17, value.getSentFlag());
+        stmt.bindLong(18, value.getScoreId());
       }
     };
     this.__preparedStmtOfDeleteAllAbandonedScores = new SharedSQLiteStatement(__db) {
@@ -412,6 +445,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
       final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
       final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
@@ -420,6 +454,8 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
       final int _cursorIndexOfReason = _cursor.getColumnIndexOrThrow("reason");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<AbandonedScore> _result = new ArrayList<AbandonedScore>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -440,6 +476,9 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpResourceId;
         _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
         _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -464,6 +503,12 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -506,6 +551,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
       final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
       final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
@@ -514,6 +560,8 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
       final int _cursorIndexOfReason = _cursor.getColumnIndexOrThrow("reason");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<AbandonedScore> _result = new ArrayList<AbandonedScore>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -534,6 +582,9 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpResourceId;
         _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
         _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -558,6 +609,12 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -581,6 +638,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
       final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
       final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
@@ -589,6 +647,8 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
       final int _cursorIndexOfReason = _cursor.getColumnIndexOrThrow("reason");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<AbandonedScore> _result = new ArrayList<AbandonedScore>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -609,6 +669,9 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpResourceId;
         _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
         _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -633,6 +696,12 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -662,6 +731,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfStudentId = _cursor.getColumnIndexOrThrow("studentId");
       final int _cursorIndexOfDeviceId = _cursor.getColumnIndexOrThrow("deviceId");
       final int _cursorIndexOfResourceId = _cursor.getColumnIndexOrThrow("resourceId");
+      final int _cursorIndexOfGameType = _cursor.getColumnIndexOrThrow("gameType");
       final int _cursorIndexOfScoredMarks = _cursor.getColumnIndexOrThrow("scoredMarks");
       final int _cursorIndexOfStartDateTime = _cursor.getColumnIndexOrThrow("startDateTime");
       final int _cursorIndexOfEndDateTime = _cursor.getColumnIndexOrThrow("endDateTime");
@@ -670,6 +740,8 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
       final int _cursorIndexOfBookletNo = _cursor.getColumnIndexOrThrow("bookletNo");
       final int _cursorIndexOfReason = _cursor.getColumnIndexOrThrow("reason");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
+      final int _cursorIndexOfLevel = _cursor.getColumnIndexOrThrow("level");
+      final int _cursorIndexOfStage = _cursor.getColumnIndexOrThrow("stage");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
       final List<AbandonedScore> _result = new ArrayList<AbandonedScore>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -690,6 +762,9 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpResourceId;
         _tmpResourceId = _cursor.getString(_cursorIndexOfResourceId);
         _item.setResourceId(_tmpResourceId);
+        final String _tmpGameType;
+        _tmpGameType = _cursor.getString(_cursorIndexOfGameType);
+        _item.setGameType(_tmpGameType);
         final String _tmpScoredMarks;
         _tmpScoredMarks = _cursor.getString(_cursorIndexOfScoredMarks);
         _item.setScoredMarks(_tmpScoredMarks);
@@ -714,6 +789,12 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpCountryName;
         _tmpCountryName = _cursor.getString(_cursorIndexOfCountryName);
         _item.setCountryName(_tmpCountryName);
+        final String _tmpLevel;
+        _tmpLevel = _cursor.getString(_cursorIndexOfLevel);
+        _item.setLevel(_tmpLevel);
+        final int _tmpStage;
+        _tmpStage = _cursor.getInt(_cursorIndexOfStage);
+        _item.setStage(_tmpStage);
         final int _tmpSentFlag;
         _tmpSentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
         _item.setSentFlag(_tmpSentFlag);
@@ -728,7 +809,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
 
   @Override
   public List<Modal_ProfileDetails> getProfileData(String svrCode) {
-    final String _sql = "select Student.CH01 as StudentName, Student.CH03 as StudentAge, Household.householdName as HouseholdName, count(DISTINCT(AbandonedScore.sessionId)) as ExamsGiven from AbandonedScore\n"
+    final String _sql = "select Student.CH01 as StudentName, Student.CH03 as StudentAge, Household.HH02 as RespondantName, count(DISTINCT(AbandonedScore.sessionId)) as ExamsGiven from AbandonedScore\n"
             + "INNER JOIN Student on AbandonedScore.studentId = Student.studentId\n"
             + "INNER JOIN Household on Household.householdId = Student.householdId\n"
             + "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n"
@@ -744,7 +825,7 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
     try {
       final int _cursorIndexOfStudentName = _cursor.getColumnIndexOrThrow("StudentName");
       final int _cursorIndexOfStudentAge = _cursor.getColumnIndexOrThrow("StudentAge");
-      final int _cursorIndexOfHouseholdName = _cursor.getColumnIndexOrThrow("HouseholdName");
+      final int _cursorIndexOfRespondantName = _cursor.getColumnIndexOrThrow("RespondantName");
       final int _cursorIndexOfExamsGiven = _cursor.getColumnIndexOrThrow("ExamsGiven");
       final List<Modal_ProfileDetails> _result = new ArrayList<Modal_ProfileDetails>(_cursor.getCount());
       while(_cursor.moveToNext()) {
@@ -756,9 +837,9 @@ public final class AbandonedScoreDao_Impl implements AbandonedScoreDao {
         final String _tmpStudentAge;
         _tmpStudentAge = _cursor.getString(_cursorIndexOfStudentAge);
         _item.setStudentAge(_tmpStudentAge);
-        final String _tmpHouseholdName;
-        _tmpHouseholdName = _cursor.getString(_cursorIndexOfHouseholdName);
-        _item.setHouseholdName(_tmpHouseholdName);
+        final String _tmpRespondantName;
+        _tmpRespondantName = _cursor.getString(_cursorIndexOfRespondantName);
+        _item.setRespondantName(_tmpRespondantName);
         final String _tmpExamsGiven;
         _tmpExamsGiven = _cursor.getString(_cursorIndexOfExamsGiven);
         _item.setExamsGiven(_tmpExamsGiven);

@@ -56,16 +56,17 @@ public final class Fragment_AddHousehold_
         super.onDestroyView();
         contentView_ = null;
         tv_title = null;
-        et_householdName = null;
+        rg_isSampledHH = null;
+        sv_householdDetail = null;
+        et_hhNumber = null;
         et_respondentName = null;
         et_houseHeadName = null;
-        et_memberCount = null;
         et_telephoneNum = null;
         et_noOfChilds = null;
         til_noOfChilds = null;
         rg_haveChildren = null;
-        rg_speakLang = null;
         btn_saveAndEdit = null;
+        ll_isSampledHH = null;
     }
 
     private void init_(Bundle savedInstanceState) {
@@ -95,16 +96,17 @@ public final class Fragment_AddHousehold_
     @Override
     public void onViewChanged(HasViews hasViews) {
         this.tv_title = hasViews.internalFindViewById(R.id.tv_label);
-        this.et_householdName = hasViews.internalFindViewById(R.id.et_HH00_hName);
-        this.et_respondentName = hasViews.internalFindViewById(R.id.et_HH01_respondentName);
-        this.et_houseHeadName = hasViews.internalFindViewById(R.id.et_HH02_houseHeadName);
-        this.et_memberCount = hasViews.internalFindViewById(R.id.et_HH03_memberCount);
-        this.et_telephoneNum = hasViews.internalFindViewById(R.id.et_HH04_houseHeadNum);
-        this.et_noOfChilds = hasViews.internalFindViewById(R.id.et_HH05b_houseAge);
-        this.til_noOfChilds = hasViews.internalFindViewById(R.id.til_HH05b);
-        this.rg_haveChildren = hasViews.internalFindViewById(R.id.rg_HH05a);
-        this.rg_speakLang = hasViews.internalFindViewById(R.id.rg_HH06);
+        this.rg_isSampledHH = hasViews.internalFindViewById(R.id.rg_isSampledHH);
+        this.sv_householdDetail = hasViews.internalFindViewById(R.id.sv_household);
+        this.et_hhNumber = hasViews.internalFindViewById(R.id.et_HH01);
+        this.et_respondentName = hasViews.internalFindViewById(R.id.et_HH02_respondentName);
+        this.et_houseHeadName = hasViews.internalFindViewById(R.id.et_HH03_houseHeadName);
+        this.et_telephoneNum = hasViews.internalFindViewById(R.id.et_HH05_mobile);
+        this.et_noOfChilds = hasViews.internalFindViewById(R.id.et_HH04b_noOfChild);
+        this.til_noOfChilds = hasViews.internalFindViewById(R.id.til_HH04b);
+        this.rg_haveChildren = hasViews.internalFindViewById(R.id.rg_HH04a);
         this.btn_saveAndEdit = hasViews.internalFindViewById(R.id.btn_saveHousehold);
+        this.ll_isSampledHH = hasViews.internalFindViewById(R.id.ll_isSampledHH);
         if (this.btn_saveAndEdit!= null) {
             this.btn_saveAndEdit.setOnClickListener(new OnClickListener() {
 

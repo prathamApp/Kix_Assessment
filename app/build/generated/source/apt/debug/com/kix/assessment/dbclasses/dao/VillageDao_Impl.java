@@ -28,7 +28,7 @@ public final class VillageDao_Impl implements VillageDao {
     this.__insertionAdapterOfModal_Village = new EntityInsertionAdapter<Modal_Village>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Village`(`villageId`,`villageName`,`villageDistrict`,`villageState`,`villageDate`,`countryName`,`villageBooklet`,`svrCode`,`sentFlag`) VALUES (?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Village`(`villageId`,`villageName`,`villageDistrict`,`villageState`,`countryName`,`createdOn`,`svrCode`,`sentFlag`,`villageBooklet`) VALUES (?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -53,27 +53,27 @@ public final class VillageDao_Impl implements VillageDao {
         } else {
           stmt.bindString(4, value.villageState);
         }
-        if (value.villageDate == null) {
+        if (value.countryName == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.villageDate);
+          stmt.bindString(5, value.countryName);
         }
-        if (value.countryName == null) {
+        if (value.createdOn == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.countryName);
-        }
-        if (value.villageBooklet == null) {
-          stmt.bindNull(7);
-        } else {
-          stmt.bindString(7, value.villageBooklet);
+          stmt.bindString(6, value.createdOn);
         }
         if (value.svrCode == null) {
-          stmt.bindNull(8);
+          stmt.bindNull(7);
         } else {
-          stmt.bindString(8, value.svrCode);
+          stmt.bindString(7, value.svrCode);
         }
-        stmt.bindLong(9, value.sentFlag);
+        stmt.bindLong(8, value.sentFlag);
+        if (value.villageBooklet == null) {
+          stmt.bindNull(9);
+        } else {
+          stmt.bindString(9, value.villageBooklet);
+        }
       }
     };
     this.__preparedStmtOfUpdateSentFlag = new SharedSQLiteStatement(__db) {
@@ -182,11 +182,11 @@ public final class VillageDao_Impl implements VillageDao {
       final int _cursorIndexOfVillageName = _cursor.getColumnIndexOrThrow("villageName");
       final int _cursorIndexOfVillageDistrict = _cursor.getColumnIndexOrThrow("villageDistrict");
       final int _cursorIndexOfVillageState = _cursor.getColumnIndexOrThrow("villageState");
-      final int _cursorIndexOfVillageDate = _cursor.getColumnIndexOrThrow("villageDate");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
-      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
       final Modal_Village _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Village();
@@ -194,11 +194,11 @@ public final class VillageDao_Impl implements VillageDao {
         _result.villageName = _cursor.getString(_cursorIndexOfVillageName);
         _result.villageDistrict = _cursor.getString(_cursorIndexOfVillageDistrict);
         _result.villageState = _cursor.getString(_cursorIndexOfVillageState);
-        _result.villageDate = _cursor.getString(_cursorIndexOfVillageDate);
         _result.countryName = _cursor.getString(_cursorIndexOfCountryName);
-        _result.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
+        _result.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _result.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
       } else {
         _result = null;
       }
@@ -225,11 +225,11 @@ public final class VillageDao_Impl implements VillageDao {
       final int _cursorIndexOfVillageName = _cursor.getColumnIndexOrThrow("villageName");
       final int _cursorIndexOfVillageDistrict = _cursor.getColumnIndexOrThrow("villageDistrict");
       final int _cursorIndexOfVillageState = _cursor.getColumnIndexOrThrow("villageState");
-      final int _cursorIndexOfVillageDate = _cursor.getColumnIndexOrThrow("villageDate");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
-      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
       final List<Modal_Village> _result = new ArrayList<Modal_Village>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Modal_Village _item;
@@ -238,11 +238,11 @@ public final class VillageDao_Impl implements VillageDao {
         _item.villageName = _cursor.getString(_cursorIndexOfVillageName);
         _item.villageDistrict = _cursor.getString(_cursorIndexOfVillageDistrict);
         _item.villageState = _cursor.getString(_cursorIndexOfVillageState);
-        _item.villageDate = _cursor.getString(_cursorIndexOfVillageDate);
         _item.countryName = _cursor.getString(_cursorIndexOfCountryName);
-        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
         _result.add(_item);
       }
       return _result;
@@ -268,11 +268,11 @@ public final class VillageDao_Impl implements VillageDao {
       final int _cursorIndexOfVillageName = _cursor.getColumnIndexOrThrow("villageName");
       final int _cursorIndexOfVillageDistrict = _cursor.getColumnIndexOrThrow("villageDistrict");
       final int _cursorIndexOfVillageState = _cursor.getColumnIndexOrThrow("villageState");
-      final int _cursorIndexOfVillageDate = _cursor.getColumnIndexOrThrow("villageDate");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
-      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
       final List<Modal_Village> _result = new ArrayList<Modal_Village>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Modal_Village _item;
@@ -281,11 +281,11 @@ public final class VillageDao_Impl implements VillageDao {
         _item.villageName = _cursor.getString(_cursorIndexOfVillageName);
         _item.villageDistrict = _cursor.getString(_cursorIndexOfVillageDistrict);
         _item.villageState = _cursor.getString(_cursorIndexOfVillageState);
-        _item.villageDate = _cursor.getString(_cursorIndexOfVillageDate);
         _item.countryName = _cursor.getString(_cursorIndexOfCountryName);
-        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
         _result.add(_item);
       }
       return _result;
@@ -305,11 +305,11 @@ public final class VillageDao_Impl implements VillageDao {
       final int _cursorIndexOfVillageName = _cursor.getColumnIndexOrThrow("villageName");
       final int _cursorIndexOfVillageDistrict = _cursor.getColumnIndexOrThrow("villageDistrict");
       final int _cursorIndexOfVillageState = _cursor.getColumnIndexOrThrow("villageState");
-      final int _cursorIndexOfVillageDate = _cursor.getColumnIndexOrThrow("villageDate");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
-      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
       final List<Modal_Village> _result = new ArrayList<Modal_Village>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Modal_Village _item;
@@ -318,11 +318,11 @@ public final class VillageDao_Impl implements VillageDao {
         _item.villageName = _cursor.getString(_cursorIndexOfVillageName);
         _item.villageDistrict = _cursor.getString(_cursorIndexOfVillageDistrict);
         _item.villageState = _cursor.getString(_cursorIndexOfVillageState);
-        _item.villageDate = _cursor.getString(_cursorIndexOfVillageDate);
         _item.countryName = _cursor.getString(_cursorIndexOfCountryName);
-        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
+        _item.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _item.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _item.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _item.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
         _result.add(_item);
       }
       return _result;
@@ -373,11 +373,11 @@ public final class VillageDao_Impl implements VillageDao {
       final int _cursorIndexOfVillageName = _cursor.getColumnIndexOrThrow("villageName");
       final int _cursorIndexOfVillageDistrict = _cursor.getColumnIndexOrThrow("villageDistrict");
       final int _cursorIndexOfVillageState = _cursor.getColumnIndexOrThrow("villageState");
-      final int _cursorIndexOfVillageDate = _cursor.getColumnIndexOrThrow("villageDate");
       final int _cursorIndexOfCountryName = _cursor.getColumnIndexOrThrow("countryName");
-      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
+      final int _cursorIndexOfCreatedOn = _cursor.getColumnIndexOrThrow("createdOn");
       final int _cursorIndexOfSvrCode = _cursor.getColumnIndexOrThrow("svrCode");
       final int _cursorIndexOfSentFlag = _cursor.getColumnIndexOrThrow("sentFlag");
+      final int _cursorIndexOfVillageBooklet = _cursor.getColumnIndexOrThrow("villageBooklet");
       final Modal_Village _result;
       if(_cursor.moveToFirst()) {
         _result = new Modal_Village();
@@ -385,11 +385,11 @@ public final class VillageDao_Impl implements VillageDao {
         _result.villageName = _cursor.getString(_cursorIndexOfVillageName);
         _result.villageDistrict = _cursor.getString(_cursorIndexOfVillageDistrict);
         _result.villageState = _cursor.getString(_cursorIndexOfVillageState);
-        _result.villageDate = _cursor.getString(_cursorIndexOfVillageDate);
         _result.countryName = _cursor.getString(_cursorIndexOfCountryName);
-        _result.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
+        _result.createdOn = _cursor.getString(_cursorIndexOfCreatedOn);
         _result.svrCode = _cursor.getString(_cursorIndexOfSvrCode);
         _result.sentFlag = _cursor.getInt(_cursorIndexOfSentFlag);
+        _result.villageBooklet = _cursor.getString(_cursorIndexOfVillageBooklet);
       } else {
         _result = null;
       }

@@ -56,13 +56,11 @@ public final class Fragment_ParentInformation_
         super.onDestroyView();
         contentView_ = null;
         tv_mothersName = null;
-        tv_mothersAge = null;
         tv_motherAttendSchool = null;
         tv_mothersGrade = null;
         tv_motherWorks = null;
         tv_mothersWorkKind = null;
         tv_fathersName = null;
-        tv_fathersAge = null;
         tv_fatherAttendSchool = null;
         tv_fathersGrade = null;
         tv_fatherWorks = null;
@@ -96,13 +94,11 @@ public final class Fragment_ParentInformation_
     @Override
     public void onViewChanged(HasViews hasViews) {
         this.tv_mothersName = hasViews.internalFindViewById(R.id.tv_PT01a_val);
-        this.tv_mothersAge = hasViews.internalFindViewById(R.id.tv_PT01b_val);
         this.tv_motherAttendSchool = hasViews.internalFindViewById(R.id.tv_PT01c_val);
         this.tv_mothersGrade = hasViews.internalFindViewById(R.id.tv_PT01d_val);
         this.tv_motherWorks = hasViews.internalFindViewById(R.id.tv_PT01e_val);
         this.tv_mothersWorkKind = hasViews.internalFindViewById(R.id.tv_PT01f_val);
         this.tv_fathersName = hasViews.internalFindViewById(R.id.tv_PT02a_val);
-        this.tv_fathersAge = hasViews.internalFindViewById(R.id.tv_PT02b_val);
         this.tv_fatherAttendSchool = hasViews.internalFindViewById(R.id.tv_PT02c_val);
         this.tv_fathersGrade = hasViews.internalFindViewById(R.id.tv_PT02d_val);
         this.tv_fatherWorks = hasViews.internalFindViewById(R.id.tv_PT02e_val);

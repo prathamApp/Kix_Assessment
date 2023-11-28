@@ -88,6 +88,7 @@ public final class Fragment_SelectVillage_
         this.rv_village = hasViews.internalFindViewById(R.id.rv_village);
         this.fab_addVillage = hasViews.internalFindViewById(R.id.fab_addVillage);
         View view_fab_profile = hasViews.internalFindViewById(R.id.fab_profile);
+        View view_fab_sync = hasViews.internalFindViewById(R.id.fab_sync);
 
         if (this.fab_addVillage!= null) {
             this.fab_addVillage.setOnClickListener(new OnClickListener() {
@@ -105,6 +106,16 @@ public final class Fragment_SelectVillage_
                 @Override
                 public void onClick(View view) {
                     Fragment_SelectVillage_.this.profile();
+                }
+            }
+            );
+        }
+        if (view_fab_sync!= null) {
+            view_fab_sync.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Fragment_SelectVillage_.this.sync();
                 }
             }
             );
