@@ -97,12 +97,14 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     String bklet;
     public static List<Score> tempScoresList;
 
-    public int levelValue = 0;
+    static final String INT = "INT";
     public String levelName;
     public static boolean isLanguage = true;
-
-    int cutOffScore = 0;
-    final static String INT = "INT";
+    private static final String INTB = "INTB";
+    public static int correctScoreCount;
+    public int levelValue;
+    public int INTB_Score, INTB_Length, INTB_Position;
+    int cutOffScore;
 
     @AfterViews
     public void init() {
@@ -117,6 +119,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         modelMathsGameList = new ArrayList<>();
         modelLangGameList = new ArrayList<>();
         queCnt = 0;
+        correctScoreCount =0;
         try {
             String country = "" + FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India");
             if (!isDomainWise)
@@ -134,7 +137,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     private void getJSONDataAsString() {
         modelMathsBookletList = new ArrayList<>();
         modelLangBookletList = new ArrayList<>();
-        str_dataJson = KIX_Utility.getDataJsonAsString(WebViewActivity.this);
+        str_dataJson = KIX_Utility.getDataJsonAsString(this);
         Type type = new TypeToken<Model_Country>() {
         }.getType();
 
@@ -216,29 +219,47 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
     private void getLevels(Model_LangStage model_langStage) {
         modelLangLevelList = model_langStage.getLevels();
         if (modelLangLevelList.size() == 1) {
+            getINTBLength();
             modelLangGameList.addAll(modelLangLevelList.get(levelValue).getGames());
             levelName = modelLangLevelList.get(levelValue).getLevel();
             cutOffScore = modelLangLevelList.get(levelValue).getCutoffscore();
             createWebView(queCnt);
         } else if (modelLangLevelList.size() > 1) {
-            int correctScore = calculateCorrectScore();
-            Log.d("CorrectScr : ", String.valueOf(correctScore));
+            //int correctScore = calculateCorrectScore();
+            Log.d("CorrectScr : ", String.valueOf(correctScoreCount));
             Log.d("CutOffScr : ", String.valueOf(cutOffScore));
             //tempScoresList.clear();
-            if (correctScore >= cutOffScore) {
+            if (correctScoreCount >= cutOffScore) {
                 levelValue++;
                 Log.d("Level: ", modelLangLevelList.get(levelValue).getLevel());
+                getINTBLength();
                 modelLangGameList.addAll(modelLangLevelList.get(levelValue).getGames());
                 levelName = modelLangLevelList.get(levelValue).getLevel();
                 cutOffScore = modelLangLevelList.get(levelValue).getCutoffscore();
             } else {
                 Log.d("Level: ", modelLangLevelList.get(levelValue).getLevel());
+                getINTBLength();
                 modelLangGameList.addAll(modelLangLevelList.get(levelValue).getGames());
                 levelName = modelLangLevelList.get(levelValue).getLevel();
                 cutOffScore = modelLangLevelList.get(levelValue).getCutoffscore();
             }
             createWebView(queCnt);
         }
+    }
+
+    private void getINTBLength(){
+        INTB_Length =0;
+        INTB_Score =0;
+        INTB_Position =1;
+        List<Model_LangGame> tempGameList = new ArrayList<Model_LangGame>();
+        tempGameList = modelLangLevelList.get(levelValue).getGames();
+        for (Model_LangGame langGame : tempGameList){
+            if(langGame.getGametype().equalsIgnoreCase("INTB")){
+//                Log.d("INTB Game : ", langGame.getGamename()+" | "+langGame.getGametype());
+                INTB_Length++;
+            }
+        }
+//        Log.d("INTB Length: ", String.valueOf(INTB_Length));
     }
 
     private void getLevels(Model_MathsStage model_mathsStage) {
@@ -249,11 +270,11 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
             cutOffScore = modelMathsLevelList.get(levelValue).getCutoffscore();
             createWebView(queCnt);
         } else if (modelMathsLevelList.size() > 1) {
-            int correctScore = calculateCorrectScore();
-            Log.d("CorrectScr : ", String.valueOf(correctScore));
+//            int correctScore = calculateCorrectScore();
+            Log.d("CorrectScr : ", String.valueOf(correctScoreCount));
             Log.d("CutOffScr : ", String.valueOf(cutOffScore));
             //tempScoresList.clear();
-            if (correctScore >= cutOffScore) {
+            if (correctScoreCount >= cutOffScore) {
                 levelValue++;
                 Log.d("Level: ", modelMathsLevelList.get(levelValue).getLevel());
                 modelMathsGameList.addAll(modelMathsLevelList.get(levelValue).getGames());
@@ -395,6 +416,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
                     queCnt = 0;
                     getStages(bklet);
                     tempScoresList.clear();
+                    correctScoreCount =0;
                 }
             }
         } else {
@@ -543,7 +565,7 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
             dia_title = nextDialog.findViewById(R.id.dia_title);
             dia_yes = nextDialog.findViewById(R.id.dia_yes);
             dia_no = nextDialog.findViewById(R.id.dia_no);
-            Log.d("Stage & Game Cnt : ", String.valueOf(stageCount + " | " + queCnt));
+            Log.d("Stage & Game Cnt : ", stageCount + " | " + queCnt);
             if (queCnt == modelMathsGameList.size() - 1 && stageCount == modelMathsStageList.size())
                 dia_title.setText(getResources().getString(R.string.submit_assessment));
             else
@@ -588,12 +610,34 @@ public class WebViewActivity extends BaseActivity implements WebViewInterface {
         score.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "NA"));
         score.setSentFlag(0);
         scoresList.add(score);
-        if(isLanguage){
+        if(scoresList.get(scoresList.size()-1).getGameType().equalsIgnoreCase(INT) && scoresList.get(scoresList.size()-1).getScoredMarks().equalsIgnoreCase("2"))
+            correctScoreCount++;
+        else {
+            if (scoresList.get(scoresList.size()-1).getGameType().equalsIgnoreCase(INTB)) {
+                int markScored = Integer.parseInt(scoresList.get(scoresList.size()-1).getScoredMarks());
+                if(INTB_Position < INTB_Length) {
+                    INTB_Score = INTB_Score + markScored;
+                    INTB_Position++;
+                } else if (INTB_Position == INTB_Length) {
+                    INTB_Score = INTB_Score + markScored;
+                    Log.d("INTB_SCORE: ", String.valueOf(this.INTB_Score));
+                    if(INTB_Score / INTB_Length ==2){
+                        WebViewActivity.correctScoreCount +=2;
+                    } else if(this.INTB_Score ==0 || this.INTB_Score == this.INTB_Length){
+                        WebViewActivity.correctScoreCount +=0;
+                    } else {
+                        WebViewActivity.correctScoreCount++;
+                    }
+                }
+            }
+        }
+
+/*        if(isLanguage){
             if(modelLangGameList.get(queCnt).getGametype().equalsIgnoreCase(INT))
                 tempScoresList.add(score);
         } else {
             if(modelMathsGameList.get(queCnt).getGametype().equalsIgnoreCase(INT))
                 tempScoresList.add(score);
-        }
+        }*/
     }
 }
