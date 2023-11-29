@@ -1,126 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-<!--
-    <string name="app_name" translatable="false">ELANA</string>
-    <string name="Collecting_Data" translatable="false">Collecting Data</string>
-    <string name="push_success">Pushed Successfully!</string>
-    <string name="push_fail">Push Failed!</string>
+    <string name="app_name">ELANA</string>
+    <string name="Collecting_Data">Collecting Data</string>
+    <string name="push_success">Pushed successfully!</string>
+    <string name="push_fail">Push failed!</string>
+    <string name="kix_assessment">ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">Ok</string>
     <string name="ok">Ok</string>
     <string name="please_wait_pushing" tools:ignore="TypographyEllipsis">Please wait, pushing data...</string>
     <string name="details">Details</string>
-    <string name="goto_next">Go to Next</string>
+    <string name="goto_next">Go to next</string>
     <string name="cancel">Cancel</string>
     <string name="profile">Profile</string>
     <string name="create_surveyor">Create Surveyor Account</string>
-    <string name="children_surveyed">Children surveyed :</string>
-    <string name="children_assessed">Children assessed :</string>
+    <string name="children_surveyed">Children surveyed:</string>
+    <string name="children_assessed">Children assessed:</string>
     <string name="child_name">Child Name</string>
     <string name="village">Village</string>
     <string name="assessment_given">Assessment Given</string>
     <string name="assessments_synced">Assessments Synced</string>
-    <string name="score_count">Score Count : </string>
-    <string name="student_count">Child Count : </string>
-    <string name="village_count">Village Count : </string>
-    <string name="surveyor_count">Surveyor Count : </string>
-    <string name="household_count">Household Count : </string>
-    <string name="hif_count">HIF Count : </string>
-    <string name="vif_count">VIF Count : </string>
-    <string name="pif_count">PIF Count : </string>
+    <string name="score_count">Score Count:</string>
+    <string name="student_count">Child Count:</string>
+    <string name="surveyor_count">Surveyor Count:</string>
+    <string name="village_count">Village Count:</string>
+    <string name="household_count">Household Count:</string>
+    <string name="hif_count">HIF Count :</string>
+    <string name="vif_count">VIF Count :</string>
+    <string name="pif_count">PIF Count :</string>
     <string name="sync_details">Sync Details</string>
     <string name="edit_child_info">Edit Child Information</string>
-
-
-    &lt;!&ndash;Village CQ&ndash;&gt;
     <string name="add_village_info">Add Village Information</string>
     <string name="update_village_info">Update Village Information</string>
     <string name="str_village_info">Village Information</string>
     <string name="str_V01"><b>V01.</b> Is there tarmac/all weather road leading to the village?</string>
-    <string name="str_V02"><b>V02.</b> Is there public transport available to the village?</string>
+    <string name="str_V02"><b>V02.</b> Is there public transport facility available to the village?</string>
     <string name="str_V03"><b>V03.</b> Does the village have access to electricity connection?</string>
-    <string name="str_V04"><b>V04.</b> Does the village have any government health center/hospital?</string>
+    <string name="str_V04"><b>V04.</b> Does the village have any government/public health clinic/hospital?</string>
     <string name="str_V05"><b>V05.</b> Does the village have any private health clinic/hospital?</string>
     <string name="str_V06a"><b>V06a.</b> Does the village have any pre-primary schools or any school offering pre-primary grades/classes?</string>
-    <string name="str_V06b"><b>V06b.</b> Which type of school(s) in the village offers pre-primary grades/classes?(Tick all that apply)</string>
+    <string name="str_V06b"><b>V06b.</b> Which type of school(s) in the village offers pre-primary grades/classes?</string>
     <string name="str_V07a"><b>V07a.</b> Does the village have any schools offering primary grades/classes?</string>
     <string name="str_V07b"><b>V07b.</b> Which type of school(s) in the village offers primary grades/classes?(Tick all that apply)</string>
     <string name="villinfo_Updated_success">Village Information Updated Successfully!</string>
     <string name="villinfo_added_success">Village Information Added Successfully!</string>
-    &lt;!&ndash;-END of Village CQ&ndash;&gt;
-
-    &lt;!&ndash;Household CQ&ndash;&gt;
     <string name="str_add_household">Add Household</string>
     <string name="update_household">Update Household</string>
-    <string name="str_isSampledHH"><b>HH00.</b> Is the sampled household?</string>
+    <string name="str_isSampledHH"><b>HH00.</b> Is the sampled household...?</string>
     <string name="str_isSampledHH_one">Locked</string>
     <string name="str_isSampledHH_two">Not Responding</string>
-    <string name="str_isSampledHH_three">Open(to survey)</string>
-    <string name="str_HH01"><b>HHO1.</b> Household number from the house listing format/Hamlet number <font color='#FF0000'>*</font></string>
-    <string name="str_HH02"><b>HHO2.</b> Name of the respondent<font color='#FF0000'>*</font></string>
-    <string name="str_HH03"><b>HHO3.</b> Name of the household head</string>
-    <string name="str_HH04a"><b>HHO4a.</b> Does the household have children (living regularly) in the age group 4-10 years?</string>
-    <string name="str_HH04b"><b>HHO4b.</b> How many?</string>
-    <string name="str_HH05"><b>HHO5.</b> Telephone/Mobile number of the household (write only if available and willing to share)</string>
+    <string name="str_isSampledHH_three">Open (to survey)</string>
+    <string name="str_HH01"><b>HH01.</b> Household number from the house listing format<font color='#FF0000'>*</font></string>
+    <string name="str_HH02"><b>HH02.</b> Name of the respondent<font color='#FF0000'>*</font></string>
+    <string name="str_HH03"><b>HH03.</b> Name of the household head</string>
+    <string name="str_HH04a"><b>HH04a.</b> Does the household have children (living regularly) in the age group 4-10 years?</string>
+    <string name="str_HH04b"><b>HH04b.</b> How many?</string>
+    <string name="str_HH05"><b>HH05.</b> Telephone/Mobile number of the household (write only if available and willing to share)</string>
     <string name="str_add_household_info">Add Household Information</string>
     <string name="str_update_household_info">Update Household Information</string>
     <string name="str_household_info">Household Information</string>
     <string name="str_household">Household</string>
     <string name="str_gnr_household_info">General information of surveyed household</string>
-    <string name="str_HH06a"><b>HHO6a.</b> Number of members regularly living in the household</string>
-    <string name="str_HH06b"><b>HHO6b.</b> Do you speak English at home?</string>
-    <string name="str_HH06c"><b>HHO6c.</b> How often do you speak English at home?</string>
-    <string name="str_HH06d"><b>HHO6d.</b> Do you speak any other language at home?</string>
+    <string name="str_HH06a"><b>HH06a.</b> Number of members regularly living in the household</string>
+    <string name="str_HH06b"><b>HH06b.</b> Do you speak English at home?</string>
+    <string name="str_HH06c"><b>HH06c.</b> How often do you speak English at home?</string>
     <string name="str_always">Always</string>
     <string name="str_sometimes">Sometimes</string>
-    <string name="str_HH_asset_info">Household Asset information</string>
-    <string name="str_HH07a"><b>HHO7a.</b> Does the household have finished roofing?</string>
-    <string name="str_HH07b"><b>HHO7b.</b> Does the household have finished walls?</string>
-    <string name="str_HH07c"><b>HHO7c.</b> What is the source of lighting regularly used in the household?</string>
+    <string name="str_HH06d"><b>HH06d.</b> Do you speak any other language at home?</string>
+    <string name="str_HH_asset_info">Household Asset Information</string>
+    <string name="str_HH07a"><b>HH07a.</b> Does the household have finished roofing?</string>
+    <string name="str_HH07b"><b>HH07b.</b> Does the household have finished walls?</string>
+    <string name="str_HH07c"><b>HH07c.</b> What is the source of lighting regularly used in the household?</string>
     <string name="str_HH07c_one">Electricity</string>
     <string name="str_HH07c_two">Solar</string>
     <string name="str_HH07c_three">Other</string>
-    <string name="str_HH07d.1"><b>HHO7d1.</b> Does the household have a regular source of drinking water within the compound?(the source can be inside the house or outside, but only the members of the household exclusively use it)</string>
-    <string name="str_HH07d.2"><b>HHO7d2.</b> Do you pay to access/use this source of water?</string>
-    <string name="str_HH07f"><b>HHO7f.</b> At least one toilet/latrine that is exclusively used by the members of the household?</string>
-    <string name="str_HH07g"><b>HHO7g.</b> At least one member (other than the child\'s parents) who has completed A-Level /holds an A-Level certificate/ high school diploma/hold a high school completion certificate?</string>
-    <string name="str_HH07h"><b>HHO7h.</b> Any children\'s books, or other suitable reading materials for children, like story books besides the school textbooks?</string>
-    <string name="str_HH07i"><b>HHO7i.</b> Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
-    <string name="str_HH07j"><b>HHO7j.</b> Computer/laptop/tablet?</string>
-    <string name="str_HH07k"><b>HHO7k.</b> Television?</string>
-    <string name="str_HH07m"><b>HHO7m.</b> Mobile phone?</string>
-    <string name="str_HH07n"><b>HHO7n.</b> Is it a smartphone?</string>
-    <string name="str_HH07o"><b>HHO7o.</b> Motorised vehicle?</string>
-    <string name="str_HH07p"><b>HHO7p.</b> How many wheels does it have?</string>
+    <string name="str_HH07d.1"><b>HH07d1.</b> Does the household have a regular source of drinking water within the compound?(the source can be inside the house or outside, but only the members of the household exclusively use it)</string>
+    <string name="str_HH07d.2"><b>HH07d2.</b> Do you pay to access/use this source of water?</string>
+    <string name="str_HH07f"><b>HH07f.</b> At least one toilet/latrine that is exclusively used by the members of the household?</string>
+    <string name="str_HH07g"><b>HH07g.</b> At least one member (other than the child\'s parents) who has completed A-Level/ holds an A-Level certificate/ high school diploma/ holds a high school completion certificate?</string>
+    <string name="str_HH07h"><b>HH07h.</b> Any children\'s books, or other suitable reading materials for children, such as story books besides school textbooks?</string>
+    <string name="str_HH07i"><b>HH07i.</b> Any other books or reading materials, like religious textbooks, newspapers magazines etc?</string>
+    <string name="str_HH07j"><b>HH07j.</b> Computer/laptop/tablet?</string>
+    <string name="str_HH07k"><b>HH07k.</b> Television?</string>
+    <string name="str_HH07m"><b>HH07m.</b> Mobile phone?</string>
+    <string name="str_HH07n"><b>HH07n.</b> Is it a smartphone?</string>
+    <string name="str_HH07o"><b>HH07o.</b> Motorised vehicle?</string>
+    <string name="str_HH07p"><b>HH07p.</b> How many wheels does it have?</string>
     <string name="str_HH07p_one">4-Wheeler</string>
     <string name="str_HH07p_two">3-Wheeler</string>
     <string name="str_HH07p_three">2-Wheeler</string>
-    <string name="str_HH07q"><b>HHO7q.</b> Bicycle?</string>
+    <string name="str_HH07q"><b>HH07q.</b> Bicycle?</string>
     <string name="str_HH_have_lbl">Does this household have:</string>
     <string name="householdinfo_added_success">Household Information Added Successfully!</string>
     <string name="householdinfo_updated_success">Household Information Updated Successfully!</string>
     <string name="select_household">Select Household</string>
-    &lt;!&ndash;- END of Household CQ&ndash;&gt;
-
-    &lt;!&ndash;Child CQ&ndash;&gt;
+    <string name="hint_respondentName">Respondent Name<font color='#FF0000'>*</font></string>
     <string name="add_child">Add Child</string>
     <string name="update_child">Update Child</string>
-    <string name="str_CH01"><b>CHO1.</b> Name <font color='#FF0000'>*</font></string>
-    <string name="str_CH04a"><b>CHO4a.</b> Does [###] have any known disability?</string>
-    <string name="str_CH04b"><b>CHO4b.</b> Which disability?</string>
+    <string name="str_CH01"><b>CH01.</b> Name<font color='#FF0000'>*</font></string>
+    <string name="str_CH04a"><b>CH04a.</b> Does [###] have any known disability?</string>
+    <string name="str_CH04b"><b>CH04b.</b> Which disability?</string>
     <string name="str_CH04b_op1">Visual</string>
     <string name="str_CH04b_op2">Hearing/Speech</string>
     <string name="str_CH04b_op3">Physical</string>
     <string name="str_CH04b_op4">Cognitive</string>
-
-    <string name="str_CH05"><b>CHO5.</b> Is [###] currently enrolled in any school or preschool?</string>
-    <string name="str_CH06c"><b>CHO6c.</b> Is English the official medium of instruction in this school?
-        (for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
-    <string name="str_CH06f"><b>CHO6f.</b> Does [###] have textbooks for the current grade?</string>
-    <string name="str_CH06g"><b>CHO6g.</b> Has the [###] ever repeated a grade in school?</string>
-    <string name="str_CH07a"><b>CHO7a.</b> Was [###] ever enrolled in school?</string>
-    <string name="str_CH07d"><b>CHO7d.</b> What was the main reason [###] dropped out?</string>
+    <string name="str_CH05"><b>CH05. </b> Is [###] currently enrolled in any school or preschool?</string>
+    <string name="str_CH06c"><b>CH06c. </b> Is English the official medium of instruction in this school?
+(for younger children, perhaps you can check their school textbooks/worksheets/activity sheets to confirm)</string>
+    <string name="str_CH06f"><b>CH06f. </b> Does [###] have textbooks for the current grade?</string>
+    <string name="str_CH06g"><b>CH06g. </b> Has [###] ever repeated a grade in school?</string>
+    <string name="str_CH07a"><b>CH07a. </b> Was [###] ever enrolled in school?</string>
+    <string name="str_CH07d"><b>CH07d. </b> What was the main reason [###] dropped out?</string>
     <string name="str_reasonToDrop_one">Could not afford the fees</string>
     <string name="str_reasonToDrop_two">School closed down</string>
     <string name="str_reasonToDrop_three">Was not promoted so discontinued</string>
@@ -128,27 +120,24 @@
     <string name="str_reasonToDrop_five">Not interested anymore</string>
     <string name="str_reasonToDrop_six">Other</string>
     <string name="str_reasonToDrop_seven">Don\'t know</string>
-    <string name="str_CH09a"><b>CHO9a.</b> Does [###] currently take any paid tuition class (coaching)?</string>
-    <string name="str_CH09b"><b>CHO9b.</b> Has [###] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or any other place?</string>
-    <string name="str_CH08a"><b>CHO8a.</b> Does anyone at home help the child with their homework?</string>
-    <string name="str_CH08b"><b>CHO8b.</b> Who helps [###] MOST often?</string>
+    <string name="str_CH09a"><b>CH09a. </b> Does [###] currently take any paid tuition class (coaching)?</string>
+    <string name="str_CH09b"><b>CH09b. </b> Has [###] brought home any materials to read (other than school textbooks) in the last 2 weeks from the school library or any other place?</string>
+    <string name="str_CH08a"><b>CH08a. </b> Does anyone at home help [###] with their homework?</string>
+    <string name="str_CH08b"><b>CH08b. </b> Who helps [###] MOST often?</string>
     <string name="str_CH08b_one">Father</string>
     <string name="str_CH08b_two">Mother</string>
     <string name="str_CH08b_three">Sibling</string>
     <string name="str_CH08b_four">Other</string>
-    <string name="str_CH09c"><b>CHO9c.</b> How often does someone in the household read or tell stories to [###]?</string>
+    <string name="str_CH09c"><b>CH09c. </b> How often does someone in the household read or tell stories to [###]?</string>
     <string name="str_CH09c_one">Never</string>
     <string name="str_CH09c_two">Less than once a week</string>
     <string name="str_CH09c_three">1-2 days per week</string>
     <string name="str_CH09c_four">3-4 days per week</string>
     <string name="str_CH09c_five">5-7 days per week</string>
-    <string name="additional_learning_sup">Additional learning support beyond school </string>
+    <string name="additional_learning_sup">Additional learning support beyond school</string>
     <string name="child_update_success">Child Updated Successfully!</string>
     <string name="child_add_success">Child Added Successfully!</string>
-    <string name="no_child_found">"No Child Found."</string>
-    &lt;!&ndash;- END of Child CQ&ndash;&gt;
-
-    &lt;!&ndash;- Parent CQ&ndash;&gt;
+    <string name="no_child_found">No children found</string>
     <string name="add_parent_information">Add Parent Information</string>
     <string name="update_parent_information">Update Parent Information</string>
     <string name="parent_information">Parent Information</string>
@@ -156,14 +145,14 @@
     <string name="fathers_details">Father\'s Detail</string>
     <string name="mothers_instruction">(if mother is not alive or doesn’t live in the household, then leave PT01a to PT01f blank; however if the child lives with their step-mother, then consider her as the mother and fill PT01a to PT01f with her details)</string>
     <string name="fathers_instruction">(if father is not alive or doesn’t live in the household, then leave PT02a to PT02f blank; however is the child lives with their step-father, then consider his as the father and fill PT02a to PT02f with her details)</string>
-    <string name="hint_motherName"><b>PTO1a.</b> Mother\'s Name <font color='#FF0000'>*</font></string>
-    <string name="hint_fatherName"><b>PTO2a.</b> Father\'s Name <font color='#FF0000'>*</font></string>
-    <string name="str_motherName"><b>PTO1a.</b> Mother\'s Name </string>
-    <string name="str_fatherName"><b>PTO2a.</b> Father\'s Name </string>
-    <string name="str_PT01b"><b>PTO1b.</b> Mother\'s Age</string>
-    <string name="str_PT02b"><b>PTO2b.</b> Father\'s Age</string>
-    <string name="str_PT01d"><b>PTO1d.</b> Upto what level of schooling has she completed?</string>
-    <string name="str_PT02d"><b>PTO2d.</b> Upto what level of schooling has he completed?</string>
+    <string name="hint_motherName"><b>PT01a. </b> Mother\'s Name<font color='#FF0000'>*</font></string>
+    <string name="hint_fatherName"><b>PT02a. </b> Father\'s Name<font color='#FF0000'>*</font></string>
+    <string name="str_motherName"><b>PT01a. </b> Mother\'s Name</string>
+    <string name="str_fatherName"><b>PT02a. </b> Father\'s Name</string>
+    <string name="str_PT01b"><b>PT01b. </b> Mother\'s Age</string>
+    <string name="str_PT02b"><b>PT02b. </b> Father\'s Age</string>
+    <string name="str_PT01d"><b>PT01d. </b> Up to what level of schooling has she completed?</string>
+    <string name="str_PT02d"><b>PT02d. </b> Up to what level of schooling has he completed?</string>
     <string name="str_PT0d_one">None (i.e. has not completed Primary)</string>
     <string name="str_PT0d_two">Primary</string>
     <string name="str_PT0d_three">Secondary</string>
@@ -173,35 +162,33 @@
     <string name="str_father">Father</string>
     <string name="str_both">Both</string>
     <string name="str_neither">Neither</string>
-    <string name="str_PT01c"><b>PTO1c.</b> Has the mother ever attended school?</string>
-    <string name="str_PT02c"><b>PTO2c.</b> Has the father ever attended school?</string>
-    <string name="str_PT01e"><b>PTO1e.</b> Does the mother have an income generating work/job?</string>
-    <string name="str_PT02e"><b>PTO2e.</b> Does the father have an income generating work/job?</string>
-    <string name="str_PT01f"><b>PTO1f.</b> What kind?</string>
-    <string name="str_PT02f"><b>PTO2f.</b> What kind?</string>
+    <string name="str_PT01c"><b>PT01c. </b> Has the mother ever attended school?</string>
+    <string name="str_PT02c"><b>PT02c. </b> Has the father ever attended school?</string>
+    <string name="str_PT01e"><b>PT01e. </b> Does the mother have an income generating work/job?</string>
+    <string name="str_PT02e"><b>PT02e. </b> Does the father have an income generating work/job?</string>
+    <string name="str_PT01f"><b>PT01f. </b> What kind?</string>
+    <string name="str_PT02f"><b>PT02f. </b> What kind?</string>
     <string name="str_PT01f_one">Agricultural or related work that is family/self owned</string>
     <string name="str_PT01f_two">Agricultural or related work that is owned by someone else (includes government and others)</string>
     <string name="str_PT01f_three">Non-agricultural work in a family/self owned enterprise</string>
     <string name="str_PT01f_four">Non-agricultural work in an enterprise owned by someone else (includes government and others)</string>
     <string name="select_parent_first">Select parent first.</string>
-    &lt;!&ndash;- END of Parent CQ&ndash;&gt;
-
     <string name="sign_up">Sign Up</string>
-    <string name="have_account_sign_in">Already Have Account? Sign In.</string>
-    <string name="hint_svrName">Name <font color='#FF0000'>*</font></string>
-    <string name="hint_svrEmail">Email(optional) </string>
-    <string name="hint_svrMobile">Mobile No. <font color='#FF0000'>*</font></string>
-    <string name="hint_svrPassword">Password <font color='#FF0000'>*</font></string>
+    <string name="have_account_sign_in">Already have an account? Sign in.</string>
+    <string name="hint_svrName">Name<font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">Email (optional)</string>
+    <string name="hint_svrMobile">Mobile No.<font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">Password<font color='#FF0000'>*</font></string>
     <string name="sign_in">Sign In</string>
     <string name="select_village">Select Village</string>
     <string name="add_village">Add Village</string>
     <string name="update_village">Update Village</string>
-    <string name="hint_village">Village <font color='#FF0000'>*</font></string>
-    <string name="hint_district">District <font color='#FF0000'>*</font></string>
-    <string name="hint_state">State <font color='#FF0000'>*</font></string>
+    <string name="hint_village">Village<font color='#FF0000'>*</font></string>
+    <string name="hint_district">District<font color='#FF0000'>*</font></string>
+    <string name="hint_state">State<font color='#FF0000'>*</font></string>
     <string name="save">Save</string>
     <string name="select_child">Select Child</string>
-    <string name="want_to_start_assessment">Do you want to Start Assessment?</string>
+    <string name="want_to_start_assessment">Do you want to start assessment?</string>
     <string name="goto_next_task">Do you want to go to the next task?</string>
     <string name="thank_you">Thank you</string>
     <string name="test_submitted">Your assessment is submitted.</string>
@@ -210,6 +197,9 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="select_country">Select Country</string>
+    <string name="enrolled">Enrolled</string>
+    <string name="drop_out">Drop Out</string>
+    <string name="never_enrolled">Never Enrolled</string>
     <string name="save_n_submit">Save and Submit Assessment</string>
     <string name="you_want_to_exit">Are you sure you want to exit?</string>
     <string name="all_age">All Ages</string>
@@ -224,46 +214,48 @@
     <string name="str_threeWheeler">3-Wheeler</string>
     <string name="str_fourWheeler">4-Wheeler</string>
     <string name="str_other">Other</string>
-    <string name="age">Age </string>
-
-    <string name="no_student_found">No Children Found.</string>
-    <string name="no_village_found">No Village Found.</string>
-    <string name="no_household_found">No Household Found.</string>
-    <string name="check_internet">Please Check Internet Connection!</string>
+    <string name="age">Age</string>
+    <string name="no_student_found">No children found</string>
+    <string name="no_village_found">No village found.</string>
+    <string name="no_household_found">No household found.</string>
+    <string name="check_internet">Please check internet connection!</string>
     <string name="invalid_mobno_pass">Invalid Mobile No. or Password.</string>
     <string name="enter_mobno_pass">Please Enter Mobile No. and Password!</string>
     <string name="select_radio_button">Please select radio button fields.</string>
     <string name="select_atleast_one">Please select at least one field.</string>
-    <string name="hhName_mandatory">Household Number and Respondent names are Mandatory!</string>
+    <string name="hhName_mandatory">Household Number and Respondent Names are mandatory!</string>
     <string name="hh_Updated_success">Household Updated Successfully!</string>
     <string name="hh_Added_success">Household Added Successfully!</string>
     <string name="select_parent">Select Parent First.</string>
-    <string name="all_fields_mandatory">All Fields are mandatory.</string>
+    <string name="all_fields_mandatory">All fields are mandatory.</string>
     <string name="fill_all_fileds">Please fill all fields!</string>
     <string name="pif_Added_success">Parent Information Added Successfully!</string>
     <string name="pif_Updated_success">Parent Information Updated Successfully!</string>
+    <string name="stud_Added_success">Child Added Successfully!</string>
+    <string name="stud_Updated_success">Child Updated Successfully!</string>
+    <string name="hif_Added_success">Household Information Added Successfully!</string>
+    <string name="hif_Updated_success">Household Information Updated Successfully!</string>
+    <string name="vif_Added_success">Village Information Added Successfully!</string>
+    <string name="vif_Updated_success">Village Information Updated Successfully!</string>
     <string name="vill_Updated_success">Village Updated Successfully!</string>
     <string name="vill_added_success">Village Added Successfully!</string>
     <string name="select_school_type">Select School Type</string>
-    <string name="error_mobile_no">Mobile No. must be less than 20 digit.</string>
-    <string name="error_email">Invalid Email! (Ex. abc@gmail.com)</string>
+    <string name="error_mobile_no">Mobile No. must be less than 20 digits</string>
+    <string name="error_email">Invalid Email! (Please use the format such as abc@gmail.com)</string>
     <string name="error_password">Minimum 3 characters required for password!</string>
-    <string name="profile_already">Profile is already saved..</string>
+    <string name="profile_already">Profile is already saved.</string>
     <string name="invalid_data">Invalid Data!</string>
     <string name="enter_details">Enter Details</string>
-    <string name="years">years</string>
+    <string name="years">Years</string>
     <string name="asmt_not_given">Assessment Not Given By Child</string>
     <string name="hi">Hi,</string>
     <string name="no_match_found">No Match Found!</string>
     <string name="data_sync_success">Data Synced Successfully!</string>
-    <string name="db_sync_success">DB Synced Successfully!</string>
+    <string name="db_sync_success">Database Synced Successfully!</string>
     <string name="sync_fail">Synced Failed!</string>
     <string name="mandatory_permisson">Please Allow, Mandatory Permissions.</string>
-
-
+    <string-array name="None"/>
     <string-array name="country_list">
-        <item>Select Country</item>
-        <item>India</item>
         <item>Pakistan</item>
         <item>Mexico</item>
         <item>Nepal</item>
@@ -274,20 +266,23 @@
         <item>Tanzania</item>
         <item>Senegal</item>
     </string-array>
-
     <string-array name="gender">
         <item>Sex</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>
-
+    <string-array name="enrollment_status">
+        <item>Enrollment Status</item>
+        <item>Enrolled</item>
+        <item>Never Enrolled</item>
+        <item>Drop Out</item>
+    </string-array>
     <string-array name="school_type">
         <item>School Type</item>
         <item>Government/Public</item>
         <item>Private</item>
-        <item>Other (includes religious schools like madarasas, NGO operated schools and informal facilities)</item>
+        <item>Other</item>
     </string-array>
-
     <string-array name="dropout_year_list">
         <item>Year of dropping out</item>
         <item>2015</item>
@@ -301,7 +296,6 @@
         <item>2023</item>
         <item>2024</item>
     </string-array>
-
     <string-array name="student_dropoutclass">
         <item>Last grade/class completed before dropping out</item>
         <item>Pre-primary</item>
@@ -312,31 +306,28 @@
         <item>Class 5</item>
         <item>Class 6</item>
     </string-array>
-
     <string-array name="age">
         <item>Age</item>
-        <item> 4 years</item>
-        <item> 5 years</item>
-        <item> 6 years</item>
-        <item> 7 years</item>
-        <item> 8 years</item>
-        <item> 9 years</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+        <item>7 years</item>
+        <item>8 years</item>
+        <item>9 years</item>
         <item>10 years</item>
     </string-array>
-
     <string-array name="ageFilter">
-        <item>All Ages  </item>
-        <item> 4 years</item>
-        <item> 5 years</item>
-        <item> 6 years</item>
-        <item> 7 years</item>
-        <item> 8 years</item>
-        <item> 9 years</item>
+        <item>All Ages</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+        <item>7 years</item>
+        <item>8 years</item>
+        <item>9 years</item>
         <item>10 years</item>
     </string-array>
-
     <string-array name="student_class">
-        <item>Grade/Class</item>
+        <item>Class</item>
         <item>Pre-primary</item>
         <item>Class 1</item>
         <item>Class 2</item>
@@ -345,11 +336,10 @@
         <item>Class 5</item>
         <item>Class 6</item>
     </string-array>
--->
-
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--Spanish-Nicaragua START ____________________________________________________________________-->
+<!--
     <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Recogida de datos</string>
     <string name="push_success">¡¡Transmisión exitosa!! ¡¡Enviado con éxito!!</string>
@@ -685,6 +675,7 @@ Por favor, seleccione los campos que corresponden. ¿sería así?</string>
         <item>5to grado</item>
         <item>6to grado</item>
     </string-array>
+-->
 
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
