@@ -1,78 +1,58 @@
 [
     {
-        "CountryName": "Mozambique",
-        "Language": "Portuguese-Mozambique",
+        "CountryName": "Nicaragua",
+        "Language": "Spanish-Nicaragua",
         "StateList": [
             {
-                "StateName": "Mogovolas",
+                "StateName": "Matagalpa",
                 "DistrictList": [
                     {
-                        "DistrictName": "Nametil Sede",
+                        "DistrictName": "Muy Muy",
                         "VillageList": [
                             {
-                                "VillageName": "Mutacaze A"
+                                "VillageName": "San Marcos"
                             },
                             {
-                                "VillageName": "Mutacaze B"
+                                "VillageName": "Venecia"
                             },
                             {
-                                "VillageName": "Balança"
+                                "VillageName": "Las Tinajas"
                             },
                             {
-                                "VillageName": "Lampua"
+                                "VillageName": "Maizama Afuera"
                             },
                             {
-                                "VillageName": "Muirequene"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Calipo",
-                        "VillageList": [
-                            {
-                                "VillageName": "Kanloca"
+                                "VillageName": "El Laurel"
                             },
                             {
-                                "VillageName": "Nacuale"
+                                "VillageName": "Las Lomas"
                             },
                             {
-                                "VillageName": "Nacher B"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Ilute",
-                        "VillageList": [
-                            {
-                                "VillageName": "Nacoa A"
+                                "VillageName": "El Corozo 1"
                             },
                             {
-                                "VillageName": "Wakala"
+                                "VillageName": "El Corozo 2"
                             },
                             {
-                                "VillageName": "Namirico"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Muatua",
-                        "VillageList": [
-                            {
-                                "VillageName": "Tarrane"
+                                "VillageName": "El Zompopo"
                             },
                             {
-                                "VillageName": "Muthikhue"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Nanhupo Rio",
-                        "VillageList": [
-                            {
-                                "VillageName": "Nacapa"
+                                "VillageName": "Montealegre"
                             },
                             {
-                                "VillageName": "Namacukho B"
+                                "VillageName": "Santa Lucía"
+                            },
+                            {
+                                "VillageName": "La Pitahaya"
+                            },
+                            {
+                                "VillageName": "El Coyolar"
+                            },
+                            {
+                                "VillageName": "Las Brisas"
+                            },
+                            {
+                                "VillageName": "El Manchón"
                             }
                         ]
                     }
@@ -81,50 +61,69 @@
         ]
     },
     {
-        "CountryName": "Mali",
-        "Language": "French-Mali",
+        "CountryName": "Nepal",
+        "Language": "Nepali-Nepal",
         "StateList": [
             {
-                "StateName": "Segou",
+                "StateName": "Surkhet",
                 "DistrictList": [
                     {
-                        "DistrictName": "Segou",
+                        "DistrictName": "Bheriganga Municipality",
                         "VillageList": [
                             {
-                                "VillageName": "Boussin"
+                                "VillageName": "Saptari-Lekhparajul"
                             },
                             {
-                                "VillageName": "Cinzana"
+                                "VillageName": "Kaalpani-Lekhparajul"
                             },
                             {
-                                "VillageName": "Dougabougou"
+                                "VillageName": "Jaharebajar-Maintada"
                             },
                             {
-                                "VillageName": "Fatine"
+                                "VillageName": "Ramghat"
                             },
                             {
-                                "VillageName": "Kamiandougou"
+                                "VillageName": "Tatikhola"
                             },
                             {
-                                "VillageName": "Konodimini"
+                                "VillageName": "Kalidamar"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Lekbeshi Municipality",
+                        "VillageList": [
+                            {
+                                "VillageName": "Lekhpharsa"
                             },
                             {
-                                "VillageName": "Markala"
+                                "VillageName": "Dasarathpur (B)"
                             },
                             {
-                                "VillageName": "Massala"
+                                "VillageName": "Kalyan (B)"
                             },
                             {
-                                "VillageName": "N'Gara"
+                                "VillageName": "Gangate"
                             },
                             {
-                                "VillageName": "Pelengana"
+                                "VillageName": "Chaurashi"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Barahatal R. Municipality",
+                        "VillageList": [
+                            {
+                                "VillageName": "Nayaban"
                             },
                             {
-                                "VillageName": "Sakoiba"
+                                "VillageName": "Kunathari"
                             },
                             {
-                                "VillageName": "Sebougou"
+                                "VillageName": "Sirupata"
+                            },
+                            {
+                                "VillageName": "Wadaltal"
                             }
                         ]
                     }
@@ -133,59 +132,424 @@
         ]
     },
     {
-        "CountryName": "Kenya",
-        "Language": "Kiswahili-Kenya",
+        "CountryName": "Senegal",
+        "Language": "French-Senegal",
         "StateList": [
             {
-                "StateName": "Makueni",
+                "StateName": "Dakar",
                 "DistrictList": [
                     {
-                        "DistrictName": "Nzaui",
+                        "DistrictName": "Parcelles Assainies",
                         "VillageList": [
                             {
-                                "VillageName": "Ndundune/Kwakyambo"
+                                "VillageName": "Unite Xxii"
                             },
                             {
-                                "VillageName": "Mwingati/Kalima North"
+                                "VillageName": "Unite Xi"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Ouakam",
+                        "VillageList": [
+                            {
+                                "VillageName": "Touba Ouakam"
                             },
                             {
-                                "VillageName": "Kwethelu"
+                                "VillageName": "Cite Asecna"
                             },
                             {
-                                "VillageName": "Mumbuni"
+                                "VillageName": "Boulga"
                             },
                             {
-                                "VillageName": "Kimbingo Lower"
+                                "VillageName": "Bira Ouakam"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Medina",
+                        "VillageList": [
+                            {
+                                "VillageName": "Diecko Nord Pinth"
                             },
                             {
-                                "VillageName": "Thea/Ititu"
+                                "VillageName": "Rass Mission"
                             },
                             {
-                                "VillageName": "Kwa Wandeto"
+                                "VillageName": "Ngaraf Pinth"
                             },
                             {
-                                "VillageName": "Kwamatungu/Kanyenyoni"
+                                "VillageName": "Gouye Mariama Layene"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Biscuiterie",
+                        "VillageList": [
+                            {
+                                "VillageName": "Ouagou Niayes"
                             },
                             {
-                                "VillageName": "Katumati/Mithumoni"
+                                "VillageName": "Grand Dakar I"
                             },
                             {
-                                "VillageName": "Ndivuni"
+                                "VillageName": "Biscuiterie"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Hlm",
+                        "VillageList": [
+                            {
+                                "VillageName": "Hlm Montagne"
                             },
                             {
-                                "VillageName": "Katulyani"
+                                "VillageName": "Hlm V A"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "Pakistan",
+        "Language": "Urdu-Pakistan",
+        "StateList": [
+            {
+                "StateName": "Bahawalpur",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Ahmadpur East Tehsil",
+                        "VillageList": [
+                            {
+                                "VillageName": "Nakhlaur"
                             },
                             {
-                                "VillageName": "Mindali"
+                                "VillageName": "Qadir Pur"
                             },
                             {
-                                "VillageName": "Mulolongo/Mutimumu"
+                                "VillageName": "Bun Wala"
                             },
                             {
-                                "VillageName": "Yumbuni/Kivingo"
+                                "VillageName": "Ratar Neharan Wali"
                             },
                             {
-                                "VillageName": "Tulimani/Ngulai/Makasa"
+                                "VillageName": "Chak No 157 Np"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Bahawalpur Saddar Tehsil",
+                        "VillageList": [
+                            {
+                                "VillageName": "Chak No 027/B C"
+                            },
+                            {
+                                "VillageName": "Sher Garwan"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Hasilpur Tehsil",
+                        "VillageList": [
+                            {
+                                "VillageName": "Khairo Ghazi Khanana"
+                            },
+                            {
+                                "VillageName": "Chak No 183/Murad"
+                            },
+                            {
+                                "VillageName": "Jamal Pur"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Khairpur Tamewali Tehsil",
+                        "VillageList": [
+                            {
+                                "VillageName": "Bhora Hatta"
+                            },
+                            {
+                                "VillageName": "Darud Garan"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Yazman Tehsil",
+                        "VillageList": [
+                            {
+                                "VillageName": "120/D.R.B"
+                            },
+                            {
+                                "VillageName": "Chak No 005/D N B"
+                            },
+                            {
+                                "VillageName": "Chak No 018/D N B"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "India",
+        "Language": "Hindi-India",
+        "StateList": [
+            {
+                "StateName": "Madhya Pradesh",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Satna",
+                        "VillageList": [
+                            {
+                                "VillageName": "Dhaurahra"
+                            },
+                            {
+                                "VillageName": "Tyondhari"
+                            },
+                            {
+                                "VillageName": "Jhari"
+                            },
+                            {
+                                "VillageName": "Shukwah"
+                            },
+                            {
+                                "VillageName": "Hinauta Khurd"
+                            },
+                            {
+                                "VillageName": "Kanhwara"
+                            },
+                            {
+                                "VillageName": "Amkui"
+                            },
+                            {
+                                "VillageName": "Umarhat"
+                            },
+                            {
+                                "VillageName": "Kidari"
+                            },
+                            {
+                                "VillageName": "Murtihai"
+                            },
+                            {
+                                "VillageName": "Chorhata"
+                            },
+                            {
+                                "VillageName": "Itama Nadi Teer"
+                            },
+                            {
+                                "VillageName": "Dehuta"
+                            },
+                            {
+                                "VillageName": "Sagama"
+                            },
+                            {
+                                "VillageName": "Lohraura"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "Bangladesh",
+        "Language": "Bangla-Bangladesh",
+        "StateList": [
+            {
+                "StateName": "Gaibandha",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Fulchhari Upazila",
+                        "VillageList": [
+                            {
+                                "VillageName": "Deluabari"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Gaibandha Sadar Upazila",
+                        "VillageList": [
+                            {
+                                "VillageName": "Chak Barul"
+                            },
+                            {
+                                "VillageName": "Pearapur"
+                            },
+                            {
+                                "VillageName": "Durgapur"
+                            },
+                            {
+                                "VillageName": "Chakchaka"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Gobindaganj Upazila",
+                        "VillageList": [
+                            {
+                                "VillageName": "Gumaniganj"
+                            },
+                            {
+                                "VillageName": "Puiagari"
+                            },
+                            {
+                                "VillageName": "Sreepatipur"
+                            },
+                            {
+                                "VillageName": "Sakhahati"
+                            },
+                            {
+                                "VillageName": "Debpur"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Palashbari Upazila",
+                        "VillageList": [
+                            {
+                                "VillageName": "Taluk Jamira"
+                            },
+                            {
+                                "VillageName": "Parbatipur"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Saghata Upazila",
+                        "VillageList": [
+                            {
+                                "VillageName": "Durgapur"
+                            },
+                            {
+                                "VillageName": "Anantapur"
+                            },
+                            {
+                                "VillageName": "Gobindi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "Uganda",
+        "Language": "English-Uganda",
+        "StateList": [
+            {
+                "StateName": "Central",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Mpigi",
+                        "VillageList": [
+                            {
+                                "VillageName": "BUZAMI 'A'"
+                            },
+                            {
+                                "VillageName": "LUBANGA B 'A'"
+                            },
+                            {
+                                "VillageName": "BUYAYA-KITOJJO 'A'"
+                            },
+                            {
+                                "VillageName": "KAMUSOGONYA"
+                            },
+                            {
+                                "VillageName": "BANGA"
+                            },
+                            {
+                                "VillageName": "MASAAZI"
+                            },
+                            {
+                                "VillageName": "NAKIREBE LCI 'B'"
+                            },
+                            {
+                                "VillageName": "BUKASA LCI 'A'"
+                            },
+                            {
+                                "VillageName": "LWAJA KITUNTU"
+                            },
+                            {
+                                "VillageName": "JJEZA B"
+                            },
+                            {
+                                "VillageName": "NKAMBO LCI 'A'"
+                            },
+                            {
+                                "VillageName": "BUSEESE A LCI"
+                            },
+                            {
+                                "VillageName": "KASUUBO LCI 'B'"
+                            },
+                            {
+                                "VillageName": "KWABBA LCI"
+                            },
+                            {
+                                "VillageName": "NNINDYE A LCI 'A'"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "Tanzania",
+        "Language": "Kiswahili-Tanzania",
+        "StateList": [
+            {
+                "StateName": "Kilimanjaro",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Moshi",
+                        "VillageList": [
+                            {
+                                "VillageName": "Manambeni"
+                            },
+                            {
+                                "VillageName": "Boro juu & Sangiti"
+                            },
+                            {
+                                "VillageName": "Kifuweni"
+                            },
+                            {
+                                "VillageName": "Lefuri"
+                            },
+                            {
+                                "VillageName": "Usalama road"
+                            },
+                            {
+                                "VillageName": "Mnono kati"
+                            },
+                            {
+                                "VillageName": "Embakasi"
+                            },
+                            {
+                                "VillageName": "Longoni, King'aroni, Dehu & Lowiri"
+                            },
+                            {
+                                "VillageName": "Rau KDC"
+                            },
+                            {
+                                "VillageName": "Isiye kusini"
+                            },
+                            {
+                                "VillageName": "Maendeleo"
+                            },
+                            {
+                                "VillageName": "Mkorongoni"
+                            },
+                            {
+                                "VillageName": "Bondeni"
+                            },
+                            {
+                                "VillageName": "Kyala chini"
+                            },
+                            {
+                                "VillageName": "Kokiramu"
                             }
                         ]
                     }
@@ -295,59 +659,59 @@
         ]
     },
     {
-        "CountryName": "Tanzania",
-        "Language": "Kiswahili-Tanzania",
+        "CountryName": "Kenya",
+        "Language": "Kiswahili-Kenya",
         "StateList": [
             {
-                "StateName": "Kilimanjaro",
+                "StateName": "Makueni",
                 "DistrictList": [
                     {
-                        "DistrictName": "Moshi",
+                        "DistrictName": "Nzaui",
                         "VillageList": [
                             {
-                                "VillageName": "Manambeni"
+                                "VillageName": "Ndundune/Kwakyambo"
                             },
                             {
-                                "VillageName": "Boro juu & Sangiti"
+                                "VillageName": "Mwingati/Kalima North"
                             },
                             {
-                                "VillageName": "Kifuweni"
+                                "VillageName": "Kwethelu"
                             },
                             {
-                                "VillageName": "Lefuri"
+                                "VillageName": "Mumbuni"
                             },
                             {
-                                "VillageName": "Usalama road"
+                                "VillageName": "Kimbingo Lower"
                             },
                             {
-                                "VillageName": "Mnono kati"
+                                "VillageName": "Thea/Ititu"
                             },
                             {
-                                "VillageName": "Embakasi"
+                                "VillageName": "Kwa Wandeto"
                             },
                             {
-                                "VillageName": "Longoni, King'aroni, Dehu & Lowiri"
+                                "VillageName": "Kwamatungu/Kanyenyoni"
                             },
                             {
-                                "VillageName": "Rau KDC"
+                                "VillageName": "Katumati/Mithumoni"
                             },
                             {
-                                "VillageName": "Isiye kusini"
+                                "VillageName": "Ndivuni"
                             },
                             {
-                                "VillageName": "Maendeleo"
+                                "VillageName": "Katulyani"
                             },
                             {
-                                "VillageName": "Mkorongoni"
+                                "VillageName": "Mindali"
                             },
                             {
-                                "VillageName": "Bondeni"
+                                "VillageName": "Mulolongo/Mutimumu"
                             },
                             {
-                                "VillageName": "Kyala chini"
+                                "VillageName": "Yumbuni/Kivingo"
                             },
                             {
-                                "VillageName": "Kokiramu"
+                                "VillageName": "Tulimani/Ngulai/Makasa"
                             }
                         ]
                     }
@@ -356,59 +720,50 @@
         ]
     },
     {
-        "CountryName": "Uganda",
-        "Language": "English-Uganda",
+        "CountryName": "Mali",
+        "Language": "French-Mali",
         "StateList": [
             {
-                "StateName": "Central",
+                "StateName": "Segou",
                 "DistrictList": [
                     {
-                        "DistrictName": "Mpigi",
+                        "DistrictName": "Segou",
                         "VillageList": [
                             {
-                                "VillageName": "BUZAMI 'A'"
+                                "VillageName": "Boussin"
                             },
                             {
-                                "VillageName": "LUBANGA B 'A'"
+                                "VillageName": "Cinzana"
                             },
                             {
-                                "VillageName": "BUYAYA-KITOJJO 'A'"
+                                "VillageName": "Dougabougou"
                             },
                             {
-                                "VillageName": "KAMUSOGONYA"
+                                "VillageName": "Fatine"
                             },
                             {
-                                "VillageName": "BANGA"
+                                "VillageName": "Kamiandougou"
                             },
                             {
-                                "VillageName": "MASAAZI"
+                                "VillageName": "Konodimini"
                             },
                             {
-                                "VillageName": "NAKIREBE LCI 'B'"
+                                "VillageName": "Markala"
                             },
                             {
-                                "VillageName": "BUKASA LCI 'A'"
+                                "VillageName": "Massala"
                             },
                             {
-                                "VillageName": "LWAJA KITUNTU"
+                                "VillageName": "N'Gara"
                             },
                             {
-                                "VillageName": "JJEZA B"
+                                "VillageName": "Pelengana"
                             },
                             {
-                                "VillageName": "NKAMBO LCI 'A'"
+                                "VillageName": "Sakoiba"
                             },
                             {
-                                "VillageName": "BUSEESE A LCI"
-                            },
-                            {
-                                "VillageName": "KASUUBO LCI 'B'"
-                            },
-                            {
-                                "VillageName": "KWABBA LCI"
-                            },
-                            {
-                                "VillageName": "NNINDYE A LCI 'A'"
+                                "VillageName": "Sebougou"
                             }
                         ]
                     }
@@ -417,59 +772,79 @@
         ]
     },
     {
-        "CountryName": "Nicaragua",
-        "Language": "Spanish-Nicaragua",
+        "CountryName": "Mozambique",
+        "Language": "Portuguese-Mozambique",
         "StateList": [
             {
-                "StateName": "Matagalpa",
+                "StateName": "Mogovolas",
                 "DistrictList": [
                     {
-                        "DistrictName": "Muy Muy",
+                        "DistrictName": "Nametil Sede",
                         "VillageList": [
                             {
-                                "VillageName": "San Marcos"
+                                "VillageName": "Mutacaze A"
                             },
                             {
-                                "VillageName": "Venecia"
+                                "VillageName": "Mutacaze B"
                             },
                             {
-                                "VillageName": "Las Tinajas"
+                                "VillageName": "Balança"
                             },
                             {
-                                "VillageName": "Maizama Afuera"
+                                "VillageName": "Lampua"
                             },
                             {
-                                "VillageName": "El Laurel"
+                                "VillageName": "Muirequene"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Calipo",
+                        "VillageList": [
+                            {
+                                "VillageName": "Kanloca"
                             },
                             {
-                                "VillageName": "Las Lomas"
+                                "VillageName": "Nacuale"
                             },
                             {
-                                "VillageName": "El Corozo 1"
+                                "VillageName": "Nacher B"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Ilute",
+                        "VillageList": [
+                            {
+                                "VillageName": "Nacoa A"
                             },
                             {
-                                "VillageName": "El Corozo 2"
+                                "VillageName": "Wakala"
                             },
                             {
-                                "VillageName": "El Zompopo"
+                                "VillageName": "Namirico"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Muatua",
+                        "VillageList": [
+                            {
+                                "VillageName": "Tarrane"
                             },
                             {
-                                "VillageName": "Montealegre"
+                                "VillageName": "Muthikhue"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Nanhupo Rio",
+                        "VillageList": [
+                            {
+                                "VillageName": "Nacapa"
                             },
                             {
-                                "VillageName": "Santa Lucía"
-                            },
-                            {
-                                "VillageName": "La Pitahaya"
-                            },
-                            {
-                                "VillageName": "El Coyolar"
-                            },
-                            {
-                                "VillageName": "Las Brisas"
-                            },
-                            {
-                                "VillageName": "El Manchón"
+                                "VillageName": "Namacukho B"
                             }
                         ]
                     }

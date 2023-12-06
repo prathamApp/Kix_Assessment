@@ -2,7 +2,7 @@
 <resources>
 
     <!--ENGLISH START ____________________________________________________________________-->
-    <!--  <string name="app_name">ELANA</string>
+<!--      <string name="app_name">ELANA</string>
       <string name="Collecting_Data">Collecting Data</string>
       <string name="push_success">Pushed successfully!</string>
       <string name="push_fail">Push failed!</string>
@@ -679,7 +679,7 @@
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">ELANA</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="push_success">Transmission avec succès !</string>
     <string name="push_fail">La transmission a échoué !</string>
@@ -1008,8 +1008,345 @@
         <item>4e année</item>
         <item>5e année</item>
         <item>6e année</item>
-    </string-array>
+    </string-array>-->
     <!--French-Mali END ____________________________________________________________________-->
+
+    <!--Hindi-India START ____________________________________________________________________-->
+    <string name="app_name">ELANA</string>
+    <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
+    <string name="push_success">डेटा पुश सफल रहा!!</string>
+    <string name="push_fail">डेटा पुश विफल रहा!</string>
+    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
+    <string name="Okay">ठीक है</string>
+    <string name="ok">ठीक है</string>
+    <string name="please_wait_pushing">कृपया प्रतीक्षा करें, डेटा पुश हो रहा है ...</string>
+    <string name="details">डिटेल्स</string>
+    <string name="goto_next">अगले ऑप्शन पर जाएँ</string>
+    <string name="cancel">कैंसिल करें</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="create_surveyor">सर्वेक्षक का खाता बनाएँ</string>
+    <string name="children_surveyed">सर्वेक्षित बच्चे :</string>
+    <string name="children_assessed">मूल्यांकन किये गए बच्चे:</string>
+    <string name="child_name">बच्चे का नाम</string>
+    <string name="village">गाँव</string>
+    <string name="assessment_given">मूल्यांकन हो गया</string>
+    <string name="assessments_synced">मूल्यांकन सिंक्रनाइज़ हो गया</string>
+    <string name="score_count">कुल स्कोर :</string>
+    <string name="student_count">कुल बच्चे :</string>
+    <string name="surveyor_count">कुल सर्वेक्षिक :</string>
+    <string name="village_count">कुल गाँव :</string>
+    <string name="household_count">कुल घर :</string>
+    <string name="hif_count">कुल HIF :</string>
+    <string name="vif_count">कुल VIF :</string>
+    <string name="pif_count">कुल PIF :</string>
+    <string name="sync_details">सिंक्रोनाइज़ विवरण</string>
+    <string name="edit_child_info">बच्चे की जानकारी को अपडेट करें</string>
+    <string name="add_village_info">गाँव की जानकारी भरें</string>
+    <string name="update_village_info">गाँव की जानकारी अपडेट करें</string>
+    <string name="str_village_info">गाँव की जानकारी</string>
+    <string name="str_V01"><b>V01.</b> क्या गाँव तक जाने के लिए पक्की सड़क है?</string>
+    <string name="str_V02"><b>V02.</b> क्या गाँव में जाने के लिए सार्वजनिक परिवहन के साधन उपलब्ध है?</string>
+    <string name="str_V03"><b>V03.</b> क्या गाँव में बिजली का कनेक्शन है?</string>
+    <string name="str_V04"><b>V04.</b> क्या गाँव में सरकारी स्वास्थ्य केंद्र/अस्पताल है?</string>
+    <string name="str_V05"><b>V05.</b> क्या गाँव में निजी स्वास्थ्य केंद्र/अस्पताल है?</string>
+    <string name="str_V06a"><b>V06a.</b> क्या गाँव में कोई पूर्व - प्राथमिक विद्यालय या किसी विद्यालय में पूर्व - प्राथमिक कक्षाएँ है?</string>
+    <string name="str_V06b"><b>V06b.</b> गाँव के किस प्रकार के विद्यालय में पूर्व प्राथमिक कक्ष्याएँ है?</string>
+    <string name="str_V07a"><b>V07a.</b> क्या गाँव में कोई प्राथमिक विद्यालय या किसी विद्यालय में प्राथमिक कक्षाएँ हैं?</string>
+    <string name="str_V07b"><b>V07b.</b> गाँव में किस प्रकार के विद्यालय में प्राथमिक कक्षाएँ है? (लागु होने वाले सभी पर टिक करें )</string>
+    <string name="villinfo_Updated_success">गाँव की जानकारी सफलतापूर्वक अपडेट की गई!</string>
+    <string name="villinfo_added_success">गाँव की जानकारी सफलतापूर्वक जोड़ी गई!</string>
+    <string name="str_add_household">नया घर जोडें</string>
+    <string name="update_household">घर को अपडेट करें</string>
+    <string name="str_isSampledHH"><b>HH00.</b> क्या चयनित घर:</string>
+    <string name="str_isSampledHH_one">बंद है?</string>
+    <string name="str_isSampledHH_two">कोई प्रतिक्रिया नहीं है?</string>
+    <string name="str_isSampledHH_three">सर्वेक्षण के लिए उपलब्ध है?</string>
+    <string name="str_HH01"><b>HH01.</b> हिस्सा/मुहल्ले का नंबर<font color='#FF0000'>*</font></string>
+    <string name="str_HH02"><b>HH02.</b> उत्तरदाता का नाम<font color='#FF0000'>*</font></string>
+    <string name="str_HH03"><b>HH03.</b> घर के मुख्या का नाम</string>
+    <string name="str_HH04a"><b>HH04a.</b> क्या इस घर में 4-10 आयुवर्ग के बच्चे नियमीत रूप से रहते हैं?</string>
+    <string name="str_HH04b"><b>HH04b.</b> कितने बच्चे रहते हैं?</string>
+    <string name="str_HH05"><b>HH05.</b> घर का फ़ोन/ मोबाइल नंबर (तभी लिखें यदि उपलब्ध हो और उत्तरदाता को नंबर बताने में कोई समस्या न हो)</string>
+    <string name="str_add_household_info">घर की जानकारी भरें</string>
+    <string name="str_update_household_info">घर की जानकारी को अपडेट करें</string>
+    <string name="str_household_info">घर की जानकारी</string>
+    <string name="str_household">घर</string>
+    <string name="str_gnr_household_info">सर्वेक्षित घर की सामान्य जानकारी</string>
+    <string name="str_HH06a"><b>HH06a.</b> घर में नियमित रूप से रहने वाली सदस्यों की कुल संख्या</string>
+    <string name="str_HH06b"><b>HH06b.</b> क्या घर पर हिंदी बोली जाती है?</string>
+    <string name="str_HH06c"><b>HH06c.</b> घर में कितनी बार हिंदी में बात की जाती है?</string>
+    <string name="str_always">हमेशा</string>
+    <string name="str_sometimes">कभी-कभी</string>
+    <string name="str_HH06d"><b>HH06d.</b> क्या घर में कोई और भासा बोली जाती है?</string>
+    <string name="str_HH_asset_info">घर की परिसंपति की जानकारी</string>
+    <string name="str_HH07a"><b>HH07a.</b> क्या घर की छत पक्की है?</string>
+    <string name="str_HH07b"><b>HH07b.</b> क्या घर की दीवारें पक्की हैं?</string>
+    <string name="str_HH07c"><b>HH07c.</b> घर में प्रकाश का नियमित स्रोत क्या है?</string>
+    <string name="str_HH07c_one">बिजली</string>
+    <string name="str_HH07c_two">सौलर</string>
+    <string name="str_HH07c_three">अन्य</string>
+    <string name="str_HH07d.1"><b>HH07d1.</b> क्या पानी पिने का नियमित स्त्रोत घर के परिसर में है? (यह स्रोत घर के अंदर या बाहर हो सकता है, लेकिन केवल घर के सदस्य ही इसका उपयोग करते हों )</string>
+    <string name="str_HH07d.2"><b>HH07d2.</b> क्या आप इस पानी के उपयोग के लिए पैसे देते हैं?</string>
+    <string name="str_HH07f"><b>HH07f.</b> कम से कम एक शौचालय जिसका उपयोग विशेष रूप से घर के सदस्यों द्वारा किया जाता है?</string>
+    <string name="str_HH07g"><b>HH07g.</b> घर में किसी ने (बच्चे के माता-पिता के अलावा) 12वी कक्षा पूरी की है?</string>
+    <string name="str_HH07h"><b>HH07h.</b> विद्यालय की किताबों के अलावा बच्चों के पढ़ने के लिए कोई सामग्री जैसे कहानी की किताब या कोई अन्य किताब है?</string>
+    <string name="str_HH07i"><b>HH07i.</b> क्या कोई अन्य पुस्तकें या पठन सामग्री, जैसे धार्मिक पुष्तकें, समाचार पत्र, पत्रिकाएँ आदि हैं?</string>
+    <string name="str_HH07j"><b>HH07j.</b> कम्प्यूटर/लैपटॉप/टेबलेट है?</string>
+    <string name="str_HH07k"><b>HH07k.</b> टी. वि. है?</string>
+    <string name="str_HH07m"><b>HH07m.</b> मोबाइल फ़ोन है?</string>
+    <string name="str_HH07n"><b>HH07n.</b> क्या वह स्मार्टफोन है?</string>
+    <string name="str_HH07o"><b>HH07o.</b> क्या आपके पास मोटर चालित वाहन है?
+</string>
+    <string name="str_HH07p"><b>HH07p.</b> उसमें कितने पहिये हैं?</string>
+    <string name="str_HH07p_one">4 - पहिये</string>
+    <string name="str_HH07p_two">3 - पहिये</string>
+    <string name="str_HH07p_three">2 - पहिये</string>
+    <string name="str_HH07q"><b>HH07q.</b> साइकिल?</string>
+    <string name="str_HH_have_lbl">क्या घर में :</string>
+    <string name="householdinfo_added_success">घर की जानकारी सफलता पूर्वक जोड़ी गई!</string>
+    <string name="householdinfo_updated_success">घर की जानकारी सफलता पूर्वक अपडेट की गई!</string>
+    <string name="select_household">घर चुनें</string>
+    <string name="hint_respondentName">उत्तरदाता का नाम<font color='#FF0000'>*</font></string>
+    <string name="add_child">नए बच्चे को जोडें</string>
+    <string name="update_child">बच्चे की जानकारी अपडेट करें</string>
+    <string name="str_CH01"><b>CH01.</b> नाम<font color='#FF0000'>*</font></string>
+    <string name="str_CH04a"><b>CH04a.</b> क्या [###] को कोई दिव्यांगता है?</string>
+    <string name="str_CH04b"><b>CH04b.</b> किस प्रकार की दिव्यांगता है?</string>
+    <string name="str_CH04b_op1">दृष्टि दोष</string>
+    <string name="str_CH04b_op2">श्रवण दोष/वक्र दोष</string>
+    <string name="str_CH04b_op3">शारीरिक</string>
+    <string name="str_CH04b_op4">सज्ञानात्मक</string>
+    <string name="str_CH05"><b>CH05. </b> क्या [###] वर्तमान में किसी विद्यालय अथवा पूर्व-प्राथमिक विद्यालय में नामंकित है?</string>
+    <string name="str_CH06c"><b>CH06c. </b> क्या इस विद्यालय में शिक्षा का आधिकारिक माध्यम हिंदी है? (छोटे बच्चों के लिए, आप उनकी स्कूल की पाठ्यपुस्तकें/कार्यपत्र/गतिविधि पत्र देख सकते हैं)</string>
+    <string name="str_CH06f"><b>CH06f. </b> क्या [###] के पास वर्त्तमान में नामांकित कक्षा की पाठ्यपुस्तकें हैं?</string>
+    <string name="str_CH06g"><b>CH06g. </b> क्या [###] ने विद्यालय में कभी किसी कक्षा को दोहराया है?</string>
+    <string name="str_CH07a"><b>CH07a. </b> क्या [###] पहले कभी विद्यालय में नामांकित था?</string>
+    <string name="str_CH07d"><b>CH07d. </b> [###] को विद्यालय छोड़ने का क्या कारण था?</string>
+    <string name="str_reasonToDrop_one">विद्यालय की फीस भरना मुश्किल था</string>
+    <string name="str_reasonToDrop_two">विद्यालय बंद हो गया था</string>
+    <string name="str_reasonToDrop_three">उच्च कक्षा में प्रमोशन नहीं हुआ</string>
+    <string name="str_reasonToDrop_four">अगली कक्षा के लिए आस-पास कोई विद्यालय उपलब्ध नहीं था</string>
+    <string name="str_reasonToDrop_five">विद्यालय जाने में दिलचस्पी नहीं</string>
+    <string name="str_reasonToDrop_six">अन्य</string>
+    <string name="str_reasonToDrop_seven">नहीं पता</string>
+    <string name="str_CH09a"><b>CH09a. </b> क्या वर्त्तमान में [###] पैसे देकर ट्यूशन पढ़ने जाता है?</string>
+    <string name="str_CH09b"><b>CH09b. </b> क्या [###] पिछले 2 सप्ताह में स्कूल की लाइब्रेरी या किसी अन्य स्थान से पढ़ने के लिए कोई सामग्री (स्कूल की पाठ्यपुस्तकों के अलावा) घर लाया है?</string>
+    <string name="str_CH08a"><b>CH08a. </b> क्या घर में कोई [###] की पढ़ाई में मदत करता है?</string>
+    <string name="str_CH08b"><b>CH08b. </b> [###] की पढ़ाई में सबसे ज़्यादा मदत कौन करता है?</string>
+    <string name="str_CH08b_one">पिता</string>
+    <string name="str_CH08b_two">माता</string>
+    <string name="str_CH08b_three">बड़ा भाई/बेहेन</string>
+    <string name="str_CH08b_four">अन्य</string>
+    <string name="str_CH09c"><b>CH09c. </b> घर पर कोई कितने बार [###] को कहानियाँ पढ़ते या सुनाते है?</string>
+    <string name="str_CH09c_one">कभी नहीं</string>
+    <string name="str_CH09c_two">एक हफ्ते में एक बार</string>
+    <string name="str_CH09c_three">एक हफ्ते में 1 - 2 दिन</string>
+    <string name="str_CH09c_four">एक हफ्ते में 3 - 4 दिन</string>
+    <string name="str_CH09c_five">एक हफ्ते में 5 - 7 दिन</string>
+    <string name="additional_learning_sup">स्कूल के इलावा अतिरिक्त शिक्षण सहायता</string>
+    <string name="child_update_success">बच्चे सफलतापूर्वक अपडेट किया गया!</string>
+    <string name="child_add_success">बच्चे सफलतापूर्वक जोड़ा गया!</string>
+    <string name="no_child_found">कोई बच्चा उपलब्ध नहीं है</string>
+    <string name="add_parent_information">अभिभावक की जानकारी भरें</string>
+    <string name="update_parent_information">अभिभावक की जानकारी को अपडेट करें</string>
+    <string name="parent_information">अभिभावक की जानकारी</string>
+    <string name="mothers_details">माता की जानकारी</string>
+    <string name="fathers_details">पिता की जानकारी</string>
+    <string name="mothers_instruction">(यदि माँ जीवित नहीं है या घर में नहीं रहती है, तो PT01a से PT01f को खाली छोड़ दें; यदि बच्चा अपनी सौतेली माँ के साथ रहता है, तो उन्हें 
+माँ मानें और उसके डिटेल्स PT01a से PT01f में भरें)</string>
+    <string name="fathers_instruction">(यदि पिता जीवित नहीं है या घर में नहीं रहता है, तो PT02a से PT02f को खाली छोड़ दें; हालाँकि यदि बच्चा अपने सौतेले पिता के साथ रहता है, तो उन्हें 
+पिता मानें और और उसके डिटेल्स PT02a से PT02f में भरें)
+</string>
+    <string name="hint_motherName"><b>PT01a. </b> माता का नाम<font color='#FF0000'>*</font></string>
+    <string name="hint_fatherName"><b>PT02a. </b> पिता का नाम<font color='#FF0000'>*</font></string>
+    <string name="str_motherName"><b>PT01a. </b> माता का नाम</string>
+    <string name="str_fatherName"><b>PT02a. </b> पिता का नाम</string>
+    <string name="str_PT01b"><b>PT01b. </b> माता की आयु</string>
+    <string name="str_PT02b"><b>PT02b. </b> पिता की आयु</string>
+    <string name="str_PT01d"><b>PT01d. </b> उन्होनें किस स्तर तक स्कूल की शिक्षा पूरी की है?</string>
+    <string name="str_PT02d"><b>PT02d. </b> उन्होनें किस स्तर तक स्कूल की शिक्षा पूरी की है?</string>
+    <string name="str_PT0d_one">प्राथमिक शिक्षा भी पूरी नहीं की</string>
+    <string name="str_PT0d_two">प्राथमिक शिक्षा पूरी की</string>
+    <string name="str_PT0d_three">माध्यमिक शिक्षा पूरी की</string>
+    <string name="str_PT0d_four">माध्यमिक से आगे की शिक्षा पूरी की</string>
+    <string name="str_child_lives_with">बच्चा अपने</string>
+    <string name="str_mother">माँ के साथ रहता/रहती है</string>
+    <string name="str_father">पिता के साथ रहता/रहती है</string>
+    <string name="str_both">दोनों के साथ रहता/रहती है</string>
+    <string name="str_neither">दोनों के साथ नहीं रहता/रहती है</string>
+    <string name="str_PT01c"><b>PT01c. </b> क्या माँ कभी विद्यालय गई हैं?</string>
+    <string name="str_PT02c"><b>PT02c. </b> क्या पिता कभी विद्यालय गए हैं?</string>
+    <string name="str_PT01e"><b>PT01e. </b> क्या माँ के पास आय उत्पन्न करने वाला कार्य/व्यवसाय है?</string>
+    <string name="str_PT02e"><b>PT02e. </b> क्या पिता के पास आय उत्पत्र करने वाला कार्य/व्यवसाय है?</string>
+    <string name="str_PT01f"><b>PT01f. </b> किस प्रकार का कार्य/व्यवसाय?</string>
+    <string name="str_PT02f"><b>PT02f. </b> किस प्रकार का कार्य/व्यवसाय?</string>
+    <string name="str_PT01f_one">परिवार या स्वयं का कृषि संबंधित कार्य</string>
+    <string name="str_PT01f_two">किसी अन्य (सरकार या किसी और) के लिए कृषि कार्य/व्यवसाय</string>
+    <string name="str_PT01f_three">परिवार/स्वयं के उद्यम में गैर-कृषि कार्य</string>
+    <string name="str_PT01f_four">किसी अन्य के लिए (सरकार या किसी और) गैर-कृषि कार्य/व्यवसाय</string>
+    <string name="select_parent_first">पहले अभिभावक को चुनें</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="have_account_sign_in">खता पहले से बना है? साइन इन करें।</string>
+    <string name="hint_svrName">नाम<font color='#FF0000'>*</font></string>
+    <string name="hint_svrEmail">ईमेल (वैकल्पिक)</string>
+    <string name="hint_svrMobile">मोबाइल नंबर<font color='#FF0000'>*</font></string>
+    <string name="hint_svrPassword">पास्वर्ड<font color='#FF0000'>*</font></string>
+    <string name="sign_in">साइन इन</string>
+    <string name="select_village">गाँव चुनें</string>
+    <string name="add_village">एक गाँव को जोड़ें</string>
+    <string name="update_village">गाँव को अपडेट करें</string>
+    <string name="hint_village">गाँव<font color='#FF0000'>*</font></string>
+    <string name="hint_district">ज़िला<font color='#FF0000'>*</font></string>
+    <string name="hint_state">राज्य<font color='#FF0000'>*</font></string>
+    <string name="save">सेव</string>
+    <string name="select_child">बच्चे को चुनें</string>
+    <string name="want_to_start_assessment">क्या आपको मूल्यांकन शुरू करना है?</string>
+    <string name="goto_next_task">क्या आपको अगली गतिविधि शुरू करनी है?</string>
+    <string name="thank_you">धन्यवाद</string>
+    <string name="test_submitted">आपका मूल्यांकन जमा हो गया है।</string>
+    <string name="next_student">अगला बच्चा</string>
+    <string name="submit_assessment">मूल्यांकन जमा करें</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="select_country">देश चुनें</string>
+    <string name="enrolled">नामांकित</string>
+    <string name="drop_out">ड्रॉपआउट (विद्यालय जाना छोड़ दिया)</string>
+    <string name="never_enrolled">विद्यालय में कभी नामांकन नहीं हुआ</string>
+    <string name="save_n_submit">मूल्यांकन को सेव और जमा करें</string>
+    <string name="you_want_to_exit">क्या आप निश्चित हैं कि आप एग्जिट करना चाहते हैं?</string>
+    <string name="all_age">सभी आयु</string>
+    <string name="all_village">सभी गाँव</string>
+    <string name="all_houeholds">सभी घर</string>
+    <string name="edit">संपादन करें</string>
+    <string name="str_government">सरकारी</string>
+    <string name="str_government_public">सरकारी/सार्वजनिक</string>
+    <string name="str_public">सार्वजनिक</string>
+    <string name="str_private">निजी</string>
+    <string name="str_twoWheeler">2 पहिये</string>
+    <string name="str_threeWheeler">3 पहिये</string>
+    <string name="str_fourWheeler">4 पहिये</string>
+    <string name="str_other">अन्य</string>
+    <string name="age">आयु</string>
+    <string name="no_student_found">कोई बच्चा उपलब्ध नहीं है।</string>
+    <string name="no_village_found">कोई गाँव उपलब्ध नहीं हैं।</string>
+    <string name="no_household_found">कोई घर उपलब्ध नहीं है।</string>
+    <string name="check_internet">कृपया इन्टरनेट की सुविधा सुनिश्चित करें!</string>
+    <string name="invalid_mobno_pass">गलत मोबाइल नंबर और पासवर्ड।</string>
+    <string name="enter_mobno_pass">कृपया मोबाइल नंबर ओर पास्वर्ड दर्ज करें!</string>
+    <string name="select_radio_button">कृपया रेडियो बटन फील्ड चुनें।</string>
+    <string name="select_atleast_one">कम से कम एक फील्ड चुनें।</string>
+    <string name="hhName_mandatory">घर की संख्या और उत्तरदाता का नाम अनिवार्य है!</string>
+    <string name="hh_Updated_success">घर सफलतापूर्वक अपडेट किया गया!</string>
+    <string name="hh_Added_success">घर सफलतापूर्वक जोड़ा गया!</string>
+    <string name="select_parent">पहले अभिभावक को चुनें।</string>
+    <string name="all_fields_mandatory">सभी फ़ील्ड को भरना अनिवार्य है।</string>
+    <string name="fill_all_fileds">कृपया सभी फ़ील्ड भरें!</string>
+    <string name="pif_Added_success">अभिभावक की जानकारी सफलतापूर्वक जोड़ी गई।</string>
+    <string name="pif_Updated_success">अभिभावक की जानकारी सफलतापूर्वक अपडेट की गई!</string>
+    <string name="stud_Added_success">बच्चा सफलतापूर्वक जोड़ा गया!</string>
+    <string name="stud_Updated_success">बच्चा सफलतापूर्वक अपडेट किया गया!</string>
+    <string name="hif_Added_success">घर की जानकारी सफलतापूर्वक जोड़ी गई!</string>
+    <string name="hif_Updated_success">घर की जानकारी सफलतापूर्वक अपडेट की गई!</string>
+    <string name="vif_Added_success">गाँव की जानकारी सफलतापूर्वक जोड़ी गई!</string>
+    <string name="vif_Updated_success">गाँव की जानकारी सफलतापूर्वक अपडेट की गई!</string>
+    <string name="vill_Updated_success">गाँव सफलतापूर्वक अपडेट किया गया !</string>
+    <string name="vill_added_success">गाँव सफलतापूर्वक जोड़ा गया!</string>
+    <string name="select_school_type">विद्यालय के प्रकार को चुनें</string>
+    <string name="error_mobile_no">मोबाइल नंबर 20 अंक से कम का होना चाहिए।</string>
+    <string name="error_email">ईमेल अमान्य है! (उदाहरण abc@gmail.com)</string>
+    <string name="error_password">पासवर्ड के लिए कम से कम 3 कैरेक्टर चाहिए!</string>
+    <string name="profile_already">प्रोफाइल पहले से ही उपलब्ध है।</string>
+    <string name="invalid_data">अमान्य डेटा!</string>
+    <string name="enter_details">जानकारी दर्ज करें</string>
+    <string name="years">साल/वर्ष</string>
+    <string name="asmt_not_given">बच्चे द्वारा मूल्यांकन नहीं दिया गया</string>
+    <string name="hi">नमस्ते!</string>
+    <string name="no_match_found">कोई मेल नहीं हैं!</string>
+    <string name="data_sync_success">डेटा सफलतापूर्वक सिंक्रोनाइज़ हुआ!</string>
+    <string name="db_sync_success">DB/डेटाबेस सफलतापूर्वक सिंक्रोनाइज़ हुआ!</string>
+    <string name="sync_fail">असफल सिंक्रनाइजेशन!</string>
+    <string name="mandatory_permisson">कृपया अनिवार्य अनुमतियाँ प्रदान करें।</string>
+    <string-array name="None"/>
+    <string-array name="country_list">
+        <item>Pakistan</item>
+        <item>Mexico</item>
+        <item>Nepal</item>
+        <item>Bangladesh</item>
+        <item>Mali</item>
+        <item>Mozambique</item>
+        <item>Nicaragua</item>
+        <item>Tanzania</item>
+        <item>Senegal</item>
+    </string-array>
+    <string-array name="gender">
+        <item>लिंग</item>
+        <item>लड़का</item>
+        <item>लड़की</item>
+    </string-array>
+    <string-array name="enrollment_status">
+        <item>नामांकन स्थिति</item>
+        <item>नामांकित</item>
+        <item>विद्यालय में कभी नामांकन नहीं हुआ</item>
+        <item>ड्रॉपआउट (विद्यालय जाना छोड़ दिया)</item>
+    </string-array>
+    <string-array name="school_type">
+        <item>विद्यालय का प्रकार</item>
+        <item>सरकारी</item>
+        <item>निजी</item>
+        <item>अन्य (इसमें मदरसे जैसे धार्मिक स्कूल, एनजीओ संचालित स्कूल और अनौपचारिक सुविधाएं शामिल हैं)</item>
+    </string-array>
+    <string-array name="dropout_year_list">
+        <item>कौन सी वर्ष में विद्यालय जाना छोड़ा?</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+    <string-array name="student_dropoutclass">
+        <item>किस कक्षा को पूरा करके विद्यालय जाना छोड़ा?</item>
+        <item>पूर्व प्राथमिक</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+        <item>कक्षा 6</item>
+    </string-array>
+    <string-array name="age">
+        <item>आयु</item>
+        <item>4 साल</item>
+        <item>5 साल</item>
+        <item>6 साल</item>
+        <item>7 साल</item>
+        <item>8 साल</item>
+        <item>9 साल</item>
+        <item>10 साल</item>
+    </string-array>
+    <string-array name="ageFilter">
+        <item>सभी आयु</item>
+        <item>4 साल</item>
+        <item>5 साल</item>
+        <item>6 साल</item>
+        <item>7 साल</item>
+        <item>8 साल</item>
+        <item>9 साल</item>
+        <item>10 साल</item>
+    </string-array>
+    <string-array name="student_class">
+        <item>कक्षा</item>
+        <item>पूर्व प्राथमिक</item>
+        <item>कक्षा 1</item>
+        <item>कक्षा 2</item>
+        <item>कक्षा 3</item>
+        <item>कक्षा 4</item>
+        <item>कक्षा 5</item>
+        <item>कक्षा 6</item>
+    </string-array>
+    <!--Hindi-India END ____________________________________________________________________-->
 
 
 </resources>
