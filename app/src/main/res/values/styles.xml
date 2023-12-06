@@ -191,6 +191,9 @@
 
 <!--        <item name="android:windowAnimationStyle">CustomActivityAnimation</item>-->
     </style>
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/_11sdp</item>
+    </style>
 
     <declare-styleable name="RoundedHorizontalProgress">
         <attr name="backgroundColor" format="color" />
