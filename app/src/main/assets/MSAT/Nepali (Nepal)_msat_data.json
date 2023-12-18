@@ -1,0 +1,2047 @@
+{
+  "Country": "Nepali-Nepal",
+  "MathsBooklet": [
+    {
+      "Name": "A",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 1",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "D9C",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10B",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G27B",
+                  "folder": "G26-G27-G29/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M12A",
+                  "folder": "M11B_M11C_M12A-M12C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N13B.3",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N15B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N47A",
+                  "folder": "N47A-N51A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N57A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N78A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P9A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 4
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N44B",
+                  "folder": "N44A-N44B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N84A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G28A",
+                  "folder": "G28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9A",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P11A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N5A",
+                  "folder": "N3A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N11B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N43B",
+                  "folder": "N43A-N43B-N72A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G7A",
+                  "folder": "G3C-G7C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M2B",
+                  "folder": "M1A_M2D/index.html"
+                }
+              ],
+              "cutoff": 12
+            },
+            {
+              "level": "High",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N64A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N90A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N35B",
+                  "folder": "N23B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G21C",
+                  "folder": "G1A-G21A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M28A",
+                  "folder": "M25A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N44B",
+                  "folder": "N44A-N44B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N84A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G28A",
+                  "folder": "G28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9A",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P11A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 9
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N65A",
+                  "folder": "N65A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N25A",
+                  "folder": "N25A-N26A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G22A",
+                  "folder": "G22ABCEg/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D8D",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P14A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N1A",
+                  "folder": "N1A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N13B.2",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N20A",
+                  "folder": "N20A-N21A-N27A-N28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G9A",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M7C",
+                  "folder": "M7AEg/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "Medium",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N66A",
+                  "folder": "N66A-N67A-N68A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N69A",
+                  "folder": "N69A-N74A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G19A",
+                  "folder": "G16C19C-M24B24D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N54A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M32A",
+                  "folder": "M32A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N65A",
+                  "folder": "N65A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N25A",
+                  "folder": "N25A-N26A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G22A",
+                  "folder": "G22ABCEg/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D8D",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P14A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "High",
+              "value": 2,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N93A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N81A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N71A",
+                  "folder": "N69A-N74A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10A",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M26A",
+                  "folder": "M25A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9B",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P6A",
+                  "folder": "P6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N66A",
+                  "folder": "N66A-N67A-N68A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N69A",
+                  "folder": "N69A-N74A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G19A",
+                  "folder": "G16C19C-M24B24D/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "B",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 2",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "D9A",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G7A",
+                  "folder": "G3C-G7C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G28A",
+                  "folder": "G28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M13G",
+                  "folder": "M13A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N11B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N15B.3",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N53A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N58A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N87A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P16A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 5
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N65A",
+                  "folder": "N65A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N25A",
+                  "folder": "N25A-N26A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G19A",
+                  "folder": "G16C19C-M24B24D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9B",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P14A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N13B.2",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N20A",
+                  "folder": "N20A-N21A-N27A-N28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N29A",
+                  "folder": "N22A-N29A-N32A-N34B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G22A",
+                  "folder": "G22ABCEg/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M7C",
+                  "folder": "M7AEg/index.html"
+                }
+              ],
+              "cutoff": 12
+            },
+            {
+              "level": "High",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N81A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N71A",
+                  "folder": "N69A-N74A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N95A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10A",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M26A",
+                  "folder": "M25A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N65A",
+                  "folder": "N65A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N25A",
+                  "folder": "N25A-N26A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G19A",
+                  "folder": "G16C19C-M24B24D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9B",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P14A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 8
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N43B",
+                  "folder": "N43A-N43B-N72A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N47A",
+                  "folder": "N47A-N51A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G15A",
+                  "folder": "G15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D8B",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P2B",
+                  "folder": "P5A_P5B_N8A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N39B",
+                  "folder": "N39A_N39B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N13B.3",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N15B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G20A",
+                  "folder": "G1A-G21A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M8B",
+                  "folder": "M8A/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "Medium",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N57A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N16A",
+                  "folder": "N16A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G27B",
+                  "folder": "G26-G27-G29/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N86A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M12A",
+                  "folder": "M11B_M11C_M12A-M12C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N43B",
+                  "folder": "N43A-N43B-N72A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N47A",
+                  "folder": "N47A-N51A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G15A",
+                  "folder": "G15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D8B",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P2B",
+                  "folder": "P5A_P5B_N8A/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "High",
+              "value": 2,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "N61A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N70A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N82A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10B",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M30B",
+                  "folder": "M30A-M31B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "D9C",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P9A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N57A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N16A",
+                  "folder": "N16A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G27B",
+                  "folder": "G26-G27-G29/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "C",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 1",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "D8D",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10A",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G29A",
+                  "folder": "G26-G27-G29/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M13A",
+                  "folder": "M13A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N1A",
+                  "folder": "N1A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N41A",
+                  "folder": "N16A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N54A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N69A",
+                  "folder": "N69A-N74A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N93A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P14A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Core 2",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "D9C",
+                  "folder": "D8A-D8D-M11D-M24A-M24C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G10B",
+                  "folder": "G3A-G10C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G27B",
+                  "folder": "G26-G27-G29/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M12A",
+                  "folder": "M11B_M11C_M12A-M12C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N13B.3",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N15B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N47A",
+                  "folder": "N47A-N51A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N57A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N78A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P9A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Core 3",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "D9A",
+                  "folder": "D7A_D7B_D11A_D11B/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G7A",
+                  "folder": "G3C-G7C/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "G28A",
+                  "folder": "G28A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "M13G",
+                  "folder": "M13A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N11B.1",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N15B.3",
+                  "folder": "N9A-N15A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N53A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N58A",
+                  "folder": "N48A-N70A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "N87A",
+                  "folder": "N75A-N96A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "P16A",
+                  "folder": "P9A-P16A_M12D/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "LangBooklet": [
+    {
+      "Name": "A",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 1",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.10",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4D.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.3",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L10A",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 3
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.1",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.4",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.8",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.10",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4B.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5B.5",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.1",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.1",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 7
+            },
+            {
+              "level": "High",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.10",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.1",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6C.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.1",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L11B",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11B.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11B.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11B.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11B.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11B.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 8
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.3",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.8",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.6",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.9",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4A.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.4",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "Medium",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.6",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6C.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.4",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "High",
+              "value": 2,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6C.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6E.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L12A",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12A.7",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "B",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 2",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.4",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.10",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4B.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.1",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6E.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.1",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L10C",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 3
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.3",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.8",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.6",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.9",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4D.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.4",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.5",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 7
+            },
+            {
+              "level": "High",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.6",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4D.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.4",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6C.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.5",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L11A",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11A.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11A.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11A.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L11A.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 7
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Low",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.2",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.10",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.7",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.2",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "Medium",
+              "value": 1,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6C.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.2",
+                  "folder": "L9A-L9B/index.html"
+                }
+              ],
+              "cutoff": 0
+            },
+            {
+              "level": "High",
+              "value": 2,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L12C",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.6",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L12C.7",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "C",
+      "Stages": [
+        {
+          "stage": 1,
+          "levels": [
+            {
+              "level": "Core 1",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.3",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.6",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3A.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4A.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4D.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5C.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.5",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L10B",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10B.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10B.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10B.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10B.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10B.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "levels": [
+            {
+              "level": "Core 2",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.10",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3B.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4D.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.2",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6D.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.3",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L10A",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10A.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "levels": [
+            {
+              "level": "Core 3",
+              "value": 0,
+              "games": [
+                {
+                  "gametype": "INT",
+                  "gamename": "L1A.4",
+                  "folder": "L1_L7/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L2A.10",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L3D.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4B.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L4C.2",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L5D.1",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6A.5",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6E.3",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "INT",
+                  "gamename": "L9A.1",
+                  "folder": "L9A-L9B/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L10C",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.1",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.2",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.3",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.4",
+                  "folder": "L3A_L10A_L11A/index.html"
+                },
+                {
+                  "gametype": "INTB",
+                  "gamename": "L10C.5",
+                  "folder": "L3A_L10A_L11A/index.html"
+                }
+              ],
+              "cutoff": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

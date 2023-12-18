@@ -562,19 +562,16 @@
         "Language": "Spanish-Mexico",
         "StateList": [
             {
-                "StateName": "Veracruz",
+                "StateName": "Distrito 9",
                 "DistrictList": [
                     {
-                        "DistrictName": "Ayahualulco",
+                        "DistrictName": "Acajete",
                         "VillageList": [
                             {
-                                "VillageName": "San Antonio Xoquitla"
+                                "VillageName": "La Joya"
                             },
                             {
-                                "VillageName": "Plan de la Cruz"
-                            },
-                            {
-                                "VillageName": "Cetlalpan"
+                                "VillageName": "Plan de Sedeño"
                             }
                         ]
                     },
@@ -582,7 +579,7 @@
                         "DistrictName": "Banderilla",
                         "VillageList": [
                             {
-                                "VillageName": "Xaltepec"
+                                "VillageName": "La Haciendita"
                             }
                         ]
                     },
@@ -590,10 +587,7 @@
                         "DistrictName": "Coatepec",
                         "VillageList": [
                             {
-                                "VillageName": "Bosques de Tecoxolco"
-                            },
-                            {
-                                "VillageName": "Dos de Marzo"
+                                "VillageName": "Colonia Seis de Enero"
                             }
                         ]
                     },
@@ -601,48 +595,13 @@
                         "DistrictName": "Cosautlán de Carvajal",
                         "VillageList": [
                             {
-                                "VillageName": "Emiliano Zapata"
+                                "VillageName": "Vaquería"
                             },
                             {
-                                "VillageName": "Coabosto"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Ixhuacán de los Reyes",
-                        "VillageList": [
-                            {
-                                "VillageName": "El Carrizal"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Perote",
-                        "VillageList": [
-                            {
-                                "VillageName": "Zalayeta (Alchichica y el Bordo)"
+                                "VillageName": "Casa Quemada"
                             },
                             {
-                                "VillageName": "Libertad"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Tlacolulan",
-                        "VillageList": [
-                            {
-                                "VillageName": "El Fresno"
-                            }
-                        ]
-                    },
-                    {
-                        "DistrictName": "Tlalnelhuayocan",
-                        "VillageList": [
-                            {
-                                "VillageName": "Zacatal"
-                            },
-                            {
-                                "VillageName": "Carolino Anaya (Espina Blanca)"
+                                "VillageName": "San Miguel Tlapéxcatl"
                             }
                         ]
                     },
@@ -651,6 +610,77 @@
                         "VillageList": [
                             {
                                 "VillageName": "Colonia Úrsulo Galván"
+                            },
+                            {
+                                "VillageName": "Xico Viejo"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Jilotepec",
+                        "VillageList": [
+                            {
+                                "VillageName": "Vista Hermosa Primera Manzana"
+                            },
+                            {
+                                "VillageName": "Piedra de Agua"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Perote",
+                        "VillageList": [
+                            {
+                                "VillageName": "El Escobillo"
+                            },
+                            {
+                                "VillageName": "Los Pescados"
+                            },
+                            {
+                                "VillageName": "Veinte de Noviembre (Colonia Agrícola)"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Las Vigas de Ramírez",
+                        "VillageList": [
+                            {
+                                "VillageName": "Casa Blanca"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Teocelo",
+                        "VillageList": [
+                            {
+                                "VillageName": "Llano Grande"
+                            },
+                            {
+                                "VillageName": "Baxtla"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Tlalnelhuayocan",
+                        "VillageList": [
+                            {
+                                "VillageName": "San Antonio Hidalgo"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Ayahualulco",
+                        "VillageList": [
+                            {
+                                "VillageName": "Loma Alta"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Coacoatzintla",
+                        "VillageList": [
+                            {
+                                "VillageName": "Los Planes (Cerro Gordo)"
                             }
                         ]
                     }
@@ -724,46 +754,95 @@
         "Language": "French-Mali",
         "StateList": [
             {
-                "StateName": "Segou",
+                "StateName": "SEGOU",
                 "DistrictList": [
                     {
-                        "DistrictName": "Segou",
+                        "DistrictName": "BOUSSIN",
                         "VillageList": [
                             {
-                                "VillageName": "Boussin"
+                                "VillageName": "FAKOLA-BENEBOUGOU"
                             },
                             {
-                                "VillageName": "Cinzana"
+                                "VillageName": "YASSALAM"
                             },
                             {
-                                "VillageName": "Dougabougou"
+                                "VillageName": "PINDIA-WERE"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "KONODIMINI",
+                        "VillageList": [
+                            {
+                                "VillageName": "KONODIMINI"
                             },
                             {
-                                "VillageName": "Fatine"
+                                "VillageName": "MASSALA WERE"
                             },
                             {
-                                "VillageName": "Kamiandougou"
+                                "VillageName": "TOMONO BANANWOLO"
                             },
                             {
-                                "VillageName": "Konodimini"
+                                "VillageName": "PRIMPIAN-WORODJIRA"
                             },
                             {
-                                "VillageName": "Markala"
+                                "VillageName": "SOMONODOUGOUNI"
                             },
                             {
-                                "VillageName": "Massala"
+                                "VillageName": "DAOULABOUGOU"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "MASSALA",
+                        "VillageList": [
+                            {
+                                "VillageName": "ZAMBOUGOU"
                             },
                             {
-                                "VillageName": "N'Gara"
+                                "VillageName": "N'DATEKOUMANA"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "N'GARA",
+                        "VillageList": [
+                            {
+                                "VillageName": "DIADO"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "PELENGANA",
+                        "VillageList": [
+                            {
+                                "VillageName": "BANDIOUGOUBOUGOU"
                             },
                             {
-                                "VillageName": "Pelengana"
+                                "VillageName": "FANZANA"
                             },
                             {
-                                "VillageName": "Sakoiba"
+                                "VillageName": "DIALABOUGOU WERE"
                             },
                             {
-                                "VillageName": "Sebougou"
+                                "VillageName": "N'TOBOUGOU"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "SAKOIBA",
+                        "VillageList": [
+                            {
+                                "VillageName": "DIASSEBOUGOU"
+                            },
+                            {
+                                "VillageName": "MOUSSABOUGOU"
+                            },
+                            {
+                                "VillageName": "SIRAKORO"
+                            },
+                            {
+                                "VillageName": "TOMSALA"
                             }
                         ]
                     }
