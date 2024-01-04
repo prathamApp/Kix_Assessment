@@ -162,19 +162,6 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             statusObj.value = wInfo.getMacAddress();
             statusDao.insert(statusObj);
         }
-/*        Modal_Log modal_log = new Modal_Log();
-        modal_log.setLogId(1);
-        modal_log.setCurrentDateTime(KIX_Utility.getCurrentDateTime());
-        modal_log.setExceptionMessage("exceptionMessage");
-        modal_log.setExceptionStackTrace("Exception Trace");
-        modal_log.setMethodName("methodName");
-        modal_log.setErrorType("errorType");
-        modal_log.setSessionId(FastSave.getInstance().getString(Kix_Constant.SESSIONID,"no_session"));
-        modal_log.setDeviceId("deviceId");
-        modal_log.setLogDetail("logDetail");
-        modal_log.setSentFlag(0);
-
-        logDao.insertLog(modal_log);*/
     }
 }
 
