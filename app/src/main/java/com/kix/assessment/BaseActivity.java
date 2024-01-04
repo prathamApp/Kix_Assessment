@@ -47,21 +47,21 @@ public class BaseActivity extends AppCompatActivity {
     private final Handler mHandler = new Handler() {
         @SuppressLint({"MissingPermission", "SetTextI18n"})
         @Override
-        public void handleMessage(Message msg) {
+        public void handleMessage(final Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
-                case SHOW_OTG_TRANSFER_DIALOG:
-                    sd_builder = new BlurPopupWindow.Builder(BaseActivity.this)
+                case BaseActivity.SHOW_OTG_TRANSFER_DIALOG:
+                    BaseActivity.this.sd_builder = new BlurPopupWindow.Builder(BaseActivity.this)
                             .setContentView(R.layout.dialog_alert_sd_card)
                             .setGravity(Gravity.CENTER)
                             .setScaleRatio(0.2f)
                             .bindClickListener(v -> {
                                 new Handler().postDelayed(() -> {
-                                    Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+                                    final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
                                     intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-                                    startActivityForResult(intent, SDCARD_LOCATION_CHOOSER);
+                                    BaseActivity.this.startActivityForResult(intent, BaseActivity.SDCARD_LOCATION_CHOOSER);
                                 }, 1200);
-                                sd_builder.dismiss();
+                                BaseActivity.this.sd_builder.dismiss();
                             }, R.id.txt_choose_sd_card)
                             .setDismissOnClickBack(true)
                             .setDismissOnTouchBackground(false)
@@ -69,11 +69,11 @@ public class BaseActivity extends AppCompatActivity {
                             .setBlurRadius(8)
                             .setTintColor(0x30000000)
                             .build();
-                    ((TextView) sd_builder.findViewById(R.id.txt_choose_sd_card)).setText("Select OTG");
-                    sd_builder.show();
+                    ((TextView) BaseActivity.this.sd_builder.findViewById(R.id.txt_choose_sd_card)).setText("Select OTG");
+                    BaseActivity.this.sd_builder.show();
                     break;
-                case SHOW_OTG_SELECT_DIALOG:
-                    pushDialog = new BlurPopupWindow.Builder(BaseActivity.this)
+                case BaseActivity.SHOW_OTG_SELECT_DIALOG:
+                    BaseActivity.this.pushDialog = new BlurPopupWindow.Builder(BaseActivity.this)
                             .setContentView(R.layout.app_success_dialog)
                             .setGravity(Gravity.CENTER)
                             .setScaleRatio(0.2f)
@@ -83,30 +83,30 @@ public class BaseActivity extends AppCompatActivity {
                             .setTintColor(0x30000000)
                             .build();
                     //push_lottie = pushDialog.findViewById(R.id.push_lottie);
-                    txt_push_dialog_msg = pushDialog.findViewById(R.id.txt_push_dialog_msg);
-                    txt_push_error = pushDialog.findViewById(R.id.txt_push_error);
-                    pushDialog.show();
+                    BaseActivity.this.txt_push_dialog_msg = BaseActivity.this.pushDialog.findViewById(R.id.txt_push_dialog_msg);
+                    BaseActivity.this.txt_push_error = BaseActivity.this.pushDialog.findViewById(R.id.txt_push_error);
+                    BaseActivity.this.pushDialog.show();
                     break;
-                case HIDE_OTG_TRANSFER_DIALOG_SUCCESS:
+                case BaseActivity.HIDE_OTG_TRANSFER_DIALOG_SUCCESS:
                     //push_lottie.setAnimation("success.json");
                     //push_lottie.playAnimation();
-                    txt_push_dialog_msg.setText("Data Copied Successfully!!");
+                    BaseActivity.this.txt_push_dialog_msg.setText("Data Copied Successfully!!");
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            pushDialog.dismiss();
+                            BaseActivity.this.pushDialog.dismiss();
                         }
                     }, 1500);
                     break;
-                case HIDE_OTG_TRANSFER_DIALOG_FAILED:
+                case BaseActivity.HIDE_OTG_TRANSFER_DIALOG_FAILED:
                     //push_lottie.setAnimation("error_cross.json");
                     //push_lottie.playAnimation();
-                    txt_push_dialog_msg.setText("Data Copying Failed!! Please re-insert the OTG");
-                    txt_push_error.setVisibility(View.VISIBLE);
+                    BaseActivity.this.txt_push_dialog_msg.setText("Data Copying Failed!! Please re-insert the OTG");
+                    BaseActivity.this.txt_push_error.setVisibility(View.VISIBLE);
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            pushDialog.dismiss();
+                            BaseActivity.this.pushDialog.dismiss();
                         }
                     }, 1500);
                     break;
@@ -115,29 +115,29 @@ public class BaseActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        hideSystemUI();
+    protected void onCreate(@Nullable final Bundle savedInstanceState) {
+        this.hideSystemUI();
         super.onCreate(savedInstanceState);
-/*        Catcho.Builder(this)
+        Catcho.Builder(this)
                 .activity(CatchoTransparentActivity.class)
 //                .recipients("abc@gm.com")
-                .build();*/
+                .build();
         try {
             KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
 
     private void hideSystemUI() {
-        getWindow().setFlags(
+        this.getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 //                    requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().getDecorView().setSystemUiVisibility(
+        this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_LOW_PROFILE
                         | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -156,7 +156,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onStop();
         try {
             KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
         EventBus.getDefault().unregister(this);
@@ -167,10 +167,10 @@ public class BaseActivity extends AppCompatActivity {
         super.onResume();
         try {
             KIX_Utility.setMyLocale(this, FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
-        hideSystemUI();
+        this.hideSystemUI();
         BackupDatabase.backup(this);
     }
 
@@ -181,13 +181,13 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
+    public void onWindowFocusChanged(final boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
 //        mHandler.sendEmptyMessage(HIDE_SYSTEM_UI);
     }
 
     @Subscribe
-    public void updateFlagsWhenPushed(EventMessage message) {
+    public void updateFlagsWhenPushed(final EventMessage message) {
         try {
             if (message != null) {
                 if (message.getMessage().equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
@@ -213,29 +213,29 @@ public class BaseActivity extends AppCompatActivity {
                     BackupDatabase.backup(KIXApplication.getInstance());*/
                 } else
                 if (message.getMessage().equalsIgnoreCase(Kix_Constant.OTG_INSERTED)) {
-                    mHandler.sendEmptyMessage(SHOW_OTG_TRANSFER_DIALOG);
+                    this.mHandler.sendEmptyMessage(BaseActivity.SHOW_OTG_TRANSFER_DIALOG);
                 } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_COPIED)) {
-                    mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_SUCCESS);
+                    this.mHandler.sendEmptyMessage(BaseActivity.HIDE_OTG_TRANSFER_DIALOG_SUCCESS);
                 } else if (message.getMessage().equalsIgnoreCase(Kix_Constant.BACKUP_DB_NOT_COPIED)) {
-                    mHandler.sendEmptyMessage(HIDE_OTG_TRANSFER_DIALOG_FAILED);
+                    this.mHandler.sendEmptyMessage(BaseActivity.HIDE_OTG_TRANSFER_DIALOG_FAILED);
                 }
             }
-        } catch (JsonSyntaxException e) {
+        } catch (final JsonSyntaxException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == SDCARD_LOCATION_CHOOSER) {
+        if (requestCode == BaseActivity.SDCARD_LOCATION_CHOOSER) {
             if (data != null && data.getData() != null) {
-                Uri treeUri = data.getData();
-                final int takeFlags = data.getFlags()
+                final Uri treeUri = data.getData();
+                int takeFlags = data.getFlags()
                         & (Intent.FLAG_GRANT_READ_URI_PERMISSION
                         | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
                 KIXApplication.getInstance().getContentResolver().takePersistableUriPermission(treeUri, takeFlags);
-                mHandler.sendEmptyMessage(SHOW_OTG_SELECT_DIALOG);
+                this.mHandler.sendEmptyMessage(BaseActivity.SHOW_OTG_SELECT_DIALOG);
                 new CopyDbToOTG().execute(treeUri);
             }
         }

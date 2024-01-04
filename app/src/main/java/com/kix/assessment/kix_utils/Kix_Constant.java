@@ -75,4 +75,7 @@ public class Kix_Constant {
     public static final String YES = "Yes";
     public static final String NO = "No";
 
+    public static final String TEST_FLAG = "test_flag";
+    public static final String SCORE_LIST = "score_list";
+
 }

@@ -37,7 +37,6 @@ import org.androidannotations.annotations.ViewById;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -83,7 +82,7 @@ public class Fragment_Svr_SignUp extends Fragment {
         // Required empty public constructor
     }
 
-    public static final boolean isValidEmail(final CharSequence email) {
+    public static final boolean isValidEmail(CharSequence email) {
         if(email.toString().isEmpty()) return true;
         else return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
@@ -124,140 +123,141 @@ public class Fragment_Svr_SignUp extends Fragment {
     public void initialize() {
 //        ll_spinnerBooklet.setVisibility(View.GONE);
 
-        this.countryList = new ArrayList<>();
-        this.countryList.add(this.getResources().getString(R.string.select_country));
+        countryList = new ArrayList<>();
+        countryList.add(getResources().getString(R.string.select_country));
         //this.countryList.addAll(contentDao.getCountryList());
 
         try {
-            Model_Country countryName;
-            String jsonStr = KIX_Utility.getDataJsonAsString(getActivity());
-            Gson gson = new Gson();
-            Type type = new TypeToken<Model_Country>() {
+            final Model_Country countryName;
+            final String jsonStr = KIX_Utility.getDataJsonAsString(this.getActivity());
+            final Gson gson = new Gson();
+            final Type type = new TypeToken<Model_Country>() {
             }.getType();
 
             countryName = gson.fromJson(jsonStr, type);
-            countryList.addAll(Collections.singleton(countryName.getCountry()));
-            Log.e("CountryName : ", countryList.toString());
+            this.countryList.add(countryName.getCountry());
+            Log.e("CountryName : ", this.countryList.toString());
 
-        } catch (Exception e){
+        } catch (final Exception e){
             e.printStackTrace();
         }
 
-        this.adapterCountry = new ArrayAdapter<String>(this.getActivity(),R.layout.support_simple_spinner_dropdown_item, this.countryList);
-        this.spinner_country.setAdapter(this.adapterCountry);
+        adapterCountry = new ArrayAdapter<String>(getActivity(),R.layout.support_simple_spinner_dropdown_item, countryList);
+        spinner_country.setAdapter(adapterCountry);
 
-        this.spinner_country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(final AdapterView<?> parent, final View view, final int position, final long id) {
-                Fragment_Svr_SignUp.this.countryPos = position;
-                Fragment_Svr_SignUp.this.mySelectedCountry = parent.getItemAtPosition(position).toString();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                countryPos = position;
+                mySelectedCountry = parent.getItemAtPosition(position).toString();
 //                if(position>0) {
 //                    setNewBooklet(""+parent.getItemAtPosition(position).toString());
 //                }
             }
 
             @Override
-            public void onNothingSelected(final AdapterView<?> parent) {
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
 
-        this.tie_svrMobile.addTextChangedListener(new TextWatcher() {
+        tie_svrMobile.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
-            public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
 
             @Override
-            public void afterTextChanged(final Editable s) {
+            public void afterTextChanged(Editable s) {
                 if(s.length()<8)
-                    Fragment_Svr_SignUp.this.til_svrMobile.setError(getString(R.string.error_mobile_no));
-                else Fragment_Svr_SignUp.this.til_svrMobile.setError(null);
+                    til_svrMobile.setError(Fragment_Svr_SignUp.this.getString(R.string.error_mobile_no));
+                else til_svrMobile.setError(null);
             }
         });
 
-        this.tie_svrEmail.addTextChangedListener(new TextWatcher() {
+        tie_svrEmail.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) { }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(final CharSequence s, final int start, final int before, final int count) { }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
-            public void afterTextChanged(final Editable s) {
-                if(!Fragment_Svr_SignUp.isValidEmail(s.toString())) Fragment_Svr_SignUp.this.til_svrEmail.setError(getString(R.string.error_email));
-                else Fragment_Svr_SignUp.this.til_svrEmail.setError(null);
+            public void afterTextChanged(Editable s) {
+                if(!isValidEmail(s.toString())) til_svrEmail.setError(Fragment_Svr_SignUp.this.getString(R.string.error_email));
+                else til_svrEmail.setError(null);
             }
         });
 
-        this.tie_svrPassword.addTextChangedListener(new TextWatcher() {
+        tie_svrPassword.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) { }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(final CharSequence s, final int start, final int before, final int count) { }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
-            public void afterTextChanged(final Editable s) {
-                if(s.length()<3) Fragment_Svr_SignUp.this.til_svrPassword.setError(getString(R.string.error_password));
-                else Fragment_Svr_SignUp.this.til_svrPassword.setError(null);
+            public void afterTextChanged(Editable s) {
+                if(s.length()<3) til_svrPassword.setError(Fragment_Svr_SignUp.this.getString(R.string.error_password));
+                else til_svrPassword.setError(null);
             }
         });
     }
 
     @Click(R.id.ll_parentLayer)
     public void hideKeyboard(){
-        KIX_Utility.HideInputKeypad(Objects.requireNonNull(this.getActivity()));
+        KIX_Utility.HideInputKeypad(Objects.requireNonNull(getActivity()));
     }
 
     @Click(R.id.btn_svrSignUp)
     public void signUp() {
-        if (!this.tie_svrName.getText().toString().isEmpty() && !this.tie_svrMobile.getText().toString().isEmpty()
-                && !this.tie_svrPassword.getText().toString().isEmpty() && this.countryPos !=0) {
-            if(Fragment_Svr_SignUp.isValidEmail(this.tie_svrEmail.getText().toString())) {
-                if(tie_svrMobile.getText().toString().length()>=7 && tie_svrMobile.getText().toString().length()<=20) {
-                    if(this.tie_svrPassword.getText().toString().length()>=3) {
-                        final Modal_Surveyor surveyor = KixDatabase.getDatabaseInstance(this.getActivity()).getSurveyorDao().getSurveyorByMobile(this.tie_svrMobile.getText().toString());
+        if (!tie_svrName.getText().toString().isEmpty() && !tie_svrMobile.getText().toString().isEmpty()
+                && !tie_svrPassword.getText().toString().isEmpty() && countryPos !=0) {
+            if(isValidEmail(tie_svrEmail.getText().toString())) {
+                if(this.tie_svrMobile.getText().toString().length()>=7 && this.tie_svrMobile.getText().toString().length()<=20) {
+                    if(tie_svrPassword.getText().toString().length()>=3) {
+                        Modal_Surveyor surveyor = KixDatabase.getDatabaseInstance(getActivity()).getSurveyorDao().getSurveyorByMobile(tie_svrMobile.getText().toString());
                         if (surveyor != null) {
-                            Toast.makeText(this.getActivity(), getString(R.string.profile_already), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), this.getString(R.string.profile_already), Toast.LENGTH_SHORT).show();
                         } else {
                             try {
-                                final Modal_Surveyor modal_surveyor = new Modal_Surveyor();
-                                modal_surveyor.setSvrName(this.tie_svrName.getText().toString());
-                                modal_surveyor.setSvrEmail(this.tie_svrEmail.getText().toString());
-                                modal_surveyor.setSvrMobile(this.tie_svrMobile.getText().toString());
-                                modal_surveyor.setSvrPassword(this.tie_svrPassword.getText().toString());
+                                Modal_Surveyor modal_surveyor = new Modal_Surveyor();
+                                modal_surveyor.setSvrName(tie_svrName.getText().toString());
+                                modal_surveyor.setSvrEmail(tie_svrEmail.getText().toString());
+                                modal_surveyor.setSvrMobile(tie_svrMobile.getText().toString());
+                                modal_surveyor.setSvrPassword(tie_svrPassword.getText().toString());
                                 modal_surveyor.setSvrCode(String.valueOf(KIX_Utility.getUUID()));
 //                                modal_surveyor.setSvrBooklet(spinner_booklet.getSelectedItem().toString());
                                 modal_surveyor.setSvrRegistrationDate(KIX_Utility.getCurrentDateTime());
-                                modal_surveyor.setSvrCountry(this.mySelectedCountry);
+                                modal_surveyor.setSvrCountry(mySelectedCountry);
+                                modal_surveyor.setDeviceId(KIX_Utility.getDeviceID());
                                 modal_surveyor.setSentFlag(0);
                                 surveyorDao.insertSurveyor(modal_surveyor);
 
-                                final String selectedLanguageCode = KIX_Utility.getLanguageCode(this.mySelectedCountry);
-                                KIX_Utility.setMyLocale(this.getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
+                                String selectedLanguageCode = KIX_Utility.getLanguageCode(mySelectedCountry);
+                                KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
                                 //                                Toast.makeText(getActivity(), "Signed Up Successfully!!", Toast.LENGTH_SHORT).show();
-                                KIX_Utility.showFragment(this.getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
+                                KIX_Utility.showFragment(getActivity(), new Fragment_Svr_SignIn_(), R.id.splash_frame,
                                         null, Fragment_Svr_SignIn.class.getSimpleName());
-                            } catch (final Exception e){
-                                Toast.makeText(this.getActivity(), getString(R.string.invalid_data), Toast.LENGTH_SHORT).show();
+                            } catch (Exception e){
+                                Toast.makeText(getActivity(), this.getString(R.string.invalid_data), Toast.LENGTH_SHORT).show();
                             }
                         }
                     } else {
-                        Toast.makeText(this.getActivity(), getString(R.string.error_password), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), this.getString(R.string.error_password), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(this.getActivity(), getString(R.string.error_mobile_no), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), this.getString(R.string.error_mobile_no), Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this.getActivity(), getString(R.string.error_email), Toast.LENGTH_SHORT).show();
-                this.til_svrEmail.setError(getString(R.string.error_email));
+                Toast.makeText(getActivity(), this.getString(R.string.error_email), Toast.LENGTH_SHORT).show();
+                til_svrEmail.setError(this.getString(R.string.error_email));
             }
         } else {
-            Toast.makeText(this.getActivity(), getString(R.string.all_fields_mandatory), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), this.getString(R.string.all_fields_mandatory), Toast.LENGTH_SHORT).show();
         }
     }
 }

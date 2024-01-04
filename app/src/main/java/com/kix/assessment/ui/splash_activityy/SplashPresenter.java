@@ -35,14 +35,14 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
     SplashContract.SplashView splashView;
     Context mContext;
 
-    //Sets View(UI)
-    @Override
-    public void setView(SplashContract.SplashView splashView) {
-        this.splashView = splashView;
+    public SplashPresenter(final Context mContext) {
+        this.mContext = mContext;
     }
 
-    public SplashPresenter(Context mContext) {
-        this.mContext = mContext;
+    //Sets View(UI)
+    @Override
+    public void setView(final SplashContract.SplashView splashView) {
+        this.splashView = splashView;
     }
 
     @Background
@@ -50,38 +50,38 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
         try {
             List<GameList> gameListList = new ArrayList<>();
 
-            InputStream is;
+            final InputStream is;
             if (KIXApplication.isSDCard) {
                 is = new FileInputStream(contentSDPath + "/.KIX/msat_data.json");
             } else {
-                is = mContext.getAssets().open(Kix_Constant.assessment_Games + "/msat_data.json");
+                is = this.mContext.getAssets().open(Kix_Constant.assessment_Games + "/msat_data.json");
             }
 
-            int size = is.available();
-            byte[] buffer = new byte[size];
+            final int size = is.available();
+            final byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
 
-            String jsonStr = new String(buffer);
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<GameList>>() {
+            final String jsonStr = new String(buffer);
+            final Gson gson = new Gson();
+            final Type type = new TypeToken<List<GameList>>() {
             }.getType();
             gameListList = gson.fromJson(jsonStr, type);
 
-            List<Modal_Content> modal_contentList = new ArrayList<>();
+            final List<Modal_Content> modal_contentList = new ArrayList<>();
             for (int i = 0; i < gameListList.size(); i++) {
-                Modal_Content modal_content = new Modal_Content();
+                final Modal_Content modal_content = new Modal_Content();
                 modal_content.setContentBooklet("" + gameListList.get(i).getContentBooklet());
                 modal_content.setContentCode("" + gameListList.get(i).getContentCode());
                 modal_content.setContentFolderName("" + gameListList.get(i).getContentFolderName());
                 modal_content.setContentCountry("" + gameListList.get(i).getContentCountry());
                 modal_contentList.add(modal_content);
             }
-            KixDatabase.getDatabaseInstance(mContext).getContentDao().insertAll(modal_contentList);
+            KixDatabase.getDatabaseInstance(this.mContext).getContentDao().insertAll(modal_contentList);
             FastSave.getInstance().saveBoolean(Kix_Constant.DATA_COPIED, true);
-            BackupDatabase.backup(mContext);
-            splashView.openSignupFragment();
-        } catch (Exception e) {
+            BackupDatabase.backup(this.mContext);
+            this.splashView.openSignupFragment();
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
@@ -89,7 +89,7 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
     @Background
     @Override
     public void populateDefaultDB() {
-        Modal_Status statusObj = new Modal_Status();
+        final Modal_Status statusObj = new Modal_Status();
         if (statusDao.getKey("deviceId") == null) {
             statusObj.statusKey = "deviceId";
             statusObj.value = KIX_Utility.getDeviceID();
@@ -105,26 +105,29 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             statusObj.value = KIX_Utility.getDeviceSerialID();
             statusDao.insert(statusObj);
         }
-        if (statusDao.getKey("wifiMAC") == null) {
-            statusObj.statusKey = "wifiMAC";
-            WifiManager wifiManager = (WifiManager) mContext.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-            WifiInfo wInfo = wifiManager.getConnectionInfo();
-            statusObj.value = wInfo.getMacAddress();
-            statusDao.insert(statusObj);
-        }
         if (statusDao.getKey("apkType") == null) {
             statusObj.statusKey = "apkType";
             statusObj.value = "KIX FT3 MSAT App";
             statusDao.insert(statusObj);
         }
+        if (statusDao.getKey("countryName") == null) {
+            statusObj.statusKey = "countryName";
+            statusObj.value = KIXApplication.app_country;
+            statusDao.insert(statusObj);
+        }
         if (statusDao.getKey("appName") == null) {
             statusObj.statusKey = "appName";
-            statusObj.value = KIX_Utility.getApplicationName(mContext);
+            statusObj.value = KIX_Utility.getApplicationName(this.mContext);
             statusDao.insert(statusObj);
         }
         if (statusDao.getKey("apkVersion") == null) {
             statusObj.statusKey = "apkVersion";
-            statusObj.value = KIX_Utility.getCurrentVersion(mContext);
+            statusObj.value = KIX_Utility.getCurrentVersion(this.mContext);
+            statusDao.insert(statusObj);
+        }
+        if (statusDao.getKey("appBuildDate") == null) {
+            statusObj.statusKey = "appBuildDate";
+            statusObj.value = KIXApplication.appBuildDate;
             statusDao.insert(statusObj);
         }
         if (statusDao.getKey("androidOSVersion") == null) {
@@ -152,9 +155,11 @@ public class SplashPresenter implements SplashContract.SplashPresenter {
             statusObj.value = KIX_Utility.getScreenResolution();
             statusDao.insert(statusObj);
         }
-        if (statusDao.getKey("appBuildDate") == null) {
-            statusObj.statusKey = "appBuildDate";
-            statusObj.value = KIXApplication.appBuildDate;
+        if (statusDao.getKey("wifiMAC") == null) {
+            statusObj.statusKey = "wifiMAC";
+            final WifiManager wifiManager = (WifiManager) this.mContext.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+            final WifiInfo wInfo = wifiManager.getConnectionInfo();
+            statusObj.value = wInfo.getMacAddress();
             statusDao.insert(statusObj);
         }
 /*        Modal_Log modal_log = new Modal_Log();
