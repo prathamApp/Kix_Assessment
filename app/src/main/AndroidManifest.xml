@@ -47,26 +47,29 @@
         android:allowBackup="false"
         tools:replace="android:allowBackup"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/kix_logo"
+        android:icon="@drawable/pal_elana_logo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/kix_logo"
+        android:roundIcon="@drawable/pal_elana_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".ui.household_activity.Activity_Household_"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"/>
 
         <activity android:name=".ui.village_activity.Activity_Village_"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"/>
 
         <activity
             android:name=".ui.splash_activityy.SplashActivity_"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,6 +81,7 @@
             android:name=".ui.attendance_activity.Activity_Attendance_"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/MyLaunchActivityTheme"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize"/>
 
         <activity
@@ -85,7 +89,8 @@
             android:configChanges="orientation|screenSize"
             android:parentActivityName=".BaseActivity"
             android:screenOrientation="sensorPortrait"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -102,7 +107,8 @@
 <!--            android:screenOrientation="sensorLandscape" />-->
         <activity
             android:name=".ui.main_test.WebViewActivity_"
-            android:screenOrientation="sensorLandscape" />
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"/>
 
         <!--This activity is used to restart the app, when crashed.-->
         <activity
@@ -110,11 +116,13 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:process=":phoenix"
             android:screenOrientation="sensorPortrait"
+            android:exported="true"
             />
 
         <receiver
             android:name=".services.OTGListener"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
                 <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
