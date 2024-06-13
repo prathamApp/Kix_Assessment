@@ -19,99 +19,157 @@
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold" />
 
-    <!--    <ImageView
-            android:id="@+id/iv_filter"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:src="@drawable/ic_filter_list_black_48dp" />-->
     <LinearLayout
-        android:id="@+id/ll_l1"
+        android:id="@+id/ll_ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_profileName"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/tv_TotStudCount"
+        <LinearLayout
+            android:id="@+id/totalVillagesSurveyed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:background="@drawable/rounder_border_spinner"
+            android:layout_marginStart="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tv_villTotalCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_30sdp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Total Village Surveyed"
+                android:textSize="@dimen/_10sdp"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/totalHHSurveyed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:background="@drawable/rounder_border_spinner"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:text="@string/children_surveyed"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/_13sdp" />
+            android:layout_marginEnd="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/tv_AssessmentGivenCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:maxLines="2"
-            android:text="@string/children_assessed"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/_13sdp" />
+            <TextView
+                android:id="@+id/tv_hhTotalCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_30sdp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Total Household Surveyed"
+                android:textSize="@dimen/_10sdp"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_5sdp"/>
 
-        <!--    <TextView
-                android:id="@+id/tv_householdCount"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:text="No. of Villages :"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/_15sdp" />-->
+        </LinearLayout>
+
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_ll1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_10sdp">
 
-    <!--    <LinearLayout
-            android:id="@+id/ll_l2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_below="@+id/ll_l1">
-
-        <TextView
-            android:id="@+id/tv_studCount"
+        <LinearLayout
+            android:id="@+id/totalChildrenSurveyed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:background="@drawable/rounder_border_spinner"
+            android:layout_marginStart="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tv_childTotalCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_30sdp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Total Children Surveyed"
+                android:textSize="@dimen/_10sdp"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/totalChildAssessed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:background="@drawable/rounder_border_spinner"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="No. of Children :"
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/_15sdp" />
+            android:layout_marginEnd="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/tv_AssessmentGivenCount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:maxLines="2"
-            android:text="Children assessed: "
-            android:textColor="@color/colorText"
-            android:textSize="@dimen/_15sdp" />
+            <TextView
+                android:id="@+id/tv_childAssessedTotalCount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_30sdp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Total Children Assessed"
+                android:textSize="@dimen/_10sdp"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_5sdp"/>
 
-        </LinearLayout>-->
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_filter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_l1"
+        android:layout_below="@+id/ll_ll2"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:id="@+id/ll_ageFilterSpinner"
@@ -121,7 +179,7 @@
             android:layout_marginTop="@dimen/_7sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_7sdp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="@drawable/rounder_border_spinner"
             android:paddingStart="@dimen/_5sdp">
 
@@ -148,7 +206,8 @@
             android:layout_marginBottom="@dimen/_7sdp"
             android:layout_weight="1"
             android:background="@drawable/rounder_border_spinner"
-            android:paddingStart="@dimen/_5sdp">
+            android:paddingStart="@dimen/_5sdp"
+            android:visibility="gone">
 
             <Spinner
                 android:id="@+id/spinner_villageFilter"
@@ -179,7 +238,8 @@
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:backgroundTint="@color/orange"
-        android:src="@drawable/ic_sync_white_48dp" />
+        android:src="@drawable/ic_sync_white_48dp"
+        android:visibility="gone"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_db_sync"
@@ -189,6 +249,6 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:backgroundTint="@color/orange"
-        android:src="@drawable/ic_insert_drive_file_black_24dp" />
+        android:src="@drawable/ic_syncdb_64px" />
 
 </RelativeLayout>

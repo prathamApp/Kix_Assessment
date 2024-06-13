@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-<!--
-      <string name="app_name">ELANA</string>
+      <string name="app_name">PAL-ELANA</string>
       <string name="Collecting_Data">Collecting Data</string>
       <string name="push_success">Pushed successfully!</string>
       <string name="push_fail">Push failed!</string>
-      <string name="kix_assessment">ELANA</string>
+      <string name="kix_assessment">PAL-ELANA</string>
       <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
       <string name="Okay">Ok</string>
       <string name="ok">Ok</string>
@@ -337,16 +336,15 @@
           <item>Class 5</item>
           <item>Class 6</item>
       </string-array>
--->
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--Spanish-Nicaragua START ____________________________________________________________________-->
     <!--
-        <string name="app_name">PAL-ELANA</string>
+        <string name="app_name">PAL-PAL-ELANA</string>
         <string name="Collecting_Data">Recogida de datos</string>
         <string name="push_success">¡¡Transmisión exitosa!! ¡¡Enviado con éxito!!</string>
         <string name="push_fail">¡¡Transmisión fallida!! ¡¡Envío fallido!!</string>
-        <string name="kix_assessment">ELANA</string>
+        <string name="kix_assessment">PAL-ELANA</string>
         <string name="kix_assessment_tag">Evaluación temprana de lenguaje y alfabetización y aritmética elemental</string>
         <string name="Okay">Ok</string>
         <string name="ok">Ok</string>
@@ -682,11 +680,11 @@
 
     <!--French-Mali START ____________________________________________________________________-->
 <!--
-    <string name="app_name">ELANA</string>
+    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="push_success">Transmission avec succès !</string>
     <string name="push_fail">La transmission a échoué !</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Évaluation des compétences fondamendales en Langage, Lecture et Numération</string>
     <string name="Okay">Ok</string>
     <string name="ok">Ok</string>
@@ -971,6 +969,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Dernière classe/niveau complétée avant le décrochage</item>
@@ -1016,11 +1017,11 @@
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">ठीक है</string>
     <string name="ok">ठीक है</string>
@@ -1142,7 +1143,7 @@
     <string name="str_CH08b_two">माता</string>
     <string name="str_CH08b_three">बड़ा भाई/बेहेन</string>
     <string name="str_CH08b_four">अन्य</string>
-    <string name="str_CH09c"><b>CH09c. </b> घर पर कोई कितने बार [###] को कहानियाँ पढ़ते या सुनाते 
+    <string name="str_CH09c"><b>CH09c. </b> घर पर कोई कितने बार [###] को कहानियाँ पढ़ते या सुनाते
 है?</string>
     <string name="str_CH09c_one">कभी नहीं</string>
     <string name="str_CH09c_two">एक हफ्ते में एक बार</string>
@@ -1158,9 +1159,9 @@
     <string name="parent_information">अभिभावक की जानकारी</string>
     <string name="mothers_details">माता की जानकारी</string>
     <string name="fathers_details">पिता की जानकारी</string>
-    <string name="mothers_instruction">(यदि माँ जीवित नहीं है या घर में नहीं रहती है, तो PT01a से PT01f को खाली छोड़ दें; यदि बच्चा अपनी सौतेली माँ के साथ रहता है, तो उन्हें 
+    <string name="mothers_instruction">(यदि माँ जीवित नहीं है या घर में नहीं रहती है, तो PT01a से PT01f को खाली छोड़ दें; यदि बच्चा अपनी सौतेली माँ के साथ रहता है, तो उन्हें
 माँ मानें और उसके डिटेल्स PT01a से PT01f में भरें)</string>
-    <string name="fathers_instruction">(यदि पिता जीवित नहीं है या घर में नहीं रहता है, तो PT02a से PT02f को खाली छोड़ दें; हालाँकि यदि बच्चा अपने सौतेले पिता के साथ रहता है, तो उन्हें 
+    <string name="fathers_instruction">(यदि पिता जीवित नहीं है या घर में नहीं रहता है, तो PT02a से PT02f को खाली छोड़ दें; हालाँकि यदि बच्चा अपने सौतेले पिता के साथ रहता है, तो उन्हें
 पिता मानें और और उसके डिटेल्स PT02a से PT02f में भरें)
 </string>
     <string name="hint_motherName"><b>PT01a. </b> माता का नाम<font color='#FF0000'>*</font></string>
@@ -1310,6 +1311,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>किस कक्षा को पूरा करके विद्यालय जाना छोड़ा?</item>
@@ -1352,13 +1356,13 @@
         <item>कक्षा 6</item>
     </string-array>-->
     <!--Hindi-India END ____________________________________________________________________-->
-    
+
     <!--Bangla-Bangladesh START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">তথ্য সংগৃহীত হচ্ছে</string>
     <string name="push_success">সফলভাবে আপলোড হয়েছে!</string>
     <string name="push_fail">আপলোড ব্যর্থ হয়েছে!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">ওকে</string>
     <string name="ok">ওকে</string>
@@ -1410,7 +1414,7 @@
     <string name="str_HH03"><b>HH03.</b> পরিবার প্রধানের নাম</string>
     <string name="str_HH04a"><b>HH04a.</b> বাড়িতে কি ৪-১০ বছর বয়সী বাচ্চাদের (নিয়মিত বসবাস) আছে?</string>
     <string name="str_HH04b"><b>HH04b.</b> কতজন?</string>
-    <string name="str_HH05"><b>HH05.</b> পরিবারের টেলিফোন/মোবাইল নম্বর 
+    <string name="str_HH05"><b>HH05.</b> পরিবারের টেলিফোন/মোবাইল নম্বর
 (যদি থাকে এবং প্রদান করতে ইচ্ছুক হলে লিখুন)</string>
     <string name="str_add_household_info">বাড়ির তথ্য যোগ করুন</string>
     <string name="str_update_household_info">বাড়ির তথ্য আপডেট করুন</string>
@@ -1646,6 +1650,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>ঝরে পড়ার আগে শেষ শ্রেণি/ক্লাস</item>
@@ -1690,11 +1697,11 @@
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Recolección de datos</string>
     <string name="push_success">¡Transmisión exitosa!</string>
     <string name="push_fail">¡Transmisión fallida!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Evaluación Temprana de Lenguaje, Literacidad y Aritmética</string>
     <string name="Okay">Ok</string>
     <string name="ok">Ok</string>
@@ -1745,7 +1752,7 @@
     <string name="str_HH03"><b>HH03.</b> Nombre del(de la) jefe(a) del hogar</string>
     <string name="str_HH04a"><b>HH04a.</b> ¿Hay niños de entre 4 a 10 años que vivan regularmente en el hogar?</string>
     <string name="str_HH04b"><b>HH04b.</b> ¿Cuántos?</string>
-    <string name="str_HH05"><b>HH05.</b> Teléfono/número de celular del hogar 
+    <string name="str_HH05"><b>HH05.</b> Teléfono/número de celular del hogar
 (anote sólo si está disponible y dispuesto a compartirlo)</string>
     <string name="str_add_household_info">Agregar información del hogar</string>
     <string name="str_update_household_info">Actualizar información del hogar</string>
@@ -1981,6 +1988,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Último grado completado antes de abandonar la escuela</item>
@@ -2025,11 +2035,11 @@
     <!--Spanish-Mexico END ____________________________________________________________________-->
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
-    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">ڈیٹا اکٹھا کرنا</string>
     <string name="push_success">ڈیٹا کامیابی سے پہنچ گیا!</string>
     <string name="push_fail">ڈیٹا نہیں پہنچا!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">ٹھیک ہے</string>
     <string name="ok">ٹھیک ہے</string>
@@ -2314,6 +2324,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>سکول چھوڑنے سے پہلے کی آخری کلاس/جماعت جو مکمل کی</item>
@@ -2354,15 +2367,15 @@
         <item>کلاس 4</item>
         <item>کلاس 5</item>
         <item>کلاس 6</item>
-    </string-array>
+    </string-array>-->
     <!--Urdu-Pakistan END ____________________________________________________________________-->
 
     <!--Portuguese-Mozambique START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Recolhendo Dados</string>
     <string name="push_success">Transmitido com sucesso!!</string>
     <string name="push_fail">Transmissão falhou!!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Avaliação de Língua e Alfabetização Precoce e Numeracia</string>
     <string name="Okay">Muito Bem</string>
     <string name="ok">Esta Bem</string>
@@ -2648,6 +2661,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Último ano/classe concluída antes de desistir</item>
@@ -2692,11 +2708,11 @@
     <!--Portuguese-Mozambique END ____________________________________________________________________-->
 
     <!--Nepali-Nepal START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डाटा संकलन</string>
     <string name="push_success">सफलतापुर्वक डाटा पुश भयो</string>
     <string name="push_fail">डाटा पुश सफल भएन</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">ठिक छ</string>
     <string name="ok">ठिक छ</string>
@@ -3027,11 +3043,11 @@
     <!--Nepali-Nepal END ____________________________________________________________________-->
 
     <!--Kiswahili-Tanzania START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Kukusanya taarifa</string>
     <string name="push_success">Imetumwa tayari!!</string>
     <string name="push_fail">Imeshindwa kutuma!!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Early Language &amp; Literacy and Numeracy Assessment</string>
     <string name="Okay">Sawa</string>
     <string name="ok">Sawa</string>
@@ -3316,6 +3332,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Ngazi ya darasa ya mwisho aliyomaliza kabla ya kuacha</item>
@@ -3360,11 +3379,11 @@
     <!--Kiswahili-Tanzania END ____________________________________________________________________-->
 
     <!--French_Senegal START ____________________________________________________________________-->
-<!--    <string name="app_name">ELANA</string>
+<!--    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="push_success">La transmission s\'est réalisée avec succès!!</string>
     <string name="push_fail">La transmission a échoué !!</string>
-    <string name="kix_assessment">ELANA</string>
+    <string name="kix_assessment">PAL-ELANA</string>
     <string name="kix_assessment_tag">Evaluation de la lecture et des mathématiques chez les plus jeunes</string>
     <string name="Okay">Ok</string>
     <string name="ok">Ok</string>
@@ -3650,6 +3669,9 @@
         <item>2019</item>
         <item>2020</item>
         <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>Dernière année/classe achevée avant l\'abandon scolaire</item>

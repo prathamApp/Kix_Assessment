@@ -33,6 +33,7 @@ import com.kix.assessment.modal_classes.Modal_Household;
 import com.kix.assessment.modal_classes.Modal_Log;
 import com.kix.assessment.modal_classes.Modal_ProfileDetails;
 import com.kix.assessment.modal_classes.Modal_Student;
+import com.kix.assessment.modal_classes.Modal_Village;
 import com.kix.assessment.services.KixSmartSync;
 import com.kix.assessment.services.shared_preferences.FastSave;
 
@@ -64,12 +65,16 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @ViewById(R.id.tv_householdCount)
     TextView tv_householdCount;*/
 
-    @ViewById(R.id.tv_TotStudCount)
+    @ViewById(R.id.tv_childTotalCount)
     TextView tv_TotStudCount;
 
-    @ViewById(R.id.tv_AssessmentGivenCount)
+    @ViewById(R.id.tv_childAssessedTotalCount)
     TextView tv_AssessmentGivenCount;
 
+    @ViewById(R.id.tv_villTotalCount)
+    TextView tv_totVillageCount;
+    @ViewById(R.id.tv_hhTotalCount)
+    TextView tv_totHHCount;
     @ViewById(R.id.rv_examDetail)
     RecyclerView rv_examDetail;
 
@@ -133,7 +138,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                     profileDetails.get(i).getStudentAge());
             detailsList.add(details);
         }
-        tv_AssessmentGivenCount.setText(getString(R.string.children_assessed) + assGiven);
+        tv_AssessmentGivenCount.setText(String.valueOf(assGiven));
     }
 
     @UiThread
@@ -150,6 +155,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         }
     }
 
+    @SuppressLint("SetTextI18n")
     @AfterViews
     public void initialize() {
         profilePresenter.setView(this);
@@ -157,10 +163,13 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
 //        villageID = getArguments().getString(Kix_Constant.VILLAGE_ID);
         //get total no. of student
         List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
+        List<Modal_Village> villages = KIXApplication.villageDao.getAllVillageBySurveyorCode(surveyorCode);
         //get total no. of household
         List<Modal_Household> households = KIXApplication.householdDao.getAllHHBySurveyorCode(surveyorCode);
         tv_profileName.setText(getString(R.string.hi)+" "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
-        tv_TotStudCount.setText(getString(R.string.children_surveyed) + stud.size());
+        tv_TotStudCount.setText(String.valueOf(stud.size()));
+        tv_totVillageCount.setText(String.valueOf(villages.size()));
+        tv_totHHCount.setText(String.valueOf(households.size()));
 /*        tv_studCount.setText("No. of Children : " + stud.size());
         tv_householdCount.setText("Total Villages : " + households.size());*/
         if (stud.size() == 0)

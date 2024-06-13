@@ -23,7 +23,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="@dimen/_50sdp"
         android:layout_marginEnd="@dimen/_50sdp"
-        android:src="@drawable/kix_logo" />
+        android:src="@drawable/pal_elana_logo" />
 
     <TextView
         android:id="@+id/tv_splashLabel"

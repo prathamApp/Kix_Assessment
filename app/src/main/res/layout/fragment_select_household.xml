@@ -28,7 +28,7 @@
         android:elevation="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
         android:visibility="gone"
-        android:src="@drawable/kix_logo" />
+        android:src="@drawable/pal_elana_logo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_houseHold"
