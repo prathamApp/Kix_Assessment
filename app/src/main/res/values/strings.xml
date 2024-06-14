@@ -3056,16 +3056,16 @@
     </string-array>
     <string-array name="dropout_year_list">
         <item>विद्यालय जान छोडेको साल</item>
-            <item>२०७२<item>
-            <item>२०७३<item>
-            <item>२०७४<item>
-            <item>२०७५<item>
-            <item>२०७६<item>
-            <item>२०७७<item>
-            <item>२०७८<item>
-            <item>२०२२<item>
-            <item>२०२३<item>
-            <item>२०२५<item>
+            <item>२०७२</item>
+            <item>२०७३</item>
+            <item>२०७४</item>
+            <item>२०७५</item>
+            <item>२०७६</item>
+            <item>२०७७</item>
+            <item>२०७८</item>
+            <item>२०२२</item>
+            <item>२०२३</item>
+            <item>२०२५</item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>विद्यालय जान छोडेको अगाडी पुरा गरेको कक्षा</item>

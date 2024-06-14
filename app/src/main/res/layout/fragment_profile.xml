@@ -26,7 +26,7 @@
         android:layout_below="@+id/tv_profileName"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_marginTop="@dimen/_10sdp">
+        android:layout_marginTop="@dimen/_15sdp">
 
         <LinearLayout
             android:id="@+id/totalVillagesSurveyed"
@@ -177,7 +177,8 @@
         android:layout_below="@+id/ll_ll2"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_marginTop="@dimen/_10sdp">
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/ll_ageFilterSpinner"
@@ -235,7 +236,8 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/ll_filter"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_5sdp" />
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_sync"
