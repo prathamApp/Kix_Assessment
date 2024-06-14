@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-      <string name="app_name">PAL-ELANA</string>
+<!--      <string name="app_name">PAL-ELANA</string>
       <string name="Collecting_Data">Collecting Data</string>
       <string name="push_success">Pushed successfully!</string>
       <string name="push_fail">Push failed!</string>
@@ -336,11 +336,18 @@
           <item>Class 5</item>
           <item>Class 6</item>
       </string-array>
+    <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--Spanish-Nicaragua START ____________________________________________________________________-->
-    <!--
-        <string name="app_name">PAL-PAL-ELANA</string>
+        <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">Recogida de datos</string>
         <string name="push_success">¡¡Transmisión exitosa!! ¡¡Enviado con éxito!!</string>
         <string name="push_fail">¡¡Transmisión fallida!! ¡¡Envío fallido!!</string>
@@ -675,7 +682,14 @@
             <item>5to grado</item>
             <item>6to grado</item>
         </string-array>
-    -->
+    <string name="tot_villages_srvd">Total de comunidades encuestadas</string>
+    <string name="tot_household_srvd">Total de hogares encuestados</string>
+    <string name="tot_children_srvd">Total de niñas/os censadas/os</string>
+    <string name="tot_children_tested">Total de niñas/os evaluadas/os</string>
+    <string name="village_name">Nombre de la Comunidad</string>
+    <string name="tot_hh">Total de Hogares</string>
+    <string name="tot_ch_srvd">Total de niñas y niños</string>
+    <string name="tot_ch_tested">Total de niñas/os</string>
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
@@ -1013,6 +1027,14 @@
         <item>5e année</item>
         <item>6e année</item>
     </string-array>
+        <string name="tot_villages_srvd">Total des villages étudiés</string>
+    <string name="tot_household_srvd">Total des ménages interrogés</string>
+    <string name="tot_children_srvd">Total des enfants interrogés</string>
+    <string name="tot_children_tested">Total des enfants testés</string>
+    <string name="village_name">Nom du village</string>
+    <string name="tot_hh">Total des ménages</string>
+    <string name="tot_ch_srvd">Total des enfants interrogés/string>
+    <string name="tot_ch_tested">Total children tested</string>
 -->
     <!--French-Mali END ____________________________________________________________________-->
 
@@ -1354,7 +1376,17 @@
         <item>कक्षा 4</item>
         <item>कक्षा 5</item>
         <item>कक्षा 6</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>
+    -->
+
     <!--Hindi-India END ____________________________________________________________________-->
 
     <!--Bangla-Bangladesh START ____________________________________________________________________-->
@@ -1693,7 +1725,15 @@
         <item>৪র্থ শ্রেণি</item>
         <item>৫ম শ্রেণি</item>
         <item>৬ষ্ঠ শ্রেণী</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
@@ -2031,7 +2071,15 @@
         <item>Grado 4</item>
         <item>Grado 5</item>
         <item>Grado 6</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total de comunidades encuestadas</string>
+    <string name="tot_household_srvd">Total de hogares encuestados</string>
+    <string name="tot_children_srvd">Total de niñas/os censadas/os</string>
+    <string name="tot_children_tested">Total de niñas/os evaluadas/os</string>
+    <string name="village_name">Nombre de la Comunidad</string>
+    <string name="tot_hh">Total de Hogares</string>
+    <string name="tot_ch_srvd">Total de niñas y niños</string>
+    <string name="tot_ch_tested">Total de niñas/os</string>-->
     <!--Spanish-Mexico END ____________________________________________________________________-->
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
@@ -2367,7 +2415,15 @@
         <item>کلاس 4</item>
         <item>کلاس 5</item>
         <item>کلاس 6</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--Urdu-Pakistan END ____________________________________________________________________-->
 
     <!--Portuguese-Mozambique START ____________________________________________________________________-->
@@ -2704,7 +2760,15 @@
         <item>4ª Classe</item>
         <item>5ª Classe</item>
         <item>6ª Classe</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--Portuguese-Mozambique END ____________________________________________________________________-->
 
     <!--Nepali-Nepal START ____________________________________________________________________-->
@@ -2992,13 +3056,16 @@
     </string-array>
     <string-array name="dropout_year_list">
         <item>विद्यालय जान छोडेको साल</item>
-        <item>2072</item>
-        <item>2073</item>
-        <item>2074</item>
-        <item>2075</item>
-        <item>2076</item>
-        <item>2077</item>
-        <item>2078</item>
+            <item>२०७२<item>
+            <item>२०७३<item>
+            <item>२०७४<item>
+            <item>२०७५<item>
+            <item>२०७६<item>
+            <item>२०७७<item>
+            <item>२०७८<item>
+            <item>२०२२<item>
+            <item>२०२३<item>
+            <item>२०२५<item>
     </string-array>
     <string-array name="student_dropoutclass">
         <item>विद्यालय जान छोडेको अगाडी पुरा गरेको कक्षा</item>
@@ -3039,7 +3106,15 @@
         <item>कक्षा ४</item>
         <item>कक्षा ५</item>
         <item>कक्षा ६</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--Nepali-Nepal END ____________________________________________________________________-->
 
     <!--Kiswahili-Tanzania START ____________________________________________________________________-->
@@ -3375,7 +3450,15 @@
         <item>Darasa la 4</item>
         <item>Darasa la 5</item>
         <item>Darasa la 6</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total Villages Surveyed</string>
+    <string name="tot_household_srvd">Total Households Surveyed</string>
+    <string name="tot_children_srvd">Total Children Surveyed</string>
+    <string name="tot_children_tested">Total Children Tested</string>
+    <string name="village_name">Village Name</string>
+    <string name="tot_hh">Total HH</string>
+    <string name="tot_ch_srvd">Total CH Surveyed</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
     <!--Kiswahili-Tanzania END ____________________________________________________________________-->
 
     <!--French_Senegal START ____________________________________________________________________-->
@@ -3712,7 +3795,15 @@
         <item>CE2 - 4e année</item>
         <item>CM1 - 5e année</item>
         <item>CM 2 - 6e année</item>
-    </string-array>-->
+    </string-array>
+        <string name="tot_villages_srvd">Total des villages étudiés</string>
+    <string name="tot_household_srvd">Total des ménages interrogés</string>
+    <string name="tot_children_srvd">Total des enfants interrogés</string>
+    <string name="tot_children_tested">Total des enfants testés</string>
+    <string name="village_name">Nom du village</string>
+    <string name="tot_hh">Total des ménages</string>
+    <string name="tot_ch_srvd">Total des enfants interrogés</string>
+    <string name="tot_ch_tested">Total children tested</string>-->
     <!--French_Senegal END ____________________________________________________________________-->
 
 

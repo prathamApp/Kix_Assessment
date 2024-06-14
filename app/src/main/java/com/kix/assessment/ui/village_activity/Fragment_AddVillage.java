@@ -306,13 +306,18 @@ public class Fragment_AddVillage extends Fragment {
         FastSave.getInstance().saveString(Kix_Constant.BOOKLET, this.villageBooklet);
 
         if (getArguments().getString(Kix_Constant.EDIT_VILLAGE) != null) {
-            villageDao.updateVillage(this.villageName,
-                    this.districtName,
-                    this.stateName,
-                    villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
-                    this.villageBooklet);
-            Toast.makeText(getActivity(), getString(R.string.vill_Updated_success), Toast.LENGTH_SHORT).show();
-            getFragmentManager().popBackStack();
+            String villNam = villageDao.getVillageName(villageName,stateName,districtName);
+            if(villNam==null) {
+                villageDao.updateVillage(this.villageName,
+                        this.districtName,
+                        this.stateName,
+                        villageId, FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"),
+                        this.villageBooklet);
+                Toast.makeText(getActivity(), getString(R.string.vill_Updated_success), Toast.LENGTH_SHORT).show();
+                getFragmentManager().popBackStack();
+            } else {
+                getFragmentManager().popBackStack();
+            }
         } else
             insertVillage();
 /*
@@ -335,24 +340,31 @@ public class Fragment_AddVillage extends Fragment {
     private void insertVillage() {
         if(!isDomainWise)
             this.villageBooklet = "";
-        String villageID = KIX_Utility.getUUID().toString();
-        Modal_Village modalVillage = new Modal_Village();
-        modalVillage.setVillageId("" + villageID);
-        modalVillage.setVillageName(this.villageName);
-        modalVillage.setVillageDistrict(this.districtName);
-        modalVillage.setVillageState(this.stateName);
-        modalVillage.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
-        modalVillage.setVillageBooklet(this.villageBooklet);
-        modalVillage.setSvrCode(surveyorCode);
-        modalVillage.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"));
-        modalVillage.setSentFlag(0);
-        villageDao.insertVillage(modalVillage);
-        BackupDatabase.backup(getActivity());
-        Toast.makeText(getActivity(), getString(R.string.vill_added_success), Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getActivity(), Activity_Village_.class);
-        intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
-        intent.putExtra(Kix_Constant.VILLAGE_ID, villageID);
-        startActivity(intent);
+        Log.e("Vill : ", villageName+ "|" +stateName+ "|" +districtName);
+        String villNam = villageDao.getVillageName(villageName,stateName,districtName);
+//        Log.e("VillNm : ", villNam);
+        if(villNam==null) {
+            String villageID = KIX_Utility.getUUID().toString();
+            Modal_Village modalVillage = new Modal_Village();
+            modalVillage.setVillageId("" + villageID);
+            modalVillage.setVillageName(this.villageName);
+            modalVillage.setVillageDistrict(this.districtName);
+            modalVillage.setVillageState(this.stateName);
+            modalVillage.setCreatedOn("" + KIX_Utility.getCurrentDateTime());
+            modalVillage.setVillageBooklet(this.villageBooklet);
+            modalVillage.setSvrCode(surveyorCode);
+            modalVillage.setCountryName(FastSave.getInstance().getString(Kix_Constant.COUNTRY_NAME, "Hindi-India"));
+            modalVillage.setSentFlag(0);
+            villageDao.insertVillage(modalVillage);
+            BackupDatabase.backup(getActivity());
+            Toast.makeText(getActivity(), getString(R.string.vill_added_success), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getActivity(), Activity_Village_.class);
+            intent.putExtra(Kix_Constant.SURVEYOR_CODE, surveyorCode);
+            intent.putExtra(Kix_Constant.VILLAGE_ID, villageID);
+            startActivity(intent);
+        } else {
+            getFragmentManager().popBackStack();
+        }
 /*
         final String villageID = KIX_Utility.getUUID().toString();
         final Modal_Village modalVillage = new Modal_Village();
