@@ -2870,7 +2870,7 @@
     <string name="add_child">बालबालिका थप्नुहोस्</string>
     <string name="update_child">बालबालिकाहरु अपडेट गर्नुहोस्</string>
     <string name="str_CH01"><b>CH01.</b> नाम<font color='#FF0000'>*</font></string>
-    <string name="str_CH04a"><b>CH04a.</b> [###} मा कुनै किसिमको अपाङ्गता छ ?</string>
+    <string name="str_CH04a"><b>CH04a.</b> [###] मा कुनै किसिमको अपाङ्गता छ ?</string>
     <string name="str_CH04b"><b>CH04b.</b> कुन किसिमको अपाङ्गता ?</string>
     <string name="str_CH04b_op1">दृष्टि</string>
     <string name="str_CH04b_op2">सुनाई /बोलाई</string>

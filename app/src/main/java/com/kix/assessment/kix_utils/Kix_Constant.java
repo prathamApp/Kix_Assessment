@@ -17,7 +17,7 @@ public class Kix_Constant {
     public static final String COUNTRY_NAME = "country_name";
     public static final String LANGUAGE_CODE = "language_code";
     public static final String COUNTRY_CODE = "country_code";
-    public static final String KIX_BACKUP = "KixBackup";
+    public static final String KIX_BACKUP = "KixBackups";
     public static final String SURVEYOR_CODE = "SurveyorCode";
     public static final String STUDENT_LIST = "Student_List";
     public static final String STUDENT_NAME = "Student_Name";

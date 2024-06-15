@@ -2,6 +2,7 @@ package com.kix.assessment.services;
 
 import static com.kix.assessment.KIXApplication.abandonedScoreDao;
 import static com.kix.assessment.KIXApplication.attendanceDao;
+import static com.kix.assessment.KIXApplication.getStoragePath;
 import static com.kix.assessment.KIXApplication.householdDao;
 import static com.kix.assessment.KIXApplication.householdInformationDao;
 import static com.kix.assessment.KIXApplication.logDao;
@@ -178,7 +179,7 @@ public class KixSmartSync { //extends AutoSync {
         try {
             final String uuID = "" + KIX_Utility.getUUID();
 //            final String filepathstr = KIXApplication.kixPath + "/" + uuID; // file path to save
-            final String filepathstr = Environment.getExternalStorageDirectory() + "/" + Kix_Constant.KIX_BACKUP + "/" + uuID; // file path to save
+            final String filepathstr = getStoragePath().getAbsolutePath() + "/" + Kix_Constant.KIX_BACKUP + "/" + uuID; // file path to save
             final File filepath = new File(filepathstr + ".json"); // file path to save
 
             if (filepath.exists())
