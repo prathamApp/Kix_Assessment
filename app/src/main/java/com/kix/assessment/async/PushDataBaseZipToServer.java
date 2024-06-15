@@ -1,5 +1,7 @@
 package com.kix.assessment.async;
 
+import static com.kix.assessment.KIXApplication.getStoragePath;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -145,10 +147,10 @@ public class PushDataBaseZipToServer {
 //            String fielName = "KDB_" + Kix_RandomString.unique();
 //            String fielName = KIX_Utility.getDeviceID()+"_"+KIX_Utility.getCurrentDateTime2();
             String fielName = KIX_Utility.getDeviceID() + "_" + KIX_Utility.getTimeInMilli();
-            String filePathStr = Environment.getExternalStorageDirectory().toString()
+            String filePathStr = getStoragePath().getAbsolutePath()
                     + "/KixBackup/" + fielName; // file path to save
             // Type the path of the files in here
-            File dir = new File(Environment.getExternalStorageDirectory().toString() + "/KixBackup/");
+            File dir = new File(getStoragePath().getAbsolutePath() + "/KixBackup/");
             File[] db_files = dir.listFiles();
             Log.d("FC_RandomString", "DB ZIP NAME " + fielName);
             if (db_files != null) {
