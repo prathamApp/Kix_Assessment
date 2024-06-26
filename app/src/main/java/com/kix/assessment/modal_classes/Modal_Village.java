@@ -144,4 +144,9 @@ public class Modal_Village implements Comparable, Parcelable {
     public int compareTo(final Object o) {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return villageName;
+    }
 }

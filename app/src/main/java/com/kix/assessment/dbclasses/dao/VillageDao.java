@@ -32,6 +32,8 @@ public interface VillageDao {
 
     @Query("SELECT * FROM Village WHERE villageId=:villageId")
     Modal_Village getVillageByVillId(String villageId);
+    /*@Query("SELECT * FROM Village")
+    List<Modal_Village> getAllVillage();*/
 
 //    @Query("update Village set sentFlag=1 where villageId=:villageId")
 //    void Village(String villageId);

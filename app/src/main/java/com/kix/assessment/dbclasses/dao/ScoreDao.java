@@ -53,9 +53,10 @@ public interface ScoreDao {
     int updateFlag(String s_id);
 
     @Query("select Student.CH01 as StudentName, Student.CH03 as StudentAge,\n" +
-            "Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven from Student\n" +
+            "Household.HH02 as RespondantName, count(DISTINCT(Score.sessionId)) as ExamsGiven,Village.villageId as villageId,Village.villageName as villageName from Student\n" +
             "LEFT JOIN score on student.studentId = Score.studentId\n" +
             "INNER JOIN Household on Household.householdId = Student.householdId\n" +
+            "INNER JOIN Village on Village.villageId = household.villageId\n" +
             "INNER JOIN Surveyor on Surveyor.svrCode= Household.svrCode\n" +
             "WHERE Surveyor.svrCode=:svrCode GROUP by Student.studentId ORDER BY Student.sId DESC")
 

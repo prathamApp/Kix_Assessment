@@ -2,12 +2,15 @@ package com.kix.assessment.ui.fragment_profile;
 
 import static com.kix.assessment.KIXApplication.householdDao;
 import static com.kix.assessment.KIXApplication.logDao;
+import static com.kix.assessment.KIXApplication.studentDao;
+import static com.kix.assessment.KIXApplication.villageDao;
 import static com.kix.assessment.kix_utils.KIX_Utility.context;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
@@ -49,8 +52,11 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import java.util.TreeSet;
 
 @EFragment(R.layout.fragment_profile)
 public class Fragment_Profile extends Fragment implements ProfileContract.ProfileView {
@@ -94,10 +100,10 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     ProfilePresenter profilePresenter;
     private ProfileAdapter profileAdapter;
 
-    String selectedAge, ageSelected, villageSelected,surveyorCode, householdId, villageID;
+    String selectedAge, ageSelected, villageSelected, surveyorCode, householdId, villageID;
 
     //list for villageFilter
-    ArrayList<String> villagesList = new ArrayList<>();
+    private ArrayList<Modal_Village> villagesList;
     @Bean(PushDataBaseZipToServer.class)
     PushDataBaseZipToServer pushDataBaseZipToServer;
     private TextView tv_dialTitle;
@@ -122,9 +128,10 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @UiThread
     @Override
     public void showProfileData(List<Modal_ProfileDetails> profileDetails) {
+        initializeVillageSpinner(profileDetails);
         //recycler header values
         Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
-                getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "");
+                getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "", "", "");
         detailsList.add(details);
         if (profileDetails.size() == 0) {
             Toast.makeText(getActivity(), getString(R.string.asmt_not_given), Toast.LENGTH_SHORT).show();
@@ -135,11 +142,12 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                 assGiven++;
             details = new Modal_ProfileDetails(profileDetails.get(i).getStudentName(),
                     profileDetails.get(i).getRespondantName(), profileDetails.get(i).getExamsGiven(), "0",
-                    profileDetails.get(i).getStudentAge());
+                    profileDetails.get(i).getStudentAge(), profileDetails.get(i).getVillageId(), profileDetails.get(i).getRespondantName());
             detailsList.add(details);
         }
         tv_AssessmentGivenCount.setText(String.valueOf(assGiven));
     }
+
 
     @UiThread
     public void initializeAdapter() {
@@ -162,34 +170,76 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);
 //        villageID = getArguments().getString(Kix_Constant.VILLAGE_ID);
         //get total no. of student
-        List<Modal_Student> stud = KIXApplication.studentDao.getAllStudentsBySurveyor(surveyorCode);
-        List<Modal_Village> villages = KIXApplication.villageDao.getAllVillageBySurveyorCode(surveyorCode);
+        List<Modal_Student> stud = studentDao.getAllStudentsBySurveyor(surveyorCode);
+        List<Modal_Village> villages = villageDao.getAllVillageBySurveyorCode(surveyorCode);
         //get total no. of household
         List<Modal_Household> households = KIXApplication.householdDao.getAllHHBySurveyorCode(surveyorCode);
-        tv_profileName.setText(getString(R.string.hi)+" "+ FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
+        tv_profileName.setText(getString(R.string.hi) + " " + FastSave.getInstance().getString(Kix_Constant.SURVEYOR_NAME, ""));
         tv_TotStudCount.setText(String.valueOf(stud.size()));
         tv_totVillageCount.setText(String.valueOf(villages.size()));
         tv_totHHCount.setText(String.valueOf(households.size()));
 /*        tv_studCount.setText("No. of Children : " + stud.size());
         tv_householdCount.setText("Total Villages : " + households.size());*/
-        if (stud.size() == 0)
+        if (stud.size() == 0) {
+            spinner_villageFilter.setVisibility(View.INVISIBLE);
+            ll_villageFilterSpinner.setVisibility(View.INVISIBLE);
             Toast.makeText(getActivity(), getString(R.string.no_student_found), Toast.LENGTH_SHORT).show();
-        else
+        } else {
+            spinner_villageFilter.setVisibility(View.VISIBLE);
+            ll_villageFilterSpinner.setVisibility(View.VISIBLE);
+
             profilePresenter.loadProfileData();
+        }
         //temp();
         initializeAdapter();
 
         ArrayAdapter adapterAge = ArrayAdapter.createFromResource(Objects.requireNonNull(getActivity()), R.array.ageFilter, R.layout.support_simple_spinner_dropdown_item);
         spinner_ageFilter.setAdapter(adapterAge);
-        villagesList = (ArrayList<String>) householdDao.getAllHouseholdNameBySurveyorCode(surveyorCode);
-        villagesList.add(0, getResources().getString(R.string.all_houeholds));
-        ArrayAdapter<String> adapterVillage = new ArrayAdapter<String>
+        int ageNo = spinner_ageFilter.getSelectedItemPosition() + 3;
+        ageSelected = "" + ageNo;
+//        ageSelected = spinner_ageFilter.getSelectedItem().toString();
+
+    }
+
+    private void initializeVillageSpinner(final List<Modal_ProfileDetails> profileDetails) {
+        villagesList = new ArrayList<>();
+        Modal_Village modal_village = new Modal_Village();
+        modal_village.setVillageId("-1");
+        modal_village.setVillageName(getResources().getString(R.string.all_village));
+        villagesList.add(0, modal_village);
+        if (profileDetails != null) {
+            for (Modal_ProfileDetails profileDetails1 : profileDetails) {
+                if (!villagesList.contains(profileDetails1)) {
+                    modal_village = new Modal_Village();
+                    modal_village.setVillageId(profileDetails1.getVillageId());
+                    modal_village.setVillageName(profileDetails1.getVillageName());
+                    villagesList.add(modal_village);
+                }
+            }
+        }
+        removeDuplicates(villagesList);
+        ArrayAdapter<Modal_Village> adapterVillage = new ArrayAdapter<Modal_Village>
                 (Objects.requireNonNull(getActivity()), android.R.layout.simple_spinner_dropdown_item, villagesList);
         spinner_villageFilter.setAdapter(adapterVillage);
-        int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
-        ageSelected = ""+ageNo;
-//        ageSelected = spinner_ageFilter.getSelectedItem().toString();
         villageSelected = spinner_villageFilter.getSelectedItem().toString();
+
+    }
+
+    public void removeDuplicates(ArrayList<Modal_Village> l) {
+        Set<Modal_Village> s = new TreeSet<Modal_Village>(new Comparator<Modal_Village>() {
+
+            @Override
+            public int compare(Modal_Village o1, Modal_Village o2) {
+                if (o1.villageId.equalsIgnoreCase(o2.getVillageId())) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+        s.addAll(l);
+        villagesList.clear();
+        villagesList.addAll(s);
+        //return s;
     }
 
     @Click(R.id.fab_sync)
@@ -250,8 +300,8 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
             //filter(ageSelected,villageSelected);
             filter(ageSelected, villageSelected);
         } else {
-            int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
-            ageSelected = ""+ageNo;
+            int ageNo = spinner_ageFilter.getSelectedItemPosition() + 3;
+            ageSelected = "" + ageNo;
             filter(ageSelected, villageSelected);
         }
 
@@ -260,21 +310,39 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     @ItemSelect(R.id.spinner_villageFilter)
     public void villageFilter(boolean sel) {
         //filter(ageSelected, spinner_villageFilter.getSelectedItem().toString());
-        villageSelected = spinner_villageFilter.getSelectedItem().toString();
-        filter(ageSelected, villageSelected);
+        Modal_Village modal_village = (Modal_Village) spinner_villageFilter.getSelectedItem();
+        filter(ageSelected, modal_village.villageId);
     }
 
     @SuppressLint("SetTextI18n")
-    private void filter(String ageFilter, String villageFilter) {
+    private void filter(String ageFilter, String villageID) {
         ArrayList<Modal_ProfileDetails> filteredList = new ArrayList();
-        if (Integer.parseInt(ageSelected)<4 && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
+        List<String> houseHoldList = householdDao.getHouseholdNameByVillageId(villageID);
+        List<Modal_Student> modalStudents = studentDao.getStudentByHouseHold(houseHoldList);
+
+        if (villageID.equalsIgnoreCase("-1")) {
+            filteredList.addAll(detailsList);
+        } else {
+            Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
+                    getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "", "", "");
+            filteredList.add(details);
+            for (Modal_ProfileDetails student_profile : detailsList) {
+                if (villageID.equalsIgnoreCase(student_profile.getVillageId())) {
+                    filteredList.add(student_profile);
+                }
+            }
+        }
+
+
+
+        /*if (Integer.parseInt(ageSelected) < 4 && villageSelected.equalsIgnoreCase(getResources().getString(R.string.all_houeholds))) {
             filteredList.addAll(detailsList);
         } else {
             Modal_ProfileDetails details = new Modal_ProfileDetails(getString(R.string.child_name),
                     getString(R.string.str_household), getString(R.string.assessment_given), "Assessment Synced", "");
             filteredList.add(details);
             for (Modal_ProfileDetails d : detailsList) {
-                if (Integer.parseInt(ageSelected)<4 && !villageFilter.isEmpty()) {
+                if (Integer.parseInt(ageSelected) < 4 && !villageFilter.isEmpty()) {
                     if (d.getRespondantName().contains(villageFilter)) {
                         filteredList.add(d);
                     }
@@ -287,7 +355,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                         filteredList.add(d);
                 }
             }
-        }
+        }*/
         //update recyclerview
         profileAdapter.updateList(filteredList);
         int studCount = filteredList.size() - 1;
@@ -326,8 +394,8 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
     }
 
     private void getSelectedAge() {
-        int ageNo = spinner_ageFilter.getSelectedItemPosition()+3;
-        ageSelected = ""+ageNo;
+        int ageNo = spinner_ageFilter.getSelectedItemPosition() + 3;
+        ageSelected = "" + ageNo;
 /*        String age1 = spinner_ageFilter.getSelectedItem().toString();
         String[] split_age = age1.split(" ");
         if (split_age.length > 1)
@@ -352,7 +420,7 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
                 .setTintColor(0x30000000)
                 .build();
         tv_dialTitle = pushDialog.findViewById(R.id.dia_title);
-        tv_dialTitle.setText(""+message);
+        tv_dialTitle.setText("" + message);
         if (pushType.equalsIgnoreCase(Kix_Constant.DBSUCCESSFULLYPUSHED) ||
                 pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED))
             tv_dialTitle.setTextColor(getResources().getColor(R.color.colorBtnGreenDark));

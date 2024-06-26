@@ -35,6 +35,10 @@ public interface HouseholdDao {
     @Query("SELECT * FROM Household WHERE householdId=:householdId")
     Modal_Household getHouseholdByHouseholdId(String householdId);
 
+
+    @Query("SELECT DISTINCT householdId FROM Household WHERE villageId=:villageId")
+    List<String> getHouseholdNameByVillageId(String villageId);
+
 //    @Query("update Household set sentFlag=1 where householdId=:householdId")
 //    void updateSentHouseholdFlags(String householdId);
 

@@ -54,4 +54,7 @@ public interface StudentDao {
 
     @Query("SELECT * FROM Student WHERE parentId=:parId")
     Modal_Student getStudentByParentId(String parId);
+
+    @Query("SELECT * FROM Student WHERE householdId IN (:houseHoldList)")
+    List<Modal_Student> getStudentByHouseHold(List<String> houseHoldList);
 }

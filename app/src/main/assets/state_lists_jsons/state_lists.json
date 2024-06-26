@@ -1,5 +1,66 @@
 [
     {
+        "CountryName": "Uganda",
+        "Language": "English-Uganda",
+        "StateList": [
+            {
+                "StateName": "Central",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Mpigi",
+                        "VillageList": [
+                            {
+                                "VillageName": "BUZAMI 'A'"
+                            },
+                            {
+                                "VillageName": "LUBANGA B 'A'"
+                            },
+                            {
+                                "VillageName": "BUYAYA-KITOJJO 'A'"
+                            },
+                            {
+                                "VillageName": "KAMUSOGONYA"
+                            },
+                            {
+                                "VillageName": "BANGA"
+                            },
+                            {
+                                "VillageName": "MASAAZI"
+                            },
+                            {
+                                "VillageName": "NAKIREBE LCI 'B'"
+                            },
+                            {
+                                "VillageName": "BUKASA LCI 'A'"
+                            },
+                            {
+                                "VillageName": "LWAJA KITUNTU"
+                            },
+                            {
+                                "VillageName": "JJEZA B"
+                            },
+                            {
+                                "VillageName": "NKAMBO LCI 'A'"
+                            },
+                            {
+                                "VillageName": "BUSEESE A LCI"
+                            },
+                            {
+                                "VillageName": "KASUUBO LCI 'B'"
+                            },
+                            {
+                                "VillageName": "KWABBA LCI"
+                            },
+                            {
+                                "VillageName": "NNINDYE A LCI 'A'"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "CountryName": "Nicaragua",
         "Language": "Spanish-Nicaragua",
         "StateList": [
@@ -655,28 +716,28 @@
                         "DistrictName": "Bardibas Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 14.0
+                                "VillageName": 14
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -684,25 +745,25 @@
                         "DistrictName": "Gaushala Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 12.0
+                                "VillageName": 12
                             }
                         ]
                     },
@@ -710,13 +771,13 @@
                         "DistrictName": "Aurahi Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     },
@@ -724,22 +785,22 @@
                         "DistrictName": "Bhangaha Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -747,19 +808,19 @@
                         "DistrictName": "Loharpatti Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             }
                         ]
                     },
@@ -767,19 +828,19 @@
                         "DistrictName": "Balawa Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             }
                         ]
                     },
@@ -787,13 +848,13 @@
                         "DistrictName": "Ram Gopalpur Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -801,19 +862,19 @@
                         "DistrictName": "Manara Shisawa Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -821,16 +882,16 @@
                         "DistrictName": "Matihani Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             }
                         ]
                     },
@@ -838,22 +899,22 @@
                         "DistrictName": "Jaleshwor Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 12.0
+                                "VillageName": 12
                             }
                         ]
                     },
@@ -861,16 +922,16 @@
                         "DistrictName": "Sonama Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -878,16 +939,16 @@
                         "DistrictName": "Samsi Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             }
                         ]
                     },
@@ -895,13 +956,13 @@
                         "DistrictName": "Ekadara Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -909,13 +970,13 @@
                         "DistrictName": "Mahottari Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -923,16 +984,16 @@
                         "DistrictName": "Pipara Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     }
@@ -945,22 +1006,22 @@
                         "DistrictName": "Lalbandi Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 13.0
+                                "VillageName": 13
                             },
                             {
-                                "VillageName": 16.0
+                                "VillageName": 16
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             }
                         ]
                     },
@@ -968,19 +1029,19 @@
                         "DistrictName": "Hariwan Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             }
                         ]
                     },
@@ -988,16 +1049,16 @@
                         "DistrictName": "Bagmati Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             }
                         ]
                     },
@@ -1005,22 +1066,22 @@
                         "DistrictName": "Barahathawa Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 14.0
+                                "VillageName": 14
                             },
                             {
-                                "VillageName": 15.0
+                                "VillageName": 15
                             }
                         ]
                     },
@@ -1028,16 +1089,16 @@
                         "DistrictName": "Haripur Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     },
@@ -1045,19 +1106,19 @@
                         "DistrictName": "Ishworpur Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 13.0
+                                "VillageName": 13
                             }
                         ]
                     },
@@ -1065,13 +1126,13 @@
                         "DistrictName": "Haripurwa Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             }
                         ]
                     },
@@ -1079,16 +1140,16 @@
                         "DistrictName": "Kabilashi Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             }
                         ]
                     },
@@ -1096,16 +1157,16 @@
                         "DistrictName": "Balara Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     },
@@ -1113,13 +1174,13 @@
                         "DistrictName": "Godaita Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 10.0
+                                "VillageName": 10
                             }
                         ]
                     },
@@ -1127,16 +1188,16 @@
                         "DistrictName": "Malangawa Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 10.0
+                                "VillageName": 10
                             }
                         ]
                     },
@@ -1144,10 +1205,10 @@
                         "DistrictName": "Parsa Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     },
@@ -1155,10 +1216,10 @@
                         "DistrictName": "Brahmapuri Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     },
@@ -1166,10 +1227,10 @@
                         "DistrictName": "Chandranagar Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -1177,13 +1238,13 @@
                         "DistrictName": "Chakraghatta Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             }
                         ]
                     },
@@ -1191,13 +1252,13 @@
                         "DistrictName": "Basbariya Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             }
                         ]
                     },
@@ -1205,13 +1266,13 @@
                         "DistrictName": "Dhanakaul Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -1219,13 +1280,13 @@
                         "DistrictName": "Ramnagar Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     },
@@ -1233,10 +1294,10 @@
                         "DistrictName": "Bishnu Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -1244,10 +1305,10 @@
                         "DistrictName": "Kaudena Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     }
@@ -1260,13 +1321,13 @@
                         "DistrictName": "Saptakoshi Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 10.0
+                                "VillageName": 10
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             }
                         ]
                     },
@@ -1274,19 +1335,19 @@
                         "DistrictName": "Kanchanrup Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 12.0
+                                "VillageName": 12
                             }
                         ]
                     },
@@ -1294,13 +1355,13 @@
                         "DistrictName": "Shambhunath Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 10.0
+                                "VillageName": 10
                             }
                         ]
                     },
@@ -1308,22 +1369,22 @@
                         "DistrictName": "Khadak Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             }
                         ]
                     },
@@ -1331,19 +1392,19 @@
                         "DistrictName": "Surunga Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             }
                         ]
                     },
@@ -1351,16 +1412,16 @@
                         "DistrictName": "Bode Barsain Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             }
                         ]
                     },
@@ -1368,19 +1429,19 @@
                         "DistrictName": "Dakneshwori Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     },
@@ -1388,25 +1449,25 @@
                         "DistrictName": "Rajbiraj Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 9.0
+                                "VillageName": 9
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 14.0
+                                "VillageName": 14
                             },
                             {
-                                "VillageName": 8.0
+                                "VillageName": 8
                             }
                         ]
                     },
@@ -1414,19 +1475,19 @@
                         "DistrictName": "Hanumannagar Kankalini Municipality",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 11.0
+                                "VillageName": 11
                             },
                             {
-                                "VillageName": 14.0
+                                "VillageName": 14
                             }
                         ]
                     },
@@ -1434,13 +1495,13 @@
                         "DistrictName": "Agnisair Krishna Sabaran Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -1448,16 +1509,16 @@
                         "DistrictName": "Rupani Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             }
                         ]
                     },
@@ -1465,13 +1526,13 @@
                         "DistrictName": "Balan-Bihul Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             },
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             }
                         ]
                     },
@@ -1479,10 +1540,10 @@
                         "DistrictName": "Rajgadh Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 3.0
+                                "VillageName": 3
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             }
                         ]
                     },
@@ -1490,13 +1551,13 @@
                         "DistrictName": "Bishnupur Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     },
@@ -1504,10 +1565,10 @@
                         "DistrictName": "Mahadewa Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -1515,13 +1576,13 @@
                         "DistrictName": "Tirahut Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 5.0
+                                "VillageName": 5
                             }
                         ]
                     },
@@ -1529,13 +1590,13 @@
                         "DistrictName": "Tilathi Koiladi Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 1.0
+                                "VillageName": 1
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             }
                         ]
                     },
@@ -1543,16 +1604,16 @@
                         "DistrictName": "Chhinnamasta Gaunpalika",
                         "VillageList": [
                             {
-                                "VillageName": 2.0
+                                "VillageName": 2
                             },
                             {
-                                "VillageName": 4.0
+                                "VillageName": 4
                             },
                             {
-                                "VillageName": 7.0
+                                "VillageName": 7
                             },
                             {
-                                "VillageName": 6.0
+                                "VillageName": 6
                             }
                         ]
                     }
@@ -6988,6 +7049,1339 @@
                         "VillageList": [
                             {
                                 "VillageName": "Bashmonia"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "Kenya",
+        "Language": "Kiswahili-Kenya",
+        "StateList": [
+            {
+                "StateName": "Kilifi",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Ganze",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mbararani/Mgamboni"
+                            },
+                            {
+                                "VillageName": "Kadziweni/Chaga"
+                            },
+                            {
+                                "VillageName": "Mkonjo/Gandini/Kipawa"
+                            },
+                            {
+                                "VillageName": "Kahingoni Centre"
+                            },
+                            {
+                                "VillageName": "Biyubu/Kafukoni"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Kilifi North",
+                        "VillageList": [
+                            {
+                                "VillageName": "Kadegeni A"
+                            },
+                            {
+                                "VillageName": "Mwambani B"
+                            },
+                            {
+                                "VillageName": "Majaoni"
+                            },
+                            {
+                                "VillageName": "Ukombozi"
+                            },
+                            {
+                                "VillageName": "Airstrip"
+                            },
+                            {
+                                "VillageName": "Mafumbini"
+                            },
+                            {
+                                "VillageName": "Kibarani Central"
+                            },
+                            {
+                                "VillageName": "Mtaani Cdf"
+                            },
+                            {
+                                "VillageName": "Fumbini A"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Kauma",
+                        "VillageList": [
+                            {
+                                "VillageName": "Vyambani/Mahunduni"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Kilifi South",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mwatundo C"
+                            },
+                            {
+                                "VillageName": "Shariani Centre"
+                            },
+                            {
+                                "VillageName": "Mwakuhenga Centre"
+                            },
+                            {
+                                "VillageName": "Mtomondoni A"
+                            },
+                            {
+                                "VillageName": "Majengo Mapya E"
+                            },
+                            {
+                                "VillageName": "Mikanjuni"
+                            },
+                            {
+                                "VillageName": "Maweni"
+                            },
+                            {
+                                "VillageName": "Marina"
+                            },
+                            {
+                                "VillageName": "Kwa Goa"
+                            },
+                            {
+                                "VillageName": "Kadzengo"
+                            },
+                            {
+                                "VillageName": "Mwando Wa Panya"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Kaloleni",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mtsikitsini"
+                            },
+                            {
+                                "VillageName": "Mgoya/Nyore"
+                            },
+                            {
+                                "VillageName": "Kadzandani"
+                            },
+                            {
+                                "VillageName": "Bengoni/Kitamweu"
+                            },
+                            {
+                                "VillageName": "Kirongo"
+                            },
+                            {
+                                "VillageName": "Njoro Bethany"
+                            },
+                            {
+                                "VillageName": "Misufini New Testament Church"
+                            },
+                            {
+                                "VillageName": "Tsagwa Centre"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Rabai",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mkapuni"
+                            },
+                            {
+                                "VillageName": "Mwele B"
+                            },
+                            {
+                                "VillageName": "Mwandodo"
+                            },
+                            {
+                                "VillageName": "Ngindo"
+                            },
+                            {
+                                "VillageName": "Kauyeni"
+                            },
+                            {
+                                "VillageName": "Kaembeni B"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Magarini",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mpirani"
+                            },
+                            {
+                                "VillageName": "Dhololo"
+                            },
+                            {
+                                "VillageName": "Midodona A"
+                            },
+                            {
+                                "VillageName": "Kapupuni A"
+                            },
+                            {
+                                "VillageName": "Ramada Centre"
+                            },
+                            {
+                                "VillageName": "Povuni B"
+                            },
+                            {
+                                "VillageName": "Mbuyu Wa Kombo"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Chonyi",
+                        "VillageList": [
+                            {
+                                "VillageName": "Chengoni"
+                            },
+                            {
+                                "VillageName": "Katikirieni"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Malindi",
+                        "VillageList": [
+                            {
+                                "VillageName": "Sambamba A"
+                            },
+                            {
+                                "VillageName": "Majaoni A"
+                            },
+                            {
+                                "VillageName": "Danisa/Divayo"
+                            },
+                            {
+                                "VillageName": "Central"
+                            },
+                            {
+                                "VillageName": "Kalatani/Chemchem"
+                            },
+                            {
+                                "VillageName": "Milimani/Kwa Upanga North"
+                            },
+                            {
+                                "VillageName": "Moi B"
+                            },
+                            {
+                                "VillageName": "Mawenisabasaba Msikitini"
+                            },
+                            {
+                                "VillageName": "Richland"
+                            },
+                            {
+                                "VillageName": "Umoja Estate (Serena) A"
+                            },
+                            {
+                                "VillageName": "Kwa Chocha Tangeni"
+                            },
+                            {
+                                "VillageName": "Kajajeni"
+                            },
+                            {
+                                "VillageName": "Majengo Tawheed"
+                            },
+                            {
+                                "VillageName": "Shella Bomani"
+                            },
+                            {
+                                "VillageName": "Majengo Mapya B"
+                            },
+                            {
+                                "VillageName": "Barani Town A"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "StateName": "Kwale",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Msambweni",
+                        "VillageList": [
+                            {
+                                "VillageName": "3144_Ukunda Scheme"
+                            },
+                            {
+                                "VillageName": "Mabatani"
+                            },
+                            {
+                                "VillageName": "3139_Ukunda Scheme"
+                            },
+                            {
+                                "VillageName": "Kiranga"
+                            },
+                            {
+                                "VillageName": "Munje Trading Centre"
+                            },
+                            {
+                                "VillageName": "Jambo"
+                            },
+                            {
+                                "VillageName": "Matunda Bora"
+                            },
+                            {
+                                "VillageName": "Mkwakwani"
+                            },
+                            {
+                                "VillageName": "3029_Magutu"
+                            },
+                            {
+                                "VillageName": "Mwamambi A"
+                            },
+                            {
+                                "VillageName": "Kilolapwa A"
+                            },
+                            {
+                                "VillageName": "Mwamambi B"
+                            },
+                            {
+                                "VillageName": "Mwaroni"
+                            },
+                            {
+                                "VillageName": "Kisimachande"
+                            },
+                            {
+                                "VillageName": "Kilolapwa B"
+                            },
+                            {
+                                "VillageName": "Kiuzini"
+                            },
+                            {
+                                "VillageName": "3007_Magutu"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Samburu",
+                        "VillageList": [
+                            {
+                                "VillageName": "Bofu B"
+                            },
+                            {
+                                "VillageName": "Melikubwa B"
+                            },
+                            {
+                                "VillageName": "Meti/Mbegani"
+                            },
+                            {
+                                "VillageName": "Mwabila B"
+                            },
+                            {
+                                "VillageName": "Baisa"
+                            },
+                            {
+                                "VillageName": "Fulugani"
+                            },
+                            {
+                                "VillageName": "Kaluweni"
+                            },
+                            {
+                                "VillageName": "Tsunza Centre"
+                            },
+                            {
+                                "VillageName": "Chilumani B"
+                            },
+                            {
+                                "VillageName": "Kabenderani"
+                            },
+                            {
+                                "VillageName": "Kibaoni B"
+                            },
+                            {
+                                "VillageName": "Mkilo C"
+                            },
+                            {
+                                "VillageName": "Mwangea A"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Matuga",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mteza"
+                            },
+                            {
+                                "VillageName": "Mwangoni"
+                            },
+                            {
+                                "VillageName": "Moshini"
+                            },
+                            {
+                                "VillageName": "Mtsangatifu"
+                            },
+                            {
+                                "VillageName": "Mbegani"
+                            },
+                            {
+                                "VillageName": "Kichakasimba"
+                            },
+                            {
+                                "VillageName": "Dzombo"
+                            },
+                            {
+                                "VillageName": "Tumaini/Mkunguni"
+                            },
+                            {
+                                "VillageName": "Goyo"
+                            },
+                            {
+                                "VillageName": "Maloloni"
+                            },
+                            {
+                                "VillageName": "Ziwani"
+                            },
+                            {
+                                "VillageName": "Mwalolo"
+                            },
+                            {
+                                "VillageName": "Majengo Mapya"
+                            },
+                            {
+                                "VillageName": "Kinarini A"
+                            },
+                            {
+                                "VillageName": "Wayani"
+                            },
+                            {
+                                "VillageName": "Chanyiro B"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Lunga Lunga",
+                        "VillageList": [
+                            {
+                                "VillageName": "Kiwegu C"
+                            },
+                            {
+                                "VillageName": "Bondeni"
+                            },
+                            {
+                                "VillageName": "Tsole"
+                            },
+                            {
+                                "VillageName": "Vivivwini"
+                            },
+                            {
+                                "VillageName": "Maro"
+                            },
+                            {
+                                "VillageName": "Ngathini B"
+                            },
+                            {
+                                "VillageName": "Magoma"
+                            },
+                            {
+                                "VillageName": "Mwakoyo"
+                            },
+                            {
+                                "VillageName": "Vitzangwawem"
+                            },
+                            {
+                                "VillageName": "Mwangwei"
+                            },
+                            {
+                                "VillageName": "Fimbamoyo"
+                            },
+                            {
+                                "VillageName": "Kivumoni"
+                            },
+                            {
+                                "VillageName": "Patanani"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Kinango",
+                        "VillageList": [
+                            {
+                                "VillageName": "Dzimanya A"
+                            },
+                            {
+                                "VillageName": "Majengo"
+                            },
+                            {
+                                "VillageName": "Mbita"
+                            },
+                            {
+                                "VillageName": "Gulanze B"
+                            },
+                            {
+                                "VillageName": "Gandini"
+                            },
+                            {
+                                "VillageName": "Malungoni"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "StateName": "Lamu",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Lamu East",
+                        "VillageList": [
+                            {
+                                "VillageName": "Chandani / Mjini"
+                            },
+                            {
+                                "VillageName": "Maziwani"
+                            },
+                            {
+                                "VillageName": "Kiangwe"
+                            },
+                            {
+                                "VillageName": "Mwangala B"
+                            },
+                            {
+                                "VillageName": "Mkambani"
+                            },
+                            {
+                                "VillageName": "Bhagdad / Barazani"
+                            },
+                            {
+                                "VillageName": "2001_Kiunga Kashmir"
+                            },
+                            {
+                                "VillageName": "Bori 2"
+                            },
+                            {
+                                "VillageName": "2005_Kiunga Kashmir"
+                            },
+                            {
+                                "VillageName": "Mbwajumwali B"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Lamu West",
+                        "VillageList": [
+                            {
+                                "VillageName": "Mikinduni A"
+                            },
+                            {
+                                "VillageName": "Nairobi Eria"
+                            },
+                            {
+                                "VillageName": "Ingini /Kwasisi"
+                            },
+                            {
+                                "VillageName": "Nairobi Area B"
+                            },
+                            {
+                                "VillageName": "Koreni /Dae"
+                            },
+                            {
+                                "VillageName": "Bahati / Bahari B"
+                            },
+                            {
+                                "VillageName": "3012_Hindi Town A"
+                            },
+                            {
+                                "VillageName": "Baraka"
+                            },
+                            {
+                                "VillageName": "Jeriko"
+                            },
+                            {
+                                "VillageName": "Bagamoyo"
+                            },
+                            {
+                                "VillageName": "Ziwani B"
+                            },
+                            {
+                                "VillageName": "Kibaoni"
+                            },
+                            {
+                                "VillageName": "Sikomani A"
+                            },
+                            {
+                                "VillageName": "Ndeiya"
+                            },
+                            {
+                                "VillageName": "Matangeni"
+                            },
+                            {
+                                "VillageName": "Kibiboni A"
+                            },
+                            {
+                                "VillageName": "Kilimani"
+                            },
+                            {
+                                "VillageName": "Sese / Kisimani"
+                            },
+                            {
+                                "VillageName": "Maweni"
+                            },
+                            {
+                                "VillageName": "Chemichemi / Ziwani"
+                            },
+                            {
+                                "VillageName": "Majembeni"
+                            },
+                            {
+                                "VillageName": "Kipini A / Kipini B"
+                            },
+                            {
+                                "VillageName": "Sendemke C"
+                            },
+                            {
+                                "VillageName": "Maisha Maisha A"
+                            },
+                            {
+                                "VillageName": "Hamisi / Chumburu /Zimbwi La Meli"
+                            },
+                            {
+                                "VillageName": "Bularahma"
+                            },
+                            {
+                                "VillageName": "Moa A"
+                            },
+                            {
+                                "VillageName": "New Land"
+                            },
+                            {
+                                "VillageName": "Manyatta / Amu"
+                            },
+                            {
+                                "VillageName": "Uziwatown"
+                            },
+                            {
+                                "VillageName": "Mchangani"
+                            },
+                            {
+                                "VillageName": "Zebra"
+                            },
+                            {
+                                "VillageName": "Widho Manyatta"
+                            },
+                            {
+                                "VillageName": "Mikomami"
+                            },
+                            {
+                                "VillageName": "Pangani /Thaku-Thaku"
+                            },
+                            {
+                                "VillageName": "Mapenya Mjini"
+                            },
+                            {
+                                "VillageName": "Nyongoro"
+                            },
+                            {
+                                "VillageName": "3014_Hindi Town A"
+                            },
+                            {
+                                "VillageName": "Mtakwini / Kiwani / MagozaniTakwa Ruinse"
+                            },
+                            {
+                                "VillageName": "Mlei C / Swabaha A /swabaha B"
+                            },
+                            {
+                                "VillageName": "Mkunumbi"
+                            },
+                            {
+                                "VillageName": "Gereji"
+                            },
+                            {
+                                "VillageName": "Nairobi Area A"
+                            },
+                            {
+                                "VillageName": "Banjuri/Banjuri Peace"
+                            },
+                            {
+                                "VillageName": "Police Line"
+                            },
+                            {
+                                "VillageName": "India"
+                            },
+                            {
+                                "VillageName": "Majengo A"
+                            },
+                            {
+                                "VillageName": "Gadeni"
+                            },
+                            {
+                                "VillageName": "Pumuani"
+                            },
+                            {
+                                "VillageName": "Township Area"
+                            },
+                            {
+                                "VillageName": "Wiyoni Mashambani"
+                            },
+                            {
+                                "VillageName": "Kiongoni / Kauthara / Vismanzale"
+                            },
+                            {
+                                "VillageName": "Kakathe / Maleli"
+                            },
+                            {
+                                "VillageName": "Mkunguni"
+                            },
+                            {
+                                "VillageName": "Kandahar"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "CountryName": "India",
+        "Language": "Hindi-India",
+        "StateList": [
+            {
+                "StateName": "Madhya Pradesh",
+                "DistrictList": [
+                    {
+                        "DistrictName": "Betul",
+                        "VillageList": [
+                            {
+                                "VillageName": "Chhipanya Pipariya"
+                            },
+                            {
+                                "VillageName": "Khapa Khateda"
+                            },
+                            {
+                                "VillageName": "Kujba"
+                            },
+                            {
+                                "VillageName": "Lalawadi"
+                            },
+                            {
+                                "VillageName": "Nandpur"
+                            },
+                            {
+                                "VillageName": "Ramli"
+                            },
+                            {
+                                "VillageName": "Toranwada"
+                            },
+                            {
+                                "VillageName": "Ashti"
+                            },
+                            {
+                                "VillageName": "Bakud"
+                            },
+                            {
+                                "VillageName": "Bothi"
+                            },
+                            {
+                                "VillageName": "Sawangi"
+                            },
+                            {
+                                "VillageName": "Temni"
+                            },
+                            {
+                                "VillageName": "Jamthi"
+                            },
+                            {
+                                "VillageName": "Kolgaon"
+                            },
+                            {
+                                "VillageName": "Rondha"
+                            },
+                            {
+                                "VillageName": "Sillot"
+                            },
+                            {
+                                "VillageName": "Basner Kalan"
+                            },
+                            {
+                                "VillageName": "Dhar"
+                            },
+                            {
+                                "VillageName": "Kothalkund"
+                            },
+                            {
+                                "VillageName": "Machhi"
+                            },
+                            {
+                                "VillageName": "Nabpur"
+                            },
+                            {
+                                "VillageName": "Chillore"
+                            },
+                            {
+                                "VillageName": "Chohtapopti"
+                            },
+                            {
+                                "VillageName": "Damajipura"
+                            },
+                            {
+                                "VillageName": "Jamnya"
+                            },
+                            {
+                                "VillageName": "Kundab Kajan"
+                            },
+                            {
+                                "VillageName": "Mahadpur Jawara(Mahatpur)"
+                            },
+                            {
+                                "VillageName": "Ratanpur"
+                            },
+                            {
+                                "VillageName": "Chuna Huzuri"
+                            },
+                            {
+                                "VillageName": "Dudhiya"
+                            },
+                            {
+                                "VillageName": "Gothana"
+                            },
+                            {
+                                "VillageName": "Katkuhi"
+                            },
+                            {
+                                "VillageName": "Niwari"
+                            },
+                            {
+                                "VillageName": "Unchagohan"
+                            },
+                            {
+                                "VillageName": "Chhatarpur"
+                            },
+                            {
+                                "VillageName": "Kuhi"
+                            },
+                            {
+                                "VillageName": "Salaiya"
+                            },
+                            {
+                                "VillageName": "Chandora Khurd"
+                            },
+                            {
+                                "VillageName": "Chhindi"
+                            },
+                            {
+                                "VillageName": "Chikhali Kalan"
+                            },
+                            {
+                                "VillageName": "Khedicourt"
+                            },
+                            {
+                                "VillageName": "Parmandal"
+                            },
+                            {
+                                "VillageName": "Yenas"
+                            },
+                            {
+                                "VillageName": "Yenkheda"
+                            },
+                            {
+                                "VillageName": "Ashta"
+                            },
+                            {
+                                "VillageName": "Bandali"
+                            },
+                            {
+                                "VillageName": "Mangona Khurd"
+                            },
+                            {
+                                "VillageName": "Raiamla"
+                            },
+                            {
+                                "VillageName": "Sirdi"
+                            },
+                            {
+                                "VillageName": "Taikheda"
+                            },
+                            {
+                                "VillageName": "Vaygaon"
+                            },
+                            {
+                                "VillageName": "Dabri"
+                            },
+                            {
+                                "VillageName": "Deshawadi"
+                            },
+                            {
+                                "VillageName": "Dhodramau (Dhodramahu)"
+                            },
+                            {
+                                "VillageName": "Kundi"
+                            },
+                            {
+                                "VillageName": "Motidhana"
+                            },
+                            {
+                                "VillageName": "Patouwapura"
+                            },
+                            {
+                                "VillageName": "Silpati"
+                            },
+                            {
+                                "VillageName": "Tara"
+                            },
+                            {
+                                "VillageName": "Diwan Charsi"
+                            },
+                            {
+                                "VillageName": "Lahas"
+                            },
+                            {
+                                "VillageName": "Kasmar Khondi"
+                            },
+                            {
+                                "VillageName": "Mohta"
+                            },
+                            {
+                                "VillageName": "Hira Wadi"
+                            },
+                            {
+                                "VillageName": "Sawanga"
+                            },
+                            {
+                                "VillageName": "Sonora"
+                            },
+                            {
+                                "VillageName": "Bankakhodri"
+                            },
+                            {
+                                "VillageName": "Baretha"
+                            },
+                            {
+                                "VillageName": "Neemiya"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Bhopal",
+                        "VillageList": [
+                            {
+                                "VillageName": "Ajabpura"
+                            },
+                            {
+                                "VillageName": "Bagraj"
+                            },
+                            {
+                                "VillageName": "Bandrua"
+                            },
+                            {
+                                "VillageName": "Barkheda Khurd"
+                            },
+                            {
+                                "VillageName": "Berkhedi Kalan"
+                            },
+                            {
+                                "VillageName": "Bhojapura"
+                            },
+                            {
+                                "VillageName": "Budhor Kalan"
+                            },
+                            {
+                                "VillageName": "Chanda Saloi"
+                            },
+                            {
+                                "VillageName": "Chandpura"
+                            },
+                            {
+                                "VillageName": "Dhamantori"
+                            },
+                            {
+                                "VillageName": "Dhonoura"
+                            },
+                            {
+                                "VillageName": "Dongargaon"
+                            },
+                            {
+                                "VillageName": "Garha Khurd"
+                            },
+                            {
+                                "VillageName": "Hamid Khedi"
+                            },
+                            {
+                                "VillageName": "Hingoni"
+                            },
+                            {
+                                "VillageName": "Hinotiya Jagir"
+                            },
+                            {
+                                "VillageName": "Hinotiya Piran"
+                            },
+                            {
+                                "VillageName": "Jhikariya Kalan"
+                            },
+                            {
+                                "VillageName": "Kadia Khoh"
+                            },
+                            {
+                                "VillageName": "Keshokhedi"
+                            },
+                            {
+                                "VillageName": "Khajuria Ranku"
+                            },
+                            {
+                                "VillageName": "Khajuriya Kalan"
+                            },
+                            {
+                                "VillageName": "Khandariya"
+                            },
+                            {
+                                "VillageName": "Khata Khedi"
+                            },
+                            {
+                                "VillageName": "Khedli"
+                            },
+                            {
+                                "VillageName": "Khejra Misar"
+                            },
+                            {
+                                "VillageName": "Kotra"
+                            },
+                            {
+                                "VillageName": "Manakund"
+                            },
+                            {
+                                "VillageName": "Mengra"
+                            },
+                            {
+                                "VillageName": "Mudia Kheda"
+                            },
+                            {
+                                "VillageName": "Narela Damodar"
+                            },
+                            {
+                                "VillageName": "Pardi"
+                            },
+                            {
+                                "VillageName": "Pasaiya"
+                            },
+                            {
+                                "VillageName": "Pipalkhedi"
+                            },
+                            {
+                                "VillageName": "Ronjia Bazaft"
+                            },
+                            {
+                                "VillageName": "Sapaua"
+                            },
+                            {
+                                "VillageName": "Semri Khurd"
+                            },
+                            {
+                                "VillageName": "Shahpur"
+                            },
+                            {
+                                "VillageName": "Tanda"
+                            },
+                            {
+                                "VillageName": "Tarawli Khurd"
+                            },
+                            {
+                                "VillageName": "Undrai"
+                            },
+                            {
+                                "VillageName": "Amrabad Kalan"
+                            },
+                            {
+                                "VillageName": "Bansiya"
+                            },
+                            {
+                                "VillageName": "Barkhedi Hajjam"
+                            },
+                            {
+                                "VillageName": "Bherupura"
+                            },
+                            {
+                                "VillageName": "Bishan Khedi"
+                            },
+                            {
+                                "VillageName": "Deval Khedi"
+                            },
+                            {
+                                "VillageName": "Fatehpur Dobra"
+                            },
+                            {
+                                "VillageName": "Guradiya"
+                            },
+                            {
+                                "VillageName": "Int Khedichhap"
+                            },
+                            {
+                                "VillageName": "Jhagariya Khurd"
+                            },
+                            {
+                                "VillageName": "Khejdadeo"
+                            },
+                            {
+                                "VillageName": "Mali Khedi"
+                            },
+                            {
+                                "VillageName": "Parewa Kheda"
+                            },
+                            {
+                                "VillageName": "Phanda Khurd"
+                            },
+                            {
+                                "VillageName": "Ratatal"
+                            },
+                            {
+                                "VillageName": "Saista Khedi"
+                            },
+                            {
+                                "VillageName": "Shyampur"
+                            },
+                            {
+                                "VillageName": "Suraiya Nagar"
+                            },
+                            {
+                                "VillageName": "Arrawati"
+                            },
+                            {
+                                "VillageName": "Dolatpura"
+                            },
+                            {
+                                "VillageName": "Garha Brahman"
+                            },
+                            {
+                                "VillageName": "Gondipura"
+                            },
+                            {
+                                "VillageName": "Jhirniya"
+                            },
+                            {
+                                "VillageName": "Kutkipura"
+                            },
+                            {
+                                "VillageName": "Ramaha"
+                            },
+                            {
+                                "VillageName": "Acharpura"
+                            },
+                            {
+                                "VillageName": "Beenapur"
+                            },
+                            {
+                                "VillageName": "Mungalia Kot"
+                            }
+                        ]
+                    },
+                    {
+                        "DistrictName": "Tikamgarh",
+                        "VillageList": [
+                            {
+                                "VillageName": "Bhitarwar"
+                            },
+                            {
+                                "VillageName": "Duda Khera"
+                            },
+                            {
+                                "VillageName": "Durga Nagar"
+                            },
+                            {
+                                "VillageName": "Hirapur"
+                            },
+                            {
+                                "VillageName": "Khodera"
+                            },
+                            {
+                                "VillageName": "Raj Nagar"
+                            },
+                            {
+                                "VillageName": "Bagoura"
+                            },
+                            {
+                                "VillageName": "Chandrapura"
+                            },
+                            {
+                                "VillageName": "Eshon"
+                            },
+                            {
+                                "VillageName": "Kamal Nagar"
+                            },
+                            {
+                                "VillageName": "Machora"
+                            },
+                            {
+                                "VillageName": "Punaul Khas"
+                            },
+                            {
+                                "VillageName": "Vaidpur"
+                            },
+                            {
+                                "VillageName": "Varana Khas"
+                            },
+                            {
+                                "VillageName": "Khudo Naj Kudila"
+                            },
+                            {
+                                "VillageName": "Pipra"
+                            },
+                            {
+                                "VillageName": "Rampura"
+                            },
+                            {
+                                "VillageName": "Basnera"
+                            },
+                            {
+                                "VillageName": "Bindari Khas"
+                            },
+                            {
+                                "VillageName": "Dargay  Khurd"
+                            },
+                            {
+                                "VillageName": "Nadiya"
+                            },
+                            {
+                                "VillageName": "Baghat"
+                            },
+                            {
+                                "VillageName": "Bamhori Sheetal"
+                            },
+                            {
+                                "VillageName": "Chachawali"
+                            },
+                            {
+                                "VillageName": "Dhimarpura"
+                            },
+                            {
+                                "VillageName": "Kena"
+                            },
+                            {
+                                "VillageName": "Kishore Pura"
+                            },
+                            {
+                                "VillageName": "Naura"
+                            },
+                            {
+                                "VillageName": "Sindoor Sagar"
+                            },
+                            {
+                                "VillageName": "Tila"
+                            },
+                            {
+                                "VillageName": "Basoba"
+                            },
+                            {
+                                "VillageName": "Chakarpur"
+                            },
+                            {
+                                "VillageName": "Kumharra Khas"
+                            },
+                            {
+                                "VillageName": "Pathari"
+                            },
+                            {
+                                "VillageName": "Rajpura"
+                            },
+                            {
+                                "VillageName": "Babai"
+                            },
+                            {
+                                "VillageName": "Bakhatpura"
+                            },
+                            {
+                                "VillageName": "Bhadrai Udaypura"
+                            },
+                            {
+                                "VillageName": "Charee"
+                            },
+                            {
+                                "VillageName": "Gowa"
+                            },
+                            {
+                                "VillageName": "Khera"
+                            },
+                            {
+                                "VillageName": "Lahar Bujurg"
+                            },
+                            {
+                                "VillageName": "Maheva Chak-1"
+                            },
+                            {
+                                "VillageName": "Mawai"
+                            },
+                            {
+                                "VillageName": "Para"
+                            },
+                            {
+                                "VillageName": "Rampura Urf Nivawari"
+                            },
+                            {
+                                "VillageName": "Thar"
+                            },
+                            {
+                                "VillageName": "Birora Pahad Khas"
+                            },
+                            {
+                                "VillageName": "Gora Gusai Khas"
+                            },
+                            {
+                                "VillageName": "Manetha"
+                            },
+                            {
+                                "VillageName": "Todi"
+                            },
+                            {
+                                "VillageName": "Bamhori Madiya"
+                            },
+                            {
+                                "VillageName": "Dhajrai"
+                            },
+                            {
+                                "VillageName": "Karmarai"
+                            },
+                            {
+                                "VillageName": "Kuvarpura"
+                            },
+                            {
+                                "VillageName": "Maughat"
+                            },
+                            {
+                                "VillageName": "Papawani"
+                            },
+                            {
+                                "VillageName": "Para Khas"
+                            },
+                            {
+                                "VillageName": "Patar Khera"
+                            },
+                            {
+                                "VillageName": "Petpura"
+                            },
+                            {
+                                "VillageName": "Chandpura"
+                            },
+                            {
+                                "VillageName": "Guna"
+                            },
+                            {
+                                "VillageName": "Matol Khas"
+                            },
+                            {
+                                "VillageName": "Sijaura"
+                            },
+                            {
+                                "VillageName": "Poha Khas"
+                            },
+                            {
+                                "VillageName": "Puchhikar Guan"
+                            },
+                            {
+                                "VillageName": "Kakawani Khas"
+                            },
+                            {
+                                "VillageName": "Lar Khas"
+                            },
+                            {
+                                "VillageName": "Samarra"
                             }
                         ]
                     }

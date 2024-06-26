@@ -27,7 +27,7 @@
         android:background="@drawable/profile_background"
         android:elevation="@dimen/_5sdp"
         android:padding="@dimen/_5sdp"
-        android:src="@drawable/kix_logo_r" />
+        android:src="@drawable/pal_elana_logo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_village"

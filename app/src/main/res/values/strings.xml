@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-<!--      <string name="app_name">PAL-ELANA</string>
+    <!--  <string name="app_name">PAL-ELANA</string>
       <string name="Collecting_Data">Collecting Data</string>
       <string name="push_success">Pushed successfully!</string>
       <string name="push_fail">Push failed!</string>
@@ -347,7 +347,7 @@
     <!--ENGLISH END ____________________________________________________________________-->
 
     <!--Spanish-Nicaragua START ____________________________________________________________________-->
-        <string name="app_name">PAL-ELANA</string>
+    <!--    <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">Recogida de datos</string>
         <string name="push_success">¡¡Transmisión exitosa!! ¡¡Enviado con éxito!!</string>
         <string name="push_fail">¡¡Transmisión fallida!! ¡¡Envío fallido!!</string>
@@ -689,12 +689,11 @@
     <string name="village_name">Nombre de la Comunidad</string>
     <string name="tot_hh">Total de Hogares</string>
     <string name="tot_ch_srvd">Total de niñas y niños</string>
-    <string name="tot_ch_tested">Total de niñas/os</string>
+    <string name="tot_ch_tested">Total de niñas/os</string>-->
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-<!--
-    <string name="app_name">PAL-ELANA</string>
+  <!--  <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="push_success">Transmission avec succès !</string>
     <string name="push_fail">La transmission a échoué !</string>
@@ -1033,13 +1032,12 @@
     <string name="tot_children_tested">Total des enfants testés</string>
     <string name="village_name">Nom du village</string>
     <string name="tot_hh">Total des ménages</string>
-    <string name="tot_ch_srvd">Total des enfants interrogés/string>
-    <string name="tot_ch_tested">Total children tested</string>
--->
+    <string name="tot_ch_srvd">Total des enfants interrogés</string>
+    <string name="tot_ch_tested">Total children tested</string>-->
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
@@ -1385,12 +1383,11 @@
     <string name="tot_hh">Total HH</string>
     <string name="tot_ch_srvd">Total CH Surveyed</string>
     <string name="tot_ch_tested">Total CH Tested</string>
-    -->
 
     <!--Hindi-India END ____________________________________________________________________-->
 
     <!--Bangla-Bangladesh START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">তথ্য সংগৃহীত হচ্ছে</string>
     <string name="push_success">সফলভাবে আপলোড হয়েছে!</string>
     <string name="push_fail">আপলোড ব্যর্থ হয়েছে!</string>
@@ -1842,7 +1839,7 @@
     <string name="str_CH04b_op2">Auditiva/Del habla</string>
     <string name="str_CH04b_op3">Física</string>
     <string name="str_CH04b_op4">Cognitiva</string>
-    <string name="str_CH05"><b>CH05. </b> ¿[Nombre del[###] está inscrito(a) actualmente en alguna escuela o preescolar?</string>
+    <string name="str_CH05"><b>CH05. </b> ¿[###] está inscrito(a) actualmente en alguna escuela o preescolar?</string>
     <string name="str_CH06c"><b>CH06c. </b> ¿El español es el idioma oficial de enseñanza en la escuela?
 (En el caso de los(as) niños(as) más pequeños(as), puede consultar sus libros de texto/hojas de trabajo/hojas de actividades para confirmarlo)</string>
     <string name="str_CH06f"><b>CH06f. </b> ¿[###] tiene libros de texto para el grado que cursa?</string>
@@ -2427,7 +2424,7 @@
     <!--Urdu-Pakistan END ____________________________________________________________________-->
 
     <!--Portuguese-Mozambique START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+  <!--  <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Recolhendo Dados</string>
     <string name="push_success">Transmitido com sucesso!!</string>
     <string name="push_fail">Transmissão falhou!!</string>
@@ -2477,7 +2474,7 @@
     <string name="str_isSampledHH_one">Fechado</string>
     <string name="str_isSampledHH_two">Não responde</string>
     <string name="str_isSampledHH_three">Aberto (ao inquérito)</string>
-    <string name="str_HH01"><b>HH01.</b> Número do agregado familiar a partir do formato de listagem do agregado<font color='#FF0000'>*</font></string>
+    <string name="str_HH01"><b>HH01.</b> Numero do AF a partir da folha de listagem.<font color='#FF0000'>*</font></string>
     <string name="str_HH02"><b>HH02.</b> Nome do inquirido/respondente<font color='#FF0000'>*</font></string>
     <string name="str_HH03"><b>HH03.</b> Nome do chefe do agregado familiar</string>
     <string name="str_HH04a"><b>HH04a.</b> O agregado familiar tem crianças (a viver regularmente) no grupo etário dos 4-10 anos?</string>
@@ -2490,7 +2487,7 @@
     <string name="str_gnr_household_info">Informações gerais sobre o agregado familiar inquirido</string>
     <string name="str_HH06a"><b>HH06a.</b> Número de membros que vivem regularmente no agregado familiar</string>
     <string name="str_HH06b"><b>HH06b.</b> Fala o português em casa?</string>
-    <string name="str_HH06c"><b>HH06c.</b> Com que frequência fala inglês em casa?</string>
+    <string name="str_HH06c"><b>HH06c.</b> Com que frequencia fala Ingles/Portugues em casa?</string>
     <string name="str_always">Sempre</string>
     <string name="str_sometimes">Às vezes</string>
     <string name="str_HH06d"><b>HH06d.</b> Fala alguma outra lingua em casa?</string>
@@ -2531,11 +2528,11 @@
     <string name="str_CH04b_op2">Auditiva/Fala</string>
     <string name="str_CH04b_op3">Fisica</string>
     <string name="str_CH04b_op4">Cognitiva</string>
-    <string name="str_CH05"><b>CH05. </b> Será que [###] actualmente está matriculada em qualquer escola or pré-escola?</string>
+    <string name="str_CH05"><b>CH05. </b> Sera que [###] actualmente esta matriculada em qualquer escola or/ou pre-escola? </string>
     <string name="str_CH06c"><b>CH06c. </b> Português é a lingua oficial de instrução nessa escola?
 (para crianças mais novas, talvez possas verificar os seus manuais escolares/livros de exercicios/folhas de actividades para confirmar)</string>
     <string name="str_CH06f"><b>CH06f. </b> Será que [###] tem manual escolar para a classe actual?</string>
-    <string name="str_CH06g"><b>CH06g. </b> Será que [###] alguma vez repetio uma classe na escola?</string>
+    <string name="str_CH06g"><b>CH06g. </b>Sera que [###] alguma vez repetio/repetiu uma classe na escola?</string>
     <string name="str_CH07a"><b>CH07a. </b> Será que [###] alguma vez esteve matriculado/a na escola?</string>
     <string name="str_CH07d"><b>CH07d. </b> Qual foi a principal razão que fez com que [###] desistisse?</string>
     <string name="str_reasonToDrop_one">Não podia pagar as propinas</string>
@@ -2772,7 +2769,7 @@
     <!--Portuguese-Mozambique END ____________________________________________________________________-->
 
     <!--Nepali-Nepal START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डाटा संकलन</string>
     <string name="push_success">सफलतापुर्वक डाटा पुश भयो</string>
     <string name="push_fail">डाटा पुश सफल भएन</string>
@@ -3118,7 +3115,7 @@
     <!--Nepali-Nepal END ____________________________________________________________________-->
 
     <!--Kiswahili-Tanzania START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Kukusanya taarifa</string>
     <string name="push_success">Imetumwa tayari!!</string>
     <string name="push_fail">Imeshindwa kutuma!!</string>
@@ -3169,7 +3166,7 @@
     <string name="str_isSampledHH_two">Wamekataa kujibu maswali</string>
     <string name="str_isSampledHH_three">Wazi (kwa uchunguzi)</string>
     <string name="str_HH01"><b>HH01.</b> Namba ya kaya kutoka kwenye orodha ya kaya<font color='#FF0000'>*</font></string>
-    <string name="str_HH02"><b>HH02.</b> Jina la mtu anaejibu maswal<font color='#FF0000'>*</font></string>
+    <string name="str_HH02"><b>HH02.</b> Jina la mtu anaejibu maswali<font color='#FF0000'>*</font></string>
     <string name="str_HH03"><b>HH03.</b> Jina la Mkuu wa kaya</string>
     <string name="str_HH04a"><b>HH04a.</b> Je kaya ina watoto wenye umri wa miaka 4-10? (Watoto wanaoishi katika kaya tu)</string>
     <string name="str_HH04b"><b>HH04b.</b> Je ni wangapi?</string>
@@ -3181,12 +3178,12 @@
     <string name="str_gnr_household_info">Taarifa za jumla za kaya zilizoorodheshwa</string>
     <string name="str_HH06a"><b>HH06a.</b> Idadi ya wanakaya wanaoishi katika kaya</string>
     <string name="str_HH06b"><b>HH06b.</b> Je mnaongea lugha ya Kiswahili katika kaya?</string>
-    <string name="str_HH06c"><b>HH06c.</b> Ni kwa mara ngapi kaya inazungumza lugha ya Kiswahili?</string>
-    <string name="str_always">Mara zote</string>
-    <string name="str_sometimes">Mara nyingine</string>
+    <string name="str_HH06c"><b>HH06c.</b> Ni mara ngapi mnatumia lugha ya Kiswahili kuwasiliana?</string>
+    <string name="str_always">Wakati wote</string>
+    <string name="str_sometimes">Marachahe</string>
     <string name="str_HH06d"><b>HH06d.</b> Je mnaongea lugha nyingine yeyote katika kaya?</string>
     <string name="str_HH_asset_info">Taarifa za mali ya kaya</string>
-    <string name="str_HH07a"><b>HH07a.</b> Je, kaya imemalizika kuezeka?</string>
+    <string name="str_HH07a"><b>HH07a.</b> Je kaya imemalizika kuezekwa</string>
     <string name="str_HH07b"><b>HH07b.</b> Je, kaya ina kuta zilizokamilika?</string>
     <string name="str_HH07c"><b>HH07c.</b> Ni nini chanzo cha mwanga kinachotumiwa mara kwa mara katika kaya?</string>
     <string name="str_HH07c_one">Umeme</string>
@@ -3195,7 +3192,7 @@
     <string name="str_HH07d.1"><b>HH07d1.</b> Je, kaya ina chanzo cha kawaida cha maji ya kunywa ndani ya eneo lako au kiwanja chako? (Chanzo cha maji kinaweza kuwa ndani ya nyumba au nje, lakini ni wanakaya pekee wanaoyatumia)</string>
     <string name="str_HH07d.2"><b>HH07d2.</b> Je, unalipa kupata/kutumia chanzo hiki cha maji?</string>
     <string name="str_HH07f"><b>HH07f.</b> Kaya ina angalau choo kimoja kinachotumiwa na wanakaya pekee yao?</string>
-    <string name="str_HH07g"><b>HH07g.</b> Kuna angalau mwnakaya mmoja (Isipokuwa mtoto\wazazi} aliemaliza kidato cha nne, diploma au cheti?</string>
+    <string name="str_HH07g"><b>HH07g.</b> Kuna angalau mwanakaya mmoja (isipokuwa mtoto au wazazi) aliemaliza kidato cha nne na kuendelea</string>
     <string name="str_HH07h"><b>HH07h.</b> Je kuna vitabu vyovyote vya kujisomea au vitabu vya hadithi vya watoto ukiacha vitabu vya kiada vya shule?</string>
     <string name="str_HH07i"><b>HH07i.</b> Je kuna vitabu vyovyote vya kujisomea katika kaya ambavyo sio vya watoto, mfano vitabu vya dini, magazeti, majarida?</string>
     <string name="str_HH07j"><b>HH07j.</b> Kompyuta/kipakatalishi/kompyuta kibao?</string>

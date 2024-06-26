@@ -4,19 +4,21 @@ import androidx.room.Ignore;
 
 //Modal Class to show RecyclerView Contents
 public class Modal_ProfileDetails {
-    String StudentName, StudentAge, RespondantName, ExamsGiven;
+    public String StudentName, StudentAge, RespondantName, ExamsGiven,villageId,villageName;
     @Ignore
     String ExamsSynced;
 
     public Modal_ProfileDetails() {
     }
 
-    public Modal_ProfileDetails(String studentName, String respondantName, String examsGiven, String examsSynced, String studentAge) {
+    public Modal_ProfileDetails(String studentName, String respondantName, String examsGiven, String examsSynced,String studentAge,String villageId,String villageName) {
         StudentName = studentName;
         RespondantName = respondantName;
         ExamsGiven = examsGiven;
         ExamsSynced = examsSynced;
         StudentAge = studentAge;
+        this.villageId = villageId;
+        this.villageName = villageName;
     }
 
     public String getStudentName() {
@@ -49,5 +51,21 @@ public class Modal_ProfileDetails {
 
     public void setExamsSynced(String examsSynced) {
         ExamsSynced = examsSynced;
+    }
+
+    public String getVillageId() {
+        return this.villageId;
+    }
+
+    public void setVillageId(final String villageId) {
+        this.villageId = villageId;
+    }
+
+    public String getVillageName() {
+        return this.villageName;
+    }
+
+    public void setVillageName(final String villageName) {
+        this.villageName = villageName;
     }
 }
