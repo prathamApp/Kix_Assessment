@@ -1037,7 +1037,7 @@
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
@@ -1382,7 +1382,7 @@
     <string name="village_name">Village Name</string>
     <string name="tot_hh">Total HH</string>
     <string name="tot_ch_srvd">Total CH Surveyed</string>
-    <string name="tot_ch_tested">Total CH Tested</string>
+    <string name="tot_ch_tested">Total CH Tested</string>-->
 
     <!--Hindi-India END ____________________________________________________________________-->
 
@@ -1734,7 +1734,7 @@
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Recolección de datos</string>
     <string name="push_success">¡Transmisión exitosa!</string>
     <string name="push_fail">¡Transmisión fallida!</string>
@@ -3115,7 +3115,7 @@
     <!--Nepali-Nepal END ____________________________________________________________________-->
 
     <!--Kiswahili-Tanzania START ____________________________________________________________________-->
-   <!-- <string name="app_name">PAL-ELANA</string>
+    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Kukusanya taarifa</string>
     <string name="push_success">Imetumwa tayari!!</string>
     <string name="push_fail">Imeshindwa kutuma!!</string>
@@ -3455,11 +3455,11 @@
     <string name="village_name">Village Name</string>
     <string name="tot_hh">Total HH</string>
     <string name="tot_ch_srvd">Total CH Surveyed</string>
-    <string name="tot_ch_tested">Total CH Tested</string>-->
+    <string name="tot_ch_tested">Total CH Tested</string>
     <!--Kiswahili-Tanzania END ____________________________________________________________________-->
 
     <!--French_Senegal START ____________________________________________________________________-->
-<!--    <string name="app_name">PAL-ELANA</string>
+ <!--   <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">Collecte des données</string>
     <string name="push_success">La transmission s\'est réalisée avec succès!!</string>
     <string name="push_fail">La transmission a échoué !!</string>
