@@ -5819,352 +5819,185 @@
         "StateName": "Jashore",
         "DistrictList": [
           {
-            "DistrictName": "Afra",
-            "VillageList": [
-              {
-                "VillageName": "Afra"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Agarhati",
-            "VillageList": [
-              {
-                "VillageName": "Agarhati"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Arabpur (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Arabpur Kalupara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Arazi Jamdia",
-            "VillageList": [
-              {
-                "VillageName": "Arazi Jamdia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Azampur",
-            "VillageList": [
-              {
-                "VillageName": "Azampur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bara Kuli",
-            "VillageList": [
-              {
-                "VillageName": "Bara Kuli"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Baragharia",
-            "VillageList": [
-              {
-                "VillageName": "Bahir Gharia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Barandi (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Katherpull"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Basantapur",
-            "VillageList": [
-              {
-                "VillageName": "Chhota Basantapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bausa",
-            "VillageList": [
-              {
-                "VillageName": "Bausa"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bejpara (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Rn Road Mahalla"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Beneali",
-            "VillageList": [
-              {
-                "VillageName": "Beneali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhadra",
-            "VillageList": [
-              {
-                "VillageName": "Bhadra"
-              },
-              {
-                "VillageName": "Chhota Bhadra"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhangura",
-            "VillageList": [
-              {
-                "VillageName": "Bhangura"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhogati Narendrapur (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Bhogati Narendrapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bil Gandhimara",
-            "VillageList": [
-              {
-                "VillageName": "Bil Gandhimara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Brahmandanga",
-            "VillageList": [
-              {
-                "VillageName": "Brahmandanga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chalishia",
+            "DistrictName": "Abhaynagar",
             "VillageList": [
               {
                 "VillageName": "Andha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chandpur",
-            "VillageList": [
-              {
-                "VillageName": "Chandpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chaugachha (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Chaugachha Sardarpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chhilumbaria",
-            "VillageList": [
-              {
-                "VillageName": "Chhilumbaria"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chhota Gopalpur",
-            "VillageList": [
-              {
-                "VillageName": "Chhota Gopalpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Darajhat",
-            "VillageList": [
-              {
-                "VillageName": "Chhatiantala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Debidaspur",
-            "VillageList": [
-              {
-                "VillageName": "Debidaspur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Deuli",
-            "VillageList": [
-              {
-                "VillageName": "Deuli"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Diara",
-            "VillageList": [
-              {
-                "VillageName": "Diara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Durgapur",
-            "VillageList": [
-              {
-                "VillageName": "Durgapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Enayetpur",
-            "VillageList": [
-              {
-                "VillageName": "Enayetpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Fatepur",
-            "VillageList": [
-              {
-                "VillageName": "Daitala"
               },
               {
-                "VillageName": "Fatepur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ghop",
-            "VillageList": [
+                "VillageName": "Pankerganti"
+              },
               {
-                "VillageName": "Ghop"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Goalpara",
-            "VillageList": [
+                "VillageName": "Nalamara"
+              },
               {
-                "VillageName": "Goalpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Harishchandrapur",
-            "VillageList": [
+                "VillageName": "Bil Gandhimara"
+              },
               {
-                "VillageName": "Harishchandrapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Harishpur",
-            "VillageList": [
+                "VillageName": "Naoapara Tarafdarpara"
+              },
               {
-                "VillageName": "Harishpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Hizaldanga",
-            "VillageList": [
-              {
-                "VillageName": "Hizaldanga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jagannathpur",
-            "VillageList": [
-              {
-                "VillageName": "Jagannathpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jashore (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Chourasta Mor"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jhumjhumpur",
-            "VillageList": [
-              {
-                "VillageName": "Jhumjhumpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kakbandhal",
-            "VillageList": [
-              {
-                "VillageName": "Kakbandhal"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kalisakul",
-            "VillageList": [
+                "VillageName": "Rajghat Ghora Battala"
+              },
               {
                 "VillageName": "Kalisakul"
               }
             ]
           },
           {
-            "DistrictName": "Kamalpur",
-            "VillageList": [
-              {
-                "VillageName": "Kamalpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kariakhali",
-            "VillageList": [
-              {
-                "VillageName": "Kariakhali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kismat Basuari",
+            "DistrictName": "Bagharpara",
             "VillageList": [
               {
                 "VillageName": "Kismat Basuari"
+              },
+              {
+                "VillageName": "Arazi Jamdia"
+              },
+              {
+                "VillageName": "Bhangura"
+              },
+              {
+                "VillageName": "Azampur"
+              },
+              {
+                "VillageName": "Chhatiantala"
               }
             ]
           },
           {
-            "DistrictName": "Laukhali",
+            "DistrictName": "Chaugachha",
             "VillageList": [
               {
+                "VillageName": "Bhadra"
+              },
+              {
+                "VillageName": "Sarfarajpur"
+              },
+              {
+                "VillageName": "Muktadaha"
+              },
+              {
+                "VillageName": "Singhajhuli"
+              },
+              {
+                "VillageName": "Chaugachha Sardarpara"
+              },
+              {
+                "VillageName": "Afra"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Jashore Sadar",
+            "VillageList": [
+              {
+                "VillageName": "Shyamnagar"
+              },
+              {
+                "VillageName": "Durgapur"
+              },
+              {
+                "VillageName": "Jagannathpur"
+              },
+              {
+                "VillageName": "Rupdia"
+              },
+              {
+                "VillageName": "Diara"
+              },
+              {
+                "VillageName": "Daitala"
+              },
+              {
                 "VillageName": "Laukhali"
+              },
+              {
+                "VillageName": "Ghop"
+              },
+              {
+                "VillageName": "Osmanpur"
+              },
+              {
+                "VillageName": "Chhilumbaria"
+              },
+              {
+                "VillageName": "Chhota Gopalpur"
+              },
+              {
+                "VillageName": "Kamalpur"
+              },
+              {
+                "VillageName": "Sector No. 09"
+              },
+              {
+                "VillageName": "Katherpull"
+              },
+              {
+                "VillageName": "Arabpur Kalupara"
+              },
+              {
+                "VillageName": "Chourasta Mor"
+              },
+              {
+                "VillageName": "Rn Road Mahalla"
+              },
+              {
+                "VillageName": "Jhumjhumpur"
+              },
+              {
+                "VillageName": "Panthapara"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Jhikargachha",
+            "VillageList": [
+              {
+                "VillageName": "Beneali"
+              },
+              {
+                "VillageName": "Deuli"
+              },
+              {
+                "VillageName": "Bara Kuli"
+              },
+              {
+                "VillageName": "Banki"
+              },
+              {
+                "VillageName": "Raghunathnagar"
+              },
+              {
+                "VillageName": "Shimulia"
+              },
+              {
+                "VillageName": "Bausa"
+              }
+            ]
+          },
+          {
+            "DistrictName": "Keshabpur",
+            "VillageList": [
+              {
+                "VillageName": "Shikarpur"
+              },
+              {
+                "VillageName": "Hizaldanga"
+              },
+              {
+                "VillageName": "Titabazitpur"
+              },
+              {
+                "VillageName": "Brahmandanga"
+              },
+              {
+                "VillageName": "Kariakhali"
+              },
+              {
+                "VillageName": "Bhogati Narendrapur"
+              },
+              {
+                "VillageName": "Kakbandhal"
               }
             ]
           },
@@ -6172,215 +6005,66 @@
             "DistrictName": "Manirampur",
             "VillageList": [
               {
+                "VillageName": "Harishpur"
+              },
+              {
+                "VillageName": "Bahir Gharia"
+              },
+              {
+                "VillageName": "Enayetpur"
+              },
+              {
+                "VillageName": "Goalpara"
+              },
+              {
+                "VillageName": "Chandpur"
+              },
+              {
+                "VillageName": "Debidaspur"
+              },
+              {
+                "VillageName": "Rampur"
+              },
+              {
+                "VillageName": "Agarhati"
+              },
+              {
                 "VillageName": "Manirampur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Muktadaha",
-            "VillageList": [
+              },
               {
-                "VillageName": "Muktadaha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Narayanpur (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Narayanpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Osmanpur",
-            "VillageList": [
-              {
-                "VillageName": "Osmanpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Panchakari",
-            "VillageList": [
+                "VillageName": "Singher Khajura"
+              },
               {
                 "VillageName": "Panchakari"
               }
             ]
           },
           {
-            "DistrictName": "Pankerganti",
-            "VillageList": [
-              {
-                "VillageName": "Pankerganti"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Panthapara",
-            "VillageList": [
-              {
-                "VillageName": "Panthapara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Purba Naoapara",
-            "VillageList": [
-              {
-                "VillageName": "Naoapara Tarafdarpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Raghunathnagar",
-            "VillageList": [
-              {
-                "VillageName": "Raghunathnagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Raghunathpur",
-            "VillageList": [
-              {
-                "VillageName": "Banki"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Rajghat (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Rajghat Ghora Battala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Rampur",
-            "VillageList": [
-              {
-                "VillageName": "Rampur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Rupdia",
-            "VillageList": [
-              {
-                "VillageName": "Rupdia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sadipur (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Namajgram"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sajiali",
-            "VillageList": [
-              {
-                "VillageName": "Shyamnagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Samta",
+            "DistrictName": "Sharsha",
             "VillageList": [
               {
                 "VillageName": "Samta"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sarfarajpur",
-            "VillageList": [
+              },
               {
-                "VillageName": "Sarfarajpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sheikhhati (Part)",
-            "VillageList": [
+                "VillageName": "Narayanpur"
+              },
               {
-                "VillageName": "Sector No. 09"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shikarpur",
-            "VillageList": [
+                "VillageName": "Harishchandrapur"
+              },
               {
-                "VillageName": "Shikarpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shikri",
-            "VillageList": [
+                "VillageName": "Chhota Basantapur"
+              },
               {
                 "VillageName": "Shikri"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shimulia Gopinathpur",
-            "VillageList": [
-              {
-                "VillageName": "Shimulia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Siddhipasha",
-            "VillageList": [
-              {
-                "VillageName": "Nalamara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Singhajhuli",
-            "VillageList": [
-              {
-                "VillageName": "Singhajhuli"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Singher Khajura",
-            "VillageList": [
-              {
-                "VillageName": "Singher Khajura"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sreekona",
-            "VillageList": [
-              {
-                "VillageName": "Sreekona"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Subarnakhali",
-            "VillageList": [
+              },
               {
                 "VillageName": "Subarnakhali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Titabazitpur",
-            "VillageList": [
+              },
               {
-                "VillageName": "Titabazitpur"
+                "VillageName": "Namajgram"
+              },
+              {
+                "VillageName": "Sreekona"
               }
             ]
           }
@@ -6390,141 +6074,25 @@
         "StateName": "Jhenaidah",
         "DistrictList": [
           {
-            "DistrictName": "Babra",
+            "DistrictName": "Harinakundu",
             "VillageList": [
-              {
-                "VillageName": "Colonypara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bakua",
-            "VillageList": [
-              {
-                "VillageName": "Bakua"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bara Dhopadi",
-            "VillageList": [
-              {
-                "VillageName": "Bara Dhopadi"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Baraihuda",
-            "VillageList": [
-              {
-                "VillageName": "Baraihuda"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Berbari",
-            "VillageList": [
-              {
-                "VillageName": "Berbari"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhabadia",
-            "VillageList": [
-              {
-                "VillageName": "Bhabdia Pabdapara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhadra",
-            "VillageList": [
-              {
-                "VillageName": "Bhadra"
-              },
               {
                 "VillageName": "Chhota Bhadra"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhagabannagar",
-            "VillageList": [
+              },
               {
-                "VillageName": "Bhagabannagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhandaripara",
-            "VillageList": [
+                "VillageName": "Gobrapara"
+              },
               {
-                "VillageName": "Bhandaripara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhutiarganti (Part)",
-            "VillageList": [
+                "VillageName": "Kamarkhali"
+              },
               {
-                "VillageName": "Tiblepara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Britti Bagdanga",
-            "VillageList": [
+                "VillageName": "Sharatala"
+              },
               {
-                "VillageName": "Bagdanga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chachra",
-            "VillageList": [
+                "VillageName": "Nijtala"
+              },
               {
-                "VillageName": "Nathpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chanderpol",
-            "VillageList": [
-              {
-                "VillageName": "Chanderpol"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dasbaysa",
-            "VillageList": [
-              {
-                "VillageName": "Dasbaysa"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dudhsara",
-            "VillageList": [
-              {
-                "VillageName": "Dudhsara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dulal Mundia",
-            "VillageList": [
-              {
-                "VillageName": "Dulal Mundia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Fatepur",
-            "VillageList": [
-              {
-                "VillageName": "Daitala"
+                "VillageName": "Birampur"
               },
               {
                 "VillageName": "Fatepur"
@@ -6532,421 +6100,216 @@
             ]
           },
           {
-            "DistrictName": "Fulbari (Ward Barobazar)",
-            "VillageList": [
-              {
-                "VillageName": "Fulbari"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Fulbari (Ward 142)",
-            "VillageList": [
-              {
-                "VillageName": "Fulbari"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ganna",
-            "VillageList": [
-              {
-                "VillageName": "Banshipara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ghoramara",
-            "VillageList": [
-              {
-                "VillageName": "Ghoramara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Goalhuda",
-            "VillageList": [
-              {
-                "VillageName": "Goalhuda"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Gobrapara",
-            "VillageList": [
-              {
-                "VillageName": "Gobrapara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Gokulnagar",
-            "VillageList": [
-              {
-                "VillageName": "Gokulnagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Habibpur",
-            "VillageList": [
-              {
-                "VillageName": "Habibpur Charpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Halidhani",
-            "VillageList": [
-              {
-                "VillageName": "Halidhani"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Hamdah (Part)",
-            "VillageList": [
-              {
-                "VillageName": "No.3 Panir Tankpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Hamidpur (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Gopalpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Harindi",
-            "VillageList": [
-              {
-                "VillageName": "Harindi"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Huda Durgapur",
-            "VillageList": [
-              {
-                "VillageName": "Huda Durgapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jadunathpur",
-            "VillageList": [
-              {
-                "VillageName": "Jadunathpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jalshukha Gobindapur",
-            "VillageList": [
-              {
-                "VillageName": "Gobindapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jogipara",
-            "VillageList": [
-              {
-                "VillageName": "Jogipara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Joradah",
-            "VillageList": [
-              {
-                "VillageName": "Kamarkhali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kadirkol",
-            "VillageList": [
-              {
-                "VillageName": "Kadirkol"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kaliganj (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Chapali Adarshapara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kanchannagar",
-            "VillageList": [
-              {
-                "VillageName": "Kalabagan"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kanyanagar",
-            "VillageList": [
-              {
-                "VillageName": "Kanyanagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Karatipara",
-            "VillageList": [
-              {
-                "VillageName": "Dakatia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kashipur",
-            "VillageList": [
-              {
-                "VillageName": "Nawdagram"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Khajura (Part)",
-            "VillageList": [
-              {
-                "VillageName": "Khajura Sheikhpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kirtinagar",
-            "VillageList": [
-              {
-                "VillageName": "Kirtinagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kulbaria",
-            "VillageList": [
-              {
-                "VillageName": "Kulbaria"
-              },
-              {
-                "VillageName": "Sharatala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Madartala",
-            "VillageList": [
-              {
-                "VillageName": "Madartala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Mailbaria",
-            "VillageList": [
-              {
-                "VillageName": "Mailbaria"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Majdia",
-            "VillageList": [
-              {
-                "VillageName": "Majdia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Mirerhuda",
-            "VillageList": [
-              {
-                "VillageName": "Mirerhuda"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Nabagram",
-            "VillageList": [
-              {
-                "VillageName": "Brahmapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Naraharidra",
+            "DistrictName": "Jhenaidah Sadar",
             "VillageList": [
               {
                 "VillageName": "Naraharidra"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Natopara",
-            "VillageList": [
+              },
               {
-                "VillageName": "Natopara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Padmarajpur",
-            "VillageList": [
+                "VillageName": "Sonadah"
+              },
               {
-                "VillageName": "Padmarajpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Panchkahania",
-            "VillageList": [
+                "VillageName": "Banshipara"
+              },
               {
-                "VillageName": "Panchkahania"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Parbatipur (Part)",
-            "VillageList": [
+                "VillageName": "Halidhani"
+              },
               {
-                "VillageName": "Birampur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Porapara",
-            "VillageList": [
-              {
-                "VillageName": "Atipara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Radhakantapur",
-            "VillageList": [
+                "VillageName": "Bakua"
+              },
               {
                 "VillageName": "Radhakantapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ramanathpur",
-            "VillageList": [
+              },
               {
-                "VillageName": "Ramanathpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ratanpur",
-            "VillageList": [
+                "VillageName": "Waria"
+              },
               {
-                "VillageName": "Ratanpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sadhuhati",
-            "VillageList": [
+                "VillageName": "Mirerhuda"
+              },
+              {
+                "VillageName": "Berbari"
+              },
+              {
+                "VillageName": "Ghoramara"
+              },
               {
                 "VillageName": "Dharmatala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shasharpara",
-            "VillageList": [
+              },
               {
-                "VillageName": "Bitakula"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shibnagar Bangalipur",
-            "VillageList": [
+                "VillageName": "Bagdanga"
+              },
               {
-                "VillageName": "Shibnagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shikarpur",
-            "VillageList": [
+                "VillageName": "Tiblepara"
+              },
+              {
+                "VillageName": "No.3 Panir Tankpara"
+              },
+              {
+                "VillageName": "Kalabagan"
+              },
+              {
+                "VillageName": "Khajura Sheikhpara"
+              },
+              {
+                "VillageName": "Chanderpol"
+              },
+              {
+                "VillageName": "Dakatia"
+              },
               {
                 "VillageName": "Shikarpur"
               }
             ]
           },
           {
-            "DistrictName": "Shitalidanga",
+            "DistrictName": "Kaliganj",
             "VillageList": [
               {
-                "VillageName": "Sheikhpara"
+                "VillageName": "Fulbari (Barobazar)"
+              },
+              {
+                "VillageName": "Natopara"
+              },
+              {
+                "VillageName": "Dasbaysa"
+              },
+              {
+                "VillageName": "Bitakula"
+              },
+              {
+                "VillageName": "Bara Dhopadi"
+              },
+              {
+                "VillageName": "Dulal Mundia"
+              },
+              {
+                "VillageName": "Kadirkol"
+              },
+              {
+                "VillageName": "Chapali Adarshapara"
+              },
+              {
+                "VillageName": "Colonypara"
+              },
+              {
+                "VillageName": "Panchkahania"
+              },
+              {
+                "VillageName": "Nathpara"
               }
             ]
           },
           {
-            "DistrictName": "Sonadah",
+            "DistrictName": "Kotchandpur",
             "VillageList": [
               {
-                "VillageName": "Sonadah"
+                "VillageName": "Kanyanagar"
+              },
+              {
+                "VillageName": "Fulbari (Baluhar)"
+              },
+              {
+                "VillageName": "Shibnagar"
+              },
+              {
+                "VillageName": "Harindi"
+              },
+              {
+                "VillageName": "Dudhsara"
+              },
+              {
+                "VillageName": "Nawdagram"
               }
             ]
           },
           {
-            "DistrictName": "Sreepur Bangalini",
+            "DistrictName": "Maheshpur",
             "VillageList": [
               {
-                "VillageName": "Bhasanpota"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Taraf Umedpur",
-            "VillageList": [
+                "VillageName": "Bhabdia Pabdapara"
+              },
               {
-                "VillageName": "Parbatipur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Tarinibas",
-            "VillageList": [
+                "VillageName": "Goalhuda"
+              },
+              {
+                "VillageName": "Huda Durgapur"
+              },
+              {
+                "VillageName": "Kulbaria"
+              },
+              {
+                "VillageName": "Jadunathpur"
+              },
+              {
+                "VillageName": "Madartala"
+              },
+              {
+                "VillageName": "Mailbaria"
+              },
               {
                 "VillageName": "Tarinibas"
+              },
+              {
+                "VillageName": "Ramanathpur"
+              },
+              {
+                "VillageName": "Atipara"
+              },
+              {
+                "VillageName": "Gopalpur"
+              },
+              {
+                "VillageName": "Bhasanpota"
+              },
+              {
+                "VillageName": "Padmarajpur"
               }
             ]
           },
           {
-            "DistrictName": "Tola",
+            "DistrictName": "Shailkupa",
             "VillageList": [
               {
-                "VillageName": "Nijtala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Uttar Kachua",
-            "VillageList": [
+                "VillageName": "Baraihuda"
+              },
+              {
+                "VillageName": "Majdia"
+              },
+              {
+                "VillageName": "Ratanpur"
+              },
+              {
+                "VillageName": "Bhagabannagar"
+              },
+              {
+                "VillageName": "Gobindapur"
+              },
               {
                 "VillageName": "Uttar Kachua"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Waria",
-            "VillageList": [
+              },
               {
-                "VillageName": "Waria"
+                "VillageName": "Jogipara"
+              },
+              {
+                "VillageName": "Bhandaripara"
+              },
+              {
+                "VillageName": "Brahmapur"
+              },
+              {
+                "VillageName": "Sheikhpara"
+              },
+              {
+                "VillageName": "Parbatipur"
+              },
+              {
+                "VillageName": "Habibpur Charpara"
+              },
+              {
+                "VillageName": "Gokulnagar"
+              },
+              {
+                "VillageName": "Kirtinagar"
               }
             ]
           }
@@ -6956,339 +6319,94 @@
         "StateName": "Magura",
         "DistrictList": [
           {
-            "DistrictName": "Abalpur",
-            "VillageList": [
-              {
-                "VillageName": "Chhota Abalpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Arazi Shalai",
-            "VillageList": [
-              {
-                "VillageName": "Arazi Shalai"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Aruakandi (Ward Maghi)",
-            "VillageList": [
-              {
-                "VillageName": "Aruakandi"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Aruakandi (Ward Shatakhali)",
-            "VillageList": [
-              {
-                "VillageName": "Aruakandi"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Baliadanga",
-            "VillageList": [
-              {
-                "VillageName": "Baliadanga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bamanpur",
-            "VillageList": [
-              {
-                "VillageName": "Bamanpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Banagram",
-            "VillageList": [
-              {
-                "VillageName": "Ronagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Banka Harishpur",
-            "VillageList": [
-              {
-                "VillageName": "Banka Harishpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Baorbhanga",
-            "VillageList": [
-              {
-                "VillageName": "Baorbhanga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Barishat",
-            "VillageList": [
-              {
-                "VillageName": "Barishat"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Benga",
-            "VillageList": [
-              {
-                "VillageName": "Benga"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Berail Palita",
-            "VillageList": [
-              {
-                "VillageName": "Jaliabhita"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bhulbaria",
-            "VillageList": [
-              {
-                "VillageName": "Hachimpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Bil Khanidaha",
-            "VillageList": [
-              {
-                "VillageName": "Bil Khanidaha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Binodpur",
-            "VillageList": [
-              {
-                "VillageName": "Binodpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chakdaha",
-            "VillageList": [
-              {
-                "VillageName": "Chakdaha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chandanpratap",
+            "DistrictName": "Magura Sadar",
             "VillageList": [
               {
                 "VillageName": "Gangnalia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chanpatala",
-            "VillageList": [
-              {
-                "VillageName": "Char Chanpatala"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Char Selamatpur",
-            "VillageList": [
-              {
-                "VillageName": "Madhabpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chhonpur",
-            "VillageList": [
-              {
-                "VillageName": "Chhonpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chhota Udas",
-            "VillageList": [
-              {
-                "VillageName": "Chhota Udas"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Chougachhi",
-            "VillageList": [
-              {
-                "VillageName": "Durgapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dakkhin Durgapur",
-            "VillageList": [
-              {
-                "VillageName": "Dakkhin Durgapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dari Khator",
-            "VillageList": [
-              {
-                "VillageName": "Dari Khator"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dari Saldha",
-            "VillageList": [
-              {
-                "VillageName": "Dari Saldha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dhalhara",
-            "VillageList": [
-              {
-                "VillageName": "Dhalhara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dhankhali",
-            "VillageList": [
-              {
-                "VillageName": "Dhankhali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Dwariapur",
-            "VillageList": [
-              {
-                "VillageName": "Dwariapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ghasiara",
-            "VillageList": [
-              {
-                "VillageName": "Dorannagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ghoramara",
-            "VillageList": [
-              {
-                "VillageName": "Ghoramara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Gopalgram",
-            "VillageList": [
-              {
-                "VillageName": "Gopalgram"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Jhama",
-            "VillageList": [
-              {
-                "VillageName": "Jhama"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kadirpara",
-            "VillageList": [
-              {
-                "VillageName": "Kadirpara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kalamdhari",
-            "VillageList": [
-              {
-                "VillageName": "Kalamdhari"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Komarpur",
-            "VillageList": [
-              {
-                "VillageName": "Komarpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kotbhag",
-            "VillageList": [
-              {
-                "VillageName": "Baje Mashakhali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kuatpur",
-            "VillageList": [
-              {
-                "VillageName": "Nalia"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kumarkota",
-            "VillageList": [
-              {
-                "VillageName": "Kumarkota"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Kupuria",
-            "VillageList": [
-              {
-                "VillageName": "Mangandanga"
               },
               {
-                "VillageName": "Tiketinagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Laskarpur",
-            "VillageList": [
+                "VillageName": "Baliadanga"
+              },
+              {
+                "VillageName": "Jaliabhita"
+              },
+              {
+                "VillageName": "Baorbhanga"
+              },
+              {
+                "VillageName": "Dhalhara"
+              },
+              {
+                "VillageName": "Gopalgram"
+              },
+              {
+                "VillageName": "Dwariapur"
+              },
+              {
+                "VillageName": "Bamanpur"
+              },
+              {
+                "VillageName": "Banka Harishpur"
+              },
+              {
+                "VillageName": "Chhonpur"
+              },
+              {
+                "VillageName": "Narsinghati"
+              },
+              {
+                "VillageName": "Shaildubi"
+              },
+              {
+                "VillageName": "Aruakandi (Maghi)"
+              },
               {
                 "VillageName": "Laskarpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Magura (Part)",
-            "VillageList": [
+              },
+              {
+                "VillageName": "Benga"
+              },
+              {
+                "VillageName": "Paka"
+              },
+              {
+                "VillageName": "Dakkhin Durgapur"
+              },
+              {
+                "VillageName": "Chhota Abalpur"
+              },
               {
                 "VillageName": "Adarshapara"
+              },
+              {
+                "VillageName": "Ghoramara"
+              },
+              {
+                "VillageName": "Tantipara"
+              },
+              {
+                "VillageName": "Parnanduali (Ward No. 05)"
+              },
+              {
+                "VillageName": "Parnanduali (Ward No. 06)"
+              },
+              {
+                "VillageName": "Pashchim Nandoali"
               },
               {
                 "VillageName": "Collegepara"
               },
               {
-                "VillageName": "Tantipara"
+                "VillageName": "Dhankhali"
+              },
+              {
+                "VillageName": "Mastafapur"
+              },
+              {
+                "VillageName": "Ramnagar"
+              },
+              {
+                "VillageName": "Rupdaha"
               },
               {
                 "VillageName": "Thanapara"
@@ -7296,202 +6414,137 @@
             ]
           },
           {
-            "DistrictName": "Mandalganti",
+            "DistrictName": "Mohammadpur",
             "VillageList": [
               {
-                "VillageName": "Dangapara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Mastafapur",
-            "VillageList": [
+                "VillageName": "Madhabpur"
+              },
               {
-                "VillageName": "Mastafapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Naghosha",
-            "VillageList": [
+                "VillageName": "Komarpur"
+              },
               {
-                "VillageName": "Naghosha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Nagripara",
-            "VillageList": [
-              {
-                "VillageName": "Nagripara"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Nahata",
-            "VillageList": [
-              {
-                "VillageName": "Nahata"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Nandoali",
-            "VillageList": [
-              {
-                "VillageName": "Pashchim Nandoali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Narayanpur",
-            "VillageList": [
-              {
-                "VillageName": "Narayanpur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Narsinghati",
-            "VillageList": [
-              {
-                "VillageName": "Narsinghati"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Nikharhata",
-            "VillageList": [
+                "VillageName": "Char Chanpatala"
+              },
               {
                 "VillageName": "Nikharhata"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Paka Kanchanpur",
-            "VillageList": [
+              },
               {
-                "VillageName": "Paka"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Panchuria",
-            "VillageList": [
+                "VillageName": "Binodpur"
+              },
+              {
+                "VillageName": "Narayanpur"
+              },
+              {
+                "VillageName": "Nagripara"
+              },
               {
                 "VillageName": "Panchuria"
+              },
+              {
+                "VillageName": "Dari Saldha"
+              },
+              {
+                "VillageName": "Nahata"
+              },
+              {
+                "VillageName": "Ronagar"
+              },
+              {
+                "VillageName": "Dangapara"
+              },
+              {
+                "VillageName": "Kalamdhari"
+              },
+              {
+                "VillageName": "Bil Khanidaha"
+              },
+              {
+                "VillageName": "Jhama"
               }
             ]
           },
           {
-            "DistrictName": "Parnanduali (Ward No. 05)",
+            "DistrictName": "Shalikha",
             "VillageList": [
               {
-                "VillageName": "Parnanduali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Parnanduali (Ward No. 06)",
-            "VillageList": [
+                "VillageName": "Arazi Shalai"
+              },
               {
-                "VillageName": "Parnanduali"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Patharghata",
-            "VillageList": [
+                "VillageName": "Kumarkota"
+              },
+              {
+                "VillageName": "Nalia"
+              },
+              {
+                "VillageName": "Baje Mashakhali"
+              },
+              {
+                "VillageName": "Dari Khator"
+              },
+              {
+                "VillageName": "Sonakur"
+              },
+              {
+                "VillageName": "Aruakandi (Shatakhali)"
+              },
+              {
+                "VillageName": "Kadirpara"
+              },
+              {
+                "VillageName": "Hachimpur"
+              },
+              {
+                "VillageName": "Naghosha"
+              },
+              {
+                "VillageName": "Uchgram"
+              },
+              {
+                "VillageName": "Piprul"
+              },
               {
                 "VillageName": "Patharghata"
               }
             ]
           },
           {
-            "DistrictName": "Piprul",
-            "VillageList": [
-              {
-                "VillageName": "Piprul"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Ramnagar",
-            "VillageList": [
-              {
-                "VillageName": "Ramnagar"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Rupdaha",
-            "VillageList": [
-              {
-                "VillageName": "Rupdaha"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sachilapur",
+            "DistrictName": "Sreepur",
             "VillageList": [
               {
                 "VillageName": "Sachilapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Shaildubi",
-            "VillageList": [
+              },
               {
-                "VillageName": "Shaildubi"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sonaikundi",
-            "VillageList": [
+                "VillageName": "Chhota Udas"
+              },
               {
-                "VillageName": "Durgapur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sonakur",
-            "VillageList": [
+                "VillageName": "Durgapur (Dariapur)"
+              },
               {
-                "VillageName": "Sonakur"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Sreekol",
-            "VillageList": [
+                "VillageName": "Chakdaha"
+              },
               {
-                "VillageName": "Sreekol"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Takhalpur",
-            "VillageList": [
+                "VillageName": "Dorannagar"
+              },
               {
-                "VillageName": "Mahishakhola"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Uchgram",
-            "VillageList": [
-              {
-                "VillageName": "Uchgram"
-              }
-            ]
-          },
-          {
-            "DistrictName": "Uttar Gobindapur",
-            "VillageList": [
+                "VillageName": "Tiketinagar"
+              },
               {
                 "VillageName": "Bashmonia"
+              },
+              {
+                "VillageName": "Durgapur (Sabdalpur)"
+              },
+              {
+                "VillageName": "Barishat"
+              },
+              {
+                "VillageName": "Sreekol"
+              },
+              {
+                "VillageName": "Mahishakhola"
+              },
+              {
+                "VillageName": "Mangandanga"
               }
             ]
           }

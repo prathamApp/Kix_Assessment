@@ -1044,7 +1044,7 @@
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-    <string name="app_name">PAL-ELANA</string>
+   <!-- <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
@@ -1391,12 +1391,12 @@
     <string name="tot_ch_srvd">Total CH Surveyed</string>
     <string name="tot_ch_tested">Total CH Tested</string>
     <string name="child_belongsTo">Child Belongs to : </string>
-    <string name="add_new_pif">Add New PIF</string>
+    <string name="add_new_pif">Add New PIF</string>-->
 
     <!--Hindi-India END ____________________________________________________________________-->
 
     <!--Bangla-Bangladesh START ____________________________________________________________________-->
-    <!-- <string name="app_name">PAL-ELANA</string>
+     <string name="app_name">PAL-ELANA</string>
      <string name="Collecting_Data">তথ্য সংগৃহীত হচ্ছে</string>
      <string name="push_success">সফলভাবে আপলোড হয়েছে!</string>
      <string name="push_fail">আপলোড ব্যর্থ হয়েছে!</string>
@@ -1742,7 +1742,6 @@
      <string name="tot_ch_tested">Total CH Tested</string>
      <string name="child_belongsTo">শিশু যার সাথে থাকে</string>
      <string name="add_new_pif">নতুন PIF যোগ করুন</string>
-     -->
 
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 
