@@ -698,7 +698,7 @@
     <!--Spanish-Nicaragua END ____________________________________________________________________-->
 
     <!--French-Mali START ____________________________________________________________________-->
-    <!--  <string name="app_name">PAL-ELANA</string>
+<!--      <string name="app_name">PAL-ELANA</string>
       <string name="Collecting_Data">Collecte des données</string>
       <string name="push_success">Transmission avec succès !</string>
       <string name="push_fail">La transmission a échoué !</string>
@@ -748,7 +748,7 @@
       <string name="str_isSampledHH_one">Fermé à clé</string>
       <string name="str_isSampledHH_two">Ne répond pas</string>
       <string name="str_isSampledHH_three">Ouvert (faire le sondage)</string>
-      <string name="str_HH01"><b>HH01.</b> Numéro du ménage à partir de la liste des ménage<font color='#FF0000'>*</font></string>
+      <string name="str_HH01"><b>HH01.</b> numéro de la section<font color='#FF0000'>*</font></string>
       <string name="str_HH02"><b>HH02.</b> Nom du répondant<font color='#FF0000'>*</font></string>
       <string name="str_HH03"><b>HH03.</b> Nom du chef de ménage</string>
       <string name="str_HH04a"><b>HH04a.</b> Y a-t-il des enfants agés de 4 à 10 ans (vivant régulièrement) dans le menage ?</string>
@@ -1044,7 +1044,7 @@
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-   <!-- <string name="app_name">PAL-ELANA</string>
+    <string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
@@ -1105,12 +1105,12 @@
     <string name="str_household_info">घर की जानकारी</string>
     <string name="str_household">घर</string>
     <string name="str_gnr_household_info">सर्वेक्षित घर की सामान्य जानकारी</string>
-    <string name="str_HH06a"><b>HH06a.</b> घर में नियमित रूप से रहने वाली सदस्यों की कुल संख्या</string>
+    <string name="str_HH06a"><b>HH06a.</b> घर में नियमित रूप से रहने वाले सदस्यों की कुल संख्या</string>
     <string name="str_HH06b"><b>HH06b.</b> क्या घर पर हिंदी बोली जाती है?</string>
     <string name="str_HH06c"><b>HH06c.</b> घर में कितनी बार हिंदी में बात की जाती है?</string>
     <string name="str_always">हमेशा</string>
     <string name="str_sometimes">कभी-कभी</string>
-    <string name="str_HH06d"><b>HH06d.</b> क्या घर में कोई और भासा बोली जाती है?</string>
+    <string name="str_HH06d"><b>HH06d.</b> क्या घर में कोई और भाषा भी बोली जाती है?</string>
     <string name="str_HH_asset_info">घर की परिसंपति की जानकारी</string>
     <string name="str_HH07a"><b>HH07a.</b> क्या घर की छत पक्की है?</string>
     <string name="str_HH07b"><b>HH07b.</b> क्या घर की दीवारें पक्की हैं?</string>
@@ -1123,9 +1123,9 @@
     <string name="str_HH07f"><b>HH07f.</b> कम से कम एक शौचालय जिसका उपयोग विशेष रूप से घर के सदस्यों द्वारा किया जाता है?</string>
     <string name="str_HH07g"><b>HH07g.</b> घर में किसी ने (बच्चे के माता-पिता के अलावा) 12वी कक्षा पूरी की है?</string>
     <string name="str_HH07h"><b>HH07h.</b> विद्यालय की किताबों के अलावा बच्चों के पढ़ने के लिए कोई सामग्री जैसे कहानी की किताब या कोई अन्य किताब है?</string>
-    <string name="str_HH07i"><b>HH07i.</b> क्या कोई अन्य पुस्तकें या पठन सामग्री, जैसे धार्मिक पुष्तकें, समाचार पत्र, पत्रिकाएँ आदि हैं?</string>
+    <string name="str_HH07i"><b>HH07i.</b> क्या कोई अन्य पुस्तकें या पठन सामग्री, जैसे धार्मिक पुस्तकें, समाचार पत्र, पत्रिकाएँ आदि हैं?</string>
     <string name="str_HH07j"><b>HH07j.</b> कम्प्यूटर/लैपटॉप/टेबलेट है?</string>
-    <string name="str_HH07k"><b>HH07k.</b> टी. वि. है?</string>
+    <string name="str_HH07k"><b>HH07k.</b> टीवी है?</string>
     <string name="str_HH07m"><b>HH07m.</b> मोबाइल फ़ोन है?</string>
     <string name="str_HH07n"><b>HH07n.</b> क्या वह स्मार्टफोन है?</string>
     <string name="str_HH07o"><b>HH07o.</b> क्या आपके पास मोटर चलित वाहन है?
@@ -1148,7 +1148,7 @@
     <string name="str_CH04b_op1">दृष्टि दोष</string>
     <string name="str_CH04b_op2">श्रवण दोष/वक्र दोष</string>
     <string name="str_CH04b_op3">शारीरिक</string>
-    <string name="str_CH04b_op4">सज्ञानात्मक</string>
+    <string name="str_CH04b_op4">संज्ञानात्मक</string>
     <string name="str_CH05"><b>CH05. </b> क्या [###] वर्तमान में किसी विद्यालय अथवा पूर्व-प्राथमिक विद्यालय में नामंकित है?</string>
     <string name="str_CH06c"><b>CH06c. </b> क्या इस विद्यालय में शिक्षा का आधिकारिक माध्यम हिंदी है? (छोटे बच्चों के लिए, आप उनकी स्कूल की पाठ्यपुस्तकें/कार्यपत्र/गतिविधि पत्र देख सकते हैं)</string>
     <string name="str_CH06f"><b>CH06f. </b> क्या [###] के पास वर्त्तमान में नामांकित कक्षा की पाठ्यपुस्तकें हैं?</string>
@@ -1164,11 +1164,11 @@
     <string name="str_reasonToDrop_seven">नहीं पता</string>
     <string name="str_CH09a"><b>CH09a. </b> क्या वर्त्तमान में [###] पैसे देकर ट्यूशन पढ़ने जाता है?</string>
     <string name="str_CH09b"><b>CH09b. </b> क्या [###] पिछले 2 सप्ताह में स्कूल की लाइब्रेरी या किसी अन्य स्थान से पढ़ने के लिए कोई सामग्री (स्कूल की पाठ्यपुस्तकों के अलावा) घर लाया है?</string>
-    <string name="str_CH08a"><b>CH08a. </b> क्या घर में कोई [###] की पढ़ाई में मदत करता है?</string>
+    <string name="str_CH08a"><b>CH08a. </b> क्या घर में कोई [###] की पढ़ाई में मदद करता है?</string>
     <string name="str_CH08b"><b>CH08b. </b> [###] की पढ़ाई में सबसे ज़्यादा मदत कौन करता है?</string>
     <string name="str_CH08b_one">पिता</string>
     <string name="str_CH08b_two">माता</string>
-    <string name="str_CH08b_three">बड़ा भाई/बेहेन</string>
+    <string name="str_CH08b_three">बड़ा भाई/बहन</string>
     <string name="str_CH08b_four">अन्य</string>
     <string name="str_CH09c"><b>CH09c. </b> घर पर कोई कितने बार [###] को कहानियाँ पढ़ते या सुनाते
 है?</string>
@@ -1391,12 +1391,12 @@
     <string name="tot_ch_srvd">Total CH Surveyed</string>
     <string name="tot_ch_tested">Total CH Tested</string>
     <string name="child_belongsTo">Child Belongs to : </string>
-    <string name="add_new_pif">Add New PIF</string>-->
+    <string name="add_new_pif">Add New PIF</string>
 
     <!--Hindi-India END ____________________________________________________________________-->
 
     <!--Bangla-Bangladesh START ____________________________________________________________________-->
-     <string name="app_name">PAL-ELANA</string>
+     <!--<string name="app_name">PAL-ELANA</string>
      <string name="Collecting_Data">তথ্য সংগৃহীত হচ্ছে</string>
      <string name="push_success">সফলভাবে আপলোড হয়েছে!</string>
      <string name="push_fail">আপলোড ব্যর্থ হয়েছে!</string>
@@ -1741,7 +1741,7 @@
      <string name="tot_ch_srvd">Total CH Surveyed</string>
      <string name="tot_ch_tested">Total CH Tested</string>
      <string name="child_belongsTo">শিশু যার সাথে থাকে</string>
-     <string name="add_new_pif">নতুন PIF যোগ করুন</string>
+     <string name="add_new_pif">নতুন PIF যোগ করুন</string>-->
 
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 

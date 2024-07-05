@@ -39,9 +39,9 @@ import okhttp3.OkHttpClient;
 
 public class KIXApplication extends Application {
 
-    public static final String appBuildDate = "28-June-2024";
+    public static final String appBuildDate = "5-July-2024";
     public static final String app_version = "v2.0.1";
-    public static final String app_country = "Bangladesh";
+    public static final String app_country = "India";
     public static String contentSDPath="";
     public static String kixPath="";
     OkHttpClient okHttpClient;
