@@ -1044,7 +1044,7 @@
     <!--French-Mali END ____________________________________________________________________-->
 
     <!--Hindi-India START ____________________________________________________________________-->
-    <string name="app_name">PAL-ELANA</string>
+    <!--<string name="app_name">PAL-ELANA</string>
     <string name="Collecting_Data">डेटा एकत्रित हो रहा है</string>
     <string name="push_success">डेटा पुश सफल रहा!!</string>
     <string name="push_fail">डेटा पुश विफल रहा!</string>
@@ -1391,7 +1391,7 @@
     <string name="tot_ch_srvd">Total CH Surveyed</string>
     <string name="tot_ch_tested">Total CH Tested</string>
     <string name="child_belongsTo">Child Belongs to : </string>
-    <string name="add_new_pif">Add New PIF</string>
+    <string name="add_new_pif">Add New PIF</string>-->
 
     <!--Hindi-India END ____________________________________________________________________-->
 
@@ -1746,7 +1746,7 @@
     <!--Bangla-Bangladesh END ____________________________________________________________________-->
 
     <!--Spanish-Mexico START ____________________________________________________________________-->
-    <!--    <string name="app_name">PAL-ELANA</string>
+<!--        <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">Recolección de datos</string>
         <string name="push_success">¡Transmisión exitosa!</string>
         <string name="push_fail">¡Transmisión fallida!</string>
@@ -2089,12 +2089,12 @@
         <string name="tot_hh">Total de Hogares</string>
         <string name="tot_ch_srvd">Total de niñas y niños</string>
         <string name="tot_ch_tested">Total de niñas/os</string>
-        <string name="child_belongsTo">Child Belongs to : </string>
-        <string name="add_new_pif">Add New PIF</string>-->
+        <string name="child_belongsTo">El niña/niño pertenece a : </string>
+        <string name="add_new_pif">Agregar nuevo PIF</string>-->
     <!--Spanish-Mexico END ____________________________________________________________________-->
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
-    <!--    <string name="app_name">PAL-ELANA</string>
+        <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">ڈیٹا اکٹھا کرنا</string>
         <string name="push_success">ڈیٹا کامیابی سے پہنچ گیا!</string>
         <string name="push_fail">ڈیٹا نہیں پہنچا!</string>
@@ -2436,7 +2436,7 @@
         <string name="tot_ch_srvd">Total CH Surveyed</string>
         <string name="tot_ch_tested">Total CH Tested</string>
         <string name="child_belongsTo">Child Belongs to : </string>
-        <string name="add_new_pif">Add New PIF</string>-->
+        <string name="add_new_pif">Add New PIF</string>
     <!--Urdu-Pakistan END ____________________________________________________________________-->
 
     <!--Portuguese-Mozambique START ____________________________________________________________________-->
@@ -3481,7 +3481,7 @@
     <!--Kiswahili-Tanzania END ____________________________________________________________________-->
 
     <!--French_Senegal START ____________________________________________________________________-->
-    <!--    <string name="app_name">PAL-ELANA</string>
+<!--        <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">Collecte des données</string>
         <string name="push_success">La transmission s\'est réalisée avec succès!!</string>
         <string name="push_fail">La transmission a échoué !!</string>

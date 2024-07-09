@@ -1,5 +1,5 @@
 {
-  "Country": "Hindi-India",
+  "Country": "French-Senegal",
   "MathsBooklet": [
     {
       "Name": "A",
@@ -950,22 +950,27 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.1",
+                  "gamename": "L4A.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.2",
+                  "gamename": "L4B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.4",
+                  "gamename": "L5C.5",
+                  "folder": "L5_L8/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6E.2",
+                  "gamename": "L6E.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1047,32 +1052,32 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.1",
+                  "gamename": "L4B.2",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.5",
+                  "gamename": "L4D.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5A.4",
+                  "gamename": "L5A.1",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.2",
+                  "gamename": "L5B.3",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.3",
+                  "gamename": "L6A.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6C.2",
+                  "gamename": "L6B.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1104,22 +1109,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.5",
+                  "gamename": "L4D.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5A.4",
+                  "gamename": "L5A.1",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6C.2",
+                  "gamename": "L6A.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6D.5",
+                  "gamename": "L6C.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1191,22 +1196,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4B.2",
+                  "gamename": "L4A.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4D.4",
+                  "gamename": "L4A.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.5",
-                  "folder": "L5_L8/index.html"
+                  "gamename": "L4B.3",
+                  "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5D.1",
+                  "gamename": "L5A.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
@@ -1238,22 +1243,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4D.4",
+                  "gamename": "L4A.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.5",
-                  "folder": "L5_L8/index.html"
-                },
-                {
-                  "gametype": "CS",
-                  "gamename": "L6A.1",
+                  "gamename": "L4B.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.5",
+                  "gamename": "L6A.4",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6E.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1280,12 +1285,12 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.5",
+                  "gamename": "L6D.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6E.3",
+                  "gamename": "L6E.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1367,27 +1372,27 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.1",
+                  "gamename": "L4D.2",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.5",
+                  "gamename": "L4D.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5A.4",
+                  "gamename": "L5B.3",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.3",
+                  "gamename": "L6A.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6D.3",
+                  "gamename": "L6D.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1474,27 +1479,27 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.3",
+                  "gamename": "L4B.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.5",
+                  "gamename": "L5A.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5D.1",
+                  "gamename": "L5D.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.1",
+                  "gamename": "L6A.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.5",
+                  "gamename": "L6E.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1526,22 +1531,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.3",
+                  "gamename": "L4A.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.5",
+                  "gamename": "L5D.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.5",
+                  "gamename": "L6C.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6C.4",
+                  "gamename": "L6E.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1613,22 +1618,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.1",
+                  "gamename": "L4A.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.2",
+                  "gamename": "L4B.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5C.3",
-                  "folder": "L5_L8/index.html"
+                  "gamename": "L4C.2",
+                  "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5D.2",
+                  "gamename": "L5C.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
@@ -1660,22 +1665,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.1",
+                  "gamename": "L4A.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5D.2",
-                  "folder": "L5_L8/index.html"
-                },
-                {
-                  "gametype": "CS",
-                  "gamename": "L6A.4",
+                  "gamename": "L4C.2",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.3",
+                  "gamename": "L6B.1",
+                  "folder": "L2A-L4A-L6A/index.html"
+                },
+                {
+                  "gametype": "CS",
+                  "gamename": "L6B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1702,12 +1707,12 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6B.3",
+                  "gamename": "L6B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6D.4",
+                  "gamename": "L6E.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1794,22 +1799,22 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4D.4",
+                  "gamename": "L4B.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5B.5",
+                  "gamename": "L5A.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.1",
+                  "gamename": "L6A.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6D.2",
+                  "gamename": "L6D.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1881,27 +1886,27 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.1",
+                  "gamename": "L4A.5",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4A.2",
+                  "gamename": "L4B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5D.3",
+                  "gamename": "L5C.5",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.4",
+                  "gamename": "L6B.4",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6E.2",
+                  "gamename": "L6E.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
@@ -1973,27 +1978,27 @@
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.1",
+                  "gamename": "L4D.2",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L4C.5",
+                  "gamename": "L4D.3",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L5A.4",
+                  "gamename": "L5B.3",
                   "folder": "L5_L8/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6A.3",
+                  "gamename": "L6A.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
                   "gametype": "CS",
-                  "gamename": "L6D.3",
+                  "gamename": "L6D.1",
                   "folder": "L2A-L4A-L6A/index.html"
                 },
                 {
