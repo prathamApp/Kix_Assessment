@@ -408,8 +408,9 @@ public class Fragment_Profile extends Fragment implements ProfileContract.Profil
         pushDialog = new BlurPopupWindow.Builder(getActivity())
                 .setContentView(R.layout.dialog_push_result)
                 .bindClickListener(v -> {
-                    if (pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED))
+                    if (pushType.equalsIgnoreCase(Kix_Constant.SUCCESSFULLYPUSHED)) {
                         pushStatsDialog();
+                    }
                     pushDialog.dismiss();
                 }, R.id.dia_btnOk)
                 .setGravity(Gravity.CENTER)

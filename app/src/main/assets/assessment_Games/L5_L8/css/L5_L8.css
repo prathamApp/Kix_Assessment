@@ -1,0 +1,38 @@
+
+#gamePage{
+  top: 5Fquestionvh;
+}
+/* #questionDiv{
+  right: 4vw;
+} */
+#questionDiv{
+  left: 4vw;
+}
+#queImg{
+  border-radius: 2vh;
+}
+
+.numberCss{
+  height: 13vh;
+  color: black;
+  font-size: 3.5vw;
+  font-weight: bold;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1vw;
+  border: 2px solid black;
+}
+
+#ansOptionDiv{
+  z-index: 2;
+  left: 2vw;
+  top: 5vh;
+}
+#queText{
+	right: 2.5vw;
+	color: black;
+	font-size: 3vw;
+	font-weight: bold;
+}

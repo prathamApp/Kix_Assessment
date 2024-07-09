@@ -235,8 +235,8 @@ public class Fragment_SelectVillage extends Fragment implements ContractVillageL
         this.pushDialog = new BlurPopupWindow.Builder(this.getActivity())
                 .setContentView(R.layout.dialog_push_result)
                 .bindClickListener(v -> {
-                    this.pushStatsDialog();
                     this.pushDialog.dismiss();
+                    this.pushStatsDialog();
                 }, R.id.dia_btnOk)
                 .setGravity(Gravity.CENTER)
                 .setDismissOnTouchBackground(false)

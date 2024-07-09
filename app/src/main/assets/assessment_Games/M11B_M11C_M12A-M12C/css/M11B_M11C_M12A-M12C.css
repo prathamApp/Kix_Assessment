@@ -1,0 +1,51 @@
+
+
+.divBorder{
+  border-radius: 2vh; 
+}
+.divShadow{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 3px;
+}
+.imgCss{
+  border-radius: 2vh;
+}
+
+#ansOptionDiv{
+  z-index: 2;
+  top: 7vh;
+  right: 1vw;
+}
+.leftCss{
+  left: 3vw;
+}
+
+#ansLine {
+    position: absolute;
+    top: 40vh;
+}
+.serveyorInstrClass {
+  color: black;
+  font-size: 2.4vw;
+  font-weight: bold;
+}
+.inputBorder{
+	height:7vh;
+	cursor: pointer;
+	border: 2px solid rgb(102 98 85);
+}
+#Yes, #No {
+  margin-left: 3vw;
+}
+
+.blink_me{
+  background-color: rgb(238 239 174 / 55%);
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker
+{
+50%
+{
+    opacity:0.5;
+}
+}

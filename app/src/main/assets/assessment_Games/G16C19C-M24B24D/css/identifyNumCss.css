@@ -1,0 +1,38 @@
+
+.blockClass{
+    height: 10vh;
+    font-size: 3vw;
+    color: black;
+    font-weight: bold;
+}
+#NumberBlock{
+    height: 62vh;
+   /*  right:3vw; */
+}
+#optionDivId{
+    margin-top: 3vh;
+}
+#blockImgId{
+    height: 100%;
+    border-radius: 2vh;
+}
+/* #questionAnsMainDiv{
+    top: 7vh;
+} */
+#quesDiv{
+    color: black;
+    font-size: 3vw;
+    font-weight: bold;
+}
+#heading{
+    padding-top: 4px;
+}
+#headerId{
+    z-index: 1;
+}
+#queNo{
+    height: 7vh;
+}
+.boldClass{
+    font-weight: bold;
+}

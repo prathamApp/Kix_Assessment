@@ -1,0 +1,107 @@
+body{
+	user-select:none;
+	background-color:white;
+    overflow:hidden;
+    font-family:'verdana';
+}
+.visible{
+    display: block;
+}
+.noPadding{
+	padding:0px;
+}
+.toBottom{
+    position: fixed;
+    bottom: 0vh;
+}
+.centerClass{
+	display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.borderClass{
+	border-radius: 2vh;
+    border: 2px solid rgb(102 98 85);
+    background-color:#a4a4a4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonClass {
+    color: rgb(0, 0, 0);
+    font-size: 2.3vw;
+    font-weight: bold;
+    height: 9vh;
+    margin-top: 1vh;
+    box-shadow: 2px 3px 4px black;
+}
+.borderTop{
+    border-top: 2px solid black;
+}
+
+
+#myModal{
+    position:fixed;
+    bottom:1vh;
+}
+#modalRoot{
+    margin:auto;
+    background-color: whitesmoke;
+    border: 4px solid white;
+    color: white;
+    top: 0;
+    left: 0;
+    padding-bottom: 2vh;
+    height: max-content;
+    border-radius: 2vh;
+ }
+.overlay{
+  z-index: 10;
+  background-color: rgba(0,0,0,0.8);
+}
+.txtClass{
+	color: black;
+	font-size: 2.2vw;
+    font-weight: bold;
+}
+#inputText{
+	height:7vh;
+	cursor: pointer;
+}
+#answerKeyText{
+    top: 2vh;
+    color: rgb(223, 17, 17);
+	font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+}
+.ansKeypadDiv {
+    padding-left: 0vw;
+    padding-right: 0vw;
+    left: 2vw;
+    /* display: none; */
+}
+#close{
+    font-size:3vw;
+    color:black;
+    font-weight: bold;
+    cursor:pointer;
+    margin-bottom:auto;
+}
+.glyphicon {
+    top: 0px;
+   line-height: inherit;
+   font-family: 'Glyphicons Halflings';
+   font-style: normal;
+   font-weight: 400;
+   color:black;
+   font-size: 4vw;
+   display: flex;
+   justify-content: center;
+}
+.glyphicon:active {
+  transform: translateY(4px);
+}
+.glyphicon-remove:hover{
+    color:rgb(150, 12, 12);
+}

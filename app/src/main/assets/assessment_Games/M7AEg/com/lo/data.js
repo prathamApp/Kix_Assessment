@@ -5,6 +5,7 @@ harcodedData = {
 var QuesArr = [
 	{
 		'language':"English-Uganda",
+		'languageFont':'fonts/Andika-Regular.ttf',
 		'gamedata':[
 			{
 				"Ques":" <span style='color:blue'>(Point to the key and say)</span> Look, I am going to measure the <b>length</b> of this key using these boxes <span style='color:blue'>(Drag and drop the boxes one by one below the key)</span>.",		
@@ -47,7 +48,7 @@ var QuesArr = [
 		'language':"Hindi-India",
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(पेंसिल की ओर इशारा करते हुए कहें)</span> देखो, मैं इस पेंसिल की लम्बाई को इनके <span style='color:blue'>(रबर की ओर इशारा करें और बच्चे को दिखाएँ कि किस प्रकार नापना है)</span> इस्तेमाल से  नापूंगा। देखो, यह तीन रबर जितनी लम्बी है।",		
+				"Ques":" <span style='color:blue'>(चाबी की ओर इशारा करते हुए कहें)</span> देखो, मैं इस चाबी की <b>लम्बाई</b> को इन डिब्बों के इस्तेमाल से नापूँगा। <span style='color:blue'>(डिब्बों को ले जाकर एक-एक कर के चाबी के नीचे रखें)</span> ",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -73,7 +74,7 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(लाल डिब्बों की ओर इशारा करें)</span> इनके इस्तेमाल से इस घर की ऊंचाई नापो। मुझे बताओ कि यह पेड़ कितने डिब्बे ऊंचा है?",		
+				"Ques":" <span style='color:blue'>(डिब्बों की ओर इशारा करते हुए कहें)</span> अब, इन डिब्बों से पेड़ की <b>लम्बाई</b> का नाप लो। मुझे बताओ पेड़ कितने डिब्बे लम्बा है? ",		
 				"QuesText":"उत्तर :",		
 				"QuesID":3,
 				"AnsNo":4,
@@ -85,9 +86,10 @@ var QuesArr = [
 	},
 	{
 		'language':"Kiswahili-Kenya",
+		'languageFont':'fonts/Andika-Regular.ttf',
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(Elekeza kidole kwenye penseli/pencil kisha useme)</span> Tazama nikipima urefu wa penseli/pencil hii kwa kutumia hiki <span style='color:blue'>(onyesha kifutio/eraser kwa kidole kisha umwonyeshe mtoto jinsi ya kupima)</span> Ona, hii ina urefu wa vifutio/erasers vitatu.",		
+				"Ques":"  <span style='color:blue'>(Onyesha kwenye ufunguo na useme)</span> Angalia, nitapima <b>urefu</b> wa ufunguo huu kwa kutumia visanduku hivi <span style='color:blue'>(Vuta na uangushe visanduku kimoja baada ya kingine chini ya Ufunguo)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":2,
@@ -97,7 +99,7 @@ var QuesArr = [
 			},
 			{
 				"Ques":"  <span style='color:blue'>(Elekeza kidole kwenye vifutio/erasers kisha useme)</span> Pima urefu wa penseli/pencil ukitumua hizi. Niambie, je, penseli/pencil hii ina urefu wa vifutio/erasers vingapi?",		
-				"QuesText":"Jawabu",		
+				"QuesText":"Jawabu :",		
 				"QuesID":1,
 				"AnsNo":4,
 				"DropCnt":6,
@@ -106,7 +108,7 @@ var QuesArr = [
 			},
 			{
 				"Ques":" <span style='color:blue'>(Elekeza kidole kwenye masanduku mekundu kisha useme)</span> Wekelea masanduku haya hapa <span style='color:blue'>(onyesha kwa kidole mstari wa rangi ya buluu ulio chini ya basi)</span> ili kupima urefu wa basi. Niambie, je, basi hili ni la urefu wa masanduku mangapi?",		
-				"QuesText":"Jawabu",		
+				"QuesText":"Jawabu :",		
 				"QuesID":2,
 				"AnsNo":5,
 				"DropCnt":6,
@@ -114,8 +116,8 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(Elekeza kidole kwenye visanduku/boxes vyekundu/red na useme)</span> Pima urefu wa mti/tree kwa kutumia hizi. Niambie mti/tree huo una urefu wa masanduku/boxes mangapi?",		
-				"QuesText":"Jawabu",		
+				"Ques":" <span style='color:blue'>(Onyesha kwenye masanduku na useme)</span> Sasa, pima <b>urefu</b> wa mti kwa kutumia visanduku hivi. Niambie mti huo una urefu wa masanduku mangapi?",		
+				"QuesText":"Jawabu : ",		
 				"QuesID":3,
 				"AnsNo":4,
 				"DropCnt":6,
@@ -128,7 +130,7 @@ var QuesArr = [
 		'language':"Urdu-Pakistan",
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(پنسل کی طرف اشارہ کریں اور بولیں)</span> دیکھو میں ان <span style='color:blue'>(ایریزرز کی طرف اشارہ کریں)</span> کو استعمال کرکے اس پنسل کی لمبائی معلوم کرتا/کرتی <span style='color:blue'>(بچے کو دکھائیں کہ پنسل کی لمبائی کیسے معلوم کرنی ہے)</span> ہوں۔ دیکھو یہ پنسل تین ایریزرز لمبی ہے؟",		
+				"Ques":"  <span style='color:blue'>(چابی کی طرف اشارہ کریں اور بولیں)</span> دیکھو، میں اس چابی کی <b>لمبائی</b> کی پیمائش ان ڈبوں کا استعمال کرتے ہوئے کرنے جا رہا /رہی ہوں۔ <span style='color:blue'>(ڈبوں کو ایک ایک کرکے چابی کے نیچے رکھ دیں)</span>",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":2,
@@ -145,17 +147,16 @@ var QuesArr = [
 				"ActNo": "M7A"
 				
 			},
-			/* {
-				"Ques":" <span style='color:blue'>(سرخ ڈبوں کی طرف اشارہ کریں اور کہیں)</span> ان کو استعمال کرکے درخت کی لمبائی معلوم کرٰیں۔ مجھے بتاؤ درخت کتنے ڈبے لمبا ہے
-				"QuesText":"جواب:",		
+			{
+				"Ques":" <span style='color:blue'>(سرخ ڈبوں کی طرف اشارہ کریں اور کہیں)</span> ان کو استعمال کرکے درخت کی لمبائی معلوم کرٰیں۔ مجھے بتاؤ درخت کتنے ڈبے لمبا ہ",				"QuesText":"جواب:",		
 				"QuesID":2,
 				"AnsNo":5,
 				"DropCnt":6,
 				"ActNo": "M7B"
 				
-			}, */
+			},
 			{
-				"Ques":" <span style='color:blue'>(سرخ ڈبوں کی طرف اشارہ کریں اور کہیں)</span> ان کو استعمال کرکے درخت کی لمبائی معلوم کرٰیں۔ مجھے بتاؤ درخت کتنے ڈبے لمبا ہے؟",		
+				"Ques":" <span style='color:blue'>(ڈبوں کی طرف اشارہ کریں اور بولیں)</span> اب،اس درخت کی <b>اونچائی </b> کی پیمائش ڈبوں کا استعمال کرتے ہوئے کریں۔ مجھے بتائیں درخت کتنے ڈبے لمبا ہے؟",		
 				"QuesText":"جواب: ",		
 				"QuesID":3,
 				"AnsNo":4,
@@ -167,9 +168,10 @@ var QuesArr = [
 	},
 	{
 		'language':"Spanish-Mexico",
+		'languageFont':'null',
 		'gamedata':[
 			{
-				"Ques":"<span style='color:blue'>(Señala los lápices y di)</span> Mira, voy a medir la longitud de este lápiz usando estas. <span style='color:blue'>(Señala las gomas de borrar y muestra al(la) niño(a) cómo medir)</span>. Mira, esto mide 3 gomas de borrar de largo.",		
+				"Ques":" <span style='color:blue'>(Señala la llave y di)</span> Mira, voy a medir el <b>largo</b> de esta llave usando estos cuadros <span style='color:blue'>(Arrastra y suelta los cuadros, uno por uno, debajo de la llave)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -195,7 +197,7 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":"  <span style='color:blue'>(Señala los cuadros rojos y di)</span> Mide la altura del árbol usando estos. Dime, ¿cuántos cuadros de alto tiene este árbol?",		
+				"Ques":"<span style='color:blue'>(Señala las cajas y di)</span> Ahora, mide la <b>altura</b> del árbol usando estos cuadros. Dime, ¿cuántos cuadros mide de alto el árbol?",		
 				"QuesText":"Respuesta :",		
 				"QuesID":3,
 				"AnsNo":4,
@@ -206,12 +208,13 @@ var QuesArr = [
 		]
 	},{
 		'language':"Spanish-Nicaragua",
+		'languageFont':'fonts/AntarcticaRegular.ttf',
 		'gamedata':[
 			{
-				"Ques":"  <span style='color:blue'>(Señala el lápiz y explica)</span> Observa, voy a medir qué largo es este lápiz usando estos (señala los borradores y muestra al niño cómo medir). Mira, este es tan largo como tres borradores juntos.",		
+				"Ques":" <span style='color:blue'>(Señale la llave y diga)</span> Mirá, voy a medir la <b>longitud</b> de esta llave usando estos cuadritos <span style='color:blue'>(arrastre y suelte los cuadritos uno por uno debajo de la llave)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
-				"AnsNo":3,
+				"AnsNo":'3 (tres)',
 				"DropCnt":6,
 				"ActNo": "M7Eg"
 			},
@@ -234,10 +237,10 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(Señala las cajas rojas y explica)</span> Mide la altura del árbol usando estas. Dime cuántas cajas mide el árbol.",		
+				"Ques":"<span style='color:blue'>(Señale los cuadritos y diga)</span> Ahora, medí la <b>altura</b> del árbol usando estos cuadritos. decime cuántos cuadritos mide el árbol.",		
 				"QuesText":"Respuesta :",		
 				"QuesID":3,
-				"AnsNo":4,
+				"AnsNo":'4 (cuatro)',
 				"DropCnt":6,
 				"ActNo": "M7C"
 				
@@ -246,12 +249,13 @@ var QuesArr = [
 	},
 	{
 		'language':"Bangla-Bangladesh",
+		'languageFont':'fonts/kalpurush.ttf',
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(পেন্সিলটি দেখিয়ে বলুন)</span> দেখ, আমি এখন এই পেন্সিলটির দৈর্ঘ্য মাপবো এগুলো দিয়ে <span style='color:blue'>(ইরেজার/রাবারগুলো দেখান এবং সেগুলো দিয়ে কীভাবে মাপা যায় তা শিখান)</span>। দেখ, পেন্সিলটি ৩টি ইরেজারের/রাবারের সমান।",		
+				"Ques":" <span style='color:blue'>(চাবিটি দেখিয়ে বলুন)</span> দেখো, এই চাবিটা <b>দৈর্ঘ্যে</b> কতটুকু লম্বা তা আমি এই বাক্সগুলো দিয়ে মাপবো। <span style='color:blue'>(বাক্সগুলো একে একে টেনে এনে চাবির নীচে রাখুন)</span>",		
 				"QuesText":"উত্তর",		
 				"QuesID":0,
-				"AnsNo":3,
+				"AnsNo":"৩",
 				"DropCnt":6,
 				"ActNo": "M7Eg"
 				
@@ -275,10 +279,9 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(লাল বাক্সগুলো দেখিয়ে বলুন)</span> এই বাক্সগুলো দিয়ে এই গাছটার উচ্চতা মাপ তো। বল তো এই গাছটা কয়টা বাক্সের সমান?",		
-				"QuesText":"উত্তর :",		
+				"Ques":"<span style='color:blue'>(বাক্সগুলো দেখিয়ে বলুন)</span> এখন, এই বাক্সগুলো ব্যবহার করে গাছের <b>উচ্চতা</b> পরিমাপ করো তো। বলো তো এই গাছটা কয়টা বাক্সের সমান লম্বা?",		
 				"QuesID":3,
-				"AnsNo":4,
+				"AnsNo":"৪",
 				"DropCnt":6,
 				"ActNo": "M7C"
 				
@@ -287,9 +290,10 @@ var QuesArr = [
 	},
 	{
 		'language':"French-Mali",
+		'languageFont':'null',
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(Regarde le crayon et dis)</span> Regarde, je vais mesurer la longueur de ce crayon en utilisant ces <span style='color:blue'>(pointe sur les gommes et montre à l'enfant comment mesurer)</span>. Tu vois, ça fait 3 gommes.",		
+				"Ques":" <span style='color:blue'>(Pointe sur la clé et dis)</span> Regarde, je vais mesurer la <b>longueur</b> de cette clé en utilisant ces boites <span style='color:blue'>(Fais glisser et dépose les boîtes une à une sous la clé)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -316,7 +320,7 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(Regarde les cases rouges et dis)</span> Mesure la hauteur de l'arbre à l'aide de celles-ci. Dis-moi combien de boîtes fait l'arbre ?",		
+				"Ques":"  <span style='color:blue'>(Pointe sur les cases et dis)</span> Maintenant, mesure la <b>hauteur</b> de l’arbre à l’aide de ces boîtes. Dis-moi combien de boîtes valent la hauteur de l’arbre?",		
 				"QuesText":"Réponse :",		
 				"QuesID":3,
 				"AnsNo":4,
@@ -328,9 +332,10 @@ var QuesArr = [
 	},
 	{
 		'language':"French-Senegal",
+		'languageFont':'null',
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(Regarde le crayon et dis)</span> Regarde, je vais mesurer la longueur de ce crayon en utilisant ces <span style='color:blue'>(pointe sur les gommes et montre à l'enfant comment mesurer)</span>. Tu vois, ça fait 3 gommes.",		
+				"Ques":" <span style='color:blue'>(Pointe la clé et dis)</span> Regarde, je vais mesurer la <b>longueur</b> de cette clé à l'aide de ces boîtes <span style='color:blue'>(Fais glisser et déposer les boîtes une par une sous la clé)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -357,7 +362,7 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(Regarde les cases rouges et dis)</span> Mesure la hauteur de l'arbre à l'aide de celles-ci. Dis-moi combien de boîtes fait l'arbre ?",		
+				"Ques":" <span style='color:blue'>(Montre les boîtes et dis)</span> Maintenant, mesure la <b>hauteur</b> de l'arbre en utilisant ces boîtes. Dis-moi combien de boîtes font la hauteur de l'arbre?",		
 				"QuesText":"Réponse :",		
 				"QuesID":3,
 				"AnsNo":4,
@@ -369,9 +374,10 @@ var QuesArr = [
 	},
 	{
 		'language':"Kiswahili-Tanzania",
+		'languageFont':null,
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(Onyesha penseli na useme) </span> Angalia, ninaenda kupima urefu wa penseli hii kwa kutumia hivi <span style='color:blue'> (onyesha ufutio na umuelekeze mtoto jinsi ya kuupima) </span>. Hii ina urefu wa vifutio vitatu(3).",		
+				"Ques":" <span style='color:blue'>(Onesha funguo kwa kidole chako na useme)</span> Angalia, ninaenda kupima <b>urefu</b> wa funguo hii kwa kutumia maboksi haya <span style='color:blue'>( vuta na uingize maboksi haya chini ya funguo, moja baada ya lingine)</span>",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -410,12 +416,13 @@ var QuesArr = [
 	},
 	{
 		'language':"Nepali-Nepal",
+		'languageFont':'fonts/MANGAL.ttf',
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'> (सिसाकलमलाई देखाउनुहोस् र भन्नुहोस्) </span> हेर्नुहोस्, म यो कलमको लम्बाइलाई यसको प्रयोग गरेर नाप्दैछु  <span style='color:blue'>(इरेजरहरूलाई देखाएर बच्चालाई कसरी नाप्ने भनेर देखाउनुहोस्)</span> यो ३ वटा इरेजर बराबर लामो छ।",		
+				"Ques":" <span style='color:blue'>(साँचोलाई देखाउनुहोस् र भन्नुहोस्)</span> हेर्नुहोस्, म यो साँचोको <b>लम्बाई</b> यी बक्सहरुको प्रयोग गरेर नाप्दै छु।<span style='color:blue'>(बक्सहरुलाई एक एक गरेर तान्दै साँचोको मुनि राख्नुहोस्)</span>।",		
 				"QuesText":"",		
 				"QuesID":0,
-				"AnsNo":3,
+				"AnsNo":"३",
 				"DropCnt":6,
 				"ActNo": "M7Eg"
 				
@@ -439,10 +446,10 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>रातो बाकसहरुलाई देखाउनुहोस् र भन्नुहोस् )</span> यसको प्रयोग गरेर रुखको लम्बाई नाप्नुहोस । कति ओटा बाकसहरु बराबर यो रुखको लम्बाई हुन्छ होला?",		
+				"Ques":"  <span style='color:blue'>(बक्सहरुलाई देखाएर भन्नुहोस् )</span> अब, यस रुखको <b>उचाई</b> यी बक्सहरुको प्रयोग गरेर नाप्नुहोस्। यो रुख कति ओटा बक्स बराबर अग्लो छ ?",		
 				"QuesText":"जवाफ :",		
 				"QuesID":3,
-				"AnsNo":4,
+				"AnsNo":"४",
 				"DropCnt":6,
 				"ActNo": "M7C"
 				
@@ -451,9 +458,10 @@ var QuesArr = [
 	},
 	{
 		'language':"Portuguese-Mozambique",
+		'languageFont': null,
 		'gamedata':[
 			{
-				"Ques":" <span style='color:blue'>(Aponte para o lápis e diga)</span> Olha, vou medir o comprimento deste lápis usando esses <span style='color:blue'>(aponte para as borrachas e mostre à criança como medir)</span>. Veja, isso é 3 borrachas de comprimento.",		
+				"Ques":"<span style='color:blue'>(Aponte para as chaves e diga)</span> Olha, vou medir o <b>comprimento</b> desta chave usando estas caixas <span style='color:blue'>(Arraste e largue as caixas uma por uma por baixo da chave)</span>.",		
 				"QuesText":"",		
 				"QuesID":0,
 				"AnsNo":3,
@@ -480,7 +488,7 @@ var QuesArr = [
 				
 			},
 			{
-				"Ques":" <span style='color:blue'>(Aponte para as caixas vermelhas e diga)</span> Meça a altura da árvore usando estas. Diga quantas caixas corresponde a altura da árvore?",		
+				"Ques":"  <span style='color:blue'>(aponte para as caixas e diga)</span> Agora, meça a <b>altura</b> da árvore usando estas caixas. Diga-me quantas caixas de altura tem a árvore?",		
 				"QuesText":"Resposta :",		
 				"QuesID":3,
 				"AnsNo":4,

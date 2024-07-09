@@ -13,11 +13,12 @@ Classification.hardcodedData =
 Classification.shapeImgData = [
 	{
 		"lang": "English-Uganda",
+		'languageFont': 'fonts/Andika-Regular.ttf',
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": "<span style='color:blue'>(Point to the green balls and say)</span> Look, I am putting all the <b>green balls</b> here <span style='color:blue'>(Drag and drop all the green balls one by one into the jar)</span>.",
-				"question2": " Now, put all the <b>yellow balls</b> here <span style='color:blue'>(point to the jar)</span>. </span>(Prompt: If the child leaves the task midway, ask them to complete the task)<span style='color:blue'>",
+				"question": " <span style='color:blue'>(Point to the green balls and say)</span> Look, I am putting all the <b>green balls</b> here <span style='color:blue'>(Drag and drop all the green balls one by one into the jar)</span>.",
+				"question2": " Now, put all the <b>yellow balls</b> here <span style='color:blue'>(point to the jar)</span>. <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -200,8 +201,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Point to the blue triangles and say)</span> Look, I am putting all the <b>blue triangles</b> here <span style='color:blue'>(Drag and drop all the blue triangles one by one into the jar)</span>.",
-				"question2": "  Now, as I did you have to put all the <b>red circles</b> here <span style='color:blue'>(Point to the jar)</span> </span>(Prompt: If the child leaves the task midway, ask them to complete the task)<span style='color:blue'>",
+				"question": "Now, put all the <b>red circles</b> here <span style='color:blue'>(Point to the jar)</span><span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task)</span>.",
+				"question2": "  Now, as I did you have to put all the <b>red circles</b> here <span style='color:blue'>(Point to the jar)</span> <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -240,7 +241,6 @@ Classification.shapeImgData = [
 						"imageName": ["circle-yellow", "circle"],
 						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -345,8 +345,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(हरे रंग के गोलों की ओर इशारा करते हुए कहें)</span> देखो, मैं हरे रंग के सभी गोलों को यहाँ डाल रहा हूँ <span style='color:blue'>(हरे रंग के गोलों को एक-एक करके ले जाकर डिब्बे में डाल दें)</span>| ",
-				"question2": " अब, जैसे मैंने किया आप भी वैसे ही पीले रंग के सभी गोलों को यहाँ  <span style='color:blue'>(डिब्बे की ओर इशारा करें)</span> डाल दो| <span style='color:blue'>(प्रॉम्प्ट: यदि बच्चा कार्य अधूरा छोड़ देता है, तो उसे कार्य पूरा करने को कहें)</span>",
+				"question": " <span style='color:blue'>(हरी गेंदों की ओर इशारा करते हुए कहें)</span> देखो, मैं इन सभी <b>हरी गेंदों</b> को यहाँ डाल रहा हूँ <span style='color:blue'>(सभी हरी गेंदों को एक-एक करके जार में डालें)</span>। ",
+				"question2": " अब, तुम सभी <b>पीली गेंदों</b> को यहाँ डालो <span style='color:blue'>(जार की ओर इशारा करें)</span>। <span style='color:blue'>(प्रांप्ट: यदि बच्चा कार्य अधूरा छोड़ देता है, तो उसे कार्य पूरा करने को कहें।)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -355,19 +355,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -533,8 +529,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(नीले रंग के त्रिकोण की ओर इशारा करते हुए कहें)</span> देखो, मैं नीले रंग के सभी त्रिकोणों को यहाँ डाल रहा हूँ  <span style='color:blue'>(नीले रंग के सभी त्रिकोणों को एक-एक करके ले जाकर डिब्बे में डाल दें)</span> |",
-				"question2": " अब, जैसे मैंने किया आप भी वैसे ही लाल रंग के सभी गोलों को यहाँ  <span style='color:blue'>(डिब्बे की ओर इशारा करें)</span> डाल दो| <span style='color:blue'>(प्रॉम्प्ट: यदि बच्चा कार्य अधूरा छोड़ देता है, तो उसे कार्य पूरा करने को कहें)</span>",
+				"question": " <span style='color:blue'>(नीले त्रिकोणों की ओर इशारा करते हुए कहें)</span> देखो, मैं इन सभी <b>नीले त्रिकोणों</b> को यहाँ डाल रहा हूँ <span style='color:blue'>(सभी नीले त्रिकोणों को एक-एक करके जार में डालें)</span>। ",
+				"question2": " अब, तुम सभी <b>लाल गोलों</b> को यहाँ डालो <span style='color:blue'>(जार की ओर इशारा करें)</span>। <span style='color:blue'>(प्रांप्ट: यदि बच्चा कार्य अधूरा छोड़ देता है, तो उसे कार्य पूरा करने को कहें।)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -543,50 +539,35 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
 
 				],
@@ -661,27 +642,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -689,11 +670,12 @@ Classification.shapeImgData = [
 		]
 	}, {
 		"lang": "Kiswahili-Kenya",
+		'languageFont': 'fonts/Andika-Regular.ttf',
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Elekeza kidole kwenye duara/circle za kijani/green kisha useme)</span> Tazama, ninaweka duara/circle zote za kijani/green kwenye saduku/box hii ya kijani/green <span style='color:blue'>(vuruta kisha udondoshe duara/circle zote za kijani/green, moja baada ya nyingine kwenye saduku/box ya kijani/green)</span>.",
-				"question2": " Sasa, kama nilivyofanya, wewe pia utaweka duara/circles zote za manjano/yellow kwenye saduku/box hii. <span style='color:blue'>(Hoji zaidi: Mtoto akiachia katikati, muulize alikamilishe zoezi)</span>.",
+				"question": "<span style='color:blue'>(Onyesha kwenye mipira ya kijani kibichi na useme)</span> Tazama, naweka <b>mipira yote ya kijani kibichi/green</b> hapa <span style='color:blue'>(Vuta na uangushe mipira yote ya kijani moja baada ya nyingine kwenye mtungi)</span>.",
+				"question2": "Sasa, weka <b>mipira yote ya manjano/yellow hapa</b> <span style='color:blue'>(elekeza kwenye chupa)</span>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -702,19 +684,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -845,8 +823,8 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Elekeza kidole kwenye pembetatu/triangle za buluu/blue kisha useme)</span> Tazama, ninaweka pembetatu/triangles zote za buluu/blue katika sanduku hili <span style='color:blue'>(vuruta kisha udondoshe pembetatu/triangles zote za buluu/blue, moja baada ya nyingine ndani ya sanduku)</span>.",
-				"question2": "  Sasa, kama nilivyofanya, wewe pia utaweka duara/circles zote nyekundu/red ndani ya sanduku/box hili <span style='color:blue'>(onyesha sanduku/box lenyewe kwa kidole)</span>. <span style='color:blue'>(Hoji zaidi: Mtoto akiachia katikati, muulize alikamilishe zoezi)</span>.",
+				"question": "<span style='color:blue'>(Onyesha kwenye pembe tatu/triangles za bluu/blue na useme)</span> Tazama, naweka <b>pembe tatu/triangles zote za bluu/blue</b> hapa <span style='color:blue'>(Vuta na uangushe pembe tatu/triangles za bluu/blue moja baada ya nyingine kwenye mtungi)</span>.",
+				"question2": "Sasa, weka <b>duara nyekundu/red circles</b> hapa <span style='color:blue'>(Elekeza kidole kwenye mtungi)</span> <span style='color:blue'>(Ushauri: Mtoto akiacha kazi katikati, mwaambie amalize kazi)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -855,52 +833,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -965,7 +927,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Elekeza kidole kwenye picha/picture kisha useme)</span> Tazama hapa kwa makini kisha uweke vifaa vyote vilivyo na miguu minne ndani ya sanduku/box hili <span style='color:blue'>(onyesha sanduku/box lenyewe kwa kidole)</span>.",
+				"question": "<span style='color:blue'>(Onyesha kwa wanyama kisha useme)</span> Angalia hawa kwa makini. Sasa, weka wanyama wote walio na miguu <b>minne</b> hapa <span style='color:blue'>(onyesha eneo lililozungushiwa uzio)</span> <span style='color:blue'>(Ushauri: Mtoto akiacha kazi katikati, mwaambie amalize kazi)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -973,27 +935,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -1005,8 +967,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Onesha kwenye maduara ya rangi ya kijani na useme)</span> Angalia, Ninaweka maduara yote ya rangi ya kijani humu. <span style='color:blue'>(Hamisha maduara yote ya rangi ya kijani , moja baada ya lingine kwenye sanduku/box)</span>.",
-				"question2": " Sasa, kama nilivofanya, Inabidi uweke maduara yote ya rangi ya njano humu <span style='color:blue'>(onesha kwenye sanduku/box)</span>. <span style='color:blue'>(Shawishi: Endapo mtoto ataacha zoezi kabla ya kumaliza, mshawishi amalize zoezi)</span>",
+				"question": " <span style='color:blue'>(Onesha kwa kidole mipira ya kijani na useme)</span> Angalia, ninaweka <b>mipira yota ya kijani</b> humu <span style='color:blue'>(Vuta na uingize mipira yote ya kijani kwenye kopo, mmoja baada ya mwingine )</span>",
+				"question2": " Sasa weka <b>mipira yote yenye rangi ya njano</b> humu <span style='color:blue'>(Onesha kwenye kopo)</span> <span style='color:blue'>(Shawishi: Endapo mtoto ataacha zoezi hili kabla halijakamilika, mshawishi amalizie zoezi)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -1015,19 +977,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -1193,8 +1151,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Onesha kwenye pembetatu za rangi ya blu na useme)</span> Angalia ninawela pembetatu za rangi ya blu zote humu <span style='color:blue'>(hamisha pembetatu za rangi ya blu zote , moja baada ya nyingine kwenye sanduku)</span>",
-				"question2": " Sasa, Kama nilivofanya, inakubidi uweke maduara ya rangi nyekundu yote humu <span style='color:blue'>(onesha kwenye sanduku/box)</span>. <span style='color:blue'>(Shawish:Endapo mtoto ataacha zoezi katikati, mshawishi amalize zoezi)</span>.",
+				"question": " <span style='color:blue'>(Onesha kwa kidole pembe tatu za rangi ya bluu na useme)</span> Angalia, ninaweka pembetatu zote za rangi ya bluu humu <span style='color:blue'>(Vuta na uingize pembetatu zote za bluu kwenye kopo, moja baada ya nyingine)</span>",
+				"question2": " Sasa weka <b>maduara yote ya rangi nyekundu</b> humu <span style='color:blue'>(Onesha kwenye kopo)</span> <span style='color:blue'>(Shawishi: Endapo mtoto ataacha zoezi kabla hajamaliza, mshawishi amalizie zoezi)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -1203,52 +1161,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -1313,7 +1255,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Onesha picha na useme)</span> Angalia hapa kwa makini na uweke vitu vyote vyenye miguu minne(4) humu <span style='color:blue'>(onesha kwenye sanduku/box)</span>",
+				"question": " <span style='color:blue'>(Onesha kwa kidole wanyamana useme)</span> Angalia hapa kwa makini. Sasa weka wanyama wote wenye <b>miguu minne</b> humu <span style='color:blue'>(Onesha eneo lililozungushiwa uzio)</span> <span style='color:blue'>(Shawishi: endapo mtoto ataacha zoezi bila kumaliza, mshawishi amalizie)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -1321,27 +1263,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -1353,8 +1295,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>( سبز رنگ کے دائروں کی طرف اشارہ کریں اور کہیں)</span> یہ دیکھو، میں سبز رنگ کے تمام دائرے اس ڈبے میں ڈال رہا/رہی ہوں۔<span style='color:blue'>(ایک ایک کر کے سبز رنگ کے دائرے ڈبے میں ڈالیں)</span>",
-				"question2": " جیسے میں نے کیا اب آپ اسی طرح پیلے رنگ کے تمام دائروں کو اس ڈبے <span style='color:blue'>( ڈبے کی طرف اشارہ کریں)</span>میں ڈالیں۔<span style='color:blue'>(ہدایت: اگر بچہ کہیں درمیان میں یہ ٹاسک چھوڑ دیتا ہے تو اسے ٹاسک مکمل کرنے کو کہیں)</span>",
+				"question": " <span style='color:blue'>(سبز گیندوں کی طرف اشارہ کریں اور بولیں)</span> دیکھو، میں تمام <b>ہری گیندیں</b> یہاں ڈال رہا / رہی ہوں <span style='color:blue'>(سب سبز گیندوں کو ایک ایک کرکے جار میں ڈال دیں)</span>۔",
+				"question2": " اب، تمام <b>پیلے رنگ کی گیندوں</b> کو یہاں <span style='color:blue'>(جار کی طرف اشارہ کریں)</span> رکھ دیں۔<span style='color:blue'>( اگر بچہ کام کو درمیان میں چھوڑ دیتا ہے، تو اس سے کام مکمل کرنے کو کہیں)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -1363,19 +1305,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -1506,8 +1444,8 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(دی گئی نیلے رنگ کی مثلثوں کی طرف اشارہ کریں اور کہیں)</span> دیکھو میں نیلے رنگ کی تمام مثلثیں یہاں ڈال رہا/رہی ہوں <span style='color:blue'>(ایک ایک کر کے نیلے رنگ کی تمام مثلثوں کو دیے گئے ڈبہ میں ڈالیں)</span> ۔",
-				"question2": " جیسے میں نے کیا اب آپ اسی طرح لال رنگ کے تمام دائروں کو اس ڈبے <span style='color:blue'>( ڈبے کی طرف اشارہ کریں)</span>میں ڈالیں۔<span style='color:blue'>( ہدایت: اگر بچہ کہیں درمیان میں یہ ٹاسک چھوڑ دیتا ہے تو اسے ٹاسک مکمل کرنے کو کہیں)</span>",
+				"question": " <span style='color:blue'>(نیلے مثلث کی طرف اشارہ کریں اور بولیں)</span> دیکھو، میں تمام <b>نیلے مثلث</b> یہاں ڈال رہا / رہی ہوں <span style='color:blue'>(تمام نیلے مثلثوں کو ایک ایک کر کے دیے گئے جار میں ڈال دیں)</span>",
+				"question2": " 'اب آپ تمام <b>سرخ دائروں</b> کو یہاں <span style='color:blue'>(جار کی طرف اشارہ کریں)</span> رکھ دیں۔ <span style='color:blue'>(اگر بچہ کام کو درمیان میں چھوڑ دیتا ہے، تو اس سے کام مکمل کرنے کو کہیں)</span>'",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -1516,52 +1454,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -1626,7 +1548,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(تصویر کی طرف اشارہ کریں اور کہیں)</span> انہیں غور سے دیکھو اور چار ٹانگوں والی تمام چیزوں کو یہاں <span style='color:blue'>(ڈبے کی طرف اشارہ کریں)</span> رکھو۔",
+				"question": " <span style='color:blue'>(جانوروں کی طرف اشارہ کر کے بولیں)</span> ان کو غور سے دیکھو، اب ان تمام جانوروں کو جن کی <b> چار ٹانگیں </b> ہیں یہاں <span style='color:blue'>(باڑ والے حصے کی طرف اشارہ کریں)</span> رکھ دیں۔ <span style='color:blue'>(اگر بچہ کام کو درمیان میں چھوڑ دیتا ہے، تو اس سے ٹاسک مکمل کرنے کو کہیں)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -1634,27 +1556,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -1666,8 +1588,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Señala los círculos de color verde y di)</span> Mira, estoy poniendo todos los círculos de color verde aquí <span style='color:blue'>(arrastra y coloca los círculos verdes uno por uno dentro del cuadro).</span>",
-				"question2": " Ahora, como yo lo hice, tienes que poner todos los círculos de color amarillo aquí <span style='color:blue'>(señala el cuadro)</span>. <span style='color:blue'>(Intrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete).</span>",
+				"question": " <span style='color:blue'>(Señala las pelotas verdes y di)</span> Mira, estoy poniendo todas las <b>pelotas verdes</b> aquí <span style='color:blue'>(Arrastra y suelta todas las pelotas verdes, una por una, en el frasco)</span>.",
+				"question2": " Ahora, pon todas las <b>pelotas amarillas</b> aquí <span style='color:blue'>(señala el frasco)</span>.<span style='color:blue'>.(Instrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -1676,19 +1598,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -1745,14 +1663,14 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D3A",
-				"question": " <span style='color:blue'> (Señala los animales y las aves y di)</span> Obsérvalos con atención. Ahora, pon todas las aves aquí <span style='color:blue'>(señala la sección de aves)</span> y todos los animales aquí <span style='color:blue'>(señala la sección de animales). </span> <span style='color:blue'>(Instrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete).</span>",
+				"question": " <span style='color:blue'>(Point to the animals and birds and say)</span> Look at these carefully. Now, put all the birds here <span style='color:blue'>(point to the birds section)</span> and all the animals here <span style='color:blue'>(point to the animals section)</span>. <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["bird", "animal"],
 				"img": "",
 				"jarCnt": 2,
-				"animalText": "Animales",
-				"birdText": "Aves",
+				"animalText": "Animals",
+				"birdText": "Birds",
 				"colorObjects": [
 					{
 						"imageName": ["animal", "cow"],
@@ -1782,14 +1700,14 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D3B",
-				"question": " <span style='color:blue'>(Aponte para os objetos e diga)</span> Olhe para eles com cuidado. Agora, coloque todas as frutas aqui <span style='color:blue'>(aponte para a secção de frutas)</span> e todos os legumes aqui <span style='color:blue'>(aponte para a seção de legumes)</span>. <span style='color:blue'>(Aviso: Se a criança não terminar a tarefa, peça-lhe para terminar) </span>",
+				"question": " <span style='color:blue'>(Point to the objects and say)</span> Look at these carefully. Now, put all the fruits here <span style='color:blue'>(point to the fruits section)</span> and all the vegetables here <span style='color:blue'>(point to the vegetables section)</span>. <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task.)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["fruit", "vegetable"],
 				"img": "",
 				"jarCnt": 2,
-				"fruitText": "Frutas",
-				"vegText": "Vegetales",
+				"fruitText": "Fruits",
+				"vegText": "Vegetables",
 				"colorObjects": [
 					{
 						"imageName": ["fruit", "orange"],
@@ -1817,45 +1735,10 @@ Classification.shapeImgData = [
 					},
 				],
 			},
-			// {
-			// 	"queNo": "D3C",
-			// 	"question": 'Look at these <span style="color:blue">(point to the objects)</span>. Put all the items that can be worn here <span style="color:blue">(point to the ‘things that can be worn’ section)</span>and all the items that cannot be worn here <span style="color:blue">(point to the ‘things that cannot be worn’ section)</span>.<span style="color:blue">(Prompt: If the child stops after sorting some objects, ask her to do the same for all objects).</span>',
-			// 	"font": "1.6vw",
-			// 	"data": "",
-			// 	"object": ["worn", "notWorn"],
-			// 	"img": "",
-			// 	"jarCnt": 2,
-			// 	"colorObjects": [
-			// 		{
-			// 			"imageName": ["worn", "cap"],
-			// 			"imgPath": "D3C_2.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["worn", "dress"],
-			// 			"imgPath": "D3C_6.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["worn", "shirt"],
-			// 			"imgPath": "D3C_5.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "pillow"],
-			// 			"imgPath": "D3C_4.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "mat"],
-			// 			"imgPath": "D3C_7.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "curtain"],
-			// 			"imgPath": "D3C_8.png"
-			// 		},
-			// 	],
-			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Señala los triángulos color azul y di)</span> Mira, estoy poniendo todos los triángulos color azul aquí <span style='color:blue'>(arrastra y coloca todos los triángulos de color azul uno por uno dentro del cuadro).</span>",
-				"question2": " Ahora, como yo lo hice, tienes que poner todos los círculos de color rojo aquí <span style='color:blue'>(señala el cuadro).</span> <span style='color:blue'>(Instrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete).</span>",
+				"question": " <span style='color:blue'>(Señala los triángulos azules y di)</span> Mira, estoy poniendo todos los <b>triángulos azules</b> aquí <span style='color:blue'>(Arrastra y suelta todos los triángulos azules, uno por uno, en  el frasco)</span>.",
+				"question2": " Ahora, pon todos los <b>círculos rojos</b> aquí <span style='color:blue'>(señala el frasco)</span>. <span style='color:blue'>(Instrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete)</span>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -1864,58 +1747,42 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
 				"queNo": "D4B",
-				"question": " <span style='color:blue'>(Señala los triángulos color azul y di)</span> Mira, estoy poniendo todos los triángulos color azul aquí <span style='color:blue'>(arrastra y coloca todos los triángulos de color azul uno por uno dentro del cuadro).</span>",
-				"question2": "Now, like I did, you have to put all the yellow-coloured squares in this box <span style='color:blue'>(point to the box)</span>.<span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task.)</span>.",
+				"question": "<span style='color:blue'>(Point to the blue triangles and say)</span> Look, I am putting all the <b>blue triangles</b> here <span style='color:blue'>(Drag and drop all the blue triangles one by one into the jar)</span>.",
+				"question2": " Now, put all the <b>red circles</b> here <span style='color:blue'>(Point to the jar)</span> </span>(Prompt: If the child leaves the task midway, ask them to complete the task)<span style='color:blue'>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["rectangle-yellow"],
@@ -1974,7 +1841,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Señala las imágenes y di)</span> Obsérvalos con atención y pon todo los objetos que tengan 4 patas aquí <span style='color:blue'>(señala la caja).</span>",
+				"question": " <span style='color:blue'>(Señala los animales y di)</span> Obsérvalos con atención. Ahora, pon a todos los animales que tengan <b>cuatro patas</b> aquí <span style='color:blue'>(señala la zona cercada)</span>. <span style='color:blue'>(Instrucción: Si el(la) niño(a) deja la tarea a medias, pídele que la complete)</span>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -1982,27 +1849,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -2010,11 +1877,12 @@ Classification.shapeImgData = [
 		]
 	}, {
 		"lang": "Spanish-Nicaragua",
+		'languageFont': 'fonts/AntarcticaRegular.ttf',
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": "<span style='color:blue'>(Señala los círculos de color verde y explica)</span> Mira, estoy poniendo todos los círculos de color verde aquí <span style='color:blue'>(arrastra y suelta todos los círculos verdes uno por uno en el cuadro)</span>.",
-				"question2": " Ahora, como lo hice yo, tienes que poner todos los círculos de color amarillo aquí <span style='color:blue'>(Señala el cuadro)</span>. <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pedirle que la complete)</span>",
+				"question": " <span style='color:blue'>(Señale las bolas verdes y diga)</span> Mirá, voy a poner todas las <b>bolas verdes</b> aquí <span style='color:blue'>(Arrastre y suelte todas las bolas verdes una por una en el tarro)</span>.",
+				"question2": " Ahora, poné todas las <b>bolas amarillas</b> aquí <span style='color:blue'>(señale el frasco)</span>. <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pídale que la complete)</span>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -2023,19 +1891,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -2092,14 +1956,14 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D3A",
-				"question": " <span style='color:blue'>(Señala los animales y aves y explica)</span> Mira estos con atención. Ahora, pon todos los aves aquí <span style='color:blue'>(señala el cuadro de los animales)</span> y todos los animales aquí <span style='color:blue'>(señala el cuadro de los animales)</span>. <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pedirle que la complete)</span>",
+				"question": " <span style='color:blue'>(Point to the animals and birds and say)</span> Look at these carefully. Now, put all the birds here <span style='color:blue'>(point to the birds section)</span> and all the animals here <span style='color:blue'>(point to the animals section)</span>. <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["bird", "animal"],
 				"img": "",
 				"jarCnt": 2,
-				"animalText": "animales",
-				"birdText": "aves",
+				"animalText": "Animals",
+				"birdText": "Birds",
 				"colorObjects": [
 					{
 						"imageName": ["animal", "cow"],
@@ -2129,14 +1993,14 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D3B",
-				"question": " <span style='color:blue'>(Señala los dibujos y explica)</span> Mira estos con atención. Ahora, pon todas las frutas aquí <span style='color:blue'>(señala el cuadro de las frutas)</span> y todas las verduras aquí <span style='color:blue'>(señala el cuadro de las verduras)</span>. <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pedirle que la complete)</span>",
+				"question": " <span style='color:blue'>(Point to the objects and say)</span> Look at these carefully. Now, put all the fruits here <span style='color:blue'>(point to the fruits section)</span> and all the vegetables here <span style='color:blue'>(point to the vegetables section)</span>. <span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task.)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["fruit", "vegetable"],
 				"img": "",
 				"jarCnt": 2,
-				"fruitText": "Frutas",
-				"vegText": "Verduras",
+				"fruitText": "Fruits",
+				"vegText": "Vegetables",
 				"colorObjects": [
 					{
 						"imageName": ["fruit", "orange"],
@@ -2164,45 +2028,10 @@ Classification.shapeImgData = [
 					},
 				],
 			},
-			// {
-			// 	"queNo": "D3C",
-			// 	"question": 'Look at these <span style="color:blue">(point to the objects)</span>. Put all the items that can be worn here <span style="color:blue">(point to the ‘things that can be worn’ section)</span>and all the items that cannot be worn here <span style="color:blue">(point to the ‘things that cannot be worn’ section)</span>.<span style="color:blue">(Prompt: If the child stops after sorting some objects, ask her to do the same for all objects).</span>',
-			// 	"font": "1.6vw",
-			// 	"data": "",
-			// 	"object": ["worn", "notWorn"],
-			// 	"img": "",
-			// 	"jarCnt": 2,
-			// 	"colorObjects": [
-			// 		{
-			// 			"imageName": ["worn", "cap"],
-			// 			"imgPath": "D3C_2.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["worn", "dress"],
-			// 			"imgPath": "D3C_6.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["worn", "shirt"],
-			// 			"imgPath": "D3C_5.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "pillow"],
-			// 			"imgPath": "D3C_4.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "mat"],
-			// 			"imgPath": "D3C_7.png"
-			// 		},
-			// 		{
-			// 			"imageName": ["notWorn", "curtain"],
-			// 			"imgPath": "D3C_8.png"
-			// 		},
-			// 	],
-			// },
 			{
 				"queNo": "D4A",
-				"question": "<span style='color:blue'>(Señala los triángulos de color azul y explica)</span> Mira, estoy poniendo todos los triángulos de color azul aquí <span style='color:blue'>(arrastra y suelta los triángulos de color azul uno por uno en el cuadro)</span>.",
-				"question2": " Ahora, como lo hice yo, tienes que poner todos los triángulos de color rojo aquí <span style='color:blue'>(señala el cuadro)</span>. <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pedirle que la complete)</span>",
+				"question": " <span style='color:blue'>(Señale los triángulos azules y diga)</span> Mirá, estoy poniendo todos los <b>triángulos azules</b> aquí <span style='color:blue'>(Arrastre y suelte todos los triángulos azules uno por uno en el tarro)</span>",
+				"question2": " Ahora, poné todos los <b>círculos rojos</b> aquí <span style='color:blue'>(Señale el frasco)</span> <span style='color:blue'>(Indicación: Si el niño o la niña deja la tarea a mitad de camino, pídale que la complete)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -2211,58 +2040,42 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
 				"queNo": "D4B",
-				"question": "<span style='color:blue'>Point to the blue coloured triangles and say</span> Look I am putting all the blue-coloured triangles here <span style='color:blue'>drag and drop all blue coloured triangles one by one into the box</span>.",
-				"question2": "Now, like I did, you have to put all the yellow-coloured squares in this box <span style='color:blue'>(point to the box)</span>.<span style='color:blue'>(Prompt: If the child leaves the task midway, ask them to complete the task.)</span>.",
+				"question": "<span style='color:blue'>(Point to the blue triangles and say)</span> Look, I am putting all the <b>blue triangles</b> here <span style='color:blue'>(Drag and drop all the blue triangles one by one into the jar)</span>.",
+				"question2": " Now, put all the <b>red circles</b> here <span style='color:blue'>(Point to the jar)</span> </span>(Prompt: If the child leaves the task midway, ask them to complete the task)<span style='color:blue'>.",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["rectangle-yellow"],
@@ -2321,7 +2134,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Señala los dibujos y explica)</span> Mira con atención estos dibujos y pon todos los objetos de 4 patas aquí <span style='color:blue'>(señala el cuadro.)</span>",
+				"question": "<span style='color:blue'>(Señale los animales y diga)</span> Fijate bien en los animalitos. Ahora, poné todos los animales que tienen <b>cuatro patas</b> aquí <span style='color:blue'>(señale la zona cercada)</span>. <span style='color:blue'>(Indicación: si el niño o la niña deja la tarea a mitad de camino, pídale que la complete)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -2329,27 +2142,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -2358,11 +2171,12 @@ Classification.shapeImgData = [
 	},
 	{
 		"lang": "Bangla-Bangladesh",
+		'languageFont': 'fonts/kalpurush.ttf',
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(সবুজ রঙের বৃত্তগুলো কে দেখিয়ে বলুন)</span> দেখো, আমি সব সবুজ রঙের বৃত্তগুলো এইখানে রাখছি। <span style='color:blue'>(আঙ্গুল দিয়ে টেনে এক এক করে সবগুলো সবুজ বৃত্ত বাক্সতে রাখুন)</span>",
-				"question2": " যেভাবে আমি করলাম, সেভাবে তুমিও এখন সব হলুদ রঙের বৃত্তগুলো এইখানে <span style='color:blue'>(বাক্সটি দেখান)</span> রাখো। <span style='color:blue'>(উদ্দীপক: যদি বাচ্চাটি মাঝপথে থেমে যায়, তবে তাকে কাজটি সম্পূর্ণ করতে বলুন)</span>",
+				"question": " <span style='color:blue'>(সবুজ বলগুলোকে দেখিয়ে বলুন)</span> দেখো, আমি সবগুলো <b>সবুজ বল</b> এখানে এনে রাখছি <span style='color:blue'>(সবগুলো সবুজ বল এক এক করে টেনে এনে পাত্রের ভেতরে রাখুন)</span>।",
+				"question2": " এখন, তুমিও সবগুলো <b>হলুদ বল</b> এখানে <span style='color:blue'>(পাত্রটি দেখান)</span> এনে রাখো। <span style='color:blue'>(উদ্দীপকঃ বাচ্চাটি যদি মাঝপথে থেমে যায়, তাহলে তাকে কাজটি সম্পূর্ণ করতে বলুন)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -2371,19 +2185,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -2549,8 +2359,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(নীল রঙের ত্রিভুজগুলো দেখিয়ে বলুন)</span> দেখো, আমি সব নীল রঙের ত্রিভুজগুলো এখানে রাখছি <span style='color:blue'>(আঙ্গুল দিয়ে টেনে এক এক করে সবগুলো নীল রঙের ত্রিভুজ বাক্সতে রাখুন)</span>",
-				"question2": " যেভাবে আমি করলাম, সেভাবে তুমিও এখন সব লাল রঙের বৃত্তগুলো এখানে রাখো <span style='color:blue'>(বাক্সটি দেখান)</span>। <span style='color:blue'>(উদ্দীপক: যদি বাচ্চাটি মাঝপথে থেমে যায়, তবে তাকে কাজটি সম্পূর্ণ করতে বলুন)</span>",
+				"question": " <span style='color:blue'>(নীল ত্রিভুজগুলোকে দেখিয়ে বলুন)</span> দেখো, আমি সবগুলো <b>নীল ত্রিভুজ</b> এখানে এনে রাখছি <span style='color:blue'>(সবগুলো নীল ত্রিভুজ এক এক করে টেনে এনে পাত্রের ভেতরে রাখুন)</span>।",
+				"question2": " এখন, তুমিও সবগুলো <b>লাল বৃত্ত</b> এখানে <span style='color:blue'>(পাত্রটি দেখান)</span> এনে রাখো। <span style='color:blue'>(উদ্দীপকঃ বাচ্চাটি যদি মাঝপথে থেমে যায়, তাহলে তাকে কাজটি সম্পূর্ণ করতে বলুন)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -2559,52 +2369,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -2669,7 +2463,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(ছবিগুলো দেখিয়ে বলুন)</span> মনোযোগ দিয়ে এগুলো দেখো এবং এখানের যেসব বস্তুর ৪টি পা আছে, সেগুলোকে এখানে রাখো <span style='color:blue'>(বাক্সটি দেখান)</span>",
+				"question": " <span style='color:blue'>(প্রাণীগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখোতো। এখন, যেই প্রাণীগুলোর <b>চারটি পা</b> আছে সেই সবগুলোকে এখানে <span style='color:blue'>(বেষ্টিত এলাকাটি দেখান)</span> এনে রাখো। <span style='color:blue'>(উদ্দীপকঃ বাচ্চাটি যদি মাঝপথে থেমে যায়, তাহলে তাকে কাজটি সম্পূর্ণ করতে বলুন)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -2677,27 +2471,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -2709,8 +2503,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Regarde les cercles de couleur verte et dis)</span> Regarde, je mets tous les cercles de couleur verte ici <span style='color:blue'>(glisse et dépose les cercles verts un à un dans la boîte)</span>.",
-				"question2": " Maintenant, comme je l'ai fait, tu dois mettre tous les cercles de couleur jaune ici <span style='color:blue'>(montre la boite)</span>. <span style='color:blue'>(Invite : Si l'enfant quitte la tâche à mi-chemin, demandes-lui de terminer la tâche)</span>",
+				"question": " <span style='color:blue'>(Montre les boules vertes et dis)</span> Regarde, je mets toutes les <b>boules vertes</b> ici <span style='color:blue'>(Fais glisser et dépose toutes les boules vertes une à dans le bocal)</span>.",
+				"question2": " Maintenant, mets toutes les <b>boules jaunes</b> ici <span style='color:blue'>(pointe sur le bocal)</span>.<span style='color:blue'> (Conseil : Si l’enfant quitte la tâche à mi-chemin, demande-lui de terminer la tâche)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -2719,19 +2513,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -2897,8 +2687,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Regarde les triangles bleus et dis)</span> Regarde, je mets tous les triangles bleus ici <span style='color:blue'>(glisse-dépose tous les triangles bleus un à un dans la boite)</span>.",
-				"question2": "  Maintenant, comme je l'ai fait, tu dois mettre tous les cercles de couleur rouge ici <span style='color:blue'>(pointe sur la boite)</span>. <span style='color:blue'>(Invite : Si l'enfant quitte la tâche à mi-chemin, demande-lui de terminer la tâche)</span>",
+				"question": " <span style='color:blue'>(Pointe sur les triangles bleus et dis)</span> Regarde, je mets tous les <b>triangles bleus</b> ici <span style='color:blue'>(Fais glisser et dépose tous les triangles bleus un à un dans le bocal)</span>",
+				"question2": " Maintenant, mets tous les <b>cercles rouges</b> ici <span style='color:blue'>(Pointe sur le bocal) <span style='color:blue'>(Conseil: Si l’enfant quitte la tâche à mi-chemin, demande-lui de terminer la tâche)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -2907,52 +2697,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -3017,7 +2791,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Regarde les images et dis)</span> Regarde-les attentivement et place tous les objets à 4 pattes ici <span style='color:blue'>(pointe sur la boîte.)</span>",
+				"question": " <span style='color:blue'>(Pointe du doigt vers les animaux et dis)</span> Regarde-les attentivement. Maintenant, mets tous les animaux qui ont <b>quatre pattes</b> ici <span style='color:blue'>(pointe sur la zone clôturée)</span> <span style='color:blue'>(Conseil : Si l’enfant quitte la tâche à mi-chemin, demandez-lui de terminer la tâche)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -3025,27 +2799,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -3057,8 +2831,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Regarde les cercles de couleur verte et dis)</span> Regarde, je mets tous les cercles de couleur verte ici <span style='color:blue'>(glisse et dépose les cercles verts un à un dans la boîte)</span>.",
-				"question2": " Maintenant, comme je l'ai fait, tu dois mettre tous les cercles de couleur jaune ici <span style='color:blue'>(montre la boite)</span>. <span style='color:blue'>(Invite : Si l'enfant quitte la tâche à mi-chemin, demandes-lui de terminer la tâche)</span>",
+				"question": " <span style='color:blue'>(Pointe les boules vertes et dis)</span> Regarde, je mets toutes les <b>boules vertes</b> ici <span style='color:blue'>(Fais glisser et déposer toutes les boules vertes une par une dans le bocal)</span>. ",
+				"question2": " Maintenant, mets toutes les <b>boules jaunes</b> ici <span style='color:blue'>(montre le bocal)</span>. <span style='color:blue'>(Indication : si l'enfant abandonne la tâche à mi-chemin, demandez-lui de la terminer)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -3067,19 +2841,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -3245,8 +3015,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Regarde les triangles bleus et dis)</span> Regarde, je mets tous les triangles bleus ici <span style='color:blue'>(glisse-dépose tous les triangles bleus un à un dans la boite)</span>.",
-				"question2": " Maintenant, comme je l'ai fait, tu dois mettre tous les cercles de couleur rouge ici <span style='color:blue'>(pointe sur la boite)</span>. <span style='color:blue'>(Invite : Si l'enfant quitte la tâche à mi-chemin, demande-lui de terminer la tâche)</span>",
+				"question": " <span style='color:blue'>(Montrer les triangles bleus et dis)</span> Regarde, je mets tous les <b>triangles bleus</b> ici <span style='color:blue'>(Faire glisser et déposer tous les triangles bleus un par un dans le bocal)</span>",
+				"question2": " Maintenant, mets tous les <b>cercles rouges</b> ici <span style='color:blue'>(pointer vers le bocal)</span> <span style='color:blue'>(Indication : si l'enfant abandonne la tâche à mi-chemin, demandez-lui de la terminer)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -3255,52 +3025,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -3365,7 +3119,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Regarde les images et dis)</span> Regarde-les attentivement et place tous les objets à 4 pattes ici <span style='color:blue'>(pointe sur la boîte.)</span>",
+				"question": " <span style='color:blue'>(Montre les animaux et dis)</span> Regarde-les attentivement. Maintenant, mets tous les animaux qui ont <b>quatre pattes</b> ici <span style='color:blue'>(montre la zone clôturée)</span>. <span style='color:blue'>(Indication : si l'enfant abandonne la tâche à mi-chemin, demandez-lui de la terminer)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -3373,27 +3127,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -3402,11 +3156,12 @@ Classification.shapeImgData = [
 	},
 	{
 		"lang": "Nepali-Nepal",
+		'languageFont': 'fonts/MANGAL.TTF',
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(हरियो रंगको वृत्तहरुलाई देखाउनुहोस् र भन्नुहोस् )</span> हेर्नुहोस् मैले हरियो रङ्गको सबै वृत्तलाई यो यहाँ राखिरहेको छु <span style='color:blue'>(हरियो रंगको सबै वृत्तहरुलाई एक एक गर्दै तानेर बाकसमा राख्नुहोस् </span> ।",
-				"question2": " अब, तपाईले पंहेलो रंगको सबै वृत्तहरुलाई मैले गरेको जस्तै गरि यहाँ राख्नुहोस । <span style='color:blue'>(नोट: यदि बच्चाले यो कार्य गर्दै गर्दा बिचमै छोड्छ भने, उस्लाई यो कार्य पुरा गर्न लगाउनुहोस् )</span>",
+				"question": " <span style='color:blue'>(हरियो बलहरुलाई देखाउनुहोस् र भन्नुहोस् )</span> हेर्नुहोस्, म यी सबै <b>हरियो बलहरुलाई</b> यहाँ <span style='color:blue'>(हरियो बलहरु सबैलाई एक एक गर्दै तानेर बट्टामा राख्नुहोस्)</span> राख्दै छु ।",
+				"question2": " अब, सबै <b>पहेँलो बलहरुलाई</b> यहाँ <span style='color:blue'>(बट्टामा देखाउनुहोस्)</span> राख्नुहोस्। <span style='color:blue'>(नोट: यदि बालबालिकाहरुले यो कार्य गर्दा गर्दै बिचमै छोडे भने, उनीहरुलाई यो कार्य पुरा गर्न लगाउनुहोस् )</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -3415,19 +3170,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -3593,8 +3344,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(नीलो रंगको त्रिकोणहरुलाई देखाउनुहोस् र भन्नुहोस् )</span> हेर्नुहोस् त म नीलो रंगको सबै त्रिकोणहरुलाई यहाँ राख्दै छु <span style='color:blue'>(नीलो रंगको सबै त्रिकोणलाई एक एक गरि तान्दै बाकस भित्र राख्नुहोस् )</span>।",
-				"question2": " अब, मैले गरेको जस्तै गरि रातो रंगको सबै वृत्तहरुलाई तपाइले यहाँ राख्नु पर्नेछ <span style='color:blue'>(बाकसलाई देखाउनुहोस् )</span>। <span style='color:blue'>(नोट: यदि बच्चाले यो कार्य गर्दा गर्दा बिचमै छोड्छ भने, उस्लाई यो कार्य पुरा गर्न लगाउनुहोस् )</span>",
+				"question": " <span style='color:blue'>(नीलो रंगको त्रिकोणहरुलाई देखाउनुहोस् र भन्नुहोस् )</span> हेर्नुहोस् त म नीलो <span style='color:blue'>(नीलो त्रिभुजहरु /triangles लाई देखाउँदै भन्नुहोस्)</span> हेर्नुहोस्, म <b>नीलो त्रिभुजहरुलाई /triangles</b> यहाँ राख्दै छु <span style='color:blue'>(सबै नीलो त्रिभुजहरुलाई एक एक गर्दै बट्टामा खसाल्नुहोस्) </span> रंगको सबै त्रिकोणहरुलाई यहाँ राख्दै छु <span style='color:blue'>(नीलो रंगको सबै त्रिकोणलाई एक एक गरि तान्दै बाकस भित्र राख्नुहोस् )</span>।",
+				"question2": " अब, सबै <b>रातो वृत्तहरु/circles</b> लाई यहाँ <span style='color:blue'>(बट्टामा देखाउनुहोस्)</span> राख्नुहोस्। <span style='color:blue'>(नोट : यदि बालबालिकाहरुले यो कार्य गर्दा गर्दै बिचमै छोडे भने, उनीहरुलाई यो कार्य पुरा गर्न लगाउनुहोस्)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -3603,52 +3354,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -3713,7 +3448,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(चित्रलाई देखाउनुहोस् र भन्नुहोस् )</span> यी वस्तुहरुलाई ध्यान दिएर हेर्नुहोस् र ४ ओटा खुट्टा भएका सबै वस्तुहरुलाई यहाँ राख्नुहोस् <span style='color:blue'>( बाकसलाई देखाउनुहोस् । )</span>",
+				"question": " <span style='color:blue'>(जनावरहरुलाई देखाउँदै भन्नुहोस्)</span> यिनीहरुलाई ध्यान दिएर हेर्नुहोस्।अब, <b>चार ओटा खुट्टा</b> भएका सबै जनावरहरुलाई यहाँ <span style='color:blue'>(बारले घेरेको ठाउँमा देखाउनुहोस्)</span> राख्नुहोस् <span style='color:blue'>(नोट: यदि बालबालिकाहरुले यो कार्य गर्दा गर्दै बिचमै छोडे भने , उनीहरुलाई यो कार्य पुरा गर्न लगाउनुहोस्)</span>।",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -3721,27 +3456,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],
@@ -3753,8 +3488,8 @@ Classification.shapeImgData = [
 		"data": [
 			{
 				"queNo": "D1B",
-				"question": " <span style='color:blue'>(Aponte para os círculos de cor verde e diga)</span> Olha, estou colocando todos os círculos de cor verde aqui <span style='color:blue'>(arraste e solte os círculos verdes um a um na caixa)</span>.",
-				"question2": " Agora, como eu fiz, você tem que colocar todos os círculos de cor amarela aqui <span style='color:blue'>(aponte para a caixa)</span>. <span style='color:blue'>(Aviso: Se a criança não terminar a tarefa, peça-lhe para terminar)</span>",
+				"question": "<span style='color:blue'>(Aponta para as bolas verdes e diz)</span> Olha, estou a pôr todas as bolas verdes aqui <span style='color:blue'>(Arrasta e larga todas as bolas verdes, uma a uma, no frasco)</span>.",
+				"question2": "Agora, ponha todas as bolas amarelas aqui <span style='color:blue'>(aponta para o frasco)</span>. <span style='color:blue'>(Sugestão: se a criança abandonar a tarefa a meio, peça-lhe que a complete)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle"],
@@ -3763,19 +3498,15 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["yellow", "circle"],
-						"imgPath": "D1A_6.png"
+						"imgPath": "D1B_4.png"
 					},
 					{
 						"imageName": ["blue", "circle"],
-						"imgPath": "D1A_7.png"
+						"imgPath": "D1B_3.png"
 					},
 					{
 						"imageName": ["green", "circle"],
-						"imgPath": "D1A_5.png"
-					},
-					{
-						"imageName": ["red", "circle"],
-						"imgPath": "D1A_8.png"
+						"imgPath": "D1B_2.png"
 					},
 				],
 			},
@@ -3941,8 +3672,8 @@ Classification.shapeImgData = [
 			// },
 			{
 				"queNo": "D4A",
-				"question": " <span style='color:blue'>(Aponte para os triângulos de cor azul e diga)</span> Olha, estou colocando todos os triângulos de cor azul aqui <span style='color:blue'>(arraste e solte todos os triângulos coloridos azuis um a um para a caixa)</span>.",
-				"question2": " Agora, como eu fiz, você tem que colocar todos os círculos de cor vermelha aqui <span style='color:blue'>(ponto para a caixa)</span>. <span style='color:blue'>(Aviso: Se a criança não terminar a tarefa, peça-lhe para terminar) </span>",
+				"question": " <span style='color:blue'>(Aponte para os triângulos azuis e diga)</span> Olha, estou a colocar todos os <b>triângulos azuis</b> aqui <span style='color:blue'>(Araste e largue todos os triângulos azuis um por um na jara)</span>",
+				"question2": " Agora coloca todos os <b>circulos vermelhos</b> aqui <span style='color:blue'>(Aponte para a jara)</span> <span style='color:blue'>(Indicação: se a criança abandonar a tarefa ao meio, peça a criança para concluir a tarefa)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["circle-red"],
@@ -3951,52 +3682,36 @@ Classification.shapeImgData = [
 				"colorObjects": [
 					{
 						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
-					},
-					{
-						"imageName": ["triange-yellow", "triangle"],
-						"imgPath": "D4B_3.png"
+						"imgPath": "D4A_3.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
 						"imageName": ["triange-blue", "triangle"],
-						"imgPath": "D4B_6.png"
+						"imgPath": "D4A_4.png"
 					},
 					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-yellow", "rectangle"],
-						"imgPath": "D4B_7.png"
-					},
-					{
-						"imageName": ["rectangle-red", "rectangle"],
-						"imgPath": "D4B_4.png"
+						"imageName": ["triange-red", "triangle"],
+						"imgPath": "D4A_5.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
-					}, {
-						"imageName": ["circle-red", "circle"],
-						"imgPath": "D4B_5.png"
+						"imgPath": "D4A_2.png"
 					},
 					{
 						"imageName": ["circle-blue", "circle"],
-						"imgPath": "D4B_8.png"
+						"imgPath": "D4A_6.png"
 					},
 					{
 						"imageName": ["circle-yellow", "circle"],
-						"imgPath": "D4B_1.png"
+						"imgPath": "D4A_7.png"
 					},
-
 				],
 			},
 			{
@@ -4061,7 +3776,7 @@ Classification.shapeImgData = [
 			},
 			{
 				"queNo": "D6A",
-				"question": " <span style='color:blue'>(Aponte para as fotos e diga)</span> Observe com atenção e coloque todos os objetos com 4 pernas aqui <span style='color:blue'>(aponte para a caixa.) </span>",
+				"question": " <span style='color:blue'>(Aponte para os animais e diga)</span> Olha para isto com atenção. Agora, coloca todos os animais que têm <b>quatro patas</b> aqui <span style='color:blue'>(aponte para a área cercada)</span> <span style='color:blue'>(Indicação: se a criança abandonar a tarefa ao meio, peça a criança para concluir a tarefa)</span>",
 				"font": "1.6vw",
 				"data": "",
 				"object": ["four-leg"],
@@ -4069,27 +3784,27 @@ Classification.shapeImgData = [
 				"jarCnt": 1,
 				"colorObjects": [
 					{
-						"imageName": ["one-leg", "lamp"],
-						"imgPath": "D6A_2.png"
-					},
-					{
-						"imageName": ["three-leg", "stool"],
-						"imgPath": "D6A_3.png"
-					},
-					{
-						"imageName": ["four-leg", "chair"],
-						"imgPath": "D6A_4.png"
-					},
-					{
-						"imageName": ["four-leg", "table"],
+						"imageName": ["two-leg", "lamp"],
 						"imgPath": "D6A_5.png"
 					},
 					{
-						"imageName": ["four-leg", "stretcher"],
+						"imageName": ["two-leg", "stool"],
 						"imgPath": "D6A_6.png"
 					},
 					{
-						"imageName": ["three-leg", "tripad"],
+						"imageName": ["four-leg", "chair"],
+						"imgPath": "D6A_2.png"
+					},
+					{
+						"imageName": ["four-leg", "table"],
+						"imgPath": "D6A_3.png"
+					},
+					{
+						"imageName": ["four-leg", "stretcher"],
+						"imgPath": "D6A_4.png"
+					},
+					{
+						"imageName": ["two-leg", "tripad"],
 						"imgPath": "D6A_7.png"
 					},
 				],

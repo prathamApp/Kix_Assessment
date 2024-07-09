@@ -36,13 +36,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो। अब, अपनी उंगली रखकर मुझे बताओ इनमें से किस घर पर सबसे ज़्यादा पक्षी हैं?",
+				'instruction':"ऊँगली रखकर मुझे दिखाओ, इनमें से <span style='color:blue'>(विकल्पों की ओर इशारा करें)</span> किसमे <b>सबसे ज्यादा</b> चिड़ियाँ है?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"English-Uganda",
+		'languageFont':'fonts/Andika-Regular.ttf',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -61,13 +62,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':"  Place your finger and show me, which of these <span style='color:blue'>(point to the options)</span> has the <b>most</b> birds?",
+				'instruction':"Place your finger and show me, which of these <span style='color:blue'>(point to the options)</span> has the <b>most</b> birds?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Bangla-Bangladesh",
+		'languageFont':'fonts/kalpurush.ttf',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -86,13 +88,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখো। এখন, তোমার আঙুল দিয়ে দেখিয়ে আমাকে বল তো কোন বাড়িতে সবচেয়ে বেশি পাখি রয়েছে?",
+				'instruction':"তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর মধ্যে কোনটিতে <span style='color:blue'>(অপশনগুলো দেখান)</span> <b>সবচেয়ে বেশি</b> পাখি রয়েছে?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"French-Mali",
+		'languageFont':null,
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -111,13 +114,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, place ton doigt et dis-moi, laquelle de ces maisons a de plus d'oiseaux?",
+				'instruction':"Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> a <b>plus</b> d'oiseaux?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"French-Senegal",
+		'languageFont':null,
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -136,13 +140,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, place ton doigt et dis-moi, laquelle de ces maisons a de plus d'oiseaux?",
+				'instruction':"Place ton doigt et montre-moi, lequel de ces <span style='color:blue'>(pointe les options)</span> a le <b>plus</b> d'oiseaux ?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Kiswahili-Kenya",
+		'languageFont':'fonts/Andika-Regular.ttf',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -161,13 +166,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Elekeza kidole kwenye viteuliwa/options kisha useme)</span> Tazama hapa kwa makini. Sasa onyesha kwa kidole kisha uniambie, ni nyumba gani ina ndege wengi zaidi?",
+				 'instruction':"Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguo)</span> ina ndege <b>wengi zaidi</b>?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Kiswahili-Tanzania",
+		'languageFont':null,
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -186,13 +192,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Onesha machaguo na useme)</span> Angalia hapa kwa makini. Sasa onesha kwa kidole chako na uniambie, ni ipi kati ya nyumba hizi ina ndege wengi?",
+				'instruction':"onyesha kwenye skrini, ni ipi kati ya hizi <span style='color:blue'>(onesha machaguo)</span> ina ndege <b>wengi zaidi</b>?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Nepali-Nepal",
+		'languageFont':'fonts/MANGAL.ttf',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -211,13 +218,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(चित्रलाई देखाउनुहोस् र भन्नुहोस्)</span> यसलाई ध्यान दिएर हेर्नुहोस्। अब कुन घरमा सबै भन्दा धेरै चराहरु छन् औंलाले देखाएर भन्नुहोस्?",
+				'instruction':"<span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> यिनीहरु मध्ये कुनमा सबै भन्दा <b>धेरै चराहरु</b> छन्? आफ्नो औँलाले थिचेर मलाई देखाउनुहोस्।",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Portuguese-Mozambique",
+		'languageFont':'null',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -236,13 +244,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atencão. Agora, coloque seu dedo e diga, qual é a casa que tem mais pássaros?",
+				'instruction':"Coloca o teu dedo e mostra-me, qual destes <span style='color:blue'>(aponte para as opções)</span> tem <b>mais</b> passarinhos?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Spanish-Mexico",
+		'languageFont':'null',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -261,13 +270,14 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Señala las opciones y di)</span> Observa con atención. Ahora, señala con tu dedo y dime, ¿cuál casa tiene más pájaros?",
+				'instruction':"Con tu dedo muéstrame, ¿cuál de estos <span style='color:blue'>(señala las opciones)</span> tiene <b>más</b> pájaros?",
 				'answer':'more'
 			}
 		]
 	},
 	{
 		language:"Spanish-Nicaragua",
+		'languageFont':'fonts/AntarcticaRegular.ttf',
 		gamedata:[
 			{
 				'gameCode':'N2A',
@@ -286,7 +296,7 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" <span style='color:blue'>(Señala las opciones y explica)</span> Observa con atención. Ahora, indica con tu dedo cuál de las casas tiene más pájaros.",
+				'instruction':"Indicá con tu dedo, ¿cuál de estos dibujos <span style='color:blue'>(señale las opciones)</span> tiene <b>más</b> pajaritos?",
 				'answer':'more'
 			}
 		]
@@ -311,7 +321,7 @@ IdentifyMoreLess.type=[
 			{
 				'gameCode':'N5A',
 				'images':['N5A_1.png','N5A_2.png','N5A_3.png','N5A_4.png'],
-				'instruction':" انہیں <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> غور سے دیکھو اور مجھے بتاؤ کہ کون سے گھر پر سب سے زیادہ پرندے ہیں؟",
+				'instruction':"اپنی انگلی رکھیں اور مجھے دکھائیں، ان میں سے کس <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> تصویر میں <b>سب سے زیادہ</b> پرندے ہیں؟",
 				'answer':'more'
 			}
 		]

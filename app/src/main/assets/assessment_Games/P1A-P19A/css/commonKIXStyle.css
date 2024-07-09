@@ -1,0 +1,73 @@
+body
+{
+	user-select:none;
+	background-color:white;
+    overflow:hidden;
+    font-family:'verdana';
+}
+.noPadding
+{
+	padding:0px;
+}
+.toBottom{
+    position: fixed;
+    bottom: 0vh;
+}
+.centerClass
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txtClass
+{
+	color: black;
+	font-size: 2.2vw;
+   /*  font-weight: bold; */
+}
+.borderClass{
+	border-radius: 2vh;
+    border: 2px solid rgb(102 98 85);
+    background-color:#a4a4a4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.borderTop{
+    border-top:2px solid rgb(102 98 85);
+}
+.buttonClass {
+    color: rgb(0, 0, 0);
+    font-size: 3.3vw;
+    font-weight: bold;
+    height: 13vh;
+    margin-top: 1vh;
+    box-shadow: 2px 3px 4px black;
+  }
+.glyphicon {
+    top: 0px;
+   line-height: inherit;
+   font-family: 'Glyphicons Halflings';
+   font-style: normal;
+   font-weight: 400;
+   color:black;
+   font-size:5vw;
+   display: flex;
+   justify-content: center;
+}
+.glyphicon:active {
+    transform: translateY(4px);
+  }
+#myModal{
+    position:fixed;
+    bottom:1vh;
+}
+
+#close{
+    font-size:3vw;
+    color:black;
+    font-weight: bold;
+    cursor:pointer;
+    margin-bottom:auto;
+}
+

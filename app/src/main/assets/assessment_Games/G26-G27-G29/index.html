@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	</link>
+	<link rel="stylesheet" href="css/animate.css">
+	</link>
+	<link rel="stylesheet" href="css/animations.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="css/commonKIXStyle.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	</link>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/commonScript.js"></script>
+	<script src="js/Script.js"></script>
+	<script src="js/Json.js"></script>
+</head>
+
+<body>
+	<audio id="playSound"></audio>
+	<div id="homeAndLogoDiv" class="centerClass pointerClass col-lg-12 col-md-12 col-xs-12 col-sm-12"
+		style="z-index: 1;">
+		<div id='queNo' class="borderClass boldClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+		<div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()'>
+			<i class="glyphicon glyphicon-repeat"></i>
+		</div>
+		<div id="modalIcon"
+			class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+			onclick='showModal()'>
+			<i class="glyphicon glyphicon-star"></i>
+		</div>
+		<div id="nextDiv" class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 "
+			onclick='Geometry.showNextGame()'>
+			<i class="glyphicon glyphicon-arrow-right"></i>
+		</div>
+	</div>
+	<div id="modalRoot"
+		class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1 noPadding' onclick='clearModal()'>
+				<i class="glyphicon glyphicon-repeat"></i>
+			</div>
+			<div id="answerKeyText" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 noPadding"
+				style="visibility: hidden;">Answer Key : </div>
+			<div id="closeDiv" class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 noPadding"
+				onclick="closeModal()">
+				<span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+			</div>
+		</div>
+		<div class="directCoding centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:13vh;">
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding"
+				style="display: flex;justify-content: space-evenly; align-items: center;">
+				<div class="noPadding txtClass col-lg-2 col-xm-2 col-sm-2 col-md-2" style="font-size:3vw; font-weight: bold;">Code</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+					onclick="clickOnCode(this)">0</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+					onclick="clickOnCode(this)">1</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+					onclick="clickOnCode(this)">2</div>
+			</div>
+		</div>
+		<div class="ansKeypadDiv centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="display: none;">
+			<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding">
+				<div class="txtClass col-sm-6 col-md-6 col-lg-6 col-xs-6 noPadding">Answer :</div>
+				<div id="inputText" class="box txtClass borderClass col-sm-5 col-md-5 col-lg-5 col-xs-5 "
+					style="background-color: unset;">
+				</div>
+			</div>
+			<div id="numPad" class="keyPad col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding"></div>
+		</div>
+	</div>
+	<div id="gamePage" class="noPadding opacityClass col-sm-12 col-md-12 col-lg-12 col-xs-12">
+		<div class="noPadding col-sm-12 col-xs-12 col-md-12 col-lg-12" >
+			<div class="noPadding col-sm-6 col-md-6 col-lg-6 col-xs-6">
+				<div id='questionDiv' class="noPadding col-lg-9 col-md-9 col-xs-9 col-sm-9" style="margin-left: 3.5vw;">
+					<img id="questionImage"
+						class="noPadding col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1"
+						style="height: 100%; object-fit: contain;">
+				</div>
+			</div>
+			<div class="noPadding col-lg-6 col-md-6 col-xs-6 col-sm-6">
+				<div id='dropArea' class="noPadding col-lg-9 col-md-9 col-xs-9 col-sm-9" style="margin-left: 3.5vw;">
+				</div>
+			</div>
+		</div>
+		<div id='separatorDiv' class="noPadding col-sm-12 col-xs-12 col-lg-12 col-md-12" >
+			<div id='type0'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-sm-offset-1 col-xs-offset-1 col-lg-offset-1 col-md-offset-1" style="top:3vh;">
+
+				<div id='imgDiv-type0option0'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+					<img id="type0option0"
+						class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10">
+				</div>
+				<div id='imgDiv-type0option1'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+					<img id="type0option1"
+						class="noPadding option  col-lg-10 col-md-10 col-xs-10 col-sm-10">
+				</div>
+
+				<div id='imgDiv-type0option3'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+					style="margin-top: 4vh;">
+					<img id="type0option3"
+						class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10">
+				</div>
+				<div id='imgDiv-type0option2'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+					style="margin-top: 3vh;">
+					<img id="type0option2"
+						class="noPadding option  col-lg-10 col-md-10 col-xs-10 col-sm-10">
+				</div>
+				
+			</div>
+
+			<div id='type1'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1" style="top: 0.5vh;">
+			    <div id='imgDiv-type1option2'
+					class="noPadding leftClass col-lg-3 col-md-3 col-xs-3 col-sm-3 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 "
+					style="height:120px; width:200px;">
+					<img id="type1option2"
+						class="noPadding option img-responsive" style="object-fit: contain; height: 100%;width: 200px;">
+				</div>
+				
+				<div id='imgDiv-type1option0'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+					style="height:105px; width:110px">
+					<img id="type1option0"
+						class="noPadding option img-responsive" style="width: 150px; height: 100%;">
+				</div>
+				<div id='imgDiv-type1option1'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 "
+					style="height:105px; width:110px;margin-top: 3vh;">
+					<img id="type1option1"
+						class="noPadding option img-responsive" style="width: 150px; height: 100%;">
+				</div>
+				<!-- </div> -->
+			</div>
+			
+			<div id='type2'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1" style="top:6vh;">
+				
+				<div id='imgDiv-type2option0'
+					class="noPadding col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 ">
+					<img id="type2option0" class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10 ">
+				</div>
+				<div id='imgDiv-type2option1'
+					class="noPadding col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 ">
+					<img id="type2option1" class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10 ">
+				</div>
+				
+				<div id='imgDiv-type2option3'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+					style="margin-top: 2vh;">
+					<img id="type2option3" class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10">
+				</div>
+				<div id='imgDiv-type2option2'
+					class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 "
+					style="margin-top: 2vh;">
+					<img id="type2option2" class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10 ">
+				</div>
+				
+			</div>
+
+			<div id='type3'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1" style="top:4vh;">
+			       <div id='imgDiv-type3option0' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+						style="height:100px;">
+						<img id="type3option0" class="noPadding option img-responsive"style="height:100%;">
+					</div>
+					
+					<div id='imgDiv-type3option1' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 "
+							style="height:60px;">
+							<img id="type3option1" class="noPadding option img-responsive" style="height: 100%; object-fit: contain;">
+					</div>
+					<div id='imgDiv-type3option2' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0 " style="height:60px; margin-top: 2vh;">
+							<img id="type3option2" class="noPadding option img-responsive"  style="height: 100%; object-fit: contain;">
+					</div>
+					<div id='imgDiv-type3option3' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0" style="height:50px;">
+						<img id="type3option3" class="noPadding option img-responsive" style="height:100%; object-fit: contain;">
+					</div>
+					<div id='imgDiv-type3option4' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0" style="height:60px;margin-top: 2vh;">
+						<img id="type3option4" class="noPadding option" style="height: 100%; object-fit: contain;">
+						</div>
+					
+			</div>
+		
+			<div id='type4'
+				class="noPadding hidden col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2">
+				<div class="row">
+					<div id='imgDiv-type4option0' class="noPadding leftClass col-lg-5 col-md-5 col-xs-5 col-sm-5"
+						style="height:98px;">
+						<img id="type4option0" class="option col-lg-8 col-md-8 col-xs-8 col-sm-8" style="height: 100%;">
+					</div>
+					<div class="noPadding col-lg-1 col-md-1 col-xs-1 col-sm-1" style='margin-left: 0.4vw;'>
+						<div id='imgDiv-type4option1' class="noPadding leftClass col-lg-12 col-md-12 col-xs-12 col-sm-12"
+							style="height:65px;">
+							<img id="type4option1" class="noPadding option col-lg-12 col-md-12 col-xs-12 col-sm-12">
+						</div>
+						<div id='imgDiv-type4option2' class="noPadding leftClass col-lg-12 col-md-12 col-xs-12 col-sm-12"
+							style="height:50px; margin-top: 8vh;">
+							<img id="type4option2" class="noPadding option col-lg-12 col-md-12 col-xs-12 col-sm-12"
+								style="height: 100%;">
+						</div>
+					</div>
+					<div class="noPadding col-lg-1 col-md-1 col-xs-1 col-sm-1" style='margin-left: 0.4vw;'>
+						<div id='imgDiv-type4option3' class="noPadding col-lg-12 col-md-12 col-xs-12 col-sm-12"
+							style="height:50px;">
+							<img id="type4option3" class="noPadding option col-lg-12 col-md-12 col-xs-12 col-sm-12"
+								style="height: 100%;">
+						</div>
+						<div id='imgDiv-type4option4' class="noPadding col-lg-12 col-md-12 col-xs-12 col-sm-12"
+							style="height:65px; margin-top: 8vh;">
+							<img id="type4option4" class="noPadding option col-lg-12 col-md-12 col-xs-12 col-sm-12">
+						</div>
+					</div>
+					<div class="noPadding col-lg-2 col-md-2 col-xs-2 col-sm-2" style='margin-left: 0.4vw;'>
+						<div id='imgDiv-type4option5' class="noPadding col-lg-10 col-md-10 col-xs-10 col-sm-10"
+							style="height:50px;">
+							<img id="type4option5" class="noPadding option col-lg-10 col-md-10 col-xs-10 col-sm-10"
+								style="height:100%">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='type5'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1">
+					<div id='imgDiv-type5option0' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0" style="top: 3vh;">
+							<img id="type5option0" class="noPadding option img-responsive" style="object-fit: contain; height: 100%;">
+						</div>
+						<div id='imgDiv-type5option1' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+							style="margin-top: 3vh;">
+							<img id="type5option1" class="noPadding option img-responsive" style="object-fit: contain; height: 100%;">
+						</div>
+		        		<div id='imgDiv-type5option2' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+							<img id="type5option2" class="noPadding option img-responsive" style="object-fit: contain; height: 100%;">
+						</div>
+						<div id='imgDiv-type5option3' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+							style="margin-top: 3vh;">
+							<img id="type5option3" class="noPadding option img-responsive" style="object-fit: contain; height: 100%;">
+						</div>
+						<div id='imgDiv-type5option4' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0" style="margin-top: 2vh;">
+							<img id="type5option4" class="noPadding option img-responsive"style="object-fit: contain; height: 100%;">
+						</div>
+						<div id='imgDiv-type5option5' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0"
+							style="margin-top: 3vh;">
+							<img id="type5option5" class="noPadding option img-responsive"style="object-fit: contain; height: 100%;">
+						</div>
+				    </div>
+			<div id='type6'
+				class="noPadding hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2" style="top: 6vh;">
+			
+					<div id='imgDiv-type6option0' class="noPadding marginLeft  col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height: 122px;">
+						<img id="type6option0" class="noPadding option col-lg-8 col-md-8 col-xs-8 col-sm-8">
+					</div>
+					<div id='imgDiv-type6option1' class="noPadding marginLeft col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height: 75px;">
+						<img id="type6option1" class="noPadding option col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+					</div>
+					<div id='imgDiv-type6option2' class="noPadding marginLeft  col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height: 122px;">
+						<img id="type6option2" class="noPadding option col-lg-8 col-md-8 col-xs-8 col-sm-8  col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+					</div>
+					<div id='imgDiv-type6option3' class="noPadding marginLeft col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height: 76px;">
+						<img id="type6option3" class="noPadding option col-lg-8 col-md-8 col-xs-8 col-sm-8  col-lg-offset-0 col-md-offset-0 col-xs-offset-0 col-sm-offset-0">
+					</div>
+			
+			</div>
+			<div id='type7'
+				class="noPadding  hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2" style="top: 7vh;">
+				
+					<div id='imgDiv-type7option0' class="noPadding marginLeft col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height: 120px; margin-left: 1vw;">
+						<img id="type7option0" class="noPadding option " style="height: 100%; object-fit: contain;">
+					</div>
+				
+						<div id='imgDiv-type7option1' class="noPadding marginLeft  col-lg-2 col-md-2 col-xs-2 col-sm-2 col-sm-offset-1 col-xs-offset-1 col-md-offset-1"
+							style="height:83px;">
+							<img id="type7option1" class="noPadding option" style="height: 100%; object-fit: contain;left: 7vw;" >
+						</div>
+						<div id='imgDiv-type7option2' class="noPadding marginLeft  col-lg-2 col-md-2 col-xs-2 col-sm-2"
+							style="height:83px;margin-top: 4vh;">
+							<img id="type7option2" class="noPadding option" style="height: 100%; object-fit: contain;left: 5vw;">
+						</div>
+				
+						<div id='imgDiv-type7option3' class="noPadding marginLeft col-lg-2 col-md-2 col-xs-2 col-sm-2"
+							style="height:90px;">
+							<img id="type7option3" class="noPadding option" style="height: 100%; object-fit: contain; left: 5vw;">
+						</div>
+					
+			</div>
+			<div id='type8'
+				class="hidden col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1" style="top: 8vh;">
+			
+						<div id='imgDiv-type8option0' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2"
+							style="height:87px;">
+							<img id="type8option0" class="noPadding option " style="height: 100%; object-fit: contain;left:5vw">
+						</div>
+						<div id='imgDiv-type8option3' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2" style="height:87px;">
+							<img id="type8option3" class="noPadding option" style="height: 100%; object-fit: contain; left: 5vw;">
+						</div>
+					
+					<div id='imgDiv-type8option1' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height:180px;margin-left: 7vw; top: -7vh;">
+						<img id="type8option1" class="noPadding option" style="height: 100%; object-fit: contain;left: 5vw;">
+					</div>
+					<div id='imgDiv-type8option2' class="noPadding leftClass col-lg-2 col-md-2 col-xs-2 col-sm-2"
+						style="height:180px;margin-left: 1vw; top: -7vh;">
+						<img id="type8option2" class="noPadding option" style="height: 100%; object-fit: contain; left: 5vw;">
+					</div>
+				</div>
+		    </div>
+	</div>
+	<div id='footer' class='toBottom pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+		<div id='questioMark' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
+			<i class="glyphicon glyphicon-question-sign"></i>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding" id="myModal" style='margin-right:3vw'>
+			<div class='centerClass txtClass borderTop col-sm-12 col-lg-12 col-md-12 col-xs-12 '>
+				<div id='heading' class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding'></div>
+				<div id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

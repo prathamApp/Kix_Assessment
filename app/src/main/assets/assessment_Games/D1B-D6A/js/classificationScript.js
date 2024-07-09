@@ -13,7 +13,7 @@ Classification.xArr1 = [];
 Classification.levelCtr = 5;
 Classification.questionCtr = 0;
 Classification.exFlag = false;
-var imageArray = [], queNo = '', jarCnt = 0, correctCnt = 0, dragCnt = 0, objCnt = 0, firstItr = 0, secondItr = 0, langCtr = 0;
+var imageArray = [], queNo = '', jarCnt = 0, correctCnt = 0, dragCnt = 0, objCnt = 0, firstItr = 0, secondItr = 0, langCtr = 6;
 
 
 
@@ -52,6 +52,8 @@ Classification.init = function () {
 	else
 		Classification.levelCtr = Math.floor(Math.random() * Classification.shapeImgData[langCtr].data.length);
 	Classification.playGame();
+	if (Classification.shapeImgData[langCtr].languageFont != null)
+		setFontFamilyForLang(Classification.shapeImgData[langCtr].languageFont);
 
 }
 setFontFamilyForLang = function (fontFilePath) {
@@ -143,21 +145,23 @@ Classification.setAllImages = function () {
 			objCnt = 3;
 			firstItr = 6;
 			secondItr = 6;
-			$(".Box").css("width", "18vw");
+			$(".Box").css("width", "24vw");
 			// $(".Box").css("margin-left", "-5vh");
 			$(".Box").css("height", "40vh");
 			$("#Box2").css("display", "none");
-			$(".dropBox").css("height", "37vh");
+			$("#Box1").css("margin-left", "-5vh");
+			$(".dropBox").css("height", "40vh");
 			$(".dropBox").css("margin-top", 0);
-			$("#dropDiv").css("margin-top", "5vh");
+			$("#dropDiv").css("margin-top", "-5vh");
 			$("#outerDiv").css("margin-top", "2vh");
+			// $("#outerDiv").css("margin-left", "5vw");
 			document.getElementById('Box1').style.backgroundImage = "url('images/D1B_1.png')";
 
 			//document.getElementById('Box1').style.marginLeft = "30vw";
 			$("#outerDiv").removeClass("heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
-			$("#outerDiv").addClass("heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-10 col-lg-offset-2 col-md-offset-2 col-xs-offset-2")
+			$("#outerDiv").addClass("heightCls col-sm-12 col-lg-12 col-md-12 col-xs-12")
 			$("#dropBox1").removeClass("dropBox noPadding col-sm-6 col-lg-6 col-md-6 col-xs-6 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3")
-			$("#dropBox1").addClass("dropBox noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12")
+			$("#dropBox1").addClass("dropBox noPadding col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2")
 			$("#dropDiv").removeClass("Box noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1")
 			$("#dropDiv").addClass("Box noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-5 col-lg-offset-5 col-md-offset-5 col-xs-offset-5")
 
@@ -305,26 +309,22 @@ Classification.setAllImages = function () {
 			objCnt = 8;
 			firstItr = 4;
 			secondItr = 4;
-			$(".Box").css("width", "18vw");
+			$(".Box").css("width", "24vw");
 			$("#Box1").css("margin-left", "-5vh");
 			$(".Box").css("height", "40vh");
 			$("#Box2").css("display", "none");
 			$(".dropBox").css("height", "37vh");
 			$(".dropBox").css("margin-top", 0);
-			$("#dropBox1").css("margin-top", 0);
-			$("#dropDiv").css("margin-top", "5vh");
+			$("#dropDiv").css("margin-top", "-5vh");
 			$("#outerDiv").css("margin-top", "2vh");
-
 			// document.getElementById('Box1').style.backgroundColor = "lightgrey";
 			document.getElementById('Box1').style.backgroundImage = "url('images/D1B_1.png')";
 			//document.getElementById('Box1').style.marginLeft = "35vw";
 			//document.getElementById('outerDiv').setAttribute("class", "heightCls col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3")
-			$("#outerDiv").removeClass("heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
-			$("#outerDiv").addClass("heightCls col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 			$("#dropBox1").removeClass("dropBox noPadding col-sm-6 col-lg-6 col-md-6 col-xs-6 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3")
-			$("#dropBox1").addClass("dropBox noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12")
-			$("#outerDiv").removeClass("noPadding heightCls col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
-			$("#outerDiv").addClass("noPadding heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2")
+			$("#dropBox1").addClass("dropBox noPadding col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2")
+			// $("#outerDiv").removeClass("heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
+			// $("#outerDiv").addClass("noPadding heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2")
 			$("#container1").removeClass("noPadding col-sm-11 col-lg-11 col-md-11 col-xs-11 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 			$("#container1").addClass("noPadding col-sm-11 col-lg-11 col-md-11 col-xs-11 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 			$("#container2").removeClass("noPadding col-sm-11 col-lg-11 col-md-11 col-xs-11 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
@@ -378,7 +378,7 @@ Classification.setAllImages = function () {
 			document.getElementById('Box1').style.backgroundImage = "url('images/D6A_1.png')";
 			// document.getElementById('Box1').style.backgroundColor = "lightgrey";
 
-			$("#outerDiv").css("margin-top", 0);
+			$("#outerDiv").css("margin-top", "10vh");
 			$("#outerDiv").removeClass("heightCls col-sm-10 col-lg-10 col-md-10 col-xs-10 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 			$("#outerDiv").addClass("col-sm-8 col-lg-8 col-md-8 col-xs-8 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 			//document.getElementById('Box1').style.marginLeft = "35vw";
@@ -451,10 +451,10 @@ Classification.createDraggableDivs = function () {
 			for (var i = 0; i < iterator; i++) {
 				dragDiv = document.createElement("DIV");
 				dragDiv.setAttribute("id", "dragDiv" + ctr);
-				if (i == 0)
-					dragDiv.setAttribute("class", "dragDivs noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1")
-				else
-					dragDiv.setAttribute("class", "dragDivs noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
+				// if (i == 0)
+				// 	dragDiv.setAttribute("class", "dragDivs noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1")
+				// else
+				dragDiv.setAttribute("class", "dragDivs noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1")
 				parentDiv.appendChild(dragDiv);
 
 				imgElement = document.createElement('img');
@@ -464,6 +464,8 @@ Classification.createDraggableDivs = function () {
 				ctr++;
 			}
 		}
+		$(".dragDivs").css("height", "15vh");
+		$(".dragDivs").css("width", "10vw")
 	}
 	else if (Classification.levelCtr == 7) {
 		ctr = 0;
@@ -518,6 +520,11 @@ Classification.createDraggableDivs = function () {
 	$('#outerDiv').droppable({
 		drop: Classification.checkElements
 	});
+	if (Classification.levelCtr == 0) {
+		$(".dragDivs").css("height", "17vh");
+		$(".dragDivs").css("width", "10vw");
+		$(".dragDivs").css("margin-left", "5vw");
+	}
 }
 //set Images at random position //
 Classification.setImagesAtRandomPos = function () {
@@ -644,6 +651,7 @@ Classification.checkAnswer = function () {
 resetGame = function () {
 	$("#container1").empty();
 	$("#container2").empty();
+	$("#container3").empty();
 	Classification.createDraggableDivs();
 	Classification.setImagesAtRandomPos();
 	Classification.attemptFlag = false;
@@ -656,7 +664,7 @@ resetGame = function () {
 		else
 			questionText = Classification.shapeImgData[langCtr].data[Classification.levelCtr].question2;
 		document.getElementById("heading").innerHTML = questionText;
-	}
+	} 
 
 }
 

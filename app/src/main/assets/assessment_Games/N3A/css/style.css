@@ -15,7 +15,7 @@
 	margin-top: -1%;
 }
 #heading{
-	font-size: 1.6vw;
+	font-size: 1.9vw;
 }
 
 .slot
@@ -54,7 +54,9 @@
 	border: 0.3vw solid black;
 }
 .option-img{
-	height: 38vh; 
+	height: 36vh;
+	border: 2px solid black; 
+	margin-top: 2vh;
 }
 
 .objectsOnSlots

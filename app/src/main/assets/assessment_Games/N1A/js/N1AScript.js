@@ -4,7 +4,7 @@ var Utils = {};
 Utils.Path = '';
 Utils.mobileDeviceFlag = false;
 var starttime = "", scoredmarks = "0", label = 'null';
-N1A.langCtr = 0;
+N1A.langCtr = 2;
 var startYear = 2000;
 var endYear = 2020;
 var month = 0;
@@ -91,14 +91,25 @@ N1A.playGame = function () {
 		$("#questionAndAnsDiv").show();
 		$("#DvCalenderCont").hide();
 	}
-
-
 	N1A.setQuestion();
+	if (N1A.questions[N1A.langCtr].languageFont != null)
+		setFontFamilyForLang(N1A.questions[N1A.langCtr].languageFont);
+
 }
+setFontFamilyForLang = function (fontFilePath) {
+	var newStyle = "<style>" +
+		"@font-face { " +
+		"font-family: 'CustomFontFamily';" +
+		"src: url('" + fontFilePath + "') format('truetype');" +
+		"} </style>";
+	$("head").append(newStyle);
+	$("body").css("font-family", "CustomFontFamily");
+}
+
 N1A.setQuestion = function () {
 	rno = Math.floor(Math.random() * N1A.questions[N1A.langCtr].data.length);
 	img = N1A.questions[N1A.langCtr].data[N1A.level].image;
-	N1A.answer = parseInt(N1A.questions[N1A.langCtr].data[N1A.level].answer);
+	N1A.answer = N1A.questions[N1A.langCtr].data[N1A.level].answer;
 	document.getElementById("answerKeyText").innerHTML = ansKeyTextArr[N1A.langCtr] + " : "
 	$("#answerKeyText").append(N1A.answer);
 	$("#inputText").text("");
@@ -141,14 +152,9 @@ N1A.checkAnswer = function () {
 			showModal();
 		}
 		else {
-			if (parseInt(document.getElementById("inputText").innerHTML) == N1A.answer) {
-				scoredmarks = "2";
-			}
-			else {
-				scoredmarks = "1";
 
-			}
-			label = $("#inputText").text();
+			scoredmarks = $("#inputText").text();
+
 			//document.getElementById("playSound").play();
 			console.log(scoredmarks, starttime, label);
 			// alert("ScoredMarks = " + scoredmarks + "," + " " + "Label = " + label);

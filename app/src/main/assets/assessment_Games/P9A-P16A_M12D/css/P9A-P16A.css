@@ -1,0 +1,57 @@
+
+
+#gamePage{
+	position: absolute;
+  top: 11.5vh;
+}
+.divBorder{
+  border-radius: 2vh;
+  border: 1px solid black;
+  /* box-shadow: 3px 3px 3px 3px; */
+} 
+#queImg{
+  border-radius: 2vh;
+}
+
+#questionDiv{
+  margin-top: 8vh;
+}
+#ansOptionDiv{
+  z-index: 2;
+  margin-top: 15vh;
+  right: 2vw;
+}
+.rightImgCss{
+  padding-left: 1vw;
+  padding-right: 0vw;
+}
+.rightCss{
+  height: 20vh;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.zoomImg{
+  height: 100%;
+}
+.pZoomImg{
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  /* object-fit: contain; */
+}
+
+.blink_me {
+  /* background-color: rgba(255, 255, 255, 0.548);  */
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker
+{
+  50%
+  {
+      opacity:0.5;
+  }
+}

@@ -7,7 +7,7 @@ gamesArr=['M8A','M8B'];
 counter = 0;
 score = '0';
 len = 2;
-currentLang = 0; gameFlag = false;
+currentLang = 5; gameFlag = false;
 /*-- Document Ready Starts --*/
 $(document).ready(function() {		
 	// device detection
@@ -90,14 +90,18 @@ function InitActivity(){
 		   $("#heading").css({"text-align":"right" , "direction" : "rtl"});
       }
       else{
-          currentGameData =QuesArr[currentLang ];	
+          currentGameData =QuesArr[currentLang];	
 		  if(currentLang == 3)
 		      $("#heading").css({"text-align":"right" , "direction" : "rtl"});
        }
 	$('#modalIcon').css('visibility','hidden');
-	/* $("#answerKeyText").text(" "+QuesArr[currentLang].QuesText);
-	$("#answerKeyText").append(" "+QuesArr[currentLang].gamedata[currentNode].AnsDiff); */
-	$('#inputText').text('');
+	 $('#inputText').text('');
+
+	 if(QuesArr[currentLang].languageFont!=null)
+	    setFontFamilyForLang(QuesArr[currentLang].languageFont);
+
+		
+
 	createNumberpad();
     ReadyQuestions();   	
 	$("#DvInpAns").InputFilter0(function (value) {
@@ -118,9 +122,8 @@ function InitActivity(){
 			var changeLeft = ui.position.left;
 
 			var newLeft = changeLeft / DragDropScale.x; //newScale u can get jquery
-			console.log(newLeft);
+		
 			var changeTop = ui.position.top;
-			console.log(changeTop);
 			var newTop = changeTop / DragDropScale.y; //newScale u can get jquery
 
 			dragItem = $(this);		
@@ -131,7 +134,7 @@ function InitActivity(){
 			  CurrentDropID = 0;
 			else
 			   CurrentDropID = 1;
-			//console.log(event.originalEvent.clientX, event.originalEvent.clientY);
+			
 		},
 		stop: function (e, ui){
 			dragItem.draggable( 'option', 'revert', false )
@@ -142,6 +145,7 @@ function InitActivity(){
 					ShowDiv("DvExampleBlock00"+ "_" + DropCount);	
 					//DropCount++;
 			  }
+			      $("#DvDrop0").css("width", 150 + (120 * DropCount) + "px");
 			  }
 			if(IsDropped){	
 				if(!gameFlag){
@@ -149,6 +153,7 @@ function InitActivity(){
 						HideDiv($(this).attr("id"));
 						DropCount++;				
 				}
+				    
 			}	
 				else{	
 				if(CurrentDropID == 0){
@@ -224,7 +229,7 @@ function InitActivity(){
 					else{
 						Answer = "Wrong";					
 					}
-					//console.log(Answer);
+					
 				}
 			
 		});		
@@ -250,6 +255,15 @@ function ReadyQuestions(){
 	//LoadNextQuestion();           
 }
 
+setFontFamilyForLang = function (fontFilePath) {
+    var newStyle = "<style>" +
+        "@font-face { " +
+        "font-family: 'CustomFontFamily';" +
+        "src: url('" + fontFilePath + "') format('truetype');" +
+        "} </style>";
+    $("head").append(newStyle);
+    $("body").css("font-family", "CustomFontFamily");
+}
 /*-- screen 0 functions : starts --*/
 
 //Shuffle Array
@@ -319,7 +333,7 @@ function LoadNextQuestion(){
 		currentNode = currentGameData.gamedata.find(el => el.ActNo === randomGame)
     }
     
-	$("#answerKeyText").text(" "+QuesArr[currentLang].QuesText);
+	$("#answerKeyText").text(" "+QuesArr[currentLang].ans);
 	//$("#answerKeyText").append(" "+QuesArr[currentLang].gamedata[currentNode].AnsDiff);
 	$("#answerKeyText").append(" "+currentNode.AnsDiff);
 	UpdateActivityHeading(currentNode.Ques);    

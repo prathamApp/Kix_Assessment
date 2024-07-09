@@ -1,0 +1,28 @@
+
+
+#questionDiv{
+  color: black;
+  font-size: 5vw;
+  font-weight: bold;
+}
+.divBorder{
+  border-radius: 2vh;
+  border: 1px solid black;
+/* box-shadow: 3px 3px 3px 3px; */
+}
+.imgcss{
+  border-radius: 2vh;
+}
+.headerClass{
+	z-index:1;
+}
+#ansOptionDiv{
+  right: 4vw;
+  z-index: 2;
+  margin-top: 8vh;
+}
+.optionDivCss{
+  height: 20vh;
+  margin-top: 2.5vh;
+  margin-left: 5vw;
+}

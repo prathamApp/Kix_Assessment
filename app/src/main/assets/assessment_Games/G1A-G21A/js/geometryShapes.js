@@ -13,8 +13,20 @@ $(document).ready(function () {
         Utils.mobileDeviceFlag = true;
         showQues();
        GeometryShapes.showQuestion();
+      
       /*  $('.queOption1').hide(); */
 });
+
+setFontFamilyForLang = function (fontFilePath) {
+    var newStyle = "<style>" +
+        "@font-face { " +
+        "font-family: 'CustomFontFamily';" +
+        "src: url('" + fontFilePath + "') format('truetype');" +
+        "} </style>";
+    $("head").append(newStyle);
+    $("body").css("font-family", "CustomFontFamily");
+}
+
 function showQues(){
     $('#questioMark').hide();
     $('#myModal').css('display','block');
@@ -53,7 +65,10 @@ GeometryShapes.showQuestion=function()
        }
     }
     else
-		langIndex = 0;//Math.floor(Math.random() * GeometryShapes.data.length);			//GET RANDOM GAME LANGUAGE
+		langIndex = 9;//Math.floor(Math.random() * GeometryShapes.data.length);			//GET RANDOM GAME LANGUAGE
+    
+    if(GeometryShapes.data[langIndex].languageFont!=null)
+        setFontFamilyForLang(GeometryShapes.data[langIndex].languageFont);
         
     if(Utils.mobileDeviceFlag)
 	{
@@ -122,6 +137,7 @@ GeometryShapes.checkAns=function(ele)
     $('#'+ele).addClass('border');
     answer=$('#'+ele).data('imgName');
     label=$('#'+ele).data('imgName');
+	label=label+".png";
 }
 
 GeometryShapes.nextQue=function(){

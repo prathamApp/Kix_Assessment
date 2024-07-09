@@ -46,30 +46,28 @@ function hideQuestion(){
 
 identifyPattern.play = function()
 {
-	var lang = 0, randLang = '';
+	var langIndex = 0, randLang = '';
     //Utils.mobileDeviceFlag = true;
     if(Utils.mobileDeviceFlag){					//For mobile device.
 		randLang = Android.getGameLang();
 		//randLang = 'Hindi-India';
-		lang = identifyPattern.patternData.findIndex(obj => obj.language.toLowerCase().trim()  == randLang.toLowerCase().trim() );
+		langIndex = identifyPattern.patternData.findIndex(obj => obj.language.toLowerCase().trim()  == randLang.toLowerCase().trim() );
         var gameCode = Android.getGameID();
         //var gameCode = "P5A";
-        identifyPattern.randQue = identifyPattern.patternData[lang].gameArray.findIndex(obj => obj.gameName == gameCode);
+        identifyPattern.randQue = identifyPattern.patternData[langIndex].gameArray.findIndex(obj => obj.gameName == gameCode);
     }
     else{ 
-        identifyPattern.randQue = Math.floor(Math.random() * identifyPattern.patternData[lang].gameArray.length);                                          //For browser
+        identifyPattern.randQue = Math.floor(Math.random() * identifyPattern.patternData[langIndex].gameArray.length);                                          //For browser
     } 
 
-    if(lang == 10 || randLang == 'Urdu-Pakistan'){
+    if(langIndex == 10 || randLang == 'Urdu-Pakistan'){
         $("#heading").css('direction', 'rtl');
     }
-    //identifyPattern.randQue = 3;
-	identifyPattern.currentGame = identifyPattern.patternData[lang].gameArray[identifyPattern.randQue];
+    //identifyPattern.randQue = 2;
+	identifyPattern.currentGame = identifyPattern.patternData[langIndex].gameArray[identifyPattern.randQue];
     
     if(identifyPattern.currentGame.gameName == "N8A"){      //N8A
         $("#heading").css('font-size', '1.6vw');   
-        $("#questionDiv").css('border-radius', '2vh');
-        $("#questionDiv").css('border', '2px solid black');
     }
     else
         $("#heading").css('font-size', identifyPattern.currentGame.fontSize);   
@@ -82,7 +80,20 @@ identifyPattern.play = function()
 	starttime = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     questionId = identifyPattern.currentGame.gameName;
 
+    if(identifyPattern.patternData[langIndex].languageFont!=null)
+        setFontFamilyForLang(identifyPattern.patternData[langIndex].languageFont);
+        
     identifyPattern.showQuestion();
+}
+
+setFontFamilyForLang = function (fontFilePath) {
+    var newStyle = "<style>" +
+        "@font-face { " +
+        "font-family: 'CustomFontFamily';" +
+        "src: url('" + fontFilePath + "') format('truetype');" +
+        "} </style>";
+    $("head").append(newStyle);
+    $("body").css("font-family", "CustomFontFamily");
 }
 
 identifyPattern.showQuestion = function()      //Show Question and Answer.
@@ -163,7 +174,7 @@ identifyPattern.showQuestion = function()      //Show Question and Answer.
         image.src = Utils.Path + "images/" + optionArray[i].ansImg + ".png";
         $("#ansDiv"+(i+1)).data('ans',optionArray[i].answer);
         $("#ansDiv"+(i+1)).data('ansImg',optionArray[i].ansImg);
-        $("#ansDiv"+(i+1)).data('ansData',optionArray[i].ansData);
+        $("#ansDiv"+(i+1)).data('ansData',optionArray[i].ansImg);
     }    
 }
 
@@ -225,7 +236,7 @@ identifyPattern.selectOption = function(optionId)
     $("#"+ identifyPattern.previousClickedOption).css('border', '2px solid black');
     identifyPattern.clickedOptionData = $("#"+ optionId).data('ans');
     //console.log(identifyPattern.clickedOptionData);   
-    label = $("#"+ optionId).data('ansData'); 
+    label = $("#"+ optionId).data('ansData')+ '.png'; 
     $("#"+ optionId).css('border', '6px solid rgb(255, 190, 0)');
     identifyPattern.previousClickedOption = optionId;
 }

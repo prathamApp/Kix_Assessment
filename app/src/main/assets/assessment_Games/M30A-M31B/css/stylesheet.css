@@ -1,0 +1,378 @@
+/* #questionDiv{
+  margin: -15vh 0vh 0vh 2vw;
+} */
+
+#questionImg {
+  height: 60vh;
+}
+
+#AnswerDiv {
+  /* margin-top: 2vh; */
+  /* height: 15vh; */
+  background-color: rgba(248, 248, 255, 0.7);
+  color: black;
+  /* border: 2px solid black; */
+  text-align: center;
+  font-weight: bold;
+  /* font-size: 4vw; */
+  /* line-height: 15vh; */
+}
+
+#textArea {
+  height: 10vh;
+  border: 2px solid black;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#submitDiv {
+  margin-top: 5vh;
+}
+
+#submit {
+  pointer-events: none;
+}
+
+#numberpadDiv {
+  display: none;
+}
+
+#questionText {
+  color: rgb(0, 0, 0);
+  font-size: 3.3vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+/* .buttonClass {
+  color: rgb(0, 0, 0);
+  font-size: 3.3vw;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 13vh;
+  border: 2px solid rgb(209, 233, 104);
+  border-radius: 2vh;
+  margin-top: 1vh;
+  background-color: rgba(248, 248, 255,0.7);
+  box-shadow: 2px 3px 4px black;
+} */
+.glyphicon {
+  top: 0px;
+  line-height: inherit;
+}
+
+.glyphicon {
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.glyphiColor {
+  color: black;
+  font-size: 7vh;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#queNo {
+  font-size: 2.2vw;
+
+}
+
+#buttonId43 {
+  display: none;
+}
+
+#responseDiv {
+  margin-top: 5vh;
+}
+
+.responses {
+  background-color: rgb(164, 164, 164);
+  color: black;
+  font-weight: bold;
+  font-size: 2vw;
+  text-align: center;
+  line-height: 7vh;
+  height: 7vh;
+  border: 2px solid black;
+  border-radius: 2vh;
+}
+
+#code {
+  background-color: rgb(164, 164, 164);
+  color: black;
+  font-weight: bold;
+  font-size: 2.2vw;
+  text-align: center;
+  line-height: 8vh;
+  height: 9vh;
+  border: 2px solid black;
+  border-radius: 2vh;
+  margin-top: -1vh;
+}
+
+.clicked {
+  border: 2px solid rgb(255, 190, 0);
+}
+
+#questioMark {
+  display: none;
+}
+
+.days {
+  /* margin: 2vh; */
+  font-size: 1.6vw;
+}
+
+#modalRoot {
+  height: 35vh;
+}
+
+#day4 {
+  margin-left: 5vw;
+}
+
+#responseDays {
+  margin-top: 6vh;
+}
+
+#answerKeyText {
+  /* visibility: hidden; */
+}
+
+#modalIcon {
+  /* visibility: hidden; */
+}
+
+#calendar {
+  border: 10px solid;
+}
+
+/* ************************* */
+
+/*--Player CSS Starts --*/
+div#DvMainCont {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  background: #ffffff;
+  /*background: rgba(0,0,0,0.5);*/
+}
+
+div#DvMainCont.ClsAbs {
+  position: absolute !important;
+}
+
+/* div#DvGameBlocker{width:1280px; height:720px;	position: absolute; margin: auto; z-index: 1000; background: rgba(0,0,0,0.5);}
+.ClsShowGameBlocker{display: block !important;}
+.ClsHideGameBlocker{display: none !important;} */
+
+div#DvScrCont {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/*-- Global css : Starts --*/
+.ClsDisableCont {
+  pointer-events: none;
+}
+
+.ClsEnableCont {
+  pointer-events: auto;
+}
+
+div#resetDiv {
+  cursor: pointer;
+}
+
+div#nextDiv {
+  cursor: pointer;
+}
+
+div#questioMark {
+  cursor: pointer;
+}
+
+/*-- Screen 0 : Starts --*/
+div#DvScr0 {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/*-- Body : Starts --*/
+div#DvBody {
+  width: 1240px;
+  height: 500px;
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  /*background: rgba(0,0,0,0.5);*/
+}
+
+
+div#DvCalenderCont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.calendar {
+  margin-left: 20vh;
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  /*box-shadow: 0px 5px 10px rgba(0,0,0,0.4);*/
+}
+
+.calendar .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  color: #1caff6;
+  text-align: center;
+  font-size: 14pt;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 160px;
+  left: 0px;
+  z-index: 2000;
+  display: none !important;
+}
+
+.calendar .dropdown .dropdown-item {
+  cursor: pointer;
+  opacity: .7;
+  /*transition: .5s opacity;*/
+}
+
+.calendar .dropdown .dropdown-item:hover {
+  opacity: 1;
+}
+
+.calendar .years {
+  display: none;
+}
+
+.calendar .title {
+  text-align: center;
+  font-size: 20pt;
+}
+
+.calendar .calendar-btn {
+  float: left;
+  background-color: #6996eb;
+  color: white;
+  text-align: center;
+  font-size: 2.5vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  width: 100%;
+  /* margin-left:2.5%; */
+  cursor: default;
+  /*transition: .5s background-color;*/
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* .calendar .calendar-btn:hover{
+    background-color:#1f71a1;
+} */
+
+.calendar .year-btn {
+  float: right;
+}
+
+.calendar .calendar-dates .days .day {
+  float: left;
+  width: 12%;
+  margin: 0.60%;
+  padding: 1%;
+  font-size: 1.5vw;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 1px #ddd;
+  cursor: pointer;
+}
+
+.calendar .calendar-dates .days .day.blank {
+  background-color: white;
+  border: none;
+}
+
+.calendar .calendar-dates .days .day.selected {
+  background-color: #1caff6;
+  color: white;
+  cursor: pointer;
+  opacity: .5;
+  transition: .5s opacity;
+}
+
+.calendar .calendar-dates .days .day.selected:hover {
+  opacity: 1;
+}
+
+.calendar .calendar-dates .days .day.label {
+  height: 40px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.clear {
+  clear: both;
+}
+
+div#DvYearName {
+  display: none !important;
+}
+
+div#DvMonthName {
+  font-family: 'Mangal-Regular' !important;
+}
+
+.ClsSelectedDay {
+  background: #6996eb !important;
+  color: #ffffff !important;
+}
+
+.ClsWrongSelect {
+  background: #ff0000 !important;
+  color: #000000 !important;
+}
+
+.ClsRightSelect {
+  background: #00ff00 !important;
+  color: #000000 !important;
+}

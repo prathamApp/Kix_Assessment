@@ -1,0 +1,14 @@
+.box
+{
+	background-color: unset;
+	/* height: 10vh; */
+	background: unset;
+	margin-left: 1vw;
+	font-size: 4vw;
+	border-radius: unset;
+}
+.question
+{
+	font-size: '4vw';
+	text-align: center';
+}

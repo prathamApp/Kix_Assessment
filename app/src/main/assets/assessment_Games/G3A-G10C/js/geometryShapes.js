@@ -37,7 +37,15 @@ function resetGame(){
     scoredmarks='0';
     label='null';
 }
-
+setFontFamilyForLang = function (fontFilePath) {
+    var newStyle = "<style>" +
+        "@font-face { " +
+        "font-family: 'CustomFontFamily';" +
+        "src: url('" + fontFilePath + "') format('truetype');" +
+        "} </style>";
+    $("head").append(newStyle);
+    $("body").css("font-family", "CustomFontFamily");
+}
 GeometryShapes.showQuestion=function()
 {
     var d;
@@ -54,7 +62,7 @@ GeometryShapes.showQuestion=function()
             $('#heading').css('direction','rtl');
         }
         langIndex = GeometryShapes.data.indexOf(lang);
-		
+	
         function checkIndex(i) {
             if (i.language.toLowerCase().trim() == val.toLowerCase().trim())
                 return i;
@@ -63,6 +71,9 @@ GeometryShapes.showQuestion=function()
     else 
 		langIndex = 0;//Math.floor(Math.random() * GeometryShapes.data.length);			//GET RANDOM GAME LANGUAGE
 
+    if(GeometryShapes.data[langIndex].languageFont!=null)
+        setFontFamilyForLang(GeometryShapes.data[langIndex].languageFont); 
+        
     if(Utils.mobileDeviceFlag)
 	{
 			var val=Android.getGameID();
@@ -91,7 +102,7 @@ GeometryShapes.showQuestion=function()
     /* $('#heading').text(GeometryShapes.data[GeometryShapes.count].question+" ?"); */
 	document.getElementById('heading').innerHTML=GeometryShapes.data[langIndex].nodeInfo[GeometryShapes.count].question;
 	$('#heading').css('font-size',GeometryShapes.data[langIndex].nodeInfo[GeometryShapes.count].fontSize+'vw');
-    GeometryShapes.createDiv('pattern','options col-xs-2 col-sm-2 col-lg-2 col-md-2 col-xs-offset-1  col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding','option');   
+    GeometryShapes.createDiv('pattern','options col-xs-3 col-sm-3 col-lg-3 col-md-3 noPadding','option');   
 }
 
 GeometryShapes.createDiv=function(id,className,parentDiv){
@@ -100,10 +111,16 @@ GeometryShapes.createDiv=function(id,className,parentDiv){
     {
         var div=document.createElement('div');
         $(div).prop('id',id+(i+1));
-        if(i==0)
-            $(div).prop('class','options col-xs-2 col-sm-2 col-lg-2 col-md-2 noPadding');
+        if(GeometryShapes.data[langIndex].nodeInfo[GeometryShapes.count].queNo !== 'G14B')
+           {
+               if(i==0)
+                 $(div).prop('class','options col-xs-2 col-sm-2 col-lg-2 col-md-2 noPadding');
+                else
+                 $(div).prop('class','options col-xs-2 col-sm-2 col-lg-2 col-md-2 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding');
+           } 
         else
             $(div).prop('class',className);
+            
         $(div).on('click',function(){
             GeometryShapes.checkAns(this.id);
         });
@@ -133,6 +150,7 @@ GeometryShapes.checkAns=function(ele)
     $(".options").removeClass('border');
     $('#'+ele).addClass('border');    
     label=$("#"+ele).data("imgName");
+	label=label+".png";
     resetVar=$("#"+ele).data("imgName");
     if(GeometryShapes.data[langIndex].nodeInfo[GeometryShapes.count].que==resetVar)
         scoredmarks='2';

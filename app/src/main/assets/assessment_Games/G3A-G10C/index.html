@@ -4,14 +4,14 @@
 <head>
     <title>Geometry</title>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src='js/bootstrap.min.js'></script>
-    <link href="css/stylesheet.css" rel="stylesheet">
-    <link href='css/commonKIXStyle.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel='stylesheet' href='css/commonKIXStyle.css'>
     <script src="js/geometryShapes.js"></script>
     <script src="js/commomScript.js"></script>
     <script src="js/geometryShapesData.js"></script>
@@ -20,16 +20,16 @@
 <body>
     <div class='header col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
         <div class="pointerClass centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
-            <div class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1" id='queNo'  style="font-weight: bold;"></div>
-            <div class='col-xs-1 col-sm-1 col-lg-1 col-md-1' id='resetDiv' onclick='resetGame()'>
+            <div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"  style="font-weight: bold;"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()'>
                 <i class="glyphicon glyphicon-repeat"></i>
             </div>
-            <div class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
-                id="modalIcon"
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
                 onclick='showModal()'>
                 <i class="glyphicon glyphicon-star"></i>
             </div>
-            <div class="text-center noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1" id="nextDiv"
+            <div id="nextDiv" class="text-center noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"
                 onclick='GeometryShapes.nextQuestion()'>
                 <i class="glyphicon glyphicon-arrow-right"></i>
             </div>
@@ -38,7 +38,7 @@
         <div class='opacityClass col-xs-12 col-sm-12 col-lg-12 col-md-12 pointerClass noPadding'>
             <div
                 class='pattern1 queClass col-xs-10 col-sm-10 col-lg-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding'>
-                <div class='text-center col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding' id='option'>
+                <div id='option' class='text-center col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
                 </div>
             </div>
             <!-- <div class='directCode col-xs-9 col-sm-9 col-lg-9 col-md-9 centerClass noPadding' style='margin-top:60px;height:8vh'>
@@ -49,14 +49,14 @@
                 </div> -->
         </div>
 
-        <div class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding"
-		id="modalRoot">
+        <div id="modalRoot"
+		class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
 		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-			<div class='col-xs-1 col-sm-1 col-lg-1 col-md-1' id='clearDiv' onclick='clearModal()'>
+			<div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='clearModal()'>
 				<i class="glyphicon glyphicon-repeat"></i>
 			</div>
-			<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2 noPadding" id="answerKeyText">Answer Key : </div>
-			<div class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" id="closeDiv" onclick="closeModal()">
+			<div id="answerKeyText" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2 noPadding">Answer Key : </div>
+			<div id="closeDiv" class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" onclick="closeModal()">
 				<span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
 			</div>
 		</div>
@@ -78,14 +78,14 @@
 		</div> -->
 	</div>
 
-        <div class='pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding' id='footer'>
-            <div class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' id='questioMark' onclick='showQues()'>
+        <div id='footer' class='pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
                 <i class="glyphicon glyphicon-question-sign"></i>
             </div>
             <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 " id="myModal">
                 <div class='borderTop centerClass txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12'>
-                    <div class='txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding' id='heading' ></div>
-                    <div class="glyphicon glyphicon-remove" id='close' onclick='hideQuestion()'></div>
+                    <div id='heading' class='txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding' ></div>
+                    <div id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
                 </div>
             </div>
         </div>

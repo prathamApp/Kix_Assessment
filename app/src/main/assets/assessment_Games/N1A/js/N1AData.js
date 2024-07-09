@@ -11,6 +11,7 @@ N1A.AcknowledgementPageData =
 N1A.questions = [
     {
         "lang": "English-Uganda",
+        'languageFont': 'fonts/Andika-Regular.ttf',
         "data": [
             {
                 "queNo": "N1A",
@@ -58,7 +59,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'>(चित्र की ओर इशारा करते हुए कहें)</span> इसे ध्यान से देखो | अब, मुझे गिनकर बताओ यहाँ कितने सेब हैं?",
+                "questionText": " <span style='color:blue'>(चित्र की ओर इशारा करते हुए कहें)</span> इसे ध्यान से देखो। अब, मुझे गिनकर बताओ कि यहाँ कितनी मछलियाँ हैं?",
             },
             {
                 "queNo": "N1B",
@@ -95,12 +96,13 @@ N1A.questions = [
     },
     {
         "lang": "Kiswahili-Kenya",
+        'languageFont': 'fonts/Andika-Regular.ttf',
         "data": [
             {
                 "queNo": "N1A",
                 "image": "N1A.png",
-                "answer": "5",
-                "questionText": " <span style='color:blue'>(Elekeza kidole kwenye picha kisha useme)</span> Tazama hapa kwa makini. Sasa hesabu kisha uniambie, kuna matufaha/apples mangapi?",
+                "answer": "tano/5",
+                "questionText": " <span style='color:blue'>(Onyesha picha kisha useme)</span> Angalia hili kwa makini. Sasa, hesabu na uniambie, kuna samaki wangapi?",
             },
             {
                 "queNo": "N1B",
@@ -142,7 +144,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'> (Onesha picha na useme) </span> Angalia hapa kwa makini. Sasa hesabu na uniambie, kuna maembe mangapi?",
+                "questionText": " <span style='color:blue'>(Onesha picha na useme)</span> Angalia hapa kwa makini. Sasa, hesabu na uniambie, kuna samaki wangapi jumla?",
             },
             {
                 "queNo": "N1B",
@@ -184,40 +186,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " اسے <span style='color:blue'>(تصویر کی طرف اشارہ کریں)</span> غور سے دیکھو۔ گن کر بتاؤ کہ اس <span style='color:blue'>(تصویر کی طرف اشارہ کریں)</span>پر کل کتنے سیب ہیں؟",
-            },
-            {
-                "queNo": "N1B",
-                "image": "N1B.png",
-                "answer": "6",
-                "questionText": " <span style='color:blue'>(تصویر کی طرف اشارہ کریں اور کہیں)</span> اسے غور سے دیکھو۔ اب گن کر مجھے بتائیں کہ وہاں کتنی پیالیاں ہیں؟",
-
-            },
-            {
-                "queNo": "M30B",
-                "image": "M29A.png",
-                "answer": "20",
-                "questionText": " <span style='color:blue'>(کلینڈر کی طرف اشارہ کریں اور بولیں)</span> اس کلینڈر کو غور سے دیکھیں اور بتائیں تیسرے اتوار کو کیا تاریخ ہے؟",
-            },
-            {
-                "queNo": "M31A",
-                "image": "M29A.png",
-                "answer": "15",
-                "questionText": " <span style='color:blue'>(کلینڈر کی طرف اشارہ کریں اور بولیں)</span> اس کلینڈر کی طرف غور سے دکھیں اور بتائیں13 سے دو دن بعد کیا تاریخ ہو گی؟",
-            },
-            {
-                "queNo": "N76A",
-                "image": "N76A.png",
-                "answer": "3",
-                "questionText": ` <span style='color:blue'>(تصویر کی طرف اشارہ کریں اور کہیں)</span>، اسے غور سے دیکھو۔میں ایک سوال پڑھ کر سناؤں گا/گی، اسے غور سے سنو اور حل کرو۔
- 
-                اس لڑکی <span style='color:blue'>(تصویر میں لڑکی کی طرف اشارہ کریں)</span> کے پاس بستے<span style='color:blue'>(تصویر میں پہلے بستے کی طرف اشارہ کریں)</span> میں 5 ٹافیاں ہیں۔ اس نے کچھ اور ٹافیاں اپنے دوست <span style='color:blue'>(تصویر میں لڑکے کی طرف اشارہ کریں)</span> سے لیں۔ اب اس کے پاس اس بستے <span style='color:blue'>(تصویر میں تیسرے بستے کی طرف اشارہ کریں)</span>۔ اس کے دوست نے اسے کتنی ٹافیاں دیں؟`,
-            },
-            {
-                "queNo": "N79A",
-                "image": "N79A.png",
-                "answer": "5",
-                "questionText": " <span style='color:blue'>(تصویر کی طرف اشارہ کریں اور کہیں)</span>، اسے غور سے دیکھو۔میں ایک سوال پڑھ کر سناؤں گا/گی، اسے غور سے سنو اور حل کرو۔لڑکے <span style='color:blue'>(پہلی تصویر میں لڑکے اور غبارے کی طرف اشارہ کریں)</span> کے پاس 13 غبارے تھے۔ اس نے دکان<span style='color:blue'>(تصویر میں دکان کی طرف اشارہ کریں)</span> سے کچھ اور غبارے خریدے، اب اس کے پاس کل 18 غبارے <span style='color:blue'>(تیسری تصویر میں لڑکے اور غبارے کی طرف اشارہ کریں)</span> ہیں۔ اس نے کل کتنے غبارے خریدے؟",
+                "questionText": " <span style='color:blue'>(تصویر کی طرف اشارہ کریں اور بولیں)</span> اسے غور سے دیکھیں۔ اب گن کر بتائیں ادھر کتنی مچھلیاں ہیں؟",
             },
         ]
     },
@@ -228,91 +197,31 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'>(Señala la imagen y di)</span> Obsérvalo con atención. Ahora, cuenta y dime, ¿cuántas manzanas hay?",
-            },
-            {
-                "queNo": "N1B",
-                "image": "N1B.png",
-                "answer": "6",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now, count and tell me how many cups are there?",
-
-            },
-            {
-                "queNo": "M30B",
-                "image": "M29A.png",
-                "answer": "20",
-                "questionText": " <span style='color:blue'>(Point to the calendar and say)</span> Look at this calendar carefully. Now tell me, what is the date on the third Sunday?",
-            },
-            {
-                "queNo": "M31A",
-                "image": "M29A.png",
-                "answer": "15",
-                "questionText": "<span style='color:blue'>(Point to the calendar and say)</span> Look at this calendar carefully. Now tell me, what date would be 2 days after the 13th?",
-            },
-            {
-                "queNo": "N76A",
-                "image": "N76A.png",
-                "answer": "3",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now I will read a question to you, listen to it carefully and solve it. This girl <span style='color:blue'>(point to the girl in the picture)</span> has 5 toffees in this bag <span style='color:blue'>(point to the first bag in the picture)</span>. She got a few more toffees from this friend <span style='color:blue'>(point to the boy in the picture)</span>. Now she has 8 toffees in this bag <span style='color:blue'>(point to the third bag in the picture)</span>. How many toffees did her friend give her?",
-            },
-            {
-                "queNo": "N79A",
-                "image": "N79A.png",
-                "answer": "5",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now I will read a question to you, listen to it carefully and solve it. A boy <span style='color:blue'>(point to the boy and the balloon in the first picture)</span> had 13 balloons. He bought a few more balloons from a shop <span style='color:blue'>(point to the shop in the picture)</span>. Now, he has 18 balloons <span style='color:blue'>(point to the boy and the balloon in the third picture)</span>. How many balloons did he buy?",
+                "questionText": " <span style='color:blue'>(Señala la imagen y di)</span> Observa con atención. Ahora, cuenta y dime, ¿cuántos peces hay?",
             },
         ]
     },
     {
         "lang": "Spanish-Nicaragua",
+        'languageFont': 'fonts/AntarcticaRegular.ttf',
         "data": [
             {
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'>(Señala la imagen y explica)</span> Observa con atención. Ahora, cuenta y decime ¿Cuántas manzanas hay?",
-            },
-            {
-                "queNo": "N1B",
-                "image": "N1B.png",
-                "answer": "6",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now, count and tell me how many cups are there?",
-
-            },
-            {
-                "queNo": "M30B",
-                "image": "M29A.png",
-                "answer": "20",
-                "questionText": "<span style='color:blue'>(Señala el calendario y explica)</span> Observa este calendario con atención. Ahora decime qué fecha es el tercer domingo.",
-            },
-            {
-                "queNo": "M31A",
-                "image": "M29A.png",
-                "answer": "15",
-                "questionText": "<span style='color:blue'>(Point to the calendar and say)</span> Look at this calendar carefully. Now tell me, what date would be 2 days after the 13th?",
-            },
-            {
-                "queNo": "N76A",
-                "image": "N76A.png",
-                "answer": "3",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now I will read a question to you, listen to it carefully and solve it. This girl <span style='color:blue'>(point to the girl in the picture)</span> has 5 toffees in this bag <span style='color:blue'>(point to the first bag in the picture)</span>. She got a few more toffees from this friend <span style='color:blue'>(point to the boy in the picture)</span>. Now she has 8 toffees in this bag <span style='color:blue'>(point to the third bag in the picture)</span>. How many toffees did her friend give her?",
-            },
-            {
-                "queNo": "N79A",
-                "image": "N79A.png",
-                "answer": "5",
-                "questionText": "<span style='color:blue'>(Point to the picture and say)</span> Look at this carefully. Now I will read a question to you, listen to it carefully and solve it. A boy <span style='color:blue'>(point to the boy and the balloon in the first picture)</span> had 13 balloons. He bought a few more balloons from a shop <span style='color:blue'>(point to the shop in the picture)</span>. Now, he has 18 balloons <span style='color:blue'>(point to the boy and the balloon in the third picture)</span>. How many balloons did he buy?",
+                "questionText": " <span style='color:blue'>(Señale la imagen y diga)</span> Mirá esto con atención. Ahora, contá y decime, ¿cuántos peces hay allí?",
             },
         ]
     },
     {
         "lang": "Bangla-Bangladesh",
+        'languageFont': 'fonts/kalpurush.ttf',
         "data": [
             {
                 "queNo": "N1A",
                 "image": "N1A.png",
-                "answer": "5",
-                "questionText": " <span style='color:blue'>(ছবিটি দেখিয়ে বলুন)</span> এটি মনোযোগ দিয়ে দেখো। এখন আমাকে গুনে বল তো এখানে কয়টি আপেল আছে?",
+                "answer": "৫",
+                "questionText": "<span style='color:blue'>(ছবিটি দেখিয়ে বলুন)</span> এটি মনোযোগ দিয়ে দেখো। এখন আমাকে গুনে বলো তো, এখানে কয়টি মাছ আছে?",
             },
             {
                 "queNo": "N1B",
@@ -354,7 +263,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": "<span style='color:blue'>(Regarde l'image et dis)</span> Regarde-la attentivement. Maintenant, compte et dis-moi, combien de pommes y a-t-il ?",
+                "questionText": " <span style='color:blue'>(Pointe sur l’image et dis)</span> Regarde cela attentivement. Maintenant, compte et dis-moi, combien de poissons y a-t-il?",
             },
             {
                 "queNo": "N1B",
@@ -396,7 +305,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'>(Regarde l'image et dis)</span> Regarde-la attentivement. Maintenant, compte et dis-moi, combien de pommes y a-t-il ?",
+                "questionText": " <span style='color:blue'>(Montre l'image et dis)</span> Regarde attentivement. Maintenant, compte et dis-moi, combien de poissons y a-t-il ?",
             },
             {
                 "queNo": "N1B",
@@ -433,12 +342,13 @@ N1A.questions = [
     },
     {
         "lang": "Nepali-Nepal",
+        'languageFont': 'fonts/MANGAL.TTF',
         "data": [
             {
                 "queNo": "N1A",
                 "image": "N1A.png",
-                "answer": "5",
-                "questionText": " <span style='color:blue'> (चित्रलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। अब गन्नुहोस र यहाँ कति ओटा स्याउहरू छन् भन्नुहोस्?",
+                "answer": "५",
+                "questionText": " <span style='color:blue'>(चित्रमा देखाउनुहोस् र भन्नुहोस्)</span> यसलाई राम्ररी हेर्नुहोस्। अब यहाँ कति ओटा माछाहरु छन् गनेर मलाई भन्नुहोस्।",
             },
             {
                 "queNo": "N1B",
@@ -480,7 +390,7 @@ N1A.questions = [
                 "queNo": "N1A",
                 "image": "N1A.png",
                 "answer": "5",
-                "questionText": " <span style='color:blue'>(Aponte para a imagem e diga)</span> Observe com atencão. Agora, conte e diga, quantas maçãs existem?",
+                "questionText": " <span style='color:blue'>(Aponte para a imagem e diga)</span> Olha para isto com atenção. Agora, conta e diga-me, quantos peixes são?",
             },
             {
                 "queNo": "N1B",

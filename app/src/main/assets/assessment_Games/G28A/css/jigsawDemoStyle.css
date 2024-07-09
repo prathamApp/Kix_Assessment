@@ -1,0 +1,27 @@
+
+#gamepage
+{
+	display: flex;
+	justify-content: space-around;
+}
+.jigsawCanvas{
+	height:100%;
+    width: 100%;
+}
+.heightClass
+{
+	height:0!important;
+}
+.refImg{
+	 height: 100%;
+    width: 100%;
+} 
+#jigsawDiv,#refImgDiv
+{
+	height: 68vh;
+	padding: 0.2vw;
+}
+.outerDivClass
+{
+   display: flex;
+}

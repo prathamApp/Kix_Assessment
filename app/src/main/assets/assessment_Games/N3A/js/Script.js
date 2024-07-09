@@ -58,7 +58,7 @@ IdentifyMoreLess.init=function()
 
 IdentifyMoreLess.setLabels=function(){
 	for(let i=0;i<2;i++)
-		$('#section'+(i+1)).data('option',String.fromCharCode(65+i));
+		$('#section'+(i+1)).data('option',String.fromCharCode(65+i));	
 		
 	for(let i=0;i<4;i++)
 		$('#option'+(i+1)).data('option',String.fromCharCode(65+i));
@@ -105,15 +105,16 @@ if (Utils.mobileDeviceFlag) {
 		// var val = 'Urdu-Pakistan'
 		var lang = IdentifyMoreLess.type.find(checkIndex);
 		langIndex = IdentifyMoreLess.type.indexOf(lang);
-		if (lang.language == 'Urdu-Pakistan')
-			$('#heading').css('direction','rtl')
+	/* 	if (lang.language == 'Urdu-Pakistan')
+			$('#heading').css('direction','rtl') */
+			
 		function checkIndex(i) {
 			if (i.language.toLowerCase().trim() == val.toLowerCase().trim())
 				return i;
 		}
 	}
 	else
-	langIndex = 1; /* Math.floor(Math.random() * IdentifyMoreLess.type.length);		//GET RANDOM GAME LANGUAGE */
+	langIndex = 10; /* Math.floor(Math.random() * IdentifyMoreLess.type.length);		//GET RANDOM GAME LANGUAGE */
 	
 	if (Utils.mobileDeviceFlag)
 	{
@@ -130,12 +131,18 @@ if (Utils.mobileDeviceFlag) {
 	else
 		nodeIndex = Math.floor(Math.random() * IdentifyMoreLess.type[langIndex].gamedata.length);
 
-
+		if(IdentifyMoreLess.type[langIndex].languageFont!=null)
+	          setFontFamilyForLang(IdentifyMoreLess.type[langIndex].languageFont);
+			  
+	 if (langIndex == 11)
+			  $('#heading').css('direction','rtl')
+    
 
 	// IdentifyMoreLess.data = IdentifyMoreLess.type.find(el => el.language == "Hindi")
 	IdentifyMoreLess.data = IdentifyMoreLess.type[langIndex];	//language node
 	IdentifyMoreLess.randomGame = nodeIndex;		//current node index
 	IdentifyMoreLess.currentNode=IdentifyMoreLess.type[langIndex].gamedata[nodeIndex];	//current node object
+	
 	if(IdentifyMoreLess.currentNode.gameCode == 'N3A'){
 		$('.section').addClass('border');
 		IdentifyMoreLess.sequentialData();		
@@ -145,54 +152,18 @@ if (Utils.mobileDeviceFlag) {
 	else
 		IdentifyMoreLess.getImages();
 	
-	/* if(Utils.mobileDeviceFlag){
-		IdentifyMoreLess.randomGame= Android.getGameID();
-		IdentifyMoreLess.currentNode = IdentifyMoreLess.data.gamedata.find(el => el.gameCode === IdentifyMoreLess.randomGame)
-		//IdentifyMoreLess.data=eval('IdentifyMoreLess.type.'+IdentifyMoreLess.randomGame);
-		if(IdentifyMoreLess.randomGame == 'N3A'){
-			$('.section').addClass('border');
-			IdentifyMoreLess.sequentialData();		
-		}
-		else if(IdentifyMoreLess.randomGame == 'N2A')
-			IdentifyMoreLess.sequentialData();
-		else
-			IdentifyMoreLess.getImages();
-	}else{
-		IdentifyMoreLess.randomGame= Math.floor(1+Math.random() * IdentifyMoreLess.gameNames.length-1);
-		IdentifyMoreLess.currentNode = IdentifyMoreLess.data.gamedata.find(el => el.gameCode === IdentifyMoreLess.gameNames[IdentifyMoreLess.randomGame]);
-		//IdentifyMoreLess.data=eval('IdentifyMoreLess.type.'+IdentifyMoreLess.gameNames[IdentifyMoreLess.randomGame]);
-		if(IdentifyMoreLess.gameNames[IdentifyMoreLess.randomGame] == 'N3A'){
-			$('.section').addClass('border');
-			IdentifyMoreLess.sequentialData();
-		}	
-		else if(IdentifyMoreLess.gameNames[IdentifyMoreLess.randomGame] == 'N2A')
-			IdentifyMoreLess.sequentialData();
-		else
-			IdentifyMoreLess.getImages();
-	} */
+
 } 
-// IdentifyMoreLess.showDefaultData=function()
-// {
-// 	shuffleArray(IdentifyMoreLess.sectionNames);
-// 	IdentifyMoreLess.randomObject=4;
-// 	IdentifyMoreLess.greaterNumber=6;
-// 	IdentifyMoreLess.smallerNumber=4;
-// 	IdentifyMoreLess.createObjectsSlots('slotDiv',IdentifyMoreLess.sectionNames[0],1,25);
-// 	IdentifyMoreLess.getRandomSlots(1,25);
-// 	IdentifyMoreLess.placeObjectsRandomly('slotDiv',IdentifyMoreLess.greaterNumber,IdentifyMoreLess.slotsArray);
-// 	IdentifyMoreLess.createObjectsSlots('slotDiv',IdentifyMoreLess.sectionNames[1],26,50);
-// 	IdentifyMoreLess.getRandomSlots(26,50);	
-// 	IdentifyMoreLess.placeObjectsRandomly('slotDiv',IdentifyMoreLess.smallerNumber,IdentifyMoreLess.slotsArray);
 
-// 	 $('#'+IdentifyMoreLess.sectionNames[0]).data('value','more');
-// 	 $('#'+IdentifyMoreLess.sectionNames[1]).data('value','less');
-
-// 	document.getElementById('heading').innerHTML = IdentifyMoreLess.currentNode.instruction;
-// 	$('#queNo').text(IdentifyMoreLess.currentNode.gameCode);
-// 	$('.section').addClass('border');
-// 	$('#game1').show();
-// 	$('#game2').hide();
-// }
+setFontFamilyForLang = function (fontFilePath) {
+	var newStyle = "<style>" +
+		"@font-face { " +
+		"font-family: 'CustomFontFamily';" +
+		"src: url('" + fontFilePath + "') format('truetype');" +
+		"} </style>";
+	$("head").append(newStyle);
+	$("body").css("font-family", "CustomFontFamily");
+}
 
 IdentifyMoreLess.sequentialData=function(){
 	shuffleArray(IdentifyMoreLess.sectionNames);
@@ -266,7 +237,7 @@ IdentifyMoreLess.selectSection=function(element){
 	$('#Check').css({'pointer-events':'auto'});
 	IdentifyMoreLess.givenAnswer=$('#'+element).data('value');	
 	//label = $('#'+element).data('image').split('.')[0];
-	label = $('#'+element).data('option');
+	label = $('#'+element).data('image');
 };
 
 IdentifyMoreLess.resetGame=function(){

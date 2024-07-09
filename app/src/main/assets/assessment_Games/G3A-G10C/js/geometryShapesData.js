@@ -1,6 +1,7 @@
 GeometryShapes.data = [
 	{
 		'language': 'English-Uganda',
+		'languageFont':'fonts/Andika-Regular.ttf',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>(Point to the options and say)</span> Look at these carefully. Now, place your finger and tell me which of these is a circle?",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -16,10 +17,10 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " Place your finger and show me, which of these <span style='color:blue'>(point to the options)</span> is a <b>rectangle?</b>",
+			'question': " Place your finger and show me, which of these <span style='color:blue'>(point to the options)</span> is a <b>square</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, /* {
 			'question': "<span style='color:blue'>(Point to the shape and say)</span> Look at this carefully and tell me what is this?",
@@ -88,17 +89,17 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो। अब, अपनी उंगली रखकर मुझे बताओ कि इनमें से त्रिकोण / triangle कौन-सा है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ कि इनमें से कौन-सा <span style='color:blue'>(विकल्पों की ओर इशारा करें)</span> एक <b>त्रिकोण</b> है ?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो।अब, अपनी उंगली रखकर मुझे बताओ कि इनमें से आयत / rectangle कौन-सा है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ कि इनमें से कौन-सा <span style='color:blue'>(विकल्पों की ओर इशारा करें)</span> एक <b>वर्ग</b> है ?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, /* {
 			'question': "<span style='color:blue'>(आकार की ओर इशारा करते हुए कहें)</span> इसे ध्यान से देखो और मुझे बताओ कि यह क्या है?",
@@ -121,19 +122,19 @@ GeometryShapes.data = [
 			'queNo': 'G6A',
 			'que': 'G6A_2'
 		}, */ {
-			'question': " <span style='color:blue'>(सभी विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो। अब, अपनी उंगली रखकर मुझे बताओ कि इनमें से कौन-सी रेखा / line सीधी / straight है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ कि इनमें से <span style='color:blue'>(विकल्पों की ओर इशारा करें)</span> कौनसी एक <b>सरल रेखा</b> है?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(सभी विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो। अब, अपनी उंगली रखकर मुझे बताओ कि इनमें से घन / cube कौन-सा है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ, इनमें से कौन-सा <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए)</span> एक <b>घन</b> है?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(सभी विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो। अब, अपनी उंगली रखकर मुझे बताओ कि इनमें से बेलन आकार / cylinder कौन-सा है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ, इनमें से कौन-सा <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए)</span> एक <b>बेलनाकार</b> है?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -151,7 +152,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए कहें)</span> इन्हें ध्यान से देखो।  इनमें से किसमें बिल्ली डिब्बे के अंदर है?",
+			'question': " अपनी ऊँगली रखकर मुझे दिखाओ, इनमें से किसमें <span style='color:blue'>(विकल्पों की ओर इशारा करते हुए)</span> बिल्ली बक्से के <b>अन्दर</b> है?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -159,6 +160,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'Spanish-Mexico',
+		'languageFont':'null',
 		'nodeInfo': [{
 			'question': " <span style='color:blue'>(Elekeza kidole kwenye viteuliwa kisha useme)</span> Tazama hapa kwa makini. Sasa wekelea kidole chako kisha uniambie duara ni gani?",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -167,32 +169,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Señala las opciones y di)</span> Obsérvalas con atención. Ahora, señala con tu dedo y dime ¿cuál de estas es un triángulo?",
+			'question': " Con tu dedo muéstrame, ¿cuál de estas <span style='color:blue'>(señala las opciones)</span> es un <b>triángulo</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Señala las opciones y di)</span> Obsérvalas con atención. Ahora, señala con tu dedo y dime, ¿cuál de estas es un rectángulo?",
+			'question': " Con tu dedo muéstrame, ¿cuál de estas <span style='color:blue'>(señala las opciones)</span> es un <b>cuadrado</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala todas las opciones y di)</span> Observa estos con atención. Señala con tu dedo y dime ¿cuál de estas líneas es una línea recta?",
+			'question': " Con tu dedo muéstrame, ¿cuál de estas <span style='color:blue'>(señala las opciones)</span> es una <b>línea recta</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala las opciones y di)</span> Observa estos con atención. Señala con tu dedo y dime ¿cuál de estos es un cubo?",
+			'question': " Con tu dedo muéstrame, ¿cuál de estas <span style='color:blue'>(señala las opciones)</span> es un <b>cubo</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala las opciones y di)</span> Observa estos con atención. Señala con tu dedo y dime ¿cuál de estos es un cilindro?",
+			'question': " Con tu dedo muéstrame, ¿cuál de estas <span style='color:blue'>(señala las opciones)</span> es un <b>cilindro</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -210,7 +212,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Señala las opciones y di)</span> Obsérvalas con atención. ¿En cuál de estas el gato está dentro de la caja?",
+			'question': " Con tu dedo muéstrame, ¿en cuál de estas <span style='color:blue'>(señala las opciones)</span> el gato está <b>dentro</b> de la caja?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -218,6 +220,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'Spanish-Nicaragua',
+		'languageFont':'fonts/AntarcticaRegular.ttf',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>( دییے گئے آپشنز کی طرف اشارہ کریں اور کہیں)</span>	انکو اشکال کو سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسا<span style='color:blue'>(شکل)<span style='color:blue'> دائرہ ہے؟",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -226,32 +229,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Señala las opciones y explica)</span> Mira estos con atención. Ahora, con tu dedo indicame cuál de estos es un triángulo?",
+			'question': " Indicá con tu dedo, ¿cuál de estas figuras <span style='color:blue'>(señale las opciones)</span> es un <b>triángulo</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': "<span style='color:blue'>(Señala las opciones y explica)</span> Mira estos con atención. Ahora, con tu dedo indicame cuál de estos es un rectángulo?",
+			'question': " Indicá con tu dedo, ¿cuál de estas figuras <span style='color:blue'>(señale las opciones)</span> es un <b>cuadrado</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala todas las opciones y explica)</span> Mira esto con atención. Ahora, con tu dedo indicame cuál de estas líneas es recta?",
+			'question': " Indicá con tu dedo, ¿cuál de estas <span style='color:blue'>(señale las opciones)</span> es una <b>línea recta</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala todas las opciones y explica)</span> Mira esto con atención. Ahora, con tu dedo indicame cuál de estos es un cubo?",
+			'question': "  Indicá con tu dedo, ¿cuál de estas <span style='color:blue'>(señale las opciones)</span> es un <b>cubo</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Señala todas las opciones y explica)</span> Mira esto con atención. Ahora, con tu dedo indicame cuál de estos es un cilindro?",
+			'question': " Indicá con tu dedo, ¿cuál de estas <span style='color:blue'>(señale las opciones)</span> es un <b>cilindro</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -269,7 +272,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Señala las opciones y explica)</span> Mira esto con atención. ¿En cuál de estas, el gato está dentro de la caja?",
+			'question': " Indicá con tu dedo, ¿en cuál de estas cajas <span style='color:blue'>(señale las opciones)</span> el gato está <b>dentro</b> de la caja?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -277,6 +280,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'Kiswahili-Kenya',
+		'languageFont':'fonts/Andika-Regular.ttf',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>( دییے گئے آپشنز کی طرف اشارہ کریں اور کہیں)</span>	انکو اشکال کو سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسا<span style='color:blue'>(شکل)<span style='color:blue'> دائرہ ہے؟",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -285,32 +289,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Elekeza kidole kwenye viteuliwa kisha useme)</span> Tazama hapa kwa makini. Sasa wekelea kidole chako kisha uniambie gani kati ya hizi ni pembetatu/triangle?",
+			'question': "Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguo)</span> ni <b>pembetatu/triangle</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Elekeza kidole kwenye viteuliwa kisha useme)</span> Tazama hapa kwa makini. Sasa wekelea kidole chako kisha uniambie gani kati ya hizi ni mstatili/rectangle?",
+			'question': "Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguo)</span> ni <b>mraba/square</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Elekeze kidole kwenye viteuliwa vyote kisha useme)</span> Tazama hapa kwa makini. Sasa, wekelea kidole chako kisha uniambie ni mstari/line gani kati ya hii umenyooka/straight?",
+			'question': "Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguzi)</span> ambayo ni <b>mstari wima /straight line</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Elekeze kidole kwenye viteuliwa vyote kisha useme)</span> Tazama hapa kwa makini. Sasa, wekelea kidole chako kisha uniambie ni gani kati ya hizi ni mchemraba/cube?",
+			'question': "Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguzi)</span> ni <b>mchemraba/cube</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Elekeze kidole kwenye viteuliwa vtote kisha useme)</span> Tazama hapa kwa makini. Sasa, wekelea kidole chako kisha, uniambie ni gani kati ya hizi ni silinda/cylinder?",
+			'question': "Weka kidole chako na unionyeshe, ni ipi kati ya hizi <span style='color:blue'>(onyesha chaguzi)</span> ni <b>silinda/cilinder</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -328,7 +332,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Elekeza kidole kwenye viteuliwa kisha useme)</span> Tazama hapa kwa makini. Ni gani kati ya hizi iko na paka ndani yake?",
+			'question': "Weka kidole chako na unionyeshe, kati ya hizi <span style='color:blue'>(onyesha chaguzi)</span> paka yupo <b>ndani</b> ya sanduku lipi?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -336,6 +340,7 @@ GeometryShapes.data = [
 		}]
 	},{
 		'language': 'Kiswahili-Tanzania',
+		'languageFont':'null',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>( دییے گئے آپشنز کی طرف اشارہ کریں اور کہیں)</span>	انکو اشکال کو سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسا<span style='color:blue'>(شکل)<span style='color:blue'> دائرہ ہے؟",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -344,32 +349,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(onyesha machaguo na useme)</span> Angalia haya kwa makini. Sasa, onyesha kwa kidole na uniambie lipi kati ya haya ni pembetatu?",
+			'question': " Onyesha kwenye skrini,lipi kati ya haya <span style='color:blue'>(Onesha machaguo)</span> ni <b>pembetatu</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Onesha machaguo yote na useme)</span>Angalia kwa makini. Onyesha umbo lipi ni mstatili?",
+			'question': " Onyesha kwenye skrini,lipi kati ya haya <span style='color:blue'>(onesha machaguo)</span> ni <b>mraba</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Onesha machaguo na useme)</span> Angalia haya kwa makini. Sasa, weka kidole chako na uniambie ipi kati ya haya ni mstari mnyoofu?",
+			'question': " Onyesha kwenye skrini, ni ipi kati ya hii <span style='color:blue'>(onesha machaguo)</span> ni <b>mstari mnyoofu</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Onesha machaguo na useme)</span> Angalia haya kwa makini. Sasa, weka kidole chako na uniambie ipi kati ya haya ni mchemraba?",
+			'question': " onyesha kwenye skrini, ni ipi kati ya haya <span style='color:blue'>(onesha machaguo)</span> ni <b>mchemraba</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Onesha machaguo na useme)</span> Angalia haya kwa makini. Sasa, onesha kwa kidole na uniambie ipi kati ya haya ni pia ?",
+			'question': " onyesha kwenye skrini, ni lipi kati ya haya <span style='color:blue'>(onesha machaguo)</span> ni <b>mcheduara</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -387,7 +392,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Elekeza kidole kwenye viteuliwa kisha useme)</span> Tazama hapa kwa makini. Ni gani kati ya hizi iko na paka ndani yake?",
+			'question': " Onyesha kwenye skrini, ni boksi lipi kati ya haya <span style='color:blue'>(onesha machaguo)</span> paka yumo <b>ndani</b> ya boksi?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -395,6 +400,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'French-Senegal',
+		'languageFont':'null',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>( دییے گئے آپشنز کی طرف اشارہ کریں اور کہیں)</span>	انکو اشکال کو سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسا<span style='color:blue'>(شکل)<span style='color:blue'> دائرہ ہے؟",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -403,32 +409,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de celles-ci est un triangle?",
+			'question': " Place ton doigt et montre moi, laquelle de ces  <span style='color:blue'>(pointe sur les options)</span> est un <b>triangle</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de celles-ci est un rectangle?",
+			'question': " Place ton doigt et montre moi, laquelle de ces  <span style='color:blue'>(pointe sur les options)</span> est un <b>carré</b> ?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de ces lignes est une ligne droite?",
+			'question': " Place ton doigt et montre moi, laquelle de ces  <span style='color:blue'>(pointe les options)</span> est une ligne <b>droite ou rectiligne</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant,montre et dis-moi, laquelle celles-ci est un cube ?",
+			'question': " Place ton doigt et montre moi, laquelle de ces  <span style='color:blue'>(pointe sur les options)</span> est un <b>cube</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle celles-ci est un cylindre?",
+			'question': " Place ton doigt et montre moi, laquelle de ces <span style='color:blue'>(pointe  les options)</span> est un <b>cylindre</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -446,7 +452,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde attentivement.Parmi lequel le chat est à l'interieur de la boite?",
+			'question': " Place ton doigt et montre moi, laquelle de ces  <span style='color:blue'>(pointe  les options)</span>  a un chat à <b>l'intérieur</b> de la boîte?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -454,6 +460,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'Bangla-Bangladesh',
+		'languageFont':'fonts/kalpurush.ttf',
 		'nodeInfo': [{
 			'question': "",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -462,32 +469,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখন তোমার আঙ্গুল দিয়ে দেখিয়ে আমাকে বল, এগুলোর মধ্যে কোনটি একটি ত্রিভূজ?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর কোনটি <span style='color:blue'>(অপশনগুলো দেখান)</span> <b>ত্রিভুজ</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখন তোমার আঙ্গুল দিয়ে দেখিয়ে আমাকে বল, এগুলোর মধ্যে কোনটি একটি চতুর্ভূজ?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর কোনটি <span style='color:blue'>(অপশনগুলো দেখান)</span> <b>চতুর্ভুজ</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখন, তোমার আঙ্গুল দিয়ে দেখাও এগুলোর মধ্যে কোনটি একটি সরলরেখা?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর মধ্যে <span style='color:blue'>(অপশনগুলো দেখান)</span> কোনটি <b>সরলরেখা</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখন, তোমার আঙ্গুল দিয়ে দেখাও এগুলোর মধ্যে কোনটি একটি ঘনক?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর মধ্যে <span style='color:blue'>(অপশনগুলো দেখান)</span> কোনটি <b>ঘনক</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখন, তোমার আঙ্গুল দিয়ে দেখাও এগুলোর মধ্যে কোনটি একটি বেলন/cylinder?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর মধ্যে <span style='color:blue'>(অপশনগুলো দেখান)</span> কোনটি <b>সিলিন্ডার</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -505,7 +512,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(অপশনগুলো দেখিয়ে বলুন)</span> এগুলো মনোযোগ দিয়ে দেখ। এখানে কোনটিতে বিড়ালটি বাক্সের ভেতর আছে?",
+			'question': " তোমার আঙ্গুল দিয়ে স্ক্রীনে চাপ দিয়ে আমাকে দেখাও তো, এগুলোর মধ্যে <span style='color:blue'>(অপশনগুলো দেখান)</span> কোনটিতে বিড়ালটি বাক্সের <b>ভেতরে</b> আছে?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -513,6 +520,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'Nepali-Nepal',
+		'languageFont':'fonts/MANGAL.ttf',
 		'nodeInfo': [{
 			'question': "",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -521,32 +529,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'> ( विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। अब आफ्नो औंलाले देखाएर मलाई भन्नुहोस् यी मध्ये कुन चाहिं त्रिकोण हो?",
+			'question': " यिनीहरु मध्ये कुन <span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> <b>त्रिभुज /triangle</b> हो आफ्नो आफ्नो औँलाले थिचेर देखाउनुहोस्?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'> ( विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्।अब, यी मध्ये कुन चाहिं आयत हो आफ्नो औंलाले देखाएर भन्नुहोस् ?",
+			'question': " यिनीहरु मध्ये कुन <span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> <b>वर्ग /square</b> हो आफ्नो आफ्नो औँलाले थिचेर देखाउनुहोस्?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'> (विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। अब यी मध्ये कुन चाहिं सिधा रेखा हो आफ्नो औंलाले देखाएर भन्नुहोस् ?",
+			'question': " यिनीहरु मध्ये कुन <span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> <b>सिधा रेखा /straignt line</b> हो, आफ्नो औँलाले थिचेर देखाउनुहोस् ?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'> (विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। अब यी मध्ये कुन चाहिं घन हो आफ्नो औंलाले देखाएर भन्नुहोस् ?",
+			'question': " यिनीहरु मध्ये कुन <span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> <b>घन /cube</b> हो, आफ्नो औँलाले थिचेर देखाउनुहोस्?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'> (विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। अब यी मध्ये कुन चाहिं सिलिन्डर हो आफ्नो औंलाले देखाएर भन्नुहोस् ?",
+			'question': " यिनीहरु मध्ये कुन <span style='color:blue'>(विकल्पहरुमा देखाउनुहोस्)</span> <b>सिलिन्डर</b> हो, आफ्नो औँलाले थिचेर देखाउनुहोस्?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -564,7 +572,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'> (विकल्पहरुलाई देखाउनुहोस् र भन्नुहोस्) </span> यसलाई ध्यान दिएर हेर्नुहोस्। यी मध्ये कुन चाहिं बाकसभित्र बिरालो छ?",
+			'question': " यिनीहरु मध्ये कुनमा <span style='color:blue'>(चित्रमा देखाउनुहोस्)</span> बिरालो बाकसको <b>भित्र</b> छ, आफ्नो औँलाले थिचेर देखाउनुहोस्?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -580,33 +588,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': ` <span style='color:blue'>( دی گئی آپشنز کی طرف اشارہ کریں اور کہیں)</span>
-			ان اشکال کو غور سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسی <span style='color:blue'>(شکل)<span style='color:blue'> مثلث ہے؟`,
+			'question': ` اپنی انگلی رکھ کرمجھے دکھائیں، ان میں سے کون سی <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> <b>مثلث/ٹرائی اینگل</b> ہے؟`,
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': ` <span style='color:blue'>( آپشنز کی طرف اشارہ کریں اور کہیں)</span> ان کو غور سے دیکھو۔ اب اپنی انگلی رکھ کہ مجھے بتائیں کہ ان میں سے کون سی مستطیل ہے؟`,
+			'question': ` اپنی انگلی رکھ کرمجھے دکھائیں، ان میں سے کون سا <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> <b>مربع/سکوئیر</b> ہے؟`,
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>( آپشنز کی طرف اشارہ کریں اور کہیں)</span> ان کو غور سے دیکھیں۔ اب اپنی انگلی رکھیں اور مجھے بتائیں کہ ان میں سے کون سی لائن/ لکیر سیدھی ہے؟",
+			'question': " اپنی انگلی رکھ کرمجھے دکھائیں، ان میں سے کون سی <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> <b>سیدھی لائن</b> ہے؟",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': ` <span style='color:blue'>(آپشنز کی طرف اشارہ کریں اور کہیں)</span> ان کو غور سے دیکھیں۔ اب اپنی انگلی رکھیں اور مجھے بتائیں کہ ان میں سے کون سا مکعب ہے؟`,
+			'question': ` اپنی انگلی رکھ کرمجھے دکھائیں، ان میں سے کون سا <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> <b>مکعب/کیوب</b> ہے؟`,
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': ` <span style='color:blue'>(آپشنزکی طرف اشارہ کریں اور کہیں)</span> ان کو غور سے دیکھیں۔ اب اپنی انگلی رکھیں اور مجھے بتائیں کہ ان میں سے کون سا سلینڈر ہے؟`,
+			'question': `  اپنی انگلی رکھ کر مجھے دکھائیں، ان میں سے کون سا <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> <b>سلنڈر</b> ہے؟`,
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -624,7 +631,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': ` <span style='color:blue'>(آپشنز کی طرف اشارہ کریں اور کہیں)</span> ان کو غور سے دیکھیں۔ ان میں سے بلی کون سے ڈبے کے اندر ہے؟`,
+			'question': ` اپنی انگلی رکھ کرمجھے دکھائیں، ان میں سے <span style='color:blue'>(آپشنز کی طرف اشارہ کریں)</span> کس ڈبہ/باکس کے <b>اندر</b> بلی ہے؟`,
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -632,6 +639,7 @@ GeometryShapes.data = [
 		}]
 	}, {
 		'language': 'French-Mali',
+		'languageFont':'null',
 		'nodeInfo': [{
 			'question': "<span style='color:blue'>( دییے گئے آپشنز کی طرف اشارہ کریں اور کہیں)</span>	انکو اشکال کو سے دیکھیں ۔ اور انگلی رکھ کر مجھے بتائیں کہ ان میں سےکونسا<span style='color:blue'>(شکل)<span style='color:blue'> دائرہ ہے؟",
 			'images': ['G3A_1', 'G3A_2', 'G3A_4', 'G3A_3'],
@@ -640,32 +648,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de celles-ci est un triangle?",
+			'question': " Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> est un <b>triangle</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de celles-ci est un rectangle?",
+			'question': " Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> est un <b>carré</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle de ces lignes est une ligne droite?",
+			'question': " Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> est une <b>ligne droite</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant,montre et dis-moi, laquelle celles-ci est un cube ?",
+			'question': " Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> est un <b>cube</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les objets et dis)</span> Regarde-les attentivement. Maintenant, montre et dis-moi, laquelle celles-ci est un cylindre?",
+			'question': " Mets ton doigt sur et montre-moi, laquelle de ces <span style='color:blue'>(pointe sur les options)</span> est un <b>cylindre</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -683,7 +691,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Regarde les options et dis)</span> Regarde attentivement.Parmi lequel le chat est à l'interieur de la boite?",
+			'question': " Mets ton doigt sur et montre-moi, la boite  <span style='color:blue'>(pointe sur les options)</span> <b>à l'intérieur de laquelle</b> se trouve le chat?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
@@ -699,32 +707,32 @@ GeometryShapes.data = [
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atenção. Agora, coloque o seu dedo e diga-me, qual destes é um triângulo?",
+			'question': " Coloca o teu dedo e mostra-me, qual desses <span style='color:blue'>(aponte para as opções)</span> é um <b>triângulo</b>?",
 			'images': ['G3A_3', 'G3A_2', 'G3A_1', 'G3A_4'],
 			'queNo': 'G3B',
 			'que': 'G3A_3',
 			'fontSize': '2'
 		},
 		{
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atenção. Agora, colocque os eu dedo e diga qual destes é um triângulo?",
+			'question': " Coloca o teu dedo e mostra-me, qual destes <span style='color:blue'>(aponte para as opções)</span> é um <b>quadrado</b>?",
 			'images': ['G4A_2', 'G4A_1', 'G4A_4', 'G4A_3'],
 			'queNo': 'G4A',
-			'que': 'G4A_2',
+			'que': 'G4A_1',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe-as com atenção. Agora, coloque o seu dedo e diga qual destas linhas é reta?",
+			'question': "Coloca o teu dedo e mostra-me, qual destas <span style='color:blue'>(aponte para as opções)</span> é uma <b>linha recta</b>?",
 			'images': ['G9A_4', 'G9A_1', 'G9A_3', 'G9A_2'],
 			'queNo': 'G9A',
 			'que': 'G9A_3',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atenção. Agora, coloque o seu dedo e me diga qual destes é um cubo?",
+			'question': "Coloca o teu dedo e mostra-me, qual destes <span style='color:blue'>(aponte para as opções)</span> é um <b>cubo</b>?",
 			'images': ['G10A_1', 'G10A_2', 'G10A_4', 'G10A_3'],
 			'queNo': 'G10A',
 			'que': 'G10A_4',
 			'fontSize': '2'
 		}, {
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atenção. Agora, coloque o seu dedo e me diga qual destes é um cilindro?",
+			'question': "Coloca o teu dedo e mostra-me, qual destes <span style='color:blue'>(aponte para as opções)</span> é um <b>cilindro</b>?",
 			'images': ['G10A_2', 'G10A_4', 'G10A_1', 'G10A_3'],
 			'queNo': 'G10B',
 			'que': 'G10A_1',
@@ -742,7 +750,7 @@ GeometryShapes.data = [
 			'que': 'G14A_4',
 			'fontSize': '1.8'
 		}, {
-			'question': " <span style='color:blue'>(Aponte para as opções e diga)</span> Observe com atenção. Em qual deles o gato está dentro da caixa?",
+			'question': " Coloca o teu dedo e mostra-me, em qual destas <span style='color:blue'>(aponte para as opções)</span> o gato está <b>dentro</b> da caixa?",
 			'images': ['G14B_3', 'G14B_4', 'G14B_2', 'G14B_1'],
 			'queNo': 'G14B',
 			'que': 'G14B_4',
