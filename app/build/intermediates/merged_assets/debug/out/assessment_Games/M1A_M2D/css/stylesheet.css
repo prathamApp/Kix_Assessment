@@ -1,0 +1,18 @@
+.selectBorder{
+	border: 6px solid rgb(255,190,0);
+}
+.flexClass{
+	margin-top:10vh;
+	display: inline-flex;
+	justify-content: center;
+}
+.gridClass{
+	margin-top:10vh;
+	display: grid;
+}
+.heightClass{
+	height: 22vh;
+}
+.centerClass {
+	z-index: 100;
+}

@@ -1,0 +1,41 @@
+
+#gamePage{
+  position: absolute;
+  top: 8vh;
+}
+.headerClass{
+  z-index: 1;
+}
+ #textQuesId{
+   height: 17vh;
+ }
+.optionClass {
+  height: 20vh;
+  margin-top: 2.5vh;
+  margin-left: 5vw;
+}
+#optionID{
+  margin-top: 6vh;
+}
+#quesDiv{
+  color: black;
+  font-size: 2.2vw;
+  font-weight: bold;
+  left: 6vw;
+}
+.imgborder{
+  border-radius: 2vh;
+}
+.footerInstrClass{
+  height: 14vh;
+}
+#example18{
+  height: 59vh;
+}
+#heading{
+  padding-top: 12px;
+  line-height: 3.5vh;
+}
+.boldClass{
+  font-weight: bold;
+}

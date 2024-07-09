@@ -1,0 +1,46 @@
+
+ .options{
+	margin-top: 5px;	
+} 
+
+.border{
+	border: 2px solid rgb(102 98 85);
+	box-shadow: 4px 4px 7px;
+}
+.selectClass{
+	border: 6px solid rgb(255, 190, 0);
+}
+ 
+#heading{
+	font-size: 1.8vw;
+}
+.centerClass{
+	z-index:1;
+}
+
+.borderTop{
+    border-top:2px solid black;
+}
+
+.codeStyle{
+	color:white;
+	font-size: 2vw;
+	text-align: left;
+	background-color: rgb(143, 136, 136);
+	padding: 13px;
+}
+
+.code{
+  color:black;
+  font-size: 2vw;
+  text-align: left;
+  font-weight: bold;
+}
+
+.selectClass{
+  border: 6px solid rgb(255, 190, 0);
+}
+
+.directCode{
+	margin-top:5vh;
+}

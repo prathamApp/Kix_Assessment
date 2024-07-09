@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Numbers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src='js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel='stylesheet' href='css/commonKIXStyle.css'>
+    <script src="js/N47AScript.js"></script>
+    <script src="js/N47AData.js"></script>
+    <script src='js/commomScript.js'></script>
+</head>
+
+<body>
+    <div class='header col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+        <div class="centerClass pointerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()'style="visibility:hidden">
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div>
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+                onclick='showModal()'>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div id="nextDiv"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 "
+                onclick='N47A.submitAns()'>
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div>
+        <div id='gamePage' class='noPadding opacityClass col-xs-6 col-sm-6 col-lg-6 col-md-6 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3'>
+            <div id='equation' class='col-sm-12 col-xs-12 col-md-12 col-lg-12 noPadding'>
+                <img id="questionImg" class="img-responsive col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding">
+            </div>
+            <!-- <div id='verticalEqu' class='col-xs-4 col-sm-4 col-lg-4 col-md-4 col-sm-offset-6 col-lg-offset-6 col-md-offset-6 col-xs-offset-6 noPadding'>
+                <div id='verticalDiv1' class='borderClass fontStyle border options col-xs-8 col-sm-8 col-lg-8 col-md-8 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 noPadding'  style="background-color: unset;">
+                    <span id='number1'></span>
+                </div>
+                <div class='col-sm-12 col-xs-12 col-md-12 col-lg-12 noPadding'>
+                    <div id='verticalDiv2' class='borderClass fontStyle border options col-xs-2 col-sm-2 col-lg-2 col-md-2  noPadding'  style="background-color: unset;">
+                        <span id='number2'></span>
+                    </div>
+                    <div id='verticalDiv3' class='borderClass fontStyle border options col-xs-8 col-sm-8 col-lg-8 col-md-8 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 noPadding'  style="background-color: unset;">
+                        <span id='number3'></span>
+                    </div>
+                </div>  
+                <hr class='col-xs-8 col-sm-8 col-lg-8 col-md-8 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 noPadding'></hr>
+                <div id='verticalDiv4' class='borderClass fontStyle border options col-xs-8 col-sm-8 col-lg-8 col-md-8 col-sm-offset-3 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 noPadding'  style="background-color: unset;">
+                </div>
+            </div> -->
+        </div>
+        <div id="modalRoot"
+		class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 noPadding">
+			<div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1 noPadding' onclick='clearModal()'>
+				<i class="glyphicon glyphicon-repeat"></i>
+			</div>
+			<div id="answerKeyText" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 noPadding" ></div>
+			<div id="closeDiv" class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 noPadding" onclick="closeModal()">
+				<span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+			</div>
+		</div>  
+        <div class="directCoding centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:13vh;">
+            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding"
+                style="display: flex;justify-content: space-evenly; align-items: center;">
+                <div class="noPadding txtClass col-lg-2 col-xm-2 col-sm-2 col-md-2" style="font-size:3vw;font-weight: bold;">Code
+                </div>
+                <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                    onclick="clickOnCode(this)">0</div>
+                <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                    onclick="clickOnCode(this)">1</div>
+                <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                    onclick="clickOnCode(this)">2</div>
+            </div>
+        </div>
+		<!-- <div class="ansKeypadDiv centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding" style="display: flex;">
+				<div id='text' class="txtClass text-center col-sm-6 col-md-6 col-lg-6 col-xs-6 noPadding" style="font-size: 1.7vw;"></div>
+				<div id="inputText" class="box txtClass borderClass col-sm-6 col-md-6 col-lg-6 col-xs-6 " style="background-color: unset;">
+				</div>
+			</div> 
+			<div id="numPad" class="keyPad col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding"></div>
+		</div> -->
+	</div>
+	<!-- Footer -->
+        <div id='footer' class='col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
+                <i class="glyphicon glyphicon-question-sign"></i>
+            </div>
+            <div  class="col-xs-12 col-sm-12 col-lg-12 col-md-12 " id="myModal" style='text-align: start;'>
+                <div  class='borderTop txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12'>
+                    <div id='heading' class='txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12' style="font-weight: initial"></div>
+                    <div  id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

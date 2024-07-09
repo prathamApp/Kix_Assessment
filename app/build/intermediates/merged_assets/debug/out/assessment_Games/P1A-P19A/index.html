@@ -1,0 +1,54 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/recognisePattern.css">
+    <link rel="stylesheet" type="text/css" href="css/commonKIXStyle.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="js/Utility.js"></script>
+        <script src="js/recognisePatternScript.js"> </script>
+        <script src="js/recognisePatternData.js"> </script>
+	</head>
+    <body>
+        <div id ="header" class="centerClass headerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div id='queNo' class="borderClass boldClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='P1A.resetGame()'>
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div>
+            <div id="nextDiv"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-9 col-lg-offset-9 col-md-offset-9 col-xs-offset-9"
+                onclick='P1A.goNext()'>
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div>
+        <div id="gamePage" class="noPadding col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <div id = "mainDiv" class="noPadding col-sm-12 col-xs-12 col-md-12 col-lg-12">
+              <div id="textQuesId" class="noPadding centerClass col-sm-6 col-xs-6 col-lg-6 col-md-6 col-sm-offset-3 col-md-offset-3 col-xs-offset-3 col-lg-offset-3"> 
+                <img id="quesImgId" class="noPadding imgborder img-responsive col-sm-12 col-md-12 col-lg-12 col-xs-12"/>
+              </div>
+              <div id="optionID" class="noPadding col-sm-12 col-xs-12 col-md-12 col-lg-12">
+              </div>
+            </div>
+            <div id="example18" class="noPadding col-sm-10 col-xs-10 col-md-10 col-lg-10 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-offset-1">
+                <img id="exampleImg" class="noPadding img-responsive col-sm-12 col-xs-12 col-lg-12 col-md-12" />
+            </div>
+        </div>
+        <div id='footer' class='col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='P1A.showQues()'>
+                <i class="glyphicon glyphicon-question-sign"></i>
+            </div>
+            <div  class="col-xs-12 col-sm-12 col-lg-12 col-md-12" id="myModal" style='margin-right:3vw'>
+                <div  class='borderTop centerClass footerInstrClass txtClass noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12'>
+                    <div id='heading' class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding' style="line-height: 3.5vh;"></div>
+                    <div  id='close' class="glyphicon glyphicon-remove" onclick='P1A.hideQuestion()'></div>
+                </div>
+            </div>
+        </div>
+          </div>
+    </body>
+    </html>

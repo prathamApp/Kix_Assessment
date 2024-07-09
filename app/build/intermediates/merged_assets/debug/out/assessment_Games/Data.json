@@ -1,0 +1,62 @@
+[
+  {
+    "contentBooklet": "Booklet 1,",
+    "contentCode": "N1A",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "N1A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 2,",
+    "contentCode": "P2B",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "P5A_P5B_N8A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 3,",
+    "contentCode": "P3B",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "P5A_P5B_N8A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 4,",
+    "contentCode": "D5B",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "D5A-D5B/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 5,",
+    "contentCode": "D6A",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "D1B-D6A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 6,",
+    "contentCode": "M7C",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "M7AEg/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 7,",
+    "contentCode": "M8B",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "M8A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 8,",
+    "contentCode": "G2A",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "G1A-G21A/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 9,",
+    "contentCode": "G3A",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "G3A-G10C/index.html"
+  },
+  {
+    "contentBooklet": "Booklet 10,",
+    "contentCode": "N5A",
+    "contentCountry": "English-Uganda",
+    "contentFolderName": "N3A/index.html"
+  }
+]

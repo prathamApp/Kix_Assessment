@@ -1,0 +1,27 @@
+
+#gamePage{
+  position: absolute;
+}
+.divBorder{
+  border-radius: 2vh;
+  border: 2px solid black;
+/* box-shadow: 3px 3px 3px 3px; */
+}
+.headerClass{
+	z-index:1;
+}
+#questionDiv{
+  margin-top: 12vh;
+}
+#ansOptionDiv{
+  z-index: 2;
+  margin-top: 5vh;
+}
+.optionDivCss{
+  height: 20vh;
+  margin-top: 2.5vh;
+  margin-left: 5vw;
+}
+.rightCss{
+  margin-right: 0.3vw;
+}

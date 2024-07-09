@@ -1,0 +1,268 @@
+ <!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">        
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui, width = device-width' name='viewport' />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="HandheldFriendly" content="true" />
+		
+        <title>Measure the length of an object using non-standard units</title>
+		
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />    
+        <link rel="stylesheet" type="text/css" href="css/commonKIXStyle.css" />                    
+        <link rel="stylesheet" type="text/css" href="css/player.css" />     
+		
+		<!-- Libs Starts -->
+		<script type="text/javascript" src="com/libs/jquery/jquery-3.3.1.min.js"></script>        
+               
+        <script type="text/javascript" src="com/libs/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="com/libs/device/device.min.js"></script> 
+        <script type="text/javascript" src="com/libs/jquery/bootstrap.min.js"></script>          
+        <script type="text/javascript" src="com/libs/demoUtils.js"></script>        
+        <script type="text/javascript" src="com/libs/createjs/easeljs.js"></script>
+        <script type="text/javascript" src="com/libs/createjs/tweenjs.js"></script>
+
+        <!-- Loader Libraries Starts -->
+        <script type="text/javascript" src="com/libs/preloader/jquery.html5Loader.min.js"></script>
+        <script type="text/javascript" src="com/libs/preloader/animation/jquery.big-counter.js"></script>     
+        <script type="text/javascript" src="com/libs/preloader/Main.class.js"></script>
+        <script type="text/javascript" src="com/libs/preloader/configPreload.js"></script> 
+        <!--Loader Libraries Ends --> 
+
+        <!-- Libs Ends -->  
+
+        <script type="text/javascript" src="com/lo/config.js"></script>
+        <script type="text/javascript" src="com/lo/data.js"></script>                  
+        <script type="text/javascript" src="com/lo/commonScript.js"></script> 
+        <script type="text/javascript" src="com/lo/playerController.js"></script>  
+        <script type="text/javascript" src="com/libs/jquery/jquery.ui.touch-punch.js"></script>
+        
+        <script>    
+			document.addEventListener('touchmove', function(e) {e.preventDefault();}, { passive: false });
+			var lastTouchEnd = 0;
+			document.addEventListener('touchend', function (event) { var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 50) {event.preventDefault();}	lastTouchEnd = now;}, { passive: false });             
+    	</script>
+    </head>
+	<body>       
+        <!-- Main Container : Starts -->                
+        <div id="DvMainCont" class="opacityClass pointerClass">
+            <div id="DvBody">
+                <div id="DvFrameCont">
+                    <div id='DvFrame0'>
+                        <div id="DvQuesImg0" style="display: none;"></div>
+                        <div id="DvQuesImg1" style="display: none;"></div>
+                        <div id="DvQuesImg2" style="display: none;"></div>
+                        <div id="DvQuesImg3" style="display: none;"></div>
+
+                        <div id="DvAnsBlock0" style="display: none;">
+                            <div id="DvAnsBlock0_0" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock0_1" class="ClsBlockStyle0" style="display: block;"></div> 
+                            <div id="DvAnsBlock0_2" class="ClsBlockStyle0" style="display: block;"></div> 
+                            <div id="DvAnsBlock0_3" class="ClsBlockStyle0" style="display: block;"></div>                                                  
+                            <div id="DvAnsBlock0_4" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock0_5" class="ClsBlockStyle0" style="display: block;"></div>
+                             
+                        </div>
+                        <div id="DvAnsBlock1" style="display: block;">
+                            <div id="DvAnsBlock1_0" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock1_1" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock1_2" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock1_3" class="ClsBlockStyle0" style="display: block;"></div>
+                            <div id="DvAnsBlock1_4" class="ClsBlockStyle0" style="display: block;"></div>  
+                            <div id="DvAnsBlock1_5" class="ClsBlockStyle0" style="display: block;"></div>                           
+                        </div>
+                        <div id="DvAnsBlock2" style="display: none;">
+                            <div id="DvAnsBlock2_0" class="ClsBlockStyle1" style="display: block;"></div>
+                            <div id="DvAnsBlock2_1" class="ClsBlockStyle1" style="display: block;"></div>
+                            <div id="DvAnsBlock2_2" class="ClsBlockStyle1" style="display: block;"></div>
+                            <div id="DvAnsBlock2_3" class="ClsBlockStyle1" style="display: block;"></div>
+                            <div id="DvAnsBlock2_4" class="ClsBlockStyle1" style="display: block;"></div>
+                            <div id="DvAnsBlock2_5" class="ClsBlockStyle1" style="display: block;"></div>
+                        </div>
+                        <div id="DvAnsBlock3" style="display: none;">
+                            <div id="DvAnsBlock3_0" class="ClsBlockStyle2" style="display: block;"></div>
+                            <div id="DvAnsBlock3_1" class="ClsBlockStyle2" style="display: block;"></div>
+                            <div id="DvAnsBlock3_2" class="ClsBlockStyle2" style="display: block;"></div>
+                            <div id="DvAnsBlock3_3" class="ClsBlockStyle2" style="display: block;"></div>
+                            <div id="DvAnsBlock3_4" class="ClsBlockStyle2" style="display: block;"></div>
+                            <div id="DvAnsBlock3_5" class="ClsBlockStyle2" style="display: block;"></div>
+                        </div>
+
+                        <div id="DvDropLine0"></div>
+                        <div id="DvDropLine1"></div>
+                        <!-- <div id="DvDropLine2"></div>
+                        <div id="DvDropLine3"></div> -->
+
+                        <div id="DvDrop0" style="display: none;"></div>
+                        <div id="DvDrop1" style="display: none;"></div>
+                        <div id="DvDrop2" style="display: none;"></div>
+                        <div id="DvDrop3" style="display: none;"></div>
+                        
+                    </div>
+                    <div id='DvFrame2' style="display: none;">
+                        <div id="DvText2_0">Answer:</div>
+                        <input id="DvInpAns" type="text" min="0" max="9999" maxlength="4">
+                        <!-- <div id="DVCheckAnswer" onclick="CheckAns()">Check</div> -->
+                    </div>
+                    <div id='DvFrame1'>
+                        <!-- <div id="DvText1_0"></div>  -->
+                        
+                        <div id="DvContDrag0" style="display: none;">
+                            <div id="DvDrag0_0" class="ClsDragStyle0"></div>
+                            <div id="DvDrag0_1" class="ClsDragStyle0"></div>
+                            <div id="DvDrag0_2" class="ClsDragStyle0"></div>
+                            <div id="DvDrag0_3" class="ClsDragStyle0"></div>
+                            <div id="DvDrag0_4" class="ClsDragStyle0"></div>
+                            <div id="DvDrag0_5" class="ClsDragStyle0"></div>    
+                        </div>
+
+                        <div id="DvContDrag1" style="display: block;">
+                            <div id="DvDrag1_0" class="ClsDragStyle0"></div>
+                            <div id="DvDrag1_1" class="ClsDragStyle0"></div>
+                            <div id="DvDrag1_2" class="ClsDragStyle0"></div>
+                            <div id="DvDrag1_3" class="ClsDragStyle0"></div>
+                            <div id="DvDrag1_4" class="ClsDragStyle0"></div>
+                            <div id="DvDrag1_5" class="ClsDragStyle0"></div>                            
+                        </div>
+
+                        <div id="DvContDrag2" style="display: none;">
+                            <div id="DvDrag2_0" class="ClsDragStyle1"></div>
+                            <div id="DvDrag2_1" class="ClsDragStyle1"></div>
+                            <div id="DvDrag2_2" class="ClsDragStyle1"></div>
+                            <div id="DvDrag2_3" class="ClsDragStyle1"></div>
+                            <div id="DvDrag2_4" class="ClsDragStyle1"></div>
+                            <div id="DvDrag2_5" class="ClsDragStyle1"></div>
+                        </div>
+
+                        <div id="DvContDrag3" style="display: none;">
+                            <div id="DvDrag3_0" class="ClsDragStyle2"></div>
+                            <div id="DvDrag3_1" class="ClsDragStyle2"></div>
+                            <div id="DvDrag3_2" class="ClsDragStyle2"></div>
+                            <div id="DvDrag3_3" class="ClsDragStyle2"></div>
+                            <div id="DvDrag3_4" class="ClsDragStyle2"></div>
+                            <div id="DvDrag3_5" class="ClsDragStyle2"></div>
+                        </div>                       
+                    </div>                    
+                </div>                                   
+            </div>                         
+        </div>
+        <!-- Main Container : Ends --> 
+
+        <!-- Header Container : Starts -->
+        <!-- <div id="headerId" class="centerClass pointerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()' >
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div>
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+                onclick='showModal()'>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div id="nextDiv"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 "
+                onclick='goNext()'>
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div> -->
+      
+        <div id="headerId" class="centerClass pointerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div id='queNo' class="borderClass boldClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()'>
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div>
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+                onclick='showModal()'>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div id="nextDiv"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 "
+                onclick='goNext()'>
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div>
+
+	<div id="modalRoot"
+    class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
+    <!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='clearModal()'>
+            <i class="glyphicon glyphicon-repeat"></i>
+        </div>
+        <div id="answerKeyText" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2 noPadding">Answer Key : </div>
+        <div id="closeDiv" class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" onclick="closeModal()">
+            <span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+        </div>
+    </div> -->
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1 noPadding' onclick='clearModal()'>
+        <i class="glyphicon glyphicon-repeat"></i>
+        </div>
+        <div id="answerKeyText" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 noPadding">Answer Key : </div>
+        <div id="closeDiv" class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 noPadding" onclick="closeModal()">
+        <span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+        </div>
+    </div>
+    <div class="directCoding centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:13vh;">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding" style="display: flex;justify-content: space-evenly; align-items: center;">
+            <div class="noPadding txtClass col-lg-2 col-xm-2 col-sm-2 col-md-2" style="font-size:3vw; font-weight: bold;">Code</div>
+            <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">0</div>
+            <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">1</div>
+            <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">2</div>
+        </div>
+    </div>   
+    <div class="ansKeypadDiv centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="display: none;">
+        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding">
+            <div class="txtClass col-sm-6 col-md-6 col-lg-6 col-xs-6 noPadding">Answer :</div>
+            <div id="inputText" class="box txtClass borderClass col-sm-5 col-md-5 col-lg-5 col-xs-5 " style="background-color: unset;">
+            </div>
+        </div> 
+        <div id="numPad" class="keyPad col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding"></div>
+    </div>
+</div>
+
+        <!-- Header Container : Ends -->        
+
+        <!-- Footer Container : Starts -->
+        <!-- <div id="footer" class="pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding">
+            <div id="questioMark" class="toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1" onclick="showQues()" style="display: none;">
+                <i class="glyphicon glyphicon-question-sign"></i>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" id="myModal" style="margin-right: 3vw; display: block;">
+                <div class="borderTop txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12">
+                    <div id="heading" class="col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding" >Look at this (point to the reference picture). Now we will join these (point to the shapes) to make this (point to the reference picture).</div>
+                    <div id="close" class="glyphicon glyphicon-remove" onclick="hideQuestion()"></div>
+                </div>
+            </div>
+        </div>   -->
+        <div id='footer' class='pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
+                <i class="glyphicon glyphicon-question-sign"></i>
+            </div>
+            <div  class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding" id="myModal" style='margin-right:3vw'>
+                <div  class='centerClass txtClass borderTop col-sm-12 col-lg-12 col-md-12 col-xs-12 '>
+                    <div id='heading' class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding' style="font-size: 2vw;"></div>
+                    <div  id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Container : Ends -->    	
+
+        <!--Preloader : Starts-->
+        <div class="row">
+            <div id="html5Loader" class="col-sm-12">
+                <div id="DvLoaderCont">                
+                    <div id="DvLoaderProgress"></div>
+                    <div id="DvLoaderProgressBgText"> Loading ... </div>
+                </div>
+            </div>       
+        </div> 
+        <!--Preloader : Ends-->                        
+        <!-- <audio id="AudInit" src="assets/audios/audio1.mp3" type="audio/mpeg" onended="OnAudioEnded()"></audio>-->
+        
+    </body>    
+</html>

@@ -1,0 +1,46 @@
+#optionDiv
+{
+    margin-top: 8vh;
+} 
+/*.options
+{
+    color: black;
+  font-size: 3.7vw;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 15vh;
+  border: 2px solid black;
+ /* border-radius: 1vw;
+ margin-left: 3vw;
+ top: 5vh;
+ left: 1vw;
+ background-color:white;
+}*/
+.options
+{
+    color: black;
+  font-size: 3.1vw;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 18vh;
+  border: 2px solid black;
+  border-radius: 2vh;
+ margin-left: 3vw;
+ top: 5vh;
+ left: 1vw;
+ background-color:white;
+}
+
+.instruction
+{
+    color: black;
+	font-size: 1.8vw;
+    font-weight: bold;}
+    .border
+    {
+        border :6px solid rgb(255, 190, 0);
+    }

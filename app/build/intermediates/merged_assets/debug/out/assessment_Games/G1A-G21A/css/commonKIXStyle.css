@@ -1,0 +1,81 @@
+body
+{
+	user-select:none;
+	background-color:white;/* #EFF1F4; */
+    overflow:hidden;
+    font-family:'verdana';
+}
+.glyphicon:active {
+  transform: translateY(4px);
+}
+.noPadding
+{
+	padding:0px;
+}
+.toBottom{
+    position: fixed;
+    bottom: 0vh;
+}
+.centerClass
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtClass
+{
+	color: black;
+	font-size: 2.2vw;
+}
+.borderClass{
+	border-radius: 2vh;
+    border: 2px solid rgb(102 98 85);
+   /*  background-color: rgb(123 123 197 / 70%); */
+    background-color:#a4a4a4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttonClass {
+    color: rgb(0, 0, 0);
+    font-size: 3.3vw;
+    font-weight: bold;
+    height: 13vh;
+    margin-top: 1vh;
+    box-shadow: 2px 3px 4px black;
+  }
+.glyphicon {
+    top: 0px;
+   line-height: inherit;
+   font-family: 'Glyphicons Halflings';
+   font-style: normal;
+   font-weight: 400;
+   color:black;
+   font-size: 9.5vh;
+   display: flex;
+   justify-content: center;
+}
+
+#myModal{
+    position:fixed;
+    bottom:1vh;
+}
+
+#close{
+    font-size:3vw;
+    color:black;
+    font-weight: bold;
+    cursor:pointer;
+    margin-bottom:auto;
+}
+#heading{
+ font-size:1.6vw;
+}
+.glyphicon:active {
+  transform: translateY(4px);
+}
+
+.borderTop{
+    border-top:2px solid black ;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Numbers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src='js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel='stylesheet' href='css/commonKIXStyle.css'>
+    <script src="js/N43AScript.js"></script>
+    <script src="js/N43AData.js"></script>
+    <script src='js/commonScript.js'></script>
+</head>
+
+<body>
+    <div class='header col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+        <div class="centerClass pointerClass col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+            <div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1" style="font-weight: bold;"></div>
+            <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='resetGame()'
+                style='visibility: hidden;'>
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div>
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+                onclick='showModal()'>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div id="nextDiv" class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1"
+                onclick="N43A.nextQue()">
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div>
+        <div id='gamePage' class='opacityClass pointerClass'>
+            <div class='pattern col-lg-12 col-md-12 col-xs-12 col-sm-12 noPadding' style='margin-top:5vh'>
+                <div id='imgDiv1'
+                    class='col-xs-8 col-sm-8 col-lg-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 noPadding'>
+                        <img id='img3' class=' col-xs-12 col-sm-12 col-lg-12 col-md-12 img-responsive noPadding'>
+                </div>
+                    <!-- <div class='col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding' style='margin-top:5vh'>
+
+                    <div id='AnswerDiv' class='text-center border borderClass fontStyle col-xs-3 col-sm-3 col-lg-3 col-md-3' onclick="showNumPad(this.id)"></div>
+                </div> 
+                </div> -->
+            </div>
+            <!-- <div class='pattern1 col-lg-12 col-md-12 col-xs-12 col-sm-12 noPadding'>
+                <div id='imgDiv'
+                    class='col-xs-10 col-sm-10 col-lg-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding'>
+                    <div id='questionImg'
+                        class='col-xs-8 col-sm-8 col-lg-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 noPadding'>
+                        <img id='queImg' class=' col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding img-responsive'>
+                    </div>
+                    <div style='margin-top: 3vh;'
+                        class='col-xs-8 col-sm-8 col-lg-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 noPadding'>
+                        <div id='num1' class='text-center col-xs-4 col-sm-4 col-lg-4 col-md-4' >
+                            <span class='numBox borderClass border fontStyle' style="background-color: unset;">3</span>
+                        </div>
+
+                        <div id='num2' class='text-center col-xs-4 col-sm-4 col-lg-4 col-md-4'>
+                            <span class='numBox borderClass border fontStyle' style="background-color: unset;">6</span>
+                        </div>
+                    </div> 
+                    <div class='col-xs-10 col-sm-10 col-lg-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-offset-2' style='margin-top:5vh'>
+                    <div id='AnswerDiv1' class='border borderClass text-center fontStyle col-xs-3 col-sm-3 col-lg-3 col-md-3' onclick="showNumPad(this.id)"></div>
+                </div>
+                </div>
+            </div> -->
+            <div class='pattern2 col-lg-12 col-md-12 col-xs-12 col-sm-12 noPadding'>
+                <div id='imageDiv'
+                    class='col-xs-4 col-xs-4 col-lg-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-lg-offset-4 col-md-offset-4 noPadding'>
+                    <img id='que' class=' col-xs-10 col-sm-10 col-lg-10 col-md-10 img-responsive noPadding'>
+                </div>
+                <!-- <div class='col-xs-10 col-sm-10 col-lg-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding' style='margin-top:2vh'>
+                <div id='quotientDiv' class='text-center  col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+                    <div class='text col-xs-6 col-sm-6 col-lg-6 col-md-6 noPadding'>Quotient:</div>
+                    <div id='Quotient' class='text-center borderClass border fontStyle col-xs-3 col-sm-3 col-lg-3 col-md-3 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding' onclick="showNumPad(this.id)"></div>
+                </div>
+                <div id='remainderDiv' class='text-center  col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+                    <div class='text col-xs-6 col-sm-6 col-lg-6 col-md-6 noPadding'>Remainder:</div>
+                    <div id='remainder' class='text-center borderClass border fontStyle col-xs-3 col-sm-3 col-lg-3 col-md-3 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding' onclick="showNumPad(this.id)"></div>
+                </div>
+                
+            </div> -->
+            </div>
+        </div>
+        <div id="modalRoot"
+            class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 noPadding">
+                <div id='clearDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1 noPadding' onclick='clearModal()'>
+                    <i class="glyphicon glyphicon-repeat"></i>
+                </div>
+                <div id="answerKeyText"
+                    class="col-lg-10 col-md-10 col-xs-10 col-sm-10 noPadding">
+                 </div>
+                <div id="closeDiv"
+                    class="js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 noPadding"
+                    onclick="closeModal()">
+                    <span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+                </div>
+            </div>
+            <div class="directCoding centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:13vh;">
+                <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding"
+                    style="display: flex;justify-content: space-evenly; align-items: center;">
+                    <div class="noPadding txtClass col-lg-2 col-xm-2 col-sm-2 col-md-2" style="font-size:3vw;font-weight: bold;">Code
+                    </div>
+                    <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                        onclick="clickOnCode(this)">0</div>
+                    <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                        onclick="clickOnCode(this)">1</div>
+                    <div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass"
+                        onclick="clickOnCode(this)">2</div>
+                </div>
+            </div>
+            <!-- <div class="ansKeypadDiv centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding">
+                    <div id='answerDiv' class='col-sm-12 col-md-12 col-lg-12 col-xs-12 noPadding'>
+                        <div id='answerTxt'  class="txtClass col-sm-6 col-md-6 col-lg-6 col-xs-6 noPadding" style="font-size: 2vw;font-weight: bold;"></div>
+                        <div id="inputText" class="box txtClass borderClass col-sm-6 col-md-6 col-lg-6 col-xs-6"
+                            style="background-color: unset;" onclick='showNumPad(this.id)'>
+                        </div>
+                    </div>
+                    
+                    <div id='quoRemainder' class="col-sm-12 col-md-12 col-lg-12 col-xs-12 noPadding" style="margin-top:2vh">
+                        <div id="quotientDiv" class="text-center  col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding">
+                            <div id='quoTxt' class="text col-xs-5 col-sm-5 col-lg-5 col-md-5 noPadding"></div>
+                            <div id="Quotient" class="box text-center borderClass border fontStyle col-xs-6 col-sm-6 col-lg-6 col-md-6 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding"  style="background-color: unset;font-size: 2vw;" onclick="showNumPad(this.id)"></div>
+                        </div>
+                        <div id="remainderDiv" class="text-center  col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding">
+                            <div id='remainderTxt' class="text col-xs-5 col-sm-5 col-lg-5 col-md-5 noPadding"></div>
+                            <div id="remainder" class="box text-center borderClass border fontStyle col-xs-6 col-sm-6 col-lg-6 col-md-6 col-xs-offset-1 col-sm-offset-1 col-lg-offset-1 col-md-offset-1 noPadding"  style="background-color: unset;font-size: 2vw" onclick="showNumPad(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="numPad" class="keyPad col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding"></div>
+            </div> -->
+        </div>
+        <div id='footer' class='pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
+                <i class="glyphicon glyphicon-question-sign"></i>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding" id="myModal" style='margin-right:3vw'>
+                <div class='centerClass txtClass borderTop col-sm-12 col-lg-12 col-md-12 col-xs-12 '>
+                    <div id='heading' class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding'></div>
+                    <div id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class='toBottom col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+            <div id='doneDiv' class='col-xs-2 col-sm-2 col-lg-2 col-md-2 col-xs-offset-4 col-sm-offset-4 col-lg-offset-4 col-md-offset-4 noPadding' onclick='N43A.submitAns()'>
+                <img id='done' class='col-xs-6 col-sm-6 col-lg-6 col-md-6 col-xs-offset-6 col-sm-offset-6 col-lg-offset-6 col-md-offset-6 noPadding'> 
+            </div>
+            <div id='nextDiv' class='col-xs-2 col-sm-2 col-lg-2 col-md-2 col-xs-offset-4 col-sm-offset-4 col-lg-offset-4 col-md-offset-4 noPadding' onclick="N43A.nextQuestion()">
+                <img id='next' class='col-xs-6 col-sm-6 col-lg-6 col-md-6 col-xs-offset-6 col-sm-offset-6 col-lg-offset-6 col-md-offset-6 noPadding'> 
+            </div>
+        </div> -->
+    </div>
+    <audio id='playSound'></audio>
+</body>
+
+</html>

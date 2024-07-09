@@ -1,0 +1,80 @@
+
+.cls
+{
+    margin-left: 1vw;
+    /*border: 2px solid black;
+	    border-radius: 2vh;
+    box-shadow: 3px 3px 3px 3px;*/
+    height: 20vh;
+	width:10vw;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+	/*padding:12px;*/
+}
+.ansCls
+{
+    margin-left: 1.5vw;
+    border: 2px solid black;
+    height: 20vh;
+	width:10vw;
+	padding:12px;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/*#questionImage
+{
+     height:25vh;
+     border :1px solid gray;
+    border-radius: 2vh;
+    box-shadow: 3px 3px 3px 3px;
+}*/
+#optionDiv
+{
+    margin-top: 4vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+} 
+#answerDiv
+{
+    margin-top: 3.5vh;
+	margin-left:8.5vw;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+} 
+.imgcls
+{
+	visibility:hidden;
+}
+.addimage
+{
+	visibility:visible;
+}
+imageCls
+{
+    width: 100%;
+    height: 100%;
+}
+.border
+{
+    border :6px solid rgb(255, 190, 0);
+}
+.instruction
+{
+    color: black;
+	font-size: 1.5vw;
+    font-weight: bold;}
+.Blink_me
+{
+	animation:Blinker 1s linear infinite;
+}
+@keyframes Blinker
+{
+	50%
+	{
+background-color: rgb(80, 78, 78);
+opacity: 0.5;	}
+}

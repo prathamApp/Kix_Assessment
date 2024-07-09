@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title></title>
+ <meta charset="utf-8"> 
+	 <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/commonKIXStyle.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"></link>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src ="js/bootstrap.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src ="js/utils.js"></script>
+	<script src ="js/equationGameScript.js"></script>
+	<script src ="js/commonScript.js"></script>
+	<script src ="js/equationGameData.js"></script>
+</head>
+<body>
+	<audio id="playSound"></audio>
+		<div id="homeAndLogoDiv" class="centerClass pointerClass col-xs-12 col-md-12 col-lg-12 col-sm-12">
+			<div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+            <!-- <div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick="Equation.resetGame();" style="visibility:hidden">
+                <i class="glyphicon glyphicon-repeat"></i>
+            </div> -->
+			<div id='solveText' class='noPadding txtClass col-xs-1 col-sm-1 col-lg-1 col-md-1' style="visibility: hidden;">
+            </div>
+            <div id="modalIcon"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-8 col-lg-offset-8 col-md-offset-8 col-xs-offset-8"
+                onclick='showModal()'>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div id="nextDiv"
+                class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 "
+                onclick="Equation.nextGame();">
+                <i class="glyphicon glyphicon-arrow-right"></i>
+				</div>
+		</div>
+
+		<div id="gamePage" class="opacityClass noPadding col-sm-12 col-md-12 col-lg-12 col-xs-12">
+			<div id='vertical'>
+				<div id='question' class="noPadding text-center col-xs-4 col-md-4 col-lg-4 col-sm-4 col-xs-offset-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
+					<img id='questionImg' class="img-responsive col-xs-12 col-md-12 col-lg-12 col-sm-12">
+					<!-- <div class="row">
+						<div id='vroperand1' class='operand noPadding text-center  col-xs-12 col-md-12 col-lg-12 col-sm-12'>
+						</div>
+					</div>
+					<div class="row">
+						<div id='vroperator' class='operand noPadding col-xs-8 col-md-8 col-lg-8 col-sm-8'>
+						</div>
+					</div>
+					<div class="row">
+						<div id='vroperand2' class='operand noPadding text-center  col-xs-12 col-md-12 col-lg-12 col-sm-12 '>
+						</div>
+					</div>
+					<div class="row">
+						<div class='border-box operand noPadding text-center col-xs-4 col-md-4 col-lg-4 col-xs-offset-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4'>
+							?
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<div id='horizontal'>
+				<div id="question" class="noPadding text-center col-xs-4 col-md-4 col-lg-4 col-sm-4 col-xs-offset-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
+					<div id='hroperand1' class='operand noPadding text-center  col-xs-3 col-md-3 col-lg-3 col-sm-3'>
+					</div>	
+					<div id='hroperator' class='operand noPadding col-xs-1 col-md-1 col-lg-1 col-sm-1'>
+					</div>	
+					<div id='hroperand2' class='operand noPadding text-center col-xs-3 col-md-3 col-lg-3 col-sm-3'>
+					</div>	
+					<div class='operand noPadding col-xs-1 col-md-1 col-lg-1 col-sm-1'>
+						=
+					</div>
+					<div  class='border-box operand noPadding col-xs-2 col-md-2 col-lg-2 col-sm-2' style="margin-left:1vw;height: 12vh;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modalRoot"
+		class="modal col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 noPadding">
+		<!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div id='clearDiv' class='noPadding col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='clearModal()'>
+				<i class="glyphicon glyphicon-repeat"></i>
+			</div>
+			<div id="answerKeyText" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-offset-2 noPadding">Answer Key : </div>
+			<div id="closeDiv" class="noPadding js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" onclick="closeModal()">
+				<span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+			</div>
+		</div> -->
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div id='clearDiv' class='noPadding col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='clearModal()'>
+			<i class="glyphicon glyphicon-repeat"></i>
+			</div>
+			<div id="answerKeyText" class="noPadding col-lg-10 col-md-10 col-xs-10 col-sm-10">Answer Key : </div>
+			<div id="closeDiv" class="noPadding js-close-modal col-sm-1 col-lg-1 col-md-1 col-xs-1" onclick="closeModal()">
+			<span class="glyphicon glyphicon-remove" style="font-size: 3vw;color:black"></span>
+			</div>
+		</div>
+		<div class="directCoding centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:13vh;">
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding" style="display: flex;justify-content: space-evenly; align-items: center;">
+				<div class="noPadding txtClass col-lg-2 col-xm-2 col-sm-2 col-md-2" style="font-size:3vw;">Code</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">0</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">1</div>
+				<div class="col-lg-1 col-xm-1 col-sm-1 col-md-1 borderClass codeCls buttonClass" onclick="clickOnCode(this)">2</div>
+			</div>
+		</div>   
+		<div class="ansKeypadDiv centerClass col-lg-12 col-md-12 col-xs-12 col-sm-12" style="display: none;">
+			<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding" style="display:flex;">
+				<div id='answerText' class="txtClass col-sm-6 col-md-6 col-lg-6 col-xs-6 noPadding" style="font-size:1.7vw"></div>
+				<div id="inputText" class="box txtClass borderClass col-sm-5 col-md-5 col-lg-5 col-xs-5 " style="background-color: unset;">
+				</div>
+			</div> 
+			<div id="numPad" class="keyPad col-lg-6 col-md-6 col-xs-6 col-sm-6 noPadding"></div>
+		</div>
+	</div>
+	<div class="noPadding toBottom col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div id='footer' class='pointerClass col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+			<div id="questioMark" class="toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1" onclick="showQues()" style="display: none;">
+				<i class="glyphicon glyphicon-question-sign"></i>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" id="myModal" style="margin-right: 3vw; display: block;">
+				<div class="borderTop centerClass txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12">
+					<div id="heading" class="col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding" ></div>
+					<div id="close" class="glyphicon glyphicon-remove" onclick="hideQuestion()"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>		

@@ -1,0 +1,10 @@
+#Tue Jul 09 10:53:53 IST 2024
+base.2=C\:\\Pratham\\Projects\\KIX\\Kix_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.2=classes2.dex
+base.1=C\:\\Pratham\\Projects\\KIX\\Kix_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.1=classes.dex
+base.0=C\:\\Pratham\\Projects\\KIX\\Kix_Assessment\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

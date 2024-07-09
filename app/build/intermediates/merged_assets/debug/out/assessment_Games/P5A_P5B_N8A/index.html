@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></link> 
+		<link rel="stylesheet" type="text/css" href="css/commonKIXStyle.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/P5A_P5B_N8A.css"><link>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/P5A_P5B_N8A.js"> </script>
+		<script type="text/javascript" src="js/P5A_P5B_N8A_Data.js"> </script>
+	</head>
+	<body>
+		<div class="centerClass headerClass col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div id='queNo' class="borderClass txtClass noPadding col-sm-1 col-lg-1 col-md-1 col-xs-1"></div>
+			<div id='resetDiv' class='col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='identifyPattern.reset()'>
+				<i class="glyphicon glyphicon-repeat"></i>
+			</div>
+			<div id="nextDiv"
+				class="noPadding text-center col-sm-1 col-lg-1 col-md-1 col-xs-1 col-sm-offset-9 col-lg-offset-9 col-md-offset-9 col-xs-offset-9"
+				onclick='identifyPattern.nextQue()'>
+				<i class="glyphicon glyphicon-arrow-right"></i>
+			</div>
+		</div>
+		
+		<div id="gamePage" class="noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12"> 
+			<div id="questionDiv" class="noPadding centerClass col-sm-6 col-lg-6 col-md-6 col-xs-6 col-xs-offset-3 col-md-offset-3 col-lg-offset-3 col-sm-offset-3">
+				<!-- <img id="queImg" class="noPadding img-responsive col-sm-12 col-lg-12 col-md-12 col-xs-12"> -->
+			</div>
+			<div id="ansOptionDiv" class="noPadding col-sm-12 col-lg-12 col-md-12 col-xs-12">
+			</div>
+		</div>
+
+		<div id='footer' class='col-xs-12 col-sm-12 col-lg-12 col-md-12 noPadding'>
+			<div id='questioMark' class='toBottom col-xs-1 col-sm-1 col-lg-1 col-md-1' onclick='showQues()'>
+				<i class="glyphicon glyphicon-question-sign"></i>
+			</div>
+			<div  class="col-xs-12 col-sm-12 col-lg-12 col-md-12" id="myModal" style='margin-right:3vw'>
+				<div  class='borderTop centerClass txtClass col-sm-12 col-lg-12 col-md-12 col-xs-12'>
+					<div id='heading' class='col-sm-12 col-lg-12 col-md-12 col-xs-12 noPadding'></div>
+					<div  id='close' class="glyphicon glyphicon-remove" onclick='hideQuestion()'></div>
+				</div>
+			</div>
+		</div>
+		<audio id="playSound"></audio>
+	</body>
+</html>
