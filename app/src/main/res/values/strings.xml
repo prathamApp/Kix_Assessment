@@ -2193,7 +2193,7 @@
         <string name="update_child">بچے کی معلومات اپ ڈیٹ کریں۔</string>
         <string name="str_CH01"><b>CH01.</b> نام<font color='#FF0000'>*</font></string>
         <string name="str_CH04a"><b>CH04a.</b> کیا [###] کو کوئی معذوری ہے؟</string>
-        <string name="str_CH04b"><b>CH04b.</b> [###] کو کونسی قسم کی معذوری ہے؟</string>
+        <string name="str_CH04b"><b>CH04b.</b>کو کونسی قسم کی معذوری ہے؟</string>
         <string name="str_CH04b_op1">بصری/دیکھنے کی</string>
         <string name="str_CH04b_op2">سننے/بولنے کی</string>
         <string name="str_CH04b_op3">جسمانی</string>
@@ -2203,7 +2203,7 @@
         <string name="str_CH06f"><b>CH06f. </b> کیا [###] کے پاس اس کلاس جس میں وہ پڑھتا/پڑھتی ہے کی کتابیں ہیں؟</string>
         <string name="str_CH06g"><b>CH06g. </b> کیا [###] کبھی ایک ہی کلاس میں دو بار/دو سال داخل رہا/رہی ہے؟</string>
         <string name="str_CH07a"><b>CH07a. </b> کیا [###] کبھی سکول میں داخل رہا ہے؟</string>
-        <string name="str_CH07d"><b>CH07d. </b> [###]کے سکول چھوڑنے کی بنیادی وجہ کیا تھی؟</string>
+        <string name="str_CH07d"><b>CH07d. </b>۔[###]کے سکول چھوڑنے کی بنیادی وجہ کیا تھی؟</string>
         <string name="str_reasonToDrop_one">فیس ادا نہیں کر سکتا تھا / سکتی تھی</string>
         <string name="str_reasonToDrop_two">سکول بند ہو گیا</string>
         <string name="str_reasonToDrop_three">اگلی کلاس میں داخل نہیں ہو سکا تو چھوڑ گیا/گئی</string>
@@ -2214,7 +2214,7 @@
         <string name="str_CH09a"><b>CH09a. </b> کیا [###] کوئی ٹیوشن والی کلاس لیتا /لیتی ہے؟</string>
         <string name="str_CH09b"><b>CH09b. </b> کیا [###] کبھی پڑھنے کیلیئے کوئی کتاب ( اپنی نصابی کتابوں کے علاوہ) سکول کی لائبریری یا کسی اور جگہ سے پچھلے دو ہفتوں میں لایا/لائی ہے؟</string>
         <string name="str_CH08a"><b>CH08a. </b> کیا گھر پر کوئی بچے کی ہوم ورک میں مدد کرتا/کرتی ہے؟</string>
-        <string name="str_CH08b"><b>CH08b. </b> [###] کی زیادہ تر ہوم ورک میں کون مدد کرتا ہے؟</string>
+        <string name="str_CH08b"><b>CH08b. </b> ۔[###] کی زیادہ تر ہوم ورک میں کون مدد کرتا ہے؟</string>
         <string name="str_CH08b_one">ابو</string>
         <string name="str_CH08b_two">امی</string>
         <string name="str_CH08b_three">بہن بھائی</string>
