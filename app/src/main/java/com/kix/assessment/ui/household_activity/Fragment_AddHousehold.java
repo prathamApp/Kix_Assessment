@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -31,6 +33,8 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_add_household)
 public class Fragment_AddHousehold extends Fragment {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.tv_label)
     TextView tv_title;
 
@@ -81,6 +85,13 @@ public class Fragment_AddHousehold extends Fragment {
 
     @AfterViews
     public void initialize() {
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            et_telephoneNum.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+            et_noOfChilds.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+        }
+
         this.surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "NA");
         this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);
         this.householdId = this.getArguments().getString(Kix_Constant.HOUSEHOLD_ID);

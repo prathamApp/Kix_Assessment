@@ -4,8 +4,11 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
@@ -26,6 +29,8 @@ import static com.kix.assessment.KIXApplication.studentDao;
 @EFragment(R.layout.fragment_parent_information)
 public class Fragment_ParentInformation extends Fragment {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.tv_PT01a_val)
     TextView tv_mothersName;
 /*    @ViewById(R.id.tv_PT01b_val)
@@ -59,6 +64,11 @@ public class Fragment_ParentInformation extends Fragment {
 
     @AfterViews
     public void init() {
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
+
         this.parentId = this.getArguments().getString(Kix_Constant.PARENT_ID);
         //Modal_Student modalStudent = studentDao.getStudentByStudId(studentId);
         Modal_PIF modalPif = parentInformationDao.getPIFbyParentId(parentId);

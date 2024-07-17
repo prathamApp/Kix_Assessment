@@ -44,7 +44,7 @@ L9A_L9B.calculation = function()
    if(Utils.mobileDeviceFlag)
     {
           var langName = Android.getGameLang();
-         L9A_L9B.currentLang =  L9A_L9B.gameNameArr.findIndex(obj => obj.language == langName);
+        L9A_L9B.currentLang =  L9A_L9B.gameNameArr.findIndex(obj => obj.language == langName);
         var gameCode = Android.getGameID();
         L9A_L9B.currentques = L9A_L9B.gameNameArr[L9A_L9B.currentLang].gameData.findIndex(obj => obj.name == gameCode);
 		if(langName=="Urdu-Pakistan"){
@@ -52,7 +52,9 @@ L9A_L9B.calculation = function()
 		}
     }
     else{
-        L9A_L9B.currentques= Math.floor(Math.random()*L9A_L9B.gameNameArr[L9A_L9B.currentLang].gameData.length);
+       L9A_L9B.currentques= Math.floor(Math.random()*L9A_L9B.gameNameArr[L9A_L9B.currentLang].gameData.length);
+       /* L9A_L9B.currentLang = 11;
+       L9A_L9B.currentques= 4; */
 		if(L9A_L9B.currentLang==11){
 		$("#heading").css("text-align","right");
 		$("#heading").css("direction","rtl");

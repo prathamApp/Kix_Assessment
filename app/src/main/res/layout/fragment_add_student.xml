@@ -9,8 +9,7 @@
     android:focusable="true"
     android:paddingStart="@dimen/_15sdp"
     android:paddingEnd="@dimen/_15sdp"
-    tools:context=".ui.attendance_activity.Fragment_AddStudent_"
-    android:textDirection="rtl">
+    tools:context=".ui.attendance_activity.Fragment_AddStudent_">
 
     <TextView
         android:id="@+id/tv_label"

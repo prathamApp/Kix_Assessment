@@ -66,7 +66,7 @@ Paragraph.setQuestion = function () {
     }
     else
     {
-        langIndex = 5;//Math.floor(Math.random() * data.length);			//GET RANDOM GAME LANGUAGE
+        langIndex = 11;//Math.floor(Math.random() * data.length);			//GET RANDOM GAME LANGUAGE
         if(langIndex==11)
         {
             $('#paragraph').css('direction','rtl');
@@ -89,8 +89,8 @@ Paragraph.setQuestion = function () {
         }
     }
     else
-       Paragraph.queCounter =Math.floor(Math.random() * (data[langIndex].nodeInfo.length ));
-       // Paragraph.queCounter =33; 
+        Paragraph.queCounter =Math.floor(Math.random() * (data[langIndex].nodeInfo.length ));
+      //  Paragraph.queCounter =4; 
     document.getElementById('heading').innerHTML = data[langIndex].nodeInfo[Paragraph.queCounter].question;
    
     if(data[langIndex].nodeInfo[Paragraph.queCounter].title=='')

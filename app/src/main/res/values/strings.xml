@@ -2144,7 +2144,7 @@
         <string name="str_isSampledHH_one">بند ہے؟</string>
         <string name="str_isSampledHH_two">کوئی جوب نہیں دے رہا (ایسا گھرانہ جو حصہ نہیں لیتا/گھر کا دروازہ نہیں کھولتا)؟</string>
         <string name="str_isSampledHH_three">کھلا ہے (سروے کیلیئے)؟</string>
-        <string name="str_HH01"><b>HH01.</b> ہیملٹ/ حصہ نمبر *</string>
+        <string name="str_HH01"><b>HH01.</b> ہیملٹ/ حصہ نمبر <font color='#FF0000'>*</font></string>
         <string name="str_HH02"><b>HH02.</b> جواب دینے والے کا نام <font color='#FF0000'>*</font></string>
         <string name="str_HH03"><b>HH03.</b> گھر کے سربراہ کا نام</string>
         <string name="str_HH04a"><b>HH04a.</b> کیا گھرانے میں ایسے بچے رہتے ہیں جن کی عمر 4 سے 10 سال ہے؟</string>
@@ -2161,7 +2161,7 @@
         <string name="str_always">ہمیشہ</string>
         <string name="str_sometimes">کبھی کبھار</string>
         <string name="str_HH06d"><b>HH06d.</b> کیا آپ گھر میں کوئی دوسری زبان بولتے ہیں؟</string>
-        <string name="str_HH_asset_info">کیا آپ گھر میں کوئی اور زبان بولتے ہیں؟</string>
+        <string name="str_HH_asset_info">گھریلو اثاثوں کی معلومات</string>
         <string name="str_HH07a"><b>HH07a.</b> کیا گھر کی مکمل چھت موجود ہے؟</string>
         <string name="str_HH07b"><b>HH07b.</b> کیا گھر کی مکمل دیواریں موجود ہیں؟</string>
         <string name="str_HH07c"><b>HH07c.</b> گھر میں باقاعدگی سے استعمال ہونے والی روشنی کا ذریعہ کیا ہے؟</string>
@@ -2178,7 +2178,7 @@
         <string name="str_HH07k"><b>HH07k.</b> ٹیلی ویژن؟</string>
         <string name="str_HH07m"><b>HH07m.</b> موبائل فون؟</string>
         <string name="str_HH07n"><b>HH07n.</b> کیا یہ اسمارٹ فون ہے؟</string>
-        <string name="str_HH07o"><b>HH07o.</b> کیا یہ موٹر گاڑی ہے؟</string>
+        <string name="str_HH07o"><b>HH07o.</b>کیا کوئی موٹر گاڑی ہے؟</string>
         <string name="str_HH07p"><b>HH07p.</b> تو اس کے کتنے پہیے ہیں؟</string>
         <string name="str_HH07p_one">چار پہیوں والی گاڑی</string>
         <string name="str_HH07p_two">تین پہیوں والی گاڑی</string>

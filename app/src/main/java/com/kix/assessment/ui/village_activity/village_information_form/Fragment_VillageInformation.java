@@ -4,12 +4,15 @@ import static com.kix.assessment.KIXApplication.villageDao;
 import static com.kix.assessment.KIXApplication.villageInformationDao;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.kix_utils.KIX_Utility;
 import com.kix.assessment.kix_utils.Kix_Constant;
@@ -25,6 +28,8 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_information_village)
 public class Fragment_VillageInformation extends Fragment {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.tv_V01_val)
     TextView tv_haveRoad;
     @ViewById(R.id.tv_V02_val)
@@ -57,6 +62,12 @@ public class Fragment_VillageInformation extends Fragment {
 
     @AfterViews
     public void initialize() {
+
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
+
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
         Modal_Village modalVillage = villageDao.getVillageByVillId(villageId);
         Modal_VIF modal_vif = villageInformationDao.getVIFbyVillageId(this.villageId);

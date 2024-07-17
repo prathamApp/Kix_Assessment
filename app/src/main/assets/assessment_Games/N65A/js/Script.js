@@ -65,7 +65,7 @@ CountBiscuits.playGame=function(){
        }
     }
     else 
-		langIndex = 0;//Math.floor(Math.random() * CountBiscuits.data.length);			//GET RANDOM GAME LANGUAGE
+		langIndex = 9;//Math.floor(Math.random() * CountBiscuits.data.length);			//GET RANDOM GAME LANGUAGE
 
 	if(CountBiscuits.data[langIndex].languageFont!=null)
         setFontFamilyForLang(CountBiscuits.data[langIndex].languageFont);

@@ -32,6 +32,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -56,6 +57,8 @@ import java.util.Objects;
 @EFragment(R.layout.fragment_add_student)
 public class Fragment_AddStudent extends Fragment {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.et_CH01)
     EditText et_studentName;
     @ViewById(R.id.spn_CH02)
@@ -202,6 +205,11 @@ public class Fragment_AddStudent extends Fragment {
     @SuppressLint("SetTextI18n")
     @AfterViews
     public void initialize() {
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
+
         KIX_Utility.setMyLocale(getActivity(), FastSave.getInstance().getString(Kix_Constant.LANGUAGE_CODE, "en"), FastSave.getInstance().getString(Kix_Constant.COUNTRY_CODE, "IN"));
 
         surveyorCode = getArguments().getString(Kix_Constant.SURVEYOR_CODE);

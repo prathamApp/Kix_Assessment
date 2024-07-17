@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:id="@+id/rl_parentLayout">
 
     <TextView
         android:id="@+id/tv_title"

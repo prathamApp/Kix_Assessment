@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -31,6 +32,8 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_add_information_household)
 public class Fragment_AddHouseholdInformation extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.tv_title)
     TextView tv_title;
     @ViewById(R.id.et_HH06a)
@@ -128,6 +131,10 @@ public class Fragment_AddHouseholdInformation extends Fragment implements Compou
 
     @AfterViews
     public void initialize() {
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
 
         this.householdId = this.getArguments().getString(Kix_Constant.HOUSEHOLD_ID);
         this.villageId = this.getArguments().getString(Kix_Constant.VILLAGE_ID);

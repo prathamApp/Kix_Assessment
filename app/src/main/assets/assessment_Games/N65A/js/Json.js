@@ -130,7 +130,7 @@ CountBiscuits.data=[
 		"gamedata":[
 			{
 				'gamecode':'N65A',
-				'instruction':` <b>اس پلیٹ</b> میں چند بسکٹ ہیں <span style='color:blue'>(تصویر کی طرف اشارہ کریں)</span>۔ اگر اس طرح دو پلیٹیں اور ہوں تو کل کتنے بسکٹ ہوں گے؟ <span style='color:blue'>(بچے سے کاغذ پر سوال حل کرنے کو کہیں)</span>`,
+				'instruction':"اس پلیٹ میں چند بسکٹ ہیں <span style='color:blue'>(تصویر کی طرف اشارہ کریں)</span>۔ اگر اس طرح کی دو پلیٹیں ہوں تو کل کتنے بسکٹ ہوں گے؟ <span style='color:blue'>(بچے سے کاغذ پر سوال حل کرنے کو کہیں)</span>",
 				'question':'N65A.png',
 				'answer':'8',
 				'answerKey':'8'

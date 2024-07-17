@@ -9,11 +9,13 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -29,6 +31,8 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_add_information_village)
 public class Fragment_AddVillageInformation extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
     @ViewById(R.id.tv_title)
     TextView tv_title;
 
@@ -91,6 +95,11 @@ public class Fragment_AddVillageInformation extends Fragment implements Compound
 
     @AfterViews
     public void initialize() {
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
+
         surveyorCode = FastSave.getInstance().getString(Kix_Constant.SURVEYOR_CODE, "");
         villageId = getArguments().getString(Kix_Constant.VILLAGE_ID);
         this.selectedV01 = this.selectedV02 = this.selectedV03 = this.selectedV04 = this.selectedV05 = this.selectedV06a = this.selectedV07a = 99;

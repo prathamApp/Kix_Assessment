@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.kix.assessment.KIXApplication;
 import com.kix.assessment.R;
 import com.kix.assessment.dbclasses.BackupDatabase;
 import com.kix.assessment.kix_utils.KIX_Utility;
@@ -36,6 +37,9 @@ import java.util.Objects;
 
 @EFragment(R.layout.fragment_add_parentinformation)
 public class Fragment_AddParentInfoForm extends Fragment {
+
+    @ViewById(R.id.rl_parentLayout)
+    RelativeLayout rl_parentLayout;
 
     @ViewById(R.id.tv_label)
     TextView tv_label;
@@ -106,6 +110,11 @@ public class Fragment_AddParentInfoForm extends Fragment {
 
     @AfterViews
     public void init() {
+
+        if(KIXApplication.app_country.equalsIgnoreCase("Pakistan")) {
+            rl_parentLayout.setTextDirection(View.TEXT_DIRECTION_RTL);
+            rl_parentLayout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
 
         studentId = getArguments().getString(STUDENT_ID);
         householdId = getArguments().getString(HOUSEHOLD_ID);
