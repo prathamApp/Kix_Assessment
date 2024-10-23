@@ -645,6 +645,1292 @@
     ]
   },
   {
+    "CountryName": "Uganda",
+    "Language": "English-Uganda",
+    "StateList": [
+      {
+        "StateName": "MAYUGE",
+        "DistrictList": [
+          {
+            "DistrictName": "BAITAMBOGWE_BUTE",
+            "VillageList": [
+              {
+                "VillageName": "NALWESAMBULA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BAITAMBOGWE_LUGOLOLE",
+            "VillageList": [
+              {
+                "VillageName": "LUGOLOLE A"
+              },
+              {
+                "VillageName": "MBIRIZI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BAITAMBOGWE_MULINGILIRE",
+            "VillageList": [
+              {
+                "VillageName": "MUSITA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BAITAMBOGWE_WAINHA",
+            "VillageList": [
+              {
+                "VillageName": "WAINHA B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKABOOLI_BUGOTO",
+            "VillageList": [
+              {
+                "VillageName": "LULANDA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKABOOLI_BUGUMYA",
+            "VillageList": [
+              {
+                "VillageName": "KILONGO B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKABOOLI_BUYUGU",
+            "VillageList": [
+              {
+                "VillageName": "BUYUGU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKABOOLI_MAIRINYA",
+            "VillageList": [
+              {
+                "VillageName": "LWANDERA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKABOOLI_MATOVU",
+            "VillageList": [
+              {
+                "VillageName": "MATOVU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKATUBE_BUKALEBA",
+            "VillageList": [
+              {
+                "VillageName": "NAKALANGA B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKATUBE_BUYEMBA",
+            "VillageList": [
+              {
+                "VillageName": "BUYEMBA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKATUBE_LWANIKA",
+            "VillageList": [
+              {
+                "VillageName": "BUKATUBE A"
+              },
+              {
+                "VillageName": "LWANIKA B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUKATUBE_MBIRABIRA",
+            "VillageList": [
+              {
+                "VillageName": "BUWERERE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUSAKIRA_BUKUNJA",
+            "VillageList": [
+              {
+                "VillageName": "NAMISU B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUSAKIRA_KALUUBA",
+            "VillageList": [
+              {
+                "VillageName": "BUSAKIRA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUSAKIRA_MAUMU",
+            "VillageList": [
+              {
+                "VillageName": "BUYANIRWA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUWAAYA_BUWAISWA",
+            "VillageList": [
+              {
+                "VillageName": "BUWAAYA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUWAAYA_KABAYINGIRE",
+            "VillageList": [
+              {
+                "VillageName": "KABAYINGIRE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUWAAYA_NSANGO",
+            "VillageList": [
+              {
+                "VillageName": "LUGANGU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BWONDHA TOWN COUNCIL_BWONDHA",
+            "VillageList": [
+              {
+                "VillageName": "BUGOMA CAMP"
+              },
+              {
+                "VillageName": "BWONDHA C"
+              },
+              {
+                "VillageName": "BWONDHA D"
+              },
+              {
+                "VillageName": "WALUJO CAMP"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IMANYIRO_BUFULUBI",
+            "VillageList": [
+              {
+                "VillageName": "NAKIWATA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IMANYIRO_MAYUGE",
+            "VillageList": [
+              {
+                "VillageName": "BUKAWONGO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IMANYIRO_MBAALE",
+            "VillageList": [
+              {
+                "VillageName": "MBAALE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "JAGUZI_BUMBA",
+            "VillageList": [
+              {
+                "VillageName": "BUKABAMBWE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "JAGUZI_KAAZA",
+            "VillageList": [
+              {
+                "VillageName": "KAAZA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "JAGUZI_SERINYABI",
+            "VillageList": [
+              {
+                "VillageName": "KOLOLO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIGANDALO_ISENDA",
+            "VillageList": [
+              {
+                "VillageName": "NAMAIGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIGANDALO_KIGANDALO",
+            "VillageList": [
+              {
+                "VillageName": "WANDAWA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIGANDALO_KYOGA",
+            "VillageList": [
+              {
+                "VillageName": "KYOGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_BUBINGE",
+            "VillageList": [
+              {
+                "VillageName": "BUBINGE A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_BUKALENZI",
+            "VillageList": [
+              {
+                "VillageName": "LUTALE A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_KITOVU",
+            "VillageList": [
+              {
+                "VillageName": "KITOVU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_KITYERERA",
+            "VillageList": [
+              {
+                "VillageName": "BUGADDE WEST"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_NDAIGA",
+            "VillageList": [
+              {
+                "VillageName": "BUBALULE B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KITYERERA_WANDEGEYA",
+            "VillageList": [
+              {
+                "VillageName": "WAKIWUNGU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAGAMAGA TOWN COUNCIL_MAGAMAGA TOWN BOARD",
+            "VillageList": [
+              {
+                "VillageName": "BUKOLI B"
+              },
+              {
+                "VillageName": "WABULUNGU A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MALONGO_BULUUTA",
+            "VillageList": [
+              {
+                "VillageName": "BUKAGABO A KIBULI"
+              },
+              {
+                "VillageName": "BULUUTA BULAIRE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MALONGO_BUMWENA",
+            "VillageList": [
+              {
+                "VillageName": "BUKIZIBU A"
+              },
+              {
+                "VillageName": "BUMWENA B"
+              },
+              {
+                "VillageName": "KAYANJA CAMP"
+              },
+              {
+                "VillageName": "NDUWA CAMP"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MALONGO_MALONGO",
+            "VillageList": [
+              {
+                "VillageName": "KAYANJA"
+              },
+              {
+                "VillageName": "MALONGO C"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MALONGO_NAMADHI",
+            "VillageList": [
+              {
+                "VillageName": "NAMADHI A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MALONGO_NAMONI",
+            "VillageList": [
+              {
+                "VillageName": "NAMONI A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAYUGE TOWN COUNCIL_IKULWE",
+            "VillageList": [
+              {
+                "VillageName": "TSETSE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAYUGE TOWN COUNCIL_KASUGU",
+            "VillageList": [
+              {
+                "VillageName": "KASUGU B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MPUNGWE_BUYERE",
+            "VillageList": [
+              {
+                "VillageName": "BUGUWA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MPUNGWE_MAINA",
+            "VillageList": [
+              {
+                "VillageName": "MWEZI A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MPUNGWE_WAIRAMA",
+            "VillageList": [
+              {
+                "VillageName": "MPUMU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "WAIRASA_BUSUYI",
+            "VillageList": [
+              {
+                "VillageName": "BUGABWE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "WAIRASA_MUSOLI",
+            "VillageList": [
+              {
+                "VillageName": "BUSALAMU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "WAIRASA_WANDAGO",
+            "VillageList": [
+              {
+                "VillageName": "WAIRASA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "StateName": "NAMUTUMBA",
+        "DistrictList": [
+          {
+            "DistrictName": "BUGOBI_KISIIRO",
+            "VillageList": [
+              {
+                "VillageName": "KISIIRO EAST"
+              },
+              {
+                "VillageName": "MAKENYA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUGOBI TOWN COUNCIL_BUGOBI",
+            "VillageList": [
+              {
+                "VillageName": "BUGOBI B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUGOBI TOWN COUNCIL_BUKENGA",
+            "VillageList": [
+              {
+                "VillageName": "BUBUSA"
+              },
+              {
+                "VillageName": "KISENYI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BUGOBI TOWN COUNCIL_BUWAGA",
+            "VillageList": [
+              {
+                "VillageName": "BUBUTYA"
+              },
+              {
+                "VillageName": "IGULAMUBIRI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BULANGE_BULANGE",
+            "VillageList": [
+              {
+                "VillageName": "BWAYUYA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BULANGE_KIREREMA",
+            "VillageList": [
+              {
+                "VillageName": "BUNAIBAMBA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BULANGE_MPUMIRO",
+            "VillageList": [
+              {
+                "VillageName": "BUDUNDA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA_BUDOMERO",
+            "VillageList": [
+              {
+                "VillageName": "BUDOMERO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA_KIMENYULO",
+            "VillageList": [
+              {
+                "VillageName": "KIMENYULO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA_KISEWOZI",
+            "VillageList": [
+              {
+                "VillageName": "NAMWENDA II"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA_LWATAMA",
+            "VillageList": [
+              {
+                "VillageName": "NAWAMBIRI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA_NABITULA",
+            "VillageList": [
+              {
+                "VillageName": "PALISA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA TOWN COUNCIL_IVUKULA",
+            "VillageList": [
+              {
+                "VillageName": "IVUKULA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "IVUKULA TOWN COUNCIL_KAMUDOOKE",
+            "VillageList": [
+              {
+                "VillageName": "NAWANKIMA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBAALE_KIBAALE",
+            "VillageList": [
+              {
+                "VillageName": "KIBAALE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBAALE_KISEGA",
+            "VillageList": [
+              {
+                "VillageName": "KISEGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBAALE_NAMAKOKO",
+            "VillageList": [
+              {
+                "VillageName": "NAMUNTENDA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBAALE TOWN COUNCIL_MPULIRA",
+            "VillageList": [
+              {
+                "VillageName": "NAWANDYO A'"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBAALE TOWN COUNCIL_NABISOIGI",
+            "VillageList": [
+              {
+                "VillageName": "NABISOIGI III"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIZIBU_NAWANSAGWA",
+            "VillageList": [
+              {
+                "VillageName": "KAVULE"
+              },
+              {
+                "VillageName": "KIZUBA"
+              },
+              {
+                "VillageName": "NAWANSAGWA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAGADA_IZIRANGOBI",
+            "VillageList": [
+              {
+                "VillageName": "BUSAAMO"
+              },
+              {
+                "VillageName": "MULAMA CENTRAL"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAGADA_KAGULU",
+            "VillageList": [
+              {
+                "VillageName": "KAGULU"
+              },
+              {
+                "VillageName": "MAMUSMI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAGADA_KIWANYI",
+            "VillageList": [
+              {
+                "VillageName": "NABIKABALA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAGADA_MAGADA",
+            "VillageList": [
+              {
+                "VillageName": "BUYANGE"
+              },
+              {
+                "VillageName": "NABUKALU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAZUBA_MAZUBA",
+            "VillageList": [
+              {
+                "VillageName": "BUTAMBA"
+              },
+              {
+                "VillageName": "MAZUBA"
+              },
+              {
+                "VillageName": "NAMUWAYO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "MAZUBA_NABINYONYI",
+            "VillageList": [
+              {
+                "VillageName": "GADUMIRE"
+              },
+              {
+                "VillageName": "NABINYONYI III"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NABWEYO_BUDATU",
+            "VillageList": [
+              {
+                "VillageName": "BUDATU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NABWEYO_BUSINI",
+            "VillageList": [
+              {
+                "VillageName": "BUSINI B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA_ITUBA",
+            "VillageList": [
+              {
+                "VillageName": "NAMUWONDO A"
+              },
+              {
+                "VillageName": "NAWAMPANDU B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA_KIGALAMA",
+            "VillageList": [
+              {
+                "VillageName": "NAMATO CENTRAL"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA_NAKALOKWE",
+            "VillageList": [
+              {
+                "VillageName": "BUNYAGWE A"
+              },
+              {
+                "VillageName": "MAWUNGWE B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA_NAKYERE",
+            "VillageList": [
+              {
+                "VillageName": "KASEDHERE B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA TOWN COUNCIL_CENTRAL",
+            "VillageList": [
+              {
+                "VillageName": "BUDONGO"
+              },
+              {
+                "VillageName": "KANGULUMO B"
+              },
+              {
+                "VillageName": "NAMUTUMBA A"
+              },
+              {
+                "VillageName": "NAMUTUMBA B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NAMUTUMBA TOWN COUNCIL_NORTH",
+            "VillageList": [
+              {
+                "VillageName": "MATYAMA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NANGONDE_BUWALIRA",
+            "VillageList": [
+              {
+                "VillageName": "BUDIDO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NANGONDE_IWUNGIRO",
+            "VillageList": [
+              {
+                "VillageName": "IWUNGIRO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NANGONDE_LWATAMA",
+            "VillageList": [
+              {
+                "VillageName": "KABIRA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NANGONDE_NAMAKOKO",
+            "VillageList": [
+              {
+                "VillageName": "ZAGIRA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NSINZE_BUBAGO",
+            "VillageList": [
+              {
+                "VillageName": "BUBAGO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NSINZE_BUKONTE",
+            "VillageList": [
+              {
+                "VillageName": "BUDHATEMWA A"
+              },
+              {
+                "VillageName": "NAKAWUNZO I"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NSINZE_BUWONGO",
+            "VillageList": [
+              {
+                "VillageName": "BUYUNGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NSINZE_NAWAIKONA",
+            "VillageList": [
+              {
+                "VillageName": "BUKUDUMIRA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "NSINZE_NSINZE",
+            "VillageList": [
+              {
+                "VillageName": "ISEGRO B"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "StateName": "PALLISA",
+        "DistrictList": [
+          {
+            "DistrictName": "AGULE_PASIA",
+            "VillageList": [
+              {
+                "VillageName": "PASIA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AGULE TOWN COUNCIL_AGULE",
+            "VillageList": [
+              {
+                "VillageName": "OTIIRA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AGULE TOWN COUNCIL_ODUSAI",
+            "VillageList": [
+              {
+                "VillageName": "ODUSAI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AGULE TOWN COUNCIL_OKUNGURO",
+            "VillageList": [
+              {
+                "VillageName": "OKUNGURO NORTH"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AKISIM_KOBWIN",
+            "VillageList": [
+              {
+                "VillageName": "AGURUR"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AKISIM_OKISIRAN",
+            "VillageList": [
+              {
+                "VillageName": "OKISIRAN MANGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "AKISIM_OPADOI",
+            "VillageList": [
+              {
+                "VillageName": "OPADOI-PASIA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BOLISO I_BOLISO I",
+            "VillageList": [
+              {
+                "VillageName": "AMUSIAT TC"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BOLISO I_LIMOTO",
+            "VillageList": [
+              {
+                "VillageName": "KATOME WEST"
+              }
+            ]
+          },
+          {
+            "DistrictName": "BOLISO I_MPONGI",
+            "VillageList": [
+              {
+                "VillageName": "BUKUNAMA A"
+              },
+              {
+                "VillageName": "NAGULE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "CHELEKURA_ADODOI",
+            "VillageList": [
+              {
+                "VillageName": "ADODOI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "CHELEKURA_AKWAMOR",
+            "VillageList": [
+              {
+                "VillageName": "ALELES"
+              }
+            ]
+          },
+          {
+            "DistrictName": "CHELEKURA_KALEMENE",
+            "VillageList": [
+              {
+                "VillageName": "ONYILAI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "GOGONYO_AJEPET",
+            "VillageList": [
+              {
+                "VillageName": "AUJABULE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "GOGONYO_ANGODI",
+            "VillageList": [
+              {
+                "VillageName": "ANGODI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "GOGONYO_GOGONYO",
+            "VillageList": [
+              {
+                "VillageName": "AGURUR"
+              },
+              {
+                "VillageName": "MANGA A"
+              },
+              {
+                "VillageName": "OGURNTAPA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "GOGONYO_KACHANGO",
+            "VillageList": [
+              {
+                "VillageName": "OCHAPAI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMEKE_KAMEKE",
+            "VillageList": [
+              {
+                "VillageName": "KOMOLO-MANGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMEKE_NYAKOI",
+            "VillageList": [
+              {
+                "VillageName": "NYAKOI KINOMU"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMEKE_OBOLISO",
+            "VillageList": [
+              {
+                "VillageName": "OBOLISO-KOMOLO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMEKE_OMUROKA",
+            "VillageList": [
+              {
+                "VillageName": "OMUROKA A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMUGE TOWN COUNCIL_BOLISO II",
+            "VillageList": [
+              {
+                "VillageName": "OKWAMORIO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMUGE TOWN COUNCIL_KAGOLI",
+            "VillageList": [
+              {
+                "VillageName": "KAGUYA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMUGE TOWN COUNCIL_KALAPATA",
+            "VillageList": [
+              {
+                "VillageName": "BUKADUKA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAMUGE TOWN COUNCIL_KAMUGE",
+            "VillageList": [
+              {
+                "VillageName": "BUGAI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KASODO_KAINJA",
+            "VillageList": [
+              {
+                "VillageName": "BULALAKA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KASODO_KASODO",
+            "VillageList": [
+              {
+                "VillageName": "NSAMBYA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KASODO_NAGONDI",
+            "VillageList": [
+              {
+                "VillageName": "NANGODI C"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KASODO_NAJENITI",
+            "VillageList": [
+              {
+                "VillageName": "NAJENITI I"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAUKURA_ADAL",
+            "VillageList": [
+              {
+                "VillageName": "KOMOLO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAUKURA_APOPONG",
+            "VillageList": [
+              {
+                "VillageName": "OKOROTOK"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAUKURA_KAPALA",
+            "VillageList": [
+              {
+                "VillageName": "KAPALA CENTRAL"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAUKURA_KATUKEI",
+            "VillageList": [
+              {
+                "VillageName": "KATUKEI CENTRAL"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KAUKURA_KAUKURA",
+            "VillageList": [
+              {
+                "VillageName": "OSEMELIO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBALE_OMUKULAI",
+            "VillageList": [
+              {
+                "VillageName": "KAILE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBALE_OTAMIRIO",
+            "VillageList": [
+              {
+                "VillageName": "KACHEDE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "KIBALE_OTELEPAI",
+            "VillageList": [
+              {
+                "VillageName": "OTELEPAI II"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OLOK_APAPA",
+            "VillageList": [
+              {
+                "VillageName": "RARAK"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OLOK_NGALWE",
+            "VillageList": [
+              {
+                "VillageName": "KADENGERWA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OLOK_ODWARAT",
+            "VillageList": [
+              {
+                "VillageName": "ODWARAT A"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OPWATETA_KADESOK",
+            "VillageList": [
+              {
+                "VillageName": "KAYEPEI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OPWATETA_KAPUWAI",
+            "VillageList": [
+              {
+                "VillageName": "ABILA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OPWATETA_OKARACHA",
+            "VillageList": [
+              {
+                "VillageName": "ODUKURO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "OPWATETA_OPWATETA",
+            "VillageList": [
+              {
+                "VillageName": "OKOITO"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA_AKADOT",
+            "VillageList": [
+              {
+                "VillageName": "KADOKI"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA_KABOLOI",
+            "VillageList": [
+              {
+                "VillageName": "APUTON II"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA_KAGOLI",
+            "VillageList": [
+              {
+                "VillageName": "AKISIM B"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA TOWN COUNCIL_EAST",
+            "VillageList": [
+              {
+                "VillageName": "ARIET"
+              },
+              {
+                "VillageName": "OSUPA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA TOWN COUNCIL_HOSPITAL",
+            "VillageList": [
+              {
+                "VillageName": "SENIOR QUARTERS"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA TOWN COUNCIL_KAGWESE",
+            "VillageList": [
+              {
+                "VillageName": "LWETA A"
+              },
+              {
+                "VillageName": "MUVULE MUKAAGA"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA TOWN COUNCIL_KAUCHO",
+            "VillageList": [
+              {
+                "VillageName": "KAUCHO A"
+              },
+              {
+                "VillageName": "NANSENYE"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PALLISA TOWN COUNCIL_WEST",
+            "VillageList": [
+              {
+                "VillageName": "KINOMU II"
+              },
+              {
+                "VillageName": "OKAREBWOK"
+              }
+            ]
+          },
+          {
+            "DistrictName": "PUTI-PUTI_PUTI-PUTI",
+            "VillageList": [
+              {
+                "VillageName": "KEUKA B"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "CountryName": "Nepal",
     "Language": "Nepali-Nepal",
     "StateList": [
@@ -8251,6 +9537,126 @@
               },
               {
                 "VillageName": "DIOURBEL-032101000145"
+              },
+              {
+                "VillageName": "NGOHE_032202020043"
+              },
+              {
+                "VillageName": "PATAR_032202030030"
+              },
+              {
+                "VillageName": "NDINDY_032201030010"
+              },
+              {
+                "VillageName": "PATAR_032202030008"
+              },
+              {
+                "VillageName": "NGOHE_032202020002"
+              },
+              {
+                "VillageName": "TOCKY GARE_032202040018"
+              },
+              {
+                "VillageName": "DANKH SENE_032201010008"
+              },
+              {
+                "VillageName": "NDINDY_032201030019"
+              },
+              {
+                "VillageName": "NGOHE_32202020013"
+              },
+              {
+                "VillageName": "TAIBA MOUTOUPHA_032201050010"
+              },
+              {
+                "VillageName": "NDOULO_032202010009"
+              },
+              {
+                "VillageName": "TOURE MBONDE_32202050008"
+              },
+              {
+                "VillageName": "TOCKY GARE_032202040027"
+              },
+              {
+                "VillageName": "NGOHE_032202020032"
+              },
+              {
+                "VillageName": "PATAR_32202030027"
+              },
+              {
+                "VillageName": "NGOHE_032202020020"
+              },
+              {
+                "VillageName": "TOCKY GARE_032202040007"
+              },
+              {
+                "VillageName": "GADE ESCALE_032201020005"
+              },
+              {
+                "VillageName": "KEUR NGALGOU_032201040010"
+              },
+              {
+                "VillageName": "TOURE MBONDE_032202050016"
+              },
+              {
+                "VillageName": "DIOURBEL_32101000015"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000037"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000140"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000017"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000005"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000083"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000067"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000023"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000043"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000109"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000125"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000132"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000051"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000101"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000117"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000030"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000148"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000058"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000075"
+              },
+              {
+                "VillageName": "DIOURBEL_032101000092"
               }
             ]
           }
@@ -8321,6 +9727,126 @@
               },
               {
                 "VillageName": "NDOMBO SANDJIRY-041201040004"
+              },
+              {
+                "VillageName": "DIAMA_041202010010"
+              },
+              {
+                "VillageName": "RONKH_041202030009"
+              },
+              {
+                "VillageName": "DIAMA_041202010021"
+              },
+              {
+                "VillageName": "DIAMA_041202010033"
+              },
+              {
+                "VillageName": "NGNITH_041202020002"
+              },
+              {
+                "VillageName": "BOKHOL_041201020003"
+              },
+              {
+                "VillageName": "RONKH_041202030019"
+              },
+              {
+                "VillageName": "MBANE_041201010062"
+              },
+              {
+                "VillageName": "BOKHOL_041201020030"
+              },
+              {
+                "VillageName": "NGNITH_041202020024"
+              },
+              {
+                "VillageName": "NGNITH_041202020014"
+              },
+              {
+                "VillageName": "DIAMA_041202010044"
+              },
+              {
+                "VillageName": "MBANE_041201010029"
+              },
+              {
+                "VillageName": "MBANE_041201010031"
+              },
+              {
+                "VillageName": "MBANE_041201010017"
+              },
+              {
+                "VillageName": "NGNITH_041202020038"
+              },
+              {
+                "VillageName": "DIAMA_041202010056"
+              },
+              {
+                "VillageName": "BOKHOL_041201020017"
+              },
+              {
+                "VillageName": "MBANE_041201010044"
+              },
+              {
+                "VillageName": "MBANE_041201010003"
+              },
+              {
+                "VillageName": "DAGANA_041101000022"
+              },
+              {
+                "VillageName": "ROSSO SENEGAL_041202050001"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000036"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000078"
+              },
+              {
+                "VillageName": "NDOMBO SANDJIRY_041201040008"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000068"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000061"
+              },
+              {
+                "VillageName": "DAGANA_041101000013"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000019"
+              },
+              {
+                "VillageName": "ROSSO SENEGAL_041202050009"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000045"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000053"
+              },
+              {
+                "VillageName": "DAGANA_041101000003"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000028"
+              },
+              {
+                "VillageName": "ROSSO SENEGAL_041202050021"
+              },
+              {
+                "VillageName": "DAGANA_041101000030"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000010"
+              },
+              {
+                "VillageName": "ROSS BETHIO_041202040010"
+              },
+              {
+                "VillageName": "RICHARD TOLL_041102000086"
+              },
+              {
+                "VillageName": "GAE_041201030012"
               }
             ]
           }
@@ -8391,6 +9917,126 @@
               },
               {
                 "VillageName": "TIVAOUANE-073102000005"
+              },
+              {
+                "VillageName": "CHERIF LO_073204010016"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030011"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030033"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030061"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030103"
+              },
+              {
+                "VillageName": "KOUL_073202010006"
+              },
+              {
+                "VillageName": "KOUL_073202010027"
+              },
+              {
+                "VillageName": "MEOUANE_073201010005"
+              },
+              {
+                "VillageName": "MEOUANE_073201010034"
+              },
+              {
+                "VillageName": "MERINA DAKHAR_073202020003"
+              },
+              {
+                "VillageName": "MERINA DAKHAR_073202020028"
+              },
+              {
+                "VillageName": "MONT ROLLAND_073204020005"
+              },
+              {
+                "VillageName": "NGANDIOUF_073203020004"
+              },
+              {
+                "VillageName": "NGANDIOUF_073203020029"
+              },
+              {
+                "VillageName": "NOTTO GOUYE DIAMA_073204030003"
+              },
+              {
+                "VillageName": "PAMBAL_073204050004"
+              },
+              {
+                "VillageName": "PEKESSE_073202030015"
+              },
+              {
+                "VillageName": "PIRE GOUREYE_073204040008"
+              },
+              {
+                "VillageName": "TAIBA NDIAYE_073201020014"
+              },
+              {
+                "VillageName": "THILMAKHA_073203040007"
+              },
+              {
+                "VillageName": "CHERIF LO_073204010029"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030074"
+              },
+              {
+                "VillageName": "DAROU KHOUDOSS_073201030086"
+              },
+              {
+                "VillageName": "MBORO_073201040008"
+              },
+              {
+                "VillageName": "MBORO_073201040021"
+              },
+              {
+                "VillageName": "MBORO_073201040033"
+              },
+              {
+                "VillageName": "MBORO_073201040044"
+              },
+              {
+                "VillageName": "MEKHE_073101000013"
+              },
+              {
+                "VillageName": "MEKHE_073101000026"
+              },
+              {
+                "VillageName": "NOTTO GOUYE DIAMA_073204030035"
+              },
+              {
+                "VillageName": "PIRE GOUREYE_073204040023"
+              },
+              {
+                "VillageName": "TAIBA NDIAYE_073201020045"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000010"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000019"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000030"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000043"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000054"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000064"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000075"
+              },
+              {
+                "VillageName": "TIVAOUANE_073102000089"
               }
             ]
           }

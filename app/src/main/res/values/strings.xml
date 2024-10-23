@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--ENGLISH START ____________________________________________________________________-->
-    <!--  <string name="app_name">PAL-ELANA</string>
+      <string name="app_name">PAL-ELANA</string>
       <string name="Collecting_Data">Collecting Data</string>
       <string name="push_success">Pushed successfully!</string>
       <string name="push_fail">Push failed!</string>
@@ -345,7 +345,7 @@
     <string name="tot_ch_srvd">Total CH Surveyed</string>
     <string name="tot_ch_tested">Total CH Tested</string>
     <string name="child_belongsTo">Child Belongs to : </string>
-    <string name="add_new_pif">Add New PIF</string>-->
+    <string name="add_new_pif">Add New PIF</string>
 
     <!--ENGLISH END ____________________________________________________________________-->
 
@@ -2094,7 +2094,7 @@
     <!--Spanish-Mexico END ____________________________________________________________________-->
 
     <!--Urdu-Pakistan START ____________________________________________________________________-->
-        <string name="app_name">PAL-ELANA</string>
+<!--        <string name="app_name">PAL-ELANA</string>
         <string name="Collecting_Data">ڈیٹا اکٹھا کرنا</string>
         <string name="push_success">ڈیٹا کامیابی سے پہنچ گیا!</string>
         <string name="push_fail">ڈیٹا نہیں پہنچا!</string>
@@ -2436,7 +2436,7 @@
         <string name="tot_ch_srvd">Total CH Surveyed</string>
         <string name="tot_ch_tested">Total CH Tested</string>
         <string name="child_belongsTo">Child Belongs to : </string>
-        <string name="add_new_pif">Add New PIF</string>
+        <string name="add_new_pif">Add New PIF</string>-->
     <!--Urdu-Pakistan END ____________________________________________________________________-->
 
     <!--Portuguese-Mozambique START ____________________________________________________________________-->
